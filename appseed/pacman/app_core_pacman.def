@@ -1,0 +1,8 @@
+; app_core_pacman.def
+
+LIBRARY  "app_core_pacman"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+app_core_pacman_get_new_library
+

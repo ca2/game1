@@ -1,0 +1,307 @@
+﻿#include "framework.h"
+#include <math.h>
+
+
+namespace pacman
+{
+
+
+   view::view(::aura::application * papp) :
+      ::object(papp),
+      m_font(allocer()),
+      m_dib(allocer())
+   {
+
+      //m_ppreview = NULL;
+
+      m_ppacman = NULL;
+
+      m_bDibLayout = true;
+
+      m_xDib   = -1;
+
+      m_bHarderControl = false;
+
+   }
+
+
+   view::~view()
+   {
+
+   }
+
+
+#ifdef DEBUG
+
+   void view::assert_valid() const
+   {
+      ::user::impact::assert_valid();
+   }
+
+   void view::dump(dump_context & dumpcontext) const
+   {
+      ::user::impact::dump(dumpcontext);
+   }
+#endif
+
+   void view::install_message_handling(::message::dispatch * pdispatch)
+   {
+
+      ::user::impact::install_message_handling(pdispatch);
+
+      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
+      IGUI_WIN_MSG_LINK(WM_DESTROY,pdispatch,this,&view::_001OnDestroy);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&view::_001OnLButtonDown);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONUP,pdispatch,this,&view::_001OnLButtonUp);
+      IGUI_WIN_MSG_LINK(WM_KEYDOWN,pdispatch,this,&view::_001OnKeyDown);
+      IGUI_WIN_MSG_LINK(WM_KEYUP,pdispatch,this,&view::_001OnKeyUp);
+
+   }
+
+
+   void view::_001OnCreate(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::create,pcreate,pobj);
+
+      pcreate->previous();
+
+      if(pcreate->m_bRet)
+         return;
+
+
+      start();
+
+   }
+
+   void view::_001OnDestroy(signal_details * pobj)
+   {
+
+      m_ppacman->m_psound->m_bRun = false;
+
+      m_ppacman->m_bRun = false;
+
+      pobj->previous();
+
+
+   }
+
+
+   void view::_001OnLButtonDown(signal_details * pobj)
+   {
+
+      //pobj->m_bRet = true;
+
+   }
+
+
+   void view::_001OnLButtonUp(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse,pmouse,pobj);
+
+      point pt(pmouse->m_pt);
+
+      ScreenToClient(&pt);
+
+      int i = -1;
+      int j = -1;
+
+
+   }
+
+
+   void view::on_update(::user::impact * pSender, LPARAM lHint, object* phint)
+   {
+      UNREFERENCED_PARAMETER(pSender);
+      UNREFERENCED_PARAMETER(lHint);
+      UNREFERENCED_PARAMETER(phint);
+   }
+
+
+
+   void view::_001OnDraw(::draw2d::graphics * pdc)
+   {
+
+      ::rect rectClient;
+
+      GetClientRect(rectClient);
+
+      pdc->FillSolidRect(rectClient, ARGB(184,0,0,0));
+
+      //pdc->set_text_color(ARGB(255,255,255,255));
+
+
+      if(m_ppacman == NULL)
+         return;
+
+      sp(::dib_console) pdib = m_pconsolewindow;
+
+      if(pdib.is_null())
+         return;
+
+      synch_lock sl(&pdib->m_mutex);
+
+      m_font->create_pixel_font(Application.dir().matter("crackman.ttf"),pdib->m_sizeTile.cy);
+
+      pdib->m_dib->get_graphics()->SelectFont(m_font);
+
+      pdib->update_dib();
+
+      rect rectPacman;
+
+      rectPacman.null();
+
+      rectPacman.SetBottomRightSize(pdib->m_dib->m_size);
+
+      rectPacman.Align(align_center,rectClient);
+
+      pdc->BitBlt(rectPacman,pdib->m_dib->get_graphics());
+
+   }
+
+
+
+   ::user::document * view::get_document()
+   {
+
+      return ::user::impact::get_document();
+
+   }
+
+
+
+   void view::start()
+   {
+
+//      m_ppreview = new _PacManPreview(this);
+
+      //m_pconsolewindow = new console(get_app(),size(16,16));
+
+      //m_pconsolewindow = new dib_console_window(get_app(),size(16,16));
+
+      //m_pconsolewindow = new ::windows::console_window(get_app(),size(24,24));
+
+      m_pconsolewindow = create_console();
+
+      m_pconsolewindow->set_app(get_app());
+
+      m_ppacman = new pacman(m_pconsolewindow);
+
+//      m_ppacman->reset();
+
+      sp(frame) pframe = GetTopLevelFrame();
+
+      //pframe->m_sizeView.cx = m_ppacman->widthInPixels+ 80;
+      //pframe->m_sizeView.cy = m_ppacman->heightInPixels + 80 + 10 + m_ppreview->m_dib->m_size.cy;
+
+      sp(frame) pframe1 = GetParentFrame();
+
+      //pframe1->m_sizeView = pframe->m_sizeView;
+
+   }
+
+
+   void view::layout()
+   {
+
+      m_bDibLayout = true;
+
+   }
+
+   void view::_001OnKeyDown(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::key,pkey,pobj);
+
+      //if(pkey->m_ekey == ::user::key_down)
+      //{
+      //   m_ppacman->drop();
+      //}
+      //else
+      if(pkey->m_ekey == ::user::key_up)
+      {
+         m_ppacman->up();
+      }
+      else if(pkey->m_ekey == ::user::key_down)
+      {
+         m_ppacman->down();
+      }
+      else if(pkey->m_ekey == ::user::key_left)
+      {
+         m_ppacman->left();
+      }
+      else if(pkey->m_ekey == ::user::key_right)
+      {
+         m_ppacman->right();
+      }
+
+      pkey->m_bRet = true;
+
+   }
+
+   void view::_001OnKeyUp(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::key,pkey,pobj);
+      if(m_bHarderControl)
+      {
+         if(pkey->m_ekey == ::user::key_up)
+         {
+            m_ppacman->up(false);
+         }
+         else if(pkey->m_ekey == ::user::key_down)
+         {
+            m_ppacman->down(false);
+         }
+         else if(pkey->m_ekey == ::user::key_left)
+         {
+            m_ppacman->left(false);
+         }
+         else if(pkey->m_ekey == ::user::key_right)
+         {
+            m_ppacman->right(false);
+         }
+      }
+
+      pkey->m_bRet = true;
+
+
+   }
+
+   bool view::keyboard_focus_is_focusable()
+   {
+
+      return is_window_enabled() && IsWindowVisible();
+
+   }
+
+
+   ::console::window * view::create_console()
+   {
+
+      return new console(get_app(),size(16,16));
+
+   }
+
+
+   ::console::window * view2::create_console()
+   {
+
+      return new dib_console(get_app(),size(16,16));
+
+   }
+
+
+   ::console::window * view3::create_console()
+   {
+
+      return new system_console();
+
+   }
+
+
+} // namespace pacman
+
+
+
