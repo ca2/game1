@@ -137,7 +137,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_pacman.def">
+    <None Include="game_pacman.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

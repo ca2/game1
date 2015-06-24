@@ -52,9 +52,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00C3D7E9-A87D-4B6C-95A0-1202C4703642}</ProjectGuid>
-    <RootNamespace>app_core_pacman</RootNamespace>
+    <RootNamespace>game_pacman</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_pacman</ProjectName>
+    <ProjectName>game_pacman</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -1483,6 +1483,12 @@
     <ClInclude Include="pacman_pellet.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\hellomultiverse\hellomultiverse.vcxproj">
+      <Project>{c7afcefa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\multimedia\multimedia.vcxproj">
+      <Project>{20fd0446-aa14-4013-84e0-b5cb63fa354f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\aura\aura.vcxproj">
       <Project>{03e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
     </ProjectReference>
@@ -1502,13 +1508,9 @@
     <ProjectReference Include="..\..\..\app\axis\html_lite\html_lite.vcxproj">
       <Project>{845177e8-8b1e-4ae0-9b96-1abc24b797a6}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\hellomultiverse\hellomultiverse.vcxproj" />
-    <ProjectReference Include="..\multimedia\multimedia.vcxproj">
-      <Project>{20fd0446-aa14-4013-84e0-b5cb63fa354f}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_pacman.def" />
+    <None Include="game_pacman.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

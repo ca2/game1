@@ -198,10 +198,10 @@ namespace pacman
 
 
 extern "C"
-::aura::library * app_core_pacman_get_new_library(::aura::application * papp)
+::aura::library * game_pacman_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::pacman::application >(papp, "app-core");
+   return new ::aura::single_application_library < ::pacman::application >(papp, "game");
 
 }
 
