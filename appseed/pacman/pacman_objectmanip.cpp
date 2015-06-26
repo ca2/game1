@@ -76,7 +76,7 @@ namespace pacman
          else
             oneupcolor = ::console::WHITE;
          SetTextColor(oneupcolor);
-         SetCursorPosition(-3,3);
+         _008SetCursorPos(-3,3);
          cout << "1UP";
          oneuptimer = ONEUPMAX;
       }

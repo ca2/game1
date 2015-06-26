@@ -124,13 +124,6 @@ namespace pacman
 
    }
 
-   void console::SetCursorPosition(int y,int x)
-   {
-
-      ::dib_console::SetCursorPosition(y + 3,x);
-
-   }
-
 
    bool console::defer_write(char ch,int x,int y,int cx,int cy, int iColor)
    {

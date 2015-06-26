@@ -20,7 +20,7 @@ namespace pacman
 
    class pacman :
       virtual public ::thread,
-      virtual public ::console::window_composite
+      virtual public console_composite
    {
    public:
 
@@ -41,6 +41,8 @@ namespace pacman
       manual_reset_event m_evRestart;
 
       pacman(::console::window * p);
+
+      
 
       void restart();
       // Main

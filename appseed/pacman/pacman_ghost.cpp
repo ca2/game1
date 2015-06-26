@@ -5,7 +5,10 @@ namespace pacman
 {
 
 
-   ghost::ghost(pacman * ppacman): ::console::window_composite(ppacman->m_p),level(ppacman->level),m_ppacman(ppacman)
+   ghost::ghost(pacman * ppacman):
+      console_composite(ppacman->m_p),
+      level(ppacman->level),
+      m_ppacman(ppacman)
    {
 
    }
@@ -49,7 +52,7 @@ namespace pacman
             else if(y != GATEY - 1)
             {
                y--;
-               SetCursorPosition(GATEY + 3,GATEX + 1);
+               _008SetCursorPos(GATEY + 3,GATEX + 1);
                cout << level[GATEY][GATEX + 1];
             }
             else
@@ -73,7 +76,7 @@ namespace pacman
             {
                dir = 's';
                changecoords();
-               SetCursorPosition(GATEY + 3,GATEX + 1);
+               _008SetCursorPos(GATEY + 3,GATEX + 1);
                cout << level[GATEY][GATEX + 1];
                wait = DEADMAX;
             }
@@ -298,7 +301,7 @@ namespace pacman
    void ghost::show()
    {
       SetTextColor(color);
-      SetCursorPosition(y,x);
+      _008SetCursorPos(y,x);
       if(dynamic_cast <console *> (m_p) != NULL)
       {
          cout << char(150);
@@ -326,7 +329,7 @@ namespace pacman
       SetTextColor(::console::WHITE);
       if(level[y][x] == 'o')
          SetTextColor(m_ppacman->pelletcolor);
-      SetCursorPosition(y,x);
+      _008SetCursorPos(y,x);
       cout << level[y][x];
    }
 

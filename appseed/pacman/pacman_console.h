@@ -5,6 +5,18 @@
 namespace pacman
 {
 
+   class CLASS_DECL_APP_CORE_PACMAN console_composite :
+      public ::console::window_composite
+   {
+   public:
+
+
+      console_composite(::console::window * p): ::console::window_composite(p) {}
+
+
+      inline void _008SetCursorPos(int y,int x) { SetCursorPosition(y + 3,x); }
+   };
+
 
    class CLASS_DECL_APP_CORE_PACMAN console:
       virtual public ::dib_console
@@ -52,7 +64,6 @@ http://undeadgaming.wikia.com/wiki/Ghost_%28Pacman%29
 
       virtual bool defer_write(char ch, int x, int y, int cx, int cy, int iColor);
 
-      virtual void SetCursorPosition(int y,int x);
 
    };
 

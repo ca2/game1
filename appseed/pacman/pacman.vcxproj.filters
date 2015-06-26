@@ -64,13 +64,7 @@
     <ClCompile Include="pacman_sound.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pacman_system_console.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pacman_console.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pacman_dib_console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pacman_sound_track.cpp">
@@ -129,13 +123,7 @@
     <ClInclude Include="pacman_sound.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pacman_dib_console.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pacman_console.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pacman_system_console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pacman_sound_track.h">

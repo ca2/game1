@@ -7,7 +7,9 @@ namespace pacman
 
 
    player::player(pacman * ppacman):
-      ::console::window_composite(ppacman->m_p),level(ppacman->level),m_ppacman(ppacman)
+      console_composite(ppacman->m_p),
+      level(ppacman->level),
+      m_ppacman(ppacman)
    {
 
    }
@@ -27,7 +29,7 @@ namespace pacman
          if(testforcollision() == false)
          {
             // replace old coordinates with a space
-            SetCursorPosition(yold,xold);
+            _008SetCursorPos(yold,xold);
             cout << level[yold][xold];
             // if the player picked up a pellet
             if(level[y][x] != ' ')
@@ -161,7 +163,7 @@ namespace pacman
       }
       score += scoreinc;
       SetTextColor(::console::WHITE);
-      SetCursorPosition(-2,0);
+      _008SetCursorPos(-2,0);
       string str;
       if(score == 0)
       {
@@ -187,7 +189,7 @@ namespace pacman
    void player::printlives()
    {
       SetTextColor(color);
-      SetCursorPosition(LEVELHEIGHT,2);
+      _008SetCursorPos(LEVELHEIGHT,2);
       for(int i = 1; i < lives; i++)
          cout << ICONS[1] << " ";
       cout << " ";
@@ -204,11 +206,11 @@ namespace pacman
       if(x > LEVELWIDTH - length)
          killx = LEVELWIDTH - length;
       SetTextColor(::console::CYAN);
-      SetCursorPosition(y,killx);
+      _008SetCursorPos(y,killx);
       cout << scoreinc;
       printscore();
       Sleep(750);
-      SetCursorPosition(y,killx);
+      _008SetCursorPos(y,killx);
       for(int i = killx; i < killx + length; i++)
       {
          SetTextColor(::console::DARKBLUE);
@@ -266,7 +268,7 @@ namespace pacman
    void player::show()
    {
       SetTextColor(color);
-      SetCursorPosition(y,x);
+      _008SetCursorPos(y,x);
       if(wait >= PACMANMAX / 2)
       {
          cout << '*';
@@ -279,7 +281,7 @@ namespace pacman
 
    void player::hide()
    {
-      SetCursorPosition(y,x);
+      _008SetCursorPos(y,x);
       cout << level[y][x];
    }
 

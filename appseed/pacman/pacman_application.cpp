@@ -250,7 +250,7 @@ namespace pacman
       else if(iIndex == 2)
       {
 
-         return new system_console();
+         return System.alloc<::console::window>(System.type_info<::console::window >());
 
       }
       else

@@ -1425,7 +1425,6 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pacman_dib_console.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">Create</PrecompiledHeader>
@@ -1458,12 +1457,10 @@
     <ClCompile Include="pacman_preview.cpp" />
     <ClCompile Include="pacman_sound.cpp" />
     <ClCompile Include="pacman_sound_track.cpp" />
-    <ClCompile Include="pacman_system_console.cpp" />
     <ClCompile Include="pacman_view.cpp" />
     <ClCompile Include="pacman_pellet.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pacman_dib_console.h" />
     <ClInclude Include="pacman_console.h" />
     <ClInclude Include="pacman_constants.h" />
     <ClInclude Include="framework.h" />
@@ -1479,7 +1476,6 @@
     <ClInclude Include="pacman_pane_view_update_hint.h" />
     <ClInclude Include="pacman_preview.h" />
     <ClInclude Include="pacman_sound.h" />
-    <ClInclude Include="pacman_system_console.h" />
     <ClInclude Include="pacman_sound_track.h" />
     <ClInclude Include="pacman_view.h" />
     <ClInclude Include="pacman_pellet.h" />

@@ -5,7 +5,9 @@ namespace pacman
 {
 
 
-   pellet::pellet(pacman * ppacman): ::console::window_composite(ppacman),level(ppacman->level)
+   pellet::pellet(pacman * ppacman):
+      console_composite(ppacman),
+      level(ppacman->level)
    {
 
    }
@@ -14,7 +16,7 @@ namespace pacman
    void pellet::print()
    {
 
-       SetCursorPosition(y, x);
+       _008SetCursorPos(y, x);
        cout << level[y][x];
 
    }

@@ -44,13 +44,13 @@ namespace pacman
       SetScreenColor(::console::BLACK);
       char curcharacter;
       SetTextColor(::console::WHITE);
-      SetCursorPosition(-3,3);
+      _008SetCursorPos(-3,3);
       cout << "1UP";
-      SetCursorPosition(-3,9);
+      _008SetCursorPos(-3,9);
       cout << "HIGH SCORE";
       m_player.scoreinc = 0;
       m_player.printscore();
-      SetCursorPosition(0,0);
+      _008SetCursorPos(0,0);
       m_player.left = 0;
       for(int y = 0; y < LEVELHEIGHT; y++)
       {
@@ -186,7 +186,7 @@ namespace pacman
                level[y][x] = char(182);
             cout << level[y][x];
          }
-         SetCursorPosition(y + 1,0);
+         _008SetCursorPos(y + 1,0);
       }
       play_sound("wait:beginning");
       initall();
@@ -206,7 +206,7 @@ namespace pacman
    {
       Sleep(1000);
       hideall();
-      SetCursorPosition(12,13);
+      _008SetCursorPos(12,13);
       cout << "  ";
       for(int i = 0; i < 4; i++)
       {
@@ -217,24 +217,24 @@ namespace pacman
          m_player.show();
          Sleep(200);
       }
-      SetCursorPosition(0,0);
+      _008SetCursorPos(0,0);
       initall();
    }
 
    void pacman::printready()
    {
       SetTextColor(::console::YELLOW);
-      SetCursorPosition(17,11);
+      _008SetCursorPos(17,11);
       cout << "READY!";
       Sleep(2000);
-      SetCursorPosition(17,11);
+      _008SetCursorPos(17,11);
       cout << "      ";
    }
 
    void pacman::gameover()
    {
       play_sound("wait:death");
-      SetCursorPosition(17,9);
+      _008SetCursorPos(17,9);
       SetTextColor(::console::RED);
       cout << "GAME  OVER";
       Sleep(1000);

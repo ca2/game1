@@ -8,7 +8,7 @@ namespace pacman
    class pacman;
 
    class player :
-      virtual public ::console::window_composite
+      virtual public console_composite
    {
    public:
       int y,x;

@@ -27,7 +27,7 @@ namespace pacman
    pacman::pacman(::console::window * p):
       //object(p->get_app()),
       thread(p->get_app()),
-      ::console::window_composite(p),
+      console_composite(p),
       m_player(this),
       m_evRestart(p->get_app())
    {

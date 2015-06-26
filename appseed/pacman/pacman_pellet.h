@@ -6,7 +6,7 @@ namespace pacman
    
 
    class pellet :
-      virtual public ::console::window_composite
+      virtual public console_composite
    {
    public:
       

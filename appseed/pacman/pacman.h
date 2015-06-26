@@ -29,8 +29,6 @@ namespace pacman
 #define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::pacman::application > ())
 
 
-#include "pacman_system_console.h"
-#include "pacman_dib_console.h"
 #include "pacman_console.h"
 
 #include "pacman_constants.h"
