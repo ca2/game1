@@ -138,6 +138,12 @@ namespace pacman
       if(pdib.is_null())
          return;
 
+      if(pdib.m_p->m_dib.is_null())
+         return;
+
+      if(pdib.m_p->m_dib->area() <= 0)
+         return;
+
       synch_lock sl(&pdib->m_mutex);
 
       pdib->m_dib->get_graphics()->SelectFont(m_font);

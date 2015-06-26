@@ -234,7 +234,7 @@ namespace pacman
       else if(iIndex == 2)
       {
 
-         return System.alloc<::console::window>(System.type_info<::console::window >());
+         return Application.alloc<::console::window>(System.type_info<::console::window >());
 
       }
       else
