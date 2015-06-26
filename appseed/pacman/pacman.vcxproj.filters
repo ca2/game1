@@ -55,9 +55,6 @@
     <ClCompile Include="pacman_pellet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pacman_pacman_.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pacman_player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -74,6 +71,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pacman_dib_console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacman_sound_track.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pacman_pacman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -133,6 +136,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pacman_system_console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pacman_sound_track.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

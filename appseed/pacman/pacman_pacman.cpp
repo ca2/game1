@@ -24,6 +24,31 @@
 namespace pacman
 {
 
+   pacman::pacman(::console::window * p):
+      //object(p->get_app()),
+      thread(p->get_app()),
+      ::console::window_composite(p),
+      m_player(this),
+      m_evRestart(p->get_app())
+   {
+
+
+      m_psound = new ::pacman::sound_track(get_app());
+      m_psound->DecoderInitialize(NULL,false);
+      ghosts.add(canew(ghost(this)));
+      ghosts.add(canew(ghost(this)));
+      ghosts.add(canew(ghost(this)));
+      ghosts.add(canew(ghost(this)));
+
+      pellets.add(canew(pellet(this)));
+      pellets.add(canew(pellet(this)));
+      pellets.add(canew(pellet(this)));
+      pellets.add(canew(pellet(this)));
+
+
+   }
+
+
    // check if the user has entered 'w', 'a', 's' or 'd'
    void pacman::up(bool bPress)
    {

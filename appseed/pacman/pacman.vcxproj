@@ -1452,11 +1452,12 @@
     <ClCompile Include="pacman_document.cpp" />
     <ClCompile Include="pacman_frame.cpp" />
     <ClCompile Include="pacman_interface.cpp" />
-    <ClCompile Include="pacman_pacman_.cpp" />
+    <ClCompile Include="pacman_pacman.cpp" />
     <ClCompile Include="pacman_pane_view.cpp" />
     <ClCompile Include="pacman_pane_view_update_hint.cpp" />
     <ClCompile Include="pacman_preview.cpp" />
     <ClCompile Include="pacman_sound.cpp" />
+    <ClCompile Include="pacman_sound_track.cpp" />
     <ClCompile Include="pacman_system_console.cpp" />
     <ClCompile Include="pacman_view.cpp" />
     <ClCompile Include="pacman_pellet.cpp" />
@@ -1479,10 +1480,14 @@
     <ClInclude Include="pacman_preview.h" />
     <ClInclude Include="pacman_sound.h" />
     <ClInclude Include="pacman_system_console.h" />
+    <ClInclude Include="pacman_sound_track.h" />
     <ClInclude Include="pacman_view.h" />
     <ClInclude Include="pacman_pellet.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\gcom\gcom.vcxproj">
+      <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app-core\appseed\hellomultiverse\hellomultiverse.vcxproj">
       <Project>{c7afcefa-3079-4b23-8f97-4543bb980265}</Project>
     </ProjectReference>

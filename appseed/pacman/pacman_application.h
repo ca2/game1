@@ -4,11 +4,19 @@
 namespace pacman
 {
 
+   class restart
+   {
+   public:
+
+      restart(){}
+
+   };
 
    class CLASS_DECL_APP_CORE_PACMAN application :
       virtual public ::hellomultiverse::application,
       virtual public ::html::application,
-      virtual public ::multimedia::application
+      virtual public ::multimedia::application,
+      virtual public ::multimedia::audio::wave_player_container
    {
    public:
 
@@ -19,11 +27,23 @@ namespace pacman
       ::user::split_view *    m_psplit;
       view * m_pview;
 
-      int m_i;
+      ::console::window *     m_pconsolewindow;
+
+      int m_iConsole;
+
+      ::multimedia::audio_decode::decoder_plugin * m_pdecoderplugin;
+
+
+      pacman *                m_ppacman;
 
 
       application();
       virtual ~application();
+
+      
+      void start();
+      ::console::window * create_console(int iIndex);
+      void change_console(int iIndex);
 
 
       virtual bool initialize_instance();

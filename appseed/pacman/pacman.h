@@ -36,6 +36,9 @@ namespace pacman
 #include "pacman_constants.h"
 
 
+#include "pacman_sound_track.h"
+
+
 
 
 typedef char LEVEL[LEVELHEIGHT][LEVELWIDTH];

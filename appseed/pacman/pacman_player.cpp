@@ -52,6 +52,11 @@ namespace pacman
             m_ppacman->checkfordeath();
          }
          m_ppacman->play_sound("chomp");
+         if(m_ppacman->m_evRestart.wait(millis(0)).signaled())
+         {
+            throw restart();
+         }
+
       }
    }
 
@@ -252,6 +257,7 @@ namespace pacman
          printlives();
          dirold = 'a';
          m_ppacman->printready();
+         m_ppacman->m_psound->m_eventEnd.wait();
       }
       else
          m_ppacman->gameover();

@@ -14,13 +14,13 @@ namespace pacman
 
       //m_ppreview = NULL;
 
-      m_ppacman = NULL;
-
       m_bDibLayout = true;
 
       m_xDib   = -1;
 
       m_bHarderControl = false;
+
+      Application.m_pview = this;
 
    }
 
@@ -68,18 +68,13 @@ namespace pacman
 
       if(pcreate->m_bRet)
          return;
-
-
-      start();
+      
+      attach();
 
    }
 
    void view::_001OnDestroy(signal_details * pobj)
    {
-
-      m_ppacman->m_psound->m_bRun = false;
-
-      m_ppacman->m_bRun = false;
 
       pobj->previous();
 
@@ -131,11 +126,12 @@ namespace pacman
 
       //pdc->set_text_color(ARGB(255,255,255,255));
 
+      pacman * ppacman = Application.m_ppacman;
 
-      if(m_ppacman == NULL)
+      if(ppacman == NULL)
          return;
 
-      sp(::dib_console) pdib = m_pconsolewindow;
+      sp(::dib_console) pdib = Application.m_pconsolewindow;
 
       if(pdib.is_null())
          return;
@@ -171,7 +167,7 @@ namespace pacman
 
 
 
-   void view::start()
+   void view::attach()
    {
 
 //      m_ppreview = new _PacManPreview(this);
@@ -182,23 +178,23 @@ namespace pacman
 
       //m_pconsolewindow = new ::windows::console_window(get_app(),size(24,24));
 
-      m_pconsolewindow = create_console();
+/*      m_pconsolewindow = create_console();
 
       m_pconsolewindow->set_app(get_app());
 
-      m_ppacman = new pacman(m_pconsolewindow);
+      //Application.m_ppacman->::console::window_composite::m_p = m_pconsolewindow;
+      //Application.m_ppacman->m_player.::console::window_composite::m_p = m_pconsolewindow;
+      //for(auto ghost : Application.m_ppacman->ghosts)
+      //{
+      //   ghost->::console::window_composite::m_p = m_pconsolewindow;
+      //}
+      
+      if(Application.m_ppacman->m_pthreadimpl.is_null())
+      {
+         Application.m_ppacman->begin();
+      }
 
-//      m_ppacman->reset();
-
-      sp(frame) pframe = GetTopLevelFrame();
-
-      //pframe->m_sizeView.cx = m_ppacman->widthInPixels+ 80;
-      //pframe->m_sizeView.cy = m_ppacman->heightInPixels + 80 + 10 + m_ppreview->m_dib->m_size.cy;
-
-      sp(frame) pframe1 = GetParentFrame();
-
-      //pframe1->m_sizeView = pframe->m_sizeView;
-
+      */
    }
 
 
@@ -221,19 +217,19 @@ namespace pacman
       //else
       if(pkey->m_ekey == ::user::key_up)
       {
-         m_ppacman->up();
+         Application.m_ppacman->up();
       }
       else if(pkey->m_ekey == ::user::key_down)
       {
-         m_ppacman->down();
+         Application.m_ppacman->down();
       }
       else if(pkey->m_ekey == ::user::key_left)
       {
-         m_ppacman->left();
+         Application.m_ppacman->left();
       }
       else if(pkey->m_ekey == ::user::key_right)
       {
-         m_ppacman->right();
+         Application.m_ppacman->right();
       }
 
       pkey->m_bRet = true;
@@ -248,19 +244,19 @@ namespace pacman
       {
          if(pkey->m_ekey == ::user::key_up)
          {
-            m_ppacman->up(false);
+            Application.m_ppacman->up(false);
          }
          else if(pkey->m_ekey == ::user::key_down)
          {
-            m_ppacman->down(false);
+            Application.m_ppacman->down(false);
          }
          else if(pkey->m_ekey == ::user::key_left)
          {
-            m_ppacman->left(false);
+            Application.m_ppacman->left(false);
          }
          else if(pkey->m_ekey == ::user::key_right)
          {
-            m_ppacman->right(false);
+            Application.m_ppacman->right(false);
          }
       }
 
@@ -276,29 +272,6 @@ namespace pacman
 
    }
 
-
-   ::console::window * view::create_console()
-   {
-
-      return new console(get_app(),size(16,16));
-
-   }
-
-
-   ::console::window * view2::create_console()
-   {
-
-      return new dib_console(get_app(),size(16,16));
-
-   }
-
-
-   ::console::window * view3::create_console()
-   {
-
-      return new system_console();
-
-   }
 
 
 } // namespace pacman

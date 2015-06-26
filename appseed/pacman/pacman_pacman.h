@@ -25,7 +25,7 @@ namespace pacman
    public:
 
       //mutex          m_mutex;
-      sound    * m_psound;
+      sound_track    * m_psound;
       char level[LEVELHEIGHT][LEVELWIDTH];
       int oneuptimer = ONEUPMAX;
       int oneupcolor = ::console::WHITE;
@@ -38,28 +38,11 @@ namespace pacman
       spa2(ghost) ghosts;
       spa2(pellet) pellets;
 
+      manual_reset_event m_evRestart;
 
-      pacman(::console::window * p) :
-         //object(p->get_app()),
-         thread(p->get_app()),
-         ::console::window_composite(p),
-         m_player(this)
-      {
+      pacman(::console::window * p);
 
-         ghosts.add(canew(ghost(this)));
-         ghosts.add(canew(ghost(this)));
-         ghosts.add(canew(ghost(this)));
-         ghosts.add(canew(ghost(this)));
-
-         pellets.add(canew(pellet(this)));
-         pellets.add(canew(pellet(this)));
-         pellets.add(canew(pellet(this)));
-         pellets.add(canew(pellet(this)));
-
-
-         begin();
-      }
-
+      void restart();
       // Main
       int run();
       void mainloop();

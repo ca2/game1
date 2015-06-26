@@ -10,15 +10,12 @@ namespace pacman
 
 
    class CLASS_DECL_APP_CORE_PACMAN view :
-      public ::user::impact
+      virtual public user::impact
    {
    public:
 
 
 //      _PacManPreview *        m_ppreview;
-
-      ::console::window *     m_pconsolewindow;
-      pacman *                m_ppacman;
 
       ::visual::fastblur      m_dib;
       bool                    m_bDibLayout;
@@ -47,8 +44,6 @@ namespace pacman
 	   virtual void dump(dump_context & dumpcontext) const;
    #endif
 
-      virtual ::console::window * create_console();
-
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
       virtual void _001OnDraw(::draw2d::graphics * pdc);
@@ -59,7 +54,7 @@ namespace pacman
 
       void render();
 
-      void start();
+      void attach();
 
 
       virtual void layout();
@@ -77,31 +72,6 @@ namespace pacman
 
    };
 
-   class CLASS_DECL_APP_CORE_PACMAN view2:
-      virtual public view
-   {
-   public:
-
-      view2(::aura::application * papp): object(papp),view(papp)
-      {
-      }
-
-      virtual ::console::window * create_console();
-   };
-
-#ifdef WINDOWS
-   class CLASS_DECL_APP_CORE_PACMAN view3:
-      virtual public view
-   {
-   public:
-
-      view3(::aura::application * papp): object(papp),view(papp)
-      {
-      }
-
-      virtual ::console::window * create_console();
-   };
-#endif // WINDOWS
 
 } // namespace pacman
 

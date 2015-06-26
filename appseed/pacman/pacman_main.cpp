@@ -7,15 +7,28 @@ namespace  pacman
    //int main()
    int pacman::run()
    {
-      srand(time(0));
-      m_psound = new ::pacman::sound(get_app());
-//      SetConsoleTitle("PAC++MAN");
-      SetWindowSize(LEVELHEIGHT + 4,LEVELWIDTH);
-      SetCursorVisibility(false);
-      m_player.hiscore = 0;
-      mainloop();
+      start:
+      try
+      {
+         srand(time(0));
+         //      SetConsoleTitle("PAC++MAN");
+         SetWindowSize(LEVELHEIGHT + 4,LEVELWIDTH);
+         SetCursorVisibility(false);
+         m_player.hiscore = 0;
+         m_evRestart.ResetEvent();
+         mainloop();
+      }
+      catch(const ::pacman::restart & )
+      {
+         goto start;
+      }
       delete m_p;
       return 0;
+   }
+
+   void pacman::restart()
+   {
+      m_evRestart.SetEvent();
    }
 
    void pacman::mainloop()

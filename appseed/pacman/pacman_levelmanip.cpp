@@ -194,6 +194,12 @@ namespace pacman
       m_player.printlives();
       Sleep(1984);
       printready();
+      multi_lock ml({&m_evRestart,&m_psound->m_eventEnd});
+
+      if(ml.lock(duration::infinite(), false).signaled_index() == 0)
+      {
+         throw ::pacman::restart();
+      }
    }
 
    void pacman::nextlevel()

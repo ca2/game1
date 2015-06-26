@@ -10,10 +10,12 @@ namespace pacman
    application::application()
    {
 
+      m_ppacman = NULL;
+
       m_strAppName            = "pacman";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
-      m_i = 0;
+      m_iConsole = 0;
 
       m_etype                 = type_normal;
 
@@ -49,10 +51,6 @@ namespace pacman
       System.factory().creatable_small < ::pacman::document >();
       System.factory().creatable_small < ::pacman::frame >();
       System.factory().creatable_small < ::pacman::view >();
-      System.factory().creatable_small < ::pacman::view2 >();
-#ifndef WINDOWS
-      System.factory().creatable_small < ::pacman::view3 >();
-#endif
 
       if(!::multimedia::application::initialize_instance())
          return false;
@@ -96,6 +94,8 @@ namespace pacman
    void application::on_request(sp(::create) pcreatecontext)
    {
 
+      start();
+
       m_ptemplatePacManMain->open_document_file(pcreatecontext);
 
       if(!pcreatecontext->m_spCommandLine->m_varFile.is_empty())
@@ -127,8 +127,6 @@ namespace pacman
 
          m_pview = psplit->create_view < view >(NULL,::null_rect(),psplit->get_pane_holder(1),"pacman_view3");
 
-         m_i = 0;
-
          m_psplit = psplit;
 
       }
@@ -145,38 +143,12 @@ namespace pacman
          if(pevent->m_puie == m_ptoggle)
          {
 
-            view * pview = m_pview;
 
-            int iCount = 3;
-            
-            if(m_i % iCount  == 0)
-            {
-
-               m_pview = m_psplit->create_view < view >(NULL,::null_rect(),m_psplit->get_pane_holder(1),"pacman_view");
-
-            }
-            else if(m_i % iCount == 1)
-            {
-
-               m_pview = m_psplit->create_view < view2 >(NULL,::null_rect(),m_psplit->get_pane_holder(1),"pacman_view2");
-
-            }
-            else if(m_i % iCount == 2)
-            {
-
-               m_pview = m_psplit->create_view < view3 >(NULL,::null_rect(),m_psplit->get_pane_holder(1),"pacman_view3");
-
-            }
-
-            m_i++;
-
-            m_pview->SetFocus();
-
-            pview->DestroyWindow();
-
-//            ::release(pview);
+            Application.change_console(++Application.m_iConsole);
 
             pevent->m_bProcessed = true;
+            pevent->m_bRet = true;
+
 
             return true;
 
@@ -189,8 +161,106 @@ namespace pacman
 
    }
 
+   void application::start()
+   {
+
+      m_pconsolewindow = create_console(0);
+
+      m_ppacman = new pacman(m_pconsolewindow);
+
+      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
+
+      if(!m_pwaveplayer->begin_synch())
+         return;
+
+      Application.m_pdecoderplugin =  get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
+
+      ::multimedia::audio::wave_player_command c;
+
+      c.OpenDecoder(m_ppacman->m_psound);
+
+      get_wave_player()->DecoderOpen(c);
+
+      c.Play(imedia::position(0));
+
+      get_wave_player()->ExecuteCommand(c);
 
 
+      //      m_ppacman->reset();
+
+      //sp(frame) pframe = GetTopLevelFrame();
+
+      //pframe->m_sizeView.cx = m_ppacman->widthInPixels+ 80;
+      //pframe->m_sizeView.cy = m_ppacman->heightInPixels + 80 + 10 + m_ppreview->m_dib->m_size.cy;
+
+      //sp(frame) pframe1 = GetParentFrame();
+
+      //pframe1->m_sizeView = pframe->m_sizeView;
+
+      m_ppacman->begin();
+
+   }
+
+   void application::change_console(int iIndex)
+   {
+
+      ::console::window * pwindowOld = m_pconsolewindow;
+      
+      ::console::window * pwindow = create_console(iIndex % 3);
+
+      m_ppacman->::console::window_composite::m_p = pwindow;
+      m_ppacman->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      m_ppacman->m_player.::console::window_composite::m_p = pwindow;
+      m_ppacman->m_player.::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      for(auto ghost : m_ppacman->ghosts)
+      {
+         ghost->::console::window_composite::m_p = pwindow;
+         ghost->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      }
+      for(auto pellet : m_ppacman->pellets)
+      {
+         pellet->::console::window_composite::m_p = pwindow;
+         pellet->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      }
+
+      m_pconsolewindow = pwindow;
+
+      m_ppacman->restart();
+
+      ::aura::del(pwindowOld);
+
+   }
+
+   ::console::window * application::create_console(int iIndex)
+   {
+
+      if(iIndex == 0)
+      {
+
+         return new console(this,size(16,16));
+
+      }
+      else if(iIndex == 1)
+      {
+
+
+         return new dib_console(this,size(16,16));
+
+      }
+      else if(iIndex == 2)
+      {
+
+         return new system_console();
+
+      }
+      else
+      {
+
+         return new console(this,size(16,16));
+
+      }
+
+   }
 
 } // namespace pacman
 
