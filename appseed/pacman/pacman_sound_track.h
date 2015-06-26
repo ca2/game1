@@ -6,9 +6,13 @@ namespace pacman
 
 
    class sound_track :
+      virtual public ::multimedia::audio::wave_player_container,
       virtual public ::multimedia::audio_decode::track
    {
    public:
+
+      sp(::multimedia::audio_decode::decoder_plugin) m_pdecoderplugin;
+
 
       ::multimedia::audio_decode::resampler * m_presampler;
       manual_reset_event      m_eventEnd;

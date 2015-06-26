@@ -15,8 +15,7 @@ namespace pacman
    class CLASS_DECL_APP_CORE_PACMAN application :
       virtual public ::hellomultiverse::application,
       virtual public ::html::application,
-      virtual public ::multimedia::application,
-      virtual public ::multimedia::audio::wave_player_container
+      virtual public ::multimedia::application
    {
    public:
 
@@ -30,9 +29,6 @@ namespace pacman
       ::console::window *     m_pconsolewindow;
 
       int m_iConsole;
-
-      ::multimedia::audio_decode::decoder_plugin * m_pdecoderplugin;
-
 
       pacman *                m_ppacman;
 

@@ -15,6 +15,24 @@ namespace pacman
       m_presampler = new ::multimedia::audio_decode::resampler(get_app());
 
 
+      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
+
+      if(!m_pwaveplayer->begin_synch())
+         return;
+
+      m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
+
+      ::multimedia::audio::wave_player_command c;
+
+      c.OpenDecoder(this);
+
+      get_wave_player()->DecoderOpen(c);
+
+      c.Play(imedia::position(0));
+
+      get_wave_player()->ExecuteCommand(c);
+
+
    }
 
    sound_track::~sound_track()
@@ -56,7 +74,10 @@ namespace pacman
       if(pdecoder == NULL)
       {
          
-         pdecoder = Application.m_pdecoderplugin->NewDecoder();
+         if(m_pdecoderplugin == NULL)
+            return NULL;
+
+         pdecoder = m_pdecoderplugin->NewDecoder();
 
          pdecoder->DecoderInitialize(sound_file(psz),false);
 

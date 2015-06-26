@@ -15,7 +15,7 @@ namespace pacman
       m_strAppName            = "pacman";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
-      m_iConsole = 0;
+      m_iConsole = 2;
 
       m_etype                 = type_normal;
 
@@ -164,26 +164,10 @@ namespace pacman
    void application::start()
    {
 
-      m_pconsolewindow = create_console(0);
+      m_pconsolewindow = create_console(m_iConsole);
 
       m_ppacman = new pacman(m_pconsolewindow);
 
-      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
-
-      if(!m_pwaveplayer->begin_synch())
-         return;
-
-      Application.m_pdecoderplugin =  get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
-
-      ::multimedia::audio::wave_player_command c;
-
-      c.OpenDecoder(m_ppacman->m_psound);
-
-      get_wave_player()->DecoderOpen(c);
-
-      c.Play(imedia::position(0));
-
-      get_wave_player()->ExecuteCommand(c);
 
 
       //      m_ppacman->reset();

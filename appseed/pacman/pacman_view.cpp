@@ -68,7 +68,9 @@ namespace pacman
 
       if(pcreate->m_bRet)
          return;
-      
+
+      m_font->create_pixel_font("Arial",16, 900);
+
       attach();
 
    }
@@ -137,8 +139,6 @@ namespace pacman
          return;
 
       synch_lock sl(&pdib->m_mutex);
-
-      m_font->create_pixel_font(Application.dir().matter("crackman.ttf"),pdib->m_sizeTile.cy);
 
       pdib->m_dib->get_graphics()->SelectFont(m_font);
 

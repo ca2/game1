@@ -25,7 +25,7 @@ namespace pacman
    public:
 
       //mutex          m_mutex;
-      sound_track    * m_psound;
+      sp(sound_track)      m_psound;
       char level[LEVELHEIGHT][LEVELWIDTH];
       int oneuptimer = ONEUPMAX;
       int oneupcolor = ::console::WHITE;
