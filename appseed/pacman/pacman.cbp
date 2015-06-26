@@ -2,14 +2,14 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="app_core_pacman" />
+		<Option title="game_pacman" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="../../../stage/x86/libapp_core_pacman.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../stage/x86/libgame_pacman.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../stage/x86/" />
-				<Option object_output="../../../time/intermediate/app/app_core_pacman" />
+				<Option object_output="../../../time/intermediate/app/gamepacman" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/pacman build_number=basis locale=_std schema=_std" />
@@ -23,9 +23,9 @@
 				</Compiler>
 			</Target>
 			<Target title="memdleak">
-				<Option output="../../../stage/x86/libapp_core_pacman.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../stage/x86/libgamepacman.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../stage/x86/" />
-				<Option object_output="../../../time/intermediate/app/app_core_pacman" />
+				<Option object_output="../../../time/intermediate/app/game_pacman" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/hellomultiverse build_number=basis locale=_std schema=_std" />
