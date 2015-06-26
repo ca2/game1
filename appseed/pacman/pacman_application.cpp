@@ -15,7 +15,7 @@ namespace pacman
       m_strAppName            = "pacman";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
-      m_iConsole = 2;
+      m_iConsole = 0;
 
       m_etype                 = type_normal;
 
@@ -189,7 +189,7 @@ namespace pacman
    {
 
       ::console::window * pwindowOld = m_pconsolewindow;
-      
+
       ::console::window * pwindow = create_console(iIndex % 3);
 
       m_ppacman->::console::window_composite::m_p = pwindow;
