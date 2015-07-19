@@ -2,7 +2,7 @@
 
 
 #ifdef METROWIN
-[Session::MTAThread]
+[MTAThread]
 #endif
 BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {

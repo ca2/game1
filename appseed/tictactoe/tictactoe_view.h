@@ -1,8 +1,6 @@
 #pragma once
 
 
-#include <ft2build.h>
-#include FT_FREETYPE_H
 
 
 namespace tictactoe
@@ -12,7 +10,7 @@ namespace tictactoe
    class document;
 
    
-   class CLASS_DECL_APP_CORE_TICTACTOE view :
+   class CLASS_DECL_GAME_TICTACTOE view :
       public ::user::impact
    {
    public:
@@ -32,6 +30,7 @@ namespace tictactoe
       mutex                   m_mutexDraw;
       mutex                   m_mutexSwap;
       
+      ::visual::dib_sp        m_dibBk;
       ::draw2d::dib_sp        m_dib1;
       ::draw2d::dib_sp        m_dib2;
       bool                    m_bDib1;

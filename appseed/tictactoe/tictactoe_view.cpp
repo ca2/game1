@@ -16,12 +16,22 @@ namespace tictactoe
       m_font(allocer()),
       m_mutexDraw(papp),
       m_mutexWork(papp),
-      m_mutexSwap(papp)
+      m_mutexSwap(papp),
+      m_dibBk(allocer())
+
    {
 
       m_strHelloMultiverse = "Hello Multiverse!!";
 
       reset_board();
+
+      string str = typeid(*this).name();
+
+      ::str::begins_eat_ci(str,"class ");
+
+      string strPath = Application.directrix()->m_varTopicQuery["bk"][str];
+
+      m_dibBk.load_from_file(strPath);
 
    }
 
@@ -155,7 +165,23 @@ namespace tictactoe
       if(pdib->area() <= 0)
          return;
 
+      rect rectClient;
+
+      GetClientRect(rectClient);
+
       pdc->set_alpha_mode(::draw2d::alpha_mode_set);
+
+      pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
+
+      if(m_dibBk.is_set() && m_dibBk->area() > 0)
+      {
+         pdc->BitBlt(
+            0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
+            MIN(rectClient.height(),m_dibBk->m_size.cy),
+            m_dibBk->get_graphics());
+      }
+
+      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       pdc->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
 
@@ -667,6 +693,8 @@ namespace tictactoe
       {
 
          synch_lock slWork(&m_mutexWork);
+
+         m_dib.alloc(allocer());
 
          if(!m_dib.initialize(rectClient.width(),rectClient.height(),5))
             return;

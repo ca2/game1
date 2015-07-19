@@ -8,14 +8,10 @@
 //#include "core/filesystem/filemanager/filemanager.h"
 
 
-#ifdef WINDOWS
-#ifdef _APP_CORE_TICTACTOE_LIBRARY
-    #define CLASS_DECL_APP_CORE_TICTACTOE  _declspec(dllexport)
+#ifdef _GAME_TICTACTOE_LIBRARY
+    #define CLASS_DECL_GAME_TICTACTOE  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_APP_CORE_TICTACTOE  _declspec(dllimport)
-#endif
-#else
-   #define CLASS_DECL_APP_CORE_TICTACTOE
+    #define CLASS_DECL_GAME_TICTACTOE  CLASS_DECL_IMPORT
 #endif
 
 namespace tictactoe

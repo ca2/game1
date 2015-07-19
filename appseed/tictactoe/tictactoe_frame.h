@@ -8,7 +8,7 @@ namespace tictactoe
    class pane_view;
 
 
-   class CLASS_DECL_APP_CORE_TICTACTOE frame :
+   class CLASS_DECL_GAME_TICTACTOE frame :
       public simple_frame_window
    {
    public:

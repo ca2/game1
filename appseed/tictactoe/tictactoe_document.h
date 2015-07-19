@@ -5,7 +5,7 @@ namespace tictactoe
 {
 
 
-   class CLASS_DECL_APP_CORE_TICTACTOE document :
+   class CLASS_DECL_GAME_TICTACTOE document :
       public ::user::document
    {
    public:

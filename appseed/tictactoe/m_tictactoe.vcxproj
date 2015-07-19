@@ -88,50 +88,55 @@
     <ClCompile>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/thirdparty/include;$(SolutionDir)../../../app/thirdparty/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Async</ExceptionHandling>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">ProgramDatabase</DebugInformationFormat>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</CompileAsManaged>
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</RuntimeTypeInfo>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|x64'">_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="application.h" />
-    <ClInclude Include="document.h" />
-    <ClInclude Include="frame.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="hellomultiverse.h" />
-    <ClInclude Include="pane_view.h" />
-    <ClInclude Include="pane_view_update_hint.h" />
-    <ClInclude Include="view.h" />
-  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="hellomultiverse.cpp" />
-    <ClCompile Include="hellomultiverse_application.cpp" />
-    <ClCompile Include="hellomultiverse_document.cpp" />
-    <ClCompile Include="hellomultiverse_frame.cpp" />
-    <ClCompile Include="hellomultiverse_pane_view.cpp" />
-    <ClCompile Include="hellomultiverse_pane_view_update_hint.cpp" />
-    <ClCompile Include="hellomultiverse_view.cpp" />
+    <ClCompile Include="tictactoe.cpp" />
+    <ClCompile Include="tictactoe_application.cpp" />
+    <ClCompile Include="tictactoe_document.cpp" />
+    <ClCompile Include="tictactoe_frame.cpp" />
+    <ClCompile Include="tictactoe_pane_view.cpp" />
+    <ClCompile Include="tictactoe_pane_view_update_hint.cpp" />
+    <ClCompile Include="tictactoe_view.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_hellomultiverse.def" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\..\app\appseed\aura\m_aura.vcxproj">
+      <Project>{55f3f6b8-8baf-4f22-9e77-bcf9d5a23960}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\axis\m_axis.vcxproj">
+      <Project>{3bae8362-f135-4513-9163-58532baba44a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\base\m_base.vcxproj">
       <Project>{5487686f-8a2f-401a-a38e-fda8900e1984}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\core\m_core.vcxproj">
       <Project>{420d7aeb-cfca-45de-bb6e-95055df21987}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\thirdparty\appseed\freetype\_m_ca2basefreetype.vcxproj">
-      <Project>{af9dfa62-6f0e-47b8-a55b-5ad825571f4f}</Project>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="tictactoe.h" />
+    <ClInclude Include="tictactoe_application.h" />
+    <ClInclude Include="tictactoe_document.h" />
+    <ClInclude Include="tictactoe_frame.h" />
+    <ClInclude Include="tictactoe_pane_view.h" />
+    <ClInclude Include="tictactoe_pane_view_update_hint.h" />
+    <ClInclude Include="tictactoe_view.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_tictactoe.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

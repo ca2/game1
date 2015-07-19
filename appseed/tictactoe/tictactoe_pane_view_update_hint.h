@@ -12,7 +12,7 @@ namespace tictactoe
    };
 
 
-   class CLASS_DECL_APP_CORE_TICTACTOE pane_view_update_hint :
+   class CLASS_DECL_GAME_TICTACTOE pane_view_update_hint :
       public object  
    {
    public:

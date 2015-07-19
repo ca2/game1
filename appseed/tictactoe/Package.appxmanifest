@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="ca2.app-core.hellomultiverse" Publisher="CN=Camilo" Version="1.1.0.0" />
+  <Identity Name="ca2.game.tictactoe" Publisher="CN=Camilo" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>ca2.app-core.hellomultiverse</DisplayName>
+    <DisplayName>ca2.game.tictactoe</DisplayName>
     <PublisherDisplayName>ca2 Desenvolvimento de Software Ltda.</PublisherDisplayName>
-    <Logo>Assets\HelloMultliverse50.png</Logo>
+    <Logo>assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.3</OSMinVersion>

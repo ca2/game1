@@ -9,58 +9,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="document.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="frame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pane_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pane_view_update_hint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse.cpp">
+    <ClCompile Include="tictactoe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_application.cpp">
+    <ClCompile Include="tictactoe_application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_document.cpp">
+    <ClCompile Include="tictactoe_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_frame.cpp">
+    <ClCompile Include="tictactoe_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_pane_view.cpp">
+    <ClCompile Include="tictactoe_pane_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_pane_view_update_hint.cpp">
+    <ClCompile Include="tictactoe_pane_view_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_view.cpp">
+    <ClCompile Include="tictactoe_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_hellomultiverse.def" />
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_tictactoe.def">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

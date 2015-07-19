@@ -57,8 +57,8 @@
     <IncludePath>$(VCInstallDir)include;$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageCertificateKeyFile>winmetro_hellomultiverse.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>CF820A40C4761D038819DB3AD3649DE47E9D735D</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>winmetro_game_tictactoe_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>50F74C70BCB125E5DEB0A33BC5530D99A0FBCCBB</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\</OutDir>
@@ -90,7 +90,7 @@
     <ClCompile>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/thirdparty/include;$(SolutionDir)../../../app/thirdparty/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Async</ExceptionHandling>
@@ -106,28 +106,22 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\stage\x86\draw2d_direct2d.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-    </None>
-    <None Include=".\winmetro_hellomultiverse.pfx" />
-    <None Include="..\..\..\nodeapp\stage\matter\msvc++\msvcp110d.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\nodeapp\stage\matter\msvc++\msvcr110d.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\nodeapp\stage\matter\msvc++\vccorlib110d.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-    </None>
+    <None Include="winmetro_game_tictactoe_TemporaryKey.pfx" />
+    <None Include="winmetro_tictactoe.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="winmetro_hellomultiverse.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\wndfrm_core\m_wndfrm.vcxproj">
+      <Project>{7a455b6f-e8d8-4acf-bc1a-ee58c5d81992}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\aqua\m_aqua.vcxproj">
+      <Project>{19518477-75c4-4df7-acc2-325fa81a640c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\aura\m_aura.vcxproj">
+      <Project>{55f3f6b8-8baf-4f22-9e77-bcf9d5a23960}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\axis\m_axis.vcxproj">
+      <Project>{3bae8362-f135-4513-9163-58532baba44a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\base\m_base.vcxproj">
       <Project>{5487686f-8a2f-401a-a38e-fda8900e1984}</Project>
     </ProjectReference>
@@ -137,30 +131,71 @@
     <ProjectReference Include="..\..\..\app\appseed\draw2d_direct2d\m_draw2d_direct2d.vcxproj">
       <Project>{0eec2ece-caaf-446a-b805-7e538ff11996}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\thirdparty\appseed\FreeImage\m_basefreeimage.vcxproj">
-      <Project>{fced5042-9a2d-4e71-8022-129e8e5d1993}</Project>
+    <ProjectReference Include="..\..\..\app\appseed\html\m_html.vcxproj">
+      <Project>{106e3938-fa19-4d4d-83d5-a36692c93e86}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\thirdparty\appseed\freetype\_m_ca2basefreetype.vcxproj">
-      <Project>{af9dfa62-6f0e-47b8-a55b-5ad825571f4f}</Project>
+    <ProjectReference Include="..\..\..\app\appseed\math\m_math.vcxproj">
+      <Project>{b53f381b-5724-412b-99a6-5c301430b0b5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\nodeapp\os\m_os.vcxproj">
-      <Project>{fccdd981-5c10-4487-becf-eb3a7d4a1986}</Project>
+    <ProjectReference Include="..\..\..\app\appseed\sphere\m_sphere.vcxproj">
+      <Project>{2108fbeb-0e13-431a-af45-e48a61b51997}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\uinteraction\m_uinteraction.vcxproj">
-      <Project>{7a455b6f-e8d8-4acf-bc1a-ee58c5d81992}</Project>
+    <ProjectReference Include="..\..\..\app\aura\charguess\m_auracharguess.vcxproj">
+      <Project>{67c95418-596b-4860-afae-b53262ae5e43}</Project>
     </ProjectReference>
-    <ProjectReference Include="m_hellomultiverse.vcxproj">
-      <Project>{aa5c6e24-9df1-4ec1-a907-e298feae1990}</Project>
+    <ProjectReference Include="..\..\..\app\aura\sqlite\m_aurasqlite.vcxproj">
+      <Project>{5da9963d-5824-48a8-b869-ba93618da5f4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\bzip2\m_axisbzip2.vcxproj">
+      <Project>{802c98ed-0844-4be7-ae30-f417a92207bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\crypto\m_axiscrypto.vcxproj">
+      <Project>{19518477-2015-1976-99a6-5c301430b0b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\freeimage\m_axisfreeimage.vcxproj">
+      <Project>{4578272a-f76e-48d5-ac7d-5856f150cd7f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\html_lite\m_html_lite.vcxproj">
+      <Project>{3b814daf-fd98-487d-917e-9d708be3bc61}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\idn\m_axisidn.vcxproj">
+      <Project>{f9917855-9c31-41a0-85b1-8ba8dfd6e3b6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\jpeg\m_axisjpeg.vcxproj">
+      <Project>{c99b1e59-5356-4164-996a-90bbe3967a01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\zlib\m_axiszlib.vcxproj">
+      <Project>{7ebfd809-20d7-4744-81c0-9f3ff41a070f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="m_tictactoe.vcxproj">
+      <Project>{b5718a0e-a0e8-401d-a034-572023184665}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="assets\HelloMultiverse150.png" />
-    <Image Include="assets\HelloMultiverse30.png" />
-    <Image Include="assets\HelloMultiverse310-150.png" />
-    <Image Include="assets\HelloMultiverse310.png" />
-    <Image Include="assets\HelloMultiverse50.png" />
-    <Image Include="assets\HelloMultiverse620-300.png" />
-    <Image Include="assets\HelloMultiverse70.png" />
+    <Image Include="assets\HelloMultiverse150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\HelloMultiverse30.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\HelloMultiverse310-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\HelloMultiverse310.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\HelloMultiverse620-300.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\HelloMultiverse70.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\StoreLogo.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="winmetro_tictactoe.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

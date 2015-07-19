@@ -6,7 +6,7 @@ namespace tictactoe
 
    class view;
 
-   class CLASS_DECL_APP_CORE_TICTACTOE pane_view : 
+   class CLASS_DECL_GAME_TICTACTOE pane_view : 
       public ::userex::pane_tab_view
    {
    public:
