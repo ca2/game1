@@ -62,7 +62,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_hellomultiverse.def">
+    <None Include="game_tictactoe.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

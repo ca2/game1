@@ -54,7 +54,7 @@
     <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
     <RootNamespace>app_core_hellomultiverse</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_tictactoe</ProjectName>
+    <ProjectName>game_tictactoe</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -1458,9 +1458,6 @@
     <ClInclude Include="tictactoe_view.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_hellomultiverse.def" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\app\appseed\aura\aura.vcxproj">
       <Project>{03e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
     </ProjectReference>
@@ -1473,6 +1470,9 @@
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_tictactoe.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
