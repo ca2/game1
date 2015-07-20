@@ -189,12 +189,14 @@ namespace tictactoe
 
       pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
 
-      if(m_dibBk.is_set() && m_dibBk->area() > 0)
+      if(m_dibBk.is_set() && m_dibBk->area() > 0 && rectClient.area() > 0)
       {
-         pdc->BitBlt(
-            0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
-            MIN(rectClient.height(),m_dibBk->m_size.cy),
-            m_dibBk->get_graphics());
+         double dRate = MAX((double)rectClient.width()/(double)m_dibBk->m_size.cx,
+                            (double)rectClient.height()/(double)m_dibBk->m_size.cy);
+         double dx = MIN(m_dibBk->m_size.cx * dRate, rectClient.width());
+         double dy = MIN(m_dibBk->m_size.cy * dRate, rectClient.height());
+         pdc->SetStretchBltMode(HALFTONE);
+         pdc->StretchBlt(0, 0, dx, dy, m_dibBk->get_graphics(), 0, 0, dx / dRate, dy / dRate, SRCCOPY);
       }
 
       pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
@@ -226,7 +228,7 @@ namespace tictactoe
       rectClient.left = 0;
       rectClient.top = 0;
       rectClient.right = m_dib->m_size.cx;
-      rectClient.bottom = m_dib->m_size.cy;
+      rectClient.bottom = m_dib->m_iHeight;
 
       int32_t iCount = 20;
 
@@ -714,6 +716,8 @@ namespace tictactoe
 
          if(!m_dib.initialize(rectClient.width(),rectClient.height(),5))
             return;
+         
+         m_dib->m_iHeight = rectClient.height(); // 1 x 1 and not 0 x 0 : good!!
 
          m_dib->Fill(0,0,0,0);
 
