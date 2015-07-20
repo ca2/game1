@@ -2,6 +2,22 @@
 #include <math.h>
 
 
+template < typename T >
+string friendly_this_name(T const * pthis)
+{
+
+   string str = demangle(typeid(*pthis).name());
+
+   ::str::begins_eat_ci(str, "class ");
+
+   return str;
+
+}
+
+
+#define THIS_FRIENDLY_NAME() friendly_this_name(this)
+
+
 namespace tictactoe
 {
 
@@ -25,9 +41,9 @@ namespace tictactoe
 
       reset_board();
 
-      string str = typeid(*this).name();
+      
 
-      ::str::begins_eat_ci(str,"class ");
+      string str = THIS_FRIENDLY_NAME();
 
       string strPath = Application.directrix()->m_varTopicQuery["bk"][str];
 
