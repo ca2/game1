@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED3191547110091C065 /* libcore.dylib */; };
-		07881BA91B5CCA5C0069D136 /* libaxispng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07881B921B5CC7E30069D136 /* libaxispng.dylib */; };
+		078B58ED1B5CF6FC00A7D3CF /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9A8021B5CA67400B63035 /* libaura.dylib */; };
+		078B58EE1B5CF70400A7D3CF /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9A80E1B5CA67F00B63035 /* libaxis.dylib */; };
+		078B58EF1B5CF70C00A7D3CF /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9A81A1B5CA68800B63035 /* libbase.dylib */; };
+		078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libcore.dylib */; };
+		078B58F11B5CF74F00A7D3CF /* libaxisjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07881BA11B5CC7F00069D136 /* libaxisjpeg.dylib */; };
+		078B58F21B5CF77800A7D3CF /* libaxispng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07881B921B5CC7E30069D136 /* libaxispng.dylib */; };
 		07A9A8881B5CA6E800B63035 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8481B5CA6E800B63035 /* framework.cpp */; };
 		07A9A8891B5CA6E800B63035 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8481B5CA6E800B63035 /* framework.cpp */; };
 		07A9A88A1B5CA6E800B63035 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9A8491B5CA6E800B63035 /* framework.h */; };
@@ -37,7 +42,7 @@
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libgame_tictactoe..dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe..dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
@@ -134,6 +139,69 @@
 			remoteGlobalIDString = 9AE24DDB1904CF6E001AEFFB;
 			remoteInfo = core_ios;
 		};
+		078B58D81B5CF6D600A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A9A7F91B5CA67400B63035 /* aura.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 077A05B41B4D7403001C85FF;
+			remoteInfo = ios_aura;
+		};
+		078B58E51B5CF6DD00A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A9A8051B5CA67F00B63035 /* axis.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24D331904CEFE001AEFFB;
+			remoteInfo = ios_axis;
+		};
+		078B58E71B5CF6E200A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A9A8111B5CA68800B63035 /* base.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24D331904CEFE001AEFFB;
+			remoteInfo = ios_base;
+		};
+		078B58E91B5CF6E900A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
+			remoteInfo = ios_axispng;
+		};
+		078B58EB1B5CF6EF00A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
+			remoteInfo = ios_axisjpeg;
+		};
+		078B58FE1B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteInfo = draw2d_quartz2d;
+		};
+		078B59001B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07E25F501B4FFC2100752DE1;
+			remoteInfo = ios_draw2d_quartz2d;
+		};
+		078B59021B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E151904CF99001AEFFB;
+			remoteInfo = draw2d_quartz2d_iosTests;
+		};
+		078B59041B5CF94E00A7D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E25F291B4FFC2100752DE1;
+			remoteInfo = ios_draw2d_quartz2d;
+		};
 		07A9A7FF1B5CA67400B63035 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07A9A7F91B5CA67400B63035 /* aura.xcodeproj */;
@@ -227,23 +295,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9AE24E881904CFFD001AEFFB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				07881BA91B5CCA5C0069D136 /* libaxispng.dylib in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		07881B851B5CC7E20069D136 /* axispng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axispng.xcodeproj; path = ../../../app/axis/png/axispng.xcodeproj; sourceTree = "<group>"; };
 		07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axisjpeg.xcodeproj; path = ../../../app/axis/jpeg/axisjpeg.xcodeproj; sourceTree = "<group>"; };
 		078AEF6219158B190091C065 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = ../../../app/appseed/draw2d_quartz2d/draw2d_quartz2d.xcodeproj; sourceTree = "<group>"; };
 		07A9A7F91B5CA67400B63035 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../app/appseed/aura/aura.xcodeproj; sourceTree = "<group>"; };
 		07A9A8051B5CA67F00B63035 /* axis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis.xcodeproj; path = ../../../app/appseed/axis/axis.xcodeproj; sourceTree = "<group>"; };
 		07A9A8111B5CA68800B63035 /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../../app/appseed/base/base.xcodeproj; sourceTree = "<group>"; };
@@ -273,7 +329,7 @@
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe..dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tictactoe..dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tictactoe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_tictactoe_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_tictactoe_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -289,6 +345,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078B58F21B5CF77800A7D3CF /* libaxispng.dylib in Frameworks */,
+				078B58F11B5CF74F00A7D3CF /* libaxisjpeg.dylib in Frameworks */,
+				078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */,
+				078B58EF1B5CF70C00A7D3CF /* libbase.dylib in Frameworks */,
+				078B58EE1B5CF70400A7D3CF /* libaxis.dylib in Frameworks */,
+				078B58ED1B5CF6FC00A7D3CF /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +361,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libgame_tictactoe..dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +405,16 @@
 				078AEED3191547110091C065 /* libcore.dylib */,
 				078AEED5191547110091C065 /* libcore.dylib */,
 				078AEED7191547110091C065 /* core_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		078B58F91B5CF94200A7D3CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078B58FF1B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */,
+				078B59011B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */,
+				078B59031B5CF94300A7D3CF /* draw2d_quartz2d_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -447,6 +519,7 @@
 				07881B851B5CC7E20069D136 /* axispng.xcodeproj */,
 				07A9A8111B5CA68800B63035 /* base.xcodeproj */,
 				07B65416190F2C0F002DAADE /* core.xcodeproj */,
+				078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */,
 				07A9A8231B5CA6E800B63035 /* tictactoe */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
@@ -458,7 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_tictactoe.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe..dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */,
 				9AE24E991904CFFD001AEFFB /* game_tictactoe_iosTests.xctest */,
 			);
 			name = Products;
@@ -491,16 +564,21 @@
 			buildPhases = (
 				9AE24E861904CFFD001AEFFB /* Sources */,
 				9AE24E871904CFFD001AEFFB /* Frameworks */,
-				9AE24E881904CFFD001AEFFB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				078B59051B5CF94E00A7D3CF /* PBXTargetDependency */,
+				078B58EC1B5CF6EF00A7D3CF /* PBXTargetDependency */,
+				078B58EA1B5CF6E900A7D3CF /* PBXTargetDependency */,
+				078B58E81B5CF6E200A7D3CF /* PBXTargetDependency */,
+				078B58E61B5CF6DD00A7D3CF /* PBXTargetDependency */,
+				078B58D91B5CF6D600A7D3CF /* PBXTargetDependency */,
 				078AEF57191589F30091C065 /* PBXTargetDependency */,
 			);
 			name = ios_game_tictactoe;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe..dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* game_tictactoe_iosTests */ = {
@@ -593,6 +671,10 @@
 					ProductGroup = 078AEEB1191547110091C065 /* Products */;
 					ProjectRef = 07B65416190F2C0F002DAADE /* core.xcodeproj */;
 				},
+				{
+					ProductGroup = 078B58F91B5CF94200A7D3CF /* Products */;
+					ProjectRef = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -665,6 +747,27 @@
 			fileType = wrapper.cfbundle;
 			path = core_iosTests.xctest;
 			remoteRef = 078AEED6191547110091C065 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		078B58FF1B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libdraw2d_quartz2d.dylib;
+			remoteRef = 078B58FE1B5CF94300A7D3CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		078B59011B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libdraw2d_quartz2d.dylib;
+			remoteRef = 078B59001B5CF94300A7D3CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		078B59031B5CF94300A7D3CF /* draw2d_quartz2d_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = draw2d_quartz2d_iosTests.xctest;
+			remoteRef = 078B59021B5CF94300A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		07A9A8001B5CA67400B63035 /* libaura.dylib */ = {
@@ -803,6 +906,36 @@
 			name = core_ios;
 			targetProxy = 078AEF56191589F30091C065 /* PBXContainerItemProxy */;
 		};
+		078B58D91B5CF6D600A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_aura;
+			targetProxy = 078B58D81B5CF6D600A7D3CF /* PBXContainerItemProxy */;
+		};
+		078B58E61B5CF6DD00A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_axis;
+			targetProxy = 078B58E51B5CF6DD00A7D3CF /* PBXContainerItemProxy */;
+		};
+		078B58E81B5CF6E200A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_base;
+			targetProxy = 078B58E71B5CF6E200A7D3CF /* PBXContainerItemProxy */;
+		};
+		078B58EA1B5CF6E900A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_axispng;
+			targetProxy = 078B58E91B5CF6E900A7D3CF /* PBXContainerItemProxy */;
+		};
+		078B58EC1B5CF6EF00A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_axisjpeg;
+			targetProxy = 078B58EB1B5CF6EF00A7D3CF /* PBXContainerItemProxy */;
+		};
+		078B59051B5CF94E00A7D3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_draw2d_quartz2d;
+			targetProxy = 078B59041B5CF94E00A7D3CF /* PBXContainerItemProxy */;
+		};
 		07A9A81E1B5CA69A00B63035 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = aura;
@@ -841,7 +974,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -853,7 +985,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -947,6 +1078,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1001,6 +1133,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
