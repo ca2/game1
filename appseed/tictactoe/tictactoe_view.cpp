@@ -181,12 +181,12 @@ namespace tictactoe
 
       pdc->set_alpha_mode(::draw2d::alpha_mode_set);
 
-      pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
+      //pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
 
       pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
       if(m_dibBk.is_set() && m_dibBk->area() > 0)
       {
-         pdc->FillSolidRect(rectClient,ARGB(0,0,0,0));
+        // pdc->FillSolidRect(rectClient,ARGB(0,0,0,0));
          if(m_bBkAlpha == 255)
          {
             pdc->BitBlt(
@@ -729,11 +729,11 @@ namespace tictactoe
 
          double sdx = dx  / dRate;
 
-         double sdy = dx  / dRate;
+         double sdy = dy  / dRate;
 
          m_dibBk->get_graphics()->SetStretchBltMode(HALFTONE);
 
-         m_dibBk->get_graphics()->StretchBlt(0,0,dx,dy,m_dibBk->get_graphics(),0,0,sdx,sdy,SRCCOPY);
+         m_dibBk->get_graphics()->StretchBlt(0,0,dx,dy,dibBk->get_graphics(),0,0,sdx,sdy,SRCCOPY);
 
       }
 
