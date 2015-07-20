@@ -2,14 +2,14 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="app_core_hellomultiverse" />
+		<Option title="game_tictactoe" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="../../../stage/x86/libapp_core_hellomultiverse.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../stage/x86/libgame_tictactoe.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../stage/x86/" />
-				<Option object_output="../../../time/intermediate/app/app_core_hellomultiverse" />
+				<Option object_output="../../../time/intermediate/app/game_tictactoe" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/hellomultiverse build_number=basis locale=_std schema=_std" />
@@ -23,9 +23,9 @@
 				</Compiler>
 			</Target>
 			<Target title="memdleak">
-				<Option output="../../../stage/x86/libapp_core_hellomultiverse.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../stage/x86/libgame_tictactoe.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../stage/x86/" />
-				<Option object_output="../../../time/intermediate/app/app_core_hellomultiverse" />
+				<Option object_output="../../../time/intermediate/app/game_tictactoe" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/hellomultiverse build_number=basis locale=_std schema=_std" />
@@ -61,39 +61,39 @@
 			<Add directory="../../nodeapp/linux/include" />
 			<Add directory="../../.." />
 			<Add directory="../../../app/appseed" />
-			<Add directory="../../../app/appseed/boot" />
+			<Add directory="../../../app/appseed/base" />
 			<Add directory="../../../app/appseed/core" />
 			<Add directory="../../../app/thirdparty/include" />
-			<Add directory="../../../app/appseed/base" />
 			<Add directory="../../../app" />
+			<Add directory="../../../app/appseed/aura" />
+			<Add directory="../../../app/appseed/axis" />
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath,\\$$ORIGIN" />
 			<Add option="-Wl,-E" />
+			<Add option="-laura" />
+			<Add option="-laxisfreetype" />
+			<Add option="-laxis" />
 			<Add option="-lbase" />
-			<Add option="-lbasefreetype" />
 			<Add option="-lcore" />
 			<Add option="-Wl,-z,defs" />
 			<Add directory="../../../stage/x86" />
 		</Linker>
-		<Unit filename="../../../app/appseed/base/base/os/linux/linux_windowing.h" />
-		<Unit filename="framework.h">
-			<Option compile="1" />
-			<Option weight="0" />
-		</Unit>
-		<Unit filename="hellomultiverse.h" />
-		<Unit filename="hellomultiverse_application.cpp" />
-		<Unit filename="hellomultiverse_application.h" />
-		<Unit filename="hellomultiverse_document.cpp" />
-		<Unit filename="hellomultiverse_document.h" />
-		<Unit filename="hellomultiverse_frame.cpp" />
-		<Unit filename="hellomultiverse_frame.h" />
-		<Unit filename="hellomultiverse_pane_view.cpp" />
-		<Unit filename="hellomultiverse_pane_view.h" />
-		<Unit filename="hellomultiverse_pane_view_update_hint.cpp" />
-		<Unit filename="hellomultiverse_pane_view_update_hint.h" />
-		<Unit filename="hellomultiverse_view.cpp" />
-		<Unit filename="hellomultiverse_view.h" />
+		<Unit filename="framework.cpp" />
+		<Unit filename="framework.h" />
+		<Unit filename="tictactoe.h" />
+		<Unit filename="tictactoe_application.cpp" />
+		<Unit filename="tictactoe_application.h" />
+		<Unit filename="tictactoe_document.cpp" />
+		<Unit filename="tictactoe_document.h" />
+		<Unit filename="tictactoe_frame.cpp" />
+		<Unit filename="tictactoe_frame.h" />
+		<Unit filename="tictactoe_pane_view.cpp" />
+		<Unit filename="tictactoe_pane_view.h" />
+		<Unit filename="tictactoe_pane_view_update_hint.cpp" />
+		<Unit filename="tictactoe_pane_view_update_hint.h" />
+		<Unit filename="tictactoe_view.cpp" />
+		<Unit filename="tictactoe_view.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

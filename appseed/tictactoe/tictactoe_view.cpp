@@ -41,7 +41,7 @@ namespace tictactoe
 
       reset_board();
 
-      
+
 
       string str = THIS_FRIENDLY_NAME();
 
@@ -131,7 +131,7 @@ namespace tictactoe
 
             if(m_echeck == check_x)
             {
-               
+
                m_echeck = check_o;
 
             }
@@ -169,7 +169,7 @@ namespace tictactoe
 
       if(m_bDib1)
       {
-            
+
          pdib = m_dib1;
 
       }
@@ -252,7 +252,7 @@ namespace tictactoe
       m_font->m_bUpdated = false;
 
 
-      
+
 
 
       ::size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
@@ -286,7 +286,7 @@ namespace tictactoe
 
                   if(echeck == check_x)
                   {
-                     
+
                      draw_x(m_dib->get_graphics(),rectCheck);
 
                   }
@@ -394,7 +394,7 @@ namespace tictactoe
          brushText = brushToe;
          penText = penToe;
       }
-      
+
 
       pdc->SelectObject(brushText);
       pdc->SelectObject(penText);
@@ -636,7 +636,7 @@ namespace tictactoe
       {
          m_bDib1 = true;
       }
-      
+
 
    }
 
@@ -678,7 +678,7 @@ namespace tictactoe
             pview->render();
 
             Sleep(25);
-         
+
          }
          catch(...)
          {
@@ -716,7 +716,7 @@ namespace tictactoe
 
          if(!m_dib.initialize(rectClient.width(),rectClient.height(),5))
             return;
-         
+
          m_dib->m_iHeight = rectClient.height(); // 1 x 1 and not 0 x 0 : good!!
 
          m_dib->Fill(0,0,0,0);
@@ -736,7 +736,7 @@ namespace tictactoe
          double ratey = fHeight * 0.84 / size.cy;
 
 #ifdef LINUX
-         m_font->create_pixel_font("sans-serif",min(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
+         m_font->create_pixel_font("sans-serif",MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #else
          m_font->create_pixel_font("Lucida Sans Unicode",MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #endif
@@ -777,7 +777,7 @@ namespace tictactoe
 
          for(index j = 0; j < m_check2aBoard[i].get_size(); j++)
          {
-            
+
             m_check2aBoard[i][j] = check_none;
 
          }
@@ -847,7 +847,7 @@ namespace tictactoe
 
       dib->get_graphics()->SetViewportOrg(0,0);*/
 
-      
+
       ::draw2d::path_sp path(allocer());
 
       path->begin_figure(false, ::draw2d::fill_mode_winding);
@@ -874,7 +874,7 @@ namespace tictactoe
    {
 
       int iBorder = m_rectSpace.width() / 6;
-      
+
       ::rect rect;
       rect.left = m_rectCheckSpace.left + i * m_rectCheckSpace.width() / 3;
       rect.right = m_rectCheckSpace.left + (i + 1) * m_rectCheckSpace.width() / 3;
