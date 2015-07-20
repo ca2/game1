@@ -12,7 +12,7 @@
 				<Option object_output="../../../time/intermediate/app/game_tictactoe" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option parameters=': app=game/tictactoe build_number=basis locale=_std schema=_std &quot;bk.tictactoe::view&quot;=&quot;http://ca2.cc/image/_std/os/ubuntu.jpg?sessid=noauth&quot;' />
+				<Option parameters=': app=game/tictactoe build_number=basis locale=_std schema=_std &quot;bk.tictactoe::view&quot;=\&quot;http://ca2.cc/image/_std/os/ubuntu.jpg?sessid=noauth\&quot; &quot;bk_alpha.tictactoe::view&quot;=0.23' />
 				<Option host_application="/ca2/stage/x86/app" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />

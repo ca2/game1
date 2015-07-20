@@ -6,10 +6,10 @@
 namespace tictactoe
 {
 
-   
+
    class document;
 
-   
+
    class CLASS_DECL_GAME_TICTACTOE view :
       public ::user::impact
    {
@@ -29,8 +29,8 @@ namespace tictactoe
       mutex                   m_mutexWork;
       mutex                   m_mutexDraw;
       mutex                   m_mutexSwap;
-      
-      ::visual::dib_sp        m_dibBk;
+
+      ::draw2d::dib_sp        m_dibBk;
       ::draw2d::dib_sp        m_dib1;
       ::draw2d::dib_sp        m_dib2;
       bool                    m_bDib1;
@@ -38,7 +38,7 @@ namespace tictactoe
       ::visual::fastblur      m_dib;
       ::draw2d::dib_sp        m_dibColor;
       ::visual::dib_sp        m_dibWork;
-      
+
       ::draw2d::font_sp       m_font;
       string                  m_strHelloMultiverse;
       int32_t                 m_iErrorAiFont;
@@ -47,6 +47,8 @@ namespace tictactoe
 
       ::rect                  m_rectSpace;
       ::rect                  m_rectCheckSpace;
+
+      byte                    m_bBkAlpha;
 
       array < array < e_check > > m_check2aBoard;
 
@@ -78,10 +80,10 @@ namespace tictactoe
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 
       ::user::document * get_document();
-      
+
       //void load_ai_font();
       void render();
-      
+
       //static UINT thread_proc_load_ai_font(void * pparam);
       static UINT thread_proc_render(void * pparam);
 
@@ -101,7 +103,7 @@ namespace tictactoe
 
    };
 
-   
+
 } // namespace tictactoe
 
 

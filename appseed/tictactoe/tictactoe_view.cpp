@@ -2,20 +2,6 @@
 #include <math.h>
 
 
-template < typename T >
-string friendly_this_name(T const * pthis)
-{
-
-   string str = demangle(typeid(*pthis).name());
-
-   ::str::begins_eat_ci(str, "class ");
-
-   return str;
-
-}
-
-
-#define THIS_FRIENDLY_NAME() friendly_this_name(this)
 
 
 namespace tictactoe
@@ -32,9 +18,7 @@ namespace tictactoe
       m_font(allocer()),
       m_mutexDraw(papp),
       m_mutexWork(papp),
-      m_mutexSwap(papp),
-      m_dibBk(allocer())
-
+      m_mutexSwap(papp)
    {
 
       m_strHelloMultiverse = "Hello Multiverse!!";
@@ -45,9 +29,19 @@ namespace tictactoe
 
       string str = THIS_FRIENDLY_NAME();
 
-      string strPath = Application.directrix()->m_varTopicQuery["bk"][str];
+      if(Application.directrix()->m_varTopicQuery.has_property("bk_alpha") && Application.directrix()->m_varTopicQuery["bk_alpha"].has_property(str))
+      {
 
-      m_dibBk.load_from_file(strPath);
+         m_bBkAlpha= MAX(0,MIN(255,((int)(Application.directrix()->m_varTopicQuery["bk_alpha"][str].get_double() * 255.0))));
+
+      }
+      else
+      {
+
+         m_bBkAlpha = 255;
+
+      }
+
 
    }
 
@@ -189,16 +183,28 @@ namespace tictactoe
 
       pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
 
-      if(m_dibBk.is_set() && m_dibBk->area() > 0 && rectClient.area() > 0)
+      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      if(m_dibBk.is_set() && m_dibBk->area() > 0)
       {
-         double dRate = MAX((double)rectClient.width()/(double)m_dibBk->m_size.cx,
-                            (double)rectClient.height()/(double)m_dibBk->m_size.cy);
-         double dx = MIN(m_dibBk->m_size.cx * dRate, rectClient.width());
-         double dy = MIN(m_dibBk->m_size.cy * dRate, rectClient.height());
-         pdc->SetStretchBltMode(HALFTONE);
-         pdc->StretchBlt(0, 0, dx, dy, m_dibBk->get_graphics(), 0, 0, dx / dRate, dy / dRate, SRCCOPY);
-      }
+         pdc->FillSolidRect(rectClient,ARGB(0,0,0,0));
+         if(m_bBkAlpha == 255)
+         {
+            pdc->BitBlt(
+               0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
+               MIN(rectClient.height(),m_dibBk->m_size.cy),
+               m_dibBk->get_graphics());
 
+         }
+         else
+         {
+            System.visual().imaging().bitmap_blend(pdc,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
+               MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
+         }
+      }
+      else
+      {
+         pdc->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
+      }
       pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       pdc->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
@@ -699,6 +705,38 @@ namespace tictactoe
 
       if(rectClient.area() <= 0)
          return;
+
+      string str = THIS_FRIENDLY_NAME();
+
+      string strPath = Application.directrix()->m_varTopicQuery["bk"][str];
+
+      ::visual::dib_sp dibBk(allocer());
+
+      if(dibBk.load_from_file(strPath) && dibBk->area() > 0)
+      {
+
+         m_dibBk.alloc(allocer());
+
+         m_dibBk->create(rectClient.size());
+
+         m_dibBk->Fill(0, 0, 0, 0);
+
+         double dRate = MAX((double)rectClient.width()/(double)dibBk->m_size.cx, (double)rectClient.height()/(double)dibBk->m_size.cy);
+
+         double dx = MIN(dibBk->m_size.cx * dRate, rectClient.width());
+
+         double dy = MIN(dibBk->m_size.cy * dRate, rectClient.height());
+
+         double sdx = dx  / dRate;
+
+         double sdy = dx  / dRate;
+
+         m_dibBk->get_graphics()->SetStretchBltMode(HALFTONE);
+
+         m_dibBk->get_graphics()->StretchBlt(0,0,dx,dy,m_dibBk->get_graphics(),0,0,sdx,sdy,SRCCOPY);
+
+      }
+
 
       int iMinDim = MIN(rectClient.width(),rectClient.height());
 
