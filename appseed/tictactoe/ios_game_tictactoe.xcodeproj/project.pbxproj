@@ -144,7 +144,7 @@
 		078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_tictactoe.xcodeproj; sourceTree = "<group>"; };
 		078B58F31B5CF82B00A7D3CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078C352F1921758500354453 /* ios_game_tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_game_tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		078C35451921758600354453 /* wiosapp_core_hellomultiverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = wiosapp_core_hellomultiverseTests.xctest; path = ios_game_tictactoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		078C35451921758600354453 /* ios_game_tictactoeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_game_tictactoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B5903518866047002C6FEC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9A5752B616AAE1D2000CC4EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -235,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				078B58D11B5CF57000A7D3CF /* libgame_tictactoe.dylib */,
-				078B58D31B5CF57000A7D3CF /* libgame_tictactoe..dylib */,
+				078B58D31B5CF57000A7D3CF /* libgame_tictactoe.a */,
 				078B58D51B5CF57000A7D3CF /* game_tictactoe_iosTests.xctest */,
 			);
 			name = Products;
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				078C352F1921758500354453 /* ios_game_tictactoe.app */,
-				078C35451921758600354453 /* wiosapp_core_hellomultiverseTests.xctest */,
+				078C35451921758600354453 /* ios_game_tictactoeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			);
 			name = ios_game_tictactoeTests;
 			productName = wiosapp_core_hellomultiverseTests;
-			productReference = 078C35451921758600354453 /* wiosapp_core_hellomultiverseTests.xctest */;
+			productReference = 078C35451921758600354453 /* ios_game_tictactoeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -438,10 +438,9 @@
 			remoteRef = 078B58D01B5CF57000A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		078B58D31B5CF57000A7D3CF /* libgame_tictactoe..dylib */ = {
+		078B58D31B5CF57000A7D3CF /* libgame_tictactoe.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = libgame_tictactoe.a;
 			path = libgame_tictactoe.dylib;
 			remoteRef = 078B58D21B5CF57000A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
