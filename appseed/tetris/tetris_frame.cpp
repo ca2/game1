@@ -11,7 +11,7 @@ namespace tetris
       simple_frame_window(papp)
    {
 
-      m_dataid = "::core::tetris::frame";
+      //m_dataid = "::core::tetris::frame";
 
       WfiEnableFullScreen();
 

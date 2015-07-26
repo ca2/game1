@@ -37,6 +37,9 @@ namespace tetris
       if(!::hellomultiverse::application::initialize_instance())
          return false;
 
+
+      m_dataid += ".local://";
+
 	   ::user::single_document_template* pDocTemplate;
 	   pDocTemplate = new ::user::single_document_template(
          this,
@@ -89,7 +92,7 @@ extern "C"
 ::aura::library * game_tetris_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::tetris::application >(papp, "app-core");
+   return new ::aura::single_application_library < ::tetris::application >(papp, "game");
 
 }
 
