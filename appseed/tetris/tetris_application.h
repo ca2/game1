@@ -5,7 +5,7 @@ namespace tetris
 {
 
 
-   class CLASS_DECL_APP_CORE_TETRIS application :
+   class CLASS_DECL_GAME_TETRIS application :
       virtual public ::hellomultiverse::application,
       virtual public ::html::application
    {

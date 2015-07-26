@@ -9,7 +9,7 @@ namespace tetris
    class document;
 
 
-   class CLASS_DECL_APP_CORE_TETRIS view :
+   class CLASS_DECL_GAME_TETRIS view :
       public ::user::impact
    {
    public:

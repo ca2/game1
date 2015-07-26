@@ -1,0 +1,8 @@
+; game_tetris.def
+
+LIBRARY  "game_tetris"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_tetris_get_new_library
+

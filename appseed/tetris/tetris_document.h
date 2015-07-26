@@ -5,7 +5,7 @@ namespace tetris
 {
 
 
-   class CLASS_DECL_APP_CORE_TETRIS document :
+   class CLASS_DECL_GAME_TETRIS document :
       public ::user::document
    {
    public:

@@ -1,8 +1,0 @@
-; app_core_tetris.def
-
-LIBRARY  "app_core_tetris"
-; For Win32 DLLs, only EXPORTs really required.
-
-EXPORTS
-app_core_tetris_get_new_library
-

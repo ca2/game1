@@ -6,7 +6,7 @@ namespace tetris
 
    class view;
 
-   class CLASS_DECL_APP_CORE_TETRIS pane_view : 
+   class CLASS_DECL_GAME_TETRIS pane_view : 
       public ::userex::pane_tab_view
    {
    public:

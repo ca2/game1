@@ -6,13 +6,13 @@
 
 
 #ifdef WINDOWS
-#ifdef _APP_CORE_TETRIS_LIBRARY
-    #define CLASS_DECL_APP_CORE_TETRIS  _declspec(dllexport)
+#ifdef _GAME_TETRIS_LIBRARY
+    #define CLASS_DECL_GAME_TETRIS  _declspec(dllexport)
 #else
-    #define CLASS_DECL_APP_CORE_TETRIS  _declspec(dllimport)
+    #define CLASS_DECL_GAME_TETRIS  _declspec(dllimport)
 #endif
 #else
-   #define CLASS_DECL_APP_CORE_TETRIS
+   #define CLASS_DECL_GAME_TETRIS
 #endif
 
 namespace tetris

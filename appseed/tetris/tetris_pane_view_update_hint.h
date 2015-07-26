@@ -14,7 +14,7 @@ namespace tetris
    };
 
 
-   class CLASS_DECL_APP_CORE_TETRIS pane_view_update_hint :
+   class CLASS_DECL_GAME_TETRIS pane_view_update_hint :
       public object  
    {
    public:

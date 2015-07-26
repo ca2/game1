@@ -69,12 +69,6 @@
     <ClInclude Include="tetris_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="java_tetris_language.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="java_tetris_applet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="tetris_tetris.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -86,7 +80,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_tetris.def">
+    <None Include="game_tetris.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

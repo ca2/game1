@@ -86,7 +86,7 @@ namespace tetris
 
 
 extern "C"
-::aura::library * app_core_tetris_get_new_library(::aura::application * papp)
+::aura::library * game_tetris_get_new_library(::aura::application * papp)
 {
 
    return new ::aura::single_application_library < ::tetris::application >(papp, "app-core");

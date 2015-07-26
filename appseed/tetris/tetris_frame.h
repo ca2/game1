@@ -8,7 +8,7 @@ namespace tetris
    class pane_view;
 
 
-   class CLASS_DECL_APP_CORE_TETRIS frame :
+   class CLASS_DECL_GAME_TETRIS frame :
       public simple_frame_window
    {
    public:
