@@ -16,11 +16,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AA5C6E24-9DF1-4EC1-A907-E298FEAE1990}</ProjectGuid>
-    <RootNamespace>Direct3DApp2</RootNamespace>
+    <RootNamespace>game_tetris</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
-    <ProjectName>app_core_hellomultiverse</ProjectName>
+    <ProjectName>game_tetris</ProjectName>
     <ApplicationType>Windows Store</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
   </PropertyGroup>
