@@ -235,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				078B58D11B5CF57000A7D3CF /* libgame_tictactoe.dylib */,
-				078B58D31B5CF57000A7D3CF /* libgame_tictactoe.a */,
+				078B58D31B5CF57000A7D3CF /* libgame_tictactoe.dylib */,
 				078B58D51B5CF57000A7D3CF /* game_tictactoe_iosTests.xctest */,
 			);
 			name = Products;
@@ -438,7 +438,7 @@
 			remoteRef = 078B58D01B5CF57000A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		078B58D31B5CF57000A7D3CF /* libgame_tictactoe.a */ = {
+		078B58D31B5CF57000A7D3CF /* libgame_tictactoe.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libgame_tictactoe.dylib;
@@ -689,6 +689,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -743,6 +744,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
