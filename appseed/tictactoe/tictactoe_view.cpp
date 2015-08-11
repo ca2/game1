@@ -619,7 +619,7 @@ namespace tictactoe
 
       }
 
-      synch_lock slUser(&user_mutex());
+      synch_lock slUser(m_pmutex);
 
       synch_lock slDraw(&m_mutexDraw);
 
