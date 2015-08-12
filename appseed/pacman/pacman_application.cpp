@@ -10,7 +10,8 @@ namespace pacman
    application::application()
    {
 
-      m_ppacman = NULL;
+      m_ptoggle               = NULL;
+      m_ppacman               = NULL;
 
       m_strAppName            = "pacman";
       m_strBaseSupportId      = "ca2_flag";

@@ -19,7 +19,6 @@ namespace pacman
    {
    public:
 
-
       sp(::user::single_document_template)  m_ptemplatePacManMain;
       sp(::user::single_document_template)  m_ptemplatePacManView;
 
