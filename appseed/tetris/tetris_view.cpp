@@ -117,7 +117,7 @@ namespace tetris
       //pdc->set_text_color(ARGB(255,255,255,255));
 
 
-      if(m_ptetris == NULL && m_ppreview != NULL)
+      if(m_ptetris == NULL || m_ppreview == NULL)
          return;
 
       int cx = m_ptetris->m_dib->m_size.cx;

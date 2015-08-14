@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f32a93cc-ab5a-4a19-a9d1-8c41190472e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4016c650-83ec-4b9f-9568-85bd8dc9adbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NewFilter1">
+      <UniqueIdentifier>{0a00716c-9e1a-4b47-b49d-f6cda4c9bd61}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_pane_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_pane_view_update_hint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_preview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_tetris.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_preview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_tetris.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_tetris.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -5,14 +5,10 @@
 #include "app/appseed/html/html/html.h"
 
 
-#ifdef WINDOWS
 #ifdef _GAME_TETRIS_LIBRARY
-    #define CLASS_DECL_GAME_TETRIS  _declspec(dllexport)
+    #define CLASS_DECL_GAME_TETRIS  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_GAME_TETRIS  _declspec(dllimport)
-#endif
-#else
-   #define CLASS_DECL_GAME_TETRIS
+    #define CLASS_DECL_GAME_TETRIS  CLASS_DECL_IMPORT
 #endif
 
 namespace tetris
