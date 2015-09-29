@@ -24,6 +24,8 @@ namespace tictactoe
 
       m_strHelloMultiverse = "Hello Multiverse!!";
 
+      connect_command("new_game",&view::_001OnNewGame);
+
       m_parbitrator = new arbitrator(get_app());
 
       m_parbitrator->m_board.reset();
@@ -81,6 +83,8 @@ namespace tictactoe
    void view::_001OnCreate(signal_details * pobj)
    {
 
+      new_game();
+
       SCAST_PTR(::message::create,pcreate,pobj);
 
       pcreate->previous();
@@ -89,8 +93,6 @@ namespace tictactoe
          return;
 
       //load_ai_font();
-
-      m_parbitrator->launch(this,this,true);
 
       __begin_thread(get_app(),&thread_proc_render,this,::multithreading::priority_normal,0,0,NULL);
 
@@ -922,6 +924,27 @@ namespace tictactoe
       j = -1;
 
       return false;
+
+   }
+
+
+   void view::_001OnNewGame(signal_details * pobj)
+   {
+
+      pobj->m_bRet = true;
+
+      new_game();
+
+   }
+
+
+   void view::new_game()
+   {
+
+      m_parbitrator->post_stop();
+
+      m_parbitrator->launch(this,this,true);
+
 
    }
 

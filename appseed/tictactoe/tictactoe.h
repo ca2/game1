@@ -35,6 +35,9 @@ namespace tictactoe
    class player;
 
 
+   class main_frame;
+
+
    class application;
 
 
@@ -56,6 +59,7 @@ namespace tictactoe
 #include "tictactoe_document.h"
 #include "tictactoe_view.h"
 #include "tictactoe_frame.h"
+#include "tictactoe_main_frame.h"
 #include "tictactoe_pane_view_update_hint.h"
 #include "tictactoe_pane_view.h"
 

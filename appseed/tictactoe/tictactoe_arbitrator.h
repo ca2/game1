@@ -28,6 +28,10 @@ namespace tictactoe
 
       e_check                 m_echeckWinner;
 
+      bool                    m_bRun;
+
+      bool                    m_bEndOnFull;
+
 
       arbitrator(::aura::application * papp);
       virtual ~arbitrator();
@@ -43,6 +47,10 @@ namespace tictactoe
 
 
       player * get_player(e_check echeck);
+
+
+      virtual void post_stop();
+
 
    };
 

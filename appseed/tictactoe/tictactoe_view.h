@@ -78,6 +78,7 @@ namespace tictactoe
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnLButtonDown);
       DECL_GEN_SIGNAL(_001OnLButtonUp);
+      DECL_GEN_SIGNAL(_001OnNewGame);
 
 
 
@@ -85,7 +86,7 @@ namespace tictactoe
       virtual void draw_o(::draw2d::graphics * pdc,const RECT & lpcrect);
       virtual void draw_board(::draw2d::graphics * pdc,const RECT & lpcrect);
 
-
+      virtual void new_game();
 
    };
 

@@ -26,6 +26,7 @@ namespace tictactoe
       System.factory().creatable_small < ::tictactoe::pane_view >();
       System.factory().creatable_small < ::tictactoe::document >();
       System.factory().creatable_small < ::tictactoe::frame >();
+      System.factory().creatable_small < ::tictactoe::main_frame >();
       System.factory().creatable_small < ::tictactoe::view >();
 
       if(!::core::application::initialize_instance())
@@ -38,7 +39,7 @@ namespace tictactoe
          this,
 		   "frame",
 		   System.type_info < ::tictactoe::document > (),
-		   System.type_info < ::tictactoe::frame > (),       // top level SDI frame::user::interaction_impl
+		   System.type_info < ::tictactoe::main_frame > (),       // top level SDI frame::user::interaction_impl
 		   System.type_info < ::tictactoe::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;

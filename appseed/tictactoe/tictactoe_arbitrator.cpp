@@ -11,7 +11,11 @@ namespace tictactoe
       m_evReady(papp)
    {
 
-      m_dwBreaker = 984;
+      m_dwBreaker = 0;
+
+      m_bRun = true;
+
+      m_bEndOnFull = true;
 
    }
 
@@ -40,6 +44,10 @@ namespace tictactoe
    e_check arbitrator::arbitrate(player * pplayerX,player * pplayerO, bool bXFirst)
    {
 
+      m_board.reset();
+
+      m_bRun = true;
+
       m_pplayerX = pplayerX;
 
       m_pplayerO = pplayerO;
@@ -52,7 +60,7 @@ namespace tictactoe
 
       point pt;
 
-      while(true)
+      while(m_bRun)
       {
 
          player * pplayerCurrent = get_player(echeckPlayer);
@@ -74,23 +82,46 @@ namespace tictactoe
 
             }
 
+            if(!m_bRun)
+               return check_none;
+
+
 
          } while(m_board.is_free(pplayerCurrent->m_ptLast.x,pplayerCurrent->m_ptLast.y));
 
+         if(!m_bRun)
+            return check_none;
 
          Sleep(m_dwBreaker);
+
+
+         if(!m_bRun)
+            return check_none;
 
          m_board[pplayerCurrent->m_ptLast.x][pplayerCurrent->m_ptLast.y] = echeckPlayer;
 
          e_check echeck = check_winner();
 
-         if(echeck != check_none)
-            return echeck;
+         if(m_bEndOnFull)
+         {
+
+            if(m_board.is_full())
+               return echeck;
+
+         }
+         else
+         {
+            
+            if(echeck != check_none)
+               return echeck;
+
+         }
 
          echeckPlayer = toggle(echeckPlayer);
 
       }
       
+      return check_none;
 
    }
 
@@ -127,6 +158,18 @@ namespace tictactoe
          return m_pplayerO;
 
       }
+
+   }
+
+
+   void arbitrator::post_stop()
+   {
+
+      m_bRun = false;
+
+      m_evReady.SetEvent();
+
+      Sleep(84);
 
    }
 

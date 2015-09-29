@@ -69,6 +69,19 @@ namespace tictactoe
 
    }
 
+   bool frame::on_create_bars()
+   {
+
+      if(!LoadToolBar(1,"frame/center_toolbar.xml",TBSTYLE_ALIGN_CENTER,WS_CHILD | WS_VISIBLE | CBRS_ALIGN_BOTTOM))
+      {
+
+         return false;
+
+      }
+
+      return true;
+
+   }
 
 
 } // namespace tictactoe

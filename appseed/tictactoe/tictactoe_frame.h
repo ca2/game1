@@ -9,7 +9,7 @@ namespace tictactoe
 
 
    class CLASS_DECL_GAME_TICTACTOE frame :
-      public simple_frame_window
+      virtual public simple_frame_window
    {
    public:
 
@@ -26,6 +26,9 @@ namespace tictactoe
    
 
       virtual bool get_translucency(::user::ETranslucency & etranslucency);
+
+
+      virtual bool on_create_bars();
 
 
    };

@@ -43,6 +43,9 @@
     <ClCompile Include="tictactoe_board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tictactoe_main_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -76,6 +79,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tictactoe_board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tictactoe_main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
