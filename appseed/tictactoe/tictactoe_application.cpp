@@ -90,3 +90,20 @@ extern "C"
 }
 
 
+
+namespace tictactoe
+{
+
+
+   CLASS_DECL_GAME_TICTACTOE e_check toggle(e_check echeck)
+   {
+
+      return echeck == check_x ? check_o : check_x;
+
+   }
+
+
+} // namespace tictactoe
+
+
+

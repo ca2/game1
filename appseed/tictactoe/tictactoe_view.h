@@ -11,20 +11,12 @@ namespace tictactoe
 
 
    class CLASS_DECL_GAME_TICTACTOE view :
-      public ::user::impact
+      virtual public ::user::impact,
+      virtual public player
    {
    public:
 
-      enum e_check
-      {
 
-         check_none,
-         check_x,
-         check_o
-
-      };
-
-      e_check                 m_echeck;
       string                  m_strServer;
       mutex                   m_mutexWork;
       mutex                   m_mutexDraw;
@@ -50,8 +42,6 @@ namespace tictactoe
 
       byte                    m_bBkAlpha;
 
-      array < array < e_check > > m_check2aBoard;
-
 
       view(::aura::application * papp);
 	   virtual ~view();
@@ -62,13 +52,9 @@ namespace tictactoe
    #endif
 
 
-      void reset_board();
-
       void get_board_rect(LPRECT lprect);
       void get_check_rect(LPRECT lprect,int i,int j);
       bool hit_test_check(int & i, int & j, point pt);
-      bool match(int i,int j);
-      bool match();
 
 
 

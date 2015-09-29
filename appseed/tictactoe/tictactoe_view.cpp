@@ -18,14 +18,15 @@ namespace tictactoe
       m_font(allocer()),
       m_mutexDraw(papp),
       m_mutexWork(papp),
-      m_mutexSwap(papp)
+      m_mutexSwap(papp),
+      player(papp)
    {
 
       m_strHelloMultiverse = "Hello Multiverse!!";
 
-      reset_board();
+      m_parbitrator = new arbitrator(get_app());
 
-
+      m_parbitrator->m_board.reset();
 
       string str = THIS_FRIENDLY_NAME();
 
@@ -89,6 +90,8 @@ namespace tictactoe
 
       //load_ai_font();
 
+      m_parbitrator->launch(this,this,true);
+
       __begin_thread(get_app(),&thread_proc_render,this,::multithreading::priority_normal,0,0,NULL);
 
 
@@ -121,20 +124,11 @@ namespace tictactoe
          if(i >= 0 && j >= 0)
          {
 
-            m_check2aBoard[i][j] = m_echeck;
+            m_ptLast.x = i;
 
-            if(m_echeck == check_x)
-            {
+            m_ptLast.y = j;
 
-               m_echeck = check_o;
-
-            }
-            else
-            {
-
-               m_echeck = check_x;
-
-            }
+            set_ready();
 
          }
 
@@ -258,8 +252,7 @@ namespace tictactoe
       m_font->m_bUpdated = false;
 
 
-
-
+      board & board = m_parbitrator->m_board;
 
       ::size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
 
@@ -277,13 +270,13 @@ namespace tictactoe
 
          draw_board(m_dib->get_graphics(),m_rectSpace);
 
-         for(index i = 0; i < m_check2aBoard.get_size(); i++)
+         for(index i = 0; i < board.get_size(); i++)
          {
 
-            for(index j = 0; j < m_check2aBoard.get_size(); j++)
+            for(index j = 0; j < board.get_size(); j++)
             {
 
-               echeck = m_check2aBoard[i][j];
+               echeck = board[i][j];
 
                if(echeck != check_none)
                {
@@ -371,7 +364,7 @@ namespace tictactoe
 
       pdc->set_font(m_font);
 
-      bool bHasMatch = match();
+      bool bHasMatch = m_parbitrator->check_winner() != check_none;
 
       if(Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
       {
@@ -408,18 +401,18 @@ namespace tictactoe
       draw_board(pdc,m_rectSpace);
 
 
-      for(index i = 0; i < m_check2aBoard.get_size(); i++)
+      for(index i = 0; i < board.get_size(); i++)
       {
 
-         for(index j = 0; j < m_check2aBoard.get_size(); j++)
+         for(index j = 0; j < board.get_size(); j++)
          {
 
-            echeck = m_check2aBoard[i][j];
+            echeck = board[i][j];
 
             if(echeck != check_none)
             {
 
-               if(match(i,j))
+               if(m_parbitrator->m_board.match(i,j) != check_none)
                {
                   pdc->SelectObject(brushToe);
                   pdc->SelectObject(penToe);
@@ -460,13 +453,13 @@ namespace tictactoe
 
       pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      for(index i = 0; i < m_check2aBoard.get_size(); i++)
+      for(index i = 0; i < board.get_size(); i++)
       {
 
-         for(index j = 0; j < m_check2aBoard.get_size(); j++)
+         for(index j = 0; j < board.get_size(); j++)
          {
 
-            echeck = m_check2aBoard[i][j];
+            echeck = board[i][j];
 
             if(echeck != check_none)
             {
@@ -803,28 +796,6 @@ namespace tictactoe
 
    }
 
-   void view::reset_board()
-   {
-
-      m_check2aBoard.set_size(3);
-
-      for(index i = 0; i < m_check2aBoard.get_size(); i++)
-      {
-
-         m_check2aBoard[i].set_size(3);
-
-         for(index j = 0; j < m_check2aBoard[i].get_size(); j++)
-         {
-
-            m_check2aBoard[i][j] = check_none;
-
-         }
-
-      }
-
-      m_echeck = (e_check)System.math().RandRange((int)check_x,(int)check_o);
-
-   }
 
    void view::get_board_rect(LPRECT lprect)
    {
@@ -930,10 +901,12 @@ namespace tictactoe
 
       rect rectCheck;
 
-      for(i = 0; i < m_check2aBoard.get_size(); i++)
+      board & board = m_parbitrator->m_board;
+
+      for(i = 0; i < board.get_size(); i++)
       {
 
-         for( j = 0; j < m_check2aBoard[i].get_size(); j++)
+         for( j = 0; j < board[i].get_size(); j++)
          {
 
             get_check_rect(rectCheck,i,j);
@@ -952,124 +925,6 @@ namespace tictactoe
 
    }
 
-   // exchaustive
-   bool view::match()
-   {
-      int i;
-
-      int j;
-
-      for(i = 0; i < m_check2aBoard.get_size(); i++)
-      {
-
-         for(j = 0; j < m_check2aBoard[i].get_size(); j++)
-         {
-
-            if(match(i,j))
-               return true;
-
-         }
-
-      }
-      return false;
-   }
-
-   // exchaustive
-   bool view::match(int pi,int pj)
-   {
-
-      e_check c = m_check2aBoard[pi][pj];
-
-      if(c == check_none)
-         return false;
-
-      bool bOk;
-
-      bool bFind;
-
-      bOk = true;
-
-      int i;
-
-      int j;
-
-      // horizontal
-      for(i = 0; i < m_check2aBoard.get_size(); i++)
-      {
-
-         if(m_check2aBoard[i][pj] != c)
-         {
-            bOk = false;
-            break;
-         }
-
-      }
-
-      if(bOk)
-         return true;
-
-      bOk = true;
-
-      for(j = 0; j < m_check2aBoard[pi].get_size(); j++)
-      {
-
-         if(m_check2aBoard[pi][j] != c)
-         {
-            bOk = false;
-            break;
-         }
-
-      }
-
-      if(bOk)
-         return true;
-
-      bOk = true;
-
-      bFind = false;
-
-      for(i = 0, j = 0; i < m_check2aBoard.get_size() && j < m_check2aBoard[i].get_size(); i++, j++)
-      {
-
-         if(m_check2aBoard[i][j] != c)
-         {
-            bOk = false;
-            break;
-         }
-
-         if(i == pi && j == pj)
-            bFind = true;
-
-      }
-
-      if(bOk && bFind)
-         return true;
-
-      bOk = true;
-
-      bFind = false;
-
-      for(i = 0,j = m_check2aBoard[i].get_upper_bound(); i < m_check2aBoard.get_size() && j >= 0; i++,j--)
-      {
-
-         if(m_check2aBoard[i][j] != c)
-         {
-            bOk = false;
-            break;
-         }
-
-         if(i == pi && j == pj)
-            bFind = true;
-
-      }
-
-      if(bOk && bFind)
-         return true;
-
-
-      return false;
-
-   }
 
 } // namespace tictactoe
 

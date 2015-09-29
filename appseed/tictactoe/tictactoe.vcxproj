@@ -492,20 +492,26 @@
     </ClCompile>
     <ClCompile Include="tictactoe.cpp" />
     <ClCompile Include="tictactoe_application.cpp" />
+    <ClCompile Include="tictactoe_arbitrator.cpp" />
+    <ClCompile Include="tictactoe_board.cpp" />
     <ClCompile Include="tictactoe_document.cpp" />
     <ClCompile Include="tictactoe_frame.cpp" />
     <ClCompile Include="tictactoe_pane_view.cpp" />
     <ClCompile Include="tictactoe_pane_view_update_hint.cpp" />
+    <ClCompile Include="tictactoe_player.cpp" />
     <ClCompile Include="tictactoe_view.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="tictactoe.h" />
     <ClInclude Include="tictactoe_application.h" />
+    <ClInclude Include="tictactoe_arbitrator.h" />
+    <ClInclude Include="tictactoe_board.h" />
     <ClInclude Include="tictactoe_document.h" />
     <ClInclude Include="tictactoe_frame.h" />
     <ClInclude Include="tictactoe_pane_view.h" />
     <ClInclude Include="tictactoe_pane_view_update_hint.h" />
+    <ClInclude Include="tictactoe_player.h" />
     <ClInclude Include="tictactoe_view.h" />
   </ItemGroup>
   <ItemGroup>
