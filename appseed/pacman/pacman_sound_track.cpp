@@ -28,7 +28,7 @@ namespace pacman
 
       get_wave_player()->DecoderOpen(c);
 
-      c.Play(imedia::position(0));
+      c.Play(imedia::position(0), false);
 
       get_wave_player()->ExecuteCommand(c);
 
