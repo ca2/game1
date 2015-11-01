@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
-    <RootNamespace>app_core_hellomultiverse</RootNamespace>
+    <RootNamespace>game_coincube</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>game_tictactoe</ProjectName>
+    <ProjectName>game_coincube</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
