@@ -1,0 +1,8 @@
+; game_tictactoe.def
+
+LIBRARY  "game_tictactoe"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_tictactoe_get_new_library
+
