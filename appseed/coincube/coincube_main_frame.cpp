@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
@@ -10,7 +10,7 @@ namespace tictactoe
       simple_frame_window(papp)
    {
 
-      //      m_dataid = "::core::tictactoe::main_frame";
+      //      m_dataid = "::core::coincube::main_frame";
 
       WfiEnableFullScreen();
 
@@ -76,7 +76,7 @@ namespace tictactoe
    }
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

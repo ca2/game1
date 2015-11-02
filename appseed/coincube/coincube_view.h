@@ -3,19 +3,29 @@
 
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
    class document;
 
 
-   class CLASS_DECL_GAME_TICTACTOE view :
+   class CLASS_DECL_GAME_COINCUBE view :
       virtual public ::user::impact,
-      virtual public player
+      virtual public ::backview::user::interaction
    {
    public:
 
+      ::visual::dib_sp           m_dibCoin;
+      ::visual::dib_sp           m_dibMony;
+      ::visual::dib_sp           m_dibMon2;
+
+      spa(coin)               m_money;
+
+      sp(::multimedia::sound_track)      m_psound;
+      bool                    m_bGame;
+      int                     m_iCount;
+      int                     m_iPhase;
 
       string                  m_strServer;
       mutex                   m_mutexWork;
@@ -43,6 +53,12 @@ namespace tictactoe
       byte                    m_bBkAlpha;
 
 
+      cube                    m_pot;
+
+
+      point                   m_ptFinal;
+
+
       view(::aura::application * papp);
 	   virtual ~view();
 
@@ -52,46 +68,34 @@ namespace tictactoe
    #endif
 
 
-      void get_board_rect(LPRECT lprect);
-      void get_check_rect(LPRECT lprect,int i,int j);
-      bool hit_test_check(int & i, int & j, point pt);
 
 
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
       virtual void _001OnDraw(::draw2d::graphics * pdc);
-      virtual void tictactoe_render(::draw2d::graphics * pdc);
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 
       ::user::document * get_document();
 
-      //void load_ai_font();
-      void render();
-
-      //static UINT thread_proc_load_ai_font(void * pparam);
-      static UINT thread_proc_render(void * pparam);
 
       virtual void layout();
 
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnLButtonDown);
       DECL_GEN_SIGNAL(_001OnLButtonUp);
+      DECL_GEN_SIGNAL(_001OnMouseMove);
       DECL_GEN_SIGNAL(_001OnNewGame);
 
-
-
-      virtual void draw_x(::draw2d::graphics * pdc,const RECT & lpcrect);
-      virtual void draw_o(::draw2d::graphics * pdc,const RECT & lpcrect);
-      virtual void draw_board(::draw2d::graphics * pdc,const RECT & lpcrect);
+      void credit();
 
       virtual void new_game();
 
    };
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

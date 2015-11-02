@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace tictactoe
+namespace coincube
 {
 
    pane_view::pane_view(::aura::application * papp) :
@@ -48,10 +48,10 @@ namespace tictactoe
       if(pobj->previous())
          return;
 
-      set_tab("tictactoe", ::tictactoe::PaneViewHelloMultiverse);
+      set_tab("coincube", ::coincube::PaneViewHelloMultiverse);
       set_tab("Open", "file_manager");
 
-      set_cur_tab_by_id(::tictactoe::PaneViewHelloMultiverse);
+      set_cur_tab_by_id(::coincube::PaneViewHelloMultiverse);
 
    }
 
@@ -64,14 +64,14 @@ namespace tictactoe
       {
       case PaneViewHelloMultiverse:
          {
-            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
+            sp(::coincube::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
             if(pdoc != NULL)
             {
                sp(::user::impact) pview = pdoc->get_view(0);
                pview->on_update(NULL, 0, NULL);
                if(pview != NULL)
                {
-                  sp(::tictactoe::frame) pframe = (pview->GetParentFrame());
+                  sp(::coincube::frame) pframe = (pview->GetParentFrame());
                   if(pframe != NULL)
                   {
                      pcreatordata->m_pdoc = pdoc;
@@ -91,4 +91,4 @@ namespace tictactoe
 
 
 
-} // namespace tictactoe
+} // namespace coincube

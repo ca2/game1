@@ -3,6 +3,6 @@
 #endif
 
 
-#include "tictactoe.h"
+#include "coincube.h"
 
 

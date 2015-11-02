@@ -2,31 +2,21 @@
 
 
 #include "core/core/core.h"
-//#include "core/user/user/user.h"
-//#include "core/user/simple/simple.h"
 #include "core/user/userex/userex.h"
-//#include "core/filesystem/filemanager/filemanager.h"
+#include "app/appseed/html/html/html.h"
+#include "app-core/appseed/multimedia/multimedia/multimedia.h"
 
 
-#ifdef _GAME_TICTACTOE_LIBRARY
-    #define CLASS_DECL_GAME_TICTACTOE  CLASS_DECL_EXPORT
+#ifdef _GAME_COINCUBE_LIBRARY
+    #define CLASS_DECL_GAME_COINCUBE  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_GAME_TICTACTOE  CLASS_DECL_IMPORT
+    #define CLASS_DECL_GAME_COINCUBE  CLASS_DECL_IMPORT
 #endif
 
-namespace tictactoe
+namespace coincube
 {
 
 
-   enum e_check
-   {
-
-      check_none,
-      check_x,
-      check_o,
-      check_draw
-
-   };
 
 
    class view;
@@ -41,26 +31,24 @@ namespace tictactoe
    class application;
 
 
-   CLASS_DECL_GAME_TICTACTOE e_check toggle(e_check echeck);
-
 
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::tictactoe::application > ())
+#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::coincube::application > ())
 
 
-#include "tictactoe_board.h"
-#include "tictactoe_arbitrator.h"
-#include "tictactoe_player.h"
+#include "coincube_coin.h"
+#include "coincube_cube.h"
 
 
+#include "multimedia_soundtrack.h"
 
-#include "tictactoe_document.h"
-#include "tictactoe_view.h"
-#include "tictactoe_frame.h"
-#include "tictactoe_main_frame.h"
-#include "tictactoe_pane_view_update_hint.h"
-#include "tictactoe_pane_view.h"
+#include "coincube_document.h"
+#include "coincube_view.h"
+#include "coincube_frame.h"
+#include "coincube_main_frame.h"
+#include "coincube_pane_view_update_hint.h"
+#include "coincube_pane_view.h"
 
-#include "tictactoe_application.h"
+#include "coincube_application.h"

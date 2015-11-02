@@ -1,12 +1,13 @@
 #pragma once
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
-   class CLASS_DECL_GAME_TICTACTOE application :
-      public ::core::application
+   class CLASS_DECL_GAME_COINCUBE application :
+      virtual public ::html::application,
+      virtual public ::multimedia::application
    {
    public:
       
@@ -28,7 +29,7 @@ namespace tictactoe
    };
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

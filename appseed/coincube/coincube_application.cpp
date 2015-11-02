@@ -1,14 +1,14 @@
 #include "framework.h"
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
    application::application()
    {
 
-      m_strAppName            = "tictactoe";
+      m_strAppName            = "coincube";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -23,13 +23,13 @@ namespace tictactoe
    bool application::initialize_instance()
    {
 
-      System.factory().creatable_small < ::tictactoe::pane_view >();
-      System.factory().creatable_small < ::tictactoe::document >();
-      System.factory().creatable_small < ::tictactoe::frame >();
-      System.factory().creatable_small < ::tictactoe::main_frame >();
-      System.factory().creatable_small < ::tictactoe::view >();
+      System.factory().creatable_small < ::coincube::pane_view >();
+      System.factory().creatable_small < ::coincube::document >();
+      System.factory().creatable_small < ::coincube::frame >();
+      System.factory().creatable_small < ::coincube::main_frame >();
+      System.factory().creatable_small < ::coincube::view >();
 
-      if(!::core::application::initialize_instance())
+      if(!::multimedia::application::initialize_instance())
          return false;
 
       m_dataid += ".local://";
@@ -38,17 +38,17 @@ namespace tictactoe
 	   pDocTemplate = new ::user::single_document_template(
          this,
 		   "frame",
-		   System.type_info < ::tictactoe::document > (),
-		   System.type_info < ::tictactoe::main_frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tictactoe::pane_view > ());
+		   System.type_info < ::coincube::document > (),
+		   System.type_info < ::coincube::main_frame > (),       // top level SDI frame::user::interaction_impl
+		   System.type_info < ::coincube::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
 	   pDocTemplate = new ::user::single_document_template(
          this,
 		   "frame",
-         System.type_info < ::tictactoe::document > (),
-		   System.type_info < ::tictactoe::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tictactoe::view > ());
+         System.type_info < ::coincube::document > (),
+		   System.type_info < ::coincube::frame > (),       // top level SDI frame::user::interaction_impl
+		   System.type_info < ::coincube::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
 
@@ -77,34 +77,20 @@ namespace tictactoe
 
    }
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 
 
 extern "C"
-::aura::library * game_tictactoe_get_new_library(::aura::application * papp)
+::aura::library * game_coincube_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::tictactoe::application >(papp, "game");
+   return new ::aura::single_application_library < ::coincube::application >(papp, "game");
 
 }
 
 
-
-namespace tictactoe
-{
-
-
-   CLASS_DECL_GAME_TICTACTOE e_check toggle(e_check echeck)
-   {
-
-      return echeck == check_x ? check_o : check_x;
-
-   }
-
-
-} // namespace tictactoe
 
 
 

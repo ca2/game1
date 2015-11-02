@@ -1,18 +1,18 @@
 #pragma once
 
 
-namespace tictactoe
+namespace coincube
 {
 
    class view;
 
-   class CLASS_DECL_GAME_TICTACTOE pane_view : 
+   class CLASS_DECL_GAME_COINCUBE pane_view : 
       public ::userex::pane_tab_view
    {
    public:
 
 
-      sp(::tictactoe::view)                     m_pflagview;
+      sp(::coincube::view)                     m_pflagview;
 
 
       pane_view(::aura::application * papp);
@@ -33,6 +33,6 @@ namespace tictactoe
    };
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 

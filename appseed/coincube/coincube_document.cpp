@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
@@ -52,7 +52,7 @@ namespace tictactoe
    }
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

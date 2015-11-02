@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
-   class CLASS_DECL_GAME_TICTACTOE document :
+   class CLASS_DECL_GAME_COINCUBE document :
       public ::user::document
    {
    public:
@@ -24,7 +24,7 @@ namespace tictactoe
    };
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

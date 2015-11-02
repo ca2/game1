@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace tictactoe
+namespace coincube
 {
 
 
-   class CLASS_DECL_GAME_TICTACTOE main_frame:
+   class CLASS_DECL_GAME_COINCUBE main_frame:
       virtual public simple_frame_window
    {
    public:
@@ -31,7 +31,7 @@ namespace tictactoe
    };
 
 
-} // namespace tictactoe
+} // namespace coincube
 
 
 

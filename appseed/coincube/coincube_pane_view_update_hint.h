@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace tictactoe
+namespace coincube
 {
 
    enum EPaneView
@@ -12,7 +12,7 @@ namespace tictactoe
    };
 
 
-   class CLASS_DECL_GAME_TICTACTOE pane_view_update_hint :
+   class CLASS_DECL_GAME_COINCUBE pane_view_update_hint :
       public object  
    {
    public:
@@ -36,4 +36,4 @@ namespace tictactoe
 
    };
 
-} // namespace tictactoe
+} // namespace coincube
