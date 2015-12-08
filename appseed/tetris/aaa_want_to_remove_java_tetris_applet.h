@@ -420,25 +420,25 @@ class _Help extends Dialog
       setTitle(parent.parent.lang.comunic(19)); //22-Ajuda do Tetris
 
       /*		Label label = new Label();
-      Font f = new Font("Helvetica", Font.BOLD, 24);
+      Font f = new Font(FONT_SANS, Font.BOLD, 24);
       label.setFont(f);
       label.setText(parent.parent.lang.comunic(19)); //19-Ajuda do Tetris
       add("North", label);
 
       label = new Label(parent.parent.lang.comunic(28)); //28-{ajuda}
-      f = new Font("Helvetica", Font.PLAIN, 12);
+      f = new Font(FONT_SANS, Font.PLAIN, 12);
       label.setFont(f);
       label.setText(parent.parent.lang.comunic(28));
       add("Center", label);      */
 
       TextArea text = new TextArea();
       text.setEditable(false);
-      Font f = new Font("Helvetica",Font.BOLD,24);
+      Font f = new Font(FONT_SANS,Font.BOLD,24);
       text.setFont(f);
       text.appendText(parent.parent.lang.comunic(19));  //19-Ajuda do Tetris
       text.appendText("\n\n");
 
-      f = new Font("Helvetica",Font.PLAIN,12);
+      f = new Font(FONT_SANS,Font.PLAIN,12);
       text.setFont(f);
       text.appendText(parent.parent.lang.comunic(28)); //28-{ajuda}
       add("Center",text);
@@ -492,7 +492,7 @@ class _About extends Dialog
       setTitle(parent.parent.lang.comunic(29)); //22-Sobre o Tetris
 
       Label label = new Label();
-      Font f = new Font("Helvetica",Font.BOLD,12);
+      Font f = new Font(FONT_SANS,Font.BOLD,12);
       label.setFont(f);
       label.setText(parent.parent.lang.comunic(30)); //30-Por Camilo...
       add("Center",label);

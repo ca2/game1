@@ -759,7 +759,7 @@ namespace tictactoe
 #ifdef LINUX
          m_font->create_pixel_font("sans-serif",fHeight,FW_BOLD);
 #else
-         m_font->create_pixel_font("Lucida Sans Unicode",fHeight,FW_BOLD);
+         m_font->create_pixel_font(FONT_SANS,fHeight,FW_BOLD);
 #endif
 
          m_dib->get_graphics()->set_font(m_font);
@@ -771,7 +771,7 @@ namespace tictactoe
 #ifdef LINUX
          m_font->create_pixel_font("sans-serif",MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #else
-         m_font->create_pixel_font("Lucida Sans Unicode",MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
+         m_font->create_pixel_font(FONT_SANS,MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #endif
          m_dibWork->create(rectClient.width(),rectClient.height());
 

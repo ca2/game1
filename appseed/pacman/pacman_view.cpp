@@ -69,7 +69,7 @@ namespace pacman
       if(pcreate->m_bRet)
          return;
 
-      m_font->create_pixel_font("Arial",16, 900);
+      m_font->create_pixel_font(FONT_SANS,16, 900);
 
       attach();
 
@@ -194,7 +194,7 @@ namespace pacman
       //{
       //   ghost->::console::window_composite::m_p = m_pconsolewindow;
       //}
-      
+
       if(Application.m_ppacman->m_pthreadimpl.is_null())
       {
          Application.m_ppacman->begin();
