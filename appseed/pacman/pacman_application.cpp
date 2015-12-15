@@ -10,7 +10,7 @@ namespace pacman
    application::application()
    {
 
-      m_ptoggle               = NULL;
+//      m_ptoggle               = NULL;
       m_ppacman               = NULL;
 
       m_strAppName            = "pacman";
@@ -24,7 +24,7 @@ namespace pacman
 
       //m_bMultiverseChat = false;
 
-      m_ptoggle = NULL;
+//      m_ptoggle = NULL;
 
    }
 
@@ -124,7 +124,8 @@ namespace pacman
 
          psplit->initialize_split_layout();
 
-         m_ptoggle = psplit->create_view < ::hellomultiverse::toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
+         //m_ptoggle = psplit->create_view < ::hellomultiverse::toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
+         psplit->create_view < ::hellomultiverse::toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
 
          m_pview = psplit->create_view < view >(NULL,::null_rect(),psplit->get_pane_holder(1),"pacman_view3");
 
@@ -141,7 +142,7 @@ namespace pacman
       if(pevent->m_eevent == ::user::event_button_clicked)
       {
 
-         if(pevent->m_puie == m_ptoggle)
+         if(pevent->m_puie->m_id == "toggle_view")
          {
 
 
