@@ -84,14 +84,22 @@
 		<Unit filename="tictactoe.h" />
 		<Unit filename="tictactoe_application.cpp" />
 		<Unit filename="tictactoe_application.h" />
+		<Unit filename="tictactoe_arbitrator.cpp" />
+		<Unit filename="tictactoe_arbitrator.h" />
+		<Unit filename="tictactoe_board.cpp" />
+		<Unit filename="tictactoe_board.h" />
 		<Unit filename="tictactoe_document.cpp" />
 		<Unit filename="tictactoe_document.h" />
 		<Unit filename="tictactoe_frame.cpp" />
 		<Unit filename="tictactoe_frame.h" />
+		<Unit filename="tictactoe_main_frame.cpp" />
+		<Unit filename="tictactoe_main_frame.h" />
 		<Unit filename="tictactoe_pane_view.cpp" />
 		<Unit filename="tictactoe_pane_view.h" />
 		<Unit filename="tictactoe_pane_view_update_hint.cpp" />
 		<Unit filename="tictactoe_pane_view_update_hint.h" />
+		<Unit filename="tictactoe_player.cpp" />
+		<Unit filename="tictactoe_player.h" />
 		<Unit filename="tictactoe_view.cpp" />
 		<Unit filename="tictactoe_view.h" />
 		<Extensions>
