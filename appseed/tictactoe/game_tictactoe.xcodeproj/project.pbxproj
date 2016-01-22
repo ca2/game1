@@ -12,8 +12,22 @@
 		078B58EE1B5CF70400A7D3CF /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9A80E1B5CA67F00B63035 /* libaxis.dylib */; };
 		078B58EF1B5CF70C00A7D3CF /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A9A81A1B5CA68800B63035 /* libbase.dylib */; };
 		078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libcore.dylib */; };
-		078B58F11B5CF74F00A7D3CF /* libaxisjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07881BA11B5CC7F00069D136 /* libaxisjpeg.dylib */; };
-		078B58F21B5CF77800A7D3CF /* libaxispng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07881B921B5CC7E30069D136 /* libaxispng.dylib */; };
+		078DF8251C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
+		078DF8261C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
+		078DF8271C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
+		078DF8281C52957B00E65274 /* tictactoe_arbitrator.h in Headers */ = {isa = PBXBuildFile; fileRef = 078DF81E1C52957B00E65274 /* tictactoe_arbitrator.h */; };
+		078DF8291C52957B00E65274 /* tictactoe_board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81F1C52957B00E65274 /* tictactoe_board.cpp */; };
+		078DF82A1C52957B00E65274 /* tictactoe_board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81F1C52957B00E65274 /* tictactoe_board.cpp */; };
+		078DF82B1C52957B00E65274 /* tictactoe_board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81F1C52957B00E65274 /* tictactoe_board.cpp */; };
+		078DF82C1C52957B00E65274 /* tictactoe_board.h in Headers */ = {isa = PBXBuildFile; fileRef = 078DF8201C52957B00E65274 /* tictactoe_board.h */; };
+		078DF82D1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8211C52957B00E65274 /* tictactoe_main_frame.cpp */; };
+		078DF82E1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8211C52957B00E65274 /* tictactoe_main_frame.cpp */; };
+		078DF82F1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8211C52957B00E65274 /* tictactoe_main_frame.cpp */; };
+		078DF8301C52957B00E65274 /* tictactoe_main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 078DF8221C52957B00E65274 /* tictactoe_main_frame.h */; };
+		078DF8311C52957B00E65274 /* tictactoe_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8231C52957B00E65274 /* tictactoe_player.cpp */; };
+		078DF8321C52957B00E65274 /* tictactoe_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8231C52957B00E65274 /* tictactoe_player.cpp */; };
+		078DF8331C52957B00E65274 /* tictactoe_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF8231C52957B00E65274 /* tictactoe_player.cpp */; };
+		078DF8341C52957B00E65274 /* tictactoe_player.h in Headers */ = {isa = PBXBuildFile; fileRef = 078DF8241C52957B00E65274 /* tictactoe_player.h */; };
 		07A9A8881B5CA6E800B63035 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8481B5CA6E800B63035 /* framework.cpp */; };
 		07A9A8891B5CA6E800B63035 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8481B5CA6E800B63035 /* framework.cpp */; };
 		07A9A88A1B5CA6E800B63035 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9A8491B5CA6E800B63035 /* framework.h */; };
@@ -54,62 +68,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9A19A1A419C6F50B0018DF7D;
 			remoteInfo = core;
-		};
-		07881B8F1B5CC7E30069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
-			remoteInfo = axispng;
-		};
-		07881B911B5CC7E30069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
-			remoteInfo = ios_axispng;
-		};
-		07881B931B5CC7E30069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
-			remoteInfo = axispng_iosTests;
-		};
-		07881B9E1B5CC7F00069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
-			remoteInfo = axisjpeg;
-		};
-		07881BA01B5CC7F00069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
-			remoteInfo = ios_axisjpeg;
-		};
-		07881BA21B5CC7F00069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
-			remoteInfo = axisjpeg_iosTests;
-		};
-		07881BAB1B5CCAAC0069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
-			remoteInfo = axispng;
-		};
-		07881BAD1B5CCAB60069D136 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
-			remoteInfo = axisjpeg;
 		};
 		078AEED2191547110091C065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -159,20 +117,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24D331904CEFE001AEFFB;
 			remoteInfo = ios_base;
-		};
-		078B58E91B5CF6E900A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
-			remoteInfo = ios_axispng;
-		};
-		078B58EB1B5CF6EF00A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
-			remoteInfo = ios_axisjpeg;
 		};
 		078B58FE1B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -296,10 +240,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07881B851B5CC7E20069D136 /* axispng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axispng.xcodeproj; path = ../../../app/axis/png/axispng.xcodeproj; sourceTree = "<group>"; };
-		07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axisjpeg.xcodeproj; path = ../../../app/axis/jpeg/axisjpeg.xcodeproj; sourceTree = "<group>"; };
 		078AEF6219158B190091C065 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
 		078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = ../../../app/appseed/draw2d_quartz2d/draw2d_quartz2d.xcodeproj; sourceTree = "<group>"; };
+		078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_jpeg.xcodeproj; path = ../../../app/axis/image_jpeg/axis_image_jpeg.xcodeproj; sourceTree = "<group>"; };
+		078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_png.xcodeproj; path = ../../../app/axis/image_png/axis_image_png.xcodeproj; sourceTree = "<group>"; };
+		078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_arbitrator.cpp; sourceTree = "<group>"; };
+		078DF81E1C52957B00E65274 /* tictactoe_arbitrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_arbitrator.h; sourceTree = "<group>"; };
+		078DF81F1C52957B00E65274 /* tictactoe_board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_board.cpp; sourceTree = "<group>"; };
+		078DF8201C52957B00E65274 /* tictactoe_board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_board.h; sourceTree = "<group>"; };
+		078DF8211C52957B00E65274 /* tictactoe_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_main_frame.cpp; sourceTree = "<group>"; };
+		078DF8221C52957B00E65274 /* tictactoe_main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_main_frame.h; sourceTree = "<group>"; };
+		078DF8231C52957B00E65274 /* tictactoe_player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_player.cpp; sourceTree = "<group>"; };
+		078DF8241C52957B00E65274 /* tictactoe_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_player.h; sourceTree = "<group>"; };
 		07A9A7F91B5CA67400B63035 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../app/appseed/aura/aura.xcodeproj; sourceTree = "<group>"; };
 		07A9A8051B5CA67F00B63035 /* axis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis.xcodeproj; path = ../../../app/appseed/axis/axis.xcodeproj; sourceTree = "<group>"; };
 		07A9A8111B5CA68800B63035 /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../../app/appseed/base/base.xcodeproj; sourceTree = "<group>"; };
@@ -345,8 +297,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078B58F21B5CF77800A7D3CF /* libaxispng.dylib in Frameworks */,
-				078B58F11B5CF74F00A7D3CF /* libaxisjpeg.dylib in Frameworks */,
 				078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */,
 				078B58EF1B5CF70C00A7D3CF /* libbase.dylib in Frameworks */,
 				078B58EE1B5CF70400A7D3CF /* libaxis.dylib in Frameworks */,
@@ -379,26 +329,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07881B861B5CC7E20069D136 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				07881B901B5CC7E30069D136 /* libaxispng.dylib */,
-				07881B921B5CC7E30069D136 /* libaxispng.dylib */,
-				07881B941B5CC7E30069D136 /* axispng_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		07881B991B5CC7F00069D136 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				07881B9F1B5CC7F00069D136 /* libaxisjpeg.dylib */,
-				07881BA11B5CC7F00069D136 /* libaxisjpeg.dylib */,
-				07881BA31B5CC7F00069D136 /* axisjpeg_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		078AEEB1191547110091C065 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +382,14 @@
 		07A9A8231B5CA6E800B63035 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */,
+				078DF81E1C52957B00E65274 /* tictactoe_arbitrator.h */,
+				078DF81F1C52957B00E65274 /* tictactoe_board.cpp */,
+				078DF8201C52957B00E65274 /* tictactoe_board.h */,
+				078DF8211C52957B00E65274 /* tictactoe_main_frame.cpp */,
+				078DF8221C52957B00E65274 /* tictactoe_main_frame.h */,
+				078DF8231C52957B00E65274 /* tictactoe_player.cpp */,
+				078DF8241C52957B00E65274 /* tictactoe_player.h */,
 				07A9A8481B5CA6E800B63035 /* framework.cpp */,
 				07A9A8491B5CA6E800B63035 /* framework.h */,
 				07A9A8591B5CA6E800B63035 /* tictactoe.h */,
@@ -515,8 +453,8 @@
 			children = (
 				07A9A7F91B5CA67400B63035 /* aura.xcodeproj */,
 				07A9A8051B5CA67F00B63035 /* axis.xcodeproj */,
-				07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */,
-				07881B851B5CC7E20069D136 /* axispng.xcodeproj */,
+				078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */,
+				078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */,
 				07A9A8111B5CA68800B63035 /* base.xcodeproj */,
 				07B65416190F2C0F002DAADE /* core.xcodeproj */,
 				078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */,
@@ -548,10 +486,14 @@
 				07A9A8921B5CA6E800B63035 /* tictactoe_application.h in Headers */,
 				07A9A8981B5CA6E800B63035 /* tictactoe_frame.h in Headers */,
 				07A9A8951B5CA6E800B63035 /* tictactoe_document.h in Headers */,
+				078DF8341C52957B00E65274 /* tictactoe_player.h in Headers */,
 				07A9A89B1B5CA6E800B63035 /* tictactoe_pane_view.h in Headers */,
 				07A9A8A11B5CA6E800B63035 /* tictactoe_view.h in Headers */,
+				078DF82C1C52957B00E65274 /* tictactoe_board.h in Headers */,
 				07A9A88A1B5CA6E800B63035 /* framework.h in Headers */,
 				07A9A88F1B5CA6E800B63035 /* tictactoe.h in Headers */,
+				078DF8301C52957B00E65274 /* tictactoe_main_frame.h in Headers */,
+				078DF8281C52957B00E65274 /* tictactoe_arbitrator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,8 +511,6 @@
 			);
 			dependencies = (
 				078B59051B5CF94E00A7D3CF /* PBXTargetDependency */,
-				078B58EC1B5CF6EF00A7D3CF /* PBXTargetDependency */,
-				078B58EA1B5CF6E900A7D3CF /* PBXTargetDependency */,
 				078B58E81B5CF6E200A7D3CF /* PBXTargetDependency */,
 				078B58E61B5CF6DD00A7D3CF /* PBXTargetDependency */,
 				078B58D91B5CF6D600A7D3CF /* PBXTargetDependency */,
@@ -610,8 +550,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				07881BAE1B5CCAB60069D136 /* PBXTargetDependency */,
-				07881BAC1B5CCAAC0069D136 /* PBXTargetDependency */,
 				07A9A81E1B5CA69A00B63035 /* PBXTargetDependency */,
 				07A9A8201B5CA69E00B63035 /* PBXTargetDependency */,
 				07A9A8221B5CA6A500B63035 /* PBXTargetDependency */,
@@ -656,14 +594,6 @@
 					ProjectRef = 07A9A8051B5CA67F00B63035 /* axis.xcodeproj */;
 				},
 				{
-					ProductGroup = 07881B991B5CC7F00069D136 /* Products */;
-					ProjectRef = 07881B981B5CC7F00069D136 /* axisjpeg.xcodeproj */;
-				},
-				{
-					ProductGroup = 07881B861B5CC7E20069D136 /* Products */;
-					ProjectRef = 07881B851B5CC7E20069D136 /* axispng.xcodeproj */;
-				},
-				{
 					ProductGroup = 07A9A8121B5CA68800B63035 /* Products */;
 					ProjectRef = 07A9A8111B5CA68800B63035 /* base.xcodeproj */;
 				},
@@ -686,48 +616,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		07881B901B5CC7E30069D136 /* libaxispng.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libaxispng.dylib;
-			remoteRef = 07881B8F1B5CC7E30069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07881B921B5CC7E30069D136 /* libaxispng.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libaxispng.dylib;
-			remoteRef = 07881B911B5CC7E30069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07881B941B5CC7E30069D136 /* axispng_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = axispng_iosTests.xctest;
-			remoteRef = 07881B931B5CC7E30069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07881B9F1B5CC7F00069D136 /* libaxisjpeg.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libaxisjpeg.dylib;
-			remoteRef = 07881B9E1B5CC7F00069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07881BA11B5CC7F00069D136 /* libaxisjpeg.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libaxisjpeg.dylib;
-			remoteRef = 07881BA01B5CC7F00069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07881BA31B5CC7F00069D136 /* axisjpeg_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = axisjpeg_iosTests.xctest;
-			remoteRef = 07881BA21B5CC7F00069D136 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		078AEED3191547110091C065 /* libcore.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -853,8 +741,12 @@
 			files = (
 				07A9A89D1B5CA6E800B63035 /* tictactoe_pane_view_update_hint.cpp in Sources */,
 				07A9A8941B5CA6E800B63035 /* tictactoe_document.cpp in Sources */,
+				078DF82A1C52957B00E65274 /* tictactoe_board.cpp in Sources */,
+				078DF8261C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */,
 				07A9A8891B5CA6E800B63035 /* framework.cpp in Sources */,
+				078DF82E1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */,
 				07A9A89A1B5CA6E800B63035 /* tictactoe_pane_view.cpp in Sources */,
+				078DF8321C52957B00E65274 /* tictactoe_player.cpp in Sources */,
 				07A9A8971B5CA6E800B63035 /* tictactoe_frame.cpp in Sources */,
 				07A9A8A01B5CA6E800B63035 /* tictactoe_view.cpp in Sources */,
 				07A9A8911B5CA6E800B63035 /* tictactoe_application.cpp in Sources */,
@@ -865,7 +757,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078DF8331C52957B00E65274 /* tictactoe_player.cpp in Sources */,
+				078DF8271C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */,
 				9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */,
+				078DF82B1C52957B00E65274 /* tictactoe_board.cpp in Sources */,
+				078DF82F1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,8 +771,12 @@
 			files = (
 				07A9A89C1B5CA6E800B63035 /* tictactoe_pane_view_update_hint.cpp in Sources */,
 				07A9A8931B5CA6E800B63035 /* tictactoe_document.cpp in Sources */,
+				078DF8291C52957B00E65274 /* tictactoe_board.cpp in Sources */,
+				078DF8251C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */,
 				07A9A8881B5CA6E800B63035 /* framework.cpp in Sources */,
+				078DF82D1C52957B00E65274 /* tictactoe_main_frame.cpp in Sources */,
 				07A9A8991B5CA6E800B63035 /* tictactoe_pane_view.cpp in Sources */,
+				078DF8311C52957B00E65274 /* tictactoe_player.cpp in Sources */,
 				07A9A8961B5CA6E800B63035 /* tictactoe_frame.cpp in Sources */,
 				07A9A89F1B5CA6E800B63035 /* tictactoe_view.cpp in Sources */,
 				07A9A8901B5CA6E800B63035 /* tictactoe_application.cpp in Sources */,
@@ -890,16 +790,6 @@
 			isa = PBXTargetDependency;
 			name = core;
 			targetProxy = 0722ED8119262629003E99F4 /* PBXContainerItemProxy */;
-		};
-		07881BAC1B5CCAAC0069D136 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = axispng;
-			targetProxy = 07881BAB1B5CCAAC0069D136 /* PBXContainerItemProxy */;
-		};
-		07881BAE1B5CCAB60069D136 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = axisjpeg;
-			targetProxy = 07881BAD1B5CCAB60069D136 /* PBXContainerItemProxy */;
 		};
 		078AEF57191589F30091C065 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -920,16 +810,6 @@
 			isa = PBXTargetDependency;
 			name = ios_base;
 			targetProxy = 078B58E71B5CF6E200A7D3CF /* PBXContainerItemProxy */;
-		};
-		078B58EA1B5CF6E900A7D3CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_axispng;
-			targetProxy = 078B58E91B5CF6E900A7D3CF /* PBXContainerItemProxy */;
-		};
-		078B58EC1B5CF6EF00A7D3CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_axisjpeg;
-			targetProxy = 078B58EB1B5CF6EF00A7D3CF /* PBXContainerItemProxy */;
 		};
 		078B59051B5CF94E00A7D3CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -973,22 +853,20 @@
 		9AE24EAA1904CFFD001AEFFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
 		9AE24EAB1904CFFD001AEFFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
