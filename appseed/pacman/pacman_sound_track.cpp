@@ -12,13 +12,20 @@ namespace pacman
       m_eventEnd(papp)
    {
 
-      m_presampler = new ::multimedia::audio_decode::resampler(get_app());
+      m_straMode.add("intermission");
+      m_straMode.add("chomp");
+
+      m_bNonStopOnEof =true;
+
+      
 
 
       m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
 
       if(!m_pwaveplayer->begin_synch())
          return;
+
+      get_wave_player()->m_listenerptra.add(this);
 
       m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
 
@@ -31,6 +38,8 @@ namespace pacman
       c.Play(0, 0, false);
 
       get_wave_player()->ExecuteCommand(c);
+
+      
 
 
    }
@@ -58,7 +67,7 @@ namespace pacman
       if(!file.is_set())
       {
 
-         file = Application.file().get_file(sound_path(psz),::file::type_binary | ::file::mode_read);
+         file = Application.file().get_file(sound_path(psz),::file::type_binary | ::file::mode_read | ::file::share_deny_none);
 
       }
 
@@ -77,12 +86,24 @@ namespace pacman
          if(m_pdecoderplugin == NULL)
             return NULL;
 
-         pdecoder = m_pdecoderplugin->NewDecoder();
+         ::multimedia::audio_decode::decoder * pdecoderFile = m_pdecoderplugin->NewDecoder();
 
-         pdecoder->DecoderInitialize(sound_file(psz),false);
+         string str(psz);
 
+         ::str::begins_eat_ci(str,"wait:");
+
+         pdecoderFile->DecoderInitialize(sound_file(str),false);
+
+         ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
+
+         presampler->m_pdecoder = pdecoderFile;
+
+         pdecoder = presampler;
+
+         presampler->DecoderInitialize(NULL,false);
 
       }
+      
 
       return pdecoder;
 
@@ -90,57 +111,85 @@ namespace pacman
 
    void sound_track::queue(const char * psz)
       {
+
          synch_lock sl(&m_mutex);
    
          m_eventEnd.ResetEvent();
-   
-         if(string(psz) == string(""))
-         {
-            m_str = "";
-         }
-         else if(m_str != "intermission")
-         {
-   
-            if(!::str::begins_ci(m_str,"wait:"))
-            {
-   
-               m_str = psz;
-   
-            }
-   
-         }
 
          string str(psz);
+         
+         if(str.is_empty())
+         {
 
-         bool bWait = ::str::begins_eat_ci(str,"wait:");
+            m_str = "";
+
+            return;
+
+         }
+
+         bool bWait = ::str::begins_ci(str,"wait:");
+
+         ::multimedia::audio_decode::decoder * pdecoder = sound_decoder(str);
+
+         if(m_decoderptra.get_count() > 0 && !m_decoderptra[0]->DecoderEOF() && m_straMode.contains(str))
+         {
+
+            if(::str::begins_ci(m_str,"wait:"))
+            {
+
+               return;
+
+            }
+
+         }
 
 
-         m_presampler->m_pdecoder = sound_decoder(str);
+         if(m_str == str)
+         {
 
-         init_child(m_presampler);
+            return;
 
-         m_presampler->DecoderInitialize(NULL,false);
+         }
+         else
+         {
 
-         m_decoderptra.remove_all();
+            m_str = str;
 
-         m_iDecoder = 0;
+            pdecoder->m_bKick = true;
+
+         }
+         
+
+         m_bEof = false;
+
+         init_child(pdecoder);
 
          if(bWait)
          {
-            m_presampler->m_pdecoder->DecoderSeekBegin();
+            
+            pdecoder->DecoderSeekBegin();
 
-            m_presampler->m_bLoop = false;
+            pdecoder->m_bLoop = false;
+            
          }
          else
          {
             
-            m_presampler->m_bLoop = true;
+            pdecoder->m_bLoop = true;
+
+            //if(m_straMode.contains(m_str))
+            //{
+
+            //   pdecoder->m_bKick = false;
+
+            //}
 
          }
 
-         m_decoderptra.add(m_presampler);
+         ::output_debug_string(str + "\n");
 
-         m_bEof = false;
+         m_decoderptra.add(pdecoder);
+
 
    
       }
@@ -150,9 +199,21 @@ namespace pacman
       if(eevent == event_eof)
       {
          m_eventEnd.SetEvent();
+//         m_eventEnd.SetEvent();
       }
    }
 
+   void sound_track::OnWavePlayerEvent(::multimedia::audio::wave_player * pplayer,::multimedia::audio::wave_player::e_event eevent,::multimedia::audio::wave_player_command * pcommand)
+   {
+
+      if(eevent == ::multimedia::audio::wave_player::EventPlaybackEnd)
+      {
+
+         
+
+      }
+
+   }
 
 } // namespace pacman
 

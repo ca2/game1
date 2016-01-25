@@ -314,14 +314,14 @@ namespace pacman
       {
          m_ppacman->play_sound("intermission");
       }
-      else
-      {
-         synch_lock sl(&m_ppacman->m_psound->m_mutex);
-         if(m_ppacman->m_psound->m_str == "intermission")
-         {
-            m_ppacman->play_sound("");
-         }
-      }
+      //else
+      //{
+      //   synch_lock sl(&m_ppacman->m_psound->m_mutex);
+      //   if(m_ppacman->m_psound->m_str == "intermission")
+      //   {
+      //      m_ppacman->play_sound("chomp");
+      //   }
+      //}
    }
 
    void ghost::hide()

@@ -196,7 +196,9 @@ namespace pacman
       printready();
       multi_lock ml({&m_evRestart,&m_psound->m_eventEnd});
 
-      if(ml.lock(duration::infinite(), false).signaled_index() == 0)
+      auto result = ml.lock(duration::infinite(),false);
+
+      if(result.signaled() && result.signaled_index() == 0)
       {
          throw ::pacman::restart();
       }
