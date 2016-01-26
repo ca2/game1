@@ -7,7 +7,7 @@ namespace pacman
 
    sound_track::sound_track(::aura::application * papp):
       object(papp),
-      ::multimedia::audio_decode::track(papp),
+      ::multimedia::audio_decode::playground(papp),
       ::multimedia::decoder(papp),
       m_eventEnd(papp)
    {
