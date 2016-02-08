@@ -757,7 +757,7 @@ namespace tictactoe
          float fHeight = 100.0;
 
 #ifdef LINUX
-         m_font->create_pixel_font("sans-serif",fHeight,FW_BOLD);
+         m_font->create_pixel_font(FONT_SANS,fHeight,FW_BOLD);
 #else
          m_font->create_pixel_font(FONT_SANS,fHeight,FW_BOLD);
 #endif
@@ -769,7 +769,7 @@ namespace tictactoe
          double ratey = fHeight * 0.84 / size.cy;
 
 #ifdef LINUX
-         m_font->create_pixel_font("sans-serif",MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
+         m_font->create_pixel_font(FONT_SANS,MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #else
          m_font->create_pixel_font(FONT_SANS,MIN(rectClient.height() * ratey,rectClient.width() * size.cy * ratey / size.cx),FW_BOLD);
 #endif
