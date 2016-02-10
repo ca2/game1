@@ -28,7 +28,7 @@ namespace multimedia
 
       get_wave_player()->DecoderOpen(c);
 
-      c.Play(imedia::position(0),false);
+      c.Play(0, imedia::position(0),false);
 
       get_wave_player()->ExecuteCommand(c);
 
@@ -84,7 +84,7 @@ namespace multimedia
       if(m_pdecoderplugin == NULL)
          return NULL;
 
-      ::multimedia::audio_decode::decoder * pdecoder = m_pdecoderplugin->NewDecoder();
+      ::multimedia::audio_decode::decoder * pdecoder = dynamic_cast <::multimedia::audio_decode::decoder *>( m_pdecoderplugin->NewDecoder());
 
       pdecoder->DecoderInitialize(sound_file(psz),false);
 
