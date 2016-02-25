@@ -56,7 +56,7 @@
 //
 //
 //
-//      void paint(::draw2d::graphics * pdc);
+//      void paint(::draw2d::dib * pdib);
 //
 //   };
 //

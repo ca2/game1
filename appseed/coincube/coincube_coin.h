@@ -25,7 +25,7 @@ namespace coincube
       virtual ~coin();
 
 
-      void on_draw(::draw2d::graphics * pdc);
+      void on_draw(::draw2d::dib * pdib);
 
       void reinvent_merit();
 

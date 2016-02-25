@@ -23,7 +23,7 @@ namespace coincube
       virtual ~cube();
 
 
-      void on_draw(::draw2d::graphics * pdc);
+      void on_draw(::draw2d::dib * pdib);
 
    };
 
