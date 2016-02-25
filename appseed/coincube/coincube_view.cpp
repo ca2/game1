@@ -185,7 +185,7 @@ namespace coincube
 
 
 
-   void view::_001OnDraw(::draw2d::graphics * pdc)
+   void view::_001OnDraw(::draw2d::dib * pdib)
    {
 
       rect rectClient;

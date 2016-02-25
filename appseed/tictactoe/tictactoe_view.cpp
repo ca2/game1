@@ -148,7 +148,7 @@ namespace tictactoe
 
 
 
-   void view::_001OnDraw(::draw2d::graphics * pdc)
+   void view::_001OnDraw(::draw2d::dib * pdib)
    {
 
       ::draw2d::dib * pdib = NULL;
@@ -208,7 +208,7 @@ namespace tictactoe
    }
 
 
-   void view::tictactoe_render(::draw2d::graphics * pdc)
+   void view::tictactoe_render(::draw2d::dib * pdib)
    {
 
       if(m_dib->area() <= 0)

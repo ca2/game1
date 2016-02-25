@@ -18,7 +18,7 @@ namespace coincube
    }
 
 
-   void cube::on_draw(::draw2d::graphics * pdc)
+   void cube::on_draw(::draw2d::dib * pdib)
    {
 
 
