@@ -13,7 +13,14 @@ namespace matchmaking
       double m_dFps;
       DWORD m_dwRoll;
 
-      string_map < ::draw2d::dib_sp >       m_map;
+      string_map < ::draw2d::dib_sp >        m_map;
+      XfplayerViewLines                      m_lines;
+      string_map < XfplayerViewLine * >      m_linemap;
+      string_map < rect >                    m_rectmap;
+
+      ::draw2d::font_sp                      m_font;
+
+      string_map < int >                     m_vote;
 
       sp(pcre_util) m_ppcreutil;
 
@@ -64,6 +71,8 @@ namespace matchmaking
 
       manual_reset_event *    m_pevRenderEnd;
 
+      ::draw2d::dib_sp        m_dibCheck;
+
 
 
       view(::aura::application * papp);
@@ -93,6 +102,8 @@ namespace matchmaking
       DECL_GEN_SIGNAL(_001OnLayout);
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnDestroy);
+      DECL_GEN_SIGNAL(_001OnLButtonDown);
+      DECL_GEN_SIGNAL(_001OnLButtonUp);
 
       virtual string get_matchmaking();
 

@@ -19,7 +19,9 @@ namespace matchmaking
       m_dibAi2(allocer()),
       m_dibPost(allocer()),
       m_dibBk(allocer()),
-      m_dibTime(allocer())
+      m_dibTime(allocer()),
+      m_lines(papp),
+      m_dibCheck(allocer())
    {
 
       m_pevRenderEnd = NULL;
@@ -96,6 +98,8 @@ namespace matchmaking
       IGUI_WIN_MSG_LINK(WM_USER + 1984 + 77 + 2,pdispatch,this,&view::_001OnLayout);
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
       IGUI_WIN_MSG_LINK(WM_DESTROY, pdispatch, this, &view::_001OnDestroy);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN, pdispatch, this, &view::_001OnLButtonDown);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONUP, pdispatch, this, &view::_001OnLButtonUp);
 
    }
 
@@ -158,7 +162,39 @@ namespace matchmaking
 
       }
 
+      ::file::patha patha;
 
+      Application.dir().matter_ls("map", patha);
+
+      for (auto & path : patha)
+      {
+
+
+
+         if (path.m_iDir == 0 && path.extension().CompareNoCase("png") == 0)
+         {
+
+            ::draw2d::dib * pdib = get_map(path.title());
+
+
+
+
+         }
+
+
+      }
+
+      m_font.alloc(allocer());
+
+      m_font->create_pixel_font("Verdana", 16);
+
+      visual::dib_sp d(allocer());
+
+      d.load_from_matter("check.png", false);
+
+      m_dibCheck->create(16, 16);
+      m_dibCheck->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
+      m_dibCheck->get_graphics()->alpha_blend(0, 0, m_dibCheck->size().cx, m_dibCheck->size().cy, d->get_graphics(), 0, 0, d->size().cx, d->size().cy, 1.0);
 
    }
 
@@ -172,6 +208,42 @@ namespace matchmaking
       m_pevRenderEnd->wait(seconds(15));
 
       delete m_pevRenderEnd;
+
+   }
+
+   void view::_001OnLButtonDown(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse, pmouse, pobj);
+
+      pobj->m_bRet = true;
+
+   }
+
+   void view::_001OnLButtonUp(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse, pmouse, pobj);
+
+      pobj->m_bRet = true;
+
+      for (auto & r : m_rectmap)
+      {
+
+         rect rs(r.m_element2);
+
+         ClientToScreen(rs);
+
+         if (rs.contains(pmouse->m_pt))
+         {
+
+            m_vote[r.m_element1]++;
+
+         }
+
+
+
+      }
 
    }
 
@@ -253,6 +325,144 @@ namespace matchmaking
    {
 
       ::draw2d::graphics * pdc = pdibParam->get_graphics();
+
+      rect rectClient;
+
+      GetClientRect(rectClient);
+
+      pdc->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
+
+      point ptCursor;
+
+      Session.get_cursor_pos(&ptCursor);
+
+
+      int starty = 100;
+      int x = 100;
+      int y = starty;
+      int maxx = 0;
+      pdc->set_text_color(ARGB(255, 255, 255, 255));
+      for (auto & pair : m_map)
+      {
+
+         ::draw2d::dib * pdib1 = get_map(pair.m_element1);
+
+         if (y > starty)
+         {
+
+            if (y + pdib1->m_size.cy > rectClient.bottom)
+            {
+
+               y = starty;
+
+               x += maxx + 8;
+
+               maxx = 0;
+
+            }
+
+         }
+
+         string str(pair.m_element1);
+
+         rect & r = m_rectmap[str];
+
+         r.left = x;
+         r.top = y;
+         r.right = r.left + pdib1->size().cx;
+         r.bottom = r.top + pdib1->size().cy;
+
+         rect rS(r);
+
+         ClientToScreen(rS);
+
+
+         pdc->BitBlt(r, pdib1->get_graphics(), null_point(), SRCCOPY);
+
+         pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+         if (rS.contains(ptCursor))
+         {
+            pdc->FillSolidRect(r, ARGB(70, 0, 0, 0));
+         }
+         else
+         {
+
+         }
+
+
+
+         XfplayerViewLine * & pline = m_linemap[str];
+
+         if (pline == NULL)
+         {
+
+            pline = canew(XfplayerViewLine(&m_lines));
+
+            //pdc->TextOut(x + 2, y + 2, str);
+
+
+            m_lines.add(pline);
+
+            m_linemap[str] = pline;
+
+            pline->SetBlend(1.0);
+            pline->m_bColonPrefix = false;
+            pline->SetFont(m_font);
+            pline->PrepareLine(
+               pdc,
+               str,
+               0,
+               rectClient);
+            pline->Show(true);
+            pline->SetColors(ARGB(255, 255, 255, 255), ARGB(255, 127, 127, 120));
+
+         }
+
+         pline->SetPlacement(r);
+
+         pline->to(pdibParam, true, rectClient, NULL_REF(rect_array), false);
+
+         maxx = MAX(maxx, pdib1->size().cx);
+
+         if (m_vote[str] > 0)
+         {
+
+            int startx2 = x + 2;
+
+            int x2 = startx2;
+
+            int y2 = y + pdib1->size().cy - m_dibCheck->size().cy - 2;
+
+            for (index i = 0; i < m_vote[str]; i++)
+            {
+
+
+               pdc->BitBlt(x2, y2, m_dibCheck->size().cx, m_dibCheck->size().cy, m_dibCheck->get_graphics(), 0, 0, 1.0);
+
+               x2 += 18;
+
+               if (x2 + 18 > r.right)
+               {
+
+                  x2 = startx2;
+                  y2 -= m_dibCheck->size().cy + 2;
+
+               }
+
+            }
+
+         }
+
+         y += pdib1->size().cy + 8;
+
+
+
+      }
+
+
+      return;
+
+      pdc = pdibParam->get_graphics();
 
 
 
@@ -455,20 +665,111 @@ namespace matchmaking
 
    void view::_001OnDraw(::draw2d::dib * pdib)
    {
+      uint64_t startTime = get_nanos();
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
 
-      rect rectClient;
+      //if (m_prender != NULL)
+      //{
+
+      //   synch_lock sl(&m_mutexText);
+
+      //   if (get_processed_hellomultiverse() != m_prender->m_strHelloMultiverse)
+      //   {
+
+      //      m_prender->m_strHelloMultiverse = get_processed_hellomultiverse().c_str(); // rationale : string allocation fork *for multithreading*
+
+      //      sl.unlock();
+
+      //      _001OnLayout(NULL);
+
+      //   }
+
+      //}
+
+      ::rect rectClient;
 
       GetClientRect(rectClient);
 
-      pdc->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
+      if (rectClient.area() <= 0)
+         return;
 
-      ::draw2d::dib * pdib1 = get_map("de_dust2");
+      m_dibPost->create(rectClient.size());
 
-      pdc->BitBlt(100, 100, pdib1->size().cx, pdib1->size().cy,
-                  pdib1->get_graphics(),
-                  0, 0, SRCCOPY);
+      m_dibPost->Fill(00, 00, 00, 00);
+
+      if (m_dibBk.is_set() && m_dibBk->area() > 0)
+      {
+         m_dibPost->get_graphics()->BitBlt(
+            0, 0, MIN(rectClient.width(), m_dibBk->m_size.cx),
+            MIN(rectClient.height(), m_dibBk->m_size.cy),
+            m_dibBk->get_graphics());
+      }
+
+      if (m_prender->m_bImageEnable && m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
+         //if(m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
+      {
+
+         //m_bFirstDone = true;
+
+         ::rect rectWork(0, 0, m_prender->m_dibWork->get_size().cx, m_prender->m_dibWork->get_size().cy);
+         ::rect rectImage(0, 0, m_prender->m_dibImage->get_size().cx, m_prender->m_dibImage->get_size().cy);
+
+         rectImage.FitOnCenterOf(rectWork);
+
+         m_dibPost->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
+
+         m_dibPost->get_graphics()->StretchBlt(rectImage.left, rectImage.top, rectImage.width(), rectImage.height(),
+                                               m_prender->m_dibImage->get_graphics(), 0, 0,
+                                               m_prender->m_dibImage->get_size().cx,
+                                               m_prender->m_dibImage->get_size().cy, SRCCOPY);
+
+
+      }
+
+      ::draw2d::graphics * pdc = m_dibPost->get_graphics();
+
+      _001OnHelloDraw(m_dibPost);
+
+      m_dibTime->create(m_dibPost->get_size());
+
+      m_dibTime->Fill(0, 0, 0, 0);
+
+
+      DWORD xOffset;
+
+      xOffset = m_dibTime->m_size.cx * m_dFps * (double)(::get_tick_count() - m_dwRoll) / 1000.0; // x = v.t; f=fps  1920 * 1FPS * t
+
+      xOffset %= m_dibTime->m_size.cx;
+
+      m_dibTime->from(point(xOffset, 0), m_dibPost, ::null_point(), ::size(m_dibPost->m_size.cx - xOffset, m_dibPost->m_size.cy));
+      m_dibTime->from(null_point(), m_dibPost, point(m_dibPost->m_size.cx - xOffset, 0), size(xOffset, m_dibPost->m_size.cy));
+
+      //m_dibPost->from(m_dibTime);
+      _001OnPostProcess(m_dibTime);
+
+      ::draw2d::graphics * pdcParam = pdib->get_graphics();
+
+      pdcParam->set_alpha_mode(::draw2d::alpha_mode_blend);
+
+      //      m_dibPost->get_graphics()->FillSolidRect(110,110,100,100,ARGB(184,177,184,60));
+
+      pdcParam->from(m_dibTime->get_size(), m_dibTime->get_graphics(), SRCCOPY);
+
+      //pdcScreen->FillSolidRect(10,10,100,100,ARGB(184,49,184,60));
+
+      //pdcScreen->Draw3dRect(200,200,100,100,ARGB(255,0,255,0),ARGB(255,0,0,255));
+      uint64_t endTime = get_nanos();
+
+      uint64_t micros = (endTime - startTime) / 1000;
+
+      //char sz[512];
+
+      //::OutputDebugString("view:");
+      //::ultoa_dup(sz, micros, 10);
+      //::OutputDebugString(sz);
+      //::OutputDebugString(", ");
+
+
 
    }
 
@@ -482,7 +783,7 @@ namespace matchmaking
 
          visual::dib_sp d(allocer());
 
-         d.load_from_matter("map/" + str + ".png");
+         d.load_from_matter("map/" + str + ".png", false);
 
          m_map[str]->from(d);
 
