@@ -69,6 +69,48 @@
 			remoteGlobalIDString = 9A19A1A419C6F50B0018DF7D;
 			remoteInfo = core;
 		};
+		0750B3EC1C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = axis_image_jpeg;
+		};
+		0750B3EE1C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_axis_image_jpeg;
+		};
+		0750B3F01C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = axisjpeg_iosTests;
+		};
+		0750B3F51C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = axis_image_png;
+		};
+		0750B3F71C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_axis_image_png;
+		};
+		0750B3F91C8E368C0008E78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = axispng_iosTests;
+		};
 		078AEED2191547110091C065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07B65416190F2C0F002DAADE /* core.xcodeproj */;
@@ -329,6 +371,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0750B3E31C8E368C0008E78A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0750B3F61C8E368C0008E78A /* libaxis_image_png.dylib */,
+				0750B3F81C8E368C0008E78A /* libaxis_image_png.dylib */,
+				0750B3FA1C8E368C0008E78A /* axispng_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0750B3E51C8E368C0008E78A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0750B3ED1C8E368C0008E78A /* libaxis_image_jpeg.dylib */,
+				0750B3EF1C8E368C0008E78A /* libaxis_image_jpeg.dylib */,
+				0750B3F11C8E368C0008E78A /* axisjpeg_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		078AEEB1191547110091C065 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +656,14 @@
 					ProjectRef = 07A9A8051B5CA67F00B63035 /* axis.xcodeproj */;
 				},
 				{
+					ProductGroup = 0750B3E51C8E368C0008E78A /* Products */;
+					ProjectRef = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
+				},
+				{
+					ProductGroup = 0750B3E31C8E368C0008E78A /* Products */;
+					ProjectRef = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
+				},
+				{
 					ProductGroup = 07A9A8121B5CA68800B63035 /* Products */;
 					ProjectRef = 07A9A8111B5CA68800B63035 /* base.xcodeproj */;
 				},
@@ -616,6 +686,48 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0750B3ED1C8E368C0008E78A /* libaxis_image_jpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaxis_image_jpeg.dylib;
+			remoteRef = 0750B3EC1C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0750B3EF1C8E368C0008E78A /* libaxis_image_jpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libaxis_image_jpeg.dylib;
+			remoteRef = 0750B3EE1C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0750B3F11C8E368C0008E78A /* axisjpeg_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = axisjpeg_iosTests.xctest;
+			remoteRef = 0750B3F01C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0750B3F61C8E368C0008E78A /* libaxis_image_png.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaxis_image_png.dylib;
+			remoteRef = 0750B3F51C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0750B3F81C8E368C0008E78A /* libaxis_image_png.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libaxis_image_png.dylib;
+			remoteRef = 0750B3F71C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0750B3FA1C8E368C0008E78A /* axispng_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = axispng_iosTests.xctest;
+			remoteRef = 0750B3F91C8E368C0008E78A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		078AEED3191547110091C065 /* libcore.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
