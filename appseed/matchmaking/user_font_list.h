@@ -5,7 +5,7 @@ namespace user
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE font_list:
+   class CLASS_DECL_APP_CORE_MATCHMAKING font_list:
       virtual public control,
       virtual public ::data::listener
    {

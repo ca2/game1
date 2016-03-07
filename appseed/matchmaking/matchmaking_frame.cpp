@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -15,7 +15,7 @@ namespace hellomultiverse
 
       m_bWindowFrame = !Application.command()->m_varTopicQuery.has_property("client_only");
 
-      
+
 
       if(Application.command()->m_varTopicQuery.has_property("opaque"))
       {
@@ -46,7 +46,7 @@ namespace hellomultiverse
    void frame::assert_valid() const
    {
 
-	   simple_frame_window::assert_valid();
+      simple_frame_window::assert_valid();
 
    }
 
@@ -54,7 +54,7 @@ namespace hellomultiverse
    void frame::dump(dump_context & dumpcontext) const
    {
 
-	   simple_frame_window::dump(dumpcontext);
+      simple_frame_window::dump(dumpcontext);
 
    }
 
@@ -103,7 +103,7 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

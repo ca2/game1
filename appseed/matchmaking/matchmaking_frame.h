@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE frame :
+   class CLASS_DECL_APP_CORE_MATCHMAKING frame :
       virtual public simple_frame_window
    {
    public:
@@ -19,8 +19,8 @@ namespace hellomultiverse
       virtual ~frame();
 
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
 
 
       virtual bool get_translucency(::user::ETranslucency & etranslucency);
@@ -30,7 +30,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

@@ -1,6 +1,6 @@
 //
-//  hellomultiverse_render.cpp
-//  app_core_hellomultiverse
+//  matchmaking_render.cpp
+//  app_core_matchmaking
 //
 //  Created by Thomas Borregaard Sørensen on 8/6/15 23:27;24.
 //  Copyright (c) 2015 Camilo Sasuke Tsumanuma. All rights reserved.
@@ -11,7 +11,7 @@
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -173,12 +173,12 @@ namespace hellomultiverse
       }
 
 
-      hellomultiverse_render();
+      matchmaking_render();
 
       if(m_bFirstDone)
       {
 
-         hellomultiverse_draw();
+         matchmaking_draw();
 
       }
       else
@@ -227,7 +227,7 @@ namespace hellomultiverse
 
    }
 
-   void render::hellomultiverse_render()
+   void render::matchmaking_render()
    {
 
       {
@@ -238,14 +238,14 @@ namespace hellomultiverse
 
          pdib->Fill(0,0,0,0);
 
-         hellomultiverse_render(pdib);
+         matchmaking_render(pdib);
 
 
       }
 
    }
 
-   void render::hellomultiverse_render(::draw2d::dib * pdib)
+   void render::matchmaking_render(::draw2d::dib * pdib)
    {
 
 
@@ -253,20 +253,20 @@ namespace hellomultiverse
       //   if(m_bLite)
       {
 
-         hellomultiverse_render_lite_view(pdib);
+         matchmaking_render_lite_view(pdib);
 
       }
       //   else
       //   {
       //
-      //      hellomultiverse_render_full_view(pdib->get_graphics());
+      //      matchmaking_render_full_view(pdib->get_graphics());
       //
       //   }
 
    }
 
 
-   void render::hellomultiverse_draw()
+   void render::matchmaking_draw()
    {
 
       if(m_bVoidTransfer)
@@ -306,7 +306,7 @@ namespace hellomultiverse
 
    }
 
-   void render::hellomultiverse_render_lite_view(::draw2d::dib * pdib)
+   void render::matchmaking_render_lite_view(::draw2d::dib * pdib)
    {
 
       //if(m_dib->area() <= 0)
@@ -377,7 +377,7 @@ namespace hellomultiverse
 
       synch_lock slText(m_pmutexText);
 
-      string strHelloMultiverse(get_hellomultiverse().c_str()); // rationale : string allocation fork *for multithreading*
+      string strHelloMultiverse(get_matchmaking().c_str()); // rationale : string allocation fork *for multithreading*
 
       slText.unlock();
 
@@ -452,7 +452,7 @@ namespace hellomultiverse
 
       slText.lock();
 
-      if(strHelloMultiverse != get_hellomultiverse() || m_cxCache1 != m_cx || m_cyCache1 != m_cy || m_dibTemplate->area() <= 0)
+      if(strHelloMultiverse != get_matchmaking() || m_cxCache1 != m_cx || m_cyCache1 != m_cy || m_dibTemplate->area() <= 0)
          return;
 
       slText.unlock();
@@ -543,7 +543,7 @@ namespace hellomultiverse
 
       slText.lock();
 
-      if(strHelloMultiverse == get_hellomultiverse() && m_cxCache1 == m_cx && m_cyCache1 == m_cy)
+      if(strHelloMultiverse == get_matchmaking() && m_cxCache1 == m_cx && m_cyCache1 == m_cy)
       {
 
          m_bFirstDone = true;
@@ -553,7 +553,7 @@ namespace hellomultiverse
    }
 
 
-   void render::hellomultiverse_render_full_view(::draw2d::dib * pdib)
+   void render::matchmaking_render_full_view(::draw2d::dib * pdib)
    {
 
       if(m_dibWork->area() <= 0)
@@ -636,7 +636,7 @@ namespace hellomultiverse
 
       pdc->set_font(m_font);
 
-      string strHelloMultiverse = get_hellomultiverse();
+      string strHelloMultiverse = get_matchmaking();
 
       ::size size = pdc->GetTextExtent(strHelloMultiverse);
 
@@ -869,7 +869,7 @@ namespace hellomultiverse
 
 #endif
 
-      if(strHelloMultiverse == get_hellomultiverse() && m_cx == m_rectClient.width() && m_cy == m_rectClient.height())
+      if(strHelloMultiverse == get_matchmaking() && m_cx == m_rectClient.width() && m_cy == m_rectClient.height())
       {
 
          m_bFirstDone = true;
@@ -880,7 +880,7 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

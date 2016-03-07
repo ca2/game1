@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE main_view:
+   class CLASS_DECL_APP_CORE_MATCHMAKING main_view:
       virtual public ::user::split_view
    {
    public:
@@ -33,7 +33,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

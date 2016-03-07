@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE toggle_view:
+   class CLASS_DECL_APP_CORE_MATCHMAKING toggle_view:
       virtual public ::user::impact,
       virtual public ::user::button
    {
@@ -31,7 +31,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE edit_view:
+   class CLASS_DECL_APP_CORE_MATCHMAKING edit_view:
       virtual public ::user::show < ::user::plain_edit >
    {
    public:
@@ -35,7 +35,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

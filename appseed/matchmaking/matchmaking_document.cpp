@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -23,7 +23,7 @@ namespace hellomultiverse
    void document::assert_valid() const
    {
 
-	   ::user::document::assert_valid();
+      ::user::document::assert_valid();
 
    }
 
@@ -31,7 +31,7 @@ namespace hellomultiverse
    void document::dump(dump_context & dumpcontext) const
    {
 
-	   ::user::document::dump(dumpcontext);
+      ::user::document::dump(dumpcontext);
 
    }
 
@@ -48,7 +48,7 @@ namespace hellomultiverse
    {
 
       view * pview = get_typed_view < view >();
-      
+
       string strPath = varFile.get_string();
 
       varFile["url"] = strPath;
@@ -73,8 +73,8 @@ namespace hellomultiverse
 
       }
       else if(get_typed_view < ::user::plain_edit_view >() != NULL
-         && Application.file().exists(varFile)
-         && (str = Application.file().as_string(varFile)).has_char())
+              && Application.file().exists(varFile)
+              && (str = Application.file().as_string(varFile)).has_char())
       {
 
          get_typed_view < ::user::plain_edit_view >()->_001SetText(str.Left(84),::action::source_user);
@@ -83,7 +83,7 @@ namespace hellomultiverse
       else if(get_typed_view < ::userex::pane_tab_view >() != NULL)
       {
 
-         get_typed_view < ::userex::pane_tab_view >()->set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverse);
+         get_typed_view < ::userex::pane_tab_view >()->set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverse);
 
       }
 
@@ -108,7 +108,7 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

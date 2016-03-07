@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -16,8 +16,8 @@ namespace hellomultiverse
    };
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE pane_view_update_hint :
-      public object  
+   class CLASS_DECL_APP_CORE_MATCHMAKING pane_view_update_hint :
+      public object
    {
    public:
 
@@ -39,8 +39,8 @@ namespace hellomultiverse
 
       pane_view_update_hint();
       virtual ~pane_view_update_hint();
-      
-      
+
+
       void set_type(e_type e_type);
 
       bool is_type_of(e_type e_type);
@@ -49,7 +49,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -10,9 +10,9 @@ namespace hellomultiverse
       ::user::interaction(papp),
       ::user::plain_edit(papp)
    {
-      
+
       m_ptopview = NULL;
- 
+
    }
 
    edit_view::~edit_view()
@@ -58,7 +58,7 @@ namespace hellomultiverse
       if(m_ptopview == NULL)
          return;
 
-      view * pview = dynamic_cast < ::hellomultiverse::view * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("hellomultiverse_view"));
+      view * pview = dynamic_cast < ::matchmaking::view * > (m_ptopview->GetTypedParent<::user::split_view>()->get_child_by_id("matchmaking_view"));
 
       if(pview != NULL)
       {
@@ -110,8 +110,8 @@ namespace hellomultiverse
    }
 
 
-*/
-} // namespace hellomultiverse
+   */
+} // namespace matchmaking
 
 
 

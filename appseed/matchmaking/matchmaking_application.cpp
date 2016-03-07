@@ -3,7 +3,7 @@
 
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -33,7 +33,7 @@ namespace hellomultiverse
       m_ptemplateHelloMultiverseView = NULL;
       m_ptemplateHelloMultiverseSwitcher = NULL;
 
-      m_strAppName            = "hellomultiverse";
+      m_strAppName            = "matchmaking";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -66,23 +66,23 @@ namespace hellomultiverse
    bool application::initialize_instance()
    {
 
-      System.factory().creatable_small < ::hellomultiverse::document >();
-      System.factory().creatable_small < ::hellomultiverse::frame >();
-      System.factory().creatable_small < ::hellomultiverse::edit_view >();
-//      System.factory().creatable_small < ::hellomultiverse::::user::button_view >();
+      System.factory().creatable_small < ::matchmaking::document >();
+      System.factory().creatable_small < ::matchmaking::frame >();
+      System.factory().creatable_small < ::matchmaking::edit_view >();
+//      System.factory().creatable_small < ::matchmaking::::user::button_view >();
       System.factory().creatable_small < ::user::button_view >();
-//      System.factory().creatable_small < ::hellomultiverse::::user::split_view >();
-//      System.factory().creatable_small < ::hellomultiverse::lite_view >();
-//      System.factory().creatable_small < ::hellomultiverse::full_view >();
-      System.factory().creatable_small < ::hellomultiverse::view >();
-      System.factory().creatable_small < ::hellomultiverse::main_view >();
-      System.factory().creatable_small < ::hellomultiverse::switcher_view >();
-      System.factory().creatable_small < ::hellomultiverse::pane_view >();
+//      System.factory().creatable_small < ::matchmaking::::user::split_view >();
+//      System.factory().creatable_small < ::matchmaking::lite_view >();
+//      System.factory().creatable_small < ::matchmaking::full_view >();
+      System.factory().creatable_small < ::matchmaking::view >();
+      System.factory().creatable_small < ::matchmaking::main_view >();
+      System.factory().creatable_small < ::matchmaking::switcher_view >();
+      System.factory().creatable_small < ::matchmaking::pane_view >();
       System.factory().creatable_small < ::user::font_list >();
       System.factory().creatable_small < ::user::font_list_view >();
-      System.factory().creatable_small < ::hellomultiverse::font_view >();
-      System.factory().creatable_small < ::hellomultiverse::top_view >();
-      System.factory().creatable_small < ::hellomultiverse::toggle_view >();
+      System.factory().creatable_small < ::matchmaking::font_view >();
+      System.factory().creatable_small < ::matchmaking::top_view >();
+      System.factory().creatable_small < ::matchmaking::toggle_view >();
 
       if(!::core::application::initialize_instance())
          return false;
@@ -93,7 +93,7 @@ namespace hellomultiverse
 //      }
 
 
-      string str = directrix()->m_varTopicQuery["hellomultiverse"];
+      string str = directrix()->m_varTopicQuery["matchmaking"];
 
       if (str.has_char())
       {
@@ -104,39 +104,39 @@ namespace hellomultiverse
 
       m_dataid.m_id = m_dataid.m_id + ".local://";
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = canew(::user::single_document_template(
-         this,
-		   "main",
-         System.type_info < document >(),
-		   System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < pane_view > ()));
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = canew(::user::single_document_template(
+                              this,
+                              "main",
+                              System.type_info < document >(),
+                              System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
+                              System.type_info < pane_view > ()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
-	   pDocTemplate = canew(::user::single_document_template(
-         this,
-		   "main",
-         System.type_info < document > (),
-		   System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < main_view > ()));
+      pDocTemplate = canew(::user::single_document_template(
+                              this,
+                              "main",
+                              System.type_info < document > (),
+                              System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
+                              System.type_info < main_view > ()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(
-         this,
-         "main",
-         System.type_info < document >(),
-         System.type_info < frame >(),       // top level SDI frame::user::interaction_impl
-         System.type_info < switcher_view >()));
+                              this,
+                              "main",
+                              System.type_info < document >(),
+                              System.type_info < frame >(),       // top level SDI frame::user::interaction_impl
+                              System.type_info < switcher_view >()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseSwitcher = pDocTemplate;
 
 
       m_ptemplateHelloMultiverseFontSel = canew(::user::single_document_template(
-         this,
-         "main",
-         System.type_info < ::user::document >(),
-         System.type_info < ::simple_frame_window >(),       // top level SDI frame::user::interaction_impl
-         System.type_info < font_view >()));
+                                             this,
+                                             "main",
+                                             System.type_info < ::user::document >(),
+                                             System.type_info < ::simple_frame_window >(),       // top level SDI frame::user::interaction_impl
+                                             System.type_info < font_view >()));
 
       add_document_template(m_ptemplateHelloMultiverseFontSel);
 
@@ -335,10 +335,10 @@ namespace hellomultiverse
 //
 //         psplit->initialize_split_layout();
 //
-//         if(psplit->m_id == "hellomultiverse_top")
+//         if(psplit->m_id == "matchmaking_top")
 //         {
 //
-//            m_peditMain = psplit->create_view < ::user::plain_edit_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"hellomultiverse_edit");
+//            m_peditMain = psplit->create_view < ::user::plain_edit_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"matchmaking_edit");
 //
 //            if(m_peditMain == NULL)
 //            {
@@ -347,7 +347,7 @@ namespace hellomultiverse
 //
 //            }
 //
-//            m_ptoggleviewMain = psplit->create_view < ::user::button_view >(NULL,::null_rect(),psplit->get_pane_holder(1),"hellomultiverse_toggle");
+//            m_ptoggleviewMain = psplit->create_view < ::user::button_view >(NULL,::null_rect(),psplit->get_pane_holder(1),"matchmaking_toggle");
 //
 //            if(m_ptoggleviewMain == NULL)
 //            {
@@ -520,7 +520,7 @@ namespace hellomultiverse
 //
 //            psplit->initialize_split_layout();
 //
-//            m_ptopviewMain = psplit->create_view < ::user::split_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"hellomultiverse_top");
+//            m_ptopviewMain = psplit->create_view < ::user::split_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"matchmaking_top");
 //
 //            if(m_ptopviewMain == NULL)
 //            {
@@ -547,7 +547,7 @@ namespace hellomultiverse
 //
 //         //m_pview = create_view < lite_view >();
 //
-//         m_pviewMain = psplit->create_view < view >(NULL,::null_rect(),psplit->get_pane_holder(iPane),"hellomultiverse_view");
+//         m_pviewMain = psplit->create_view < view >(NULL,::null_rect(),psplit->get_pane_holder(iPane),"matchmaking_view");
 //
 //         if(m_pviewMain == NULL)
 //         {
@@ -596,16 +596,16 @@ namespace hellomultiverse
 //         {
 //
 //
-//            pevent->m_ptab->set_tab("Menu",::hellomultiverse::PaneViewMenu);
-//            pevent->m_ptab->set_tab("hellomultiverse",::hellomultiverse::PaneViewHelloMultiverse);
-//            pevent->m_ptab->set_tab("switcher",::hellomultiverse::PaneViewHelloMultiverseSwitcher);
-//            pevent->m_ptab->set_tab("Font",::hellomultiverse::PaneViewFontSel);
+//            pevent->m_ptab->set_tab("Menu",::matchmaking::PaneViewMenu);
+//            pevent->m_ptab->set_tab("matchmaking",::matchmaking::PaneViewHelloMultiverse);
+//            pevent->m_ptab->set_tab("switcher",::matchmaking::PaneViewHelloMultiverseSwitcher);
+//            pevent->m_ptab->set_tab("Font",::matchmaking::PaneViewFontSel);
 //#if 1
 //            pevent->m_ptab->set_tab("Open","file_manager");
 //#endif
 //
-//            //set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher);
-//            pevent->m_ptab->set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverse);
+//            //set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverseSwitcher);
+//            pevent->m_ptab->set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverse);
 //
 //         }
 //
@@ -623,7 +623,7 @@ namespace hellomultiverse
 //            pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 //
 //         }
-//         else if(pevent->m_puie->m_id == "hellomultiverse_toggle")
+//         else if(pevent->m_puie->m_id == "matchmaking_toggle")
 //         {
 //
 //            if(m_pviewMain->m_prender->m_bLite && !Application.m_bLoadAiFont)
@@ -652,7 +652,7 @@ namespace hellomultiverse
 //
 //            pevent->m_puie->_001GetText(strText);
 //
-//            if(pevent->m_puie->m_id == "hellomultiverse_edit")
+//            if(pevent->m_puie->m_id == "matchmaking_edit")
 //            {
 //
 //               if(m_pviewMain != NULL)
@@ -883,25 +883,25 @@ namespace hellomultiverse
 //         string strId = ptabview->get_view_id();
 //         stringa stra;
 //         stra.explode("->:<-",strId);
-//         if(ptabview->get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse
-//            || ptabview->get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher
-//            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverse))
-//            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverseSwitcher)))
+//         if(ptabview->get_view_id() == ::matchmaking::PaneViewHelloMultiverse
+//            || ptabview->get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher
+//            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverse))
+//            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverseSwitcher)))
 //         {
-//            if(ptabview->get_pane_by_id(::hellomultiverse::PaneViewMenu) != NULL && ptabview->get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder != NULL)
+//            if(ptabview->get_pane_by_id(::matchmaking::PaneViewMenu) != NULL && ptabview->get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder != NULL)
 //            {
-//               ptabview->get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
+//               ptabview->get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
 //            }
 //            if(ptabview->get_pane_by_id("file_manager") != NULL && ptabview->get_pane_by_id("file_manager")->m_pholder != NULL)
 //            {
 //               ptabview->get_pane_by_id("file_manager")->m_pholder->ShowWindow(SW_HIDE);
 //            }
-//            if(ptabview->get_pane_by_id(::hellomultiverse::PaneViewFontSel) != NULL && ptabview->get_pane_by_id(::hellomultiverse::PaneViewFontSel)->m_pholder != NULL)
+//            if(ptabview->get_pane_by_id(::matchmaking::PaneViewFontSel) != NULL && ptabview->get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder != NULL)
 //            {
-//               ptabview->get_pane_by_id(::hellomultiverse::PaneViewFontSel)->m_pholder->ShowWindow(SW_HIDE);
+//               ptabview->get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder->ShowWindow(SW_HIDE);
 //            }
 //         }
-//         else if(ptabview->get_view_id() == ::hellomultiverse::PaneViewMenu)
+//         else if(ptabview->get_view_id() == ::matchmaking::PaneViewMenu)
 //         {
 //
 //            if(m_pviewLast != NULL)
@@ -917,19 +917,19 @@ namespace hellomultiverse
 //
 //         }
 //
-//         if(ptabview->get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse)
+//         if(ptabview->get_view_id() == ::matchmaking::PaneViewHelloMultiverse)
 //         {
 //
 //            m_pviewLast = m_pviewMain;
 //
 //         }
-//         else if(ptabview->get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher)
+//         else if(ptabview->get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher)
 //         {
 //
 //            m_pviewLast = m_pviewSwitcher;
 //
 //         }
-//         //else if(ptabview->get_view_id() != ::hellomultiverse::PaneViewFontSel)
+//         //else if(ptabview->get_view_id() != ::matchmaking::PaneViewFontSel)
 //         //{
 //         //
 //         //   m_pviewLast = NULL;
@@ -961,16 +961,16 @@ namespace hellomultiverse
 
    }
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 
 
 extern "C"
-::aura::library * app_core_hellomultiverse_get_new_library(::aura::application * papp)
+::aura::library * game_matchmaking_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::hellomultiverse::application >(papp, "app-core");
+   return new ::aura::single_application_library < ::matchmaking::application >(papp, "game");
 
 }
 

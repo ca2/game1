@@ -10,108 +10,78 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hellomultiverse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="framework.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_document.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_frame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_pane_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_pane_view_update_hint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include=".\hellomultiverse_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_main_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_edit_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_toggle_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_top_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_switcher_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hellomultiverse_render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="user_font_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hellomultiverse_font_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include=".\matchmaking_application.cpp" />
+    <ClCompile Include=".\matchmaking_document.cpp" />
+    <ClCompile Include=".\matchmaking_frame.cpp" />
+    <ClCompile Include="matchmaking.cpp" />
+    <ClCompile Include=".\matchmaking_pane_view.cpp" />
+    <ClCompile Include=".\matchmaking_pane_view_update_hint.cpp" />
+    <ClCompile Include=".\matchmaking_view.cpp" />
+    <ClCompile Include="matchmaking_edit_view.cpp" />
+    <ClCompile Include="matchmaking_font_view.cpp" />
+    <ClCompile Include="matchmaking_main_view.cpp" />
+    <ClCompile Include="matchmaking_render.cpp" />
+    <ClCompile Include="matchmaking_switcher_view.cpp" />
+    <ClCompile Include="matchmaking_toggle_view.cpp" />
+    <ClCompile Include="matchmaking_top_view.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hellomultiverse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_document.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_frame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_pane_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_pane_view_update_hint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_main_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_edit_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_toggle_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_top_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_switcher_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hellomultiverse_render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="user_font_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hellomultiverse_font_view.h">
+    <ClInclude Include="matchmaking_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_edit_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_font_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_main_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_switcher_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_toggle_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_top_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_hellomultiverse.def">
-      <Filter>Source Files</Filter>
-    </None>
+    <None Include="game_matchmaking.def" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -99,7 +99,7 @@ namespace hellomultiverse
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
          }
-         //else if(pevent->m_puie->m_id == "hellomultiverse_toggle")
+         //else if(pevent->m_puie->m_id == "matchmaking_toggle")
          //{
 
          //   if(m_pview->m_prender->m_bLite && !Application.m_bLoadAiFont)
@@ -149,7 +149,7 @@ namespace hellomultiverse
 
    }
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

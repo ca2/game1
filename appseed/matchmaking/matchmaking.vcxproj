@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C7AFCEFA-3079-4B23-8F97-4543BB980265}</ProjectGuid>
-    <RootNamespace>app_core_hellomultiverse</RootNamespace>
+    <RootNamespace>game_matchmaking</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_hellomultiverse</ProjectName>
+    <ProjectName>game_matchmaking</ProjectName>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -112,7 +112,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_CORE_MATCHMAKING_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -205,7 +205,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_CORE_MATCHMAKING_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -312,7 +312,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_CORE_MATCHMAKING_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -397,7 +397,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_APP_CORE_MATCHMAKING_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -483,48 +483,48 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include=".\hellomultiverse_application.cpp" />
-    <ClCompile Include=".\hellomultiverse_document.cpp" />
-    <ClCompile Include=".\hellomultiverse_frame.cpp" />
-    <ClCompile Include="hellomultiverse.cpp" />
-    <ClCompile Include=".\hellomultiverse_pane_view.cpp" />
-    <ClCompile Include=".\hellomultiverse_pane_view_update_hint.cpp" />
+    <ClCompile Include=".\matchmaking_application.cpp" />
+    <ClCompile Include=".\matchmaking_document.cpp" />
+    <ClCompile Include=".\matchmaking_frame.cpp" />
+    <ClCompile Include="matchmaking.cpp" />
+    <ClCompile Include=".\matchmaking_pane_view.cpp" />
+    <ClCompile Include=".\matchmaking_pane_view_update_hint.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include=".\hellomultiverse_view.cpp" />
-    <ClCompile Include="hellomultiverse_edit_view.cpp" />
-    <ClCompile Include="hellomultiverse_font_view.cpp" />
-    <ClCompile Include="hellomultiverse_main_view.cpp" />
-    <ClCompile Include="hellomultiverse_render.cpp" />
-    <ClCompile Include="hellomultiverse_switcher_view.cpp" />
-    <ClCompile Include="hellomultiverse_toggle_view.cpp" />
-    <ClCompile Include="hellomultiverse_top_view.cpp" />
+    <ClCompile Include=".\matchmaking_view.cpp" />
+    <ClCompile Include="matchmaking_edit_view.cpp" />
+    <ClCompile Include="matchmaking_font_view.cpp" />
+    <ClCompile Include="matchmaking_main_view.cpp" />
+    <ClCompile Include="matchmaking_render.cpp" />
+    <ClCompile Include="matchmaking_switcher_view.cpp" />
+    <ClCompile Include="matchmaking_toggle_view.cpp" />
+    <ClCompile Include="matchmaking_top_view.cpp" />
     <ClCompile Include="user_font_list.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hellomultiverse_application.h" />
-    <ClInclude Include="hellomultiverse_document.h" />
-    <ClInclude Include="hellomultiverse_edit_view.h" />
-    <ClInclude Include="hellomultiverse_font_view.h" />
-    <ClInclude Include="hellomultiverse_frame.h" />
-    <ClInclude Include="hellomultiverse.h" />
-    <ClInclude Include="hellomultiverse_main_view.h" />
-    <ClInclude Include="hellomultiverse_pane_view.h" />
-    <ClInclude Include="hellomultiverse_pane_view_update_hint.h" />
+    <ClInclude Include="matchmaking_application.h" />
+    <ClInclude Include="matchmaking_document.h" />
+    <ClInclude Include="matchmaking_edit_view.h" />
+    <ClInclude Include="matchmaking_font_view.h" />
+    <ClInclude Include="matchmaking_frame.h" />
+    <ClInclude Include="matchmaking.h" />
+    <ClInclude Include="matchmaking_main_view.h" />
+    <ClInclude Include="matchmaking_pane_view.h" />
+    <ClInclude Include="matchmaking_pane_view_update_hint.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="hellomultiverse_render.h" />
-    <ClInclude Include="hellomultiverse_switcher_view.h" />
-    <ClInclude Include="hellomultiverse_toggle_view.h" />
-    <ClInclude Include="hellomultiverse_top_view.h" />
-    <ClInclude Include="hellomultiverse_view.h" />
+    <ClInclude Include="matchmaking_render.h" />
+    <ClInclude Include="matchmaking_switcher_view.h" />
+    <ClInclude Include="matchmaking_toggle_view.h" />
+    <ClInclude Include="matchmaking_top_view.h" />
+    <ClInclude Include="matchmaking_view.h" />
     <ClInclude Include="user_font_list.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_hellomultiverse.def" />
+    <None Include="game_matchmaking.def" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\app\appseed\aura\aura.vcxproj">

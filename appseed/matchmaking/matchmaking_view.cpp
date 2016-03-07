@@ -5,7 +5,7 @@
 //extern CLASS_DECL_AXIS thread_int_ptr < DWORD_PTR > t_time1;
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -263,7 +263,7 @@ namespace hellomultiverse
 
             synch_lock slText(&m_mutexText);
 
-            string strHelloMultiverse = get_processed_hellomultiverse();
+            string strHelloMultiverse = get_processed_matchmaking();
 
             if(m_prender->m_bNewLayout)
             {
@@ -355,7 +355,7 @@ namespace hellomultiverse
 
                synch_lock slText(&m_mutexText);
 
-               hellomultiverse_fast_render(get_processed_hellomultiverse());
+               matchmaking_fast_render(get_processed_matchmaking());
 
             }
 
@@ -462,10 +462,10 @@ namespace hellomultiverse
 
          synch_lock sl(&m_mutexText);
 
-         if(get_processed_hellomultiverse() != m_prender->m_strHelloMultiverse)
+         if(get_processed_matchmaking() != m_prender->m_strHelloMultiverse)
          {
 
-            m_prender->m_strHelloMultiverse = get_processed_hellomultiverse().c_str(); // rationale : string allocation fork *for multithreading*
+            m_prender->m_strHelloMultiverse = get_processed_matchmaking().c_str(); // rationale : string allocation fork *for multithreading*
 
             sl.unlock();
 
@@ -495,7 +495,7 @@ namespace hellomultiverse
       }
 
       if(m_prender->m_bImageEnable && m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
-      //if(m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
+         //if(m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
       {
 
          //m_bFirstDone = true;
@@ -508,9 +508,9 @@ namespace hellomultiverse
          m_dibPost->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
 
          m_dibPost->get_graphics()->StretchBlt(rectImage.left,rectImage.top,rectImage.width(),rectImage.height(),
-         m_prender->m_dibImage->get_graphics(),0,0,
-         m_prender->m_dibImage->get_size().cx,
-         m_prender->m_dibImage->get_size().cy,SRCCOPY);
+                                               m_prender->m_dibImage->get_graphics(),0,0,
+                                               m_prender->m_dibImage->get_size().cx,
+                                               m_prender->m_dibImage->get_size().cy,SRCCOPY);
 
 
       }
@@ -560,7 +560,7 @@ namespace hellomultiverse
 
    }
 
-   void view::hellomultiverse_fast_render(const string & strHelloMultiverse)
+   void view::matchmaking_fast_render(const string & strHelloMultiverse)
    {
 
       if(m_prender->m_cx <= 0 || m_prender->m_cy <= 0)
@@ -759,12 +759,12 @@ namespace hellomultiverse
    }
 
 
-   string view::get_processed_hellomultiverse()
+   string view::get_processed_matchmaking()
    {
 
       synch_lock slText(&m_mutexText);
 
-      string str = get_hellomultiverse();
+      string str = get_matchmaking();
 
       int c = m_ppcreutil->matches(str);
 
@@ -869,7 +869,7 @@ namespace hellomultiverse
    }
 
 
-   string view::get_hellomultiverse()
+   string view::get_matchmaking()
    {
 
       synch_lock sl(&m_mutexText);
@@ -926,7 +926,7 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

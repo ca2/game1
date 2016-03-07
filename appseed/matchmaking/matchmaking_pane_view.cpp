@@ -1,7 +1,7 @@
 #include "framework.h"
 #include <math.h>
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
    pane_view::pane_view(::aura::application * papp) :
@@ -54,16 +54,16 @@ namespace hellomultiverse
       if(pobj->previous())
          return;
 
-      set_tab("Menu",::hellomultiverse::PaneViewMenu);
-      set_tab("hellomultiverse", ::hellomultiverse::PaneViewHelloMultiverse);
-      set_tab("switcher",::hellomultiverse::PaneViewHelloMultiverseSwitcher);
-      set_tab("Font",::hellomultiverse::PaneViewFontSel);
+      set_tab("Login",::matchmaking::PaneViewMenu);
+      set_tab("matchmaking", ::matchmaking::PaneViewHelloMultiverse);
+      set_tab("switcher",::matchmaking::PaneViewHelloMultiverseSwitcher);
+      set_tab("Font",::matchmaking::PaneViewFontSel);
 #if 1
       set_tab("Open", "file_manager");
 #endif
 
-      //set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher);
-      set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverse);
+      //set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverseSwitcher);
+      set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverse);
 
    }
 
@@ -73,16 +73,16 @@ namespace hellomultiverse
       string strId = get_view_id();
       stringa stra;
       stra.explode("->:<-",strId);
-      if(get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse
-            || get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher
-            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverse))
-            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverseSwitcher)))
+      if(get_view_id() == ::matchmaking::PaneViewHelloMultiverse
+            || get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher
+            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverse))
+            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverseSwitcher)))
       {
 
-         if(get_pane_by_id(::hellomultiverse::PaneViewMenu) != NULL && get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder != NULL)
+         if(get_pane_by_id(::matchmaking::PaneViewMenu) != NULL && get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder != NULL)
          {
 
-            get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
+            get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
 
          }
 
@@ -93,42 +93,46 @@ namespace hellomultiverse
 
          }
 
-         if(get_pane_by_id(::hellomultiverse::PaneViewFontSel) != NULL && get_pane_by_id(::hellomultiverse::PaneViewFontSel)->m_pholder != NULL)
+         if(get_pane_by_id(::matchmaking::PaneViewFontSel) != NULL && get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder != NULL)
          {
 
-            get_pane_by_id(::hellomultiverse::PaneViewFontSel)->m_pholder->ShowWindow(SW_HIDE);
+            get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder->ShowWindow(SW_HIDE);
 
          }
 
-         if(get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse)
+         if(get_view_id() == ::matchmaking::PaneViewHelloMultiverse)
          {
 
-            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("hellomultiverse_view"));
+            ::property_set set;
+
+            Application.http().get("https://api.ca2.cc/account/get_string?key=test", set);
+
+            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::matchmaking::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("matchmaking_view"));
 
          }
-         else if (get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher)
+         else if (get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher)
          {
 
-            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher)->m_pholder->get_child_by_id("hellomultiverse_view"));
+            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::matchmaking::PaneViewHelloMultiverseSwitcher)->m_pholder->get_child_by_id("matchmaking_view"));
 
          }
 
 
       }
-      else if(get_view_id() == ::hellomultiverse::PaneViewMenu)
+      else if(get_view_id() == ::matchmaking::PaneViewMenu)
       {
 
          string str;
 
-         m_pviewLast->data_get("cur_fps_text",str);
+         //m_pviewLast->data_get("cur_fps_text",str);
 
-         m_prollfps->_001SetText(str, ::action::source_database);
+         //m_prollfps->_001SetText(str, ::action::source_database);
 
       }
-      else if(get_view_id() == ::hellomultiverse::PaneViewFontSel)
+      else if(get_view_id() == ::matchmaking::PaneViewFontSel)
       {
 
-         sp(::user::font_list_view) pfontview = get_pane_by_id(::hellomultiverse::PaneViewFontSel)->m_pholder->get_child_by_id("font_list_view");
+         sp(::user::font_list_view) pfontview = get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder->get_child_by_id("font_list_view");
 
          if(m_pviewLast != NULL && pfontview.is_set())
          {
@@ -151,7 +155,7 @@ namespace hellomultiverse
          {
             m_pdocMenu = Session.userex()->create_child_form(this,pcreatordata->m_pholder);
 
-            m_pdocMenu->open_document("matter://menu.html");
+            m_pdocMenu->open_document("matter://login.html");
 
             sp(::user::impact) pview = m_pdocMenu->get_view();
 
@@ -337,4 +341,4 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking

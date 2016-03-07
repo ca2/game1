@@ -1,13 +1,13 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE application :
+   class CLASS_DECL_APP_CORE_MATCHMAKING application :
       virtual public ::core::application
-      //,virtual public ::html::application
+   //,virtual public ::html::application
    {
    public:
 
@@ -87,7 +87,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

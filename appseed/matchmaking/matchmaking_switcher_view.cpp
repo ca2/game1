@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -11,9 +11,9 @@ namespace hellomultiverse
       ::user::split_view(papp),
       place_holder_container(papp)
    {
-      
+
       m_pview = NULL;
-      
+
       m_ptopview = NULL;
 
    }
@@ -72,7 +72,7 @@ namespace hellomultiverse
 
       //SetPane(0,m_ptopview,false);
 
-      m_pview = create_view < view >(NULL,::null_rect(),get_pane_holder(1),"hellomultiverse_view");
+      m_pview = create_view < view >(NULL,::null_rect(),get_pane_holder(1),"matchmaking_view");
 
       m_pview->m_prender->m_bAlternate = true;
 
@@ -107,7 +107,7 @@ namespace hellomultiverse
             pview->m_prender->m_bLite = !pview->m_prender->m_bLite;
 
          }
-         else if(pevent->m_puie->m_id == "hellomultiverse_toggle")
+         else if(pevent->m_puie->m_id == "matchmaking_toggle")
          {
 
             if(m_pview->m_prender->m_bLite && !Application.m_bLoadAiFont)
@@ -131,7 +131,7 @@ namespace hellomultiverse
 
    }
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

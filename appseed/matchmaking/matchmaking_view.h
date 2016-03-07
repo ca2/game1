@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE view :
+   class CLASS_DECL_APP_CORE_MATCHMAKING view :
       virtual public ::user::impact
    {
    public:
@@ -23,7 +23,7 @@ namespace hellomultiverse
          effect_crt,
 
       };
-      
+
       string m_strNewFont;
       string m_strFont;
       e_effect                m_eeffect;
@@ -61,14 +61,14 @@ namespace hellomultiverse
       render *                m_prender;
 
       manual_reset_event *    m_pevRenderEnd;
-      
+
 
 
       view(::aura::application * papp);
-	   virtual ~view();
+      virtual ~view();
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
 
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
@@ -83,7 +83,7 @@ namespace hellomultiverse
 
       ::user::document * get_document();
 
-      virtual void hellomultiverse_fast_render(const string & strHelloMultiverse);
+      virtual void matchmaking_fast_render(const string & strHelloMultiverse);
 
 
       virtual void layout();
@@ -92,9 +92,9 @@ namespace hellomultiverse
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnDestroy);
 
-      virtual string get_hellomultiverse();
+      virtual string get_matchmaking();
 
-      virtual string get_processed_hellomultiverse();
+      virtual string get_processed_matchmaking();
 
       virtual bool in_anime();
 
@@ -110,7 +110,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

@@ -1,0 +1,8 @@
+; app_matchmaking.def
+
+LIBRARY  "game_matchmaking"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_matchmaking_get_new_library
+

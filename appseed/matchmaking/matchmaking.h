@@ -12,10 +12,10 @@
 //#include FT_FREETYPE_H
 
 
-#ifdef _APP_CORE_HELLOMULTIVERSE_LIBRARY
-    #define CLASS_DECL_APP_CORE_HELLOMULTIVERSE  CLASS_DECL_EXPORT
+#ifdef _APP_CORE_MATCHMAKING_LIBRARY
+   #define CLASS_DECL_APP_CORE_MATCHMAKING  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_APP_CORE_HELLOMULTIVERSE  CLASS_DECL_IMPORT
+   #define CLASS_DECL_APP_CORE_MATCHMAKING  CLASS_DECL_IMPORT
 #endif
 
 
@@ -29,7 +29,7 @@ namespace user
 } // namespace user
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
    class application;
@@ -43,26 +43,26 @@ namespace hellomultiverse
 
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::hellomultiverse::application > ())
+#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::matchmaking::application > ())
 
 
 #include "user_font_list.h"
 
-#include "hellomultiverse_render.h"
+#include "matchmaking_render.h"
 
-#include "hellomultiverse_document.h"
-#include "hellomultiverse_font_view.h"
-#include "hellomultiverse_edit_view.h"
-#include "hellomultiverse_toggle_view.h"
-#include "hellomultiverse_top_view.h"
-#include "hellomultiverse_view.h"
-//#include "hellomultiverse_lite_view.h"
-//#include "hellomultiverse_full_view.h"
-#include "hellomultiverse_main_view.h"
-#include "hellomultiverse_switcher_view.h"
-#include "hellomultiverse_frame.h"
-#include "hellomultiverse_pane_view_update_hint.h"
-#include "hellomultiverse_pane_view.h"
+#include "matchmaking_document.h"
+#include "matchmaking_font_view.h"
+#include "matchmaking_edit_view.h"
+#include "matchmaking_toggle_view.h"
+#include "matchmaking_top_view.h"
+#include "matchmaking_view.h"
+//#include "matchmaking_lite_view.h"
+//#include "matchmaking_full_view.h"
+#include "matchmaking_main_view.h"
+#include "matchmaking_switcher_view.h"
+#include "matchmaking_frame.h"
+#include "matchmaking_pane_view_update_hint.h"
+#include "matchmaking_pane_view.h"
 
-#include "hellomultiverse_application.h"
+#include "matchmaking_application.h"
 

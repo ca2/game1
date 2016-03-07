@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -35,7 +35,7 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 

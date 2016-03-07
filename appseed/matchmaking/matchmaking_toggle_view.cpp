@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace hellomultiverse
+namespace matchmaking
 {
 
 
@@ -10,7 +10,7 @@ namespace hellomultiverse
       ::user::interaction(papp),
       ::user::button(papp)
    {
-      
+
       m_ptopview = NULL;
 
    }
@@ -39,13 +39,13 @@ namespace hellomultiverse
 
    bool toggle_view::keyboard_focus_is_focusable()
    {
-      
+
       return ::user::button::keyboard_focus_is_focusable() ;
-      
+
    }
 
 
-} // namespace hellomultiverse
+} // namespace matchmaking
 
 
 
