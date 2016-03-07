@@ -103,9 +103,9 @@ namespace matchmaking
          if(get_view_id() == ::matchmaking::PaneViewHelloMultiverse)
          {
 
-            ::property_set set;
+            //::property_set set;
 
-            Application.http().get("https://api.ca2.cc/account/get_string?key=test", set);
+            //Application.http().get("https://api.ca2.cc/account/get_string?key=test", set);
 
             m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::matchmaking::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("matchmaking_view"));
 

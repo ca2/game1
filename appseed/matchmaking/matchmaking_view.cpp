@@ -452,113 +452,46 @@ namespace matchmaking
 
    }
 
+
    void view::_001OnDraw(::draw2d::dib * pdib)
    {
-      uint64_t startTime = get_nanos();
 
+      ::draw2d::graphics * pdc = pdib->get_graphics();
 
-      if(m_prender != NULL)
-      {
-
-         synch_lock sl(&m_mutexText);
-
-         if(get_processed_matchmaking() != m_prender->m_strHelloMultiverse)
-         {
-
-            m_prender->m_strHelloMultiverse = get_processed_matchmaking().c_str(); // rationale : string allocation fork *for multithreading*
-
-            sl.unlock();
-
-            _001OnLayout(NULL);
-
-         }
-
-      }
-
-      ::rect rectClient;
+      rect rectClient;
 
       GetClientRect(rectClient);
 
-      if(rectClient.area() <= 0)
-         return;
+      pdc->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
 
-      m_dibPost->create(rectClient.size());
+      ::draw2d::dib * pdib1 = get_map("de_dust2");
 
-      m_dibPost->Fill(00,00,00,00);
-
-      if (m_dibBk.is_set() && m_dibBk->area() > 0)
-      {
-         m_dibPost->get_graphics()->BitBlt(
-            0, 0, MIN(rectClient.width(), m_dibBk->m_size.cx),
-            MIN(rectClient.height(), m_dibBk->m_size.cy),
-            m_dibBk->get_graphics());
-      }
-
-      if(m_prender->m_bImageEnable && m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
-         //if(m_prender->m_dibImage.is_set() && m_prender->m_dibImage->area() > 0)
-      {
-
-         //m_bFirstDone = true;
-
-         ::rect rectWork(0,0,m_prender->m_dibWork->get_size().cx,m_prender->m_dibWork->get_size().cy);
-         ::rect rectImage(0,0,m_prender->m_dibImage->get_size().cx,m_prender->m_dibImage->get_size().cy);
-
-         rectImage.FitOnCenterOf(rectWork);
-
-         m_dibPost->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
-
-         m_dibPost->get_graphics()->StretchBlt(rectImage.left,rectImage.top,rectImage.width(),rectImage.height(),
-                                               m_prender->m_dibImage->get_graphics(),0,0,
-                                               m_prender->m_dibImage->get_size().cx,
-                                               m_prender->m_dibImage->get_size().cy,SRCCOPY);
-
-
-      }
-
-      ::draw2d::graphics * pdc = m_dibPost->get_graphics();
-
-      _001OnHelloDraw(m_dibPost);
-
-      m_dibTime->create(m_dibPost->get_size());
-
-      m_dibTime->Fill(0, 0, 0, 0);
-
-
-      DWORD xOffset;
-
-      xOffset = m_dibTime->m_size.cx * m_dFps * (double)(::get_tick_count() - m_dwRoll) / 1000.0; // x = v.t; f=fps  1920 * 1FPS * t
-
-      xOffset %= m_dibTime->m_size.cx;
-
-      m_dibTime->from(point(xOffset,0), m_dibPost, ::null_point(), ::size(m_dibPost->m_size.cx - xOffset,m_dibPost->m_size.cy));
-      m_dibTime->from(null_point(),m_dibPost,point(m_dibPost->m_size.cx - xOffset,0), size(xOffset, m_dibPost->m_size.cy));
-
-      //m_dibPost->from(m_dibTime);
-      _001OnPostProcess(m_dibTime);
-
-      ::draw2d::graphics * pdcParam = pdib->get_graphics();
-
-      pdcParam->set_alpha_mode(::draw2d::alpha_mode_blend);
-
-//      m_dibPost->get_graphics()->FillSolidRect(110,110,100,100,ARGB(184,177,184,60));
-
-      pdcParam->from(m_dibTime->get_size(), m_dibTime->get_graphics(), SRCCOPY);
-
-      //pdcScreen->FillSolidRect(10,10,100,100,ARGB(184,49,184,60));
-
-      //pdcScreen->Draw3dRect(200,200,100,100,ARGB(255,0,255,0),ARGB(255,0,0,255));
-      uint64_t endTime = get_nanos();
-
-      uint64_t micros = (endTime - startTime) / 1000;
-
-      //char sz[512];
-
-      //::OutputDebugString("view:");
-      //::ultoa_dup(sz, micros, 10);
-      //::OutputDebugString(sz);
-      //::OutputDebugString(", ");
+      pdc->BitBlt(100, 100, pdib1->size().cx, pdib1->size().cy,
+                  pdib1->get_graphics(),
+                  0, 0, SRCCOPY);
 
    }
+
+   ::draw2d::dib * view::get_map(string str)
+   {
+
+      if (m_map[str].is_null())
+      {
+
+         m_map[str].alloc(allocer());
+
+         visual::dib_sp d(allocer());
+
+         d.load_from_matter("map/" + str + ".png");
+
+         m_map[str]->from(d);
+
+      }
+
+      return m_map[str];
+
+   }
+
 
    void view::matchmaking_fast_render(const string & strHelloMultiverse)
    {

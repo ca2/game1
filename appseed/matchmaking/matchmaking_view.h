@@ -13,6 +13,8 @@ namespace matchmaking
       double m_dFps;
       DWORD m_dwRoll;
 
+      string_map < ::draw2d::dib_sp >       m_map;
+
       sp(pcre_util) m_ppcreutil;
 
 
@@ -106,6 +108,8 @@ namespace matchmaking
       {
          return ::object::dec_ref();
       }
+
+      ::draw2d::dib * get_map(string str);
 
    };
 
