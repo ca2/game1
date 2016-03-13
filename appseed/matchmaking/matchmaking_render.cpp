@@ -132,13 +132,6 @@ namespace matchmaking
 
                m_dibWork->create(sizeNew);
 
-               m_dibWork->m_iHeight = m_cy;
-
-               //m_dibWork->Fill(0,0,0,0);
-
-               //m_dibFast->create(sizeNew);
-
-               //m_dibFast->Fill(0,0,0,0);
 
             }
 
@@ -150,23 +143,7 @@ namespace matchmaking
 
             m_dib1->create(sizeNew);
 
-            m_dib1->m_iHeight = m_cy;
-
-            //m_dib1->Fill(0,0,0,0);
-
             m_dib2->create(sizeNew);
-
-            m_dib2->m_iHeight = m_cy;
-
-            //m_dib2->Fill(0,0,0,0);
-
-         }
-         {
-
-            //            DWORD dwTime2 = ::get_tick_count();
-
-            //TRACE("message_handler call time0= %d ms",dwTime2 - t_time1.operator DWORD_PTR());
-            //TRACE("hello_view::lyot call timeB= %d ms",dwTime2 - t_time1.operator DWORD_PTR());
 
          }
 
@@ -439,8 +416,6 @@ namespace matchmaking
             //          m_dib->get_graphics()->FillSolidRect(300,300,100,100,ARGB(128,128,255,255));
 
             m_dibTemplate->create(m_dib->m_size);
-
-            m_dibTemplate->m_iHeight = m_dib->m_iHeight;
 
             m_dibTemplate->Fill(0,0,0,0);
 

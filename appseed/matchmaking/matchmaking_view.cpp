@@ -802,18 +802,9 @@ namespace matchmaking
 
       synch_lock slDraw(&m_prender->m_mutexDraw);
 
-      ::size sizeNew = ::size(m_prender->m_cx,m_prender->m_cy) + ::size(100,100);
+      ::size sizeNew = ::size(m_prender->m_cx,m_prender->m_cy);
 
-      bool bNewSize = m_dibFast->m_size.cx < sizeNew.cx || m_dibFast->m_size.cy < sizeNew.cy;
-
-      if(bNewSize)
-      {
-
-         m_dibFast->create(sizeNew);
-
-      }
-
-      m_dibFast->m_iHeight = m_prender->m_cy;
+      m_dibFast->create(sizeNew);
 
       m_dibFast->Fill(0,0,0,0);
 
