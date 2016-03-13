@@ -2,7 +2,7 @@
 
 
 #include "app-core/appseed/hellomultiverse/hellomultiverse.h"
-#include "app/appseed/html/html/html.h"
+#include "core/user/html/html/html.h"
 #include "app-core/appseed/multimedia/multimedia/multimedia.h"
 
 

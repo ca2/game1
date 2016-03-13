@@ -18,14 +18,14 @@ namespace pacman
       m_bNonStopOnEof =true;
 
       
+      if (!initialize_wave_player(::multimedia::audio::purpose_playground))
+      {
 
-
-      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
-
-      if(!m_pwaveplayer->begin_synch())
          return;
 
-      get_wave_player()->m_listenerptra.add(this);
+      }
+
+      get_wave_player()->add_listener(this);
 
       m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
 
@@ -86,7 +86,7 @@ namespace pacman
          if(m_pdecoderplugin == NULL)
             return NULL;
 
-         ::multimedia::audio_decode::decoder * pdecoderFile = m_pdecoderplugin->NewDecoder();
+         sp(::multimedia::audio_decode::decoder) pdecoderFile = m_pdecoderplugin->NewDecoder();
 
          string str(psz);
 

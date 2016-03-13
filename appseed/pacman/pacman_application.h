@@ -14,7 +14,6 @@ namespace pacman
 
    class CLASS_DECL_APP_CORE_PACMAN application :
       virtual public ::hellomultiverse::application,
-      virtual public ::html::application,
       virtual public ::multimedia::application
    {
    public:

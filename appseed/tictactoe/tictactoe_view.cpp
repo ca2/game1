@@ -148,8 +148,10 @@ namespace tictactoe
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdib)
+   void view::_001OnDraw(::draw2d::dib * pdibParam)
    {
+
+      ::draw2d::graphics * pdc = pdibParam->get_graphics();
 
       ::draw2d::dib * pdib = NULL;
 
@@ -211,6 +213,8 @@ namespace tictactoe
    void view::tictactoe_render(::draw2d::dib * pdib)
    {
 
+      ::draw2d::graphics * pdc = pdib->get_graphics();
+
       if(m_dib->area() <= 0)
          return;
 
@@ -230,7 +234,7 @@ namespace tictactoe
       rectClient.left = 0;
       rectClient.top = 0;
       rectClient.right = m_dib->m_size.cx;
-      rectClient.bottom = m_dib->m_iHeight;
+      rectClient.bottom = m_dib->m_size.cy;
 
       int32_t iCount = 20;
 
@@ -610,7 +614,7 @@ namespace tictactoe
 
          pdib->Fill(1,255,255,255);
 
-         tictactoe_render(pdib->get_graphics());
+         tictactoe_render(pdib);
 
       }
 
@@ -750,7 +754,7 @@ namespace tictactoe
          if(!m_dib.initialize(rectClient.width(),rectClient.height(),5))
             return;
 
-         m_dib->m_iHeight = rectClient.height(); // 1 x 1 and not 0 x 0 : good!!
+         //m_dib->m_iHeight = rectClient.height(); // 1 x 1 and not 0 x 0 : good!!
 
          m_dib->Fill(0,0,0,0);
 

@@ -6,8 +6,7 @@ namespace tetris
 
 
    class CLASS_DECL_GAME_TETRIS application :
-      virtual public ::hellomultiverse::application,
-      virtual public ::html::application
+      virtual public ::hellomultiverse::application
    {
    public:
       

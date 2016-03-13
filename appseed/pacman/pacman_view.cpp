@@ -117,8 +117,10 @@ namespace pacman
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdib)
+   void view::_001OnDraw(::draw2d::dib * pdibParam)
    {
+
+      ::draw2d::graphics * pdc = pdibParam->get_graphics();
 
       ::rect rectClient;
 
