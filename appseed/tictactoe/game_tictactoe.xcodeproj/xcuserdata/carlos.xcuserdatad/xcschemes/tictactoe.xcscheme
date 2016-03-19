@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A5752B116AAE1D2000CC4EF"
-            BuildableName = "app.app"
+            BlueprintIdentifier = "07FDD48E1C9CEA6A00DB2A99"
+            BuildableName = "app"
             BlueprintName = "app"
             ReferencedContainer = "container:../../../nodeapp/appseed/app/app.xcodeproj">
          </BuildableReference>
@@ -55,8 +55,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A5752B116AAE1D2000CC4EF"
-            BuildableName = "app.app"
+            BlueprintIdentifier = "07FDD48E1C9CEA6A00DB2A99"
+            BuildableName = "app"
             BlueprintName = "app"
             ReferencedContainer = "container:../../../nodeapp/appseed/app/app.xcodeproj">
          </BuildableReference>
