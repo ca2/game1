@@ -336,6 +336,9 @@ namespace matchmaking
 
       Session.get_cursor_pos(&ptCursor);
 
+      pdc->set_text_color(ARGB(255, 255, 255, 255));
+
+      pdc->TextOut(100, 20, "User: " + Application.get_steam_user_name());
 
       int starty = 100;
       int x = 100;
@@ -665,7 +668,10 @@ namespace matchmaking
 
    void view::_001OnDraw(::draw2d::dib * pdib)
    {
+      
       uint64_t startTime = get_nanos();
+
+
 
 
       //if (m_prender != NULL)
@@ -727,6 +733,8 @@ namespace matchmaking
       }
 
       ::draw2d::graphics * pdc = m_dibPost->get_graphics();
+
+
 
       _001OnHelloDraw(m_dibPost);
 

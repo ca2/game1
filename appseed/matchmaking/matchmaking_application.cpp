@@ -961,6 +961,68 @@ namespace matchmaking
 
    }
 
+
+   string application::get_steam_user_name()
+   {
+      
+      if (m_strSteamUserName.is_empty())
+      {
+
+         defer_update_steam_info();
+
+      }
+
+      return m_strSteamUserName;
+
+   }
+
+   string application::get_steam_id()
+   {
+
+      if (m_strSteamUserName.is_empty())
+      {
+
+         defer_update_steam_info();
+
+      }
+
+      return m_strSteamUserName;
+
+   }
+
+
+   void application::defer_update_steam_info()
+   {
+
+      if (m_bLoginSteam)
+         return;
+
+      m_bLoginSteam = true;
+      ::fork(this, [=]()
+      {
+         property_set set;
+
+         string str = Application.http().get("https://api.ca2.cc/steam/get_user_name_and_id", set);
+
+         stringa stra;
+
+         stra.add_lines(str);
+
+         if (stra.get_size() == 4 && stra[0] == "OK" && stra[3] == "OK")
+         {
+
+            m_strSteamUserName = stra[1];
+
+            m_strSteamId = stra[2];
+
+         }
+
+         m_bLoginSteam = false;
+
+      });
+
+   }
+
 } // namespace matchmaking
 
 

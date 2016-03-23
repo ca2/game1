@@ -20,6 +20,10 @@ namespace matchmaking
 
       };
 
+      string                                 m_strSteamUserName;
+      string                                 m_strSteamId;
+      bool                                   m_bLoginSteam;
+
       e_type                                 m_etype;
       string                                 m_strHelloMultiverse;
       string                                 m_strHelloMultiverseDefault;
@@ -83,6 +87,11 @@ namespace matchmaking
 
       virtual int64_t add_ref();
       virtual int64_t dec_ref();
+
+      string get_steam_user_name();
+      string get_steam_id();
+
+      void defer_update_steam_info();
 
    };
 
