@@ -336,9 +336,24 @@ namespace matchmaking
 
       Session.get_cursor_pos(&ptCursor);
 
+      pdc->selectFont(m_font);
+
+      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+
+      pdc->set_text_rendering(::draw2d::text_rendering_anti_alias_grid_fit);
+
       pdc->set_text_color(ARGB(255, 255, 255, 255));
 
-      pdc->TextOut(100, 20, "User: " + Application.get_steam_user_name());
+      string str = "User: " + Application.get_steam_user_name();
+
+
+
+      if (str.get_length() < 20)
+      {
+         TRACE("x");
+      }
+
+      pdc->TextOut(100, 50, str);
 
       int starty = 100;
       int x = 100;

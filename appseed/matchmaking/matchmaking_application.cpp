@@ -1000,13 +1000,12 @@ namespace matchmaking
       m_bLoginSteam = true;
       ::fork(this, [=]()
       {
-         property_set set;
-
-         string str = Application.http().get("https://api.ca2.cc/steam/get_user_name_and_id", set);
+         
+         string str = Application.http().api_get("/steam/get_user_name_and_id");
 
          stringa stra;
 
-         stra.add_lines(str);
+         stra.add_lines(str, false);
 
          if (stra.get_size() == 4 && stra[0] == "OK" && stra[3] == "OK")
          {
