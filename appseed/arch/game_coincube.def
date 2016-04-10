@@ -1,0 +1,8 @@
+; game_coincube.def
+
+LIBRARY  "game_coincube"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_coincube_get_new_library
+
