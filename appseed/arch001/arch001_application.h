@@ -1,12 +1,11 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
 
-   class CLASS_DECL_GAME_COINCUBE application :
-      virtual public ::html::application,
+   class CLASS_DECL_GAME_ARCH001 application :
       virtual public ::multimedia::application
    {
    public:
@@ -29,7 +28,7 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

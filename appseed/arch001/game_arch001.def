@@ -1,8 +1,8 @@
-; game_coincube.def
+; game_arch001.def
 
-LIBRARY  "game_coincube"
+LIBRARY  "game_arch001"
 ; For Win32 DLLs, only EXPORTs really required.
 
 EXPORTS
-game_coincube_get_new_library
+game_arch001_get_new_library
 

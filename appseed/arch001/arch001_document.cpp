@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace coincube
+namespace arch001
 {
 
 
@@ -52,7 +52,7 @@ namespace coincube
    }
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
 
-   class CLASS_DECL_GAME_COINCUBE document :
+   class CLASS_DECL_GAME_ARCH001 document :
       public ::user::document
    {
    public:
@@ -24,7 +24,7 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

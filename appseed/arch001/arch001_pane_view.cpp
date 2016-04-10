@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace coincube
+namespace arch001
 {
 
    pane_view::pane_view(::aura::application * papp) :
@@ -48,10 +48,10 @@ namespace coincube
       if(pobj->previous())
          return;
 
-      set_tab("coincube", ::coincube::PaneViewHelloMultiverse);
+      set_tab("arch001", ::arch001::PaneViewHelloMultiverse);
       set_tab("Open", "file_manager");
 
-      set_cur_tab_by_id(::coincube::PaneViewHelloMultiverse);
+      set_cur_tab_by_id(::arch001::PaneViewHelloMultiverse);
 
    }
 
@@ -64,14 +64,14 @@ namespace coincube
       {
       case PaneViewHelloMultiverse:
          {
-            sp(::coincube::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
+            sp(::arch001::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
             if(pdoc != NULL)
             {
                sp(::user::impact) pview = pdoc->get_view(0);
                pview->on_update(NULL, 0, NULL);
                if(pview != NULL)
                {
-                  sp(::coincube::frame) pframe = (pview->GetParentFrame());
+                  sp(::arch001::frame) pframe = (pview->GetParentFrame());
                   if(pframe != NULL)
                   {
                      pcreatordata->m_pdoc = pdoc;
@@ -91,4 +91,4 @@ namespace coincube
 
 
 
-} // namespace coincube
+} // namespace arch001

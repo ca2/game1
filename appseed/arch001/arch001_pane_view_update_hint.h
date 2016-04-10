@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
    enum EPaneView
@@ -12,7 +12,7 @@ namespace coincube
    };
 
 
-   class CLASS_DECL_GAME_COINCUBE pane_view_update_hint :
+   class CLASS_DECL_GAME_ARCH001 pane_view_update_hint :
       public object  
    {
    public:
@@ -36,4 +36,4 @@ namespace coincube
 
    };
 
-} // namespace coincube
+} // namespace arch001

@@ -1,14 +1,14 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
 
    class pane_view;
 
 
-   class CLASS_DECL_GAME_COINCUBE frame :
+   class CLASS_DECL_GAME_ARCH001 frame :
       virtual public simple_frame_window
    {
    public:
@@ -34,7 +34,7 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

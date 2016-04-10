@@ -3,16 +3,15 @@
 
 
 
-namespace coincube
+namespace arch001
 {
 
 
    class document;
 
 
-   class CLASS_DECL_GAME_COINCUBE view :
-      virtual public ::user::impact,
-      virtual public ::backview::user::interaction
+   class CLASS_DECL_GAME_ARCH001 view :
+      virtual public ::backview::user::impact
    {
    public:
 
@@ -95,7 +94,7 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

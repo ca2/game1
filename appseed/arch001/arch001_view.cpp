@@ -4,7 +4,7 @@
 
 
 
-namespace coincube
+namespace arch001
 {
 
 
@@ -188,6 +188,8 @@ namespace coincube
    void view::_001OnDraw(::draw2d::dib * pdib)
    {
 
+      ::draw2d::graphics * pdc = pdib->get_graphics();
+
       rect rectClient;
       GetClientRect(rectClient);
 
@@ -255,11 +257,11 @@ namespace coincube
 
       m_pot.m_pt.x = m_pot.m_pt.x + (m_ptFinal.x - m_pot.m_pt.x)  * 0.1;
 
-      m_pot.on_draw(pdc);
+      m_pot.on_draw(pdib);
 
       for(auto & pc : m_money)
       {
-         pc->on_draw(pdc);
+         pc->on_draw(pdib);
       }
 
 
@@ -378,7 +380,7 @@ namespace coincube
    }
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 

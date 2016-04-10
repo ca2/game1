@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace coincube
+namespace arch001
 {
 
    cube::cube(::aura::application * papp):
@@ -21,10 +21,9 @@ namespace coincube
    void cube::on_draw(::draw2d::dib * pdib)
    {
 
-
+      ::draw2d::graphics * pdc = pdib->get_graphics();
 
       ::draw2d::brush_sp b1(allocer());
-
 
       b1->CreateRadialGradientBrush(pointd(m_pt.x, m_pt.y),sized(m_iSize * 8,m_iSize*8),ARGB(84,255,255,0),ARGB(0,255,255,255));
 
@@ -33,7 +32,6 @@ namespace coincube
       pdc->SelectObject(b1);
 
       pdc->FillEllipse(r);
-
 
       ::draw2d::pen_sp pen(allocer());
 
@@ -139,4 +137,4 @@ namespace coincube
    }
 
    
-} // namespace coincube
+} // namespace arch001

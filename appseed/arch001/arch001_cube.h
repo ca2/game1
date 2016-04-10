@@ -1,10 +1,10 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
-   class CLASS_DECL_GAME_COINCUBE cube :
+   class CLASS_DECL_GAME_ARCH001 cube :
       virtual public object
    {
    public:
@@ -28,4 +28,4 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001

@@ -15,10 +15,12 @@ namespace multimedia
       m_presampler = new ::multimedia::audio_decode::resampler(get_app());
 
 
-      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
+      if (!initialize_wave_player(::multimedia::audio::purpose_default))
+      {
 
-      if(!m_pwaveplayer->begin_synch())
-         return;
+         throw resource_exception(get_app());
+
+      }
 
       m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
 

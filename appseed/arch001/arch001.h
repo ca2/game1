@@ -3,17 +3,17 @@
 
 #include "core/core/core.h"
 #include "core/user/userex/userex.h"
-#include "app/appseed/html/html/html.h"
+#include "app-core/appseed/gcom/gcom/gcom.h"
 #include "app-core/appseed/multimedia/multimedia/multimedia.h"
 
 
-#ifdef _GAME_COINCUBE_LIBRARY
-    #define CLASS_DECL_GAME_COINCUBE  CLASS_DECL_EXPORT
+#ifdef _GAME_ARCH001_LIBRARY
+    #define CLASS_DECL_GAME_ARCH001  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_GAME_COINCUBE  CLASS_DECL_IMPORT
+    #define CLASS_DECL_GAME_ARCH001  CLASS_DECL_IMPORT
 #endif
 
-namespace coincube
+namespace arch001
 {
 
 
@@ -35,20 +35,20 @@ namespace coincube
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::coincube::application > ())
+#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::arch001::application > ())
 
 
-#include "coincube_coin.h"
-#include "coincube_cube.h"
+#include "arch001_coin.h"
+#include "arch001_cube.h"
 
 
 #include "multimedia_soundtrack.h"
 
-#include "coincube_document.h"
-#include "coincube_view.h"
-#include "coincube_frame.h"
-#include "coincube_main_frame.h"
-#include "coincube_pane_view_update_hint.h"
-#include "coincube_pane_view.h"
+#include "arch001_document.h"
+#include "arch001_view.h"
+#include "arch001_frame.h"
+#include "arch001_main_frame.h"
+#include "arch001_pane_view_update_hint.h"
+#include "arch001_pane_view.h"
 
-#include "coincube_application.h"
+#include "arch001_application.h"

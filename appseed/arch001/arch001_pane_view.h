@@ -1,18 +1,18 @@
 #pragma once
 
 
-namespace coincube
+namespace arch001
 {
 
    class view;
 
-   class CLASS_DECL_GAME_COINCUBE pane_view : 
+   class CLASS_DECL_GAME_ARCH001 pane_view : 
       public ::userex::pane_tab_view
    {
    public:
 
 
-      sp(::coincube::view)                     m_pflagview;
+      sp(::arch001::view)                     m_pflagview;
 
 
       pane_view(::aura::application * papp);
@@ -33,6 +33,6 @@ namespace coincube
    };
 
 
-} // namespace coincube
+} // namespace arch001
 
 

@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
-    <RootNamespace>game_coincube</RootNamespace>
+    <RootNamespace>game_arch001</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>game_coincube</ProjectName>
+    <ProjectName>game_arch001</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -113,7 +113,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_ARCH001_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -210,7 +210,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Full</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_ARCH001_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -312,7 +312,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_ARCH001_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -399,7 +399,7 @@
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Full</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_ARCH001_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -484,36 +484,36 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="coincube_coin.cpp" />
-    <ClCompile Include="coincube_cube.cpp" />
+    <ClCompile Include="arch001_coin.cpp" />
+    <ClCompile Include="arch001_cube.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="coincube.cpp" />
-    <ClCompile Include="coincube_application.cpp" />
-    <ClCompile Include="coincube_document.cpp" />
-    <ClCompile Include="coincube_frame.cpp" />
-    <ClCompile Include="coincube_main_frame.cpp" />
-    <ClCompile Include="coincube_pane_view.cpp" />
-    <ClCompile Include="coincube_pane_view_update_hint.cpp" />
-    <ClCompile Include="coincube_view.cpp" />
+    <ClCompile Include="arch001.cpp" />
+    <ClCompile Include="arch001_application.cpp" />
+    <ClCompile Include="arch001_document.cpp" />
+    <ClCompile Include="arch001_frame.cpp" />
+    <ClCompile Include="arch001_main_frame.cpp" />
+    <ClCompile Include="arch001_pane_view.cpp" />
+    <ClCompile Include="arch001_pane_view_update_hint.cpp" />
+    <ClCompile Include="arch001_view.cpp" />
     <ClCompile Include="multimedia_soundtrack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="coincube_cube.h" />
-    <ClInclude Include="coincube_coin.h" />
+    <ClInclude Include="arch001_cube.h" />
+    <ClInclude Include="arch001_coin.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="coincube.h" />
-    <ClInclude Include="coincube_application.h" />
-    <ClInclude Include="coincube_document.h" />
-    <ClInclude Include="coincube_frame.h" />
-    <ClInclude Include="coincube_main_frame.h" />
-    <ClInclude Include="coincube_pane_view.h" />
-    <ClInclude Include="coincube_pane_view_update_hint.h" />
-    <ClInclude Include="coincube_view.h" />
+    <ClInclude Include="arch001.h" />
+    <ClInclude Include="arch001_application.h" />
+    <ClInclude Include="arch001_document.h" />
+    <ClInclude Include="arch001_frame.h" />
+    <ClInclude Include="arch001_main_frame.h" />
+    <ClInclude Include="arch001_pane_view.h" />
+    <ClInclude Include="arch001_pane_view_update_hint.h" />
+    <ClInclude Include="arch001_view.h" />
     <ClInclude Include="multimedia_soundtrack.h" />
   </ItemGroup>
   <ItemGroup>
@@ -535,18 +535,9 @@
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\html\html.vcxproj">
-      <Project>{6c7004d3-ff6c-4872-8ddc-5d7f44b0bc57}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\math\math.vcxproj">
-      <Project>{5b03fc53-c0aa-419d-a87f-4338c9dde3fa}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\html_lite\html_lite.vcxproj">
-      <Project>{845177e8-8b1e-4ae0-9b96-1abc24b797a6}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="game_coincube.def" />
+    <None Include="game_arch001.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

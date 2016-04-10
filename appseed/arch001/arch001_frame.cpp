@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-namespace coincube
+namespace arch001
 {
 
 
@@ -11,7 +11,7 @@ namespace coincube
       simple_frame_window(papp)
    {
 
-//      m_dataid = "::core::coincube::frame";
+//      m_dataid = "::core::arch001::frame";
 
       WfiEnableFullScreen();
 
@@ -84,7 +84,7 @@ namespace coincube
    }
 
 
-} // namespace coincube
+} // namespace arch001
 
 
 
