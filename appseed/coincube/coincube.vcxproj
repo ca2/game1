@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
-    <RootNamespace>game_coincube</RootNamespace>
+    <RootNamespace>game_arch</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>game_coincube</ProjectName>
+    <ProjectName>game_arch</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -534,15 +534,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\html\html.vcxproj">
-      <Project>{6c7004d3-ff6c-4872-8ddc-5d7f44b0bc57}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\math\math.vcxproj">
-      <Project>{5b03fc53-c0aa-419d-a87f-4338c9dde3fa}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\html_lite\html_lite.vcxproj">
-      <Project>{845177e8-8b1e-4ae0-9b96-1abc24b797a6}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
