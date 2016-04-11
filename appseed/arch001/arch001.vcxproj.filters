@@ -13,37 +13,37 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube.cpp">
+    <ClCompile Include="arch001.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_application.cpp">
+    <ClCompile Include="arch001_application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_document.cpp">
+    <ClCompile Include="arch001_coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_frame.cpp">
+    <ClCompile Include="arch001_cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_main_frame.cpp">
+    <ClCompile Include="arch001_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_pane_view.cpp">
+    <ClCompile Include="arch001_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_pane_view_update_hint.cpp">
+    <ClCompile Include="arch001_main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_view.cpp">
+    <ClCompile Include="arch001_pane_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coincube_cube.cpp">
+    <ClCompile Include="arch001_pane_view_update_hint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arch001_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="multimedia_soundtrack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="coincube_coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,42 +51,42 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube.h">
+    <ClInclude Include="arch001_cube.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_application.h">
+    <ClInclude Include="arch001_coin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_document.h">
+    <ClInclude Include="arch001.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_frame.h">
+    <ClInclude Include="arch001_application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_main_frame.h">
+    <ClInclude Include="arch001_document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_pane_view.h">
+    <ClInclude Include="arch001_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_pane_view_update_hint.h">
+    <ClInclude Include="arch001_main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_view.h">
+    <ClInclude Include="arch001_pane_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_cube.h">
+    <ClInclude Include="arch001_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arch001_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="multimedia_soundtrack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="coincube_coin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="game_coincube.def">
+    <None Include="game_arch001.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

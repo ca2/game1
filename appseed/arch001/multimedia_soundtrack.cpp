@@ -7,12 +7,11 @@ namespace multimedia
 
    sound_track::sound_track(::aura::application * papp):
       object(papp),
-      ::multimedia::audio_decode::track(papp),
+      ::multimedia::audio_decode::playground(papp),
       ::multimedia::decoder(papp),
       m_eventEnd(papp)
    {
 
-      m_presampler = new ::multimedia::audio_decode::resampler(get_app());
 
 
       if (!initialize_wave_player(::multimedia::audio::purpose_default))
@@ -71,13 +70,14 @@ namespace multimedia
    ::multimedia::audio_decode::decoder * sound_track::sound_decoder(const char * psz)
    {
 
-      array<::multimedia::audio_decode::decoder *> & decodera = m_mapDecoder[psz];
+      array<::multimedia::audio_decode::resampler *> & decodera = m_mapDecoder[psz];
 
       int i = decodera.pred_find_first([](::multimedia::audio_decode::decoder *p) {return p->DecoderEOF();});
 
       if(i >= 0)
       {
-
+         decodera[i]->DecoderInitialize(NULL, false);
+         decodera[i]->DecoderSeekBegin();
          return decodera[i];
 
       }
@@ -90,9 +90,23 @@ namespace multimedia
 
       pdecoder->DecoderInitialize(sound_file(psz),false);
 
-      decodera.add(pdecoder);
+      ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
 
-      return pdecoder;
+      presampler->m_pdecoder = pdecoder;
+
+      pdecoder->m_bLoop = false;
+
+      presampler->DecoderInitialize(NULL, false);
+
+      presampler->m_pdecoder->DecoderSeekBegin();
+
+
+      decodera.add(presampler);
+
+
+
+
+      return presampler;
 
    }
 
@@ -125,37 +139,13 @@ namespace multimedia
       bool bNoLoop = ::str::begins_eat_ci(str,"noloop:");
 
 
-      m_presampler->m_pdecoder = sound_decoder(str);
+      auto pdecoder = sound_decoder(str);
 
-      m_presampler->m_pdecoder->m_bLoop = false;
+      
 
-      init_child(m_presampler);
+      init_child(pdecoder);
 
-      m_presampler->DecoderInitialize(NULL,false);
-
-      //m_decoderptra.remove_all();
-
-      m_iDecoder = 0;
-
-      if(bWait)
-      {
-         m_presampler->m_pdecoder->DecoderSeekBegin();
-
-         m_presampler->m_bLoop = false;
-      }
-      else if(bNoLoop)
-      {
-         m_presampler->m_bLoop = false;
-
-      }
-      else
-      {
-
-         m_presampler->m_bLoop = true;
-
-      }
-
-      m_decoderptra.add(m_presampler);
+      m_decoderptra.add(pdecoder);
 
       m_bEof = false;
 
