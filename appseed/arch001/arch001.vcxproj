@@ -484,8 +484,7 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="arch001_coin.cpp" />
-    <ClCompile Include="arch001_cube.cpp" />
+    <ClCompile Include="arch001_game.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">Create</PrecompiledHeader>
@@ -503,8 +502,7 @@
     <ClCompile Include="multimedia_soundtrack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arch001_cube.h" />
-    <ClInclude Include="arch001_coin.h" />
+    <ClInclude Include="arch001_game.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="arch001.h" />
     <ClInclude Include="arch001_application.h" />
@@ -534,6 +532,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\estamira\estamira.vcxproj">
+      <Project>{a33b9d31-3bfe-496c-a4f5-dc3086d5b27f}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

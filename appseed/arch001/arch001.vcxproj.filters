@@ -19,12 +19,6 @@
     <ClCompile Include="arch001_application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="arch001_coin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="arch001_cube.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="arch001_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -46,15 +40,12 @@
     <ClCompile Include="multimedia_soundtrack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="arch001_game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="arch001_cube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="arch001_coin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arch001.h">
@@ -82,6 +73,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="multimedia_soundtrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arch001_game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,23 +19,14 @@ namespace arch001
       m_mutexDraw(papp),
       m_mutexWork(papp),
       m_mutexSwap(papp),
-      m_pot(papp),
-      m_dibCoin(allocer()),
-      m_dibMony(allocer()),
-      m_dibMon2(allocer())
+      m_game(papp)
    {
-
       m_iCount = 0;
       m_iPhase = 0;
-      m_dibCoin.load_from_file("matter://coin.png");
 
-      m_dibMony.load_from_file("matter://mony.png");
-
-      m_dibMon2.load_from_file("matter://mon2.png");
 
       m_bGame = false;
 
-      m_pot.m_pview =this;
       m_strHelloMultiverse = "Hello Multiverse!!";
 
       connect_command("new_game",&view::_001OnNewGame);
@@ -89,6 +80,8 @@ namespace arch001
       IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&view::_001OnLButtonDown);
       IGUI_WIN_MSG_LINK(WM_LBUTTONUP,pdispatch,this,&view::_001OnLButtonUp);
       IGUI_WIN_MSG_LINK(WM_MOUSEMOVE,pdispatch,this,&view::_001OnMouseMove);
+      IGUI_WIN_MSG_LINK(WM_KEYDOWN, pdispatch, this, &view::_001OnKeyDown);
+      IGUI_WIN_MSG_LINK(WM_KEYUP, pdispatch, this, &view::_001OnKeyUp);
 
    }
 
@@ -97,6 +90,9 @@ namespace arch001
    {
 
       SCAST_PTR(::message::create,pcreate,pobj);
+
+      m_game.start(this);
+
 
       m_psound = new ::multimedia::sound_track(get_app());
       m_psound->DecoderInitialize(NULL,false);
@@ -107,21 +103,16 @@ namespace arch001
       if(!m_bGame)
       {
          m_bGame = true;
-         new_game();
+//         new_game();
 
       }
 
 
-      data_get("credit",m_pot.m_iCredit);
       data_get("count",m_iCount);
       data_get("phase",m_iPhase);
 
 
 
-      for(index i = 0; i < m_iCount; i++)
-      {
-         m_pot.m_iSize = m_pot.m_iSize * 1.25;
-      }
       pcreate->previous();
 
       if(pcreate->m_bRet)
@@ -131,6 +122,19 @@ namespace arch001
 
    }
 
+   void view::_001OnKeyDown(signal_details * pobj)
+   {
+      SCAST_PTR(::message::key, pkey, pobj);
+
+      pobj->m_bRet = true;
+
+   }
+   
+
+   void view::_001OnKeyUp(signal_details * pobj)
+   {
+      SCAST_PTR(::message::key, pkey, pobj);
+   }
 
    void view::_001OnLButtonDown(signal_details * pobj)
    {
@@ -171,7 +175,6 @@ namespace arch001
 
       GetClientRect(rectClient);
 
-      m_ptFinal.x = MAX(rectClient.left + m_pot.m_iSize * 2,MIN(pt.x, rectClient.right - m_pot.m_iSize * 2));
 
 
    }
@@ -188,82 +191,7 @@ namespace arch001
    void view::_001OnDraw(::draw2d::dib * pdib)
    {
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
-
-      rect rectClient;
-      GetClientRect(rectClient);
-
-
-      //::backview::user::interaction::_001OnDraw(pdc);
-
-      int x = 0;
-      int y = 0;
-
-      int iPhaseY = 0;
-
-      for(index i = 0; i < m_iPhase; i++)
-      {
-
-         if(x > 0)
-         {
-
-            if(x + m_dibMon2->m_size.cx > rectClient.width())
-            {
-               x = 0;
-               y += m_dibMon2->m_size.cy;
-
-            }
-
-         }
-
-         pdc->BitBlt(point(x,y),m_dibMon2->m_size,m_dibMon2->get_graphics());
-
-         x+=m_dibMon2->m_size.cx;
-
-         iPhaseY = m_dibMon2->m_size.cy;
-
-      }
-
-
-
-
-      for(index i = 0; i < m_iCount; i++)
-      {
-
-         if(x > 0)
-         {
-
-            if(x + m_dibMony->m_size.cx > rectClient.width())
-            {
-               x = 0;
-               y += MAX(m_dibMony->m_size.cy, iPhaseY);
-               iPhaseY = 0;
-            }
-
-         }
-
-         pdc->BitBlt(point(x,y),m_dibMony->m_size,m_dibMony->get_graphics());
-
-         x+=m_dibMony->m_size.cx;
-
-      }
-
-
-      rect r(rectClient);
-
-      r.top = r.bottom - m_pot.m_iSize * 6;
-
-      pdc->FillSolidRect(r,ARGB(84,255,255,255));
-
-      m_pot.m_pt.x = m_pot.m_pt.x + (m_ptFinal.x - m_pot.m_pt.x)  * 0.1;
-
-      m_pot.on_draw(pdib);
-
-      for(auto & pc : m_money)
-      {
-         pc->on_draw(pdib);
-      }
-
+      m_game._001OnDraw(pdib);
 
    }
 
@@ -289,9 +217,7 @@ namespace arch001
       if(rectClient.area() <= 0)
          return;
 
-      m_pot.m_pt.y = rectClient.bottom - m_pot.m_iSize * 3;
-
-      m_ptFinal.y = m_pot.m_pt.y;
+      m_game.layout();
 
    }
 
@@ -304,82 +230,16 @@ namespace arch001
 
       pobj->m_bRet = true;
 
-      new_game();
 
    }
 
-   void view::credit()
+
+   bool view::keyboard_focus_is_focusable()
    {
 
-      m_psound->queue("wait:coin");
-
-      m_pot.m_iCredit++;
-
-      if(m_pot.m_iCredit >= m_pot.m_iSize * 2 - 7)
-      {
-
-         m_iCount++;
-
-         if(m_iCount > 7)
-         {
-            m_iCount = 0;
-            m_iPhase++;
-         }
-         else
-         {
-
-            m_pot.m_iCredit=0;
-            m_pot.m_bGrow = true;
-            m_pot.m_dwLastGrow = ::get_tick_count();
-
-            m_psound->queue("wait:velo");
-
-         }
-
-
-      }
-      data_set("credit",m_pot.m_iCredit);
-      data_set("count",m_iCount);
-      data_set("phase",m_iPhase);
-
+      return true;
 
    }
-
-
-   void view::new_game()
-   {
-
-      rect rectClient;
-      
-      GetClientRect(rectClient);
-
-      m_pot.m_iSize = 24;
-
-      m_pot.m_pt.x = (rectClient.right + rectClient.left) / 2;
-
-      m_pot.m_pt.y = rectClient.bottom - m_pot.m_iSize * 3;
-
-      m_ptFinal = m_pot.m_pt;
-
-      while(m_money.get_size() < 23)
-      {
-
-         m_money.add(canew(coin(this)));
-
-      }
-
-      for(auto & pc : m_money)
-      {
-
-         pc->reinvent_merit();
-
-      }
-
-
-
-   }
-
-
 } // namespace arch001
 
 

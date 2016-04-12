@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "core/core/core.h"
+#include "estamira/estamira.h"
 #include "core/user/userex/userex.h"
 #include "app-core/appseed/gcom/gcom/gcom.h"
 #include "app-core/appseed/multimedia/multimedia/multimedia.h"
@@ -38,11 +38,11 @@ namespace arch001
 #define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::arch001::application > ())
 
 
-#include "arch001_coin.h"
-#include "arch001_cube.h"
-
 
 #include "multimedia_soundtrack.h"
+
+#include "arch001_game.h"
+
 
 #include "arch001_document.h"
 #include "arch001_view.h"
@@ -50,5 +50,6 @@ namespace arch001
 #include "arch001_main_frame.h"
 #include "arch001_pane_view_update_hint.h"
 #include "arch001_pane_view.h"
+
 
 #include "arch001_application.h"

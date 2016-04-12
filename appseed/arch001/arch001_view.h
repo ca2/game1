@@ -15,11 +15,10 @@ namespace arch001
    {
    public:
 
-      ::visual::dib_sp           m_dibCoin;
-      ::visual::dib_sp           m_dibMony;
-      ::visual::dib_sp           m_dibMon2;
-
-      spa(coin)               m_money;
+      //::visual::dib_sp           m_dibCoin;
+      //::visual::dib_sp           m_dibMony;
+      //::visual::dib_sp           m_dibMon2;
+      game                          m_game;
 
       sp(::multimedia::sound_track)      m_psound;
       bool                    m_bGame;
@@ -52,10 +51,8 @@ namespace arch001
       byte                    m_bBkAlpha;
 
 
-      cube                    m_pot;
-
-
       point                   m_ptFinal;
+
 
 
       view(::aura::application * papp);
@@ -65,10 +62,6 @@ namespace arch001
 	   virtual void assert_valid() const;
 	   virtual void dump(dump_context & dumpcontext) const;
    #endif
-
-
-
-
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
@@ -87,9 +80,10 @@ namespace arch001
       DECL_GEN_SIGNAL(_001OnMouseMove);
       DECL_GEN_SIGNAL(_001OnNewGame);
 
-      void credit();
+      DECL_GEN_SIGNAL(_001OnKeyDown);
+      DECL_GEN_SIGNAL(_001OnKeyUp);
 
-      virtual void new_game();
+      virtual bool keyboard_focus_is_focusable() override;
 
    };
 
