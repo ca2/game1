@@ -41,7 +41,7 @@ namespace user
    void font_list::install_message_handling(::message::dispatch * pdispatch)
    {
 
-      ::database::user::interaction::install_message_handling(pdispatch);
+      ::user::box::install_message_handling(pdispatch);
 
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&font_list::_001OnCreate);
       IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&font_list::_001OnLButtonDown);

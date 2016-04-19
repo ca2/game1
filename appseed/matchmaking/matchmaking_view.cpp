@@ -82,12 +82,12 @@ namespace matchmaking
 
    void view::assert_valid() const
    {
-      database::user::interaction::assert_valid();
+      user::box::assert_valid();
    }
 
    void view::dump(dump_context & dumpcontext) const
    {
-      database::user::interaction::dump(dumpcontext);
+      user::box::dump(dumpcontext);
    }
 
    void view::install_message_handling(::message::dispatch * pdispatch)
