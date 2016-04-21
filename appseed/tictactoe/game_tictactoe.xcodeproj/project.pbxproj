@@ -47,6 +47,9 @@
 		07A9A89F1B5CA6E800B63035 /* tictactoe_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8661B5CA6E800B63035 /* tictactoe_view.cpp */; };
 		07A9A8A01B5CA6E800B63035 /* tictactoe_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A9A8661B5CA6E800B63035 /* tictactoe_view.cpp */; };
 		07A9A8A11B5CA6E800B63035 /* tictactoe_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A9A8671B5CA6E800B63035 /* tictactoe_view.h */; };
+		07AE49571CC7AE8800959A6F /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49561CC7AE8800959A6F /* libaura.dylib */; };
+		07AE49621CC7AE9E00959A6F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49611CC7AE9E00959A6F /* libbase.dylib */; };
+		07AE49641CC7AEBF00959A6F /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49631CC7AEBF00959A6F /* libaxis.dylib */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
@@ -198,6 +201,9 @@
 		07A9A8651B5CA6E800B63035 /* tictactoe_pane_view_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_pane_view_update_hint.h; sourceTree = "<group>"; };
 		07A9A8661B5CA6E800B63035 /* tictactoe_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_view.cpp; sourceTree = "<group>"; };
 		07A9A8671B5CA6E800B63035 /* tictactoe_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_view.h; sourceTree = "<group>"; };
+		07AE49561CC7AE8800959A6F /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/carlos/Library/Developer/Xcode/DerivedData/all-mac-cwfnwlqfzegpfnflaajsxmrshhyj/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
+		07AE49611CC7AE9E00959A6F /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/carlos/Library/Developer/Xcode/DerivedData/all-mac-cwfnwlqfzegpfnflaajsxmrshhyj/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
+		07AE49631CC7AEBF00959A6F /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../../../Users/carlos/Library/Developer/Xcode/DerivedData/all-mac-cwfnwlqfzegpfnflaajsxmrshhyj/Build/Products/Debug/libaxis.dylib"; sourceTree = "<group>"; };
 		07B65416190F2C0F002DAADE /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../../app/appseed/core/core.xcodeproj; sourceTree = SOURCE_ROOT; };
 		07B65527190F301F002DAADE /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
 		07B65528190F301F002DAADE /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage.dylib"; sourceTree = "<group>"; };
@@ -244,6 +250,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AE49641CC7AEBF00959A6F /* libaxis.dylib in Frameworks */,
+				07AE49621CC7AE9E00959A6F /* libbase.dylib in Frameworks */,
+				07AE49571CC7AE8800959A6F /* libaura.dylib in Frameworks */,
 				0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +333,9 @@
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07AE49631CC7AEBF00959A6F /* libaxis.dylib */,
+				07AE49611CC7AE9E00959A6F /* libbase.dylib */,
+				07AE49561CC7AE8800959A6F /* libaura.dylib */,
 				078AEF6219158B190091C065 /* libbase.dylib */,
 				07B65527190F301F002DAADE /* libbase.dylib */,
 				07B65528190F301F002DAADE /* libbasefreeimage.dylib */,
