@@ -62,87 +62,16 @@ namespace matchmaking
       set_tab("Open", "file_manager");
 #endif
 
+      set_cur_tab_by_id(::matchmaking::PaneViewStart);
+
       //set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverseSwitcher);
-      set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverse);
+      //set_cur_tab_by_id(::matchmaking::PaneViewHelloMultiverse);
 
    }
 
    void pane_view::on_show_view()
    {
       ::userex::pane_tab_view::on_show_view();
-      string strId = get_view_id();
-      stringa stra;
-      stra.explode("->:<-",strId);
-      if(get_view_id() == ::matchmaking::PaneViewHelloMultiverse
-            || get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher
-            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverse))
-            || stra.contains(::str::from((int)::matchmaking::PaneViewHelloMultiverseSwitcher)))
-      {
-
-         if(get_pane_by_id(::matchmaking::PaneViewMenu) != NULL && get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder != NULL)
-         {
-
-            get_pane_by_id(::matchmaking::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
-
-         }
-
-         if(get_pane_by_id("file_manager") != NULL && get_pane_by_id("file_manager")->m_pholder != NULL)
-         {
-
-            get_pane_by_id("file_manager")->m_pholder->ShowWindow(SW_HIDE);
-
-         }
-
-         if(get_pane_by_id(::matchmaking::PaneViewFontSel) != NULL && get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder != NULL)
-         {
-
-            get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder->ShowWindow(SW_HIDE);
-
-         }
-
-         if(get_view_id() == ::matchmaking::PaneViewHelloMultiverse)
-         {
-
-            //::property_set set;
-
-            //Application.http().get("https://api.ca2.cc/account/get_string?key=test", set);
-
-            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::matchmaking::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("matchmaking_view"));
-
-         }
-         else if (get_view_id() == ::matchmaking::PaneViewHelloMultiverseSwitcher)
-         {
-
-            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::matchmaking::PaneViewHelloMultiverseSwitcher)->m_pholder->get_child_by_id("matchmaking_view"));
-
-         }
-
-
-      }
-      else if(get_view_id() == ::matchmaking::PaneViewMenu)
-      {
-
-         string str;
-
-         //m_pviewLast->data_get("cur_fps_text",str);
-
-         //m_prollfps->_001SetText(str, ::action::source_database);
-
-      }
-      else if(get_view_id() == ::matchmaking::PaneViewFontSel)
-      {
-
-         sp(::user::font_list_view) pfontview = get_pane_by_id(::matchmaking::PaneViewFontSel)->m_pholder->get_child_by_id("font_list_view");
-
-         if(m_pviewLast != NULL && pfontview.is_set())
-         {
-
-            pfontview->set_sel_by_name(m_pviewLast->m_strFont);
-
-         }
-
-      }
-
    }
 
 
@@ -151,6 +80,11 @@ namespace matchmaking
 
       switch(pcreatordata->m_id)
       {
+      case PaneViewStart:
+      {
+         create_view<start>(pcreatordata);
+      }
+      break;
       case PaneViewMenu:
          {
             m_pdocMenu = Session.userex()->create_child_form(this,pcreatordata->m_pholder);
@@ -193,6 +127,7 @@ namespace matchmaking
          {
             sp(::user::document) pdoc =  Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
 
+            pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
 
          }
 

@@ -8,6 +8,7 @@ namespace matchmaking
    enum EPaneView
    {
       PaneViewNone,
+      PaneViewStart,
       PaneViewMenu,
       PaneViewHelloMultiverse,
       PaneViewHelloMultiverseSwitcher,

@@ -356,26 +356,28 @@ namespace matchmaking
       pdc->TextOut(100, 50, str);
 
       int starty = 100;
+      int startx = 100;
       int x = 100;
       int y = starty;
       int maxx = 0;
+      int maxy = 0;
       pdc->set_text_color(ARGB(255, 255, 255, 255));
       for (auto & pair : m_map)
       {
 
          ::draw2d::dib * pdib1 = get_map(pair.m_element1);
 
-         if (y > starty)
+         if (x > startx)
          {
 
-            if (y + pdib1->m_size.cy > rectClient.bottom)
+            if (x + pdib1->m_size.cx > rectClient.right - startx)
             {
 
-               y = starty;
+               x = startx;
 
-               x += maxx + 8;
+               y += maxy + 8;
 
-               maxx = 0;
+               maxy = 0;
 
             }
 
@@ -442,6 +444,8 @@ namespace matchmaking
 
          maxx = MAX(maxx, pdib1->size().cx);
 
+         maxy = MAX(maxy, pdib1->size().cy);
+
          if (m_vote[str] > 0)
          {
 
@@ -471,7 +475,7 @@ namespace matchmaking
 
          }
 
-         y += pdib1->size().cy + 8;
+         x += pdib1->size().cx + 8;
 
 
 

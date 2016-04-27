@@ -61,7 +61,7 @@ namespace user
    };
 
 
-   typedef ::user::show < ::user::scroll < ::user::font_list > > font_list_view;
+   typedef ::user::show < ::user::font_list > font_list_view;
 
 
 } // namespace user

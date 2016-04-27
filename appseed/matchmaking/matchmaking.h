@@ -56,6 +56,7 @@ namespace matchmaking
 #include "matchmaking_toggle_view.h"
 #include "matchmaking_top_view.h"
 #include "matchmaking_view.h"
+#include "matchmaking_start.h"
 //#include "matchmaking_lite_view.h"
 //#include "matchmaking_full_view.h"
 #include "matchmaking_main_view.h"
@@ -63,6 +64,8 @@ namespace matchmaking
 #include "matchmaking_frame.h"
 #include "matchmaking_pane_view_update_hint.h"
 #include "matchmaking_pane_view.h"
+#include "matchmaking_lobby.h"
+#include "matchmaking_main.h"
 
 #include "matchmaking_application.h"
 

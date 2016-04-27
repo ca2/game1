@@ -75,6 +75,8 @@ namespace matchmaking
 //      System.factory().creatable_small < ::matchmaking::lite_view >();
 //      System.factory().creatable_small < ::matchmaking::full_view >();
       System.factory().creatable_small < ::matchmaking::view >();
+      System.factory().creatable_small < ::matchmaking::main >();
+      System.factory().creatable_small < ::matchmaking::lobby >();
       System.factory().creatable_small < ::matchmaking::main_view >();
       System.factory().creatable_small < ::matchmaking::switcher_view >();
       System.factory().creatable_small < ::matchmaking::pane_view >();
@@ -83,6 +85,7 @@ namespace matchmaking
       System.factory().creatable_small < ::matchmaking::font_view >();
       System.factory().creatable_small < ::matchmaking::top_view >();
       System.factory().creatable_small < ::matchmaking::toggle_view >();
+      System.factory().creatable_small < ::matchmaking::start >();
 
       if(!::core::application::initialize_instance())
          return false;
@@ -118,7 +121,7 @@ namespace matchmaking
                               "main",
                               System.type_info < document > (),
                               System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
-                              System.type_info < main_view > ()));
+                              System.type_info < matchmaking::main > ()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(

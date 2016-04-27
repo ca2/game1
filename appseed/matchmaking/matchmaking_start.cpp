@@ -1,0 +1,323 @@
+#include "framework.h"
+#include <math.h>
+
+
+//extern CLASS_DECL_AXIS thread_int_ptr < DWORD_PTR > t_time1;
+
+
+namespace matchmaking
+{
+
+
+
+   start::start(::aura::application * papp) :
+      object(papp),
+      m_font(allocer()),
+      m_font2(allocer())
+   {
+      m_font->create_point_font("Arial Black", 48);
+      m_font2->create_point_font("Arial", 20, 800);
+      m_iHover = -1;
+   }
+
+   start::~start()
+   {
+   }
+
+   void start::assert_valid() const
+   {
+      user::box::assert_valid();
+   }
+
+   void start::dump(dump_context & dumpcontext) const
+   {
+      user::box::dump(dumpcontext);
+   }
+
+   void start::install_message_handling(::message::dispatch * pdispatch)
+   {
+
+      ::user::impact::install_message_handling(pdispatch);
+
+      IGUI_WIN_MSG_LINK(WM_USER + 1984 + 77 + 2, pdispatch, this, &start::_001OnLayout);
+      IGUI_WIN_MSG_LINK(WM_CREATE, pdispatch, this, &start::_001OnCreate);
+      IGUI_WIN_MSG_LINK(WM_DESTROY, pdispatch, this, &start::_001OnDestroy);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN, pdispatch, this, &start::_001OnLButtonDown);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONUP, pdispatch, this, &start::_001OnLButtonUp);
+      IGUI_WIN_MSG_LINK(WM_MOUSEMOVE, pdispatch, this, &start::_001OnMouseMove);
+
+   }
+
+   int start::hit_test(point pt)
+   {
+      if (m_rectPlay.contains(pt))
+      {
+         return 0;
+      }
+      if (m_rectLobby.contains(pt))
+      {
+         return 1;
+      }
+      return -1;
+   }
+
+
+   void start::_001OnCreate(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::create, pcreate, pobj);
+
+      pcreate->previous();
+
+      if (pcreate->m_bRet)
+         return;
+
+      string strText;
+
+
+   }
+
+   void start::_001OnDestroy(signal_details * pobj)
+   {
+
+
+   }
+
+   void start::_001OnMouseMove(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse, pmouse, pobj);
+
+      point pt = pmouse->m_pt;
+
+      ScreenToClient(&pt);
+
+      int iHover = hit_test(pt);
+
+      if (m_iHover != iHover)
+      {
+
+         if (iHover < 0)
+         {
+
+            ReleaseCapture();
+
+         }
+         else if(m_iHover < 0)
+         {
+
+            SetCapture();
+
+         }
+
+         m_iHover = iHover;
+
+
+      }
+
+   }
+
+
+   void start::_001OnLButtonDown(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse, pmouse, pobj);
+
+      pobj->m_bRet = true;
+
+   }
+
+   void start::_001OnLButtonUp(signal_details * pobj)
+   {
+
+      SCAST_PTR(::message::mouse, pmouse, pobj);
+
+      pobj->m_bRet = true;
+
+      point pt = pmouse->m_pt;
+
+      ScreenToClient(&pt);
+
+      int iHover = hit_test(pt);
+
+      if (iHover >= 0)
+      {
+
+         Application.m_pmainpane->set_cur_tab_by_id(PaneViewHelloMultiverse);
+
+      }
+
+   }
+
+   void start::_001OnLayout(signal_details * pobj)
+   {
+
+      synch_lock sl(m_pmutex);
+
+
+   }
+
+
+   void start::on_update(::user::impact * pSender, LPARAM lHint, object* phint)
+   {
+
+      if (lHint == 0)
+      {
+         sp(::userex::pane_tab_view) ppaneview = GetTypedParent < ::userex::pane_tab_view >();
+         //if(ppaneview.is_set())
+         //{
+         //   ppaneview->m_pflagview = this;
+         //}
+
+      }
+      UNREFERENCED_PARAMETER(pSender);
+      UNREFERENCED_PARAMETER(lHint);
+      UNREFERENCED_PARAMETER(phint);
+   }
+
+   bool start::in_anime()
+   {
+      return false;
+   }
+
+
+   void start::draw_button(::draw2d::graphics * pdc, int iButton, rect & rectButton, string str1, string str2, COLORREF cr1, COLORREF cr2)
+   {
+
+      if (m_iHover == iButton)
+      {
+
+         rect r = rectButton;
+         r.deflate(25, 25);
+         //for (index i = 0; i < 25; i++)
+         {
+          
+            pdc->Draw3dRect(r, cr1, cr1);
+            
+         }
+
+      }
+      //else
+      //{
+      //   pdc->FillSolidRect(m_rectPlay, ARGB(255, 0, 0, 0));
+      //}
+
+      pdc->selectFont(m_font);
+
+
+
+      pdc->set_text_color(cr2);
+      //      pdc->set_text_color(ARGB(255, 128, 184, 184));
+
+      rect rect;
+
+      rect.left = 0;
+      rect.top = 0;
+      rect.right = pdc->GetTextExtent(str1).cx;
+      rect.bottom = pdc->GetTextExtent(str1).cy;
+
+      rect.Align(align_center, rectButton);
+
+      pdc->TextOut(rect.left, rect.top, str1);
+
+      pdc->selectFont(m_font2);
+
+
+      ::rect r2;
+
+      r2.left = 0;
+      r2.top = 0;
+      r2.right = pdc->GetTextExtent(str2).cx;
+      r2.bottom = pdc->GetTextExtent(str2).cy;
+
+      r2.Align(align_center, rectButton);
+
+      r2.offset(0, -r2.top + rect.bottom);
+
+      pdc->set_text_color(ARGB(255, 128, 128, 128));
+      pdc->TextOut(r2.left, r2.top, str2);
+
+   }
+
+   void start::_001OnDraw(::draw2d::dib * pdib)
+   {
+
+      ::draw2d::graphics * pdc = pdib->get_graphics();
+
+      ::rect rectClient;
+
+      GetClientRect(rectClient);
+
+      if (rectClient.area() <= 0)
+         return;
+
+      uint64_t startTime = get_nanos();
+
+      //pdc->FillSolidRect(rectClient, ARGB(255, 0, 0, 0));
+
+      pdc->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
+
+      draw_button(pdc, 0, m_rectPlay, "Play Now", "Play Solo", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
+
+      draw_button(pdc, 1, m_rectLobby, "Create Lobby", "Play with Friends", ARGB(255, 204, 148, 128), ARGB(255, 238, 148, 48));
+
+
+   }
+
+
+
+
+
+   document * start::get_document()
+   {
+
+      return  dynamic_cast < document * > (::user::impact::get_document());
+
+   }
+
+
+
+
+   void start::layout()
+   {
+
+      rect rectClient;
+
+      GetClientRect(rectClient);
+
+      if (rectClient.area() <= 0)
+         return;
+
+      m_rectPlay = rectClient;
+
+      m_rectPlay.right -= m_rectPlay.width() / 2;
+
+      m_rectLobby = rectClient;
+
+      m_rectLobby.left += m_rectLobby.width() / 2;
+
+   }
+
+
+
+
+
+
+} // namespace matchmaking
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

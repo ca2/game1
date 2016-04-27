@@ -16,20 +16,57 @@
     <ClCompile Include="user_font_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include=".\matchmaking_application.cpp" />
-    <ClCompile Include=".\matchmaking_document.cpp" />
-    <ClCompile Include=".\matchmaking_frame.cpp" />
-    <ClCompile Include="matchmaking.cpp" />
-    <ClCompile Include=".\matchmaking_pane_view.cpp" />
-    <ClCompile Include=".\matchmaking_pane_view_update_hint.cpp" />
-    <ClCompile Include=".\matchmaking_view.cpp" />
-    <ClCompile Include="matchmaking_edit_view.cpp" />
-    <ClCompile Include="matchmaking_font_view.cpp" />
-    <ClCompile Include="matchmaking_main_view.cpp" />
-    <ClCompile Include="matchmaking_render.cpp" />
-    <ClCompile Include="matchmaking_switcher_view.cpp" />
-    <ClCompile Include="matchmaking_toggle_view.cpp" />
-    <ClCompile Include="matchmaking_top_view.cpp" />
+    <ClCompile Include="matchmaking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_edit_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_font_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_main_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_pane_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_pane_view_update_hint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_switcher_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_toggle_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_top_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include=".\matchmaking_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_lobby.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmaking_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -80,8 +117,19 @@
     <ClInclude Include="matchmaking_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="matchmaking_start.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_lobby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmaking_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="game_matchmaking.def" />
+    <None Include="game_matchmaking.def">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

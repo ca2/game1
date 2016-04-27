@@ -498,8 +498,11 @@
     <ClCompile Include=".\matchmaking_view.cpp" />
     <ClCompile Include="matchmaking_edit_view.cpp" />
     <ClCompile Include="matchmaking_font_view.cpp" />
+    <ClCompile Include="matchmaking_lobby.cpp" />
+    <ClCompile Include="matchmaking_main.cpp" />
     <ClCompile Include="matchmaking_main_view.cpp" />
     <ClCompile Include="matchmaking_render.cpp" />
+    <ClCompile Include="matchmaking_start.cpp" />
     <ClCompile Include="matchmaking_switcher_view.cpp" />
     <ClCompile Include="matchmaking_toggle_view.cpp" />
     <ClCompile Include="matchmaking_top_view.cpp" />
@@ -512,11 +515,14 @@
     <ClInclude Include="matchmaking_font_view.h" />
     <ClInclude Include="matchmaking_frame.h" />
     <ClInclude Include="matchmaking.h" />
+    <ClInclude Include="matchmaking_lobby.h" />
+    <ClInclude Include="matchmaking_main.h" />
     <ClInclude Include="matchmaking_main_view.h" />
     <ClInclude Include="matchmaking_pane_view.h" />
     <ClInclude Include="matchmaking_pane_view_update_hint.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="matchmaking_render.h" />
+    <ClInclude Include="matchmaking_start.h" />
     <ClInclude Include="matchmaking_switcher_view.h" />
     <ClInclude Include="matchmaking_toggle_view.h" />
     <ClInclude Include="matchmaking_top_view.h" />
