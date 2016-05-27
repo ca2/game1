@@ -60,7 +60,7 @@ namespace tictactoe
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
-      virtual void _001OnDraw(::draw2d::dib * pdib);
+      virtual void _001OnDraw(::draw2d::graphics * pgraphics);
       virtual void tictactoe_render(::draw2d::dib * pdib);
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
@@ -82,9 +82,9 @@ namespace tictactoe
 
 
 
-      virtual void draw_x(::draw2d::graphics * pdc,const RECT & lpcrect);
-      virtual void draw_o(::draw2d::graphics * pdc,const RECT & lpcrect);
-      virtual void draw_board(::draw2d::graphics * pdc,const RECT & lpcrect);
+      virtual void draw_x(::draw2d::graphics * pgraphics,const RECT & lpcrect);
+      virtual void draw_o(::draw2d::graphics * pgraphics,const RECT & lpcrect);
+      virtual void draw_board(::draw2d::graphics * pgraphics,const RECT & lpcrect);
 
       virtual void new_game();
 

@@ -161,9 +161,9 @@ namespace tetris
 
 
 
-   //void _TetrisPreview::paint(int x, int y::draw2d::graphics * pdc)
+   //void _TetrisPreview::paint(int x, int y::draw2d::graphics * pgraphics)
    //{
-   //   pdc->BitBlt(0, 
+   //   pgraphics->BitBlt(0, 
    //   while(!g.drawImage(image,0,0,this)) {};
    //}
 

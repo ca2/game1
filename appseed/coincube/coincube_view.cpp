@@ -185,14 +185,14 @@ namespace coincube
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdib)
+   void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
       rect rectClient;
       GetClientRect(rectClient);
 
 
-      //::backview::user::interaction::_001OnDraw(pdc);
+      //::backview::user::interaction::_001OnDraw(pgraphics);
 
       int x = 0;
       int y = 0;
@@ -214,7 +214,7 @@ namespace coincube
 
          }
 
-         pdc->BitBlt(point(x,y),m_dibMon2->m_size,m_dibMon2->get_graphics());
+         pgraphics->BitBlt(point(x,y),m_dibMon2->m_size,m_dibMon2->get_graphics());
 
          x+=m_dibMon2->m_size.cx;
 
@@ -240,7 +240,7 @@ namespace coincube
 
          }
 
-         pdc->BitBlt(point(x,y),m_dibMony->m_size,m_dibMony->get_graphics());
+         pgraphics->BitBlt(point(x,y),m_dibMony->m_size,m_dibMony->get_graphics());
 
          x+=m_dibMony->m_size.cx;
 
@@ -251,15 +251,15 @@ namespace coincube
 
       r.top = r.bottom - m_pot.m_iSize * 6;
 
-      pdc->FillSolidRect(r,ARGB(84,255,255,255));
+      pgraphics->FillSolidRect(r,ARGB(84,255,255,255));
 
       m_pot.m_pt.x = m_pot.m_pt.x + (m_ptFinal.x - m_pot.m_pt.x)  * 0.1;
 
-      m_pot.on_draw(pdc);
+      m_pot.on_draw(pgraphics);
 
       for(auto & pc : m_money)
       {
-         pc->on_draw(pdc);
+         pc->on_draw(pgraphics);
       }
 
 

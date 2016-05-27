@@ -105,18 +105,18 @@ namespace tetris
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdib)
+   void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
       ::rect rectClient;
 
       GetClientRect(rectClient);
 
-      //pdc->FillSolidRect(rectClient, ARGB(255,84,84,84));
+      //pgraphics->FillSolidRect(rectClient, ARGB(255,84,84,84));
 
-      //pdc->set_text_color(ARGB(255,255,255,255));
+      //pgraphics->set_text_color(ARGB(255,255,255,255));
 
 
       if(m_ptetris == NULL || m_ppreview == NULL)
@@ -230,20 +230,20 @@ namespace tetris
          m_dib->get_graphics()->fill_path(path2);
       }
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      pdc->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
+      pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
 
-      pdc->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
-      pdc->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y+30,"Level:");
-      pdc->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y,m_strScore);
-      pdc->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y+30,m_strLevel);
+      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
+      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y+30,"Level:");
+      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y,m_strScore);
+      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y+30,m_strLevel);
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_set);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
 
-      pdc->from(::point(x,y),m_ppreview->m_dib->m_size,m_ppreview->m_dib->get_graphics(),::null_point(),SRCCOPY);
+      pgraphics->from(::point(x,y),m_ppreview->m_dib->m_size,m_ppreview->m_dib->get_graphics(),::null_point(),SRCCOPY);
 
-      pdc->from(::point(x,y + m_ppreview->m_dib->m_size.cy + 10),m_ptetris->m_dib->m_size,m_ptetris->m_dib->get_graphics(),::null_point(),SRCCOPY);
+      pgraphics->from(::point(x,y + m_ppreview->m_dib->m_size.cy + 10),m_ptetris->m_dib->m_size,m_ptetris->m_dib->get_graphics(),::null_point(),SRCCOPY);
 
    }
 

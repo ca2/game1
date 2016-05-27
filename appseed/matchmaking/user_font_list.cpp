@@ -126,16 +126,16 @@ namespace user
    }
 
 
-   void font_list::_001OnDraw(::draw2d::dib * pdib)
+   void font_list::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
       rect rectClient;
 
       GetClientRect(rectClient);
 
-      pdc->FillSolidRect(rectClient,ARGB(123,255,255,255));
+      pgraphics->FillSolidRect(rectClient,ARGB(123,255,255,255));
 
       if(m_strText != m_strTextLayout)
       {
@@ -162,36 +162,36 @@ namespace user
 
          if(i == m_iSel)
          {
-            pdc->FillSolidRect(r,ARGB(184,84,84,84));
+            pgraphics->FillSolidRect(r,ARGB(184,84,84,84));
 
             if(i == m_iHover)
             {
 
-               pdc->set_text_color(ARGB(255,223,255,223));
+               pgraphics->set_text_color(ARGB(255,223,255,223));
 
             }
             else
             {
 
-               pdc->set_text_color(ARGB(255,223,223,223));
+               pgraphics->set_text_color(ARGB(255,223,223,223));
 
             }
 
          }
          else if(i == m_iHover)
          {
-            pdc->FillSolidRect(r,ARGB(255,0,0,0));
-            pdc->set_text_color(ARGB(255,255,255,255));
+            pgraphics->FillSolidRect(r,ARGB(255,0,0,0));
+            pgraphics->set_text_color(ARGB(255,255,255,255));
          }
          else
          {
-            pdc->set_text_color(ARGB(255,84,84,84));
+            pgraphics->set_text_color(ARGB(255,84,84,84));
          }
 
 
-         pdc->SelectFont(m_fonta[i]);
+         pgraphics->SelectFont(m_fonta[i]);
 
-         pdc->TextOut(r.left + m_rectMargin.left,r.top + m_rectMargin.top,strText);
+         pgraphics->TextOut(r.left + m_rectMargin.left,r.top + m_rectMargin.top,strText);
 
 
 
@@ -250,7 +250,7 @@ namespace user
 
       g->enum_fonts(m_straFontEnum, m_straNameEnum);
 
-      ::draw2d::graphics * pdc = g;
+      ::draw2d::graphics * pgraphics = g;
 
       string strText = m_strTextLayout;
 
@@ -284,9 +284,9 @@ namespace user
 
          }
 
-         pdc->SelectFont(m_fonta[i]);
+         pgraphics->SelectFont(m_fonta[i]);
 
-         s = pdc->GetTextExtent(strText);
+         s = pgraphics->GetTextExtent(strText);
 
          s.cx += m_rectMargin.left + m_rectMargin.right;
          s.cy += m_rectMargin.top + m_rectMargin.bottom;
@@ -300,7 +300,7 @@ namespace user
             h = 0;
          }
 
-         //pdc->TextOut(x + m_rectMargin.left,y + m_rectMargin.top,strText);
+         //pgraphics->TextOut(x + m_rectMargin.left,y + m_rectMargin.top,strText);
 
          r.left = x ;
          r.top = y ;

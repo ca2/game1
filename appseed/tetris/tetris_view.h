@@ -49,7 +49,7 @@ namespace tetris
 
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
-      virtual void _001OnDraw(::draw2d::dib * pdib);
+      virtual void _001OnDraw(::draw2d::graphics * pgraphics);
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 

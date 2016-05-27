@@ -148,10 +148,10 @@ namespace tictactoe
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdibParam)
+   void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      ::draw2d::graphics * pdc = pdibParam->get_graphics();
+      ::draw2d::graphics * pgraphics = pdibParam->get_graphics();
 
       ::draw2d::dib * pdib = NULL;
 
@@ -177,17 +177,17 @@ namespace tictactoe
 
       GetClientRect(rectClient);
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_set);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
 
-      //pdc->FillSolidRect(rectClient, ARGB(255,184,184,184));
+      //pgraphics->FillSolidRect(rectClient, ARGB(255,184,184,184));
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
       if(m_dibBk.is_set() && m_dibBk->area() > 0)
       {
-        // pdc->FillSolidRect(rectClient,ARGB(0,0,0,0));
+        // pgraphics->FillSolidRect(rectClient,ARGB(0,0,0,0));
          if(m_bBkAlpha == 255)
          {
-            pdc->BitBlt(
+            pgraphics->BitBlt(
                0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
                MIN(rectClient.height(),m_dibBk->m_size.cy),
                m_dibBk->get_graphics());
@@ -195,17 +195,17 @@ namespace tictactoe
          }
          else
          {
-            System.visual().imaging().bitmap_blend(pdc,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
+            System.visual().imaging().bitmap_blend(pgraphics,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
                MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
          }
       }
       else
       {
-         pdc->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
+         pgraphics->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
       }
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      pdc->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
+      pgraphics->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
 
    }
 
@@ -213,7 +213,7 @@ namespace tictactoe
    void view::tictactoe_render(::draw2d::dib * pdib)
    {
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
       if(m_dib->area() <= 0)
          return;
@@ -221,7 +221,7 @@ namespace tictactoe
       if(m_dibWork->area() <= 0)
          return;
 
-      m_dib->defer_realize(pdc);
+      m_dib->defer_realize(pgraphics);
 
       m_dib->Fill(0,0,0,0);
 
@@ -349,26 +349,26 @@ namespace tictactoe
 
       }
 
-      //pdc->FillSolidRect(50, 50, 100, 100, ARGB(255, 255, 255, 0));
+      //pgraphics->FillSolidRect(50, 50, 100, 100, ARGB(255, 255, 255, 0));
 
       //m_dib->get_graphics()->FillSolidRect(10, 10, 100, 100, ARGB(255, 0, 255, 0));
 
-      pdc->SetStretchBltMode(HALFTONE);
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
-      pdc->BitBlt(rectClient, m_dib->get_graphics());
-//      System.visual().imaging().true_blend(pdc, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-  //    System.visual().imaging().true_blend(pdc, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-    //  System.visual().imaging().true_blend(pdc, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+      pgraphics->SetStretchBltMode(HALFTONE);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->BitBlt(rectClient, m_dib->get_graphics());
+//      System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+  //    System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+    //  System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
       /*for(int32_t i = 0; i < iBlur + 1; i++)
       {
       if((i % 2) == 1)
-      System.visual().imaging().true_blend(pdc, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+      System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
       }
       */
 
       m_font->m_bUpdated = false;
 
-      pdc->set_font(m_font);
+      pgraphics->set_font(m_font);
 
       bool bHasMatch = m_parbitrator->check_winner() != check_none;
 
@@ -401,10 +401,10 @@ namespace tictactoe
       }
 
 
-      pdc->SelectObject(brushText);
-      pdc->SelectObject(penText);
+      pgraphics->SelectObject(brushText);
+      pgraphics->SelectObject(penText);
 
-      draw_board(pdc,m_rectSpace);
+      draw_board(pgraphics,m_rectSpace);
 
 
       for(index i = 0; i < board.get_size(); i++)
@@ -420,14 +420,14 @@ namespace tictactoe
 
                if(m_parbitrator->m_board.match(i,j) != check_none)
                {
-                  pdc->SelectObject(brushToe);
-                  pdc->SelectObject(penToe);
+                  pgraphics->SelectObject(brushToe);
+                  pgraphics->SelectObject(penToe);
 
                }
                else
                {
-                  pdc->SelectObject(brushText);
-                  pdc->SelectObject(penText);
+                  pgraphics->SelectObject(brushText);
+                  pgraphics->SelectObject(penText);
 
                }
 
@@ -436,12 +436,12 @@ namespace tictactoe
                if(echeck == check_x)
                {
 
-                  draw_x(pdc,rectCheck);
+                  draw_x(pgraphics,rectCheck);
 
                }
                else
                {
-                  draw_o(pdc,rectCheck);
+                  draw_o(pgraphics,rectCheck);
                }
 
             }
@@ -453,11 +453,11 @@ namespace tictactoe
       }
 
 
-      //pdc->SelectObject(brushText);
+      //pgraphics->SelectObject(brushText);
 
-      //pdc->TextOut((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
+      //pgraphics->TextOut((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       for(index i = 0; i < board.get_size(); i++)
       {
@@ -472,7 +472,7 @@ namespace tictactoe
 
                get_check_rect(rectCheck,i,j);
 
-               pdc->FillSolidRect(rectCheck,ARGB(1,255,255,255));
+               pgraphics->FillSolidRect(rectCheck,ARGB(1,255,255,255));
 
             }
 
@@ -520,15 +520,15 @@ namespace tictactoe
 
       //               dib->create(face->glyph->bitmap.width, face->glyph->bitmap.rows);
 
-      //               dib->realize(pdc);
+      //               dib->realize(pgraphics);
 
       //               draw_freetype_bitmap(dib.m_p, 0,0,&face->glyph->bitmap,0,0, 184, 77, 77, 184);
 
-      //               pdc->SetStretchBltMode(HALFTONE);
+      //               pgraphics->SetStretchBltMode(HALFTONE);
 
-      //               pdc->StretchBlt(0, 0, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
+      //               pgraphics->StretchBlt(0, 0, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
 
-      //               pdc->StretchBlt(0, rectClient.height() - dib->m_size.cy / 40, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
+      //               pgraphics->StretchBlt(0, rectClient.height() - dib->m_size.cy / 40, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
 
       //            }
 
@@ -571,15 +571,15 @@ namespace tictactoe
 
       //               dib->create(face->glyph->bitmap.width, face->glyph->bitmap.rows);
 
-      //               dib->realize(pdc);
+      //               dib->realize(pgraphics);
 
       //               draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0, 184, 84, 184, 77);
 
-      //               pdc->SetStretchBltMode(HALFTONE);
+      //               pgraphics->SetStretchBltMode(HALFTONE);
 
-      //               pdc->StretchBlt(rectClient.width() - dib->m_size.cx / 32, 0, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
+      //               pgraphics->StretchBlt(rectClient.width() - dib->m_size.cx / 32, 0, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
 
-      //               pdc->StretchBlt(rectClient.width() - dib->m_size.cx / 32, rectClient.height() - dib->m_size.cy / 32, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
+      //               pgraphics->StretchBlt(rectClient.width() - dib->m_size.cx / 32, rectClient.height() - dib->m_size.cy / 32, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
 
       //            }
 
@@ -811,7 +811,7 @@ namespace tictactoe
    }
 
 
-   void view::draw_board(::draw2d::graphics * pdc,const RECT & rect)
+   void view::draw_board(::draw2d::graphics * pgraphics,const RECT & rect)
    {
 
       ::draw2d::path_sp path(allocer());
@@ -836,11 +836,11 @@ namespace tictactoe
       path->add_line(rect.right,rect.top + height(rect) * 2 / 3);
       path->end_figure(false);
 
-      pdc->draw_path(path);
+      pgraphics->draw_path(path);
 
    }
 
-   void view::draw_x(::draw2d::graphics * pdc,const RECT & rect)
+   void view::draw_x(::draw2d::graphics * pgraphics,const RECT & rect)
    {
 
       /*::draw2d::dib_sp dib(allocer());
@@ -849,7 +849,7 @@ namespace tictactoe
 
       dib->Fill(0,0,0,0);
 
-      dib->get_graphics()->SelectObject(pdc->get_current_pen());
+      dib->get_graphics()->SelectObject(pgraphics->get_current_pen());
 
       dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
 
@@ -872,16 +872,16 @@ namespace tictactoe
       path->add_line(rect.right,rect.top,rect.left,rect.bottom);
       path->end_figure(false);
 
-      pdc->draw_path(path);
+      pgraphics->draw_path(path);
 
-      //pdc->BitBlt(rect,dib->get_graphics());
+      //pgraphics->BitBlt(rect,dib->get_graphics());
 
    }
 
-   void view::draw_o(::draw2d::graphics * pdc,const RECT & rect)
+   void view::draw_o(::draw2d::graphics * pgraphics,const RECT & rect)
    {
 
-      pdc->DrawEllipse(rect);
+      pgraphics->DrawEllipse(rect);
 
    }
 

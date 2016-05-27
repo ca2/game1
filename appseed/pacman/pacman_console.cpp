@@ -242,7 +242,7 @@ namespace pacman
 
                      //dib->create(face->glyph->bitmap.width,face->glyph->bitmap.rows);
 
-                     //dib->realize(pdc);
+                     //dib->realize(pgraphics);
                      COLORREF cr = console_COLORREF(iColor);
 
                      byte a = argb_get_a_value(cr);
@@ -258,11 +258,11 @@ namespace pacman
 
                      m_dib->get_graphics()->BitBlt(x - m_offset.cx,y - m_offset.cy,m_dibChar->m_size.cx,m_dibChar->m_size.cy,m_dibChar->get_graphics(),0,0,SRCCOPY);
 
-                     //pdc->SetStretchBltMode(HALFTONE);
+                     //pgraphics->SetStretchBltMode(HALFTONE);
 
-                     //pdc->StretchBlt(0,0,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
+                     //pgraphics->StretchBlt(0,0,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
 
-                     //pdc->StretchBlt(0,m_cy - dib->m_size.cy / 40,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
+                     //pgraphics->StretchBlt(0,m_cy - dib->m_size.cy / 40,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
 
                   }
 

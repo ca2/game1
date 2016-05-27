@@ -30,32 +30,32 @@ namespace coincube
 
       rect r(m_pt.x - m_iSize * 4,m_pt.y - m_iSize * 4,m_pt.x + m_iSize * 4,m_pt.y + m_iSize * 4);
 
-      pdc->SelectObject(b1);
+      pgraphics->SelectObject(b1);
 
-      pdc->FillEllipse(r);
+      pgraphics->FillEllipse(r);
 
 
       ::draw2d::pen_sp pen(allocer());
 
       pen->create_solid(m_iSize / 2, ARGB(255, 100, 120, 200));
 
-      pdc->SelectObject(pen);
+      pgraphics->SelectObject(pen);
 
 
-      pdc->MoveTo(m_pt.x - m_iSize,m_pt.y - m_iSize);
-      pdc->LineTo(m_pt.x - m_iSize,m_pt.y + m_iSize);
-      pdc->LineTo(m_pt.x + m_iSize,m_pt.y + m_iSize);
-      pdc->LineTo(m_pt.x + m_iSize,m_pt.y - m_iSize);
+      pgraphics->MoveTo(m_pt.x - m_iSize,m_pt.y - m_iSize);
+      pgraphics->LineTo(m_pt.x - m_iSize,m_pt.y + m_iSize);
+      pgraphics->LineTo(m_pt.x + m_iSize,m_pt.y + m_iSize);
+      pgraphics->LineTo(m_pt.x + m_iSize,m_pt.y - m_iSize);
 
       rect rCred(m_pt.x - m_iSize, m_pt.y + m_iSize - m_iCredit, m_pt.x+m_iSize, m_pt.y+m_iSize);
 
 
 
-      pdc->FillSolidRect(rCred,ARGB(255,250,240,10));
+      pgraphics->FillSolidRect(rCred,ARGB(255,250,240,10));
 
       r.deflate(m_iSize *2, m_iSize * 2);
 
-      pdc->DrawEllipse(r);
+      pgraphics->DrawEllipse(r);
 
 
 
@@ -96,9 +96,9 @@ namespace coincube
 
             rect r(m_pt.x - m_iSize * 4 - iSize,m_pt.y - m_iSize * 4 - iSize,m_pt.x + m_iSize * 4 + iSize,m_pt.y + m_iSize * 4 + iSize);
 
-            pdc->SelectObject(b2);
+            pgraphics->SelectObject(b2);
 
-            pdc->FillEllipse(r);
+            pgraphics->FillEllipse(r);
 
 
 
@@ -117,9 +117,9 @@ namespace coincube
 
             rect r(m_pt.x - m_iSize * 4 - iSize,m_pt.y - m_iSize * 4 - iSize,m_pt.x + m_iSize * 4 + iSize,m_pt.y + m_iSize * 4 + iSize);
 
-            pdc->SelectObject(b2);
+            pgraphics->SelectObject(b2);
 
-            pdc->FillEllipse(r);
+            pgraphics->FillEllipse(r);
 
          }
          else

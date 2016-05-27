@@ -302,9 +302,9 @@ namespace matchmaking
 
       rectClient.bottom = m_cy;
 
-      //pdc->set_alpha_mode(::draw2d::alpha_mode_set);
+      //pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
 
-      //pdc->FillSolidRect(rectClient,ARGB(0, 0, 0, 0));
+      //pgraphics->FillSolidRect(rectClient,ARGB(0, 0, 0, 0));
 
       //      int32_t iCount = 30;
 
@@ -350,7 +350,7 @@ namespace matchmaking
 
       ::size size;
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
       synch_lock slText(m_pmutexText);
 
@@ -358,9 +358,9 @@ namespace matchmaking
 
       slText.unlock();
 
-      pdc->set_font(m_font);
+      pgraphics->set_font(m_font);
 
-      size = pdc->GetTextExtent(strHelloMultiverse);
+      size = pgraphics->GetTextExtent(strHelloMultiverse);
 
       if(!m_bFirstDone)
       {
@@ -379,7 +379,7 @@ namespace matchmaking
 
             m_dib.initialize(m_cxCache1,m_cyCache1,m_dMaxRadius);
 
-            //m_dib->defer_realize(pdc);
+            //m_dib->defer_realize(pgraphics);
 
             m_dib->Fill(0,0,0,0);
 
@@ -468,17 +468,17 @@ namespace matchmaking
 
       }
 
-      pdc->SetStretchBltMode(HALFTONE);
+      pgraphics->SetStretchBltMode(HALFTONE);
 
-      pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      System.visual().imaging().bitmap_blend(pdc,null_point(),rectClient.size(),m_dibTemplate->get_graphics(),null_point(),84 + 49 + (255 - 84 - 49) * r);
+      System.visual().imaging().bitmap_blend(pgraphics,null_point(),rectClient.size(),m_dibTemplate->get_graphics(),null_point(),84 + 49 + (255 - 84 - 49) * r);
 
-      //pdc->from(rectClient.top_left(),m_dibTemplate, null_point(), rectClient>si);
+      //pgraphics->from(rectClient.top_left(),m_dibTemplate, null_point(), rectClient>si);
 
-      pdc->set_font(m_font);
+      pgraphics->set_font(m_font);
 
-      pdc->set_text_rendering(::draw2d::text_rendering_anti_alias);
+      pgraphics->set_text_rendering(::draw2d::text_rendering_anti_alias);
 
       if(Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
       {
@@ -504,17 +504,17 @@ namespace matchmaking
 
       }
 
-      pdc->SelectObject(brushText);
+      pgraphics->SelectObject(brushText);
 
       //if(!m_bAlternate)
       {
 
-         pdc->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
+         pgraphics->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
 
       }
-      //      pdc->FillSolidRect(200,00,100,100,ARGB(128,128,128,255));
+      //      pgraphics->FillSolidRect(200,00,100,100,ARGB(128,128,128,255));
 
-      //    pdc->FillSolidRect(200,200,100,100,ARGB(128,128,128,0));
+      //    pgraphics->FillSolidRect(200,200,100,100,ARGB(128,128,128,0));
 
       slText.lock();
 
@@ -607,13 +607,13 @@ namespace matchmaking
 
       }
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
-      pdc->set_font(m_font);
+      pgraphics->set_font(m_font);
 
       string strHelloMultiverse = get_matchmaking();
 
-      ::size size = pdc->GetTextExtent(strHelloMultiverse);
+      ::size size = pgraphics->GetTextExtent(strHelloMultiverse);
 
       if(!Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
       {
@@ -631,7 +631,7 @@ namespace matchmaking
 
          }
 
-         m_dib->defer_realize(pdc);
+         m_dib->defer_realize(pgraphics);
 
          m_dib->Fill(0,0,0,0);
 
@@ -674,15 +674,15 @@ namespace matchmaking
 
          }
 
-         pdc->SetStretchBltMode(HALFTONE);
+         pgraphics->SetStretchBltMode(HALFTONE);
 
-         pdc->set_alpha_mode(::draw2d::alpha_mode_blend);
+         pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-         pdc->BitBlt(rectClient,m_dib->get_graphics());
+         pgraphics->BitBlt(rectClient,m_dib->get_graphics());
 
       }
 
-      pdc->set_text_rendering(::draw2d::text_rendering_anti_alias);
+      pgraphics->set_text_rendering(::draw2d::text_rendering_anti_alias);
 
       if(Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
       {
@@ -708,9 +708,9 @@ namespace matchmaking
 
       }
 
-      pdc->SelectObject(brushText);
+      pgraphics->SelectObject(brushText);
 
-      pdc->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
+      pgraphics->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
 
       byte a,R,g,b;
 
@@ -771,15 +771,15 @@ namespace matchmaking
 
                      dib->create(face->glyph->bitmap.width,face->glyph->bitmap.rows);
 
-                     dib->realize(pdc);
+                     dib->realize(pgraphics);
 
                      draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0,a,R,g,b);
 
-                     pdc->SetStretchBltMode(HALFTONE);
+                     pgraphics->SetStretchBltMode(HALFTONE);
 
-                     pdc->StretchBlt(0,0,dib->get_size().cx / 40,dib->get_size().cy / 40,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
+                     pgraphics->StretchBlt(0,0,dib->get_size().cx / 40,dib->get_size().cy / 40,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
 
-                     pdc->StretchBlt(0,m_cy - dib->get_size().cy / 40,dib->get_size().cx / 40,dib->get_size().cy / 40,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
+                     pgraphics->StretchBlt(0,m_cy - dib->get_size().cy / 40,dib->get_size().cx / 40,dib->get_size().cy / 40,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
 
                   }
 
@@ -822,15 +822,15 @@ namespace matchmaking
 
                      dib->create(face->glyph->bitmap.width,face->glyph->bitmap.rows);
 
-                     dib->realize(pdc);
+                     dib->realize(pgraphics);
 
                      draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0,a,R,g,b);
 
-                     pdc->SetStretchBltMode(HALFTONE);
+                     pgraphics->SetStretchBltMode(HALFTONE);
 
-                     pdc->StretchBlt(m_cx - dib->get_size().cx / 32,0,dib->get_size().cx / 32,dib->get_size().cy / 32,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
+                     pgraphics->StretchBlt(m_cx - dib->get_size().cx / 32,0,dib->get_size().cx / 32,dib->get_size().cy / 32,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
 
-                     pdc->StretchBlt(m_cx - dib->get_size().cx / 32,m_cy - dib->get_size().cy / 32,dib->get_size().cx / 32,dib->get_size().cy / 32,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
+                     pgraphics->StretchBlt(m_cx - dib->get_size().cx / 32,m_cy - dib->get_size().cy / 32,dib->get_size().cx / 32,dib->get_size().cy / 32,dib->get_graphics(),0,0,dib->get_size().cx,dib->get_size().cy,SRCCOPY);
 
                   }
 

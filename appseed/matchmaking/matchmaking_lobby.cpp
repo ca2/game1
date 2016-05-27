@@ -183,10 +183,10 @@ namespace matchmaking
 
 
 
-   void lobby::_001OnDraw(::draw2d::dib * pdib)
+   void lobby::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      ::draw2d::graphics * pdc = pdib->get_graphics();
+      
 
       ::rect rectClient;
 
@@ -195,21 +195,21 @@ namespace matchmaking
       if (rectClient.area() <= 0)
          return;
 
-      pdc->selectFont(m_font);
+      pgraphics->selectFont(m_font);
 
       uint64_t startTime = get_nanos();
 
-      pdc->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
+      pgraphics->FillSolidRect(rectClient, ARGB(255, 23, 11, 33));
 
-      draw_member(pdc, 0, m_rect1, "+", "Player 1", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
+      draw_member(pgraphics, 0, m_rect1, "+", "Player 1", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
 
-      draw_member(pdc, 1, m_rect2, "+", "Player 2", ARGB(255, 204, 148, 128), ARGB(255, 238, 148, 48));
+      draw_member(pgraphics, 1, m_rect2, "+", "Player 2", ARGB(255, 204, 148, 128), ARGB(255, 238, 148, 48));
 
-      draw_member(pdc, 2, m_rect3, "+", "Player 3", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
+      draw_member(pgraphics, 2, m_rect3, "+", "Player 3", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
 
-      draw_member(pdc, 3, m_rect4, "+", "Player 4", ARGB(255, 204, 148, 128), ARGB(255, 238, 148, 48));
+      draw_member(pgraphics, 3, m_rect4, "+", "Player 4", ARGB(255, 204, 148, 128), ARGB(255, 238, 148, 48));
 
-      draw_member(pdc, 4, m_rect5, "+", "Player 5", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
+      draw_member(pgraphics, 4, m_rect5, "+", "Player 5", ARGB(255, 128, 184, 180), ARGB(255, 48, 204, 198));
 
 
 
@@ -266,7 +266,7 @@ namespace matchmaking
 
 
 
-   void lobby::draw_member(::draw2d::graphics * pdc, int iButton, rect & rectButton, string str1, string str2, COLORREF cr1, COLORREF cr2)
+   void lobby::draw_member(::draw2d::graphics * pgraphics, int iButton, rect & rectButton, string str1, string str2, COLORREF cr1, COLORREF cr2)
    {
 
       if (m_iHover == iButton)
@@ -277,50 +277,50 @@ namespace matchmaking
          //for (index i = 0; i < 25; i++)
          {
 
-            pdc->Draw3dRect(r, cr1, cr1);
+            pgraphics->Draw3dRect(r, cr1, cr1);
 
          }
 
       }
       //else
       //{
-      //   pdc->FillSolidRect(m_rectPlay, ARGB(255, 0, 0, 0));
+      //   pgraphics->FillSolidRect(m_rectPlay, ARGB(255, 0, 0, 0));
       //}
 
-      pdc->selectFont(m_font);
+      pgraphics->selectFont(m_font);
 
 
 
-      pdc->set_text_color(cr2);
-      //      pdc->set_text_color(ARGB(255, 128, 184, 184));
+      pgraphics->set_text_color(cr2);
+      //      pgraphics->set_text_color(ARGB(255, 128, 184, 184));
 
       rect rect;
 
       rect.left = 0;
       rect.top = 0;
-      rect.right = pdc->GetTextExtent(str1).cx;
-      rect.bottom = pdc->GetTextExtent(str1).cy;
+      rect.right = pgraphics->GetTextExtent(str1).cx;
+      rect.bottom = pgraphics->GetTextExtent(str1).cy;
 
       rect.Align(align_center, rectButton);
 
-      pdc->TextOut(rect.left, rect.top, str1);
+      pgraphics->TextOut(rect.left, rect.top, str1);
 
-      pdc->selectFont(m_font2);
+      pgraphics->selectFont(m_font2);
 
 
       ::rect r2;
 
       r2.left = 0;
       r2.top = 0;
-      r2.right = pdc->GetTextExtent(str2).cx;
-      r2.bottom = pdc->GetTextExtent(str2).cy;
+      r2.right = pgraphics->GetTextExtent(str2).cx;
+      r2.bottom = pgraphics->GetTextExtent(str2).cy;
 
       r2.Align(align_center, rectButton);
 
       r2.offset(0, -r2.top + rect.bottom);
 
-      pdc->set_text_color(ARGB(255, 128, 128, 128));
-      pdc->TextOut(r2.left, r2.top, str2);
+      pgraphics->set_text_color(ARGB(255, 128, 128, 128));
+      pgraphics->TextOut(r2.left, r2.top, str2);
 
    }
 

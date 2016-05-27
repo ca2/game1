@@ -188,7 +188,7 @@ namespace arch001
 
 
 
-   void view::_001OnDraw(::draw2d::dib * pdib)
+   void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
       m_game._001OnDraw(pdib);
