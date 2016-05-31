@@ -28,7 +28,7 @@ namespace multimedia
 
       get_wave_player()->DecoderOpen(c);
 
-      c.Play(0, imedia::position(0),false);
+      c.Play(0, imedia_position(0),false);
 
       get_wave_player()->ExecuteCommand(c);
 

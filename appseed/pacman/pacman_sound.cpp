@@ -107,7 +107,7 @@
 //
 //            ExecuteCommand(command);
 //
-//            command.Play(imedia::position(0));
+//            command.Play(imedia_position(0));
 //
 //            ExecuteCommand(command);
 //
