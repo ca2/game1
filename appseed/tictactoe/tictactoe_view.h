@@ -61,7 +61,7 @@ namespace tictactoe
       virtual void install_message_handling(::message::dispatch * pdispatch);
 
       virtual void _001OnDraw(::draw2d::graphics * pgraphics);
-      virtual void tictactoe_render(::draw2d::dib * pdib);
+      virtual void tictactoe_render(::draw2d::graphics * pgraphics);
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 

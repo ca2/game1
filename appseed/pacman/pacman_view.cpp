@@ -117,16 +117,16 @@ namespace pacman
 
 
 
-   void view::_001OnDraw(::draw2d::graphics * pgraphics)
+   void view::_001OnDraw(::draw2d::graphics * pgraphicsParam)
    {
 
-      ::draw2d::graphics * pgraphics = pdibParam->get_graphics();
+      //::draw2d::graphics * pgraphics = pdibParam->get_graphics();
 
       ::rect rectClient;
 
       GetClientRect(rectClient);
 
-      pgraphics->FillSolidRect(rectClient, ARGB(184,0,0,0));
+      pgraphicsParam->FillSolidRect(rectClient, ARGB(184,0,0,0));
 
       //pgraphics->set_text_color(ARGB(255,255,255,255));
 
@@ -160,7 +160,7 @@ namespace pacman
 
       rectPacman.Align(align_center,rectClient);
 
-      pgraphics->BitBlt(rectPacman,pdib->m_dib->get_graphics());
+      pgraphicsParam->BitBlt(rectPacman,pdib->m_dib->get_graphics());
 
    }
 

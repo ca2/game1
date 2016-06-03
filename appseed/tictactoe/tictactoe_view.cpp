@@ -148,10 +148,10 @@ namespace tictactoe
 
 
 
-   void view::_001OnDraw(::draw2d::graphics * pgraphics)
+   void view::_001OnDraw(::draw2d::graphics * pgraphicsParam)
    {
 
-      ::draw2d::graphics * pgraphics = pdibParam->get_graphics();
+      //::draw2d::graphics * pgraphics = pdibParam->get_graphics();
 
       ::draw2d::dib * pdib = NULL;
 
@@ -177,17 +177,17 @@ namespace tictactoe
 
       GetClientRect(rectClient);
 
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
+      pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_set);
 
       //pgraphics->FillSolidRect(rectClient, ARGB(255,184,184,184));
 
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
       if(m_dibBk.is_set() && m_dibBk->area() > 0)
       {
         // pgraphics->FillSolidRect(rectClient,ARGB(0,0,0,0));
          if(m_bBkAlpha == 255)
          {
-            pgraphics->BitBlt(
+            pgraphicsParam->BitBlt(
                0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
                MIN(rectClient.height(),m_dibBk->m_size.cy),
                m_dibBk->get_graphics());
@@ -195,22 +195,22 @@ namespace tictactoe
          }
          else
          {
-            System.visual().imaging().bitmap_blend(pgraphics,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
+            System.visual().imaging().bitmap_blend(pgraphicsParam,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
                MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
          }
       }
       else
       {
-         pgraphics->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
+         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
       }
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      pgraphics->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
+      pgraphicsParam->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
 
    }
 
 
-   void view::tictactoe_render(::draw2d::dib * pdib)
+   void view::tictactoe_render(::draw2d::graphics * pgraphics)
    {
 
       
@@ -614,7 +614,7 @@ namespace tictactoe
 
          pdib->Fill(1,255,255,255);
 
-         tictactoe_render(pdib);
+         tictactoe_render(pdib->get_graphics());
 
       }
 
