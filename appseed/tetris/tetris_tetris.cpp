@@ -218,7 +218,7 @@ namespace tetris
 
    void _Tetris::run()
    {
-      int i;
+//      int i;
       aux++;
       while(atGame && ::get_thread()->m_bRun)
       {
