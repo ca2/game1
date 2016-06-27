@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED3191547110091C065 /* libcore.dylib */; };
-		078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libcore.dylib */; };
+		078B58F01B5CF71A00A7D3CF /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libios_core.dylib */; };
 		078DF8251C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
 		078DF8261C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
 		078DF8271C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
@@ -231,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078B58F01B5CF71A00A7D3CF /* libcore.dylib in Frameworks */,
+				078B58F01B5CF71A00A7D3CF /* libios_core.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				078AEED3191547110091C065 /* libcore.dylib */,
-				078AEED5191547110091C065 /* libcore.dylib */,
+				078AEED5191547110091C065 /* libios_core.dylib */,
 				078AEED7191547110091C065 /* core_iosTests.xctest */,
 			);
 			name = Products;
@@ -576,10 +576,10 @@
 			remoteRef = 078AEED2191547110091C065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		078AEED5191547110091C065 /* libcore.dylib */ = {
+		078AEED5191547110091C065 /* libios_core.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libcore.dylib;
+			path = libios_core.dylib;
 			remoteRef = 078AEED4191547110091C065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

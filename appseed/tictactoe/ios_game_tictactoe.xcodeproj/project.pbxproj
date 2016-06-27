@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				07011FAD190CA31000C08335 /* libbase.dylib */,
-				07011FAF190CA31000C08335 /* libbase.dylib */,
+				07011FAF190CA31000C08335 /* libios_base.dylib */,
 				07011FB1190CA31000C08335 /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -267,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				07A6C9BA190C90C500859288 /* libcore.dylib */,
-				07A6C9BC190C90C500859288 /* libcore.dylib */,
+				07A6C9BC190C90C500859288 /* libios_core.dylib */,
 				07A6C9BE190C90C500859288 /* core_iosTests.xctest */,
 			);
 			name = Products;
@@ -447,10 +447,10 @@
 			remoteRef = 07011FAC190CA31000C08335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07011FAF190CA31000C08335 /* libbase.dylib */ = {
+		07011FAF190CA31000C08335 /* libios_base.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libbase.dylib;
+			path = libios_base.dylib;
 			remoteRef = 07011FAE190CA31000C08335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -503,10 +503,10 @@
 			remoteRef = 07A6C9B9190C90C500859288 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07A6C9BC190C90C500859288 /* libcore.dylib */ = {
+		07A6C9BC190C90C500859288 /* libios_core.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libcore.dylib;
+			path = libios_core.dylib;
 			remoteRef = 07A6C9BB190C90C500859288 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
