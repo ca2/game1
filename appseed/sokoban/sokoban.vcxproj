@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{00C3D7E9-A87D-4B6C-95A0-1202C4703642}</ProjectGuid>
-    <RootNamespace>game_pacman</RootNamespace>
+    <ProjectGuid>{84517784-1511-2204-0204-1511A92A2FA7}</ProjectGuid>
+    <RootNamespace>app_core_sokoban</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>game_pacman</ProjectName>
+    <ProjectName>app_core_sokoban</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -112,8 +112,8 @@
     <ClCompile>
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_PACMAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_CORE_SOKOBAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -210,8 +210,8 @@
     <ClCompile>
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_PACMAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_CORE_SOKOBAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -313,8 +313,8 @@
     <ClCompile>
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_PACMAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_CORE_SOKOBAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -401,8 +401,8 @@
     <ClCompile>
       <AdditionalOptions>-Zm384 /bigobj</AdditionalOptions>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_PACMAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_APP_CORE_SOKOBAN_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -494,57 +494,33 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="pacman_console.cpp" />
-    <ClCompile Include="pacman_ghost.cpp" />
-    <ClCompile Include="pacman_globals.cpp" />
-    <ClCompile Include="pacman_levelmanip.cpp" />
-    <ClCompile Include="pacman_main.cpp" />
-    <ClCompile Include="pacman_objectmanip.cpp" />
-    <ClCompile Include="pacman_player.cpp" />
-    <ClCompile Include="pacman.cpp" />
-    <ClCompile Include="pacman_application.cpp" />
-    <ClCompile Include="pacman_document.cpp" />
-    <ClCompile Include="pacman_frame.cpp" />
-    <ClCompile Include="pacman_interface.cpp" />
-    <ClCompile Include="pacman_pacman.cpp" />
-    <ClCompile Include="pacman_pane_view.cpp" />
-    <ClCompile Include="pacman_pane_view_update_hint.cpp" />
-    <ClCompile Include="pacman_preview.cpp" />
-    <ClCompile Include="pacman_sound.cpp" />
-    <ClCompile Include="pacman_sound_track.cpp" />
-    <ClCompile Include="pacman_view.cpp" />
-    <ClCompile Include="pacman_pellet.cpp" />
+    <ClCompile Include="game\sokoban_asset.cpp" />
+    <ClCompile Include="game\sokoban_block.cpp" />
+    <ClCompile Include="game\sokoban_level.cpp" />
+    <ClCompile Include="sokoban.cpp" />
+    <ClCompile Include="sokoban_application.cpp" />
+    <ClCompile Include="sokoban_document.cpp" />
+    <ClCompile Include="sokoban_frame.cpp" />
+    <ClCompile Include="sokoban_interface.cpp" />
+    <ClCompile Include="sokoban_pane_view.cpp" />
+    <ClCompile Include="sokoban_pane_view_update_hint.cpp" />
+    <ClCompile Include="sokoban_view.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pacman_console.h" />
-    <ClInclude Include="pacman_constants.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="pacman_ghost.h" />
-    <ClInclude Include="pacman_player.h" />
-    <ClInclude Include="pacman.h" />
-    <ClInclude Include="pacman_application.h" />
-    <ClInclude Include="pacman_document.h" />
-    <ClInclude Include="pacman_frame.h" />
-    <ClInclude Include="pacman_interface.h" />
-    <ClInclude Include="pacman_pacman.h" />
-    <ClInclude Include="pacman_pane_view.h" />
-    <ClInclude Include="pacman_pane_view_update_hint.h" />
-    <ClInclude Include="pacman_preview.h" />
-    <ClInclude Include="pacman_sound.h" />
-    <ClInclude Include="pacman_sound_track.h" />
-    <ClInclude Include="pacman_view.h" />
-    <ClInclude Include="pacman_pellet.h" />
+    <ClInclude Include="game\sokoban_asset.h" />
+    <ClInclude Include="game\sokoban_block.h" />
+    <ClInclude Include="game\sokoban_level.h" />
+    <ClInclude Include="sokoban.h" />
+    <ClInclude Include="sokoban_application.h" />
+    <ClInclude Include="sokoban_document.h" />
+    <ClInclude Include="sokoban_frame.h" />
+    <ClInclude Include="sokoban_interface.h" />
+    <ClInclude Include="sokoban_pane_view.h" />
+    <ClInclude Include="sokoban_pane_view_update_hint.h" />
+    <ClInclude Include="sokoban_view.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\app-core\appseed\gcom\gcom.vcxproj">
-      <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app-core\appseed\hellomultiverse\hellomultiverse.vcxproj">
-      <Project>{c7afcefa-3079-4b23-8f97-4543bb980265}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app-core\appseed\multimedia\multimedia.vcxproj">
-      <Project>{20fd0446-aa14-4013-84e0-b5cb63fa354f}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\ace\ace.vcxproj">
       <Project>{21dcc811-4bce-4f16-b674-c0941f847127}</Project>
     </ProjectReference>
@@ -560,12 +536,10 @@
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\freetype\axisfreetype.vcxproj">
-      <Project>{78b079bd-9fc7-4b9e-b4a6-96da0f00248b}</Project>
-    </ProjectReference>
+    <ProjectReference Include="..\hellomultiverse\hellomultiverse.vcxproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="game_pacman.def" />
+    <None Include="app_core_sokoban.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

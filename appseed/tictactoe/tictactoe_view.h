@@ -84,7 +84,7 @@ namespace tictactoe
 
       virtual void draw_x(::draw2d::graphics * pgraphics,const RECT & lpcrect);
       virtual void draw_o(::draw2d::graphics * pgraphics,const RECT & lpcrect);
-      virtual void draw_board(::draw2d::graphics * pgraphics,const RECT & lpcrect);
+      virtual void draw_board(::draw2d::graphics * pgraphics,const RECT & lpcrect, int iPenWidth);
 
       virtual void new_game();
 

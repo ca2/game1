@@ -201,7 +201,7 @@ namespace tictactoe
       }
       else
       {
-         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0xff,0xff,0xff));
+         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0xaf,0xff,0xaf));
       }
       pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
 
@@ -223,7 +223,7 @@ namespace tictactoe
 
       m_dib->defer_realize(pgraphics);
 
-      m_dib->Fill(0,0,0,0);
+      m_dib->Fill(0);
 
       rect rectClient;
 
@@ -236,13 +236,22 @@ namespace tictactoe
       rectClient.right = m_dib->m_size.cx;
       rectClient.bottom = m_dib->m_size.cy;
 
-      int32_t iCount = 20;
+      int32_t iCount = 10;
 
       ::draw2d::brush_sp brushText(allocer());
       ::draw2d::brush_sp brushToe(allocer());
 
       ::draw2d::pen_sp penText(allocer());
       ::draw2d::pen_sp penToe(allocer());
+
+      int iPenWidth = m_rectSpace.width() / 16;
+
+      if (iPenWidth % 2 == 0)
+      {
+
+         iPenWidth++;
+
+      }
 
       int32_t i = ::get_tick_count()  / 100 % iCount;
 
@@ -257,105 +266,117 @@ namespace tictactoe
 
       m_font->m_bUpdated = false;
 
+      ::color ca;
 
       board & board = m_parbitrator->m_board;
 
       ::size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
 
-      if(!Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
+      if (1)
       {
 
-         m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_blend);
-
-         brushText->create_solid(ARGB(255, 255, 255, 255));
-
-         penText->create_solid(m_rectSpace.width() / 16,ARGB(255,255,255,255));
-
-         m_dib->get_graphics()->SelectObject(brushText);
-         m_dib->get_graphics()->SelectObject(penText);
-
-         draw_board(m_dib->get_graphics(),m_rectSpace);
-
-         for(index i = 0; i < board.get_size(); i++)
+         if (!Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
          {
 
-            for(index j = 0; j < board.get_size(); j++)
+            m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_blend);
+
+            brushText->create_solid(ARGB(0, 0, 0, 0));
+
+            penText->create_solid(iPenWidth, ARGB(255, 255, 255, 255));
+
+            m_dib->get_graphics()->SelectObject(brushText);
+            m_dib->get_graphics()->SelectObject(penText);
+
+            draw_board(m_dib->get_graphics(), m_rectSpace, iPenWidth);
+
+            for (index i = 0; i < board.get_size(); i++)
             {
 
-               echeck = board[i][j];
-
-               if(echeck != check_none)
+               for (index j = 0; j < board.get_size(); j++)
                {
 
-                  get_check_rect(rectCheck,i,j);
+                  echeck = board[i][j];
 
-                  if(echeck == check_x)
+                  if (echeck != check_none)
                   {
 
-                     draw_x(m_dib->get_graphics(),rectCheck);
+                     get_check_rect(rectCheck, i, j);
+
+                     if (echeck == check_x)
+                     {
+
+                        draw_x(m_dib->get_graphics(), rectCheck);
+
+                     }
+                     else
+                     {
+                        draw_o(m_dib->get_graphics(), rectCheck);
+                     }
 
                   }
-                  else
-                  {
-                     draw_o(m_dib->get_graphics(),rectCheck);
-                  }
+
+
 
                }
 
-
-
             }
 
-         }
-
-         m_dib.blur();
-
-         m_dib.blur();
-
-//////         m_dib.blur();
-
-      //   m_dib.blur();
-
-         for(int32_t i = 0; i < iBlur; i++)
-         {
-
-            //if((i % 2) == 0)
+            m_dib->div_alpha();
 
             m_dib.blur();
 
+            m_dib.blur();
+
+            //////         m_dib.blur();
+
+                  //   m_dib.blur();
+
+            for (int32_t i = 0; i < iBlur; i++)
+            {
+
+               //if((i % 2) == 0)
+
+               m_dib.blur();
+
+            }
+
+            m_dib->mult_alpha();
+
          }
 
 
+
+         double dPeriod = (5000) * 11;
+
+         ca.set_hls(fmod(::get_tick_count(), dPeriod) / dPeriod, 0.49, 0.84);
+
+         if (!Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
+         {
+
+            m_dib->div_alpha();
+
+            m_dib->channel_copy(visual::rgba::channel_alpha, visual::rgba::channel_green);
+
+            m_dib->set_rgb(ca.m_uchR, ca.m_uchG, ca.m_uchB);
+
+            m_dib->mult_alpha();
+
+            //m_dib->Fill(255, ca.m_uchR, ca.m_uchG, ca.m_uchB);
+
+
+            //m_dib->channel_multiply(visual::rgba::channel_alpha, 2.84);
+
+         }
+
+         //pgraphics->FillSolidRect(50, 50, 100, 100, ARGB(255, 255, 255, 0));
+
+         //m_dib->get_graphics()->FillSolidRect(10, 10, 100, 100, ARGB(255, 0, 255, 0));
+
+         pgraphics->SetStretchBltMode(HALFTONE);
+         pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+         pgraphics->BitBlt(rectClient, m_dib->get_graphics());
+
       }
-
-      ::color ca;
-
-
-      double dPeriod = (5000) * 11;
-
-      ca.set_hls(fmod(::get_tick_count(), dPeriod) / dPeriod, 0.49, 0.84);
-
-      if(!Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
-      {
-
-         m_dib->channel_copy(visual::rgba::channel_alpha, visual::rgba::channel_green);
-
-         m_dib->set_rgb(ca.m_uchR, ca.m_uchG, ca.m_uchB);
-
-         //m_dib->Fill(255, ca.m_uchR, ca.m_uchG, ca.m_uchB);
-
-
-         //m_dib->channel_multiply(visual::rgba::channel_alpha, 2.84);
-
-      }
-
-      //pgraphics->FillSolidRect(50, 50, 100, 100, ARGB(255, 255, 255, 0));
-
-      //m_dib->get_graphics()->FillSolidRect(10, 10, 100, 100, ARGB(255, 0, 255, 0));
-
-      pgraphics->SetStretchBltMode(HALFTONE);
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
-      pgraphics->BitBlt(rectClient, m_dib->get_graphics());
 //      System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
   //    System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
     //  System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
@@ -375,11 +396,11 @@ namespace tictactoe
       if(Session.savings().is_trying_to_save(::aura::resource_display_bandwidth))
       {
          brushToe->create_solid(ARGB(255,ca.m_uchR,ca.m_uchG,ca.m_uchB));
-         penToe->create_solid(m_rectSpace.width() / 16,ARGB(255,ca.m_uchR,ca.m_uchG,ca.m_uchB));
+         penToe->create_solid(iPenWidth,ARGB(255,ca.m_uchR,ca.m_uchG,ca.m_uchB));
          if(bHasMatch)
          {
             brushText->create_solid(ARGB(177,ca.m_uchR,ca.m_uchG,ca.m_uchB));
-            penText->create_solid(m_rectSpace.width() / 16,ARGB(184,ca.m_uchR,ca.m_uchG,ca.m_uchB));
+            penText->create_solid(iPenWidth,ARGB(184,ca.m_uchR,ca.m_uchG,ca.m_uchB));
          }
 
       }
@@ -387,11 +408,11 @@ namespace tictactoe
       {
 
          brushToe->create_solid(ARGB(255,255,255,255));
-         penToe->create_solid(m_rectSpace.width() / 16,ARGB(255,255,255,255));
+         penToe->create_solid(iPenWidth,ARGB(255,255,255,255));
          if(bHasMatch)
          {
             brushText->create_solid(ARGB(184,184 + 49,184 + 49,177 + 49));
-            penText->create_solid(m_rectSpace.width() / 16,ARGB(177,184 + 49,184 + 49,177 + 49));
+            penText->create_solid(iPenWidth,ARGB(177,184 + 49,184 + 49,177 + 49));
          }
       }
       if(!bHasMatch)
@@ -400,11 +421,13 @@ namespace tictactoe
          penText = penToe;
       }
 
+      penText->set_line_join(::draw2d::pen::line_join_round);
 
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
       pgraphics->SelectObject(brushText);
       pgraphics->SelectObject(penText);
 
-      draw_board(pgraphics,m_rectSpace);
+      draw_board(pgraphics,m_rectSpace, iPenWidth);
 
 
       for(index i = 0; i < board.get_size(); i++)
@@ -457,139 +480,31 @@ namespace tictactoe
 
       //pgraphics->TextOut((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
 
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      //pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      for(index i = 0; i < board.get_size(); i++)
-      {
-
-         for(index j = 0; j < board.get_size(); j++)
-         {
-
-            echeck = board[i][j];
-
-            if(echeck != check_none)
-            {
-
-               get_check_rect(rectCheck,i,j);
-
-               pgraphics->FillSolidRect(rectCheck,ARGB(1,255,255,255));
-
-            }
-
-
-
-         }
-      }
-
-      //if(m_iErrorAiFont == 0)
+      //for(index i = 0; i < board.get_size(); i++)
       //{
 
-      //   FT_Face & face = (FT_Face &) m_faceAi;
-
-      //   int32_t error;
-
-      //   error = FT_Set_Char_Size( face,        /* handle to face object */
-      //      0,          /* char_width in 1/64th of points */
-      //      800*64,          /* char_height in 1/64th of points */
-      //      72,         /* horizontal device resolution */
-      //      72 );         /* vertical device resolution */
-
-      //   if(error == 0)
+      //   for(index j = 0; j < board.get_size(); j++)
       //   {
 
-      //      error = FT_Select_Charmap( face, /* target face object */ FT_ENCODING_UNICODE ); /* encoding */
+      //      echeck = board[i][j];
 
-      //      if(error == 0)
+      //      if(echeck != check_none)
       //      {
 
-      //         int64_t iChar =  ::str::ch::uni_index(::str::international::unicode_to_utf8(L"愛"));
+      //         get_check_rect(rectCheck,i,j);
 
-      //         int32_t glyph_index = FT_Get_Char_Index( face, (int32_t) iChar );
-
-      //         error = FT_Load_Glyph( face, /* handle to face object */ glyph_index, /* glyph index */ FT_LOAD_DEFAULT ); /* load flags, see below */
-
-      //         if(error == 0)
-      //         {
-
-      //            error = FT_Render_Glyph( face->glyph, /* glyph slot */ FT_RENDER_MODE_NORMAL ); /* render mode */
-
-      //            if(error == 0)
-      //            {
-
-      //               ::visual::dib_sp dib(allocer());
-
-      //               dib->create(face->glyph->bitmap.width, face->glyph->bitmap.rows);
-
-      //               dib->realize(pgraphics);
-
-      //               draw_freetype_bitmap(dib.m_p, 0,0,&face->glyph->bitmap,0,0, 184, 77, 77, 184);
-
-      //               pgraphics->SetStretchBltMode(HALFTONE);
-
-      //               pgraphics->StretchBlt(0, 0, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
-
-      //               pgraphics->StretchBlt(0, rectClient.height() - dib->m_size.cy / 40, dib->m_size.cx / 40, dib->m_size.cy / 40, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
-
-      //            }
-
-      //         }
+      //         pgraphics->FillSolidRect(rectCheck,ARGB(1,255,255,255));
 
       //      }
 
-      //   }
 
-
-      //   error = FT_Set_Char_Size( face,        /* handle to face object */
-      //      0,          /* char_width in 1/64th of points */
-      //      640*64,          /* char_height in 1/64th of points */
-      //      72,         /* horizontal device resolution */
-      //      72 );         /* vertical device resolution */
-
-      //   if(error == 0)
-      //   {
-
-      //      error = FT_Select_Charmap( face, /* target face object */ FT_ENCODING_UNICODE ); /* encoding */
-
-      //      if(error == 0)
-      //      {
-
-      //         int64_t iChar =  ::str::ch::uni_index(::str::international::unicode_to_utf8(L"愛"));
-
-      //         int32_t glyph_index = FT_Get_Char_Index( face, (int32_t) iChar );
-
-      //         error = FT_Load_Glyph( face, /* handle to face object */ glyph_index, /* glyph index */ FT_LOAD_DEFAULT ); /* load flags, see below */
-
-      //         if(error == 0)
-      //         {
-
-      //            error = FT_Render_Glyph( face->glyph, /* glyph slot */ FT_RENDER_MODE_NORMAL ); /* render mode */
-
-      //            if(error == 0)
-      //            {
-
-      //               ::visual::dib_sp dib(allocer());
-
-      //               dib->create(face->glyph->bitmap.width, face->glyph->bitmap.rows);
-
-      //               dib->realize(pgraphics);
-
-      //               draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0, 184, 84, 184, 77);
-
-      //               pgraphics->SetStretchBltMode(HALFTONE);
-
-      //               pgraphics->StretchBlt(rectClient.width() - dib->m_size.cx / 32, 0, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
-
-      //               pgraphics->StretchBlt(rectClient.width() - dib->m_size.cx / 32, rectClient.height() - dib->m_size.cy / 32, dib->m_size.cx / 32, dib->m_size.cy / 32, dib->get_graphics(), 0, 0, dib->m_size.cx, dib->m_size.cy,  SRCCOPY);
-
-      //            }
-
-      //         }
-
-      //      }
 
       //   }
-
       //}
+
+
 
 
    }
@@ -612,7 +527,7 @@ namespace tictactoe
 
          ::draw2d::dib * pdib = m_dibWork;
 
-         pdib->Fill(1,255,255,255);
+         pdib->Fill(0);
 
          tictactoe_render(pdib->get_graphics());
 
@@ -741,6 +656,13 @@ namespace tictactoe
 
       iMinDim = 84 * iMinDim / 100;
 
+      while (iMinDim % 16 != 0)
+      {
+
+         iMinDim--;
+
+      }
+
       m_rectSpace.CenterOf(rectClient,size(iMinDim,iMinDim));
 
       m_rectCheckSpace = m_rectSpace;
@@ -811,8 +733,16 @@ namespace tictactoe
    }
 
 
-   void view::draw_board(::draw2d::graphics * pgraphics,const RECT & rect)
+   void view::draw_board(::draw2d::graphics * pgraphics,const RECT & rect, int iPenWidth)
    {
+
+      //pgraphics->DrawLine(rect.left + width(rect) / 3,rect.top, rect.left + width(rect) / 3,rect.bottom);
+
+      //pgraphics->DrawLine(rect.left + width(rect) * 2 / 3, rect.top, rect.left + width(rect) * 2 / 3, rect.bottom);
+
+      //pgraphics->DrawLine(rect.left,rect.top + height(rect) / 3, rect.right,rect.top + height(rect) / 3);
+
+      //pgraphics->DrawLine(rect.left, rect.top + height(rect) * 2 / 3, rect.right, rect.top + height(rect) * 2 / 3);
 
       ::draw2d::path_sp path(allocer());
 
