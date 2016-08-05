@@ -1,8 +1,8 @@
 ; app_core_sokoban.def
 
-LIBRARY  "app_core_sokoban"
+LIBRARY  "game_sokoban"
 ; For Win32 DLLs, only EXPORTs really required.
 
 EXPORTS
-app_core_sokoban_get_new_library
+game_sokoban_get_new_library
 

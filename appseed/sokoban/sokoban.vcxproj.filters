@@ -92,7 +92,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_sokoban.def">
+    <None Include="game_sokoban.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

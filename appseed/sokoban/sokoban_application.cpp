@@ -88,10 +88,10 @@ namespace sokoban
 
 
 extern "C"
-::aura::library * app_core_sokoban_get_new_library(::aura::application * papp)
+::aura::library * game_sokoban_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::sokoban::application >(papp, "app-core");
+   return new ::aura::single_application_library < ::sokoban::application >(papp, "game");
 
 }
 
