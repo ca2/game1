@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{84517784-1511-2204-0204-1511A92A2FA7}</ProjectGuid>
-    <RootNamespace>app_core_sokoban</RootNamespace>
+    <RootNamespace>game_sokoban</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_sokoban</ProjectName>
+    <ProjectName>game_sokoban</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
