@@ -6,7 +6,6 @@ namespace coincube
 
 
    class CLASS_DECL_GAME_COINCUBE application :
-      virtual public ::html::application,
       virtual public ::multimedia::application
    {
    public:

@@ -10,7 +10,8 @@ namespace pacman
       level(ppacman->level),
       m_ppacman(ppacman)
    {
-
+      m_pmutex = new mutex(ppacman->get_app());
+      m_bIntermission = false;
    }
 
    // move the ghost based on the current mode every time the wait timer reaches 0
@@ -310,9 +311,58 @@ namespace pacman
       {
          cout << 'M';
       }
-      if(mode == 'd')
+      
       {
-         m_ppacman->play_sound("intermission");
+
+         synch_lock sl(m_pmutex);
+
+         if(mode == 'd')
+         {
+      
+            if (!m_bIntermission)
+            {
+
+               m_bIntermission = true;
+
+               synch_lock slIntermission(&m_ppacman->m_mutexIntermission);
+
+               m_ppacman->m_iIntermission++;
+
+            }
+
+            if (m_ppacman->m_iIntermission > 0)
+            {
+
+               m_ppacman->play_sound("intermission");
+
+            }
+
+         }
+         else
+         {
+
+            if (m_bIntermission)
+            {
+
+               m_bIntermission = false;
+
+               sl.unlock();
+
+               synch_lock slIntermission(&m_ppacman->m_mutexIntermission);
+
+               m_ppacman->m_iIntermission--;
+
+               if (m_ppacman->m_iIntermission <= 0)
+               {
+
+                  m_ppacman->play_sound("end:intermission");
+
+               }
+
+            }
+
+         }
+
       }
       //else
       //{

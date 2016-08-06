@@ -42,7 +42,7 @@ namespace coincube
    }
 
 
-   void coin::on_draw(::draw2d::dib * pdib)
+   void coin::on_draw(::draw2d::graphics * pgraphics)
    {
 
       point pt(m_pt.x - m_pview->m_dibCoin->m_size.cy / 2,m_pt.y - m_pview->m_dibCoin->m_size.cy / 2);

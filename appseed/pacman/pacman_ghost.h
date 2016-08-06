@@ -25,6 +25,7 @@ namespace pacman
       bool right;
       LEVEL & level;
       pacman * m_ppacman;
+      bool m_bIntermission;
 
 
       ghost(pacman * ppacman);

@@ -7,18 +7,20 @@ namespace multimedia
 
    sound_track::sound_track(::aura::application * papp):
       object(papp),
-      ::multimedia::audio_decode::track(papp),
+      ::multimedia::audio_decode::playground(papp),
       ::multimedia::decoder(papp),
       m_eventEnd(papp)
    {
 
-      m_presampler = new ::multimedia::audio_decode::resampler(get_app());
+      m_bNonStopOnEof = true;
 
 
-      m_pwaveplayer = new ::multimedia::audio::wave_player(get_app());
+      if (!initialize_wave_player(::multimedia::audio::purpose_playground))
+      {
 
-      if(!m_pwaveplayer->begin_synch())
-         return;
+         throw resource_exception(papp);
+
+      }
 
       m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
 
@@ -53,12 +55,13 @@ namespace multimedia
    ::file::buffer_sp sound_track::sound_file(const char * psz)
    {
 
-      ::file::buffer_sp & file = m_mapFile[psz];
+      //::file::buffer_sp & file = m_mapFile[psz];
+      ::file::buffer_sp file;
 
-      if(!file.is_set())
+      //if(!file.is_set())
       {
 
-         file = Application.file().get_file(sound_path(psz),::file::type_binary | ::file::mode_read);
+         file = Application.file().get_file(sound_path(psz),::file::type_binary | ::file::mode_read | ::file::share_deny_write);
 
       }
 
@@ -66,20 +69,20 @@ namespace multimedia
 
    }
 
-   ::multimedia::audio_decode::decoder * sound_track::sound_decoder(const char * psz)
+   ::multimedia::audio_decode::resampler * sound_track::sound_decoder(const char * psz)
    {
 
-      array<::multimedia::audio_decode::decoder *> & decodera = m_mapDecoder[psz];
+      spa(::multimedia::audio_decode::resampler) & decodera = m_mapDecoder[psz];
 
-      int i = decodera.pred_find_first([](::multimedia::audio_decode::decoder *p) {return p->DecoderEOF();});
+      int i = decodera.pred_find_first([](::multimedia::audio_decode::resampler *p) {return p->DecoderEOF();});
 
       if(i >= 0)
       {
+         decodera[i]->DecoderInitialize(NULL, false);
 
          return decodera[i];
 
       }
-
 
       if(m_pdecoderplugin == NULL)
          return NULL;
@@ -88,9 +91,19 @@ namespace multimedia
 
       pdecoder->DecoderInitialize(sound_file(psz),false);
 
-      decodera.add(pdecoder);
+      auto presampler = new ::multimedia::audio_decode::resampler(get_app());
 
-      return pdecoder;
+      presampler->m_pdecoder = pdecoder;
+
+      presampler->m_pdecoder->m_bLoop = false;
+
+      // presampler->init_child(presample->m_pdecoder);
+
+      presampler->DecoderInitialize(NULL, false);
+
+      decodera.add(presampler);
+
+      return presampler;
 
    }
 
@@ -123,37 +136,37 @@ namespace multimedia
       bool bNoLoop = ::str::begins_eat_ci(str,"noloop:");
 
 
-      m_presampler->m_pdecoder = sound_decoder(str);
+      auto pdecoder = sound_decoder(str);
 
-      m_presampler->m_pdecoder->m_bLoop = false;
+      init_child(pdecoder);
 
-      init_child(m_presampler);
-
-      m_presampler->DecoderInitialize(NULL,false);
+      //m_presampler->DecoderInitialize(NULL,false);
 
       //m_decoderptra.remove_all();
 
-      m_iDecoder = 0;
+      //m_iDecoder = 0;
 
       if(bWait)
       {
-         m_presampler->m_pdecoder->DecoderSeekBegin();
+         pdecoder->DecoderSeekBegin();
 
-         m_presampler->m_bLoop = false;
+         pdecoder->m_pdecoder->DecoderSeekBegin();
+
+         pdecoder->m_bLoop = false;
       }
       else if(bNoLoop)
       {
-         m_presampler->m_bLoop = false;
+         pdecoder->m_bLoop = false;
 
       }
       else
       {
 
-         m_presampler->m_bLoop = true;
+         pdecoder->m_bLoop = true;
 
       }
 
-      m_decoderptra.add(m_presampler);
+      m_decoderptra.add(pdecoder);
 
       m_bEof = false;
 

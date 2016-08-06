@@ -1,7 +1,7 @@
 #include "framework.h"
 
-#include "ft2build.h"
-#include FT_FREETYPE_H
+//#include "ft2build.h"
+//#include FT_FREETYPE_H
 
 namespace pacman
 {
@@ -39,12 +39,12 @@ namespace pacman
 
 #ifdef WINDOWS
 
-      int32_t error = FT_Init_FreeType((FT_Library *)&System.m_ftlibrary);
-      if(error)
-      {
-         TRACE("an error occurred during Free Type library initialization");
-         return false;
-      }
+      //int32_t error = FT_Init_FreeType((FT_Library *)&System.m_ftlibrary);
+      //if(error)
+      //{
+      //   TRACE("an error occurred during Free Type library initialization");
+      //   return false;
+      //}
 
 #endif
 

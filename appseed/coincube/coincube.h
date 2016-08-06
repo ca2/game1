@@ -3,8 +3,8 @@
 
 #include "core/core/core.h"
 #include "core/user/userex/userex.h"
-#include "app/appseed/html/html/html.h"
 #include "app-core/appseed/multimedia/multimedia/multimedia.h"
+#include "app-core/appseed/gcom/gcom/gcom.h"
 
 
 #ifdef _GAME_COINCUBE_LIBRARY

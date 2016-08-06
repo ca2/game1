@@ -11,8 +11,7 @@ namespace coincube
 
 
    class CLASS_DECL_GAME_COINCUBE view :
-      virtual public ::user::impact,
-      virtual public ::backview::user::interaction
+      virtual public ::backview::user::impact
    {
    public:
 

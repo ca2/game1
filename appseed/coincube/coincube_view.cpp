@@ -192,7 +192,7 @@ namespace coincube
       GetClientRect(rectClient);
 
 
-      //::backview::user::interaction::_001OnDraw(pgraphics);
+      ::backview::user::interaction::_001OnDraw(pgraphics);
 
       int x = 0;
       int y = 0;

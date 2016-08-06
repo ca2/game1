@@ -34,6 +34,9 @@ namespace pacman
       int ghostmode = MODEMAX;
       char m_ch;
 
+      mutex m_mutexIntermission;
+      int m_iIntermission;
+
       player m_player;
       spa2(ghost) ghosts;
       spa2(pellet) pellets;

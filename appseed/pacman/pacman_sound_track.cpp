@@ -92,7 +92,16 @@ namespace pacman
 
          ::str::begins_eat_ci(str,"wait:");
 
-         pdecoderFile->DecoderInitialize(sound_file(str),false);
+         auto file = sound_file(str);
+
+         if (file.is_null())
+         {
+
+            return NULL;
+
+         }
+
+         pdecoderFile->DecoderInitialize(file,false);
 
          ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
 
@@ -127,9 +136,36 @@ namespace pacman
 
          }
 
+         if (m_str == "intermission")
+         {
+
+            if (str == "end:intermission")
+            {
+               
+               m_str = "";
+
+               return;
+
+            }
+            else if (str == "chomp")
+            {
+
+               return;
+
+            }
+
+         }
+
          bool bWait = ::str::begins_ci(str,"wait:");
 
          ::multimedia::audio_decode::decoder * pdecoder = sound_decoder(str);
+
+         if (pdecoder == NULL)
+         {
+
+            return;
+
+         }
 
          if(m_decoderptra.get_count() > 0 && !m_decoderptra[0]->DecoderEOF() && m_straMode.contains(str))
          {

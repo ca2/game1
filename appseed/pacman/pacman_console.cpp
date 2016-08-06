@@ -1,10 +1,10 @@
 #include "framework.h"
 
-#include "ft2build.h"
-#include FT_FREETYPE_H
+//#include "ft2build.h"
+//#include FT_FREETYPE_H
 
-void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int x,int y);
-void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int x,int y,byte a,byte r,byte g,byte b);
+//void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int x,int y);
+//void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int x,int y,byte a,byte r,byte g,byte b);
 
 int ColorGHOST(int iColor)
 {
@@ -45,7 +45,7 @@ namespace pacman
       m_dibChar(allocer())
    {
 
-      m_iFont = FT_New_Face((FT_Library)System.ftlibrary(),Application.dir().matter_file("crackman.ttf"),0,(FT_Face *)&m_face);
+      // m_iFont = FT_New_Face((FT_Library)System.ftlibrary(), Application.dir().matter_file("crackman.ttf"), 0, (FT_Face *)&m_face);
 
       m_sizeDib = m_sizeTile;
 
@@ -202,75 +202,79 @@ namespace pacman
       }
       else if(isalnum_dup(ch) || ch=='!')
       {
-         FT_Face & face = (FT_Face &)m_face;
 
-         int32_t error;
+         string str = ch;
+         m_dib->get_graphics()->set_text_color(console_COLORREF(iColor));
+         m_dib->get_graphics()->TextOut(x - m_offset.cx, y - m_offset.cy, str);
+         //FT_Face & face = (FT_Face &)m_face;
 
-         error = FT_Set_Char_Size(face,        /* handle to face object */
-            0,          /* char_width in 1/64th of points */
-            m_sizeTile.cy * 72,          /* char_height in 1/64th of points */
-            72,         /* horizontal device resolution */
-            72);         /* vertical device resolution */
+         //int32_t error;
 
-         if(error == 0)
-         {
+         //error = FT_Set_Char_Size(face,        /* handle to face object */
+         //   0,          /* char_width in 1/64th of points */
+         //   m_sizeTile.cy * 72,          /* char_height in 1/64th of points */
+         //   72,         /* horizontal device resolution */
+         //   72);         /* vertical device resolution */
 
-            error = FT_Select_Charmap(face, /* target face object */ FT_ENCODING_UNICODE); /* encoding */
+         //if(error == 0)
+         //{
 
-            if(error == 0)
-            {
+         //   error = FT_Select_Charmap(face, /* target face object */ FT_ENCODING_UNICODE); /* encoding */
 
-               string strUtf8;
-               
-               ::str::international::multibyte_to_utf8(437,strUtf8,string(ch));
+         //   if(error == 0)
+         //   {
 
-               int64_t iChar =  ::str::ch::uni_index(strUtf8);
+         //      string strUtf8;
+         //      
+         //      ::str::international::multibyte_to_utf8(437,strUtf8,string(ch));
 
-               int32_t glyph_index = FT_Get_Char_Index(face,(int32_t)iChar);
+         //      int64_t iChar =  ::str::ch::uni_index(strUtf8);
 
-               error = FT_Load_Glyph(face, /* handle to face object */ glyph_index, /* glyph index */ FT_LOAD_DEFAULT); /* load flags, see below */
+         //      int32_t glyph_index = FT_Get_Char_Index(face,(int32_t)iChar);
 
-               if(error == 0)
-               {
+         //      error = FT_Load_Glyph(face, /* handle to face object */ glyph_index, /* glyph index */ FT_LOAD_DEFAULT); /* load flags, see below */
 
-                  error = FT_Render_Glyph(face->glyph, /* glyph slot */ FT_RENDER_MODE_NORMAL); /* render mode */
+         //      if(error == 0)
+         //      {
 
-                  if(error == 0)
-                  {
+         //         error = FT_Render_Glyph(face->glyph, /* glyph slot */ FT_RENDER_MODE_NORMAL); /* render mode */
 
-                     ::visual::dib_sp &  dib = m_dib;
+         //         if(error == 0)
+         //         {
 
-                     //dib->create(face->glyph->bitmap.width,face->glyph->bitmap.rows);
+         //            ::visual::dib_sp &  dib = m_dib;
 
-                     //dib->realize(pgraphics);
-                     COLORREF cr = console_COLORREF(iColor);
+         //            //dib->create(face->glyph->bitmap.width,face->glyph->bitmap.rows);
 
-                     byte a = argb_get_a_value(cr);
-                     byte r = argb_get_r_value(cr);
-                     byte g = argb_get_g_value(cr);
-                     byte b = argb_get_b_value(cr);
+         //            //dib->realize(pgraphics);
+         //            COLORREF cr = console_COLORREF(iColor);
 
-                     m_dibChar->create(m_sizeTile.cx * 3,m_sizeTile.cy * 3);
+         //            byte a = argb_get_a_value(cr);
+         //            byte r = argb_get_r_value(cr);
+         //            byte g = argb_get_g_value(cr);
+         //            byte b = argb_get_b_value(cr);
 
-                     m_dibChar->Fill(0);
+         //            m_dibChar->create(m_sizeTile.cx * 3,m_sizeTile.cy * 3);
 
-                     draw_freetype_bitmap2(m_dibChar.m_p,0,0,&face->glyph->bitmap,0,0,a,r,g,b);
+         //            m_dibChar->Fill(0);
 
-                     m_dib->get_graphics()->BitBlt(x - m_offset.cx,y - m_offset.cy,m_dibChar->m_size.cx,m_dibChar->m_size.cy,m_dibChar->get_graphics(),0,0,SRCCOPY);
+         //            draw_freetype_bitmap2(m_dibChar.m_p,0,0,&face->glyph->bitmap,0,0,a,r,g,b);
 
-                     //pgraphics->SetStretchBltMode(HALFTONE);
+         //            m_dib->get_graphics()->BitBlt(x - m_offset.cx,y - m_offset.cy,m_dibChar->m_size.cx,m_dibChar->m_size.cy,m_dibChar->get_graphics(),0,0,SRCCOPY);
 
-                     //pgraphics->StretchBlt(0,0,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
+         //            //pgraphics->SetStretchBltMode(HALFTONE);
 
-                     //pgraphics->StretchBlt(0,m_cy - dib->m_size.cy / 40,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
+         //            //pgraphics->StretchBlt(0,0,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
 
-                  }
+         //            //pgraphics->StretchBlt(0,m_cy - dib->m_size.cy / 40,dib->m_size.cx / 40,dib->m_size.cy / 40,dib->get_graphics(),0,0,dib->m_size.cx,dib->m_size.cy,SRCCOPY);
 
-               }
+         //         }
 
-            }
+         //      }
 
-         }
+         //   }
+
+         //}
 
          return true;
 

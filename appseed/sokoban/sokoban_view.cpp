@@ -163,7 +163,8 @@ namespace sokoban
 
       point ptOffset = get_viewport_offset();
 
-      pgraphics->OffsetViewportOrg(-ptOffset.x + m_iSideBarWidth,-ptOffset.y);
+      //pgraphics->OffsetViewportOrg(-ptOffset.x + m_iSideBarWidth,-ptOffset.y);
+      pgraphics->OffsetViewportOrg(m_iSideBarWidth, 0);
 
 
 
@@ -179,6 +180,7 @@ namespace sokoban
       int yOffset = 0;
       int yNextOffset;
 
+      bool bEntered = false;
 
       for(index iLevel = 0; iLevel < get_document()->m_levela.get_count(); iLevel++)
       {
@@ -211,12 +213,19 @@ namespace sokoban
 
             get_document()->m_levela[iLevel]->draw(pgraphics,&m_asset,yOffset);
 
+            bEntered = true;
+
          }
 
          yOffset = yNextOffset;
 
-         if(yOffset  * m_asset.m_iSize - ptOffset.y > rectClient.height())
-            break;
+         if (bEntered)
+         {
+
+            if (yOffset  * m_asset.m_iSize - ptOffset.y > rectClient.height())
+               break;
+
+         }
 
       }
       pgraphics->SetViewportOrg(ptViewport);

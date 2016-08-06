@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
+    <ProjectGuid>{1EB434D5-CB36-4760-AAFF-EA6E69907EFE}</ProjectGuid>
     <RootNamespace>game_arch001</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>game_arch001</ProjectName>
