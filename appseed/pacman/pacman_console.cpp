@@ -31,8 +31,8 @@ int ColorGHOST(int iColor)
 
 namespace pacman
 {
-   
-   
+
+
    console::console(::aura::application * papp,size sizeTile):
       object(papp),
       dib_console(papp,sizeTile),
@@ -98,13 +98,13 @@ namespace pacman
 
       m_dib5->get_graphics()->StretchBlt(0,0,m_sizeDib.cx,m_sizeDib.cy,dib->get_graphics(),size * 2,size,size,size,SRCCOPY);
 
-      
-      
+
+
 
 
       m_ga.set_size(6);
 
-      
+
       dib.load_from_file("matter://ghosts.png",false);
 
       size = dib->m_size.cy;
@@ -120,7 +120,7 @@ namespace pacman
          i++;
       }
 
-      
+
 
    }
 
@@ -225,7 +225,7 @@ namespace pacman
          //   {
 
          //      string strUtf8;
-         //      
+         //
          //      ::str::international::multibyte_to_utf8(437,strUtf8,string(ch));
 
          //      int64_t iChar =  ::str::ch::uni_index(strUtf8);
@@ -288,72 +288,72 @@ namespace pacman
 
 }
 
-void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int xParam,int yParam)
-{
-
-   FT_Bitmap * bitmap = (FT_Bitmap *)pftbitmap;
-   FT_Int x = (FT_Int)xParam;
-   FT_Int y = (FT_Int)yParam;
-
-   FT_Int  i,j,p,q;
-   FT_Int  x_max = x + bitmap->width;
-   FT_Int  y_max = y + bitmap->rows;
-
-   m_p->map();
-
-   for(i = x,p = 0; i < x_max; i++,p++)
-   {
-      for(j = y,q = 0; j < y_max; j++,q++)
-      {
-         if(i < 0 || j < 0 || i >= m_p->m_size.cx || j >= m_p->m_size.cy)
-            continue;
-
-         int32_t a = bitmap->buffer[q * bitmap->width + p];
-
-         *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = ARGB(a,0,0,0);
-
-      }
-   }
-
-}
-
-
-void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int xParam,int yParam,byte aParam,byte r,byte g,byte b)
-{
-
-   FT_Bitmap * bitmap = (FT_Bitmap *)pftbitmap;
-   FT_Int x = (FT_Int)xParam;
-   FT_Int y = (FT_Int)yParam;
-
-   FT_Int  i,j,p,q;
-   FT_Int  x_max = x + bitmap->width;
-   FT_Int  y_max = y + bitmap->rows;
-
-   m_p->map();
-
-   for(i = x,p = 0; i < x_max; i++,p++)
-   {
-      for(j = y,q = 0; j < y_max; j++,q++)
-      {
-         if(i < 0 || j < 0 || i >= m_p->m_size.cx || j >= m_p->m_size.cy)
-            continue;
-
-         int32_t a = bitmap->buffer[q * bitmap->width + p];
-
-         if(a > 0)
-         {
-
-            *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = ARGB(a * aParam / 255,b,g,r);
-
-         }
-         else
-         {
-
-            *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = 0;
-
-         }
-
-      }
-   }
-
-}
+//void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int xParam,int yParam)
+//{
+//
+//   FT_Bitmap * bitmap = (FT_Bitmap *)pftbitmap;
+//   FT_Int x = (FT_Int)xParam;
+//   FT_Int y = (FT_Int)yParam;
+//
+//   FT_Int  i,j,p,q;
+//   FT_Int  x_max = x + bitmap->width;
+//   FT_Int  y_max = y + bitmap->rows;
+//
+//   m_p->map();
+//
+//   for(i = x,p = 0; i < x_max; i++,p++)
+//   {
+//      for(j = y,q = 0; j < y_max; j++,q++)
+//      {
+//         if(i < 0 || j < 0 || i >= m_p->m_size.cx || j >= m_p->m_size.cy)
+//            continue;
+//
+//         int32_t a = bitmap->buffer[q * bitmap->width + p];
+//
+//         *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = ARGB(a,0,0,0);
+//
+//      }
+//   }
+//
+//}
+//
+//
+//void draw_freetype_bitmap2(::draw2d::dib * m_p,int32_t dx,int32_t dy,void * pftbitmap,int xParam,int yParam,byte aParam,byte r,byte g,byte b)
+//{
+//
+//   FT_Bitmap * bitmap = (FT_Bitmap *)pftbitmap;
+//   FT_Int x = (FT_Int)xParam;
+//   FT_Int y = (FT_Int)yParam;
+//
+//   FT_Int  i,j,p,q;
+//   FT_Int  x_max = x + bitmap->width;
+//   FT_Int  y_max = y + bitmap->rows;
+//
+//   m_p->map();
+//
+//   for(i = x,p = 0; i < x_max; i++,p++)
+//   {
+//      for(j = y,q = 0; j < y_max; j++,q++)
+//      {
+//         if(i < 0 || j < 0 || i >= m_p->m_size.cx || j >= m_p->m_size.cy)
+//            continue;
+//
+//         int32_t a = bitmap->buffer[q * bitmap->width + p];
+//
+//         if(a > 0)
+//         {
+//
+//            *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = ARGB(a * aParam / 255,b,g,r);
+//
+//         }
+//         else
+//         {
+//
+//            *((COLORREF *)&((byte *)m_p->get_data())[(dy + j) * m_p->m_iScan + (dx + i) * 4]) = 0;
+//
+//         }
+//
+//      }
+//   }
+//
+//}

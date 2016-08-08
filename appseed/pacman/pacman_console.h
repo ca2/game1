@@ -1,5 +1,3 @@
-#include "ft2build.h"
-#include FT_FREETYPE_H
 
 
 namespace pacman
@@ -24,7 +22,7 @@ namespace pacman
    public:
 
       int m_iFont;
-      FT_Face m_face;
+      //FT_Face m_face;
       size m_offset;
 
       size m_sizeDib;
