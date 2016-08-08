@@ -22,9 +22,10 @@ namespace tictactoe
 
       DWORD                   m_dwBreaker;
 
-      board                   m_board;
+      board *                 m_pboard;
 
       manual_reset_event      m_evReady;
+      manual_reset_event      m_evFinish;
 
       e_check                 m_echeckWinner;
 
@@ -40,7 +41,7 @@ namespace tictactoe
       void launch(player * pplayerX,player * pplayerO,bool bXFirst);
 
 
-      // return winner 
+      // return winner
       e_check arbitrate(player * pplayerX, player * pplayerO, bool bXFirst);
 
       e_check check_winner();

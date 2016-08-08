@@ -1,8 +1,6 @@
 #pragma once
 
 
-
-
 namespace tictactoe
 {
 
@@ -42,6 +40,12 @@ namespace tictactoe
 
       byte                    m_bBkAlpha;
 
+      board                   m_board;
+
+      bool                    m_bComputerPlay;
+
+      manual_reset_event      m_evRenderFinish;
+
 
       view(::aura::application * papp);
 	   virtual ~view();
@@ -79,6 +83,7 @@ namespace tictactoe
       DECL_GEN_SIGNAL(_001OnLButtonDown);
       DECL_GEN_SIGNAL(_001OnLButtonUp);
       DECL_GEN_SIGNAL(_001OnNewGame);
+      DECL_GEN_SIGNAL(_001OnDestroy);
 
 
 

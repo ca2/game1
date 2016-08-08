@@ -7,13 +7,13 @@ namespace tictactoe
 
    arbitrator::arbitrator(::aura::application * papp):
       object(papp),
-      m_board(papp),
-      m_evReady(papp)
+      m_evReady(papp),
+      m_evFinish(papp)
    {
 
       m_dwBreaker = 0;
 
-      m_bRun = true;
+      m_bRun = false;
 
       m_bEndOnFull = true;
 
@@ -30,6 +30,8 @@ namespace tictactoe
    void arbitrator::launch(player * pplayerX,player * pplayerO,bool bXFirst)
    {
 
+      m_evFinish.ResetEvent();
+
       ::fork(get_app(),[=]()
          {
 
@@ -44,7 +46,9 @@ namespace tictactoe
    e_check arbitrator::arbitrate(player * pplayerX,player * pplayerO, bool bXFirst)
    {
 
-      m_board.reset();
+      m_evReady.ResetEvent();
+
+      m_pboard->reset();
 
       m_bRun = true;
 
@@ -87,7 +91,7 @@ namespace tictactoe
 
 
 
-         } while(m_board.is_free(pplayerCurrent->m_ptLast.x,pplayerCurrent->m_ptLast.y));
+         } while(m_pboard->is_free(pplayerCurrent->m_ptLast.x,pplayerCurrent->m_ptLast.y));
 
          if(!m_bRun)
             return check_none;
@@ -98,20 +102,20 @@ namespace tictactoe
          if(!m_bRun)
             return check_none;
 
-         m_board[pplayerCurrent->m_ptLast.x][pplayerCurrent->m_ptLast.y] = echeckPlayer;
+         (*m_pboard)[pplayerCurrent->m_ptLast.x][pplayerCurrent->m_ptLast.y] = echeckPlayer;
 
          e_check echeck = check_winner();
 
          if(m_bEndOnFull)
          {
 
-            if(m_board.is_full())
+            if(m_pboard->is_full())
                return echeck;
 
          }
          else
          {
-            
+
             if(echeck != check_none)
                return echeck;
 
@@ -120,7 +124,9 @@ namespace tictactoe
          echeckPlayer = toggle(echeckPlayer);
 
       }
-      
+
+      m_evFinish.SetEvent();
+
       return check_none;
 
    }
@@ -129,12 +135,12 @@ namespace tictactoe
    e_check arbitrator::check_winner()
    {
 
-      e_check echeck = m_board.match();
+      e_check echeck = m_pboard->match();
 
       if(echeck != check_none)
          return echeck;
 
-      if(m_board.is_full())
+      if(m_pboard->is_full())
          return check_draw;
 
       return check_none;
@@ -142,13 +148,13 @@ namespace tictactoe
 
    }
 
-   
+
    player * arbitrator::get_player(e_check echeck)
    {
 
       if(echeck == check_x)
       {
-         
+
          return m_pplayerX;
 
       }
@@ -165,11 +171,14 @@ namespace tictactoe
    void arbitrator::post_stop()
    {
 
-      m_bRun = false;
+      if(m_bRun)
+      {
 
-      m_evReady.SetEvent();
+         m_bRun = false;
 
-      Sleep(84);
+         m_evReady.SetEvent();
+
+      }
 
    }
 

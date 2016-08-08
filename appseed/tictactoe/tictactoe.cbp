@@ -13,7 +13,7 @@
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=': app=game/tictactoe build_number=basis locale=_std schema=_std &quot;bk.tictactoe::view&quot;=\&quot;https://ca2.cc/image/_std/os/ubuntu.jpg?sessid=noauth\&quot; &quot;bk_alpha.tictactoe::view&quot;=0.63' />
-				<Option host_application="/ca2/stage/x86/app" />
+				<Option host_application="../../stage/x86/app" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
@@ -22,21 +22,20 @@
 					<Add option="-D_DEBUG" />
 				</Compiler>
 			</Target>
-			<Target title="memdleak">
+			<Target title="install">
 				<Option output="../../../stage/x86/libgame_tictactoe.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../stage/x86/" />
 				<Option object_output="../../../time/intermediate/app/game_tictactoe" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option parameters=": app=app-core/hellomultiverse build_number=basis locale=_std schema=_std" />
-				<Option host_application="/ca2/stage/x86/app" />
+				<Option parameters=': app=game/tictactoe build_number=basis locale=_std schema=_std &quot;bk.tictactoe::view&quot;=\&quot;https://ca2.cc/image/_std/os/ubuntu.jpg?sessid=noauth\&quot; &quot;bk_alpha.tictactoe::view&quot;=0.63 install' />
+				<Option host_application="../../stage/x86/app" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D_DEBUG" />
-					<Add option="-DMEMDLEAK" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -72,7 +71,6 @@
 			<Add option="-Wl,-rpath,\\$$ORIGIN" />
 			<Add option="-Wl,-E" />
 			<Add option="-laura" />
-			<Add option="-laxisfreetype" />
 			<Add option="-laxis" />
 			<Add option="-lbase" />
 			<Add option="-lcore" />

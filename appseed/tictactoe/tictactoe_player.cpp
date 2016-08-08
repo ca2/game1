@@ -25,7 +25,6 @@ namespace tictactoe
    void player::play()
    {
 
-
    }
 
 

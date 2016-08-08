@@ -72,6 +72,8 @@ namespace tictactoe
    bool frame::on_create_bars()
    {
 
+      string strMatter = Application.dir().matter("frame/center_toolbar.xml");
+
       if(!LoadToolBar(1,"frame/center_toolbar.xml",TBSTYLE_ALIGN_CENTER,WS_CHILD | WS_VISIBLE | CBRS_ALIGN_BOTTOM))
       {
 

@@ -10,6 +10,7 @@ namespace tictactoe
 
    view::view(::aura::application * papp) :
       ::object(papp),
+      m_board(papp),
       m_dib1(allocer()),
       m_dib2(allocer()),
       m_dib(allocer()),
@@ -19,8 +20,13 @@ namespace tictactoe
       m_mutexDraw(papp),
       m_mutexWork(papp),
       m_mutexSwap(papp),
+      m_evRenderFinish(papp),
       player(papp)
    {
+
+      m_evRenderFinish.ResetEvent();
+
+      m_bComputerPlay = false;
 
       m_strHelloMultiverse = "Hello Multiverse!!";
 
@@ -28,7 +34,7 @@ namespace tictactoe
 
       m_parbitrator = new arbitrator(get_app());
 
-      m_parbitrator->m_board.reset();
+      m_parbitrator->m_pboard = &m_board;
 
       string str = THIS_FRIENDLY_NAME();
 
@@ -51,6 +57,8 @@ namespace tictactoe
 
    view::~view()
    {
+
+      m_evRenderFinish.wait();
 
    }
 
@@ -76,6 +84,7 @@ namespace tictactoe
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
       IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&view::_001OnLButtonDown);
       IGUI_WIN_MSG_LINK(WM_LBUTTONUP,pdispatch,this,&view::_001OnLButtonUp);
+      IGUI_WIN_MSG_LINK(WM_LBUTTONUP,pdispatch,this,&view::_001OnLButtonUp);
 
    }
 
@@ -92,10 +101,17 @@ namespace tictactoe
       if(pcreate->m_bRet)
          return;
 
-      //load_ai_font();
-
       __begin_thread(get_app(),&thread_proc_render,this,::multithreading::priority_normal,0,0,NULL);
 
+   }
+
+
+   void view::_001OnDestroy(signal_details* pobj)
+   {
+
+      UNREFERENCED_PARAMETER(pobj);
+
+      m_parbitrator->post_stop();
 
    }
 
@@ -213,7 +229,7 @@ namespace tictactoe
    void view::tictactoe_render(::draw2d::graphics * pgraphics)
    {
 
-      
+
 
       if(m_dib->area() <= 0)
          return;
@@ -268,7 +284,7 @@ namespace tictactoe
 
       ::color ca;
 
-      board & board = m_parbitrator->m_board;
+      board * pboard = &m_board;
 
       ::size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
 
@@ -289,13 +305,13 @@ namespace tictactoe
 
             draw_board(m_dib->get_graphics(), m_rectSpace, iPenWidth);
 
-            for (index i = 0; i < board.get_size(); i++)
+            for (index i = 0; i < pboard->get_size(); i++)
             {
 
-               for (index j = 0; j < board.get_size(); j++)
+               for (index j = 0; j < pboard->get_size(); j++)
                {
 
-                  echeck = board[i][j];
+                  echeck = (*pboard)[i][j];
 
                   if (echeck != check_none)
                   {
@@ -363,7 +379,6 @@ namespace tictactoe
 
             //m_dib->Fill(255, ca.m_uchR, ca.m_uchG, ca.m_uchB);
 
-
             //m_dib->channel_multiply(visual::rgba::channel_alpha, 2.84);
 
          }
@@ -430,18 +445,18 @@ namespace tictactoe
       draw_board(pgraphics,m_rectSpace, iPenWidth);
 
 
-      for(index i = 0; i < board.get_size(); i++)
+      for(index i = 0; i < pboard->get_size(); i++)
       {
 
-         for(index j = 0; j < board.get_size(); j++)
+         for(index j = 0; j < pboard->get_size(); j++)
          {
 
-            echeck = board[i][j];
+            echeck = (*pboard)[i][j];
 
             if(echeck != check_none)
             {
 
-               if(m_parbitrator->m_board.match(i,j) != check_none)
+               if(m_parbitrator->m_pboard->match(i,j) != check_none)
                {
                   pgraphics->SelectObject(brushToe);
                   pgraphics->SelectObject(penToe);
@@ -606,6 +621,8 @@ namespace tictactoe
          }
 
       }
+
+      pview->m_evRenderFinish.SetEvent();
 
       return 0;
 
@@ -837,12 +854,12 @@ namespace tictactoe
 
       rect rectCheck;
 
-      board & board = m_parbitrator->m_board;
+      board * pboard = &m_board;
 
-      for(i = 0; i < board.get_size(); i++)
+      for(i = 0; i < pboard->get_size(); i++)
       {
 
-         for( j = 0; j < board[i].get_size(); j++)
+         for( j = 0; j < (*pboard)[i].get_size(); j++)
          {
 
             get_check_rect(rectCheck,i,j);
@@ -878,7 +895,6 @@ namespace tictactoe
       m_parbitrator->post_stop();
 
       m_parbitrator->launch(this,this,true);
-
 
    }
 
