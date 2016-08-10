@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>app_core_hellomultiverse_ios.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>hellomultiverse install.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>hellomultiverse.xcscheme</key>
+		<key>Tic Tac Toe.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -22,17 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9AE24E891904CFFD001AEFFB</key>
+		<key>070B8EE91B6E53F900D26137</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AE24E981904CFFD001AEFFB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9AEB75A216F78DF10085103B</key>
+		<key>070B8EFC1B6E53FA00D26137</key>
 		<dict>
 			<key>primary</key>
 			<true/>

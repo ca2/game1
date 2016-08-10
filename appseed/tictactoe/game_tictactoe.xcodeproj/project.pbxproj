@@ -69,48 +69,6 @@
 			remoteGlobalIDString = 9A19A1A419C6F50B0018DF7D;
 			remoteInfo = core;
 		};
-		0750B3EC1C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
-			remoteInfo = axis_image_jpeg;
-		};
-		0750B3EE1C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
-			remoteInfo = ios_axis_image_jpeg;
-		};
-		0750B3F01C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
-			remoteInfo = axisjpeg_iosTests;
-		};
-		0750B3F51C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
-			remoteInfo = axis_image_png;
-		};
-		0750B3F71C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
-			remoteInfo = ios_axis_image_png;
-		};
-		0750B3F91C8E368C0008E78A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
-			remoteInfo = axispng_iosTests;
-		};
 		078AEED2191547110091C065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07B65416190F2C0F002DAADE /* core.xcodeproj */;
@@ -139,34 +97,6 @@
 			remoteGlobalIDString = 9AE24DDB1904CF6E001AEFFB;
 			remoteInfo = core_ios;
 		};
-		078B58FE1B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
-			remoteInfo = draw2d_quartz2d;
-		};
-		078B59001B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07E25F501B4FFC2100752DE1;
-			remoteInfo = ios_draw2d_quartz2d;
-		};
-		078B59021B5CF94300A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E151904CF99001AEFFB;
-			remoteInfo = draw2d_quartz2d_iosTests;
-		};
-		078B59041B5CF94E00A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07E25F291B4FFC2100752DE1;
-			remoteInfo = ios_draw2d_quartz2d;
-		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
@@ -178,9 +108,6 @@
 
 /* Begin PBXFileReference section */
 		078AEF6219158B190091C065 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
-		078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = ../../../app/appseed/draw2d_quartz2d/draw2d_quartz2d.xcodeproj; sourceTree = "<group>"; };
-		078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_jpeg.xcodeproj; path = ../../../app/axis/image_jpeg/axis_image_jpeg.xcodeproj; sourceTree = "<group>"; };
-		078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_png.xcodeproj; path = ../../../app/axis/image_png/axis_image_png.xcodeproj; sourceTree = "<group>"; };
 		078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_arbitrator.cpp; sourceTree = "<group>"; };
 		078DF81E1C52957B00E65274 /* tictactoe_arbitrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tictactoe_arbitrator.h; sourceTree = "<group>"; };
 		078DF81F1C52957B00E65274 /* tictactoe_board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tictactoe_board.cpp; sourceTree = "<group>"; };
@@ -270,42 +197,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0750B3E31C8E368C0008E78A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0750B3F61C8E368C0008E78A /* libaxis_image_png.dylib */,
-				0750B3F81C8E368C0008E78A /* libaxis_image_png.dylib */,
-				0750B3FA1C8E368C0008E78A /* axispng_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0750B3E51C8E368C0008E78A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0750B3ED1C8E368C0008E78A /* libaxis_image_jpeg.dylib */,
-				0750B3EF1C8E368C0008E78A /* libaxis_image_jpeg.dylib */,
-				0750B3F11C8E368C0008E78A /* axisjpeg_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		078AEEB1191547110091C065 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				078AEED3191547110091C065 /* libcore.dylib */,
 				078AEED5191547110091C065 /* libios_core.dylib */,
 				078AEED7191547110091C065 /* core_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		078B58F91B5CF94200A7D3CF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				078B58FF1B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */,
-				078B59011B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */,
-				078B59031B5CF94300A7D3CF /* draw2d_quartz2d_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -389,10 +286,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */,
-				078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */,
 				07B65416190F2C0F002DAADE /* core.xcodeproj */,
-				078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */,
 				07A9A8231B5CA6E800B63035 /* tictactoe */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
@@ -445,7 +339,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				078B59051B5CF94E00A7D3CF /* PBXTargetDependency */,
 				078AEF57191589F30091C065 /* PBXTargetDependency */,
 			);
 			name = ios_game_tictactoe;
@@ -515,20 +408,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0750B3E51C8E368C0008E78A /* Products */;
-					ProjectRef = 078DF8051C5294C100E65274 /* axis_image_jpeg.xcodeproj */;
-				},
-				{
-					ProductGroup = 0750B3E31C8E368C0008E78A /* Products */;
-					ProjectRef = 078DF8081C5294C100E65274 /* axis_image_png.xcodeproj */;
-				},
-				{
 					ProductGroup = 078AEEB1191547110091C065 /* Products */;
 					ProjectRef = 07B65416190F2C0F002DAADE /* core.xcodeproj */;
-				},
-				{
-					ProductGroup = 078B58F91B5CF94200A7D3CF /* Products */;
-					ProjectRef = 078B58F81B5CF94200A7D3CF /* draw2d_quartz2d.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -541,48 +422,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0750B3ED1C8E368C0008E78A /* libaxis_image_jpeg.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libaxis_image_jpeg.dylib;
-			remoteRef = 0750B3EC1C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0750B3EF1C8E368C0008E78A /* libaxis_image_jpeg.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libaxis_image_jpeg.dylib;
-			remoteRef = 0750B3EE1C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0750B3F11C8E368C0008E78A /* axisjpeg_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = axisjpeg_iosTests.xctest;
-			remoteRef = 0750B3F01C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0750B3F61C8E368C0008E78A /* libaxis_image_png.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libaxis_image_png.dylib;
-			remoteRef = 0750B3F51C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0750B3F81C8E368C0008E78A /* libaxis_image_png.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libaxis_image_png.dylib;
-			remoteRef = 0750B3F71C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0750B3FA1C8E368C0008E78A /* axispng_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = axispng_iosTests.xctest;
-			remoteRef = 0750B3F91C8E368C0008E78A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		078AEED3191547110091C065 /* libcore.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -602,27 +441,6 @@
 			fileType = wrapper.cfbundle;
 			path = core_iosTests.xctest;
 			remoteRef = 078AEED6191547110091C065 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B58FF1B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libdraw2d_quartz2d.dylib;
-			remoteRef = 078B58FE1B5CF94300A7D3CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B59011B5CF94300A7D3CF /* libdraw2d_quartz2d.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libdraw2d_quartz2d.dylib;
-			remoteRef = 078B59001B5CF94300A7D3CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B59031B5CF94300A7D3CF /* draw2d_quartz2d_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = draw2d_quartz2d_iosTests.xctest;
-			remoteRef = 078B59021B5CF94300A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -699,11 +517,6 @@
 			isa = PBXTargetDependency;
 			name = core_ios;
 			targetProxy = 078AEF56191589F30091C065 /* PBXContainerItemProxy */;
-		};
-		078B59051B5CF94E00A7D3CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_draw2d_quartz2d;
-			targetProxy = 078B59041B5CF94E00A7D3CF /* PBXContainerItemProxy */;
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

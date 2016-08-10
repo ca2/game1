@@ -204,7 +204,7 @@ namespace tetris
          }
 
 
-         m_pparent->m_strScore =  ::str::from((long)score);
+         m_pparent->m_strScore =  ::str::from((int64_t)score);
          m_pparent->m_strLevel = ::str::from(level);
 
 
