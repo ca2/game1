@@ -16,8 +16,12 @@ namespace sokoban
 
    void block::update(asset * passet)
    {
+      
+      ::aura::application * papp = m_dibSource->get_app();
+      
+      string strMatter = App(papp).dir().matter(::file::path("theme") / passet->m_strMatter / m_strImage + ".png");
 
-      if(!m_dibSource.load_from_file(App(m_dibSource->get_app()).dir().matter(::file::path("theme") / passet->m_strMatter / m_strImage + ".png"), false))
+      if(!m_dibSource.load_from_file(strMatter, false))
          return;
 
       m_dib->create(passet->m_iSize,passet->m_iSize);

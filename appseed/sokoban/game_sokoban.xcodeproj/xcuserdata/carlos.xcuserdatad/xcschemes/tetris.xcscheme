@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AE24E891904CFFD001AEFFB"
-               BuildableName = "libapp_core_hellomultiverse..dylib"
-               BlueprintName = "app_core_hellomultiverse_ios"
+               BlueprintIdentifier = "9AEB75A216F78DF10085103B"
+               BuildableName = "libapp_core_hellomultiverse.dylib"
+               BlueprintName = "app_core_hellomultiverse"
                ReferencedContainer = "container:app_core_hellomultiverse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AE24E981904CFFD001AEFFB"
-               BuildableName = "app_core_hellomultiverse_iosTests.xctest"
-               BlueprintName = "app_core_hellomultiverse_iosTests"
-               ReferencedContainer = "container:app_core_hellomultiverse.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AE24ED81904E95E001AEFFB"
-               BuildableName = "app_iosTests.xctest"
-               BlueprintName = "app_iosTests"
-               ReferencedContainer = "container:../../../nodeapp/appseed/app/app.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AE24EBF1904E95E001AEFFB"
+            BlueprintIdentifier = "9A5752B116AAE1D2000CC4EF"
             BuildableName = "app.app"
-            BlueprintName = "app_ios"
+            BlueprintName = "app"
             ReferencedContainer = "container:../../../nodeapp/appseed/app/app.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AE24EBF1904E95E001AEFFB"
+            BlueprintIdentifier = "9A5752B116AAE1D2000CC4EF"
             BuildableName = "app.app"
-            BlueprintName = "app_ios"
+            BlueprintName = "app"
             ReferencedContainer = "container:../../../nodeapp/appseed/app/app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

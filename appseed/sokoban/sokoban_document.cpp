@@ -43,7 +43,7 @@ namespace sokoban
 
       ::file::listing listing(get_app());
 
-      listing.ls(Application.dir().matter("sok",true));
+      Application.dir().matter_ls("sok", listing);
 
       if(listing.get_count() > 0)
       {
