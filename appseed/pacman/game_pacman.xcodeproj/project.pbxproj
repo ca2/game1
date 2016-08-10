@@ -55,9 +55,35 @@
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libios_game_pacman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */; };
+		9AE24EA11904CFFD001AEFFB /* lib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* lib.dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
+		9AF2A5581D5BEB1600E6D5ED /* pacman_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09BB81D5B3F5400B5F2A0 /* pacman_main.cpp */; };
+		9AF2A5591D5BEB1600E6D5ED /* pacman_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B381D5B3AE100B5F2A0 /* pacman_application.cpp */; };
+		9AF2A55A1D5BEB1600E6D5ED /* pacman_console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3A1D5B3AE100B5F2A0 /* pacman_console.cpp */; };
+		9AF2A55B1D5BEB1600E6D5ED /* pacman_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3D1D5B3AE100B5F2A0 /* pacman_document.cpp */; };
+		9AF2A55C1D5BEB1600E6D5ED /* pacman_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3F1D5B3AE100B5F2A0 /* pacman_frame.cpp */; };
+		9AF2A55D1D5BEB1600E6D5ED /* pacman_ghost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B411D5B3AE100B5F2A0 /* pacman_ghost.cpp */; };
+		9AF2A55E1D5BEB1600E6D5ED /* pacman_globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B431D5B3AE100B5F2A0 /* pacman_globals.cpp */; };
+		9AF2A55F1D5BEB1600E6D5ED /* pacman_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B441D5B3AE100B5F2A0 /* pacman_interface.cpp */; };
+		9AF2A5601D5BEB1600E6D5ED /* pacman_levelmanip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B461D5B3AE100B5F2A0 /* pacman_levelmanip.cpp */; };
+		9AF2A5611D5BEB1600E6D5ED /* pacman_objectmanip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B481D5B3AE100B5F2A0 /* pacman_objectmanip.cpp */; };
+		9AF2A5621D5BEB1600E6D5ED /* pacman_pacman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B491D5B3AE100B5F2A0 /* pacman_pacman.cpp */; };
+		9AF2A5631D5BEB1600E6D5ED /* pacman_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4B1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp */; };
+		9AF2A5641D5BEB1600E6D5ED /* pacman_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4D1D5B3AE100B5F2A0 /* pacman_pane_view.cpp */; };
+		9AF2A5651D5BEB1600E6D5ED /* pacman_pellet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4F1D5B3AE100B5F2A0 /* pacman_pellet.cpp */; };
+		9AF2A5661D5BEB1600E6D5ED /* pacman_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B511D5B3AE100B5F2A0 /* pacman_player.cpp */; };
+		9AF2A5671D5BEB1600E6D5ED /* pacman_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B531D5B3AE100B5F2A0 /* pacman_preview.cpp */; };
+		9AF2A5681D5BEB1600E6D5ED /* pacman_sound_track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B551D5B3AE100B5F2A0 /* pacman_sound_track.cpp */; };
+		9AF2A5691D5BEB1600E6D5ED /* pacman_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B571D5B3AE100B5F2A0 /* pacman_sound.cpp */; };
+		9AF2A56A1D5BEB1600E6D5ED /* pacman_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B591D5B3AE100B5F2A0 /* pacman_view.cpp */; };
+		9AF2A56B1D5BEB1600E6D5ED /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
+		9AF2A5721D5BEED800E6D5ED /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A56E1D5BEED800E6D5ED /* libios_aura.dylib */; };
+		9AF2A5731D5BEED800E6D5ED /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A56F1D5BEED800E6D5ED /* libios_axis.dylib */; };
+		9AF2A5741D5BEED800E6D5ED /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A5701D5BEED800E6D5ED /* libios_base.dylib */; };
+		9AF2A5751D5BEED800E6D5ED /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A5711D5BEED800E6D5ED /* libios_core.dylib */; };
+		9AF2A5761D5BEEED00E6D5ED /* libios_multimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09B8C1D5B3C5B00B5F2A0 /* libios_multimedia.dylib */; };
+		9AF2A5771D5BEEF400E6D5ED /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +142,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = app_core_hellomultiverse_ios;
+		};
+		9AF2A56C1D5BEEC500E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
+		9AF2A5781D5BEEFA00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B6578D190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -187,7 +227,7 @@
 		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
 		9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
 		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_pacman.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* lib.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_pacman_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -196,6 +236,10 @@
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
 		9AEB75A316F78DF10085103B /* libgame_pacman.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgame_pacman.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF2A56E1D5BEED800E6D5ED /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_aura.dylib"; sourceTree = "<group>"; };
+		9AF2A56F1D5BEED800E6D5ED /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_axis.dylib"; sourceTree = "<group>"; };
+		9AF2A5701D5BEED800E6D5ED /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_base.dylib"; sourceTree = "<group>"; };
+		9AF2A5711D5BEED800E6D5ED /* libios_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_core.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_core.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +247,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A5771D5BEEF400E6D5ED /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				9AF2A5761D5BEEED00E6D5ED /* libios_multimedia.dylib in Frameworks */,
+				9AF2A5721D5BEED800E6D5ED /* libios_aura.dylib in Frameworks */,
+				9AF2A5731D5BEED800E6D5ED /* libios_axis.dylib in Frameworks */,
+				9AF2A5741D5BEED800E6D5ED /* libios_base.dylib in Frameworks */,
+				9AF2A5751D5BEED800E6D5ED /* libios_core.dylib in Frameworks */,
 				9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +264,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libios_game_pacman.a in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* lib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +352,10 @@
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AF2A56E1D5BEED800E6D5ED /* libios_aura.dylib */,
+				9AF2A56F1D5BEED800E6D5ED /* libios_axis.dylib */,
+				9AF2A5701D5BEED800E6D5ED /* libios_base.dylib */,
+				9AF2A5711D5BEED800E6D5ED /* libios_core.dylib */,
 				9AD486181D5AA03700354801 /* libcore.dylib */,
 				9AD486081D5AA00100354801 /* libbase.dylib */,
 				9AD486061D5A9FFC00354801 /* libaxis.dylib */,
@@ -358,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_pacman.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */,
+				9AE24E8A1904CFFD001AEFFB /* lib.dylib */,
 				9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */,
 			);
 			name = Products;
@@ -406,10 +460,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AF2A5791D5BEEFA00E6D5ED /* PBXTargetDependency */,
+				9AF2A56D1D5BEEC500E6D5ED /* PBXTargetDependency */,
 			);
 			name = ios_game_pacman;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* lib.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* game_pacman_iosTests */ = {
@@ -552,6 +608,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A5581D5BEB1600E6D5ED /* pacman_main.cpp in Sources */,
+				9AF2A5591D5BEB1600E6D5ED /* pacman_application.cpp in Sources */,
+				9AF2A55A1D5BEB1600E6D5ED /* pacman_console.cpp in Sources */,
+				9AF2A55B1D5BEB1600E6D5ED /* pacman_document.cpp in Sources */,
+				9AF2A55C1D5BEB1600E6D5ED /* pacman_frame.cpp in Sources */,
+				9AF2A55D1D5BEB1600E6D5ED /* pacman_ghost.cpp in Sources */,
+				9AF2A55E1D5BEB1600E6D5ED /* pacman_globals.cpp in Sources */,
+				9AF2A55F1D5BEB1600E6D5ED /* pacman_interface.cpp in Sources */,
+				9AF2A5601D5BEB1600E6D5ED /* pacman_levelmanip.cpp in Sources */,
+				9AF2A5611D5BEB1600E6D5ED /* pacman_objectmanip.cpp in Sources */,
+				9AF2A5621D5BEB1600E6D5ED /* pacman_pacman.cpp in Sources */,
+				9AF2A5631D5BEB1600E6D5ED /* pacman_pane_view_update_hint.cpp in Sources */,
+				9AF2A5641D5BEB1600E6D5ED /* pacman_pane_view.cpp in Sources */,
+				9AF2A5651D5BEB1600E6D5ED /* pacman_pellet.cpp in Sources */,
+				9AF2A5661D5BEB1600E6D5ED /* pacman_player.cpp in Sources */,
+				9AF2A5671D5BEB1600E6D5ED /* pacman_preview.cpp in Sources */,
+				9AF2A5681D5BEB1600E6D5ED /* pacman_sound_track.cpp in Sources */,
+				9AF2A5691D5BEB1600E6D5ED /* pacman_sound.cpp in Sources */,
+				9AF2A56A1D5BEB1600E6D5ED /* pacman_view.cpp in Sources */,
+				9AF2A56B1D5BEB1600E6D5ED /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +679,16 @@
 			target = 9AE24E891904CFFD001AEFFB /* ios_game_pacman */;
 			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
 		};
+		9AF2A56D1D5BEEC500E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_core_hellomultiverse;
+			targetProxy = 9AF2A56C1D5BEEC500E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A5791D5BEEFA00E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_multimedia;
+			targetProxy = 9AF2A5781D5BEEFA00E6D5ED /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -621,7 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -632,7 +718,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -754,7 +840,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
 				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
@@ -801,7 +887,7 @@
 					"\"$(TARGET_BUILD_DIR)\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
 				VALIDATE_PRODUCT = YES;

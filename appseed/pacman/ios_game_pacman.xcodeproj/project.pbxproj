@@ -36,6 +36,8 @@
 		9AF2A3841D5BD5E900E6D5ED /* libios_axisjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F3E1D5B7E8600D00D4A /* libios_axisjpeg.dylib */; };
 		9AF2A3851D5BD63900E6D5ED /* libaxis_image_jpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F261D5B7E7800D00D4A /* libaxis_image_jpeg.dylib */; };
 		9AF2A3861D5BD63900E6D5ED /* libaxis_image_png.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F321D5B7E7F00D00D4A /* libaxis_image_png.dylib */; };
+		9AF2A5941D5BEF7A00E6D5ED /* libaudio_core_audio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A5821D5BEF2B00E6D5ED /* libaudio_core_audio.dylib */; };
+		9AF2A5A31D5BF0DB00E6D5ED /* libaudio_decode_wave.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A58D1D5BEF4600E6D5ED /* libaudio_decode_wave.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -704,6 +706,55 @@
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = ios_game_pacman;
 		};
+		9AF2A57F1D5BEF2B00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteInfo = audio_core_audio;
+		};
+		9AF2A5811D5BEF2B00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A25A0821D25FEB30044727D;
+			remoteInfo = ios_audio_core_audio;
+		};
+		9AF2A58A1D5BEF4600E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = audio_decode_wave;
+		};
+		9AF2A58C1D5BEF4600E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B656E6190F3C5E002DAADE;
+			remoteInfo = ios_audio_decode_wave;
+		};
+		9AF2A58E1D5BEF4600E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B656F5190F3C5E002DAADE;
+			remoteInfo = audio_decode_libmpg123_iosTests;
+		};
+		9AF2A5901D5BEF5800E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A25A0621D25FEB30044727D;
+			remoteInfo = ios_audio_core_audio;
+		};
+		9AF2A5A11D5BF0CE00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B656E5190F3C5E002DAADE;
+			remoteInfo = ios_audio_decode_wave;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -753,6 +804,8 @@
 		9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axispng.xcodeproj; path = ../../../app/axis/png/axispng.xcodeproj; sourceTree = "<group>"; };
 		9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_pacman.xcodeproj; sourceTree = "<group>"; };
 		9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
+		9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_core_audio.xcodeproj; path = ../../../app/appseed/audio_core_audio/audio_core_audio.xcodeproj; sourceTree = "<group>"; };
+		9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_decode_wave.xcodeproj; path = "../../../app-core/appseed/audio_decode_wave/audio_decode_wave.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -760,6 +813,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A5A31D5BF0DB00E6D5ED /* libaudio_decode_wave.a in Frameworks */,
+				9AF2A5941D5BEF7A00E6D5ED /* libaudio_core_audio.dylib in Frameworks */,
 				9AF2A3851D5BD63900E6D5ED /* libaxis_image_jpeg.dylib in Frameworks */,
 				9AF2A3861D5BD63900E6D5ED /* libaxis_image_png.dylib in Frameworks */,
 				9AF2A3841D5BD5E900E6D5ED /* libios_axisjpeg.dylib in Frameworks */,
@@ -1028,6 +1083,8 @@
 				9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */,
 				9A342EE01D5B791300D00D4A /* atomiconv.xcodeproj */,
 				9AC62EE11D20C1D300A4AC0A /* ace.xcodeproj */,
+				9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */,
+				9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */,
 				9A342EF31D5B792E00D00D4A /* aura.xcodeproj */,
 				9A342F141D5B7D0A00D00D4A /* auracharguess.xcodeproj */,
 				9A342F0B1D5B7CF800D00D4A /* aurapcre.xcodeproj */,
@@ -1125,7 +1182,7 @@
 			isa = PBXGroup;
 			children = (
 				9AF2A3D11D5BE1BF00E6D5ED /* libgame_pacman.dylib */,
-				9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman..dylib */,
+				9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman.a */,
 				9AF2A3D51D5BE1BF00E6D5ED /* game_pacman_iosTests.xctest */,
 			);
 			name = Products;
@@ -1137,6 +1194,25 @@
 				9AF2A3F01D5BE2A400E6D5ED /* libmultimedia.dylib */,
 				9AF2A3F21D5BE2A400E6D5ED /* libios_multimedia.dylib */,
 				9AF2A3F41D5BE2A400E6D5ED /* multlimedia_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AF2A57B1D5BEF2B00E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A5801D5BEF2B00E6D5ED /* libaudio_core_audio.dylib */,
+				9AF2A5821D5BEF2B00E6D5ED /* libaudio_core_audio.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AF2A5841D5BEF4500E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A58B1D5BEF4600E6D5ED /* libaudio_decode_wave.dylib */,
+				9AF2A58D1D5BEF4600E6D5ED /* libaudio_decode_wave.a */,
+				9AF2A58F1D5BEF4600E6D5ED /* audio_decode_libmpg123_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1155,6 +1231,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AF2A5A21D5BF0CE00E6D5ED /* PBXTargetDependency */,
+				9AF2A5911D5BEF5800E6D5ED /* PBXTargetDependency */,
 				9AF2A3F91D5BE2DC00E6D5ED /* PBXTargetDependency */,
 				9AF2A3F71D5BE2D400E6D5ED /* PBXTargetDependency */,
 				9AF2A3821D5BB4F400E6D5ED /* PBXTargetDependency */,
@@ -1252,6 +1330,14 @@
 				{
 					ProductGroup = 9A342EE11D5B791300D00D4A /* Products */;
 					ProjectRef = 9A342EE01D5B791300D00D4A /* atomiconv.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AF2A57B1D5BEF2B00E6D5ED /* Products */;
+					ProjectRef = 9AF2A57A1D5BEF2B00E6D5ED /* audio_core_audio.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AF2A5841D5BEF4500E6D5ED /* Products */;
+					ProjectRef = 9AF2A5831D5BEF4500E6D5ED /* audio_decode_wave.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A342EF41D5B792E00D00D4A /* Products */;
@@ -1795,10 +1881,11 @@
 			remoteRef = 9AF2A3D01D5BE1BF00E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman..dylib */ = {
+		9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_game_pacman..dylib;
+			name = libios_game_pacman.a;
+			path = libios_game_pacman.dylib;
 			remoteRef = 9AF2A3D21D5BE1BF00E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1828,6 +1915,41 @@
 			fileType = wrapper.cfbundle;
 			path = multlimedia_iosTests.xctest;
 			remoteRef = 9AF2A3F31D5BE2A400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A5801D5BEF2B00E6D5ED /* libaudio_core_audio.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_core_audio.dylib;
+			remoteRef = 9AF2A57F1D5BEF2B00E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A5821D5BEF2B00E6D5ED /* libaudio_core_audio.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_core_audio.dylib;
+			remoteRef = 9AF2A5811D5BEF2B00E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A58B1D5BEF4600E6D5ED /* libaudio_decode_wave.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_decode_wave.dylib;
+			remoteRef = 9AF2A58A1D5BEF4600E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A58D1D5BEF4600E6D5ED /* libaudio_decode_wave.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libaudio_decode_wave.a;
+			remoteRef = 9AF2A58C1D5BEF4600E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A58F1D5BEF4600E6D5ED /* audio_decode_libmpg123_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = audio_decode_libmpg123_iosTests.xctest;
+			remoteRef = 9AF2A58E1D5BEF4600E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2000,6 +2122,16 @@
 			isa = PBXTargetDependency;
 			name = ios_game_pacman;
 			targetProxy = 9AF2A3F81D5BE2DC00E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A5911D5BEF5800E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_audio_core_audio;
+			targetProxy = 9AF2A5901D5BEF5800E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A5A21D5BF0CE00E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_audio_decode_wave;
+			targetProxy = 9AF2A5A11D5BF0CE00E6D5ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
