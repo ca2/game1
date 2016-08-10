@@ -7,12 +7,15 @@ namespace multimedia
 
    sound_track::sound_track(::aura::application * papp):
       object(papp),
-      ::multimedia::audio_decode::playground(papp),
-      ::multimedia::decoder(papp),
-      m_eventEnd(papp)
+      ::multimedia::audio_decode::decoder(papp),
+      ::multimedia::audio_decode::mixer(papp),
+      ::multimedia::decoder(papp)
    {
+      
+      m_pmutex = new mutex(papp);
 
       m_bNonStopOnEof = true;
+      m_bRemoveOnChildEof = true;
 
 
       if (!initialize_wave_player(::multimedia::audio::purpose_playground))
@@ -37,9 +40,12 @@ namespace multimedia
 
    }
 
+   
    sound_track::~sound_track()
    {
+      
    }
+   
 
    string sound_track::sound_path(const char * psz)
    {
@@ -52,6 +58,7 @@ namespace multimedia
 
    }
 
+   
    ::file::buffer_sp sound_track::sound_file(const char * psz)
    {
 
@@ -72,6 +79,8 @@ namespace multimedia
    ::multimedia::audio_decode::resampler * sound_track::sound_decoder(const char * psz)
    {
 
+      synch_lock sl(m_pmutex);
+      
       spa(::multimedia::audio_decode::resampler) & decodera = m_mapDecoder[psz];
 
       int i = decodera.pred_find_first([](::multimedia::audio_decode::resampler *p) {return p->DecoderEOF();});
@@ -87,17 +96,13 @@ namespace multimedia
       if(m_pdecoderplugin == NULL)
          return NULL;
 
-      ::multimedia::audio_decode::decoder * pdecoder = dynamic_cast <::multimedia::audio_decode::decoder *>( m_pdecoderplugin->NewDecoder());
-
-      pdecoder->DecoderInitialize(sound_file(psz),false);
-
       auto presampler = new ::multimedia::audio_decode::resampler(get_app());
+      
+      presampler->m_pdecoder = m_pdecoderplugin->NewDecoder();
 
-      presampler->m_pdecoder = pdecoder;
+      presampler->m_pdecoder->DecoderInitialize(sound_file(psz),false);
 
       presampler->m_pdecoder->m_bLoop = false;
-
-      // presampler->init_child(presample->m_pdecoder);
 
       presampler->DecoderInitialize(NULL, false);
 
@@ -109,76 +114,26 @@ namespace multimedia
 
    void sound_track::queue(const char * psz)
    {
-      synch_lock sl(&m_mutex);
-
-      m_eventEnd.ResetEvent();
-
-      if(string(psz) == string(""))
-      {
-         m_str = "";
-      }
-      else if(m_str != "intermission")
-      {
-
-         if(!::str::begins_ci(m_str,"wait:"))
-         {
-
-            m_str = psz;
-
-         }
-
-      }
+      
+      synch_lock sl(m_pmutex);
 
       string str(psz);
-
-      bool bWait = ::str::begins_eat_ci(str,"wait:");
-
-      bool bNoLoop = ::str::begins_eat_ci(str,"noloop:");
-
+      
+      ::str::begins_eat_ci(str, "wait:");
 
       auto pdecoder = sound_decoder(str);
 
+      pdecoder->DecoderSeekBegin();
+
+      pdecoder->m_pdecoder->DecoderSeekBegin();
+
       init_child(pdecoder);
-
-      //m_presampler->DecoderInitialize(NULL,false);
-
-      //m_decoderptra.remove_all();
-
-      //m_iDecoder = 0;
-
-      if(bWait)
-      {
-         pdecoder->DecoderSeekBegin();
-
-         pdecoder->m_pdecoder->DecoderSeekBegin();
-
-         pdecoder->m_bLoop = false;
-      }
-      else if(bNoLoop)
-      {
-         pdecoder->m_bLoop = false;
-
-      }
-      else
-      {
-
-         pdecoder->m_bLoop = true;
-
-      }
-
+      
       m_decoderptra.add(pdecoder);
 
       m_bEof = false;
 
 
-   }
-
-   void sound_track::DecoderOnEvent(e_event eevent)
-   {
-      if(eevent == event_eof)
-      {
-         m_eventEnd.SetEvent();
-      }
    }
 
 

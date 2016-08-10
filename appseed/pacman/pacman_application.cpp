@@ -16,7 +16,7 @@ namespace pacman
       m_strAppName            = "pacman";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
-      m_iConsole = 2;
+      m_iConsole = 0;
 
       m_etype                 = type_normal;
 

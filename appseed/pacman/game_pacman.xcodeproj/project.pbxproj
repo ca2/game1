@@ -1,0 +1,889 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AB09B5E1D5B3AE100B5F2A0 /* pacman_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B381D5B3AE100B5F2A0 /* pacman_application.cpp */; };
+		9AB09B5F1D5B3AE100B5F2A0 /* pacman_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B391D5B3AE100B5F2A0 /* pacman_application.h */; };
+		9AB09B601D5B3AE100B5F2A0 /* pacman_console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3A1D5B3AE100B5F2A0 /* pacman_console.cpp */; };
+		9AB09B611D5B3AE100B5F2A0 /* pacman_console.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B3B1D5B3AE100B5F2A0 /* pacman_console.h */; };
+		9AB09B621D5B3AE100B5F2A0 /* pacman_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B3C1D5B3AE100B5F2A0 /* pacman_constants.h */; };
+		9AB09B631D5B3AE100B5F2A0 /* pacman_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3D1D5B3AE100B5F2A0 /* pacman_document.cpp */; };
+		9AB09B641D5B3AE100B5F2A0 /* pacman_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B3E1D5B3AE100B5F2A0 /* pacman_document.h */; };
+		9AB09B651D5B3AE100B5F2A0 /* pacman_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B3F1D5B3AE100B5F2A0 /* pacman_frame.cpp */; };
+		9AB09B661D5B3AE100B5F2A0 /* pacman_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B401D5B3AE100B5F2A0 /* pacman_frame.h */; };
+		9AB09B671D5B3AE100B5F2A0 /* pacman_ghost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B411D5B3AE100B5F2A0 /* pacman_ghost.cpp */; };
+		9AB09B681D5B3AE100B5F2A0 /* pacman_ghost.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B421D5B3AE100B5F2A0 /* pacman_ghost.h */; };
+		9AB09B691D5B3AE100B5F2A0 /* pacman_globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B431D5B3AE100B5F2A0 /* pacman_globals.cpp */; };
+		9AB09B6A1D5B3AE100B5F2A0 /* pacman_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B441D5B3AE100B5F2A0 /* pacman_interface.cpp */; };
+		9AB09B6B1D5B3AE100B5F2A0 /* pacman_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B451D5B3AE100B5F2A0 /* pacman_interface.h */; };
+		9AB09B6C1D5B3AE100B5F2A0 /* pacman_levelmanip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B461D5B3AE100B5F2A0 /* pacman_levelmanip.cpp */; };
+		9AB09B6E1D5B3AE100B5F2A0 /* pacman_objectmanip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B481D5B3AE100B5F2A0 /* pacman_objectmanip.cpp */; };
+		9AB09B6F1D5B3AE100B5F2A0 /* pacman_pacman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B491D5B3AE100B5F2A0 /* pacman_pacman.cpp */; };
+		9AB09B701D5B3AE100B5F2A0 /* pacman_pacman.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B4A1D5B3AE100B5F2A0 /* pacman_pacman.h */; };
+		9AB09B711D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4B1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp */; };
+		9AB09B721D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B4C1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.h */; };
+		9AB09B731D5B3AE100B5F2A0 /* pacman_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4D1D5B3AE100B5F2A0 /* pacman_pane_view.cpp */; };
+		9AB09B741D5B3AE100B5F2A0 /* pacman_pane_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B4E1D5B3AE100B5F2A0 /* pacman_pane_view.h */; };
+		9AB09B751D5B3AE100B5F2A0 /* pacman_pellet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B4F1D5B3AE100B5F2A0 /* pacman_pellet.cpp */; };
+		9AB09B761D5B3AE100B5F2A0 /* pacman_pellet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B501D5B3AE100B5F2A0 /* pacman_pellet.h */; };
+		9AB09B771D5B3AE100B5F2A0 /* pacman_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B511D5B3AE100B5F2A0 /* pacman_player.cpp */; };
+		9AB09B781D5B3AE100B5F2A0 /* pacman_player.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B521D5B3AE100B5F2A0 /* pacman_player.h */; };
+		9AB09B791D5B3AE100B5F2A0 /* pacman_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B531D5B3AE100B5F2A0 /* pacman_preview.cpp */; };
+		9AB09B7A1D5B3AE100B5F2A0 /* pacman_preview.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B541D5B3AE100B5F2A0 /* pacman_preview.h */; };
+		9AB09B7B1D5B3AE100B5F2A0 /* pacman_sound_track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B551D5B3AE100B5F2A0 /* pacman_sound_track.cpp */; };
+		9AB09B7C1D5B3AE100B5F2A0 /* pacman_sound_track.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B561D5B3AE100B5F2A0 /* pacman_sound_track.h */; };
+		9AB09B7D1D5B3AE100B5F2A0 /* pacman_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B571D5B3AE100B5F2A0 /* pacman_sound.cpp */; };
+		9AB09B7E1D5B3AE100B5F2A0 /* pacman_sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B581D5B3AE100B5F2A0 /* pacman_sound.h */; };
+		9AB09B7F1D5B3AE100B5F2A0 /* pacman_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09B591D5B3AE100B5F2A0 /* pacman_view.cpp */; };
+		9AB09B801D5B3AE100B5F2A0 /* pacman_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B5A1D5B3AE100B5F2A0 /* pacman_view.h */; };
+		9AB09B821D5B3AE100B5F2A0 /* pacman.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09B5D1D5B3AE100B5F2A0 /* pacman.h */; };
+		9AB09BB71D5B3F0200B5F2A0 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09B8A1D5B3C5B00B5F2A0 /* libmultimedia.dylib */; };
+		9AB09BB91D5B3F5400B5F2A0 /* pacman_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09BB81D5B3F5400B5F2A0 /* pacman_main.cpp */; };
+		9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
+		9AD485D41D5A9D7A00354801 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485871D5A9D7700354801 /* framework.h */; };
+		9AD486051D5A9FF600354801 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486041D5A9FF600354801 /* libaura.dylib */; };
+		9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486061D5A9FFC00354801 /* libaxis.dylib */; };
+		9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486081D5AA00100354801 /* libbase.dylib */; };
+		9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486181D5AA03700354801 /* libcore.dylib */; };
+		9AD4861A1D5AA03D00354801 /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */; };
+		9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
+		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
+		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
+		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
+		9AE24EA11904CFFD001AEFFB /* libios_game_pacman..dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */; };
+		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
+		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AB09B891D5B3C5B00B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = multimedia;
+		};
+		9AB09B8B1D5B3C5B00B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B6578E190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
+		};
+		9AB09B8D1D5B3C5B00B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B6579D190F3CAF002DAADE;
+			remoteInfo = multlimedia_iosTests;
+		};
+		9AB09BB51D5B3EFB00B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = multimedia;
+		};
+		9AD486101D5AA02200354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = app_core_hellomultiverse;
+		};
+		9AD486121D5AA02200354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
+		9AD486141D5AA02200354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_iosTests;
+		};
+		9AD486161D5AA03000354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_core_hellomultiverse;
+		};
+		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9AE24E881904CFFD001AEFFB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		078AEF6219158B190091C065 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		07B65527190F301F002DAADE /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase.dylib"; sourceTree = "<group>"; };
+		07B65528190F301F002DAADE /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage.dylib"; sourceTree = "<group>"; };
+		07B65529190F301F002DAADE /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
+		07B6552A190F301F002DAADE /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
+		07B6552B190F301F002DAADE /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore.dylib"; sourceTree = "<group>"; };
+		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
+		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
+		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
+		9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
+		9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
+		9AAE862717E99A9900F0512E /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
+		9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreeimage.dylib"; sourceTree = "<group>"; };
+		9AAE862917E99A9900F0512E /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreetype.dylib"; sourceTree = "<group>"; };
+		9AAE862A17E99A9900F0512E /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasemysql.dylib"; sourceTree = "<group>"; };
+		9AAE862E17E99A9A00F0512E /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
+		9AB09B381D5B3AE100B5F2A0 /* pacman_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_application.cpp; sourceTree = "<group>"; };
+		9AB09B391D5B3AE100B5F2A0 /* pacman_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_application.h; sourceTree = "<group>"; };
+		9AB09B3A1D5B3AE100B5F2A0 /* pacman_console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_console.cpp; sourceTree = "<group>"; };
+		9AB09B3B1D5B3AE100B5F2A0 /* pacman_console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_console.h; sourceTree = "<group>"; };
+		9AB09B3C1D5B3AE100B5F2A0 /* pacman_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_constants.h; sourceTree = "<group>"; };
+		9AB09B3D1D5B3AE100B5F2A0 /* pacman_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_document.cpp; sourceTree = "<group>"; };
+		9AB09B3E1D5B3AE100B5F2A0 /* pacman_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_document.h; sourceTree = "<group>"; };
+		9AB09B3F1D5B3AE100B5F2A0 /* pacman_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_frame.cpp; sourceTree = "<group>"; };
+		9AB09B401D5B3AE100B5F2A0 /* pacman_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_frame.h; sourceTree = "<group>"; };
+		9AB09B411D5B3AE100B5F2A0 /* pacman_ghost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_ghost.cpp; sourceTree = "<group>"; };
+		9AB09B421D5B3AE100B5F2A0 /* pacman_ghost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_ghost.h; sourceTree = "<group>"; };
+		9AB09B431D5B3AE100B5F2A0 /* pacman_globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_globals.cpp; sourceTree = "<group>"; };
+		9AB09B441D5B3AE100B5F2A0 /* pacman_interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_interface.cpp; sourceTree = "<group>"; };
+		9AB09B451D5B3AE100B5F2A0 /* pacman_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_interface.h; sourceTree = "<group>"; };
+		9AB09B461D5B3AE100B5F2A0 /* pacman_levelmanip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_levelmanip.cpp; sourceTree = "<group>"; };
+		9AB09B481D5B3AE100B5F2A0 /* pacman_objectmanip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_objectmanip.cpp; sourceTree = "<group>"; };
+		9AB09B491D5B3AE100B5F2A0 /* pacman_pacman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_pacman.cpp; sourceTree = "<group>"; };
+		9AB09B4A1D5B3AE100B5F2A0 /* pacman_pacman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_pacman.h; sourceTree = "<group>"; };
+		9AB09B4B1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_pane_view_update_hint.cpp; sourceTree = "<group>"; };
+		9AB09B4C1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_pane_view_update_hint.h; sourceTree = "<group>"; };
+		9AB09B4D1D5B3AE100B5F2A0 /* pacman_pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_pane_view.cpp; sourceTree = "<group>"; };
+		9AB09B4E1D5B3AE100B5F2A0 /* pacman_pane_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_pane_view.h; sourceTree = "<group>"; };
+		9AB09B4F1D5B3AE100B5F2A0 /* pacman_pellet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_pellet.cpp; sourceTree = "<group>"; };
+		9AB09B501D5B3AE100B5F2A0 /* pacman_pellet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_pellet.h; sourceTree = "<group>"; };
+		9AB09B511D5B3AE100B5F2A0 /* pacman_player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_player.cpp; sourceTree = "<group>"; };
+		9AB09B521D5B3AE100B5F2A0 /* pacman_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_player.h; sourceTree = "<group>"; };
+		9AB09B531D5B3AE100B5F2A0 /* pacman_preview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_preview.cpp; sourceTree = "<group>"; };
+		9AB09B541D5B3AE100B5F2A0 /* pacman_preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_preview.h; sourceTree = "<group>"; };
+		9AB09B551D5B3AE100B5F2A0 /* pacman_sound_track.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_sound_track.cpp; sourceTree = "<group>"; };
+		9AB09B561D5B3AE100B5F2A0 /* pacman_sound_track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_sound_track.h; sourceTree = "<group>"; };
+		9AB09B571D5B3AE100B5F2A0 /* pacman_sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_sound.cpp; sourceTree = "<group>"; };
+		9AB09B581D5B3AE100B5F2A0 /* pacman_sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_sound.h; sourceTree = "<group>"; };
+		9AB09B591D5B3AE100B5F2A0 /* pacman_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_view.cpp; sourceTree = "<group>"; };
+		9AB09B5A1D5B3AE100B5F2A0 /* pacman_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_view.h; sourceTree = "<group>"; };
+		9AB09B5D1D5B3AE100B5F2A0 /* pacman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman.h; sourceTree = "<group>"; };
+		9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
+		9AB09BB81D5B3F5400B5F2A0 /* pacman_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_main.cpp; sourceTree = "<group>"; };
+		9AD485861D5A9D7700354801 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		9AD485871D5A9D7700354801 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9AD486041D5A9FF600354801 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
+		9AD486061D5A9FFC00354801 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaxis.dylib"; sourceTree = "<group>"; };
+		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
+		9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
+		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
+		9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_pacman..dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_pacman_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9AE24E9D1904CFFD001AEFFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
+		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
+		9AEB75A316F78DF10085103B /* libgame_pacman.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgame_pacman.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AE24E871904CFFD001AEFFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE24E961904CFFD001AEFFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
+				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
+				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libios_game_pacman..dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AEB75A016F78DF10085103B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB09BB71D5B3F0200B5F2A0 /* libmultimedia.dylib in Frameworks */,
+				9AD4861A1D5AA03D00354801 /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */,
+				9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */,
+				9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */,
+				9AD486051D5A9FF600354801 /* libaura.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AB09B841D5B3C5B00B5F2A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB09B8A1D5B3C5B00B5F2A0 /* libmultimedia.dylib */,
+				9AB09B8C1D5B3C5B00B5F2A0 /* libios_multimedia.dylib */,
+				9AB09B8E1D5B3C5B00B5F2A0 /* multlimedia_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AD4855F1D5A9D7700354801 /* pacman */ = {
+			isa = PBXGroup;
+			children = (
+				9AB09BB81D5B3F5400B5F2A0 /* pacman_main.cpp */,
+				9AB09B381D5B3AE100B5F2A0 /* pacman_application.cpp */,
+				9AB09B391D5B3AE100B5F2A0 /* pacman_application.h */,
+				9AB09B3A1D5B3AE100B5F2A0 /* pacman_console.cpp */,
+				9AB09B3B1D5B3AE100B5F2A0 /* pacman_console.h */,
+				9AB09B3C1D5B3AE100B5F2A0 /* pacman_constants.h */,
+				9AB09B3D1D5B3AE100B5F2A0 /* pacman_document.cpp */,
+				9AB09B3E1D5B3AE100B5F2A0 /* pacman_document.h */,
+				9AB09B3F1D5B3AE100B5F2A0 /* pacman_frame.cpp */,
+				9AB09B401D5B3AE100B5F2A0 /* pacman_frame.h */,
+				9AB09B411D5B3AE100B5F2A0 /* pacman_ghost.cpp */,
+				9AB09B421D5B3AE100B5F2A0 /* pacman_ghost.h */,
+				9AB09B431D5B3AE100B5F2A0 /* pacman_globals.cpp */,
+				9AB09B441D5B3AE100B5F2A0 /* pacman_interface.cpp */,
+				9AB09B451D5B3AE100B5F2A0 /* pacman_interface.h */,
+				9AB09B461D5B3AE100B5F2A0 /* pacman_levelmanip.cpp */,
+				9AB09B481D5B3AE100B5F2A0 /* pacman_objectmanip.cpp */,
+				9AB09B491D5B3AE100B5F2A0 /* pacman_pacman.cpp */,
+				9AB09B4A1D5B3AE100B5F2A0 /* pacman_pacman.h */,
+				9AB09B4B1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp */,
+				9AB09B4C1D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.h */,
+				9AB09B4D1D5B3AE100B5F2A0 /* pacman_pane_view.cpp */,
+				9AB09B4E1D5B3AE100B5F2A0 /* pacman_pane_view.h */,
+				9AB09B4F1D5B3AE100B5F2A0 /* pacman_pellet.cpp */,
+				9AB09B501D5B3AE100B5F2A0 /* pacman_pellet.h */,
+				9AB09B511D5B3AE100B5F2A0 /* pacman_player.cpp */,
+				9AB09B521D5B3AE100B5F2A0 /* pacman_player.h */,
+				9AB09B531D5B3AE100B5F2A0 /* pacman_preview.cpp */,
+				9AB09B541D5B3AE100B5F2A0 /* pacman_preview.h */,
+				9AB09B551D5B3AE100B5F2A0 /* pacman_sound_track.cpp */,
+				9AB09B561D5B3AE100B5F2A0 /* pacman_sound_track.h */,
+				9AB09B571D5B3AE100B5F2A0 /* pacman_sound.cpp */,
+				9AB09B581D5B3AE100B5F2A0 /* pacman_sound.h */,
+				9AB09B591D5B3AE100B5F2A0 /* pacman_view.cpp */,
+				9AB09B5A1D5B3AE100B5F2A0 /* pacman_view.h */,
+				9AB09B5D1D5B3AE100B5F2A0 /* pacman.h */,
+				9AD485861D5A9D7700354801 /* framework.cpp */,
+				9AD485871D5A9D7700354801 /* framework.h */,
+			);
+			name = pacman;
+			sourceTree = "<group>";
+		};
+		9AD4860B1D5AA02200354801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */,
+				9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */,
+				9AD486151D5AA02200354801 /* app_core_hellomultiverse_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AD486181D5AA03700354801 /* libcore.dylib */,
+				9AD486081D5AA00100354801 /* libbase.dylib */,
+				9AD486061D5A9FFC00354801 /* libaxis.dylib */,
+				9AD486041D5A9FF600354801 /* libaura.dylib */,
+				078AEF6219158B190091C065 /* libbase.dylib */,
+				07B65527190F301F002DAADE /* libbase.dylib */,
+				07B65528190F301F002DAADE /* libbasefreeimage.dylib */,
+				07B65529190F301F002DAADE /* libbasefreetype.dylib */,
+				07B6552A190F301F002DAADE /* libbasemysql.dylib */,
+				07B6552B190F301F002DAADE /* libcore.dylib */,
+				9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */,
+				9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */,
+				9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */,
+				9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */,
+				9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */,
+				9AE24E8C1904CFFD001AEFFB /* Foundation.framework */,
+				9AE24E9A1904CFFD001AEFFB /* XCTest.framework */,
+				9AE24E9D1904CFFD001AEFFB /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */,
+				9AE24EA31904CFFD001AEFFB /* Supporting Files */,
+			);
+			path = app_core_hellomultiverse_iosTests;
+			sourceTree = "<group>";
+		};
+		9AE24EA31904CFFD001AEFFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */,
+				9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AEB759A16F78DF10085103B = {
+			isa = PBXGroup;
+			children = (
+				9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */,
+				9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */,
+				9AD4855F1D5A9D7700354801 /* pacman */,
+				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
+				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
+				9AEB75A416F78DF10085103B /* Products */,
+				9AAE862717E99A9900F0512E /* libbase.dylib */,
+				9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */,
+				9AAE862917E99A9900F0512E /* libbasefreetype.dylib */,
+				9AAE862A17E99A9900F0512E /* libbasemysql.dylib */,
+				9AAE862E17E99A9A00F0512E /* libcore.dylib */,
+			);
+			sourceTree = "<group>";
+		};
+		9AEB75A416F78DF10085103B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB75A316F78DF10085103B /* libgame_pacman.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */,
+				9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9AEB75A116F78DF10085103B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB09B7C1D5B3AE100B5F2A0 /* pacman_sound_track.h in Headers */,
+				9AB09B6B1D5B3AE100B5F2A0 /* pacman_interface.h in Headers */,
+				9AB09B7A1D5B3AE100B5F2A0 /* pacman_preview.h in Headers */,
+				9AB09B701D5B3AE100B5F2A0 /* pacman_pacman.h in Headers */,
+				9AB09B761D5B3AE100B5F2A0 /* pacman_pellet.h in Headers */,
+				9AB09B661D5B3AE100B5F2A0 /* pacman_frame.h in Headers */,
+				9AB09B621D5B3AE100B5F2A0 /* pacman_constants.h in Headers */,
+				9AD485D41D5A9D7A00354801 /* framework.h in Headers */,
+				9AB09B821D5B3AE100B5F2A0 /* pacman.h in Headers */,
+				9AB09B801D5B3AE100B5F2A0 /* pacman_view.h in Headers */,
+				9AB09B781D5B3AE100B5F2A0 /* pacman_player.h in Headers */,
+				9AB09B5F1D5B3AE100B5F2A0 /* pacman_application.h in Headers */,
+				9AB09B681D5B3AE100B5F2A0 /* pacman_ghost.h in Headers */,
+				9AB09B721D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.h in Headers */,
+				9AB09B7E1D5B3AE100B5F2A0 /* pacman_sound.h in Headers */,
+				9AB09B611D5B3AE100B5F2A0 /* pacman_console.h in Headers */,
+				9AB09B641D5B3AE100B5F2A0 /* pacman_document.h in Headers */,
+				9AB09B741D5B3AE100B5F2A0 /* pacman_pane_view.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9AE24E891904CFFD001AEFFB /* ios_game_pacman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_pacman" */;
+			buildPhases = (
+				9AE24E861904CFFD001AEFFB /* Sources */,
+				9AE24E871904CFFD001AEFFB /* Frameworks */,
+				9AE24E881904CFFD001AEFFB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ios_game_pacman;
+			productName = app_core_hellomultiverse_ios;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9AE24E981904CFFD001AEFFB /* game_pacman_iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE24EBB1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "game_pacman_iosTests" */;
+			buildPhases = (
+				9AE24E951904CFFD001AEFFB /* Sources */,
+				9AE24E961904CFFD001AEFFB /* Frameworks */,
+				9AE24E971904CFFD001AEFFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */,
+			);
+			name = game_pacman_iosTests;
+			productName = app_core_hellomultiverse_iosTests;
+			productReference = 9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9AEB75A216F78DF10085103B /* game_pacman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_pacman" */;
+			buildPhases = (
+				9AEB759F16F78DF10085103B /* Sources */,
+				9AEB75A016F78DF10085103B /* Frameworks */,
+				9AEB75A116F78DF10085103B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB09BB61D5B3EFB00B5F2A0 /* PBXTargetDependency */,
+				9AD486171D5AA03000354801 /* PBXTargetDependency */,
+			);
+			name = game_pacman;
+			productName = app_core_hellomultiverse;
+			productReference = 9AEB75A316F78DF10085103B /* libgame_pacman.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AEB759B16F78DF10085103B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
+				TargetAttributes = {
+					9AE24E981904CFFD001AEFFB = {
+						TestTargetID = 9AEB75A216F78DF10085103B;
+					};
+				};
+			};
+			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_pacman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9AEB759A16F78DF10085103B;
+			productRefGroup = 9AEB75A416F78DF10085103B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9AD4860B1D5AA02200354801 /* Products */;
+					ProjectRef = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AB09B841D5B3C5B00B5F2A0 /* Products */;
+					ProjectRef = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9AEB75A216F78DF10085103B /* game_pacman */,
+				9AE24E891904CFFD001AEFFB /* ios_game_pacman */,
+				9AE24E981904CFFD001AEFFB /* game_pacman_iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9AB09B8A1D5B3C5B00B5F2A0 /* libmultimedia.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmultimedia.dylib;
+			remoteRef = 9AB09B891D5B3C5B00B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09B8C1D5B3C5B00B5F2A0 /* libios_multimedia.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_multimedia.dylib;
+			remoteRef = 9AB09B8B1D5B3C5B00B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09B8E1D5B3C5B00B5F2A0 /* multlimedia_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = multlimedia_iosTests.xctest;
+			remoteRef = 9AB09B8D1D5B3C5B00B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapp_core_hellomultiverse.dylib;
+			remoteRef = 9AD486101D5AA02200354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libapp_core_hellomultiverse.dylib;
+			remoteRef = 9AD486121D5AA02200354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486151D5AA02200354801 /* app_core_hellomultiverse_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = app_core_hellomultiverse_iosTests.xctest;
+			remoteRef = 9AD486141D5AA02200354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AE24E971904CFFD001AEFFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AE24E861904CFFD001AEFFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE24E951904CFFD001AEFFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AEB759F16F78DF10085103B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB09B5E1D5B3AE100B5F2A0 /* pacman_application.cpp in Sources */,
+				9AB09B6F1D5B3AE100B5F2A0 /* pacman_pacman.cpp in Sources */,
+				9AB09B711D5B3AE100B5F2A0 /* pacman_pane_view_update_hint.cpp in Sources */,
+				9AB09B751D5B3AE100B5F2A0 /* pacman_pellet.cpp in Sources */,
+				9AB09BB91D5B3F5400B5F2A0 /* pacman_main.cpp in Sources */,
+				9AB09B601D5B3AE100B5F2A0 /* pacman_console.cpp in Sources */,
+				9AB09B6C1D5B3AE100B5F2A0 /* pacman_levelmanip.cpp in Sources */,
+				9AB09B651D5B3AE100B5F2A0 /* pacman_frame.cpp in Sources */,
+				9AB09B6E1D5B3AE100B5F2A0 /* pacman_objectmanip.cpp in Sources */,
+				9AB09B691D5B3AE100B5F2A0 /* pacman_globals.cpp in Sources */,
+				9AB09B631D5B3AE100B5F2A0 /* pacman_document.cpp in Sources */,
+				9AB09B6A1D5B3AE100B5F2A0 /* pacman_interface.cpp in Sources */,
+				9AB09B7D1D5B3AE100B5F2A0 /* pacman_sound.cpp in Sources */,
+				9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */,
+				9AB09B731D5B3AE100B5F2A0 /* pacman_pane_view.cpp in Sources */,
+				9AB09B771D5B3AE100B5F2A0 /* pacman_player.cpp in Sources */,
+				9AB09B791D5B3AE100B5F2A0 /* pacman_preview.cpp in Sources */,
+				9AB09B671D5B3AE100B5F2A0 /* pacman_ghost.cpp in Sources */,
+				9AB09B7F1D5B3AE100B5F2A0 /* pacman_view.cpp in Sources */,
+				9AB09B7B1D5B3AE100B5F2A0 /* pacman_sound_track.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AB09BB61D5B3EFB00B5F2A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = multimedia;
+			targetProxy = 9AB09BB51D5B3EFB00B5F2A0 /* PBXContainerItemProxy */;
+		};
+		9AD486171D5AA03000354801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_core_hellomultiverse;
+			targetProxy = 9AD486161D5AA03000354801 /* PBXContainerItemProxy */;
+		};
+		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AE24E891904CFFD001AEFFB /* ios_game_pacman */;
+			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE24EA61904CFFD001AEFFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AE24EAA1904CFFD001AEFFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
+				EXECUTABLE_EXTENSION = .dylib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = mh_dylib;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AE24EAB1904CFFD001AEFFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
+				EXECUTABLE_EXTENSION = .dylib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = mh_dylib;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9AE24EAC1904CFFD001AEFFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libapp_core_hellomultiverse.dylib";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "app_core_hellomultiverse_ios/app_core_hellomultiverse_ios-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "app_core_hellomultiverse_iosTests/app_core_hellomultiverse_iosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9AE24EAD1904CFFD001AEFFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libapp_core_hellomultiverse.dylib";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "app_core_hellomultiverse_ios/app_core_hellomultiverse_ios-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "app_core_hellomultiverse_iosTests/app_core_hellomultiverse_iosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		9AEB75A516F78DF10085103B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/../../../app/thirdparty/include",
+					"$(WorkspaceDir)/../../../nodeapp/thirdparty/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(TARGET_BUILD_DIR)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
+				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
+			};
+			name = Debug;
+		};
+		9AEB75A616F78DF10085103B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = framework.h;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/../../../app/thirdparty/include",
+					"$(WorkspaceDir)/../../../nodeapp/thirdparty/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(TARGET_BUILD_DIR)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
+				VALIDATE_PRODUCT = YES;
+				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
+			};
+			name = Release;
+		};
+		9AEB75A816F78DF10085103B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		9AEB75A916F78DF10085103B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_pacman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE24EAA1904CFFD001AEFFB /* Debug */,
+				9AE24EAB1904CFFD001AEFFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE24EBB1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "game_pacman_iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE24EAC1904CFFD001AEFFB /* Debug */,
+				9AE24EAD1904CFFD001AEFFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_pacman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEB75A516F78DF10085103B /* Debug */,
+				9AEB75A616F78DF10085103B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_pacman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEB75A816F78DF10085103B /* Debug */,
+				9AEB75A916F78DF10085103B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AEB759B16F78DF10085103B /* Project object */;
+}

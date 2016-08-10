@@ -31,8 +31,15 @@
 		07C6AA1D1CA4F16B00B4E555 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA1A1CA4F16B00B4E555 /* Info.plist */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
 		07EF5CCB1B72C2C200863D39 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A243F1B6E772400BF6C7D /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AD484EB1D5A989400354801 /* libgame_tictactoe.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD484E41D5A97F400354801 /* libgame_tictactoe.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A342C5F1D5B6EC100D00D4A /* libgame_coincube.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A342BE41D5B6D1600D00D4A /* libgame_coincube.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A342C601D5B6ECD00D00D4A /* libestamira.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A342C561D5B6EA400D00D4A /* libestamira.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB09BBA1D5B3FB900B5F2A0 /* libmultimedia.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB09BBB1D5B400A00B5F2A0 /* libaudio_core_audio.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AB09BA41D5B3D0500B5F2A0 /* libaudio_core_audio.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB09BBC1D5B400A00B5F2A0 /* libaudio_decode_wave.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AB09BAC1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD484FA1D5A9BBC00354801 /* libwndfrm_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AD486381D5AA0C300354801 /* libgcom.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD4862E1D5AA09A00354801 /* libgcom.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AD486631D5AA16800354801 /* libaxisjpeg.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD4864E1D5AA14A00354801 /* libaxisjpeg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AD486641D5AA17000354801 /* libaxispng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD4865A1D5AA15000354801 /* libaxispng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -407,12 +414,61 @@
 			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
 			remoteInfo = axis_image_png;
 		};
-		07D1B1121B6FC1C7004E8E35 /* PBXContainerItemProxy */ = {
+		9A342BE31D5B6D1600D00D4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07D1B0AA1B6FBEA3004E8E35 /* axis_image_jpeg.xcodeproj */;
+			containerPortal = 9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = game_coincube;
+		};
+		9A342BE51D5B6D1600D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_game_coincube;
+		};
+		9A342BE71D5B6D1600D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = game_coincube_iosTests;
+		};
+		9A342C551D5B6EA400D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = estamira;
+		};
+		9A342C571D5B6EA400D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_estamira;
+		};
+		9A342C591D5B6EA400D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = estamira_iosTests;
+		};
+		9A342C5B1D5B6EAF00D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = game_arch001;
+		};
+		9A342C5D1D5B6EB600D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
-			remoteInfo = axis_image_jpeg;
+			remoteInfo = estamira;
 		};
 		9A74436D1D4D85460056CCC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -428,33 +484,75 @@
 			remoteGlobalIDString = 07D6A8471B4CBB45004FEBC2;
 			remoteInfo = ios_pcre;
 		};
-		9AD484E31D5A97F400354801 /* PBXContainerItemProxy */ = {
+		9AB09B951D5B3C8B00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */;
+			containerPortal = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = game_tictactoe;
+			remoteInfo = multimedia;
 		};
-		9AD484E51D5A97F400354801 /* PBXContainerItemProxy */ = {
+		9AB09B971D5B3C8B00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */;
+			containerPortal = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_game_tictactoe;
+			remoteGlobalIDString = 07B6578E190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
 		};
-		9AD484E71D5A97F400354801 /* PBXContainerItemProxy */ = {
+		9AB09B991D5B3C8B00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */;
+			containerPortal = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = game_tictactoe_iosTests;
+			remoteGlobalIDString = 07B6579D190F3CAF002DAADE;
+			remoteInfo = multlimedia_iosTests;
 		};
-		9AD484E91D5A988300354801 /* PBXContainerItemProxy */ = {
+		9AB09B9D1D5B3CEE00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */;
+			containerPortal = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = game_tictactoe;
+			remoteInfo = multimedia;
+		};
+		9AB09BA31D5B3D0500B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteInfo = audio_core_audio;
+		};
+		9AB09BAB1D5B3D6500B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = audio_decode_wave;
+		};
+		9AB09BAD1D5B3D6500B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B656E6190F3C5E002DAADE;
+			remoteInfo = ios_audio_decode_wave;
+		};
+		9AB09BAF1D5B3D6500B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B656F5190F3C5E002DAADE;
+			remoteInfo = audio_decode_libmpg123_iosTests;
+		};
+		9AB09BB11D5B3D7000B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteInfo = audio_core_audio;
+		};
+		9AB09BB31D5B3D7000B5F2A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = audio_decode_wave;
 		};
 		9AD484F21D5A9B9F00354801 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -484,6 +582,90 @@
 			remoteGlobalIDString = 9AEB75F316F78EDC0085103B;
 			remoteInfo = wndfrm_core;
 		};
+		9AD4862D1D5AA09A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486271D5AA09A00354801 /* gcom.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = gcom;
+		};
+		9AD4862F1D5AA09A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486271D5AA09A00354801 /* gcom.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_gcom;
+		};
+		9AD486311D5AA09A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486271D5AA09A00354801 /* gcom.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = gcom_iosTests;
+		};
+		9AD486351D5AA0AC00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486271D5AA09A00354801 /* gcom.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = gcom;
+		};
+		9AD4864D1D5AA14A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = axisjpeg;
+		};
+		9AD4864F1D5AA14A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_axisjpeg;
+		};
+		9AD486511D5AA14A00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = axisjpeg_iosTests;
+		};
+		9AD486591D5AA15000354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486531D5AA15000354801 /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = axispng;
+		};
+		9AD4865B1D5AA15000354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486531D5AA15000354801 /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_axispng;
+		};
+		9AD4865D1D5AA15000354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486531D5AA15000354801 /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = axispng_iosTests;
+		};
+		9AD4865F1D5AA15900354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
+			remoteInfo = axisjpeg;
+		};
+		9AD486611D5AA15E00354801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD486531D5AA15000354801 /* axispng.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
+			remoteInfo = axispng;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -493,8 +675,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				9A342C601D5B6ECD00D00D4A /* libestamira.dylib in CopyFiles */,
+				9A342C5F1D5B6EC100D00D4A /* libgame_coincube.dylib in CopyFiles */,
+				9AB09BBB1D5B400A00B5F2A0 /* libaudio_core_audio.dylib in CopyFiles */,
+				9AB09BBC1D5B400A00B5F2A0 /* libaudio_decode_wave.dylib in CopyFiles */,
+				9AB09BBA1D5B3FB900B5F2A0 /* libmultimedia.dylib in CopyFiles */,
+				9AD486641D5AA17000354801 /* libaxispng.dylib in CopyFiles */,
+				9AD486631D5AA16800354801 /* libaxisjpeg.dylib in CopyFiles */,
+				9AD486381D5AA0C300354801 /* libgcom.dylib in CopyFiles */,
 				9AD484FA1D5A9BBC00354801 /* libwndfrm_core.dylib in CopyFiles */,
-				9AD484EB1D5A989400354801 /* libgame_tictactoe.dylib in CopyFiles */,
 				076FB4F21C9F926900C73C4E /* libaurapcre.dylib in CopyFiles */,
 				076FB4CC1C9F8F6E00C73C4E /* libaxiswinpr.dylib in CopyFiles */,
 				07EF5CCB1B72C2C200863D39 /* libaura.dylib in CopyFiles */,
@@ -518,8 +707,8 @@
 
 /* Begin PBXFileReference section */
 		070561DB1C412ADA004085DF /* aurapcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aurapcre.xcodeproj; path = ../../../app/aura/pcre/aurapcre.xcodeproj; sourceTree = "<group>"; };
-		070B8EEA1B6E53F900D26137 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* Tic Tac Toe Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic Tac Toe Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EEA1B6E53F900D26137 /* arch001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arch001.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EFD1B6E53FA00D26137 /* arch001 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arch001 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		073D6D4B1B6E7CF000B8AC34 /* axiscrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axiscrypto.xcodeproj; path = ../../../app/axis/crypto/axiscrypto.xcodeproj; sourceTree = "<group>"; };
@@ -542,9 +731,16 @@
 		07C6AA261CA4F3A700B4E555 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = macos/main.cpp; sourceTree = SOURCE_ROOT; };
 		07D1B09E1B6FBE9C004E8E35 /* axis_image_png.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_png.xcodeproj; path = ../../../app/axis/image_png/axis_image_png.xcodeproj; sourceTree = "<group>"; };
 		07D1B0AA1B6FBEA3004E8E35 /* axis_image_jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_jpeg.xcodeproj; path = ../../../app/axis/image_jpeg/axis_image_jpeg.xcodeproj; sourceTree = "<group>"; };
+		9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_arch001.xcodeproj; sourceTree = "<group>"; };
+		9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../../../app/appseed/estamira/estamira.xcodeproj; sourceTree = "<group>"; };
 		9A7443681D4D85460056CCC6 /* pcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pcre.xcodeproj; path = ../../../app/appseed/pcre/pcre.xcodeproj; sourceTree = "<group>"; };
-		9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_tictactoe.xcodeproj; sourceTree = "<group>"; };
+		9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
+		9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_core_audio.xcodeproj; path = ../../../nodeapp/appseed/audio_core_audio/audio_core_audio.xcodeproj; sourceTree = "<group>"; };
+		9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_decode_wave.xcodeproj; path = "../../../app-core/appseed/audio_decode_wave/audio_decode_wave.xcodeproj"; sourceTree = "<group>"; };
 		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app-core/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
+		9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axisjpeg.xcodeproj; path = ../../../app/axis/jpeg/axisjpeg.xcodeproj; sourceTree = "<group>"; };
+		9AD486531D5AA15000354801 /* axispng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axispng.xcodeproj; path = ../../../app/axis/png/axispng.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,8 +776,9 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
-				9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */,
 				073D6D821B6E942C00B8AC34 /* atomiconv.xcodeproj */,
+				9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */,
+				9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */,
 				076A24081B6E772400BF6C7D /* aura.xcodeproj */,
 				073D6D5B1B6E7E8E00B8AC34 /* auracharguess.xcodeproj */,
 				070561DB1C412ADA004085DF /* aurapcre.xcodeproj */,
@@ -592,15 +789,21 @@
 				073D6D751B6E801B00B8AC34 /* axisidn.xcodeproj */,
 				07D1B0AA1B6FBEA3004E8E35 /* axis_image_jpeg.xcodeproj */,
 				07D1B09E1B6FBE9C004E8E35 /* axis_image_png.xcodeproj */,
+				9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */,
+				9AD486531D5AA15000354801 /* axispng.xcodeproj */,
 				076A241D1B6E772400BF6C7D /* axisopenssl.xcodeproj */,
 				076FB49B1C9F8F4000C73C4E /* axiswinpr.xcodeproj */,
 				076A24261B6E772400BF6C7D /* base.xcodeproj */,
 				076A24291B6E772400BF6C7D /* core.xcodeproj */,
 				076A242C1B6E772400BF6C7D /* draw2d_quartz2d.xcodeproj */,
+				9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */,
+				9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */,
+				9AD486271D5AA09A00354801 /* gcom.xcodeproj */,
+				9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */,
 				9A7443681D4D85460056CCC6 /* pcre.xcodeproj */,
 				9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */,
 				070B8EEC1B6E53F900D26137 /* macos */,
-				070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */,
+				070B8F001B6E53FA00D26137 /* macos Tests */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -608,8 +811,8 @@
 		070B8EEB1B6E53F900D26137 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070B8EEA1B6E53F900D26137 /* .app */,
-				070B8EFD1B6E53FA00D26137 /* Tic Tac Toe Tests.xctest */,
+				070B8EEA1B6E53F900D26137 /* arch001.app */,
+				070B8EFD1B6E53FA00D26137 /* arch001 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,12 +830,13 @@
 			path = "Hello Multiverse!!";
 			sourceTree = "<group>";
 		};
-		070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
+		070B8F001B6E53FA00D26137 /* macos Tests */ = {
 			isa = PBXGroup;
 			children = (
 				070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */,
 				070B8F011B6E53FA00D26137 /* Supporting Files */,
 			);
+			name = "macos Tests";
 			path = "Hello Multiverse!!Tests";
 			sourceTree = "<group>";
 		};
@@ -788,6 +992,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A342BDC1D5B6D1600D00D4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A342BE41D5B6D1600D00D4A /* libgame_coincube.dylib */,
+				9A342BE61D5B6D1600D00D4A /* libios_game_coincube.dylib */,
+				9A342BE81D5B6D1600D00D4A /* game_coincube_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A342C501D5B6EA400D00D4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A342C561D5B6EA400D00D4A /* libestamira.dylib */,
+				9A342C581D5B6EA400D00D4A /* libios_estamira.dylib */,
+				9A342C5A1D5B6EA400D00D4A /* estamira_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9A7443691D4D85460056CCC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,12 +1021,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AD484DE1D5A97F400354801 /* Products */ = {
+		9AB09B901D5B3C8A00B5F2A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AD484E41D5A97F400354801 /* libgame_tictactoe.dylib */,
-				9AD484E61D5A97F400354801 /* libgame_tictactoe.dylib */,
-				9AD484E81D5A97F400354801 /* game_tictactoe_iosTests.xctest */,
+				9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */,
+				9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.dylib */,
+				9AB09B9A1D5B3C8B00B5F2A0 /* multlimedia_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AB09BA01D5B3D0400B5F2A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB09BA41D5B3D0500B5F2A0 /* libaudio_core_audio.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AB09BA61D5B3D6500B5F2A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB09BAC1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */,
+				9AB09BAE1D5B3D6500B5F2A0 /* libaudio_decode_wave.a */,
+				9AB09BB01D5B3D6500B5F2A0 /* audio_decode_libmpg123_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -817,12 +1059,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9AD486281D5AA09A00354801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AD4862E1D5AA09A00354801 /* libgcom.dylib */,
+				9AD486301D5AA09A00354801 /* libios_gcom.dylib */,
+				9AD486321D5AA09A00354801 /* gcom_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AD486481D5AA14A00354801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AD4864E1D5AA14A00354801 /* libaxisjpeg.dylib */,
+				9AD486501D5AA14A00354801 /* libios_axisjpeg.dylib */,
+				9AD486521D5AA14A00354801 /* axisjpeg_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AD486541D5AA15000354801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AD4865A1D5AA15000354801 /* libaxispng.dylib */,
+				9AD4865C1D5AA15000354801 /* libios_axispng.dylib */,
+				9AD4865E1D5AA15000354801 /* axispng_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		070B8EE91B6E53F900D26137 /* Tic Tac Toe */ = {
+		070B8EE91B6E53F900D26137 /* arch001 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Tic Tac Toe" */;
+			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "arch001" */;
 			buildPhases = (
 				070B8EE61B6E53F900D26137 /* Sources */,
 				070B8EE71B6E53F900D26137 /* Frameworks */,
@@ -832,11 +1104,17 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A342C5E1D5B6EB600D00D4A /* PBXTargetDependency */,
+				9A342C5C1D5B6EAF00D00D4A /* PBXTargetDependency */,
+				9AB09BB21D5B3D7000B5F2A0 /* PBXTargetDependency */,
+				9AB09BB41D5B3D7000B5F2A0 /* PBXTargetDependency */,
+				9AB09B9E1D5B3CEE00B5F2A0 /* PBXTargetDependency */,
+				9AD486621D5AA15E00354801 /* PBXTargetDependency */,
+				9AD486601D5AA15900354801 /* PBXTargetDependency */,
+				9AD486361D5AA0AC00354801 /* PBXTargetDependency */,
 				9AD484F91D5A9BAF00354801 /* PBXTargetDependency */,
-				9AD484EA1D5A988300354801 /* PBXTargetDependency */,
 				076FB4F11C9F924F00C73C4E /* PBXTargetDependency */,
 				076FB4CB1C9F8F4F00C73C4E /* PBXTargetDependency */,
-				07D1B1131B6FC1C7004E8E35 /* PBXTargetDependency */,
 				07D1B1111B6FC1BD004E8E35 /* PBXTargetDependency */,
 				076A24CF1B6E777500BF6C7D /* PBXTargetDependency */,
 				076A24D11B6E777500BF6C7D /* PBXTargetDependency */,
@@ -847,14 +1125,14 @@
 				076A24C71B6E776300BF6C7D /* PBXTargetDependency */,
 				076A24CD1B6E776300BF6C7D /* PBXTargetDependency */,
 			);
-			name = "Tic Tac Toe";
+			name = arch001;
 			productName = "Hello Multiverse!!";
-			productReference = 070B8EEA1B6E53F900D26137 /* .app */;
+			productReference = 070B8EEA1B6E53F900D26137 /* arch001.app */;
 			productType = "com.apple.product-type.application";
 		};
-		070B8EFC1B6E53FA00D26137 /* Tic Tac Toe Tests */ = {
+		070B8EFC1B6E53FA00D26137 /* arch001 Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Tic Tac Toe Tests" */;
+			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "arch001 Tests" */;
 			buildPhases = (
 				070B8EF91B6E53FA00D26137 /* Sources */,
 				070B8EFA1B6E53FA00D26137 /* Frameworks */,
@@ -865,9 +1143,9 @@
 			dependencies = (
 				070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */,
 			);
-			name = "Tic Tac Toe Tests";
+			name = "arch001 Tests";
 			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* Tic Tac Toe Tests.xctest */;
+			productReference = 070B8EFD1B6E53FA00D26137 /* arch001 Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -889,7 +1167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Tic Tac Toe" */;
+			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "arch001" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -904,6 +1182,14 @@
 				{
 					ProductGroup = 073D6D831B6E942C00B8AC34 /* Products */;
 					ProjectRef = 073D6D821B6E942C00B8AC34 /* atomiconv.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AB09BA01D5B3D0400B5F2A0 /* Products */;
+					ProjectRef = 9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AB09BA61D5B3D6500B5F2A0 /* Products */;
+					ProjectRef = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
 				},
 				{
 					ProductGroup = 076A24091B6E772400BF6C7D /* Products */;
@@ -946,8 +1232,16 @@
 					ProjectRef = 073D6D751B6E801B00B8AC34 /* axisidn.xcodeproj */;
 				},
 				{
+					ProductGroup = 9AD486481D5AA14A00354801 /* Products */;
+					ProjectRef = 9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */;
+				},
+				{
 					ProductGroup = 076A241E1B6E772400BF6C7D /* Products */;
 					ProjectRef = 076A241D1B6E772400BF6C7D /* axisopenssl.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AD486541D5AA15000354801 /* Products */;
+					ProjectRef = 9AD486531D5AA15000354801 /* axispng.xcodeproj */;
 				},
 				{
 					ProductGroup = 076FB49C1C9F8F4000C73C4E /* Products */;
@@ -966,8 +1260,20 @@
 					ProjectRef = 076A242C1B6E772400BF6C7D /* draw2d_quartz2d.xcodeproj */;
 				},
 				{
-					ProductGroup = 9AD484DE1D5A97F400354801 /* Products */;
-					ProjectRef = 9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */;
+					ProductGroup = 9A342C501D5B6EA400D00D4A /* Products */;
+					ProjectRef = 9A342C4F1D5B6EA400D00D4A /* estamira.xcodeproj */;
+				},
+				{
+					ProductGroup = 9A342BDC1D5B6D1600D00D4A /* Products */;
+					ProjectRef = 9A342BDB1D5B6D1600D00D4A /* game_arch001.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AD486281D5AA09A00354801 /* Products */;
+					ProjectRef = 9AD486271D5AA09A00354801 /* gcom.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AB09B901D5B3C8A00B5F2A0 /* Products */;
+					ProjectRef = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A7443691D4D85460056CCC6 /* Products */;
@@ -980,8 +1286,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				070B8EE91B6E53F900D26137 /* Tic Tac Toe */,
-				070B8EFC1B6E53FA00D26137 /* Tic Tac Toe Tests */,
+				070B8EE91B6E53F900D26137 /* arch001 */,
+				070B8EFC1B6E53FA00D26137 /* arch001 Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1274,6 +1580,48 @@
 			remoteRef = 07D1B0B41B6FBEA3004E8E35 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9A342BE41D5B6D1600D00D4A /* libgame_coincube.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libgame_coincube.dylib;
+			remoteRef = 9A342BE31D5B6D1600D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A342BE61D5B6D1600D00D4A /* libios_game_coincube.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_game_coincube.dylib;
+			remoteRef = 9A342BE51D5B6D1600D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A342BE81D5B6D1600D00D4A /* game_coincube_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = game_coincube_iosTests.xctest;
+			remoteRef = 9A342BE71D5B6D1600D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A342C561D5B6EA400D00D4A /* libestamira.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libestamira.dylib;
+			remoteRef = 9A342C551D5B6EA400D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A342C581D5B6EA400D00D4A /* libios_estamira.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_estamira.dylib;
+			remoteRef = 9A342C571D5B6EA400D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A342C5A1D5B6EA400D00D4A /* estamira_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = estamira_iosTests.xctest;
+			remoteRef = 9A342C591D5B6EA400D00D4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9A74436E1D4D85460056CCC6 /* libpcre.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -1288,25 +1636,53 @@
 			remoteRef = 9A74436F1D4D85460056CCC6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD484E41D5A97F400354801 /* libgame_tictactoe.dylib */ = {
+		9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libgame_tictactoe.dylib;
-			remoteRef = 9AD484E31D5A97F400354801 /* PBXContainerItemProxy */;
+			path = libmultimedia.dylib;
+			remoteRef = 9AB09B951D5B3C8B00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD484E61D5A97F400354801 /* libgame_tictactoe.dylib */ = {
+		9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libgame_tictactoe.dylib;
-			remoteRef = 9AD484E51D5A97F400354801 /* PBXContainerItemProxy */;
+			path = libios_multimedia.dylib;
+			remoteRef = 9AB09B971D5B3C8B00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD484E81D5A97F400354801 /* game_tictactoe_iosTests.xctest */ = {
+		9AB09B9A1D5B3C8B00B5F2A0 /* multlimedia_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = game_tictactoe_iosTests.xctest;
-			remoteRef = 9AD484E71D5A97F400354801 /* PBXContainerItemProxy */;
+			path = multlimedia_iosTests.xctest;
+			remoteRef = 9AB09B991D5B3C8B00B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09BA41D5B3D0500B5F2A0 /* libaudio_core_audio.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_core_audio.dylib;
+			remoteRef = 9AB09BA31D5B3D0500B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09BAC1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_decode_wave.dylib;
+			remoteRef = 9AB09BAB1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09BAE1D5B3D6500B5F2A0 /* libaudio_decode_wave.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libaudio_decode_wave.a;
+			remoteRef = 9AB09BAD1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB09BB01D5B3D6500B5F2A0 /* audio_decode_libmpg123_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = audio_decode_libmpg123_iosTests.xctest;
+			remoteRef = 9AB09BAF1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */ = {
@@ -1328,6 +1704,69 @@
 			fileType = wrapper.cfbundle;
 			path = wndfrm_core_iosTests.xctest;
 			remoteRef = 9AD484F61D5A9B9F00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD4862E1D5AA09A00354801 /* libgcom.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libgcom.dylib;
+			remoteRef = 9AD4862D1D5AA09A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486301D5AA09A00354801 /* libios_gcom.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_gcom.dylib;
+			remoteRef = 9AD4862F1D5AA09A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486321D5AA09A00354801 /* gcom_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = gcom_iosTests.xctest;
+			remoteRef = 9AD486311D5AA09A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD4864E1D5AA14A00354801 /* libaxisjpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaxisjpeg.dylib;
+			remoteRef = 9AD4864D1D5AA14A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486501D5AA14A00354801 /* libios_axisjpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_axisjpeg.dylib;
+			remoteRef = 9AD4864F1D5AA14A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD486521D5AA14A00354801 /* axisjpeg_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = axisjpeg_iosTests.xctest;
+			remoteRef = 9AD486511D5AA14A00354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD4865A1D5AA15000354801 /* libaxispng.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaxispng.dylib;
+			remoteRef = 9AD486591D5AA15000354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD4865C1D5AA15000354801 /* libios_axispng.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_axispng.dylib;
+			remoteRef = 9AD4865B1D5AA15000354801 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AD4865E1D5AA15000354801 /* axispng_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = axispng_iosTests.xctest;
+			remoteRef = 9AD4865D1D5AA15000354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1374,7 +1813,7 @@
 /* Begin PBXTargetDependency section */
 		070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 070B8EE91B6E53F900D26137 /* Tic Tac Toe */;
+			target = 070B8EE91B6E53F900D26137 /* arch001 */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
 		};
 		076A24BD1B6E776300BF6C7D /* PBXTargetDependency */ = {
@@ -1432,20 +1871,50 @@
 			name = axis_image_png;
 			targetProxy = 07D1B1101B6FC1BD004E8E35 /* PBXContainerItemProxy */;
 		};
-		07D1B1131B6FC1C7004E8E35 /* PBXTargetDependency */ = {
+		9A342C5C1D5B6EAF00D00D4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = axis_image_jpeg;
-			targetProxy = 07D1B1121B6FC1C7004E8E35 /* PBXContainerItemProxy */;
+			name = game_arch001;
+			targetProxy = 9A342C5B1D5B6EAF00D00D4A /* PBXContainerItemProxy */;
 		};
-		9AD484EA1D5A988300354801 /* PBXTargetDependency */ = {
+		9A342C5E1D5B6EB600D00D4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = game_tictactoe;
-			targetProxy = 9AD484E91D5A988300354801 /* PBXContainerItemProxy */;
+			name = estamira;
+			targetProxy = 9A342C5D1D5B6EB600D00D4A /* PBXContainerItemProxy */;
+		};
+		9AB09B9E1D5B3CEE00B5F2A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = multimedia;
+			targetProxy = 9AB09B9D1D5B3CEE00B5F2A0 /* PBXContainerItemProxy */;
+		};
+		9AB09BB21D5B3D7000B5F2A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = audio_core_audio;
+			targetProxy = 9AB09BB11D5B3D7000B5F2A0 /* PBXContainerItemProxy */;
+		};
+		9AB09BB41D5B3D7000B5F2A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = audio_decode_wave;
+			targetProxy = 9AB09BB31D5B3D7000B5F2A0 /* PBXContainerItemProxy */;
 		};
 		9AD484F91D5A9BAF00354801 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = wndfrm_core;
 			targetProxy = 9AD484F81D5A9BAF00354801 /* PBXContainerItemProxy */;
+		};
+		9AD486361D5AA0AC00354801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = gcom;
+			targetProxy = 9AD486351D5AA0AC00354801 /* PBXContainerItemProxy */;
+		};
+		9AD486601D5AA15900354801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = axisjpeg;
+			targetProxy = 9AD4865F1D5AA15900354801 /* PBXContainerItemProxy */;
+		};
+		9AD486621D5AA15E00354801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = axispng;
+			targetProxy = 9AD486611D5AA15E00354801 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1550,7 +2019,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.app-core-hellomultiverse";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game-arch001";
+				PRODUCT_NAME = arch001;
 			};
 			name = Debug;
 		};
@@ -1562,7 +2032,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.app-core-hellomultiverse";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game-arch001";
+				PRODUCT_NAME = arch001;
 			};
 			name = Release;
 		};
@@ -1607,7 +2078,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Tic Tac Toe" */ = {
+		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "arch001" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F051B6E53FA00D26137 /* Debug */,
@@ -1616,7 +2087,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Tic Tac Toe" */ = {
+		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "arch001" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F081B6E53FA00D26137 /* Debug */,
@@ -1625,7 +2096,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Tic Tac Toe Tests" */ = {
+		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "arch001 Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F0B1B6E53FA00D26137 /* Debug */,

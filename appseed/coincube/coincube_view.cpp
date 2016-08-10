@@ -27,12 +27,36 @@ namespace coincube
 
       m_iCount = 0;
       m_iPhase = 0;
-      m_dibCoin.load_from_file("matter://coin.png");
+      
+      int iCount = 0;
+      if(!m_dibCoin.load_from_file("matter://coin.png"))
+      {
+         
+         iCount++;
+         
+      }
 
-      m_dibMony.load_from_file("matter://mony.png");
+      if(!m_dibMony.load_from_file("matter://mony.png"))
+      {
+         
+         iCount++;
+         
+      }
+      
+      if(!m_dibMon2.load_from_file("matter://mon2.png"))
+      {
+         
+         iCount++;
+         
+      }
 
-      m_dibMon2.load_from_file("matter://mon2.png");
-
+      if(iCount > 0)
+      {
+      
+         Application.simple_message_box(NULL, "Could not load "+::str::from(iCount)+" image(s).");
+         
+      }
+      
       m_bGame = false;
 
       m_pot.m_pview =this;
@@ -187,12 +211,16 @@ namespace coincube
 
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
+      
+      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      
+
 
       rect rectClient;
       GetClientRect(rectClient);
 
 
-      ::backview::user::interaction::_001OnDraw(pgraphics);
+//      ::backview::user::interaction::_001OnDraw(pgraphics);
 
       int x = 0;
       int y = 0;

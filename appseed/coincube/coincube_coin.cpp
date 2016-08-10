@@ -49,7 +49,7 @@ namespace coincube
       size s(m_pview->m_dibCoin->m_size.cy,m_pview->m_dibCoin->m_size.cy);
 
       point pt2((((::get_tick_count() + m_iPhase) * m_iSpin / 1000) % (m_pview->m_dibCoin->m_size.cx / m_pview->m_dibCoin->m_size.cy)) *m_pview->m_dibCoin->m_size.cy,0);
-
+      
       pgraphics->BitBlt(pt,s,m_pview->m_dibCoin->get_graphics(),pt2,SRCCOPY);
       defer_check_credit();
       m_pt.x += m_v.x;
