@@ -224,7 +224,7 @@ namespace tetris
       {
             Sleep(delay + 1);
 
-         if(!atPause && atGame && !isMoving && !isDropping)
+         if(!atPause && atGame && !isMoving && !isDropping && !isKilling)
          {
             moveDown();
          }
@@ -423,7 +423,7 @@ namespace tetris
 
       void _Tetris::drop()
       {
-         if(isMoving || isDropping) return;
+         if(isMoving || isDropping || isKilling) return;
          //atGame = false;
          isDropping = true;
          isMoving = true;
@@ -458,8 +458,7 @@ namespace tetris
          int x,y;
          bool filled;
          killed = 0;
-
-
+         
          for(coordY = (heightInCells - 1); coordY >= 0; coordY--)
          {
             for(filled = true,coordX = 0;coordX < widthInCells; coordX++)
@@ -473,6 +472,11 @@ namespace tetris
 
             if(filled)
             {
+               
+               isKilling = true;
+               
+               
+
 
                Toggle = true;
                flashLineOnly(coordY,15,delay);
@@ -495,15 +499,20 @@ namespace tetris
                coordY++;
 //               myPaint();
                paint();
+               isKilling = false;
+
             }
+            
+            
          }
+         
       }
 
 
       void _Tetris::flashLineOnly(int y,int times,float delay)
       {
          ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
-
+         
          if(times == 0) return;
          int coordX,coordY;
          int x = widthInCells - 1;
@@ -529,7 +538,9 @@ namespace tetris
             x--;
          }
 
+
          Score(ROWTYPE,killed);
+         //paint();
          Toggle = !Toggle;
 
 

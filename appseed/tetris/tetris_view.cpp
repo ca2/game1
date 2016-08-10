@@ -290,27 +290,34 @@ namespace tetris
    {
 
       SCAST_PTR(::message::key,pkey,pobj);
+      
+      auto ekey =  pkey->m_ekey;
+      
+      ::fork(get_app(), [=]()
+      {
 
-      if(pkey->m_ekey == ::user::key_down)
+      if(ekey == ::user::key_down)
       {
          m_ptetris->drop();
       }
-      else if(pkey->m_ekey == ::user::key_left)
+      else if(ekey == ::user::key_left)
       {
          m_ptetris->moveLeft();
       }
-      else if(pkey->m_ekey == ::user::key_right)
+      else if(ekey == ::user::key_right)
       {
          m_ptetris->moveRight();
       }
-      else if(pkey->m_ekey == ::user::key_z)
+      else if(ekey == ::user::key_z)
       {
          m_ptetris->rotate(false);
       }
-      else if(pkey->m_ekey == ::user::key_x)
+      else if(ekey == ::user::key_x)
       {
          m_ptetris->rotate(true);
       }
+         
+      });
 
       pkey->m_bRet = true;
 

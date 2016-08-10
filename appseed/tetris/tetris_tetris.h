@@ -38,6 +38,7 @@ namespace tetris
       bool atGame;
       bool isMoving;
       bool isDropping;
+      bool isKilling;
       bool Toggle;
       bool refresh;
       long delay;
