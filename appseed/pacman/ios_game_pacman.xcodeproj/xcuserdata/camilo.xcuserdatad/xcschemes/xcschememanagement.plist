@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ios_game_tictactoe.xcscheme</key>
+		<key>ios_game_pacman.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>wiosapp_core_hellomultiverse.xcscheme</key>
 		<dict>

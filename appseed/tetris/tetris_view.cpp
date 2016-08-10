@@ -262,8 +262,19 @@ namespace tetris
    {
 
       m_ppreview = new _TetrisPreview(this);
+      
+      int iCellSize = 24;
+      
+      if(Application.directrix()->m_varTopicQuery.has_property("cell_size"))
+      {
+         
+         iCellSize = Application.directrix()->m_varTopicQuery["cell_size"];
+         
+         iCellSize = MIN(1024, MAX(2, iCellSize));
+         
+      }
 
-      m_ptetris = new _Tetris(10,20,24,this);
+      m_ptetris = new _Tetris(10,20,iCellSize,this);
 
       m_ptetris->start();
 

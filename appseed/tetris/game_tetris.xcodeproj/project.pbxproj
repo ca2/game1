@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A34305F1D5B9E7F00D00D4A /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
+		9A3430601D5B9E7F00D00D4A /* tetris_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859C1D5A9D7700354801 /* tetris_application.cpp */; };
+		9A3430611D5B9E7F00D00D4A /* tetris_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859E1D5A9D7700354801 /* tetris_document.cpp */; };
+		9A3430621D5B9E7F00D00D4A /* tetris_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A01D5A9D7800354801 /* tetris_frame.cpp */; };
+		9A3430631D5B9E7F00D00D4A /* tetris_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A21D5A9D7800354801 /* tetris_interface.cpp */; };
+		9A3430641D5B9E7F00D00D4A /* tetris_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A41D5A9D7800354801 /* tetris_pane_view.cpp */; };
+		9A3430651D5B9E7F00D00D4A /* tetris_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A61D5A9D7800354801 /* tetris_pane_view_update_hint.cpp */; };
+		9A3430661D5B9E7F00D00D4A /* tetris_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A81D5A9D7800354801 /* tetris_preview.cpp */; };
+		9A3430671D5B9E7F00D00D4A /* tetris_tetris.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485AA1D5A9D7800354801 /* tetris_tetris.cpp */; };
+		9A3430681D5B9E7F00D00D4A /* tetris_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485AC1D5A9D7800354801 /* tetris_view.cpp */; };
+		9A3430731D5B9EA200D00D4A /* libios_ace.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */; };
+		9A3430741D5B9EA200D00D4A /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */; };
+		9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430701D5B9EA200D00D4A /* libios_axis.dylib */; };
+		9A3430761D5B9EA200D00D4A /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430711D5B9EA200D00D4A /* libios_base.dylib */; };
+		9A3430771D5B9EA200D00D4A /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430721D5B9EA200D00D4A /* libios_core.dylib */; };
+		9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */; };
 		9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
 		9AD485D41D5A9D7A00354801 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485871D5A9D7700354801 /* framework.h */; };
 		9AD485D81D5A9D7A00354801 /* tetris_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859C1D5A9D7700354801 /* tetris_application.cpp */; };
@@ -36,12 +52,19 @@
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libios_game_tetris..dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_tetris..dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libgame_tetris.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A3430981D5BA0E100D00D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
 		9AD486101D5AA02200354801 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
@@ -98,6 +121,11 @@
 		07B65529190F301F002DAADE /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		07B6552A190F301F002DAADE /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
 		07B6552B190F301F002DAADE /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore.dylib"; sourceTree = "<group>"; };
+		9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_ace.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_ace.dylib"; sourceTree = "<group>"; };
+		9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_aura.dylib"; sourceTree = "<group>"; };
+		9A3430701D5B9EA200D00D4A /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../../app/appseed/axis/build/Debug-iphoneos/libios_axis.dylib"; sourceTree = "<group>"; };
+		9A3430711D5B9EA200D00D4A /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libios_base.dylib"; sourceTree = "<group>"; };
+		9A3430721D5B9EA200D00D4A /* libios_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_core.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libios_core.dylib"; sourceTree = "<group>"; };
 		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
@@ -133,7 +161,7 @@
 		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
 		9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
 		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libios_game_tetris..dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_tetris..dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tetris.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -149,6 +177,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				9A3430731D5B9EA200D00D4A /* libios_ace.dylib in Frameworks */,
+				9A3430741D5B9EA200D00D4A /* libios_aura.dylib in Frameworks */,
+				9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */,
+				9A3430761D5B9EA200D00D4A /* libios_base.dylib in Frameworks */,
+				9A3430771D5B9EA200D00D4A /* libios_core.dylib in Frameworks */,
 				9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +194,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libios_game_tetris..dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libgame_tetris.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +253,11 @@
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */,
+				9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */,
+				9A3430701D5B9EA200D00D4A /* libios_axis.dylib */,
+				9A3430711D5B9EA200D00D4A /* libios_base.dylib */,
+				9A3430721D5B9EA200D00D4A /* libios_core.dylib */,
 				9AD486181D5AA03700354801 /* libcore.dylib */,
 				9AD486081D5AA00100354801 /* libbase.dylib */,
 				9AD486061D5A9FFC00354801 /* libaxis.dylib */,
@@ -279,7 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_tetris.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libios_game_tetris..dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */,
 				9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -319,10 +358,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A3430991D5BA0E100D00D4A /* PBXTargetDependency */,
 			);
 			name = ios_game_tetris;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_tetris..dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
@@ -440,6 +480,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34305F1D5B9E7F00D00D4A /* framework.cpp in Sources */,
+				9A3430601D5B9E7F00D00D4A /* tetris_application.cpp in Sources */,
+				9A3430611D5B9E7F00D00D4A /* tetris_document.cpp in Sources */,
+				9A3430621D5B9E7F00D00D4A /* tetris_frame.cpp in Sources */,
+				9A3430631D5B9E7F00D00D4A /* tetris_interface.cpp in Sources */,
+				9A3430641D5B9E7F00D00D4A /* tetris_pane_view.cpp in Sources */,
+				9A3430651D5B9E7F00D00D4A /* tetris_pane_view_update_hint.cpp in Sources */,
+				9A3430661D5B9E7F00D00D4A /* tetris_preview.cpp in Sources */,
+				9A3430671D5B9E7F00D00D4A /* tetris_tetris.cpp in Sources */,
+				9A3430681D5B9E7F00D00D4A /* tetris_view.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +521,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A3430991D5BA0E100D00D4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_core_hellomultiverse;
+			targetProxy = 9A3430981D5BA0E100D00D4A /* PBXContainerItemProxy */;
+		};
 		9AD486171D5AA03000354801 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = app_core_hellomultiverse;
@@ -499,8 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -511,8 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -605,6 +658,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -633,7 +687,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
 				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
@@ -659,6 +713,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -679,7 +734,7 @@
 					"\"$(TARGET_BUILD_DIR)\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
 				VALIDATE_PRODUCT = YES;

@@ -4,25 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>core.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>44</integer>
+		</dict>
 		<key>ios_game_tictactoe.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
 		</dict>
 		<key>wiosapp_core_hellomultiverse.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>0</integer>
+		</dict>
+		<key>wiosapp_core_tictactoe.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0776D1E91921748400F890ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0776D1FF1921748500F890ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>078C352E1921758500354453</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>078C35441921758600354453</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07B5903318866047002C6FEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

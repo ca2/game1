@@ -27,9 +27,15 @@
 		9A342FEA1D5B804200D00D4A /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A6C9BC190C90C500859288 /* libios_core.dylib */; };
 		9A342FEB1D5B804200D00D4A /* libios_pcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F821D5B7F1800D00D4A /* libios_pcre.dylib */; };
 		9A3430011D5B97BF00D00D4A /* libapp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342FFC1D5B97A000D00D4A /* libapp.dylib */; };
-		9A3430951D5B9FFB00D00D4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A3430911D5B9FFB00D00D4A /* InfoPlist.strings */; };
-		9A3430961D5B9FFB00D00D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3430931D5B9FFB00D00D4A /* Images.xcassets */; };
-		9AF2A2FD1D5BA7CE00E6D5ED /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2A2FC1D5BA7CE00E6D5ED /* main.mm */; };
+		9A34308D1D5B9FE200D00D4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A3430891D5B9FE200D00D4A /* InfoPlist.strings */; };
+		9A34308E1D5B9FE200D00D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A34308B1D5B9FE200D00D4A /* Images.xcassets */; };
+		9A34308F1D5B9FE200D00D4A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A34308C1D5B9FE200D00D4A /* Info.plist */; };
+		9AF2A2FF1D5BA7D700E6D5ED /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2A2FE1D5BA7D700E6D5ED /* main.mm */; };
+		9AF2A3011D5BAC9300E6D5ED /* libdraw2d_quartz2d.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F771D5B7EFA00D00D4A /* libdraw2d_quartz2d.dylib */; };
+		9AF2A3831D5BB4FF00E6D5ED /* libios_axispng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A37E1D5BB4D000E6D5ED /* libios_axispng.dylib */; };
+		9AF2A3841D5BD5E900E6D5ED /* libios_axisjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F3E1D5B7E8600D00D4A /* libios_axisjpeg.dylib */; };
+		9AF2A3851D5BD63900E6D5ED /* libaxis_image_jpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F261D5B7E7800D00D4A /* libaxis_image_jpeg.dylib */; };
+		9AF2A3861D5BD63900E6D5ED /* libaxis_image_png.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F321D5B7E7F00D00D4A /* libaxis_image_png.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,34 +59,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24D431904CEFE001AEFFB;
 			remoteInfo = base_iosTests;
-		};
-		078B58D01B5CF57000A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = game_tictactoe;
-		};
-		078B58D21B5CF57000A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_game_tictactoe;
-		};
-		078B58D41B5CF57000A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = game_tictactoe_iosTests;
-		};
-		078B58F61B5CF85F00A7D3CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
-			remoteInfo = ios_game_tictactoe;
 		};
 		078C35491921758600354453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -614,16 +592,127 @@
 			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
 			remoteInfo = math_iosTests;
 		};
+		9AF2A36D1D5BB02400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = app_core_hellomultiverse;
+		};
+		9AF2A36F1D5BB02400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
+		9AF2A3711D5BB02400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_iosTests;
+		};
+		9AF2A3731D5BB03C00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_core_hellomultiverse;
+		};
+		9AF2A37B1D5BB4D000E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = axispng;
+		};
+		9AF2A37D1D5BB4D000E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_axispng;
+		};
+		9AF2A37F1D5BB4D000E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = axispng_iosTests;
+		};
+		9AF2A3811D5BB4F400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
+			remoteInfo = ios_axispng;
+		};
+		9AF2A3D01D5BE1BF00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = game_pacman;
+		};
+		9AF2A3D21D5BE1BF00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_game_pacman;
+		};
+		9AF2A3D41D5BE1BF00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = game_pacman_iosTests;
+		};
+		9AF2A3EF1D5BE2A400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = multimedia;
+		};
+		9AF2A3F11D5BE2A400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B6578E190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
+		};
+		9AF2A3F31D5BE2A400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B6579D190F3CAF002DAADE;
+			remoteInfo = multlimedia_iosTests;
+		};
+		9AF2A3F61D5BE2D400E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B6578D190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
+		};
+		9AF2A3F81D5BE2DC00E6D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_game_pacman;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		078B58C01B5CF1E300A7D3CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		078B58C11B5CF1E300A7D3CF /* wiosapp_core_tictactoeTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "wiosapp_core_tictactoeTests-Info.plist"; sourceTree = "<group>"; };
 		078B58C21B5CF1E300A7D3CF /* wiosapp_core_tictactoeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wiosapp_core_tictactoeTests.m; sourceTree = "<group>"; };
-		078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_tictactoe.xcodeproj; sourceTree = "<group>"; };
 		078B58F31B5CF82B00A7D3CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		078C352F1921758500354453 /* ios_game_tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_game_tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		078C35451921758600354453 /* ios_game_tictactoeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_game_tictactoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		078C352F1921758500354453 /* ios_game_pacman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_game_pacman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		078C35451921758600354453 /* ios_game_pacmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_game_pacmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B5903518866047002C6FEC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9A342EE01D5B791300D00D4A /* atomiconv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = atomiconv.xcodeproj; path = ../../../app/atom/iconv/atomiconv.xcodeproj; sourceTree = "<group>"; };
 		9A342EF31D5B792E00D00D4A /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../app/appseed/aura/aura.xcodeproj; sourceTree = "<group>"; };
@@ -644,9 +733,9 @@
 		9A342FAE1D5B7F7E00D00D4A /* axisfreeimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axisfreeimage.xcodeproj; path = ../../../app/axis/freeimage/axisfreeimage.xcodeproj; sourceTree = "<group>"; };
 		9A342FF61D5B97A000D00D4A /* app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app.xcodeproj; path = ../../../nodeapp/appseed/app/app.xcodeproj; sourceTree = "<group>"; };
 		9A3430171D5B992000D00D4A /* ace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ace.xcodeproj; path = ../../../app/appseed/ace/ace.xcodeproj; sourceTree = "<group>"; };
-		9A3430921D5B9FFB00D00D4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9A3430931D5B9FFB00D00D4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9A3430941D5B9FFB00D00D4A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A34308A1D5B9FE200D00D4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A34308B1D5B9FE200D00D4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9A34308C1D5B9FE200D00D4A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A5752B616AAE1D2000CC4EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9A5752BA16AAE1D2000CC4EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -658,7 +747,12 @@
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE24EC51904E95E001AEFFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9AE24EDA1904E95E001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9AF2A2FC1D5BA7CE00E6D5ED /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		9AF2A2FE1D5BA7D700E6D5ED /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		9AF2A3651D5BB00800E6D5ED /* libapp_core_hellomultiverse.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapp_core_hellomultiverse.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libapp_core_hellomultiverse.dylib"; sourceTree = "<group>"; };
+		9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
+		9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axispng.xcodeproj; path = ../../../app/axis/png/axispng.xcodeproj; sourceTree = "<group>"; };
+		9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_pacman.xcodeproj; sourceTree = "<group>"; };
+		9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,6 +760,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A3851D5BD63900E6D5ED /* libaxis_image_jpeg.dylib in Frameworks */,
+				9AF2A3861D5BD63900E6D5ED /* libaxis_image_png.dylib in Frameworks */,
+				9AF2A3841D5BD5E900E6D5ED /* libios_axisjpeg.dylib in Frameworks */,
+				9AF2A3831D5BB4FF00E6D5ED /* libios_axispng.dylib in Frameworks */,
+				9AF2A3011D5BAC9300E6D5ED /* libdraw2d_quartz2d.dylib in Frameworks */,
 				9A3430011D5B97BF00D00D4A /* libapp.dylib in Frameworks */,
 				9A342FE21D5B804200D00D4A /* libios_axis.dylib in Frameworks */,
 				9A342FE31D5B804200D00D4A /* libios_axiscrypto.dylib in Frameworks */,
@@ -717,16 +816,6 @@
 				078B58C21B5CF1E300A7D3CF /* wiosapp_core_tictactoeTests.m */,
 			);
 			path = ios_game_tictactoeTests;
-			sourceTree = "<group>";
-		};
-		078B58CB1B5CF56F00A7D3CF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				078B58D11B5CF57000A7D3CF /* libgame_tictactoe.dylib */,
-				078B58D31B5CF57000A7D3CF /* libgame_tictactoe.dylib */,
-				078B58D51B5CF57000A7D3CF /* game_tictactoe_iosTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		07A6C9A1190C90C400859288 /* Products */ = {
@@ -920,13 +1009,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A3430901D5B9FFB00D00D4A /* ios */ = {
+		9A3430881D5B9FE200D00D4A /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				9AF2A2FC1D5BA7CE00E6D5ED /* main.mm */,
-				9A3430911D5B9FFB00D00D4A /* InfoPlist.strings */,
-				9A3430931D5B9FFB00D00D4A /* Images.xcassets */,
-				9A3430941D5B9FFB00D00D4A /* Info.plist */,
+				9AF2A2FE1D5BA7D700E6D5ED /* main.mm */,
+				9A3430891D5B9FE200D00D4A /* InfoPlist.strings */,
+				9A34308B1D5B9FE200D00D4A /* Images.xcassets */,
+				9A34308C1D5B9FE200D00D4A /* Info.plist */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -936,6 +1025,7 @@
 			children = (
 				9A3430171D5B992000D00D4A /* ace.xcodeproj */,
 				9A342FF61D5B97A000D00D4A /* app.xcodeproj */,
+				9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */,
 				9A342EE01D5B791300D00D4A /* atomiconv.xcodeproj */,
 				9AC62EE11D20C1D300A4AC0A /* ace.xcodeproj */,
 				9A342EF31D5B792E00D00D4A /* aura.xcodeproj */,
@@ -950,14 +1040,16 @@
 				9A342F291D5B7E7F00D00D4A /* axis_image_png.xcodeproj */,
 				9A342F351D5B7E8600D00D4A /* axisjpeg.xcodeproj */,
 				9A342F591D5B7EBC00D00D4A /* axisopenssl.xcodeproj */,
+				9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */,
 				9A342F651D5B7ED200D00D4A /* axiswinpr.xcodeproj */,
 				9AA6A4571907B5F0000A1F4A /* base.xcodeproj */,
 				9AA6A4871907B628000A1F4A /* core.xcodeproj */,
 				9A342F6E1D5B7EFA00D00D4A /* draw2d_quartz2d.xcodeproj */,
-				078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */,
+				9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */,
+				9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */,
 				9A342F7A1D5B7F1800D00D4A /* pcre.xcodeproj */,
 				9A342F901D5B7F4700D00D4A /* wndfrm_core.xcodeproj */,
-				9A3430901D5B9FFB00D00D4A /* ios */,
+				9A3430881D5B9FE200D00D4A /* ios */,
 				078B58BE1B5CF1E300A7D3CF /* ios_game_tictactoeTests */,
 				9A5752B516AAE1D2000CC4EF /* Frameworks */,
 				9A5752B316AAE1D2000CC4EF /* Products */,
@@ -967,8 +1059,8 @@
 		9A5752B316AAE1D2000CC4EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				078C352F1921758500354453 /* ios_game_tictactoe.app */,
-				078C35451921758600354453 /* ios_game_tictactoeTests.xctest */,
+				078C352F1921758500354453 /* ios_game_pacman.app */,
+				078C35451921758600354453 /* ios_game_pacmanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -976,6 +1068,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AF2A3651D5BB00800E6D5ED /* libapp_core_hellomultiverse.dylib */,
 				078B58F31B5CF82B00A7D3CF /* UIKit.framework */,
 				9A5752B616AAE1D2000CC4EF /* Cocoa.framework */,
 				07B5903518866047002C6FEC /* CoreFoundation.framework */,
@@ -1008,12 +1101,52 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9AF2A3681D5BB02300E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A36E1D5BB02400E6D5ED /* libapp_core_hellomultiverse.dylib */,
+				9AF2A3701D5BB02400E6D5ED /* libapp_core_hellomultiverse.dylib */,
+				9AF2A3721D5BB02400E6D5ED /* app_core_hellomultiverse_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AF2A3761D5BB4D000E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A37C1D5BB4D000E6D5ED /* libaxispng.dylib */,
+				9AF2A37E1D5BB4D000E6D5ED /* libios_axispng.dylib */,
+				9AF2A3801D5BB4D000E6D5ED /* axispng_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AF2A3CB1D5BE1BF00E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A3D11D5BE1BF00E6D5ED /* libgame_pacman.dylib */,
+				9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman..dylib */,
+				9AF2A3D51D5BE1BF00E6D5ED /* game_pacman_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AF2A3EA1D5BE2A300E6D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AF2A3F01D5BE2A400E6D5ED /* libmultimedia.dylib */,
+				9AF2A3F21D5BE2A400E6D5ED /* libios_multimedia.dylib */,
+				9AF2A3F41D5BE2A400E6D5ED /* multlimedia_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		078C352E1921758500354453 /* ios_game_tictactoe */ = {
+		078C352E1921758500354453 /* ios_game_pacman */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078C35741921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_tictactoe" */;
+			buildConfigurationList = 078C35741921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_pacman" */;
 			buildPhases = (
 				078C352B1921758500354453 /* Sources */,
 				078C352C1921758500354453 /* Frameworks */,
@@ -1022,6 +1155,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AF2A3F91D5BE2DC00E6D5ED /* PBXTargetDependency */,
+				9AF2A3F71D5BE2D400E6D5ED /* PBXTargetDependency */,
+				9AF2A3821D5BB4F400E6D5ED /* PBXTargetDependency */,
+				9AF2A3741D5BB03C00E6D5ED /* PBXTargetDependency */,
 				9A3430001D5B97B300D00D4A /* PBXTargetDependency */,
 				9A342FD01D5B7FE800D00D4A /* PBXTargetDependency */,
 				9A342FD21D5B7FE800D00D4A /* PBXTargetDependency */,
@@ -1041,18 +1178,17 @@
 				9A342FCA1D5B7FCF00D00D4A /* PBXTargetDependency */,
 				9A342FCC1D5B7FCF00D00D4A /* PBXTargetDependency */,
 				9A342FCE1D5B7FCF00D00D4A /* PBXTargetDependency */,
-				078B58F71B5CF85F00A7D3CF /* PBXTargetDependency */,
 				078C35A91921762700354453 /* PBXTargetDependency */,
 				078C35B11921762700354453 /* PBXTargetDependency */,
 			);
-			name = ios_game_tictactoe;
+			name = ios_game_pacman;
 			productName = wiosapp_core_hellomultiverse;
-			productReference = 078C352F1921758500354453 /* ios_game_tictactoe.app */;
+			productReference = 078C352F1921758500354453 /* ios_game_pacman.app */;
 			productType = "com.apple.product-type.application";
 		};
-		078C35441921758600354453 /* ios_game_tictactoeTests */ = {
+		078C35441921758600354453 /* ios_game_pacmanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078C35751921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_tictactoeTests" */;
+			buildConfigurationList = 078C35751921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_pacmanTests" */;
 			buildPhases = (
 				078C35411921758600354453 /* Sources */,
 				078C35421921758600354453 /* Frameworks */,
@@ -1063,9 +1199,9 @@
 			dependencies = (
 				078C354A1921758600354453 /* PBXTargetDependency */,
 			);
-			name = ios_game_tictactoeTests;
+			name = ios_game_pacmanTests;
 			productName = wiosapp_core_hellomultiverseTests;
-			productReference = 078C35451921758600354453 /* ios_game_tictactoeTests.xctest */;
+			productReference = 078C35451921758600354453 /* ios_game_pacmanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1075,7 +1211,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -1086,7 +1222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9A5752AC16AAE1D2000CC4EF /* Build configuration list for PBXProject "ios_game_tictactoe" */;
+			buildConfigurationList = 9A5752AC16AAE1D2000CC4EF /* Build configuration list for PBXProject "ios_game_pacman" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1108,6 +1244,10 @@
 				{
 					ProductGroup = 9A342FF71D5B97A000D00D4A /* Products */;
 					ProjectRef = 9A342FF61D5B97A000D00D4A /* app.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AF2A3681D5BB02300E6D5ED /* Products */;
+					ProjectRef = 9AF2A3671D5BB02300E6D5ED /* app_core_hellomultiverse.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A342EE11D5B791300D00D4A /* Products */;
@@ -1162,6 +1302,10 @@
 					ProjectRef = 9A342F591D5B7EBC00D00D4A /* axisopenssl.xcodeproj */;
 				},
 				{
+					ProductGroup = 9AF2A3761D5BB4D000E6D5ED /* Products */;
+					ProjectRef = 9AF2A3751D5BB4D000E6D5ED /* axispng.xcodeproj */;
+				},
+				{
 					ProductGroup = 9A342F661D5B7ED200D00D4A /* Products */;
 					ProjectRef = 9A342F651D5B7ED200D00D4A /* axiswinpr.xcodeproj */;
 				},
@@ -1178,8 +1322,12 @@
 					ProjectRef = 9A342F6E1D5B7EFA00D00D4A /* draw2d_quartz2d.xcodeproj */;
 				},
 				{
-					ProductGroup = 078B58CB1B5CF56F00A7D3CF /* Products */;
-					ProjectRef = 078B58CA1B5CF56F00A7D3CF /* game_tictactoe.xcodeproj */;
+					ProductGroup = 9AF2A3CB1D5BE1BF00E6D5ED /* Products */;
+					ProjectRef = 9AF2A3CA1D5BE1BF00E6D5ED /* game_pacman.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AF2A3EA1D5BE2A300E6D5ED /* Products */;
+					ProjectRef = 9AF2A3E91D5BE2A300E6D5ED /* multimedia.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A342F7B1D5B7F1800D00D4A /* Products */;
@@ -1192,8 +1340,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				078C352E1921758500354453 /* ios_game_tictactoe */,
-				078C35441921758600354453 /* ios_game_tictactoeTests */,
+				078C352E1921758500354453 /* ios_game_pacman */,
+				078C35441921758600354453 /* ios_game_pacmanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1218,27 +1366,6 @@
 			fileType = wrapper.cfbundle;
 			path = base_iosTests.xctest;
 			remoteRef = 07011FB0190CA31000C08335 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B58D11B5CF57000A7D3CF /* libgame_tictactoe.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libgame_tictactoe.dylib;
-			remoteRef = 078B58D01B5CF57000A7D3CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B58D31B5CF57000A7D3CF /* libgame_tictactoe.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libgame_tictactoe.dylib;
-			remoteRef = 078B58D21B5CF57000A7D3CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		078B58D51B5CF57000A7D3CF /* game_tictactoe_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = game_tictactoe_iosTests.xctest;
-			remoteRef = 078B58D41B5CF57000A7D3CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		07A6C9BA190C90C500859288 /* libcore.dylib */ = {
@@ -1619,6 +1746,90 @@
 			remoteRef = 9AC62EEB1D20C1D300A4AC0A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9AF2A36E1D5BB02400E6D5ED /* libapp_core_hellomultiverse.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapp_core_hellomultiverse.dylib;
+			remoteRef = 9AF2A36D1D5BB02400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3701D5BB02400E6D5ED /* libapp_core_hellomultiverse.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libapp_core_hellomultiverse.dylib;
+			remoteRef = 9AF2A36F1D5BB02400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3721D5BB02400E6D5ED /* app_core_hellomultiverse_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = app_core_hellomultiverse_iosTests.xctest;
+			remoteRef = 9AF2A3711D5BB02400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A37C1D5BB4D000E6D5ED /* libaxispng.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaxispng.dylib;
+			remoteRef = 9AF2A37B1D5BB4D000E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A37E1D5BB4D000E6D5ED /* libios_axispng.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_axispng.dylib;
+			remoteRef = 9AF2A37D1D5BB4D000E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3801D5BB4D000E6D5ED /* axispng_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = axispng_iosTests.xctest;
+			remoteRef = 9AF2A37F1D5BB4D000E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3D11D5BE1BF00E6D5ED /* libgame_pacman.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libgame_pacman.dylib;
+			remoteRef = 9AF2A3D01D5BE1BF00E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3D31D5BE1BF00E6D5ED /* libios_game_pacman..dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_game_pacman..dylib;
+			remoteRef = 9AF2A3D21D5BE1BF00E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3D51D5BE1BF00E6D5ED /* game_pacman_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = game_pacman_iosTests.xctest;
+			remoteRef = 9AF2A3D41D5BE1BF00E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3F01D5BE2A400E6D5ED /* libmultimedia.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmultimedia.dylib;
+			remoteRef = 9AF2A3EF1D5BE2A400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3F21D5BE2A400E6D5ED /* libios_multimedia.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_multimedia.dylib;
+			remoteRef = 9AF2A3F11D5BE2A400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AF2A3F41D5BE2A400E6D5ED /* multlimedia_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = multlimedia_iosTests.xctest;
+			remoteRef = 9AF2A3F31D5BE2A400E6D5ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1626,8 +1837,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A3430951D5B9FFB00D00D4A /* InfoPlist.strings in Resources */,
-				9A3430961D5B9FFB00D00D4A /* Images.xcassets in Resources */,
+				9A34308D1D5B9FE200D00D4A /* InfoPlist.strings in Resources */,
+				9A34308E1D5B9FE200D00D4A /* Images.xcassets in Resources */,
+				9A34308F1D5B9FE200D00D4A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1645,7 +1857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF2A2FD1D5BA7CE00E6D5ED /* main.mm in Sources */,
+				9AF2A2FF1D5BA7D700E6D5ED /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1659,14 +1871,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		078B58F71B5CF85F00A7D3CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_game_tictactoe;
-			targetProxy = 078B58F61B5CF85F00A7D3CF /* PBXContainerItemProxy */;
-		};
 		078C354A1921758600354453 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 078C352E1921758500354453 /* ios_game_tictactoe */;
+			target = 078C352E1921758500354453 /* ios_game_pacman */;
 			targetProxy = 078C35491921758600354453 /* PBXContainerItemProxy */;
 		};
 		078C35A91921762700354453 /* PBXTargetDependency */ = {
@@ -1774,6 +1981,26 @@
 			name = app;
 			targetProxy = 9A342FFF1D5B97B300D00D4A /* PBXContainerItemProxy */;
 		};
+		9AF2A3741D5BB03C00E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_core_hellomultiverse;
+			targetProxy = 9AF2A3731D5BB03C00E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A3821D5BB4F400E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_axispng;
+			targetProxy = 9AF2A3811D5BB4F400E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A3F71D5BE2D400E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_multimedia;
+			targetProxy = 9AF2A3F61D5BE2D400E6D5ED /* PBXContainerItemProxy */;
+		};
+		9AF2A3F91D5BE2DC00E6D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_game_pacman;
+			targetProxy = 9AF2A3F81D5BE2DC00E6D5ED /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1785,10 +2012,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9A3430911D5B9FFB00D00D4A /* InfoPlist.strings */ = {
+		9A3430891D5B9FE200D00D4A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9A3430921D5B9FFB00D00D4A /* en */,
+				9A34308A1D5B9FE200D00D4A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1810,7 +2037,6 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca2.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1831,7 +2057,6 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca2.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1910,7 +2135,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1997,7 +2221,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		078C35741921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_tictactoe" */ = {
+		078C35741921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_pacman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078C35531921758600354453 /* Debug */,
@@ -2006,7 +2230,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		078C35751921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_tictactoeTests" */ = {
+		078C35751921758600354453 /* Build configuration list for PBXNativeTarget "ios_game_pacmanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078C35551921758600354453 /* Debug */,
@@ -2015,7 +2239,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A5752AC16AAE1D2000CC4EF /* Build configuration list for PBXProject "ios_game_tictactoe" */ = {
+		9A5752AC16AAE1D2000CC4EF /* Build configuration list for PBXProject "ios_game_pacman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A5752CE16AAE1D3000CC4EF /* Debug */,

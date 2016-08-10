@@ -55,7 +55,7 @@
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libios_game_pacman..dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libios_game_pacman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
@@ -81,13 +81,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 07B6579D190F3CAF002DAADE;
 			remoteInfo = multlimedia_iosTests;
-		};
-		9AB09BB51D5B3EFB00B5F2A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09B831D5B3C5B00B5F2A0 /* multimedia.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = multimedia;
 		};
 		9AD486101D5AA02200354801 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -150,11 +143,6 @@
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
-		9AAE862717E99A9900F0512E /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
-		9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreeimage.dylib"; sourceTree = "<group>"; };
-		9AAE862917E99A9900F0512E /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreetype.dylib"; sourceTree = "<group>"; };
-		9AAE862A17E99A9900F0512E /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasemysql.dylib"; sourceTree = "<group>"; };
-		9AAE862E17E99A9A00F0512E /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
 		9AB09B381D5B3AE100B5F2A0 /* pacman_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_application.cpp; sourceTree = "<group>"; };
 		9AB09B391D5B3AE100B5F2A0 /* pacman_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pacman_application.h; sourceTree = "<group>"; };
 		9AB09B3A1D5B3AE100B5F2A0 /* pacman_console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pacman_console.cpp; sourceTree = "<group>"; };
@@ -199,7 +187,7 @@
 		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
 		9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
 		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_pacman..dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_pacman.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_pacman_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -226,7 +214,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libios_game_pacman..dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libios_game_pacman.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +351,6 @@
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
 				9AEB75A416F78DF10085103B /* Products */,
-				9AAE862717E99A9900F0512E /* libbase.dylib */,
-				9AAE862817E99A9900F0512E /* libbasefreeimage.dylib */,
-				9AAE862917E99A9900F0512E /* libbasefreetype.dylib */,
-				9AAE862A17E99A9900F0512E /* libbasemysql.dylib */,
-				9AAE862E17E99A9A00F0512E /* libcore.dylib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,7 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_pacman.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */,
 				9AE24E991904CFFD001AEFFB /* game_pacman_iosTests.xctest */,
 			);
 			name = Products;
@@ -426,7 +409,7 @@
 			);
 			name = ios_game_pacman;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman..dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_pacman.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* game_pacman_iosTests */ = {
@@ -458,7 +441,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AB09BB61D5B3EFB00B5F2A0 /* PBXTargetDependency */,
 				9AD486171D5AA03000354801 /* PBXTargetDependency */,
 			);
 			name = game_pacman;
@@ -611,11 +593,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9AB09BB61D5B3EFB00B5F2A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = multimedia;
-			targetProxy = 9AB09BB51D5B3EFB00B5F2A0 /* PBXContainerItemProxy */;
-		};
 		9AD486171D5AA03000354801 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = app_core_hellomultiverse;
@@ -644,7 +621,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -656,7 +632,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -750,6 +725,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -804,6 +780,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
