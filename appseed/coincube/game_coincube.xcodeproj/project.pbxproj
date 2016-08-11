@@ -41,9 +41,24 @@
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libios_game_coincube.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_game_coincube.dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libgame_coincube.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_coincube.dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
+		9AF2A7CE1D5BFC7700E6D5ED /* multimedia_soundtrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */; };
+		9AF2A7CF1D5BFC7700E6D5ED /* coincube_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CC91D5B49AA00B5F2A0 /* coincube_application.cpp */; };
+		9AF2A7D01D5BFC7700E6D5ED /* coincube_coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CCB1D5B49AA00B5F2A0 /* coincube_coin.cpp */; };
+		9AF2A7D11D5BFC7700E6D5ED /* coincube_cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CCD1D5B49AA00B5F2A0 /* coincube_cube.cpp */; };
+		9AF2A7D21D5BFC7700E6D5ED /* coincube_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CCF1D5B49AA00B5F2A0 /* coincube_document.cpp */; };
+		9AF2A7D31D5BFC7700E6D5ED /* coincube_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CD11D5B49AA00B5F2A0 /* coincube_frame.cpp */; };
+		9AF2A7D41D5BFC7700E6D5ED /* coincube_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CD31D5B49AA00B5F2A0 /* coincube_main_frame.cpp */; };
+		9AF2A7D51D5BFC7700E6D5ED /* coincube_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CD51D5B49AA00B5F2A0 /* coincube_pane_view_update_hint.cpp */; };
+		9AF2A7D61D5BFC7700E6D5ED /* coincube_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CD71D5B49AA00B5F2A0 /* coincube_pane_view.cpp */; };
+		9AF2A7D71D5BFC7700E6D5ED /* coincube_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09CD91D5B49AA00B5F2A0 /* coincube_view.cpp */; };
+		9AF2A7DC1D5BFC9000E6D5ED /* libios_gcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D161D5B4BB700B5F2A0 /* libios_gcom.dylib */; };
+		9AF2A7E11D5BFC9000E6D5ED /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A7DD1D5BFC9000E6D5ED /* libios_aura.dylib */; };
+		9AF2A7E21D5BFC9000E6D5ED /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A7DE1D5BFC9000E6D5ED /* libios_axis.dylib */; };
+		9AF2A7E31D5BFC9000E6D5ED /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A7DF1D5BFC9000E6D5ED /* libios_base.dylib */; };
+		9AF2A7E41D5BFC9000E6D5ED /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A7E01D5BFC9000E6D5ED /* libios_core.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +168,7 @@
 		9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 		9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multimedia_soundtrack.cpp; sourceTree = "<group>"; };
 		9AB09D1E1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multimedia_soundtrack.h; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libios_game_coincube.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_game_coincube.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libgame_coincube.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_coincube.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_coincube_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_coincube_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -162,6 +177,10 @@
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
 		9AEB75A316F78DF10085103B /* libgame_coincube.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgame_coincube.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AF2A7DD1D5BFC9000E6D5ED /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../../app/appseed/aura/build/Debug-iphoneos/libios_aura.dylib"; sourceTree = "<group>"; };
+		9AF2A7DE1D5BFC9000E6D5ED /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../../app/appseed/axis/build/Debug-iphoneos/libios_axis.dylib"; sourceTree = "<group>"; };
+		9AF2A7DF1D5BFC9000E6D5ED /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libios_base.dylib"; sourceTree = "<group>"; };
+		9AF2A7E01D5BFC9000E6D5ED /* libios_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_core.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libios_core.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +188,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A7E11D5BFC9000E6D5ED /* libios_aura.dylib in Frameworks */,
+				9AF2A7E21D5BFC9000E6D5ED /* libios_axis.dylib in Frameworks */,
+				9AF2A7E31D5BFC9000E6D5ED /* libios_base.dylib in Frameworks */,
+				9AF2A7E41D5BFC9000E6D5ED /* libios_core.dylib in Frameworks */,
+				9AF2A7DC1D5BFC9000E6D5ED /* libios_gcom.dylib in Frameworks */,
 				9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +204,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libios_game_coincube.dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libgame_coincube.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +277,10 @@
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AF2A7DD1D5BFC9000E6D5ED /* libios_aura.dylib */,
+				9AF2A7DE1D5BFC9000E6D5ED /* libios_axis.dylib */,
+				9AF2A7DF1D5BFC9000E6D5ED /* libios_base.dylib */,
+				9AF2A7E01D5BFC9000E6D5ED /* libios_core.dylib */,
 				9AB09D081D5B4A3500B5F2A0 /* libcore.dylib */,
 				9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */,
 				9AB09D041D5B4A2800B5F2A0 /* libaxis.dylib */,
@@ -309,7 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_coincube.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libios_game_coincube.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libgame_coincube.dylib */,
 				9AE24E991904CFFD001AEFFB /* game_coincube_iosTests.xctest */,
 			);
 			name = Products;
@@ -353,7 +381,7 @@
 			);
 			name = ios_game_coincube;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_game_coincube.dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_coincube.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* game_coincube_iosTests */ = {
@@ -497,6 +525,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF2A7CE1D5BFC7700E6D5ED /* multimedia_soundtrack.cpp in Sources */,
+				9AF2A7CF1D5BFC7700E6D5ED /* coincube_application.cpp in Sources */,
+				9AF2A7D01D5BFC7700E6D5ED /* coincube_coin.cpp in Sources */,
+				9AF2A7D11D5BFC7700E6D5ED /* coincube_cube.cpp in Sources */,
+				9AF2A7D21D5BFC7700E6D5ED /* coincube_document.cpp in Sources */,
+				9AF2A7D31D5BFC7700E6D5ED /* coincube_frame.cpp in Sources */,
+				9AF2A7D41D5BFC7700E6D5ED /* coincube_main_frame.cpp in Sources */,
+				9AF2A7D51D5BFC7700E6D5ED /* coincube_pane_view_update_hint.cpp in Sources */,
+				9AF2A7D61D5BFC7700E6D5ED /* coincube_pane_view.cpp in Sources */,
+				9AF2A7D71D5BFC7700E6D5ED /* coincube_view.cpp in Sources */,
 				07A9A8891B5CA6E800B63035 /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -574,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -698,7 +736,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../../../app/base $(WorkspaceDir)/../../../app/axis $(WorkspaceDir)/../../../app/aura $(WorkspaceDir)/../../../app/atom";
@@ -748,7 +786,7 @@
 					"$(TARGET_BUILD_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../../../app/base $(WorkspaceDir)/../../../app/axis $(WorkspaceDir)/../../../app/aura $(WorkspaceDir)/../../../app/atom";
