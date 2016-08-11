@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BD11EBA6-C53A-4370-8F72-C6407FD72002}</ProjectGuid>
-    <RootNamespace>winmetro_game_tictactoe</RootNamespace>
+    <ProjectGuid>{EDF55590-CDC6-4B98-B61E-273FF1900507}</ProjectGuid>
+    <RootNamespace>winmetro_game_arch001</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
-    <ProjectName>winmetro_game_tictactoe</ProjectName>
+    <ProjectName>winmetro_game_arch001</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
@@ -99,8 +99,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <PackageCertificateKeyFile>winmetro_game_tictactoe_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>497CF005982334110DBA4175F39A9EFD14183D66</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>winmetro_game_arch001_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>E5699ACFA2CBB54E74ED313AB56D6DE0B85A8309</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</OutDir>
@@ -167,11 +167,32 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\audio_decode_wave\w_audio_decode_wave.vcxproj">
+      <Project>{798c106a-6a2c-422b-b42f-b182b5336791}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\gcom\w_gcom.vcxproj">
+      <Project>{b7afcefa-8451-7723-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\id3lib\w_id3lib.vcxproj">
+      <Project>{3c4f405b-2d27-4e0a-b33e-afee86dd06d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\multimedia\w_multimedia.vcxproj">
+      <Project>{845177fa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app-core\appseed\wndfrm_core\w_wndfrm_core.vcxproj">
       <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\app-veriwell\appseed\audio_decode_libmpg123\w_audio_decode_libmpg123.vcxproj">
+      <Project>{6b2fe6cd-c8ce-4105-aa10-a2b959e58f7c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-veriwell\appseed\libmpg123\w_libmpg123.vcxproj">
+      <Project>{312eb372-d782-400e-9363-61d0153fc70a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\aqua\w_aqua.vcxproj">
       <Project>{f20dcbae-5e9b-4a38-a236-b7fbcfe0fa86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\audio_xaudio\w_audio_xaudio.vcxproj">
+      <Project>{84775184-ed25-4ab8-a8d3-4d680dd9aced}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\aura\w_aura.vcxproj">
       <Project>{b3e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
@@ -187,6 +208,12 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\draw2d_direct2d\w_draw2d_direct2d.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\multimedia_xaudio\w_multimedia_xaudio.vcxproj">
+      <Project>{84775184-ed25-4ab8-a8d3-4d680dd9ac84}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\pcre\w_pcre.vcxproj">
+      <Project>{0a43902c-e3c1-4383-b902-fb9d29296571}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\aura\charguess\w_auracharguess.vcxproj">
       <Project>{bc6a52b4-c049-439c-88ff-5a262d968c8f}</Project>
@@ -212,11 +239,20 @@
     <ProjectReference Include="..\..\..\app\axis\image_png\w_axis_image_png.vcxproj">
       <Project>{b4517714-2000-419d-a87f-4338c9dde3fa}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\jpeg\w_axisjpeg.vcxproj">
+      <Project>{89889ad7-7be0-49c3-beb2-f22afacbbb99}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\openssl\w_axisopenssl.vcxproj">
+      <Project>{0edd2695-2bc3-43f5-9910-8f93aef84cd1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\png\w_axispng.vcxproj">
+      <Project>{cfe1d55c-fb80-4ddc-b2f1-90e5b2417e7e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\axis\zlib\w_axiszlib.vcxproj">
       <Project>{b4fcfbf1-e922-4fdc-bc83-b3c04623e8c2}</Project>
     </ProjectReference>
-    <ProjectReference Include="w_tictactoe.vcxproj">
-      <Project>{bd718a0e-a0e8-401d-a034-572023184665}</Project>
+    <ProjectReference Include="w_arch001.vcxproj">
+      <Project>{0e5d2487-5aeb-4590-b16c-53421299aba2}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\tictactoe.cpt" />
+    <None Include="winmetro_game_arch001_TemporaryKey.pfx" />
     <None Include="winmetro_game_tictactoe_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

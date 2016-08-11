@@ -28,6 +28,8 @@ namespace sokoban
 
       m_dib->stretch_dib(m_dibSource);
 
+      //m_dib->Fill(255, 0, 255, 0);
+
    }
 
 

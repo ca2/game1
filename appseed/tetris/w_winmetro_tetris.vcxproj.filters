@@ -15,6 +15,7 @@
     <None Include="winmetro_game_tictactoe_TemporaryKey.pfx">
       <Filter>Metrowin</Filter>
     </None>
+    <None Include="winmetro_game_tetris_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="w_package.appxmanifest">

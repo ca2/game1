@@ -12,25 +12,34 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe.h">
+    <ClInclude Include="coincube.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_application.h">
+    <ClInclude Include="coincube_application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_document.h">
+    <ClInclude Include="coincube_coin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_frame.h">
+    <ClInclude Include="coincube_cube.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_pane_view.h">
+    <ClInclude Include="coincube_document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_pane_view_update_hint.h">
+    <ClInclude Include="coincube_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tictactoe_view.h">
+    <ClInclude Include="coincube_main_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coincube_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coincube_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coincube_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,31 +47,38 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe.cpp">
+    <ClCompile Include="coincube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_application.cpp">
+    <ClCompile Include="coincube_application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_document.cpp">
+    <ClCompile Include="coincube_coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_frame.cpp">
+    <ClCompile Include="coincube_cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_pane_view.cpp">
+    <ClCompile Include="coincube_document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_pane_view_update_hint.cpp">
+    <ClCompile Include="coincube_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tictactoe_view.cpp">
+    <ClCompile Include="coincube_main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="game_tictactoe.def">
+    <ClCompile Include="coincube_pane_view.cpp">
       <Filter>Source Files</Filter>
-    </None>
+    </ClCompile>
+    <ClCompile Include="coincube_pane_view_update_hint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coincube_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multimedia_soundtrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -39,6 +39,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\gcom\w_gcom.vcxproj">
+      <Project>{b7afcefa-8451-7723-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\id3lib\w_id3lib.vcxproj">
+      <Project>{3c4f405b-2d27-4e0a-b33e-afee86dd06d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\multimedia\w_multimedia.vcxproj">
+      <Project>{845177fa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\aura\w_aura.vcxproj">
       <Project>{b3e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
     </ProjectReference>
@@ -53,16 +62,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="coincube.h" />
+    <ClInclude Include="coincube_application.h" />
+    <ClInclude Include="coincube_coin.h" />
+    <ClInclude Include="coincube_cube.h" />
+    <ClInclude Include="coincube_document.h" />
+    <ClInclude Include="coincube_frame.h" />
+    <ClInclude Include="coincube_main_frame.h" />
+    <ClInclude Include="coincube_pane_view.h" />
+    <ClInclude Include="coincube_pane_view_update_hint.h" />
+    <ClInclude Include="coincube_view.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="tictactoe.h" />
-    <ClInclude Include="tictactoe_application.h" />
-    <ClInclude Include="tictactoe_document.h" />
-    <ClInclude Include="tictactoe_frame.h" />
-    <ClInclude Include="tictactoe_pane_view.h" />
-    <ClInclude Include="tictactoe_pane_view_update_hint.h" />
-    <ClInclude Include="tictactoe_view.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="coincube.cpp" />
+    <ClCompile Include="coincube_application.cpp" />
+    <ClCompile Include="coincube_coin.cpp" />
+    <ClCompile Include="coincube_cube.cpp" />
+    <ClCompile Include="coincube_document.cpp" />
+    <ClCompile Include="coincube_frame.cpp" />
+    <ClCompile Include="coincube_main_frame.cpp" />
+    <ClCompile Include="coincube_pane_view.cpp" />
+    <ClCompile Include="coincube_pane_view_update_hint.cpp" />
+    <ClCompile Include="coincube_view.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
@@ -74,28 +96,19 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="tictactoe.cpp" />
-    <ClCompile Include="tictactoe_application.cpp" />
-    <ClCompile Include="tictactoe_document.cpp" />
-    <ClCompile Include="tictactoe_frame.cpp" />
-    <ClCompile Include="tictactoe_pane_view.cpp" />
-    <ClCompile Include="tictactoe_pane_view_update_hint.cpp" />
-    <ClCompile Include="tictactoe_view.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="game_tictactoe.def" />
+    <ClCompile Include="multimedia_soundtrack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BD718A0E-A0E8-401D-A034-572023184665}</ProjectGuid>
     <Keyword>DynamicLibrary</Keyword>
-    <ProjectName>game_tictactoe</ProjectName>
-    <RootNamespace>game_tictactoe</RootNamespace>
+    <ProjectName>game_coincube</ProjectName>
+    <RootNamespace>game_coincube</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -227,7 +240,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -239,7 +252,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>true</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
@@ -259,7 +272,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -271,7 +284,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -284,7 +297,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>true</CompileAsWinRT>
       <CompileAsManaged>false</CompileAsManaged>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -296,7 +309,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -308,7 +321,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -321,7 +334,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>true</CompileAsWinRT>
       <CompileAsManaged>false</CompileAsManaged>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -333,7 +346,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <PreprocessorDefinitions>_GAME_TICTACTOE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_GAME_COINCUBE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

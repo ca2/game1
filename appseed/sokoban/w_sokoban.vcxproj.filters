@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f32a93cc-ab5a-4a19-a9d1-8c41190472e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4016c650-83ec-4b9f-9568-85bd8dc9adbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game">
+      <UniqueIdentifier>{563ea387-e12c-497c-abcd-839b728d833f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\game">
+      <UniqueIdentifier>{e04727fd-1354-4913-af18-a8f14d0ea6b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_pane_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_pane_view_update_hint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sokoban_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game\sokoban_asset.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\sokoban_block.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\sokoban_level.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_pane_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_pane_view_update_hint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sokoban_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game\sokoban_asset.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\sokoban_block.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\sokoban_level.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\sokoban_level_old.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_tetris.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

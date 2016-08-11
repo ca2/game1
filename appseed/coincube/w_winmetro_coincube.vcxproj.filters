@@ -28,6 +28,7 @@
     <None Include="assets\tictactoe.cpt">
       <Filter>assets</Filter>
     </None>
+    <None Include="winmetro_game_coincube_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\ca2-2C-connright.PNG">

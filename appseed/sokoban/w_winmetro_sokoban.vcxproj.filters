@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5e6c5c9a-ea1e-4f09-bdd9-6748c5d42e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metrowin">
+      <UniqueIdentifier>{a1aa55d8-ebc7-44fe-b7b4-0ce2f12de92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{9e6d638e-1732-4671-961d-746e62f95301}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="winmetro_game_tictactoe_TemporaryKey.pfx">
+      <Filter>Metrowin</Filter>
+    </None>
+    <None Include="winmetro_game_tetris_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="w_package.appxmanifest">
+      <Filter>Metrowin</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\SplashScreen.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="w10_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

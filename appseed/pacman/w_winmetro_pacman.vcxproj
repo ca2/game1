@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C8357394-9826-43C4-8777-76CDE2B398C0}</ProjectGuid>
+    <RootNamespace>winmetro_game_pacman</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <ProjectName>winmetro_game_pacman</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="basis|ARM">
+      <Configuration>basis</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="basis|Win32">
+      <Configuration>basis</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="basis|x64">
+      <Configuration>basis</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="stage|ARM">
+      <Configuration>stage</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="stage|Win32">
+      <Configuration>stage</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="stage|x64">
+      <Configuration>stage</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>winmetro_game_pacman_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>00E46A24EA53E262E367A40ED83493FA06E44540</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\..\time\intermediate\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">
+    <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\..\time\intermediate\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
+    <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\..\time\intermediate\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <CompileAsManaged>false</CompileAsManaged>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);$(IntDir);$(SolutionDir)../../../time/library/x86/$(ConfigurationName);$(SolutionDir)../../../nodeapp/thirdparty/library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\audio_decode_wave\w_audio_decode_wave.vcxproj">
+      <Project>{798c106a-6a2c-422b-b42f-b182b5336791}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\gcom\w_gcom.vcxproj">
+      <Project>{b7afcefa-8451-7723-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\hellomultiverse\w_hellomultiverse.vcxproj">
+      <Project>{b7afcefa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\id3lib\w_id3lib.vcxproj">
+      <Project>{3c4f405b-2d27-4e0a-b33e-afee86dd06d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\multimedia\w_multimedia.vcxproj">
+      <Project>{845177fa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\wndfrm_core\w_wndfrm_core.vcxproj">
+      <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\ace\w_ace.vcxproj">
+      <Project>{14871c98-8ada-467e-8d93-d2e340d21626}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\ace\_w_ace.vcxproj">
+      <Project>{f9116331-25d4-4634-8eea-078aedb82161}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\aqua\w_aqua.vcxproj">
+      <Project>{f20dcbae-5e9b-4a38-a236-b7fbcfe0fa86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\audio_xaudio\w_audio_xaudio.vcxproj">
+      <Project>{84775184-ed25-4ab8-a8d3-4d680dd9aced}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\aura\w_aura.vcxproj">
+      <Project>{b3e5b8e7-9e3b-44dd-9ede-e0a74d52c1c5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\axis\w_axis.vcxproj">
+      <Project>{b3a245f9-c92f-4487-aef7-cb0531f665bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\base\w_base.vcxproj">
+      <Project>{bd7d3626-ada6-4ca2-9566-ed7b131e3d51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\core\w_core.vcxproj">
+      <Project>{b000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\draw2d_direct2d\w_draw2d_direct2d.vcxproj">
+      <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\multimedia_xaudio\w_multimedia_xaudio.vcxproj">
+      <Project>{84775184-ed25-4ab8-a8d3-4d680dd9ac84}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\appseed\pcre\w_pcre.vcxproj">
+      <Project>{0a43902c-e3c1-4383-b902-fb9d29296571}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\aura\charguess\w_auracharguess.vcxproj">
+      <Project>{bc6a52b4-c049-439c-88ff-5a262d968c8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\aura\pcre\w_aurapcre.vcxproj">
+      <Project>{b9aa8bb5-51fa-46e7-b346-2a89828f3000}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\aura\sqlite\w_aurasqlite.vcxproj">
+      <Project>{b24f72d6-053a-41c5-be03-3b0bd535f1eb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\bzip2\w_axisbzip2.vcxproj">
+      <Project>{b5a649e1-d516-4f29-a627-da6884dd421c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\crypto\w_axiscrypto.vcxproj">
+      <Project>{39807406-816f-4c0d-a632-4bb8ab13887b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
+      <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\idn\w_axisidn.vcxproj">
+      <Project>{b8ac3ef0-11c5-4e12-a944-5f7efed6e0c4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\image_jpeg\w_axis_image_jpeg.vcxproj">
+      <Project>{b4517713-2000-419d-a87f-4338c9dde3fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\image_png\w_axis_image_png.vcxproj">
+      <Project>{b4517714-2000-419d-a87f-4338c9dde3fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\jpeg\w_axisjpeg.vcxproj">
+      <Project>{89889ad7-7be0-49c3-beb2-f22afacbbb99}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\openssl\w_axisopenssl.vcxproj">
+      <Project>{0edd2695-2bc3-43f5-9910-8f93aef84cd1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\png\w_axispng.vcxproj">
+      <Project>{cfe1d55c-fb80-4ddc-b2f1-90e5b2417e7e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\axis\zlib\w_axiszlib.vcxproj">
+      <Project>{b4fcfbf1-e922-4fdc-bc83-b3c04623e8c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="w_pacman.vcxproj">
+      <Project>{05aac5b2-6bc6-4c06-8c25-59cdbb12cb54}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="winmetro_game_pacman_TemporaryKey.pfx" />
+    <None Include="winmetro_game_tetris_TemporaryKey.pfx" />
+    <None Include="winmetro_game_tictactoe_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="w_package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="w10_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

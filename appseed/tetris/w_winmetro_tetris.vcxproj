@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BD11EBA6-C53A-4370-8F72-C6407FD72002}</ProjectGuid>
+    <ProjectGuid>{396DFBFD-BCD6-40EE-B39E-C178F98A506B}</ProjectGuid>
     <RootNamespace>winmetro_game_tetris</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <ProjectName>winmetro_game_tetris</ProjectName>
@@ -99,8 +99,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <PackageCertificateKeyFile>winmetro_game_tictactoe_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>497CF005982334110DBA4175F39A9EFD14183D66</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>winmetro_game_tetris_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>8B1599A0481B6039E62400F7D33B412A50138E5B</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <OutDir>$(SolutionDir)..\..\..\stage\$(SolutionName)\$(PlatformName)\$(MSBuildProjectName)\</OutDir>
@@ -186,9 +186,6 @@
     <ProjectReference Include="..\..\..\app\appseed\draw2d_direct2d\w_draw2d_direct2d.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\html\w_html.vcxproj">
-      <Project>{b06e3938-fa19-4d4d-83d5-a36692c93e86}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\app\aura\charguess\w_auracharguess.vcxproj">
       <Project>{bc6a52b4-c049-439c-88ff-5a262d968c8f}</Project>
     </ProjectReference>
@@ -207,9 +204,6 @@
     <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
       <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\html_lite\w_html_lite.vcxproj">
-      <Project>{92885ec9-5347-4dc5-82da-e4852f10371a}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\app\axis\idn\w_axisidn.vcxproj">
       <Project>{b8ac3ef0-11c5-4e12-a944-5f7efed6e0c4}</Project>
     </ProjectReference>
@@ -227,6 +221,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="winmetro_game_tetris_TemporaryKey.pfx" />
     <None Include="winmetro_game_tictactoe_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
