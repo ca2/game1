@@ -20,39 +20,53 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="game\sokoban_asset.h" />
-    <ClInclude Include="game\sokoban_block.h" />
-    <ClInclude Include="game\sokoban_level.h" />
-    <ClInclude Include="game\sokoban_level_old.h" />
-    <ClInclude Include="sokoban.h" />
-    <ClInclude Include="sokoban_application.h" />
-    <ClInclude Include="sokoban_document.h" />
-    <ClInclude Include="sokoban_frame.h" />
-    <ClInclude Include="sokoban_interface.h" />
-    <ClInclude Include="sokoban_pane_view.h" />
-    <ClInclude Include="sokoban_pane_view_update_hint.h" />
-    <ClInclude Include="sokoban_view.h" />
+    <ClInclude Include="pacman.h" />
+    <ClInclude Include="pacman_application.h" />
+    <ClInclude Include="pacman_console.h" />
+    <ClInclude Include="pacman_constants.h" />
+    <ClInclude Include="pacman_document.h" />
+    <ClInclude Include="pacman_frame.h" />
+    <ClInclude Include="pacman_ghost.h" />
+    <ClInclude Include="pacman_interface.h" />
+    <ClInclude Include="pacman_pacman.h" />
+    <ClInclude Include="pacman_pane_view.h" />
+    <ClInclude Include="pacman_pane_view_update_hint.h" />
+    <ClInclude Include="pacman_pellet.h" />
+    <ClInclude Include="pacman_player.h" />
+    <ClInclude Include="pacman_preview.h" />
+    <ClInclude Include="pacman_sound.h" />
+    <ClInclude Include="pacman_sound_track.h" />
+    <ClInclude Include="pacman_view.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp" />
-    <ClCompile Include="game\sokoban_asset.cpp" />
-    <ClCompile Include="game\sokoban_block.cpp" />
-    <ClCompile Include="game\sokoban_level.cpp" />
-    <ClCompile Include="sokoban_application.cpp" />
-    <ClCompile Include="sokoban_document.cpp" />
-    <ClCompile Include="sokoban_frame.cpp" />
-    <ClCompile Include="sokoban_interface.cpp" />
-    <ClCompile Include="sokoban_pane_view.cpp" />
-    <ClCompile Include="sokoban_pane_view_update_hint.cpp" />
-    <ClCompile Include="sokoban_view.cpp" />
+    <ClCompile Include="pacman_application.cpp" />
+    <ClCompile Include="pacman_console.cpp" />
+    <ClCompile Include="pacman_document.cpp" />
+    <ClCompile Include="pacman_frame.cpp" />
+    <ClCompile Include="pacman_ghost.cpp" />
+    <ClCompile Include="pacman_globals.cpp" />
+    <ClCompile Include="pacman_interface.cpp" />
+    <ClCompile Include="pacman_levelmanip.cpp" />
+    <ClCompile Include="pacman_main.cpp" />
+    <ClCompile Include="pacman_objectmanip.cpp" />
+    <ClCompile Include="pacman_pacman.cpp" />
+    <ClCompile Include="pacman_pane_view.cpp" />
+    <ClCompile Include="pacman_pane_view_update_hint.cpp" />
+    <ClCompile Include="pacman_pellet.cpp" />
+    <ClCompile Include="pacman_player.cpp" />
+    <ClCompile Include="pacman_preview.cpp" />
+    <ClCompile Include="pacman_sound.cpp" />
+    <ClCompile Include="pacman_sound_track.cpp" />
+    <ClCompile Include="pacman_view.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{913494C2-A6B5-4E09-AD48-76B2334AAF75}</ProjectGuid>
+    <ProjectGuid>{E10F22CE-0D96-453F-808F-E8DB62C78757}</ProjectGuid>
     <Keyword>Android</Keyword>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
-    <ProjectName>game_sokoban</ProjectName>
-    <RootNamespace>game_sokoban</RootNamespace>
+    <ProjectName>game_pacman</ProjectName>
+    <RootNamespace>game_pacman</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -114,7 +128,7 @@
       <AdditionalOptions>-Wno-comment -Wno-reorder %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath);$(Sysroot)\usr\lib</SharedLibrarySearchPath>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -125,7 +139,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -135,7 +149,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -145,7 +159,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
