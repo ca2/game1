@@ -217,11 +217,13 @@ namespace tictactoe
       }
       else
       {
-         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0xaf,0xff,0xaf));
+         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0x23,0x23,0x23));
       }
       pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       pgraphicsParam->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
+
+      pgraphicsParam->FillSolidRect(100, 100, 100, 100, ARGB(255,184,220,184));
 
    }
 

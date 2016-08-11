@@ -20,41 +20,37 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="tetris.h" />
+    <ClInclude Include="tetris_application.h" />
+    <ClInclude Include="tetris_document.h" />
+    <ClInclude Include="tetris_frame.h" />
+    <ClInclude Include="tetris_interface.h" />
+    <ClInclude Include="tetris_pane_view.h" />
+    <ClInclude Include="tetris_pane_view_update_hint.h" />
+    <ClInclude Include="tetris_preview.h" />
+    <ClInclude Include="tetris_tetris.h" />
+    <ClInclude Include="tetris_view.h" />
     <ClInclude Include="tictactoe.h" />
-    <ClInclude Include="tictactoe_application.h" />
-    <ClInclude Include="tictactoe_arbitrator.h" />
-    <ClInclude Include="tictactoe_board.h" />
-    <ClInclude Include="tictactoe_document.h" />
-    <ClInclude Include="tictactoe_frame.h" />
-    <ClInclude Include="tictactoe_main_frame.h" />
-    <ClInclude Include="tictactoe_pane_view.h" />
-    <ClInclude Include="tictactoe_pane_view_update_hint.h" />
-    <ClInclude Include="tictactoe_player.h" />
-    <ClInclude Include="tictactoe_view.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp" />
-    <ClCompile Include="tictactoe_application.cpp" />
-    <ClCompile Include="tictactoe_arbitrator.cpp" />
-    <ClCompile Include="tictactoe_board.cpp" />
-    <ClCompile Include="tictactoe_document.cpp" />
-    <ClCompile Include="tictactoe_frame.cpp" />
-    <ClCompile Include="tictactoe_main_frame.cpp" />
-    <ClCompile Include="tictactoe_pane_view.cpp" />
-    <ClCompile Include="tictactoe_pane_view_update_hint.cpp" />
-    <ClCompile Include="tictactoe_player.cpp" />
-    <ClCompile Include="tictactoe_view.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="game_tictactoe.def" />
+    <ClCompile Include="tetris_application.cpp" />
+    <ClCompile Include="tetris_document.cpp" />
+    <ClCompile Include="tetris_frame.cpp" />
+    <ClCompile Include="tetris_interface.cpp" />
+    <ClCompile Include="tetris_pane_view.cpp" />
+    <ClCompile Include="tetris_pane_view_update_hint.cpp" />
+    <ClCompile Include="tetris_preview.cpp" />
+    <ClCompile Include="tetris_tetris.cpp" />
+    <ClCompile Include="tetris_view.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{19841115-2e02-4bc0-bf89-d11f8409c8df}</ProjectGuid>
+    <ProjectGuid>{BF3AFC61-BDAC-4322-AB3B-44AB13FE092B}</ProjectGuid>
     <Keyword>Android</Keyword>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
-    <ProjectName>game_tictactoe</ProjectName>
-    <RootNamespace>game_tictactoe</RootNamespace>
+    <ProjectName>game_tetris</ProjectName>
+    <RootNamespace>game_tetris</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,7 +112,7 @@
       <AdditionalOptions>-Wno-comment -Wno-reorder %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath);$(Sysroot)\usr\lib</SharedLibrarySearchPath>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -127,7 +123,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -137,7 +133,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -147,7 +143,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <LibraryDependencies>core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>app_core_hellomultiverse;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
