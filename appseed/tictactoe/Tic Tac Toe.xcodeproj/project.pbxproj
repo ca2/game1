@@ -580,7 +580,6 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
-				9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */,
 				073D6D821B6E942C00B8AC34 /* atomiconv.xcodeproj */,
 				076A24081B6E772400BF6C7D /* aura.xcodeproj */,
 				073D6D5B1B6E7E8E00B8AC34 /* auracharguess.xcodeproj */,
@@ -597,6 +596,7 @@
 				076A24261B6E772400BF6C7D /* base.xcodeproj */,
 				076A24291B6E772400BF6C7D /* core.xcodeproj */,
 				076A242C1B6E772400BF6C7D /* draw2d_quartz2d.xcodeproj */,
+				9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */,
 				9A7443681D4D85460056CCC6 /* pcre.xcodeproj */,
 				9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */,
 				070B8EEC1B6E53F900D26137 /* macos */,
