@@ -40,6 +40,7 @@
     <ClCompile Include="arch001_pane_view_update_hint.cpp" />
     <ClCompile Include="arch001_view.cpp" />
     <ClCompile Include="framework.cpp" />
+    <ClCompile Include="multimedia_soundtrack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{812CDB13-B6C0-4919-8894-E7F39ADEFFE2}</ProjectGuid>
@@ -114,7 +115,7 @@
       <CLanguageStandard>c11</CLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <SharedLibrarySearchPath>%(SharedLibrarySearchPath);$(Sysroot)\usr\lib</SharedLibrarySearchPath>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -132,7 +133,7 @@
       <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -150,7 +151,7 @@
       <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -168,7 +169,7 @@
       <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
+      <LibraryDependencies>multimedia;estamira;gcom;core;base;axis;aura;$(StlLibraryName);m</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)../../../nodeapp/thirdparty/library/$(PlatformName)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
