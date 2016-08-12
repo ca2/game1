@@ -116,7 +116,7 @@ namespace tetris
 
       //pgraphics->FillSolidRect(rectClient, ARGB(255,84,84,84));
 
-      //pgraphics->set_text_color(ARGB(255,255,255,255));
+      
 
 
       if(m_ptetris == NULL || m_ppreview == NULL)
@@ -234,6 +234,7 @@ namespace tetris
 
       pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
 
+      pgraphics->set_text_color(ARGB(255,255,255,255));
       pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
       pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y+30,"Level:");
       pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y,m_strScore);
