@@ -57,7 +57,7 @@ namespace tictactoe
 
 
       void get_board_rect(LPRECT lprect);
-      void get_check_rect(LPRECT lprect,int i,int j);
+      void get_check_rect(LPRECT lprect,int i,int j, bool bHitTest);
       bool hit_test_check(int & i, int & j, point pt);
 
 

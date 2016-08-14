@@ -318,7 +318,7 @@ namespace tictactoe
                   if (echeck != check_none)
                   {
 
-                     get_check_rect(rectCheck, i, j);
+                     get_check_rect(rectCheck, i, j, false);
 
                      if (echeck == check_x)
                      {
@@ -471,7 +471,7 @@ namespace tictactoe
 
                }
 
-               get_check_rect(rectCheck,i,j);
+               get_check_rect(rectCheck,i,j, false);
 
                if(echeck == check_x)
                {
@@ -834,7 +834,7 @@ namespace tictactoe
 
    }
 
-   void view::get_check_rect(LPRECT lprect,int i,int j)
+   void view::get_check_rect(LPRECT lprect,int i,int j, bool bHitTest)
    {
 
       int iBorder = m_rectSpace.width() / 6;
@@ -845,7 +845,12 @@ namespace tictactoe
       rect.top = m_rectCheckSpace.top + j * m_rectCheckSpace.width() / 3;
       rect.bottom = m_rectCheckSpace.top + (j + 1) * m_rectCheckSpace.width() / 3;
 
-      rect.deflate(iBorder / 2, iBorder /2 );
+      if(!bHitTest)
+      {
+
+         rect.deflate(iBorder / 2, iBorder /2 );
+
+      }
 
       *lprect = rect;
 
@@ -864,7 +869,7 @@ namespace tictactoe
          for( j = 0; j < (*pboard)[i].get_size(); j++)
          {
 
-            get_check_rect(rectCheck,i,j);
+            get_check_rect(rectCheck,i,j, true);
 
             if(rectCheck.contains(pt))
                return true;
