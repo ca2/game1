@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{876F5728-775F-4D55-8C9B-0F421F3C9919}</ProjectGuid>
+    <ProjectGuid>{F83D4F1E-9A44-4F0E-ABB5-EBC882CD5BB4}</ProjectGuid>
     <RootNamespace>game_coincube</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>game_coincube</ProjectName>
