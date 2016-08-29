@@ -4,7 +4,6 @@
 #include "estamira/estamira.h"
 #include "core/user/userex/userex.h"
 #include "app-core/appseed/gcom/gcom/gcom.h"
-#include "app-core/appseed/multimedia/multimedia/multimedia.h"
 
 
 #ifdef _GAME_ARCH001_LIBRARY
@@ -36,6 +35,8 @@ namespace arch001
 
 #undef App
 #define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::arch001::application > ())
+#undef Gam
+#define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::arch001::game >())
 
 
 

@@ -246,7 +246,7 @@ namespace sokoban
    void view::start()
    {
 
-//      m_ppreview = new _TetrisPreview(this);
+//      m_ppreview = new _SokobanPreview(this);
 
 
    }

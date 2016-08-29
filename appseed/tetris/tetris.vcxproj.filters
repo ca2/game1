@@ -34,13 +34,13 @@
     <ClCompile Include="tetris_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tetris_tetris.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tetris_interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tetris_preview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tetris_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,13 +69,13 @@
     <ClInclude Include="tetris_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tetris_tetris.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="tetris_interface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tetris_preview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tetris_game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

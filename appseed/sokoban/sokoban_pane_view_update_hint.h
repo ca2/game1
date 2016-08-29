@@ -7,7 +7,7 @@ namespace sokoban
    enum EPaneView
    {
       PaneViewNone,
-      PaneViewTetris,
+      PaneViewSokoban,
       PaneViewFileManager,
       PaneViewHelloMultiverse,
       PaneViewHelp

@@ -2,7 +2,7 @@
 
 //
 //
-//	_TetrisInterface
+//	_SokobanInterface
 //	By Camilo Sasuke Tsumanuma 25/09/1998
 //
 //
@@ -12,7 +12,7 @@
 namespace sokoban
 {
 
-   //class _TetrisInterface:
+   //class _SokobanInterface:
    //   virtual public ::object
    //{
    //public:
@@ -29,7 +29,7 @@ namespace sokoban
    //   int typesDistribution[7];
 
 
-   //   _TetrisInterface();
+   //   _SokobanInterface();
 
 
    //};

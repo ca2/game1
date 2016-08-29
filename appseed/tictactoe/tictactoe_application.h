@@ -6,7 +6,7 @@ namespace tictactoe
 
 
    class CLASS_DECL_GAME_TICTACTOE application :
-      public ::core::application
+      public ::estamira::application
    {
    public:
       

@@ -47,7 +47,7 @@ namespace tetris
    };
 
 
-   _TetrisInterface::_TetrisInterface()
+   _TetrisInterface::_TetrisInterface(::aura::application * papp)
    {
 
       typesDistribution[0] = 10;

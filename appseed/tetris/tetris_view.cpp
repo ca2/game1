@@ -14,8 +14,6 @@ namespace tetris
 
       m_ppreview = NULL;
 
-      m_ptetris = NULL;
-
       m_bDibLayout = true;
 
       m_xDib   = -1;
@@ -119,12 +117,12 @@ namespace tetris
       
 
 
-      if(m_ptetris == NULL || m_ppreview == NULL)
+      if( m_ppreview == NULL)
          return;
 
-      int cx = m_ptetris->m_dib->m_size.cx;
+      int cx = Game.m_sizePage.cx;
 
-      int cy = m_ptetris->m_dib->m_size.cy + m_ppreview->m_dib->m_size.cy +10;
+      int cy = Game.m_sizePage.cy + m_ppreview->m_dib->m_size.cy +10;
 
       int x = (rectClient.width() - cx) / 2;
 
@@ -135,12 +133,15 @@ namespace tetris
          m_xDib = x;
          m_bDibLayout = false;
 
+         int cxGame = Game.m_sizePage.cx;
+         int cyGame = Game.m_sizePage.cy;
+
          m_dib.alloc(allocer());
          m_dib.initialize(rectClient.size(),5);
          m_dib->Fill(0,0,0,0);
          m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
          m_dib->get_graphics()->FillSolidRect(x,y,m_ppreview->m_dib->m_size.cx,m_ppreview->m_dib->m_size.cy,ARGB(255,23,23,23));
-         m_dib->get_graphics()->FillSolidRect(x,y + m_ppreview->m_dib->m_size.cy + 10,m_ptetris->m_dib->m_size.cx,m_ptetris->m_dib->m_size.cy,ARGB(255,23,23,23));
+         m_dib->get_graphics()->FillSolidRect(x,y + m_ppreview->m_dib->m_size.cy + 10,cxGame, cyGame,ARGB(255,23,23,23));
          int r = 3;
          int h = 18;
          ::rect rect1;
@@ -232,6 +233,8 @@ namespace tetris
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
+      
+
       pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
 
       pgraphics->set_text_color(ARGB(255,255,255,255));
@@ -244,7 +247,9 @@ namespace tetris
 
       pgraphics->from(::point(x,y),m_ppreview->m_dib->m_size,m_ppreview->m_dib->get_graphics(),::null_point(),SRCCOPY);
 
-      pgraphics->from(::point(x,y + m_ppreview->m_dib->m_size.cy + 10),m_ptetris->m_dib->m_size,m_ptetris->m_dib->get_graphics(),::null_point(),SRCCOPY);
+      Game.m_ptOffset = ::point(x, y + m_ppreview->m_dib->m_size.cy + 10);
+      Game._001OnDraw(pgraphics);
+      // pgraphics->from(::point(x, y + m_ppreview->m_dib->m_size.cy + 10), Game.m_dib->m_size, Game.m_dib->get_graphics(), ::null_point(), SRCCOPY);
 
    }
 
@@ -275,14 +280,14 @@ namespace tetris
          
       }
 
-      m_ptetris = new _Tetris(10,20,iCellSize,this);
+      Application.m_pgame = new game(get_app(), 10,20,iCellSize,this);
 
-      m_ptetris->start();
+      Game.start(this);
 
       sp(frame) pframe = GetTopLevelFrame();
 
-      pframe->m_sizeView.cx = m_ptetris->widthInPixels+ 80;
-      pframe->m_sizeView.cy = m_ptetris->heightInPixels + 80 + 10 + m_ppreview->m_dib->m_size.cy;
+      pframe->m_sizeView.cx = Game.widthInPixels+ 80;
+      pframe->m_sizeView.cy = Game.heightInPixels + 80 + 10 + m_ppreview->m_dib->m_size.cy;
 
       sp(frame) pframe1 = GetParentFrame();
 
@@ -310,23 +315,23 @@ namespace tetris
 
       if(ekey == ::user::key_down)
       {
-         m_ptetris->drop();
+         Game.drop();
       }
       else if(ekey == ::user::key_left)
       {
-         m_ptetris->moveLeft();
+         Game.moveLeft(0);
       }
       else if(ekey == ::user::key_right)
       {
-         m_ptetris->moveRight();
+         Game.moveRight(0);
       }
       else if(ekey == ::user::key_z)
       {
-         m_ptetris->rotate(false);
+         Game.rotate(false);
       }
       else if(ekey == ::user::key_x)
       {
-         m_ptetris->rotate(true);
+         Game.rotate(true);
       }
          
       });

@@ -6,7 +6,8 @@ namespace tetris
 
 
 
-   class _Tetris :
+   class game :
+      virtual public ::estamira::game,
       virtual public _TetrisInterface
    {
    public:
@@ -16,7 +17,7 @@ namespace tetris
       {
       public:
 
-         _Tetris * m_ptetris;
+         game * m_ptetris;
 
          Thread(::aura::application * papp);
 
@@ -27,12 +28,13 @@ namespace tetris
 
       ::tetris::view * m_pparent;
       int2a cells;
+      int2a cellsOverride;
       int2a offCells;
       int cellSizeInPixels;
       int widthInCells,heightInCells;
       int widthInPixels,heightInPixels;
       int curX,curY,curType,curRotation;
-      ::draw2d::dib_sp m_dib;
+      //::draw2d::dib_sp m_dib;
       bool canMove;
       bool atPause;
       bool atGame;
@@ -52,7 +54,7 @@ namespace tetris
 
 
 
-      _Tetris(int widthInCells_,
+      game(::aura::application * papp, int widthInCells_,
          int heightInCells_,
          int cellSizeInPixels_,
          ::tetris::view * pview);
@@ -73,7 +75,7 @@ namespace tetris
 
 
 
-      void start();
+      virtual bool start(::user::interaction * pui);
 
 
       void startBlock();
@@ -82,32 +84,31 @@ namespace tetris
 
 
 
-
+      virtual int hit_test(point pt);
 
 
 
       void moveDown();
 
-      void moveLeft();
+      virtual void moveLeft(index iChar) override;
 
-
-
-      void moveRight();
+      virtual void moveRight(index iChar) override;
 
       void rotate(bool ClockWising);
 
       void drop();
 
+      virtual bool get_char_rect(LPRECT lprect, index iChar, bool bPlatformCall) override;
 
       void killRows();
 
 
       void flashLineOnly(int y,int times,float delay);
-      bool canMoveDown();
+      virtual bool canMoveDown(int iChar);
 
-      bool canMoveLeft();
+      virtual bool canMoveLeft(int iChar);
 
-      bool canMoveRight();
+      virtual bool canMoveRight( int iChar);
 
       bool canRotate(bool ClockWise);
 
@@ -128,7 +129,7 @@ namespace tetris
 
 
 
-      void paint();
+      virtual void _001OnDraw(::draw2d::graphics * pgraphics);
       
 
 

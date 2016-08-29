@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "app-core/appseed/hellomultiverse/hellomultiverse.h"
+#include "estamira/estamira.h"
 #include "core/user/html/html/html.h"
 
 
@@ -22,9 +22,11 @@ namespace tetris
 
 #undef App
 #define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::tetris::application > ())
+#undef Gam
+#define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::tetris::game >())
 
 #include "tetris_interface.h"
-#include "tetris_tetris.h"
+#include "tetris_game.h"
 #include "tetris_preview.h"
 
 #include "tetris_document.h"

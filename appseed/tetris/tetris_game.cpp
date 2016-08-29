@@ -25,14 +25,14 @@ namespace tetris
 {
 
 
-   _Tetris::Thread::Thread(::aura::application * papp):
+   game::Thread::Thread(::aura::application * papp):
       ::object(papp),
       thread(papp)
    {
    }
 
 
-   int32_t _Tetris::Thread::run()
+   int32_t game::Thread::run()
    {
 
       m_ptetris->run();
@@ -44,14 +44,17 @@ namespace tetris
 
 
 
-   _Tetris::_Tetris(int widthInCells_,
+   game::game(::aura::application * papp, int widthInCells_,
          int heightInCells_,
          int cellSizeInPixels_,
          ::tetris::view * pview) :
-         ::object(pview->get_app()),
-         m_pparent(pview),
-         m_dib(allocer())
+         ::object(papp),
+         _TetrisInterface(papp),
+         ::estamira::game(papp),
+         m_pparent(pview)
       {
+
+         m_uiCursorDelay = 200;
          //cells = null;
          //offCells = null;
 
@@ -79,7 +82,7 @@ namespace tetris
 
       }
 
-   void _Tetris::init(int widthInCells_,
+   void game::init(int widthInCells_,
       int heightInCells_,
       int cellSizeInPixels_)
    {
@@ -99,71 +102,174 @@ namespace tetris
       delay = 500;
 
       cells.set_size(heightInCells);
+      cellsOverride.set_size(heightInCells);
       offCells.set_size(heightInCells);
 
       for(index i = 0; i < heightInCells; i++)
       {
          cells[i].set_size(widthInCells);
+         cellsOverride[i].set_size(heightInCells);
          offCells[i].set_size(widthInCells);
       }
 
+      for (index i = 0; i < heightInCells; i++)
+      {
+         for (index j = 0; j < widthInCells; j++)
+         {
+            cellsOverride[i][j] = -1;
+         }
+      }
+
+      m_sizePage.cx = widthInPixels;
+      m_sizePage.cy = heightInPixels;
 
 
       }
 
-   void _Tetris::initPaint()
+   bool game::get_char_rect(LPRECT lprect, index iChar, bool bPlatformCall)
+   {
+
+      int testX, testY, shiftX, shiftY;
+      string strShift = blocks[curType][curRotation];
+      int i = 0;
+
+      testX = curX;
+      testY = curY;
+
+      bool bFirst = true;
+
+      rect rUnion;
+
+      while (true)
       {
+         rect r;
+         r.left = testX * cellSizeInPixels;
+         r.top = testY * cellSizeInPixels;
+         r.right = r.left + cellSizeInPixels;
+         r.bottom = r.top + cellSizeInPixels;
 
-         if(m_dib->area() <= 0)
+         if (bFirst)
          {
-            int i;
-            int j;
+            rUnion = r;
+            bFirst = false;
+         }
+         else
+         {
+            rUnion.unite(rUnion, r);
 
-            m_dib->create(widthInPixels,heightInPixels);
-
-            if(m_dib->area() <= 0)
-            {
-               TRACE("imagem nula\n");
-            }
-            else
-            {
-               TRACE("recriando imagem\n");
-            }
-
-
-            m_dib->get_graphics()->FillSolidRect(0,0,widthInPixels,heightInPixels,colors[0]);
-
-            ::draw2d::pen_sp pen(allocer());
-
-            pen->create_solid(1.0,ARGB(255,128,128,128));
-
-            m_dib->get_graphics()->SelectObject(pen);
-
-            for(i = 0; i <= widthInCells; i++)
-            {
-               m_dib->get_graphics()->DrawLine(i * cellSizeInPixels,0,i * cellSizeInPixels,heightInPixels - 1);
-            }
-
-            for(i = 0; i <= heightInCells; i++)
-            {
-               m_dib->get_graphics()->DrawLine(0,i * cellSizeInPixels,widthInPixels - 1,i * cellSizeInPixels);
-            }
-            for(i = 0; i < heightInCells; i++)
-               for(j = 0; j < widthInCells; j++)
-               {
-                  offCells[i][j] = cells[i][j];
-                  m_dib->get_graphics()->FillSolidRect((j * cellSizeInPixels) + 2,(i * cellSizeInPixels) + 2,
-                     cellSizeInPixels - 3,cellSizeInPixels - 3,colors[cells[i][j]]);
-               }
-            atGame = true;
-            canMove = true;
          }
 
+         if (i >= strShift.length())
+            break;
+
+         shiftX = shiftsPositions[strShift[i] - '0'][0];
+         shiftY = shiftsPositions[strShift[i] - '0'][1];
+         testX += shiftX;
+         testY += shiftY;
+         i++;
+      }
+
+      *lprect = rUnion;
+
+      return true;
+
+   }
+
+   int game::hit_test(point pt)
+   {
+
+      int testX, testY, shiftX, shiftY;
+      string strShift = blocks[curType][curRotation];
+      int i = 0;
+
+      testX = curX;
+      testY = curY;
+
+      while (true)
+      {
+
+         rect r;
+         r.left = testX * cellSizeInPixels;
+         r.top = testY * cellSizeInPixels;
+         r.right = r.left + cellSizeInPixels;
+         r.bottom = r.top + cellSizeInPixels;
+
+         if (r.contains(pt))
+         {
+
+            return 0;
+
+         }
+
+         if (i >= strShift.length()) 
+            break;
+
+         shiftX = shiftsPositions[strShift[i] - '0'][0];
+         shiftY = shiftsPositions[strShift[i] - '0'][1];
+         testX += shiftX;
+         testY += shiftY;
+         i++;
+      }
+
+      
+      return -1;
+      
+   }
+
+   void game::initPaint()
+      {
+
+
+         //if(m_dib->area() <= 0)
+         //{
+         //   int i;
+         //   int j;
+
+         //   m_dib->create(widthInPixels,heightInPixels);
+
+         //   if(m_dib->area() <= 0)
+         //   {
+         //      TRACE("imagem nula\n");
+         //   }
+         //   else
+         //   {
+         //      TRACE("recriando imagem\n");
+         //   }
+
+
+         //   m_dib->get_graphics()->FillSolidRect(0,0,widthInPixels,heightInPixels,colors[0]);
+
+         //   ::draw2d::pen_sp pen(allocer());
+
+         //   pen->create_solid(1.0,ARGB(255,128,128,128));
+
+         //   m_dib->get_graphics()->SelectObject(pen);
+
+         //   for(i = 0; i <= widthInCells; i++)
+         //   {
+         //      m_dib->get_graphics()->DrawLine(i * cellSizeInPixels,0,i * cellSizeInPixels,heightInPixels - 1);
+         //   }
+
+         //   for(i = 0; i <= heightInCells; i++)
+         //   {
+         //      m_dib->get_graphics()->DrawLine(0,i * cellSizeInPixels,widthInPixels - 1,i * cellSizeInPixels);
+         //   }
+         //   for(i = 0; i < heightInCells; i++)
+         //      for(j = 0; j < widthInCells; j++)
+         //      {
+         //         offCells[i][j] = cells[i][j];
+         //         m_dib->get_graphics()->FillSolidRect((j * cellSizeInPixels) + 2,(i * cellSizeInPixels) + 2,
+         //            cellSizeInPixels - 3,cellSizeInPixels - 3,colors[cells[i][j]]);
+         //      }
+         //   atGame = true;
+         //   canMove = true;
+         //}
+
       }
 
 
 
-   void _Tetris::Score(int type,int arg)
+   void game::Score(int type,int arg)
       {
 
 
@@ -210,13 +316,13 @@ namespace tetris
 
       }
 
-   ::size _Tetris::preferredSize()
+   ::size game::preferredSize()
       {
          return ::size(widthInPixels,heightInPixels);
       }
 
 
-   void _Tetris::run()
+   void game::run()
    {
 //      int i;
       aux++;
@@ -234,8 +340,12 @@ namespace tetris
    }
 
 
-      void _Tetris::start()
+      bool game::start(::user::interaction * pui)
       {
+
+         if (!estamira::game::start(pui))
+            return false;
+
          int coordX,coordY;
 
          score = 0;
@@ -283,10 +393,12 @@ namespace tetris
          m_pthread->m_ptetris = this;
          atGame = true;
          m_pthread->begin();
+
+         return true;
       }
 
 
-      void _Tetris::startBlock()
+      void game::startBlock()
       {
          curX = widthInCells / 2;
          curY = -2;
@@ -295,7 +407,7 @@ namespace tetris
 
 //         System.gc();
 
-         if(!canMoveDown())
+         if(!canMoveDown(0))
          {
             atGame = false;
          }
@@ -315,30 +427,41 @@ namespace tetris
 
 
 
-      void _Tetris::moveDown()
+      void game::moveDown()
       {
          if(isMoving) return;
          isMoving = true;
          drawBlock(UNDRAW);
-         if(canMoveDown())
+         if(canMoveDown(0))
          {
             curY++;
             drawBlock(DRAW);
-            paint();
+            //paint();
          }
          else
          {
             canMove = false;
             drawBlock(DRAW);
-            paint();
+//            paint();
             killRows();
-            if(delay < 0) delay = 1;
+
+            if (delay < 0)
+            {
+
+               delay = 1;
+
+            }
+
             startBlock();
+
          }
+
          isMoving = false;
+
       }
 
-      void _Tetris::moveLeft()
+
+      void game::moveLeft(index iChar)
       {
          if(isMoving) return;
          isMoving = true;
@@ -347,7 +470,7 @@ namespace tetris
          //thread.resume();
          {
             drawBlock(UNDRAW);
-            if(canMoveLeft())
+            if(canMoveLeft(0))
             {
                curX--;
                drawBlock(DRAW);
@@ -358,14 +481,17 @@ namespace tetris
                drawBlock(DRAW);
             }
          }
-         paint();
+         //paint();
+
          isMoving = false;
+
       }
 
 
 
-      void _Tetris::moveRight()
+      void game::moveRight(index iChar )
       {
+
          if(isMoving) return;
          isMoving = true;
          if(atPause) atPause = false;
@@ -373,7 +499,7 @@ namespace tetris
          //         thread.resume();
          {
             drawBlock(UNDRAW);
-            if(canMoveRight())
+            if(canMoveRight(0))
             {
                curX++;
                drawBlock(DRAW);
@@ -383,12 +509,12 @@ namespace tetris
                drawBlock(DRAW);
             }
          }
-         paint();
+         //paint();
          isMoving = false;
       }
 
 
-      void _Tetris::rotate(bool ClockWising)
+      void game::rotate(bool ClockWising)
       {
          if(isMoving) return;
          isMoving = true;
@@ -417,11 +543,11 @@ namespace tetris
                drawBlock(DRAW);
             }
          }
-         paint();
+//         paint();
          isMoving = false;
       }
 
-      void _Tetris::drop()
+      void game::drop()
       {
          if(isMoving || isDropping || isKilling) return;
          //atGame = false;
@@ -431,16 +557,16 @@ namespace tetris
 ///         thread.stop();
 
          drawBlock(UNDRAW);
-         while(canMoveDown())
+         while(canMoveDown(0))
          {
             curY++;
             Score(DROPUNITTYPE,0);
             drawBlock(DRAW);
-            paint();
+            //paint();
             drawBlock(UNDRAW);
          }
          drawBlock(DRAW);
-         paint();
+         //paint();
          killRows();
          startBlock();
          isMoving = false;
@@ -451,7 +577,7 @@ namespace tetris
       }
 
 
-      void _Tetris::killRows()
+      void game::killRows()
       {
          int coordY,coordX;
          int auxY,auxX;
@@ -489,16 +615,18 @@ namespace tetris
                      auxX = x;
                      auxY = y;
                      cells[y][x] = cells[y - 1][x];
+                     cellsOverride[y][x] = -1;
                   }
                for(x = 0,y = 0; x < widthInCells; x++)
                {
                   auxX = x;
                   auxY = y;
                   cells[y][x] = 0;
+                  cellsOverride[y][x] = -1;
                }
                coordY++;
 //               myPaint();
-               paint();
+//               paint();
                isKilling = false;
 
             }
@@ -509,9 +637,9 @@ namespace tetris
       }
 
 
-      void _Tetris::flashLineOnly(int y,int times,float delay)
+      void game::flashLineOnly(int y,int times,float delay)
       {
-         ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
+//         ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
          
          if(times == 0) return;
          int coordX,coordY;
@@ -523,18 +651,19 @@ namespace tetris
          while(x >= 0)
          {
             coordX = x;
-            COLORREF cr;
+            index i;
             if(Toggle)
             {
-               cr = colors[0];
+               i = 0;
+
             }
             else
             {
-               cr = colors[cells[y][x]];
+               i = cells[y][x];
             }
-
-            imageGraph.FillSolidRect((coordX * cellSizeInPixels) + 2,(coordY * cellSizeInPixels) + 2,
-               cellSizeInPixels - 3,cellSizeInPixels - 3, cr);
+            cellsOverride[y][x] = i;
+            //imageGraph.FillSolidRect((coordX * cellSizeInPixels) + 2,(coordY * cellSizeInPixels) + 2,
+              // cellSizeInPixels - 3,cellSizeInPixels - 3, cr);
             x--;
          }
 
@@ -552,7 +681,7 @@ namespace tetris
          flashLineOnly(y,times - 1,(float)(delay * .7));
       }
 
-      bool _Tetris::canMoveDown()
+      bool game::canMoveDown(int iChar)
       {
          bool ok;
 
@@ -561,7 +690,7 @@ namespace tetris
          return ok;
       }
 
-      bool _Tetris::canMoveLeft()
+      bool game::canMoveLeft(int iChar)
       {
          bool ok;
 
@@ -571,7 +700,7 @@ namespace tetris
 
       }
 
-      bool _Tetris::canMoveRight()
+      bool game::canMoveRight(int iChar)
       {
          bool ok;
 
@@ -581,7 +710,7 @@ namespace tetris
 
       }
 
-      bool _Tetris::canRotate(bool ClockWise)
+      bool game::canRotate(bool ClockWise)
       {
          int testRotation;
          bool ok;
@@ -606,7 +735,7 @@ namespace tetris
 
 
 
-      bool _Tetris::isValidPosition(int testX,int testY,int testType,int testRotation)
+      bool game::isValidPosition(int testX,int testY,int testType,int testRotation)
       {
          int shiftX,shiftY;
          string strShift = blocks[testType][testRotation];
@@ -632,7 +761,7 @@ namespace tetris
          }
       }
 
-      bool _Tetris::isOutOfLimits(int testX,int testY)
+      bool game::isOutOfLimits(int testX,int testY)
       {
          if((testX < 0) || (testX >= widthInCells) ||
             (testY < 0) || (testY >= heightInCells))
@@ -643,7 +772,7 @@ namespace tetris
 
 
 
-      void _Tetris::drawBlock(int mode)
+      void game::drawBlock(int mode)
       {
          int testX,testY,shiftX,shiftY;
          string strShift = blocks[curType][curRotation];
@@ -671,7 +800,7 @@ namespace tetris
          }
       }
 
-      void _Tetris::drawCell(int x,int y,int color)
+      void game::drawCell(int x,int y,int color)
       {
          if(!isOutOfLimits(x,y))
          {
@@ -679,7 +808,7 @@ namespace tetris
          }
       }
 
-      //void _Tetris::myPaint()
+      //void game::myPaint()
       //{
       //   Graphics g = getGraphics();
       //   paint(g);
@@ -690,12 +819,18 @@ namespace tetris
 
 
 
-      void _Tetris::paint()
+      void game::_001OnDraw(::draw2d::graphics * pgraphics)
       {
-         ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
+         
+         ::draw2d::graphics & imageGraph = *pgraphics;
+
+         int iSaveDC = pgraphics->SaveDC();
+
+         pgraphics->OffsetViewportOrg(m_ptOffset.x, m_ptOffset.y);
+
          initPaint();
 
-         if(atGame || (!atGame && isDropping))
+         //if(atGame || (!atGame && isDropping))
          {
             int i;
             int j;
@@ -703,17 +838,32 @@ namespace tetris
             for(i = 0; i < heightInCells; i++)
                for(j = 0; j < widthInCells; j++)
                {
-                  if((offCells[i][j] != cells[i][j]) || (killed > 0))
+                  //if((offCells[i][j] != cells[i][j]) || (killed > 0))
                   {
-                     offCells[i][j] = cells[i][j];
+                     //offCells[i][j] = cells[i][j];
                      //imageGraph.setColor();
-                     imageGraph.FillSolidRect((j * cellSizeInPixels) + 2,(i * cellSizeInPixels) + 2,
-                        cellSizeInPixels - 3,cellSizeInPixels - 3,colors[cells[i][j]]);
+                     imageGraph.FillSolidRect((j * cellSizeInPixels) , (i * cellSizeInPixels) ,
+                        cellSizeInPixels , cellSizeInPixels, ARGB(255, 128, 128, 128));
+                     imageGraph.FillSolidRect((j * cellSizeInPixels) + 1, (i * cellSizeInPixels) + 1,
+                        cellSizeInPixels - 1, cellSizeInPixels - 1, ARGB(255, 0, 0, 0));
+                     if (cellsOverride[i][j] >= 0)
+                     {
+                        imageGraph.FillSolidRect((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
+                           cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cellsOverride[i][j]]);
+                     }
+                     else
+                     {
+                        imageGraph.FillSolidRect((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
+                           cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cells[i][j]]);
+                     }
                   }
                }
          }
 
          killed = 0;
+
+
+         pgraphics->RestoreDC(iSaveDC);
 
          //image.flush();
 

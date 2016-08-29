@@ -6,7 +6,7 @@ namespace coincube
 
 
    class CLASS_DECL_GAME_COINCUBE application :
-      virtual public ::multimedia::application
+      virtual public ::estamira::application
    {
    public:
       

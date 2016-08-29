@@ -18,7 +18,7 @@ namespace arch001
       //::visual::dib_sp           m_dibCoin;
       //::visual::dib_sp           m_dibMony;
       //::visual::dib_sp           m_dibMon2;
-      game                          m_game;
+      //game                          m_game;
 
       sp(::multimedia::sound_track)      m_psound;
       bool                    m_bGame;

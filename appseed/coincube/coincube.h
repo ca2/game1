@@ -1,9 +1,8 @@
 #pragma once
 
 
-#include "core/core/core.h"
+#include "estamira/estamira.h"
 #include "core/user/userex/userex.h"
-#include "app-core/appseed/multimedia/multimedia/multimedia.h"
 #include "app-core/appseed/gcom/gcom/gcom.h"
 
 

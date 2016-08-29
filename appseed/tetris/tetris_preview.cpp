@@ -21,6 +21,7 @@ namespace tetris
 
    _TetrisPreview::_TetrisPreview(::tetris::view * pview) :
       ::object(pview->get_app()),
+      _TetrisInterface(pview->get_app()),
       m_pparent(pview),
       m_mutex(pview->get_app()),
       m_dib(allocer())

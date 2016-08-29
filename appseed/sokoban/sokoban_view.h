@@ -17,7 +17,7 @@ namespace sokoban
 
       asset       m_asset;
 
-//      _TetrisPreview *        m_ppreview;
+//      _SokobanPreview *        m_ppreview;
       //_sokoban *               m_psokoban;
 
       ::visual::fastblur      m_dib;

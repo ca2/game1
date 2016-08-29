@@ -18,8 +18,7 @@ namespace arch001
       m_font(allocer()),
       m_mutexDraw(papp),
       m_mutexWork(papp),
-      m_mutexSwap(papp),
-      m_game(papp)
+      m_mutexSwap(papp)
    {
       m_iCount = 0;
       m_iPhase = 0;
@@ -91,7 +90,9 @@ namespace arch001
 
       SCAST_PTR(::message::create,pcreate,pobj);
 
-      m_game.start(this);
+      Application.m_pgame = new game(get_app());
+
+      Game.start(this);
 
 
       m_psound = new ::multimedia::sound_track(get_app());
@@ -191,7 +192,7 @@ namespace arch001
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      m_game._001OnDraw(pgraphics);
+      Game._001OnDraw(pgraphics);
 
    }
 
@@ -217,7 +218,7 @@ namespace arch001
       if(rectClient.area() <= 0)
          return;
 
-      m_game.layout();
+      Game.layout();
 
    }
 

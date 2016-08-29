@@ -6,7 +6,7 @@ namespace arch001
 
 
    class CLASS_DECL_GAME_ARCH001 application :
-      virtual public ::multimedia::application
+      virtual public ::estamira::application
    {
    public:
       

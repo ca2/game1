@@ -16,7 +16,7 @@ namespace tetris
 
 
       _TetrisPreview *        m_ppreview;
-      _Tetris *               m_ptetris;
+      //_Tetris *               m_ptetris;
 
       ::visual::fastblur      m_dib;
       bool                    m_bDibLayout;

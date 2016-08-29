@@ -6,13 +6,13 @@ namespace sokoban
 
 
    class CLASS_DECL_APP_CORE_SOKOBAN application :
-      virtual public ::hellomultiverse::application
+      virtual public ::estamira::application
    {
    public:
       
       
-      sp(::user::single_document_template)  m_ptemplateTetrisMain;
-      sp(::user::single_document_template)  m_ptemplateTetrisView;
+      sp(::user::single_document_template)  m_ptemplateSokobanMain;
+      sp(::user::single_document_template)  m_ptemplateSokobanView;
 
 
       application();

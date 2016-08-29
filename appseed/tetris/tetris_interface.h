@@ -29,7 +29,9 @@ namespace tetris
       int typesDistribution[7];
 
 
-      _TetrisInterface();
+
+
+      _TetrisInterface(::aura::application * papp);
 
 
    };

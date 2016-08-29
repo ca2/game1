@@ -518,6 +518,9 @@
     <ProjectReference Include="..\..\..\app-core\appseed\gcom\gcom.vcxproj">
       <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\app-core\appseed\hellomultiverse\hellomultiverse.vcxproj">
+      <Project>{c7afcefa-3079-4b23-8f97-4543bb980265}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app-core\appseed\multimedia\multimedia.vcxproj">
       <Project>{20fd0446-aa14-4013-84e0-b5cb63fa354f}</Project>
     </ProjectReference>

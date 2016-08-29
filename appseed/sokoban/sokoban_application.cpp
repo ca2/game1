@@ -13,11 +13,6 @@ namespace sokoban
       m_bLicense              = false;
 
 
-      m_etype                 = type_normal;
-
-      m_strHelloMultiverse             = "Hello Tetris!!";
-
-      //m_bMultiverseChat = false;
    }
 
 
@@ -34,7 +29,7 @@ namespace sokoban
       System.factory().creatable_small < ::sokoban::frame >();
       System.factory().creatable_small < ::sokoban::view >();
 
-      if(!::hellomultiverse::application::initialize_instance())
+      if(!::estamira::application::initialize_instance())
          return false;
 
       m_dataid.m_id = m_dataid.m_id + ".local://";
@@ -47,7 +42,7 @@ namespace sokoban
 		   System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
 		   System.type_info < ::sokoban::pane_view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateTetrisMain = pDocTemplate;
+      m_ptemplateSokobanMain = pDocTemplate;
 	   pDocTemplate = new ::user::single_document_template(
          this,
 		   "frame",
@@ -55,7 +50,7 @@ namespace sokoban
 		   System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
 		   System.type_info < ::sokoban::view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateTetrisView = pDocTemplate;
+      m_ptemplateSokobanView = pDocTemplate;
 
       return true;
 
@@ -73,11 +68,11 @@ namespace sokoban
    void application::on_request(sp(::create) pcreatecontext)
    {
 
-      m_ptemplateTetrisMain->open_document_file(pcreatecontext);
+      m_ptemplateSokobanMain->open_document_file(pcreatecontext);
 
       if(!pcreatecontext->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplateTetrisView->open_document_file(pcreatecontext);
+         m_ptemplateSokobanView->open_document_file(pcreatecontext);
       }
 
    }

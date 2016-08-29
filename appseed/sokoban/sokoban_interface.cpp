@@ -6,7 +6,7 @@ namespace sokoban
 
    //
    //
-   //	_TetrisInterface
+   //	_SokobanInterface
    //	By Camilo Sasuke Tsumanuma 25/09/1998
    //
    //
@@ -15,7 +15,7 @@ namespace sokoban
 
 
 
-   // int _TetrisInterface::TOTALBLOCKS = 7;
+   // int _SokobanInterface::TOTALBLOCKS = 7;
 
    ////
    ////	     7 0 1
@@ -23,7 +23,7 @@ namespace sokoban
    ////	     5 4 3
    ////
    ////
-   //const char *  _TetrisInterface::blocks[7][4] =
+   //const char *  _SokobanInterface::blocks[7][4] =
    //{
    //   {"000","222","000","222"},
    //   {"613","035","257","471"},
@@ -34,7 +34,7 @@ namespace sokoban
    //   {"020","276","020","276"}
    //};
 
-   //int _TetrisInterface::shiftsPositions[8][2] =
+   //int _SokobanInterface::shiftsPositions[8][2] =
    //{
    //   {0,-1},
    //   {1,-1},
@@ -47,7 +47,7 @@ namespace sokoban
    //};
 
 
-   //_TetrisInterface::_TetrisInterface()
+   //_SokobanInterface::_SokobanInterface()
    //{
 
    //   typesDistribution[0] = 10;

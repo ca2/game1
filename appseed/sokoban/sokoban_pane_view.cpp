@@ -49,11 +49,11 @@ namespace sokoban
          return;
 
       set_tab("Hello", ::sokoban::PaneViewHelloMultiverse);
-      set_tab("Sokoban!!",::sokoban::PaneViewTetris);
+      set_tab("Sokoban!!",::sokoban::PaneViewSokoban);
       set_tab("Open", "file_manager");
       set_tab("Help",::sokoban::PaneViewHelp);
 
-      set_cur_tab_by_id(::sokoban::PaneViewTetris);
+      set_cur_tab_by_id(::sokoban::PaneViewSokoban);
 
    }
 
@@ -71,9 +71,9 @@ namespace sokoban
 
       }
          break;
-      case PaneViewTetris:
+      case PaneViewSokoban:
       {
-         Application.m_ptemplateTetrisView->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateSokobanView->open_document_file(NULL,true,pcreatordata->m_pholder);
          pcreatordata->m_eflag.unsignalize(::user::view_creator_data::flag_hide_all_others_on_show);
 
       }

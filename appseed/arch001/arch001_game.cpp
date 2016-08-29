@@ -15,12 +15,12 @@ namespace arch001
 
    }
 
-   void game::install_message_handling(::message::dispatch * pdispatch)
-   {
-      IGUI_WIN_MSG_LINK(WM_KEYDOWN, pdispatch, this, &game::_001OnKeyDown);
-      IGUI_WIN_MSG_LINK(WM_KEYUP, pdispatch, this, &game::_001OnKeyUp);
+   //void game::install_message_handling(::message::dispatch * pdispatch)
+   //{
+   //   IGUI_WIN_MSG_LINK(WM_KEYDOWN, pdispatch, this, &game::_001OnKeyDown);
+   //   IGUI_WIN_MSG_LINK(WM_KEYUP, pdispatch, this, &game::_001OnKeyUp);
 
-   }
+   //}
 
 
    bool game::start(::user::interaction * pui)
@@ -48,18 +48,18 @@ namespace arch001
 
    }
 
-   void game::_001OnKeyDown(signal_details * pobj)
-   {
-      SCAST_PTR(::message::key, pkey, pobj);
+   //void game::_001OnKeyDown(signal_details * pobj)
+   //{
+   //   SCAST_PTR(::message::key, pkey, pobj);
 
-   }
+   //}
 
-   void game::_001OnKeyUp(signal_details * pobj)
-   {
-      SCAST_PTR(::message::key, pkey, pobj);
+   //void game::_001OnKeyUp(signal_details * pobj)
+   //{
+   //   SCAST_PTR(::message::key, pkey, pobj);
 
 
-   }
+   //}
 } // namespace arch001
 
 
