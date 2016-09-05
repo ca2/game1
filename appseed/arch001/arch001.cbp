@@ -78,7 +78,7 @@
 			<Add option="-lestamira" />
 			<Add option="-lgcom" />
 			<Add option="-Wl,-z,defs" />
-			<Add directory="../../../stage/x86" />
+			<Add directory="../../../time/x64/basis" />
 		</Linker>
 		<Unit filename="arch001.h" />
 		<Unit filename="arch001_application.cpp" />

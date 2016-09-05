@@ -77,7 +77,7 @@
 			<Add option="-lmultimedia" />
 			<Add option="-lgcom" />
 			<Add option="-Wl,-z,defs" />
-			<Add directory="../../../stage/x86" />
+			<Add directory="../../../time/x64/basis" />
 		</Linker>
 		<Unit filename="coincube.h" />
 		<Unit filename="coincube_application.cpp" />

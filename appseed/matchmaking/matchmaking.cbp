@@ -92,7 +92,7 @@
 			<Add option="-lcore" />
 			<Add option="-lpcre" />
 			<Add option="-Wl,-z,defs" />
-			<Add directory="../../../stage/x86" />
+			<Add directory="../../../time/x64/basis" />
 		</Linker>
 		<Unit filename="framework.h">
 			<Option compile="1" />
