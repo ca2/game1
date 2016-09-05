@@ -13,7 +13,7 @@
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/hellomultiverse build_number=basis version=basis locale=_std schema=_std" />
-				<Option host_application="../../time/x64/basis/app" />
+				<Option host_application="../../../time/x64/basis/app" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
@@ -29,7 +29,7 @@
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": app=app-core/hellomultiverse build_number=basis locale=_std schema=_std" />
-				<Option host_application="../../time/x64/basis/app" />
+				<Option host_application="../../../time/x64/basis/app" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
