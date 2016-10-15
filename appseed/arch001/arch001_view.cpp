@@ -209,7 +209,7 @@ namespace arch001
 
 
 
-   void view::layout()
+   void view::on_layout()
    {
 
       rect rectClient;
@@ -218,7 +218,7 @@ namespace arch001
       if(rectClient.area() <= 0)
          return;
 
-      Game.layout();
+      Game.on_layout();
 
    }
 

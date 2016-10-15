@@ -77,7 +77,7 @@ namespace tictactoe
       //static UINT thread_proc_load_ai_font(void * pparam);
       static UINT thread_proc_render(void * pparam);
 
-      virtual void layout();
+      virtual void on_layout();
 
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnLButtonDown);

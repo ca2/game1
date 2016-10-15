@@ -54,7 +54,7 @@ namespace user
 
       virtual void update();
 
-      virtual void layout();
+      virtual void on_layout();
 
       bool set_sel_by_name(string str);
 

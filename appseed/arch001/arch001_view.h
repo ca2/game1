@@ -72,7 +72,7 @@ namespace arch001
       ::user::document * get_document();
 
 
-      virtual void layout();
+      virtual void on_layout();
 
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnLButtonDown);

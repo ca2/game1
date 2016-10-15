@@ -639,7 +639,7 @@ namespace matchmaking
 //            m_pviewMain->m_prender->m_bLite = !m_pviewMain->m_prender->m_bLite;
 //
 //
-//            m_pviewMain->layout();
+//            m_pviewMain->on_layout();
 //
 //         }
 //
@@ -747,7 +747,7 @@ namespace matchmaking
 //
 //                  m_pviewLast->m_strNewFont = strFont;
 //
-//                  m_pviewLast->layout();
+//                  m_pviewLast->on_layout();
 //
 //               }
 //

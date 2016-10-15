@@ -80,7 +80,7 @@ namespace coincube
 
          m_iSize = m_iRefSize + (iS - m_iRefSize) * dRate;
 
-         m_pview->layout();
+         m_pview->on_layout();
 
 
          if(::get_tick_count() - m_dwLastGrow < dSlow)

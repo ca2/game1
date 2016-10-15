@@ -120,7 +120,7 @@ namespace matchmaking
             m_pview->m_prender->m_bLite = !m_pview->m_prender->m_bLite;
 
 
-            m_pview->layout();
+            m_pview->on_layout();
 
          }
 

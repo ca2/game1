@@ -278,7 +278,7 @@ namespace matchmaking
 
 
 
-   void start::layout()
+   void start::on_layout()
    {
 
       rect rectClient;

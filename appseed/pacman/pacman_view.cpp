@@ -206,7 +206,7 @@ namespace pacman
    }
 
 
-   void view::layout()
+   void view::on_layout()
    {
 
       m_bDibLayout = true;

@@ -112,7 +112,7 @@ namespace matchmaking
          //   m_pview->m_prender->m_bLite = !m_pview->m_prender->m_bLite;
 
 
-         //   m_pview->layout();
+         //   m_pview->on_layout();
 
          //}
 
@@ -133,7 +133,7 @@ namespace matchmaking
 
                   GetTypedParent < pane_view >()->m_pviewLast->m_strNewFont = strFont;
 
-                  GetTypedParent < pane_view >()->m_pviewLast->layout();
+                  GetTypedParent < pane_view >()->m_pviewLast->on_layout();
 
                }
 

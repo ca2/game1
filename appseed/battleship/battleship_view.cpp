@@ -696,7 +696,7 @@ namespace tictactoe
 
    }
 
-   void view::layout()
+   void view::on_layout()
    {
 
       rect rectClient;

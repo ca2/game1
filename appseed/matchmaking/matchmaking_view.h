@@ -97,7 +97,7 @@ namespace matchmaking
       virtual void matchmaking_fast_render(const string & strHelloMultiverse);
 
 
-      virtual void layout();
+      virtual void on_layout();
 
       DECL_GEN_SIGNAL(_001OnLayout);
       DECL_GEN_SIGNAL(_001OnCreate);

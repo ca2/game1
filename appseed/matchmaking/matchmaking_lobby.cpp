@@ -229,7 +229,7 @@ namespace matchmaking
 
 
 
-   void lobby::layout()
+   void lobby::on_layout()
    {
 
       rect rectClient;

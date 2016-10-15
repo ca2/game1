@@ -287,7 +287,7 @@ namespace matchmaking
       else
       {
 
-         layout();
+         on_layout();
 
       }
 
@@ -972,7 +972,7 @@ namespace matchmaking
 
 
 
-   void view::layout()
+   void view::on_layout()
    {
 
       rect rectClient;

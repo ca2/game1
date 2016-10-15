@@ -142,7 +142,7 @@ namespace user
 
          m_strTextLayout = m_strText;
 
-         layout();
+         on_layout();
 
       }
 
@@ -205,7 +205,7 @@ namespace user
 
 
 
-   void font_list::layout()
+   void font_list::on_layout()
    {
 
       rect rectClient;

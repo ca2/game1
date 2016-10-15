@@ -147,7 +147,7 @@ namespace sokoban
 
       if(lHint == 123)
       {
-         layout();
+         on_layout();
 
       }
    }
@@ -252,7 +252,7 @@ namespace sokoban
    }
 
 
-   void view::layout()
+   void view::on_layout()
    {
 
       rect rectClient;
