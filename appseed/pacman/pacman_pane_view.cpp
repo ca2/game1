@@ -80,7 +80,7 @@ namespace pacman
       break;
       case PaneViewHelp:
       {
-         ::user::document * pdoc = Session.userex()->create_child_form(NULL, pcreatordata->m_pholder);
+         ::user::document * pdoc = Application.create_child_form(NULL, pcreatordata->m_pholder);
          pdoc->open_document("matter://help.html");
          pcreatordata->m_eflag.unsignalize(::user::view_creator_data::flag_hide_all_others_on_show);
 

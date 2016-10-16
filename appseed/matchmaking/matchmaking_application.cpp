@@ -245,7 +245,7 @@ namespace matchmaking
    //   {
    //   case PaneViewMenu:
    //   {
-   //      m_pdocMenu = Session.userex()->create_child_form(this,pcreatordata->m_pholder);
+   //      m_pdocMenu = Application.create_child_form(this,pcreatordata->m_pholder);
 
    //      m_pdocMenu->open_document("matter://menu.html");
 
