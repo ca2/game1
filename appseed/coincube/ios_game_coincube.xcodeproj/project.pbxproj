@@ -29,7 +29,6 @@
 		9A3430011D5B97BF00D00D4A /* libapp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342FFC1D5B97A000D00D4A /* libapp.dylib */; };
 		9A34308D1D5B9FE200D00D4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A3430891D5B9FE200D00D4A /* InfoPlist.strings */; };
 		9A34308E1D5B9FE200D00D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A34308B1D5B9FE200D00D4A /* Images.xcassets */; };
-		9A34308F1D5B9FE200D00D4A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A34308C1D5B9FE200D00D4A /* Info.plist */; };
 		9AF2A2FF1D5BA7D700E6D5ED /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2A2FE1D5BA7D700E6D5ED /* main.mm */; };
 		9AF2A3011D5BAC9300E6D5ED /* libdraw2d_quartz2d.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342F771D5B7EFA00D00D4A /* libdraw2d_quartz2d.dylib */; };
 		9AF2A3831D5BB4FF00E6D5ED /* libios_axispng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A37E1D5BB4D000E6D5ED /* libios_axispng.dylib */; };
@@ -1243,7 +1242,7 @@
 			isa = PBXGroup;
 			children = (
 				9AF2A8191D5BFCCE00E6D5ED /* libgame_coincube.dylib */,
-				9AF2A81B1D5BFCCE00E6D5ED /* libios_game_coincube.dylib */,
+				9AF2A81B1D5BFCCE00E6D5ED /* libgame_coincube.dylib */,
 				9AF2A81D1D5BFCCE00E6D5ED /* game_coincube_iosTests.xctest */,
 			);
 			name = Products;
@@ -1332,7 +1331,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -1984,10 +1983,10 @@
 			remoteRef = 9AF2A8181D5BFCCE00E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AF2A81B1D5BFCCE00E6D5ED /* libios_game_coincube.dylib */ = {
+		9AF2A81B1D5BFCCE00E6D5ED /* libgame_coincube.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_game_coincube.dylib;
+			path = libgame_coincube.dylib;
 			remoteRef = 9AF2A81A1D5BFCCE00E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -2028,7 +2027,6 @@
 			files = (
 				9A34308D1D5B9FE200D00D4A /* InfoPlist.strings in Resources */,
 				9A34308E1D5B9FE200D00D4A /* Images.xcassets in Resources */,
-				9A34308F1D5B9FE200D00D4A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2290,7 +2288,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "wiosapp_core_hellomultiverseTests/wiosapp_core_hellomultiverseTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -2315,7 +2313,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wiosapp_core_hellomultiverse/wiosapp_core_hellomultiverse-Prefix.pch";
 				INFOPLIST_FILE = "wiosapp_core_hellomultiverseTests/wiosapp_core_hellomultiverseTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -2336,14 +2334,20 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -2390,14 +2394,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
