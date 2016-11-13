@@ -674,7 +674,7 @@ namespace tictactoe
 
       view * pview = (view *)pparam;
 
-      while(::get_thread()->m_bRun)
+      while(::get_thread_run())
       {
 
          try

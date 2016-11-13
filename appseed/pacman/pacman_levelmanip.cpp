@@ -192,7 +192,7 @@ namespace pacman
       initall();
       showall();
       m_player.printlives();
-      Sleep(1984);
+      Sleep(2000);
       printready();
       multi_lock ml({&m_evRestart,&m_psound->m_eventEnd});
 

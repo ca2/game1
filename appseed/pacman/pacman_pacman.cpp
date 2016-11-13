@@ -305,7 +305,7 @@ namespace pacman
    //   {
    //      int i;
    //      aux++;
-   //      while(atGame && ::get_thread()->m_bRun)
+   //      while(atGame && ::get_thread_run())
    //      {
    //            Sleep(delay + 1);
    //

@@ -203,7 +203,7 @@ namespace matchmaking
 
       m_pevRenderEnd = new manual_reset_event(get_app());
 
-      m_prender->set_run_thread(false);
+      m_prender->post_quit();
 
       m_pevRenderEnd->wait(seconds(15));
 
