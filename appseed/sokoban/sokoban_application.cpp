@@ -21,7 +21,7 @@ namespace sokoban
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
       System.factory().creatable_small < ::sokoban::pane_view >();
@@ -29,7 +29,7 @@ namespace sokoban
       System.factory().creatable_small < ::sokoban::frame >();
       System.factory().creatable_small < ::sokoban::view >();
 
-      if(!::estamira::application::initialize_instance())
+      if(!::estamira::application::initialize_application())
          return false;
 
       m_dataid.m_id = m_dataid.m_id + ".local://";
@@ -57,10 +57,10 @@ namespace sokoban
    }
 
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
 
    }
 

@@ -34,7 +34,7 @@ namespace pacman
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
 #ifdef WINDOWS
@@ -53,10 +53,10 @@ namespace pacman
       System.factory().creatable_small < ::pacman::frame >();
       System.factory().creatable_small < ::pacman::view >();
 
-      if(!::multimedia::application::initialize_instance())
+      if(!::multimedia::application::initialize_application())
          return false;
 
-      if(!::hellomultiverse::application::initialize_instance())
+      if(!::hellomultiverse::application::initialize_application())
          return false;
 
       m_dataid +=".local://";
@@ -84,10 +84,10 @@ namespace pacman
    }
 
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
 
    }
 

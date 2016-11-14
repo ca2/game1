@@ -26,7 +26,7 @@ namespace tetris
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
       System.factory().creatable_small < ::tetris::pane_view >();
@@ -34,7 +34,7 @@ namespace tetris
       System.factory().creatable_small < ::tetris::frame >();
       System.factory().creatable_small < ::tetris::view >();
 
-      if(!::hellomultiverse::application::initialize_instance())
+      if(!::hellomultiverse::application::initialize_application())
          return false;
 
 
@@ -63,10 +63,10 @@ namespace tetris
    }
 
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
 
    }
 

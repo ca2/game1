@@ -20,7 +20,7 @@ namespace coincube
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
       System.factory().creatable_small < ::coincube::pane_view >();
@@ -29,7 +29,7 @@ namespace coincube
       System.factory().creatable_small < ::coincube::main_frame >();
       System.factory().creatable_small < ::coincube::view >();
 
-      if(!::multimedia::application::initialize_instance())
+      if(!::multimedia::application::initialize_application())
          return false;
 
       m_dataid += ".local://";
@@ -57,10 +57,10 @@ namespace coincube
    }
 
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
 
    }
 

@@ -63,7 +63,7 @@ namespace matchmaking
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
       System.factory().creatable_small < ::matchmaking::document >();
@@ -87,7 +87,7 @@ namespace matchmaking
       System.factory().creatable_small < ::matchmaking::toggle_view >();
       System.factory().creatable_small < ::matchmaking::start >();
 
-      if(!::core::application::initialize_instance())
+      if(!::core::application::initialize_application())
          return false;
 
 //      if(directrix()->m_varTopicQuery.has_property("install"))
@@ -146,10 +146,10 @@ namespace matchmaking
       return true;
    }
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
    }
 
    void application::on_request(sp(::create) pcreatecontext)

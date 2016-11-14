@@ -20,7 +20,7 @@ namespace tictactoe
    }
 
 
-   bool application::initialize_instance()
+   bool application::initialize_application()
    {
 
       System.factory().creatable_small < ::tictactoe::pane_view >();
@@ -29,7 +29,7 @@ namespace tictactoe
       System.factory().creatable_small < ::tictactoe::main_frame >();
       System.factory().creatable_small < ::tictactoe::view >();
 
-      if(!::core::application::initialize_instance())
+      if(!::core::application::initialize_application())
          return false;
 
       m_dataid += ".local://";
@@ -57,10 +57,10 @@ namespace tictactoe
    }
 
 
-   int32_t application::exit_instance()
+   int32_t application::exit_application()
    {
 
-      return ::core::application::exit_instance();
+      return ::core::application::exit_application();
 
    }
 
