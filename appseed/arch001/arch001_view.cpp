@@ -119,7 +119,7 @@ namespace arch001
       if(pcreate->m_bRet)
          return;
 
-      GetMain().Enable(true);
+      GetMain()->Enable(true);
 
    }
 
