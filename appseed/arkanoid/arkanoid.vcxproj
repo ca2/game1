@@ -22,7 +22,7 @@
     <ProjectGuid>{7DCCE620-4E26-4EE3-B6EA-FFB2A92A2FA7}</ProjectGuid>
     <RootNamespace>app_core_arkanoid</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_arkanoid</ProjectName>
+    <ProjectName>game_arkanoid</ProjectName>
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
