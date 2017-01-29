@@ -83,7 +83,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_core_arkanoid.def">
+    <None Include="game_arkanoid.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

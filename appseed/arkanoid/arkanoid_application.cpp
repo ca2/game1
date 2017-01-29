@@ -86,10 +86,10 @@ namespace arkanoid
 
 
 extern "C"
-::aura::library * app_core_arkanoid_get_new_library(::aura::application * papp)
+::aura::library * game_arkanoid_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::arkanoid::application >(papp, "app-core");
+   return new ::aura::single_application_library < ::arkanoid::application >(papp, "game");
 
 }
 

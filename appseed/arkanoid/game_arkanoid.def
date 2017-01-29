@@ -1,0 +1,8 @@
+; game_arkanoid.def
+
+LIBRARY  "game_arkanoid"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_arkanoid_get_new_library
+

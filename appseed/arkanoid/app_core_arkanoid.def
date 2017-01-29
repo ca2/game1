@@ -1,8 +1,0 @@
-; app_core_arkanoid.def
-
-LIBRARY  "app_core_arkanoid"
-; For Win32 DLLs, only EXPORTs really required.
-
-EXPORTS
-app_core_arkanoid_get_new_library
-
