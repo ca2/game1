@@ -14,7 +14,7 @@ namespace multimedia
 
       sp(::multimedia::audio_decode::decoder_plugin)              m_pdecoderplugin;
       string_map < spa(::multimedia::audio_decode::resampler) >   m_mapDecoder;
-      string_map < ::file::buffer_sp >                            m_mapFile;
+      string_map < ::file::file_sp >                            m_mapFile;
 
       
       sound_track(::aura::application * papp);
@@ -23,7 +23,7 @@ namespace multimedia
       
       ::multimedia::audio_decode::resampler * sound_decoder(const char *);
       
-      ::file::buffer_sp sound_file(const char *);
+      ::file::file_sp sound_file(const char *);
       
       string sound_path(const char *);
       

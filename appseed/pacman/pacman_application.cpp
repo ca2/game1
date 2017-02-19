@@ -195,18 +195,18 @@ namespace pacman
       ::console::window * pwindow = create_console(iIndex % 3);
 
       m_ppacman->::console::window_composite::m_p = pwindow;
-      m_ppacman->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      m_ppacman->::console::window_composite::cout.m_spfile = pwindow->cout.m_spfile;
       m_ppacman->m_player.::console::window_composite::m_p = pwindow;
-      m_ppacman->m_player.::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+      m_ppacman->m_player.::console::window_composite::cout.m_spfile = pwindow->cout.m_spfile;
       for(auto ghost : m_ppacman->ghosts)
       {
          ghost->::console::window_composite::m_p = pwindow;
-         ghost->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+         ghost->::console::window_composite::cout.m_spfile = pwindow->cout.m_spfile;
       }
       for(auto pellet : m_ppacman->pellets)
       {
          pellet->::console::window_composite::m_p = pwindow;
-         pellet->::console::window_composite::cout.m_spbuffer = pwindow->cout.m_spbuffer;
+         pellet->::console::window_composite::cout.m_spfile = pwindow->cout.m_spfile;
       }
 
       m_pconsolewindow = pwindow;

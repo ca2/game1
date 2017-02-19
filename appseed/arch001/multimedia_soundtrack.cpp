@@ -51,10 +51,10 @@ namespace multimedia
 
    }
 
-   ::file::buffer_sp sound_track::sound_file(const char * psz)
+   ::file::file_sp sound_track::sound_file(const char * psz)
    {
 
-      ::file::buffer_sp & file = m_mapFile[psz];
+      ::file::file_sp & file = m_mapFile[psz];
 
       if(!file.is_set())
       {
