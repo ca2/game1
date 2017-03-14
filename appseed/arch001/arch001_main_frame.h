@@ -6,7 +6,7 @@ namespace arch001
 
 
    class CLASS_DECL_GAME_ARCH001 main_frame:
-      virtual public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 

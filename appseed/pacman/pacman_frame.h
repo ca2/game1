@@ -9,7 +9,7 @@ namespace pacman
 
 
    class CLASS_DECL_APP_CORE_PACMAN frame :
-      public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 

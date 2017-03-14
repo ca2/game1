@@ -9,7 +9,7 @@ namespace tetris
 
 
    class CLASS_DECL_GAME_TETRIS frame :
-      public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 

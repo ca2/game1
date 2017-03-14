@@ -13,8 +13,7 @@ namespace pacman
    };
 
    class CLASS_DECL_APP_CORE_PACMAN application :
-      virtual public ::hellomultiverse::application,
-      virtual public ::multimedia::application
+      virtual public ::estamira::application
    {
    public:
 

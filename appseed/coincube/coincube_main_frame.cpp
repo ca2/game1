@@ -7,7 +7,8 @@ namespace coincube
 
    main_frame::main_frame(::aura::application * papp):
       ::object(papp),
-      simple_frame_window(papp)
+      simple_frame_window(papp),
+      ::estamira::main_frame(papp)
    {
 
       //      m_dataid = "::core::coincube::main_frame";

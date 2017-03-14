@@ -9,7 +9,7 @@ namespace sokoban
 
 
    class CLASS_DECL_APP_CORE_SOKOBAN frame :
-      public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 

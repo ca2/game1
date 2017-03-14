@@ -223,7 +223,7 @@ namespace tictactoe
 
       pgraphicsParam->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
 
-      pgraphicsParam->FillSolidRect(100, 100, 100, 100, ARGB(255,184,220,184));
+      //pgraphicsParam->FillSolidRect(100, 100, 100, 100, ARGB(255,184,220,184));
 
    }
 

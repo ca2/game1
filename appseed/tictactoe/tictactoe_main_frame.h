@@ -6,7 +6,7 @@ namespace tictactoe
 
 
    class CLASS_DECL_GAME_TICTACTOE main_frame:
-      virtual public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 

@@ -6,7 +6,7 @@ namespace coincube
 
 
    class CLASS_DECL_GAME_COINCUBE main_frame:
-      virtual public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 
