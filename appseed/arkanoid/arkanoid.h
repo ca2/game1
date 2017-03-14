@@ -1,19 +1,16 @@
 #pragma once
 
 
-#include "app-core/appseed/hellomultiverse/hellomultiverse.h"
+#include "estamira/estamira.h"
 #include "core/user/html/html/html.h"
 
 
-#ifdef WINDOWS
 #ifdef _APP_CORE_ARKANOID_LIBRARY
-    #define CLASS_DECL_APP_CORE_ARKANOID  _declspec(dllexport)
+    #define CLASS_DECL_APP_CORE_ARKANOID  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_APP_CORE_ARKANOID  _declspec(dllimport)
+    #define CLASS_DECL_APP_CORE_ARKANOID  CLASS_DECL_IMPORT
 #endif
-#else
-   #define CLASS_DECL_APP_CORE_ARKANOID
-#endif
+
 
 namespace arkanoid
 {

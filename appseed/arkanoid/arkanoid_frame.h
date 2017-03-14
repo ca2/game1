@@ -7,12 +7,16 @@ namespace arkanoid
 
    class pane_view;
 
+   class view;
+
 
    class CLASS_DECL_APP_CORE_ARKANOID frame :
-      public simple_frame_window
+      virtual public ::estamira::main_frame
    {
    public:
 
+
+      view * m_pview;
 
       ::size            m_sizeView;
 

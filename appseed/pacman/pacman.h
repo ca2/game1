@@ -3,7 +3,6 @@
 
 #include "estamira/estamira.h"
 #include "core/user/html/html/html.h"
-#include "app-core/appseed/multimedia/multimedia/multimedia.h"
 
 
 #ifdef WINDOWS

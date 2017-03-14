@@ -6,7 +6,7 @@ namespace arkanoid
 
 
    class CLASS_DECL_APP_CORE_ARKANOID application :
-      virtual public ::hellomultiverse::application
+      virtual public ::estamira::application
    {
    public:
       
