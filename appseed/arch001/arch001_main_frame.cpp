@@ -7,7 +7,8 @@ namespace arch001
 
    main_frame::main_frame(::aura::application * papp):
       ::object(papp),
-      simple_frame_window(papp)
+      simple_frame_window(papp),
+      ::estamira::main_frame(papp)
    {
 
       //      m_dataid = "::core::arch001::main_frame";
