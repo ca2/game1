@@ -72,12 +72,12 @@ namespace multimedia
 
       array<::multimedia::audio_decode::resampler *> & decodera = m_mapDecoder[psz];
 
-      int i = decodera.pred_find_first([](::multimedia::audio_decode::decoder *p) {return p->DecoderEOF();});
+      int i = decodera.pred_find_first([](::multimedia::audio_decode::decoder *p) {return p->audio_plugin_eof();});
 
       if(i >= 0)
       {
-         decodera[i]->DecoderInitialize(NULL, false);
-         decodera[i]->DecoderSeekBegin();
+         decodera[i]->audio_plugin_initialize(NULL, false);
+         decodera[i]->audio_plugin_seek_begin();
          return decodera[i];
 
       }
@@ -88,7 +88,7 @@ namespace multimedia
 
       ::multimedia::audio_decode::decoder * pdecoder = dynamic_cast <::multimedia::audio_decode::decoder *>( m_pdecoderplugin->NewDecoder());
 
-      pdecoder->DecoderInitialize(sound_file(psz),false);
+      pdecoder->audio_plugin_initialize(sound_file(psz),false);
 
       ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
 
@@ -96,9 +96,9 @@ namespace multimedia
 
       pdecoder->m_bLoop = false;
 
-      presampler->DecoderInitialize(NULL, false);
+      presampler->audio_plugin_initialize(NULL, false);
 
-      presampler->m_pdecoder->DecoderSeekBegin();
+      presampler->m_pdecoder->audio_plugin_seek_begin();
 
 
       decodera.add(presampler);
@@ -152,7 +152,7 @@ namespace multimedia
 
    }
 
-   void sound_track::DecoderOnEvent(e_event eevent)
+   void sound_track::audio_plugin_on_event(e_event eevent)
    {
       if(eevent == event_eof)
       {

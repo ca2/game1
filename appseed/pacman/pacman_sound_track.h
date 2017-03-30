@@ -30,7 +30,7 @@ namespace pacman
       void queue(const char *);
 
 
-      virtual void DecoderOnEvent(e_event eevent);
+      virtual void audio_plugin_on_event(e_event eevent);
 
       virtual void OnWavePlayerEvent(::multimedia::audio::wave_player * pplayer,::multimedia::audio::wave_player::e_event event,::multimedia::audio::wave_player_command * pcommand = NULL) override;
 

@@ -27,7 +27,7 @@ namespace multimedia
       void queue(const char *);
 
 
-      virtual void DecoderOnEvent(e_event eevent);
+      virtual void audio_plugin_on_event(e_event eevent);
 
    };
 

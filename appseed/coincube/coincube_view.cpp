@@ -123,7 +123,7 @@ namespace coincube
       SCAST_PTR(::message::create,pcreate,pobj);
 
       m_psound = new ::multimedia::sound_track(get_app());
-      m_psound->DecoderInitialize(NULL,false);
+      m_psound->audio_plugin_initialize(NULL,false);
 
       m_dataid += ".local://";
 

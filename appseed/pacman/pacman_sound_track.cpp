@@ -101,7 +101,7 @@ namespace pacman
 
          }
 
-         pdecoderFile->DecoderInitialize(file,false);
+         pdecoderFile->audio_plugin_initialize(file,false);
 
          ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
 
@@ -109,7 +109,7 @@ namespace pacman
 
          pdecoder = presampler;
 
-         presampler->DecoderInitialize(NULL,false);
+         presampler->audio_plugin_initialize(NULL,false);
 
       }
       
@@ -167,7 +167,7 @@ namespace pacman
 
          }
 
-         if(m_decoderptra.get_count() > 0 && !m_decoderptra[0]->DecoderEOF() && m_straMode.contains(str))
+         if(m_decoderptra.get_count() > 0 && !m_decoderptra[0]->audio_plugin_eof() && m_straMode.contains(str))
          {
 
             if(::str::begins_ci(m_str,"wait:"))
@@ -203,7 +203,7 @@ namespace pacman
          if(bWait)
          {
             
-            pdecoder->DecoderSeekBegin();
+            pdecoder->audio_plugin_seek_begin();
 
             pdecoder->m_bLoop = false;
             
@@ -230,7 +230,7 @@ namespace pacman
    
       }
 
-   void sound_track::DecoderOnEvent(e_event eevent)
+   void sound_track::audio_plugin_on_event(e_event eevent)
    {
       if(eevent == event_eof)
       {

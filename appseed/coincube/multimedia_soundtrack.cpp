@@ -83,11 +83,11 @@ namespace multimedia
       
       spa(::multimedia::audio_decode::resampler) & decodera = m_mapDecoder[psz];
 
-      int i = decodera.pred_find_first([](::multimedia::audio_decode::resampler *p) {return p->DecoderEOF();});
+      int i = decodera.pred_find_first([](::multimedia::audio_decode::resampler *p) {return p->audio_plugin_eof();});
 
       if(i >= 0)
       {
-         decodera[i]->DecoderInitialize(NULL, false);
+         decodera[i]->audio_plugin_initialize(NULL, false);
 
          return decodera[i];
 
@@ -100,11 +100,11 @@ namespace multimedia
       
       presampler->m_pdecoder = m_pdecoderplugin->NewDecoder();
 
-      presampler->m_pdecoder->DecoderInitialize(sound_file(psz),false);
+      presampler->m_pdecoder->audio_plugin_initialize(sound_file(psz),false);
 
       presampler->m_pdecoder->m_bLoop = false;
 
-      presampler->DecoderInitialize(NULL, false);
+      presampler->audio_plugin_initialize(NULL, false);
 
       decodera.add(presampler);
 
@@ -123,9 +123,9 @@ namespace multimedia
 
       auto pdecoder = sound_decoder(str);
 
-      pdecoder->DecoderSeekBegin();
+      pdecoder->audio_plugin_seek_begin();
 
-      pdecoder->m_pdecoder->DecoderSeekBegin();
+      pdecoder->m_pdecoder->audio_plugin_seek_begin();
 
       init_child(pdecoder);
       
