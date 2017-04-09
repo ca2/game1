@@ -37,9 +37,6 @@
     <ClCompile Include="arch001_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multimedia_soundtrack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="arch001_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -70,9 +67,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arch001_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="multimedia_soundtrack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arch001_game.h">

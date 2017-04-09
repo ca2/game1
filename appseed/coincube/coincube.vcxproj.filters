@@ -40,9 +40,6 @@
     <ClCompile Include="coincube_cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multimedia_soundtrack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="coincube_coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -76,9 +73,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="coincube_cube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="multimedia_soundtrack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="coincube_coin.h">

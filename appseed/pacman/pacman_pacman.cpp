@@ -35,7 +35,7 @@ namespace pacman
       
 
       m_psound = new ::pacman::sound_track(get_app());
-      m_psound->audio_plugin_initialize(NULL,false);
+      m_psound->audio_plugin_initialize();
       ghosts.add(canew(ghost(this)));
       ghosts.add(canew(ghost(this)));
       ghosts.add(canew(ghost(this)));

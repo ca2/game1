@@ -41,7 +41,7 @@ namespace coincube
 #include "coincube_cube.h"
 
 
-#include "multimedia_soundtrack.h"
+//#include "multimedia_soundtrack.h"
 
 #include "coincube_document.h"
 #include "coincube_view.h"

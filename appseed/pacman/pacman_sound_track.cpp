@@ -7,8 +7,7 @@ namespace pacman
 
    sound_track::sound_track(::aura::application * papp):
       object(papp),
-      ::multimedia::audio_decode::playground(papp),
-      ::multimedia::decoder(papp),
+      ::multimedia::audio_plugin::playground(papp),
       m_eventEnd(papp)
    {
 
@@ -75,12 +74,12 @@ namespace pacman
 
    }
 
-   ::multimedia::audio_decode::decoder * sound_track::sound_decoder(const char * psz)
+   ::multimedia::audio_plugin::plugin * sound_track::sound_plugin(const char * psz)
    {
 
-      ::multimedia::audio_decode::decoder * & pdecoder = m_mapDecoder[psz];
+      ::multimedia::audio_plugin::plugin * & pplugin = m_mapPlugin[psz];
 
-      if(pdecoder == NULL)
+      if(pplugin == NULL)
       {
          
          if(m_pdecoderplugin == NULL)
@@ -101,27 +100,27 @@ namespace pacman
 
          }
 
-         pdecoderFile->audio_plugin_initialize(file,false);
+         pdecoderFile->multimedia_open(file);
 
-         ::multimedia::audio_decode::resampler * presampler = new ::multimedia::audio_decode::resampler(get_app());
+         ::multimedia::audio_plugin::resampler * presampler = new ::multimedia::audio_plugin::resampler(get_app());
 
-         presampler->m_pdecoder = pdecoderFile;
+         presampler->m_pplugin = pdecoderFile;
 
-         pdecoder = presampler;
+         pplugin = presampler;
 
-         presampler->audio_plugin_initialize(NULL,false);
+         presampler->audio_plugin_initialize();
 
       }
       
 
-      return pdecoder;
+      return pplugin;
 
    }
 
    void sound_track::queue(const char * psz)
       {
 
-         synch_lock sl(&m_mutex);
+         synch_lock sl(m_pmutex);
    
          m_eventEnd.ResetEvent();
 
@@ -158,16 +157,16 @@ namespace pacman
 
          bool bWait = ::str::begins_ci(str,"wait:");
 
-         ::multimedia::audio_decode::decoder * pdecoder = sound_decoder(str);
+         ::multimedia::audio_plugin::plugin * pplugin = sound_plugin(str);
 
-         if (pdecoder == NULL)
+         if (pplugin == NULL)
          {
 
             return;
 
          }
 
-         if(m_decoderptra.get_count() > 0 && !m_decoderptra[0]->audio_plugin_eof() && m_straMode.contains(str))
+         if(m_pluginptra.get_count() > 0 && !m_pluginptra[0]->audio_plugin_eof() && m_straMode.contains(str))
          {
 
             if(::str::begins_ci(m_str,"wait:"))
@@ -191,27 +190,27 @@ namespace pacman
 
             m_str = str;
 
-            pdecoder->m_bKick = true;
+            pplugin->m_bKick = true;
 
          }
          
 
          m_bEof = false;
 
-         init_child(pdecoder);
+         init_child(pplugin);
 
          if(bWait)
          {
             
-            pdecoder->audio_plugin_seek_begin();
+            pplugin->audio_plugin_seek_begin();
 
-            pdecoder->m_bLoop = false;
+            pplugin->m_bLoop = false;
             
          }
          else
          {
             
-            pdecoder->m_bLoop = true;
+            pplugin->m_bLoop = true;
 
             //if(m_straMode.contains(m_str))
             //{
@@ -224,7 +223,7 @@ namespace pacman
 
          ::output_debug_string(str + "\n");
 
-         m_decoderptra.add(pdecoder);
+         m_pluginptra.add(pplugin);
 
 
    
