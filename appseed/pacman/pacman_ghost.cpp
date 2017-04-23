@@ -10,7 +10,7 @@ namespace pacman
       level(ppacman->level),
       m_ppacman(ppacman)
    {
-      m_pmutex = new mutex(ppacman->get_app());
+      defer_create_mutex();
       m_bIntermission = false;
    }
 
