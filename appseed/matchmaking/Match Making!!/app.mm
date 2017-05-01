@@ -11,7 +11,7 @@
 
 #import "app.h"
 
-int32_t run_system();
+
 
 @implementation app
 
