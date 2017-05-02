@@ -70,7 +70,7 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath,\\$$ORIGIN" />
-			<Add option="-Wl,-E" />
+			
 			<Add option="-laura" />
 			<Add option="-laxisfreetype" />
 			<Add option="-laxis" />

@@ -69,7 +69,7 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath,\\$$ORIGIN" />
-			<Add option="-Wl,-E" />
+			
 			<Add option="-lbase" />
 			<Add option="-lbasefreetype" />
 			<Add option="-lcore" />
