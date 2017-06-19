@@ -171,7 +171,7 @@ namespace matchmaking
 
 
 
-         if (path.m_iDir == 0 && path.extension().CompareNoCase("png") == 0)
+         if (path.m_iDir == 0 && path.extension().compare_ci("png") == 0)
          {
 
             ::draw2d::dib * pdib = get_map(path.title());
