@@ -152,7 +152,7 @@ namespace matchmaking
       return ::core::application::exit_application();
    }
 
-   void application::on_request(sp(::create) pcreatecontext)
+   void application::on_request(::create * pcreate)
    {
 
       /*
@@ -176,21 +176,21 @@ namespace matchmaking
 
       */
 
-      //pcreatecontext->m_bMakeVisible = false;
+      //pcreate->m_bMakeVisible = false;
 
       m_bMultiverseChat = !directrix()->m_varTopicQuery["no_hello_edit"].is_set();
 
       if(m_ptemplateHelloMultiverseMain->get_document_count() == 0)
       {
 
-         m_ptemplateHelloMultiverseMain->open_document_file(pcreatecontext);
+         m_ptemplateHelloMultiverseMain->open_document_file(pcreate);
 
       }
 
-      if(pcreatecontext->m_spCommandLine->m_varFile.has_char())
+      if(pcreate->m_spCommandLine->m_varFile.has_char())
       {
 
-         m_ptemplateHelloMultiverseView->open_document_file(pcreatecontext);
+         m_ptemplateHelloMultiverseView->open_document_file(pcreate);
 
       }
 
@@ -201,11 +201,11 @@ namespace matchmaking
       if (directrix()->m_varTopicQuery["wfi_maximize"].is_set())
       {
 
-         pcreatecontext->m_spCommandLine->m_varQuery["document"].cast < document >()->get_typed_view < ::userex::pane_tab_view >()->GetTopLevelFrame()->_001WindowMaximize();
+         pcreate->m_spCommandLine->m_varQuery["document"].cast < document >()->get_typed_view < ::userex::pane_tab_view >()->GetTopLevelFrame()->_001WindowMaximize();
 
       }
 
-      //pcreatecontext->m_spCommandLine->m_varQuery["document"].cast < document >()->get_typed_view < pane_view >()->GetParentFrame()->WfiRestore(true);
+      //pcreate->m_spCommandLine->m_varQuery["document"].cast < document >()->get_typed_view < pane_view >()->GetParentFrame()->WfiRestore(true);
 
    }
 

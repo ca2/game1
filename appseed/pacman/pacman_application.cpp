@@ -92,16 +92,16 @@ namespace pacman
    }
 
 
-   void application::on_request(sp(::create) pcreatecontext)
+   void application::on_request(::create * pcreate)
    {
 
       start();
 
-      m_ptemplatePacManMain->open_document_file(pcreatecontext);
+      m_ptemplatePacManMain->open_document_file(pcreate);
 
-      if(!pcreatecontext->m_spCommandLine->m_varFile.is_empty())
+      if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplatePacManView->open_document_file(pcreatecontext);
+         m_ptemplatePacManView->open_document_file(pcreate);
       }
 
    }

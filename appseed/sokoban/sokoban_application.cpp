@@ -65,14 +65,14 @@ namespace sokoban
    }
 
 
-   void application::on_request(sp(::create) pcreatecontext)
+   void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateSokobanMain->open_document_file(pcreatecontext);
+      m_ptemplateSokobanMain->open_document_file(pcreate);
 
-      if(!pcreatecontext->m_spCommandLine->m_varFile.is_empty())
+      if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplateSokobanView->open_document_file(pcreatecontext);
+         m_ptemplateSokobanView->open_document_file(pcreate);
       }
 
    }
