@@ -97,14 +97,17 @@ namespace pacman
 
       start();
 
-      m_ptemplatePacManMain->open_document_file(pcreate);
+      m_ptemplatePacManMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplatePacManView->open_document_file(pcreate);
+
+         m_ptemplatePacManView->request_create(pcreate);
+
       }
 
    }
+
 
    void application::on_create_split_view(::user::split_view * psplit)
    {

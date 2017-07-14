@@ -74,14 +74,17 @@ namespace tetris
    void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateTetrisMain->open_document_file(pcreate);
+      m_ptemplateTetrisMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplateTetrisView->open_document_file(pcreate);
+
+         m_ptemplateTetrisView->request_create(pcreate);
+
       }
 
    }
+
 
 } // namespace tetris
 

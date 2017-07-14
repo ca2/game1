@@ -68,14 +68,17 @@ namespace sokoban
    void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateSokobanMain->open_document_file(pcreate);
+      m_ptemplateSokobanMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplateSokobanView->open_document_file(pcreate);
+
+         m_ptemplateSokobanView->request_create(pcreate);
+
       }
 
    }
+
 
 } // namespace sokoban
 

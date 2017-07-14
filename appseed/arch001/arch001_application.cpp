@@ -68,14 +68,17 @@ namespace arch001
    void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateHelloMultiverseMain->open_document_file(pcreate);
+      m_ptemplateHelloMultiverseMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
-         m_ptemplateHelloMultiverseView->open_document_file(pcreate);
+
+         m_ptemplateHelloMultiverseView->request_create(pcreate);
+
       }
 
    }
+
 
 } // namespace arch001
 
