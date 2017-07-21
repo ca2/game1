@@ -13,16 +13,3 @@
 
 
 
-@implementation app
-
-
-//- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-//{
-//   
-//   [super applicationDidFinishLaunching : aNotification];
-//   
-//}
-
-
-
-@end

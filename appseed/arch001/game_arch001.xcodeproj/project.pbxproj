@@ -35,8 +35,6 @@
 		9AB09D071D5B4A2F00B5F2A0 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */; };
 		9AB09D091D5B4A3500B5F2A0 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D081D5B4A3500B5F2A0 /* libcore.dylib */; };
 		9AB09D1B1D5B4BC900B5F2A0 /* libgcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D141D5B4BB700B5F2A0 /* libgcom.dylib */; };
-		9AB09D1D1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */; };
-		9AB09D1F1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09D1E1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
@@ -51,7 +49,6 @@
 		9AF2A88E1D5C013400E6D5ED /* arch001_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF71D5B6DA900D00D4A /* arch001_pane_view_update_hint.cpp */; };
 		9AF2A88F1D5C013400E6D5ED /* arch001_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF91D5B6DA900D00D4A /* arch001_pane_view.cpp */; };
 		9AF2A8901D5C013400E6D5ED /* arch001_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BFB1D5B6DA900D00D4A /* arch001_view.cpp */; };
-		9AF2A8911D5C013400E6D5ED /* multimedia_soundtrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */; };
 		9AF2A8AC1D5C018200E6D5ED /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8A71D5C018200E6D5ED /* libios_aura.dylib */; };
 		9AF2A8AD1D5C018200E6D5ED /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8A81D5C018200E6D5ED /* libios_axis.dylib */; };
 		9AF2A8AE1D5C018200E6D5ED /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8A91D5C018200E6D5ED /* libios_base.dylib */; };
@@ -213,8 +210,6 @@
 		9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = ../../../app/appseed/base/build/Debug/libbase.dylib; sourceTree = "<group>"; };
 		9AB09D081D5B4A3500B5F2A0 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = ../../../app/appseed/core/build/Debug/libcore.dylib; sourceTree = "<group>"; };
 		9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
-		9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multimedia_soundtrack.cpp; sourceTree = "<group>"; };
-		9AB09D1E1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multimedia_soundtrack.h; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libgame_arch001.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_arch001.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_arch001_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_arch001_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,8 +290,6 @@
 				9A342BFB1D5B6DA900D00D4A /* arch001_view.cpp */,
 				9A342BFC1D5B6DA900D00D4A /* arch001_view.h */,
 				9A342BFF1D5B6DA900D00D4A /* arch001.h */,
-				9AB09D1E1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h */,
-				9AB09D1C1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp */,
 				07A9A8481B5CA6E800B63035 /* framework.cpp */,
 				07A9A8491B5CA6E800B63035 /* framework.h */,
 			);
@@ -420,7 +413,6 @@
 				9A342C031D5B6DA900D00D4A /* arch001_document.h in Headers */,
 				9A342C0B1D5B6DA900D00D4A /* arch001_pane_view_update_hint.h in Headers */,
 				9A342C0F1D5B6DA900D00D4A /* arch001_view.h in Headers */,
-				9AB09D1F1D5B4C2D00B5F2A0 /* multimedia_soundtrack.h in Headers */,
 				07A9A88A1B5CA6E800B63035 /* framework.h in Headers */,
 				9A342C111D5B6DA900D00D4A /* arch001.h in Headers */,
 			);
@@ -623,7 +615,6 @@
 				9AF2A88E1D5C013400E6D5ED /* arch001_pane_view_update_hint.cpp in Sources */,
 				9AF2A88F1D5C013400E6D5ED /* arch001_pane_view.cpp in Sources */,
 				9AF2A8901D5C013400E6D5ED /* arch001_view.cpp in Sources */,
-				9AF2A8911D5C013400E6D5ED /* multimedia_soundtrack.cpp in Sources */,
 				07A9A8891B5CA6E800B63035 /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +631,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB09D1D1D5B4C2200B5F2A0 /* multimedia_soundtrack.cpp in Sources */,
 				9A342C081D5B6DA900D00D4A /* arch001_main_frame.cpp in Sources */,
 				07A9A8881B5CA6E800B63035 /* framework.cpp in Sources */,
 				9A342C021D5B6DA900D00D4A /* arch001_document.cpp in Sources */,
@@ -800,7 +790,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
@@ -863,7 +853,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
