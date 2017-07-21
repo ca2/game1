@@ -191,7 +191,7 @@ namespace user
 
          pgraphics->SelectFont(m_fonta[i]);
 
-         pgraphics->TextOut(r.left + m_rectMargin.left,r.top + m_rectMargin.top,strText);
+         pgraphics->text_out(r.left + m_rectMargin.left,r.top + m_rectMargin.top,strText);
 
 
 
@@ -300,7 +300,7 @@ namespace user
             h = 0;
          }
 
-         //pgraphics->TextOut(x + m_rectMargin.left,y + m_rectMargin.top,strText);
+         //pgraphics->text_out(x + m_rectMargin.left,y + m_rectMargin.top,strText);
 
          r.left = x ;
          r.top = y ;

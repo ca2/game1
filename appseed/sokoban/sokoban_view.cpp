@@ -209,7 +209,7 @@ namespace sokoban
 
             pgraphics->set_text_color(ARGB(184, 49, 49, 49));
 
-            pgraphics->TextOut(- m_iSideBarWidth + 10,yOffset * m_asset.m_iSize,str);
+            pgraphics->text_out(- m_iSideBarWidth + 10,yOffset * m_asset.m_iSize,str);
 
             get_document()->m_levela[iLevel]->draw(pgraphics,&m_asset,yOffset);
 

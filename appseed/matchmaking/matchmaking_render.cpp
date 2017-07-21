@@ -393,7 +393,7 @@ namespace matchmaking
 
             m_dib->get_graphics()->SelectObject(brushText);
 
-            m_dib->get_graphics()->TextOut((m_cxCache1 - size.cx) / 2,(m_cyCache1 - size.cy) / 2,strHelloMultiverse);
+            m_dib->get_graphics()->text_out((m_cxCache1 - size.cx) / 2,(m_cyCache1 - size.cy) / 2,strHelloMultiverse);
 
             //          m_dib->get_graphics()->FillSolidRect(400,100,100,100,ARGB(128,0,0,255));
 
@@ -509,7 +509,7 @@ namespace matchmaking
       //if(!m_bAlternate)
       {
 
-         pgraphics->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
+         pgraphics->text_out((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
 
       }
       //      pgraphics->FillSolidRect(200,00,100,100,ARGB(128,128,128,255));
@@ -645,7 +645,7 @@ namespace matchmaking
 
          m_dib->get_graphics()->set_font(m_font);
 
-         m_dib->get_graphics()->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
+         m_dib->get_graphics()->text_out((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
 
          if(m_dMinRadius > 3.0)
          {
@@ -710,7 +710,7 @@ namespace matchmaking
 
       pgraphics->SelectObject(brushText);
 
-      pgraphics->TextOut((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
+      pgraphics->text_out((m_cx - size.cx) / 2,(m_cy - size.cy) / 2,strHelloMultiverse);
 
       byte a,R,g,b;
 

@@ -218,7 +218,7 @@ namespace matchmaking
 
       rect.Align(align_center, rectButton);
 
-      pgraphics->TextOut(rect.left, rect.top, str1);
+      pgraphics->text_out(rect.left, rect.top, str1);
 
       pgraphics->selectFont(m_font2);
 
@@ -235,7 +235,7 @@ namespace matchmaking
       r2.offset(0, -r2.top + rect.bottom);
 
       pgraphics->set_text_color(ARGB(255, 128, 128, 128));
-      pgraphics->TextOut(r2.left, r2.top, str2);
+      pgraphics->text_out(r2.left, r2.top, str2);
 
    }
 

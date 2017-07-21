@@ -455,7 +455,7 @@ namespace tictactoe
 
       //pgraphics->SelectObject(brushText);
 
-      //pgraphics->TextOut((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
+      //pgraphics->text_out((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 

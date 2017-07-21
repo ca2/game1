@@ -238,10 +238,10 @@ namespace arkanoid
 
       pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
 
-      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
-      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 10,y+30,"Level:");
-      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y,m_strScore);
-      pgraphics->TextOut(x + m_ppreview->m_dib->m_size.cx + 50,y+30,m_strLevel);
+      pgraphics->text_out(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
+      pgraphics->text_out(x + m_ppreview->m_dib->m_size.cx + 10,y+30,"Level:");
+      pgraphics->text_out(x + m_ppreview->m_dib->m_size.cx + 50,y,m_strScore);
+      pgraphics->text_out(x + m_ppreview->m_dib->m_size.cx + 50,y+30,m_strLevel);
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
 

@@ -353,7 +353,7 @@ namespace matchmaking
          TRACE("x");
       }
 
-      pgraphics->TextOut(100, 50, str);
+      pgraphics->text_out(100, 50, str);
 
       int starty = 100;
       int startx = 100;
@@ -418,7 +418,7 @@ namespace matchmaking
 
             pline = canew(XfplayerViewLine(&m_lines));
 
-            //pgraphics->TextOut(x + 2, y + 2, str);
+            //pgraphics->text_out(x + 2, y + 2, str);
 
 
             m_lines.add(pline);
@@ -563,7 +563,7 @@ namespace matchmaking
 
             ::size size = pgraphics->GetTextExtent(strHelloMultiverse);
 
-            pgraphics->TextOut((m_prender->m_cx - size.cx) / 2,(m_prender->m_cy - size.cy) / 2,strHelloMultiverse);
+            pgraphics->text_out((m_prender->m_cx - size.cx) / 2,(m_prender->m_cy - size.cy) / 2,strHelloMultiverse);
 
             return;
 

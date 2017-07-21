@@ -205,7 +205,7 @@ namespace pacman
 
          string str = ch;
          m_dib->get_graphics()->set_text_color(console_COLORREF(iColor));
-         m_dib->get_graphics()->TextOut(x - m_offset.cx, y - m_offset.cy, str);
+         m_dib->get_graphics()->text_out(x - m_offset.cx, y - m_offset.cy, str);
          //FT_Face & face = (FT_Face &)m_face;
 
          //int32_t error;
