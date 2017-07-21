@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0722EDA31926263D003E99F4 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED3191547110091C065 /* libcore.dylib */; };
-		078B58F01B5CF71A00A7D3CF /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEED5191547110091C065 /* libios_core.dylib */; };
 		078DF8251C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
 		078DF8261C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
 		078DF8271C52957B00E65274 /* tictactoe_arbitrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 078DF81D1C52957B00E65274 /* tictactoe_arbitrator.cpp */; };
@@ -50,13 +49,10 @@
 		07AE49571CC7AE8800959A6F /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49561CC7AE8800959A6F /* libaura.dylib */; };
 		07AE49621CC7AE9E00959A6F /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49611CC7AE9E00959A6F /* libbase.dylib */; };
 		07AE49641CC7AEBF00959A6F /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE49631CC7AEBF00959A6F /* libaxis.dylib */; };
-		9A986D981D226D60001F4C04 /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986D971D226D60001F4C04 /* libios_base.dylib */; };
-		9A986D9A1D226D71001F4C04 /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986D991D226D71001F4C04 /* libios_axis.dylib */; };
-		9A986D9C1D226D78001F4C04 /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A986D9B1D226D78001F4C04 /* libios_aura.dylib */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
@@ -149,7 +145,7 @@
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A1190710F3000A1F4A /* libbasefreetype_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype_ios.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A2190710F3000A1F4A /* libbasemysql_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql_ios.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql_ios.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tictactoe.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tictactoe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_tictactoe_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_tictactoe_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -165,10 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A986D9C1D226D78001F4C04 /* libios_aura.dylib in Frameworks */,
-				9A986D9A1D226D71001F4C04 /* libios_axis.dylib in Frameworks */,
-				9A986D981D226D60001F4C04 /* libios_base.dylib in Frameworks */,
-				078B58F01B5CF71A00A7D3CF /* libios_core.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +171,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libgame_tictactoe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				078AEED3191547110091C065 /* libcore.dylib */,
-				078AEED5191547110091C065 /* libios_core.dylib */,
+				078AEED5191547110091C065 /* libios_core.a */,
 				078AEED7191547110091C065 /* core_iosTests.xctest */,
 			);
 			name = Products;
@@ -298,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libgame_tictactoe.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */,
 				9AE24E991904CFFD001AEFFB /* game_tictactoe_iosTests.xctest */,
 			);
 			name = Products;
@@ -343,7 +335,7 @@
 			);
 			name = ios_game_tictactoe;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tictactoe.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* game_tictactoe_iosTests */ = {
@@ -429,10 +421,10 @@
 			remoteRef = 078AEED2191547110091C065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		078AEED5191547110091C065 /* libios_core.dylib */ = {
+		078AEED5191547110091C065 /* libios_core.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_core.dylib;
+			path = libios_core.a;
 			remoteRef = 078AEED4191547110091C065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -540,7 +532,8 @@
 		9AE24EAA1904CFFD001AEFFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACH_O_TYPE = mh_dylib;
+				EXECUTABLE_EXTENSION = a;
+				MACH_O_TYPE = staticlib;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -548,7 +541,8 @@
 		9AE24EAB1904CFFD001AEFFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACH_O_TYPE = mh_dylib;
+				EXECUTABLE_EXTENSION = a;
+				MACH_O_TYPE = staticlib;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

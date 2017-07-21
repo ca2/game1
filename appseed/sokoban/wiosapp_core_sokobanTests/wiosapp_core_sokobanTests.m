@@ -2,7 +2,7 @@
 //  wiosapp_core_hellomultiverseTests.m
 //  wiosapp_core_hellomultiverseTests
 //
-//  Created by Thomas Borregaard Sørensen on 12/05/14.
+//  Created by Camilo Sasuke Tsumanuma on 12/05/14.
 //  Copyright (c) 2014 Camilo Sasuke Tsumanuma. All rights reserved.
 //
 
