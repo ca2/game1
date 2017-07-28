@@ -14,8 +14,8 @@ namespace matchmaking
       DWORD m_dwRoll;
 
       string_map < ::draw2d::dib_sp >        m_map;
-      XfplayerViewLines                      m_lines;
-      string_map < XfplayerViewLine * >      m_linemap;
+      xfplayer_view_linea                      m_lines;
+      string_map < xfplayer_view_line * >      m_linemap;
       string_map < rect >                    m_rectmap;
 
       ::draw2d::font_sp                      m_font;

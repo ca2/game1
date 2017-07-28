@@ -411,12 +411,12 @@ namespace matchmaking
 
 
 
-         XfplayerViewLine * & pline = m_linemap[str];
+         xfplayer_view_line * & pline = m_linemap[str];
 
          if (pline == NULL)
          {
 
-            pline = canew(XfplayerViewLine(&m_lines));
+            pline = canew(xfplayer_view_line(&m_lines));
 
             //pgraphics->text_out(x + 2, y + 2, str);
 
