@@ -16,7 +16,7 @@ namespace tetris
 
       WfiEnableFullScreen();
 
-      m_bWindowFrame = !Application.command()->m_varTopicQuery.has_property("client_only");
+      m_bWindowFrame = !Application.handler()->m_varTopicQuery.has_property("client_only");
 
    }
 
@@ -48,7 +48,7 @@ namespace tetris
    sp(::user::wndfrm::frame::frame) frame::create_frame_schema()
    {
 
-      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm().get_frame_schema(NULL, "001");
+      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm()->get_frame_schema(NULL, "001");
       pschema->set_style("StyleLightBlue");
 //      pschema->m_typeinfoControlBoxButton = System.type_info < MetaButton > ();
       return pschema;

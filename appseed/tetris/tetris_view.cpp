@@ -271,10 +271,10 @@ namespace tetris
       
       int iCellSize = 24;
       
-      if(Application.directrix()->m_varTopicQuery.has_property("cell_size"))
+      if(Application.handler()->m_varTopicQuery.has_property("cell_size"))
       {
          
-         iCellSize = Application.directrix()->m_varTopicQuery["cell_size"];
+         iCellSize = Application.handler()->m_varTopicQuery["cell_size"];
          
          iCellSize = MIN(1024, MAX(2, iCellSize));
          

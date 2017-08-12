@@ -32,10 +32,10 @@ namespace tictactoe
 
       string str = THIS_FRIENDLY_NAME();
 
-      if(Application.directrix()->m_varTopicQuery.has_property("bk_alpha") && Application.directrix()->m_varTopicQuery["bk_alpha"].has_property(str))
+      if(Application.handler()->m_varTopicQuery.has_property("bk_alpha") && Application.handler()->m_varTopicQuery["bk_alpha"].has_property(str))
       {
 
-         m_bBkAlpha= MAX(0,MIN(255,((int)(Application.directrix()->m_varTopicQuery["bk_alpha"][str].get_double() * 255.0))));
+         m_bBkAlpha= MAX(0,MIN(255,((int)(Application.handler()->m_varTopicQuery["bk_alpha"][str].get_double() * 255.0))));
 
       }
       else
@@ -707,7 +707,7 @@ namespace tictactoe
 
       string str = THIS_FRIENDLY_NAME();
 
-      string strPath = Application.directrix()->m_varTopicQuery["bk"][str];
+      string strPath = Application.handler()->m_varTopicQuery["bk"][str];
 
       ::visual::dib_sp dibBk(allocer());
 

@@ -69,7 +69,7 @@ namespace matchmaking
 
       m_bFast = true;
 
-      m_dibBk.load_from_file(Application.directrix()->m_varTopicQuery["hello_bk"]);
+      m_dibBk.load_from_file(Application.handler()->m_varTopicQuery["hello_bk"]);
 
 
       m_ppcreutil = pcre_util::compile(get_app(), "\\:\\-\\)");

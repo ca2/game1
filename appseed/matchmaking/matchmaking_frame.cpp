@@ -13,11 +13,11 @@ namespace matchmaking
 
       WfiEnableFullScreen();
 
-      m_bWindowFrame = !Application.command()->m_varTopicQuery.has_property("client_only");
+      m_bWindowFrame = !Application.handler()->m_varTopicQuery.has_property("client_only");
 
 
 
-      if(Application.command()->m_varTopicQuery.has_property("opaque"))
+      if(Application.handler()->m_varTopicQuery.has_property("opaque"))
       {
 
          m_bExplicitTranslucency = true;
@@ -62,9 +62,9 @@ namespace matchmaking
    sp(::user::wndfrm::frame::frame) frame::create_frame_schema()
    {
 
-      //sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm().get_frame_schema("wndfrm_core", "001");
+      //sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm()->get_frame_schema("wndfrm_core", "001");
 
-      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm().get_frame_schema(NULL,"013");
+      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm()->get_frame_schema(NULL,"013");
 
       pschema->set_style("LightBlue");
 

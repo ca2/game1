@@ -44,7 +44,7 @@ namespace sokoban
    sp(::user::wndfrm::frame::frame) frame::create_frame_schema()
    {
 
-      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm().get_frame_schema(NULL, "001");
+      sp(::user::wndfrm::frame::frame) pschema = Application.wndfrm()->get_frame_schema(NULL, "001");
       pschema->set_style("StyleLightBlue");
 //      pschema->m_typeinfoControlBoxButton = System.type_info < MetaButton > ();
       return pschema;

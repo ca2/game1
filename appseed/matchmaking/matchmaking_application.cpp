@@ -90,13 +90,13 @@ namespace matchmaking
       if(!::core::application::initialize_application())
          return false;
 
-//      if(directrix()->m_varTopicQuery.has_property("install"))
+//      if(handler()->m_varTopicQuery.has_property("install"))
 //      {
 //         ::simple_message_box(NULL, "HelloMultiverse install", "HelloMultiverse install", 0);
 //      }
 
 
-      string str = directrix()->m_varTopicQuery["matchmaking"];
+      string str = handler()->m_varTopicQuery["matchmaking"];
 
       if (str.has_char())
       {
@@ -178,7 +178,7 @@ namespace matchmaking
 
       //pcreate->m_bMakeVisible = false;
 
-      m_bMultiverseChat = !directrix()->m_varTopicQuery["no_hello_edit"].is_set();
+      m_bMultiverseChat = !handler()->m_varTopicQuery["no_hello_edit"].is_set();
 
       if(m_ptemplateHelloMultiverseMain->get_document_count() == 0)
       {
@@ -198,7 +198,7 @@ namespace matchmaking
 
       //ClipCursor(r);
 
-      if (directrix()->m_varTopicQuery["wfi_maximize"].is_set())
+      if (handler()->m_varTopicQuery["wfi_maximize"].is_set())
       {
 
          pcreate->m_spCommandLine->m_varQuery["document"].cast < document >()->get_typed_view < ::userex::pane_tab_view >()->GetTopLevelFrame()->_001WindowMaximize();
