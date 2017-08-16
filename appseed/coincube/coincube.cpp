@@ -11,13 +11,13 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
    if (dwReason == DLL_PROCESS_ATTACH)
    {
-      ::OutputDebugStringW(L"::core:: coincube.dll :: initializing!\n");
+      ::output_debug_string(L"::core:: coincube.dll :: initializing!\n");
       
 
    }
    else if (dwReason == DLL_PROCESS_DETACH)
    {
-      ::OutputDebugStringW(L"::core:: coincube.dll :: terminating!\n");
+      ::output_debug_string(L"::core:: coincube.dll :: terminating!\n");
    }
    return 1;   // ok
 }

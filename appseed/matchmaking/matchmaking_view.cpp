@@ -791,10 +791,10 @@ namespace matchmaking
 
       //char sz[512];
 
-      //::OutputDebugString("view:");
+      //::output_debug_string("view:");
       //::ultoa_dup(sz, micros, 10);
-      //::OutputDebugString(sz);
-      //::OutputDebugString(", ");
+      //::output_debug_string(sz);
+      //::output_debug_string(", ");
 
 
 

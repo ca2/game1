@@ -22,7 +22,7 @@ namespace matchmaking
 
          m_bExplicitTranslucency = true;
 
-         m_etranslucency = ::user::TranslucencyNone;
+         m_etranslucency = ::user::translucency_none;
 
       }
       else
@@ -75,7 +75,7 @@ namespace matchmaking
    }
 
 
-   bool frame::get_translucency(::user::ETranslucency & etranslucency)
+   bool frame::get_translucency(::user::e_translucency & etranslucency)
    {
 
       if(m_bExplicitTranslucency)
@@ -87,16 +87,16 @@ namespace matchmaking
 
       }
 
-      if(m_puserschema != NULL)
+      if(m_puserstyle != NULL)
       {
 
-         if(m_puserschema->_001GetMainFrameTranslucency(etranslucency))
+         if(m_puserstyle->_001GetMainFrameTranslucency(etranslucency))
             return true;
 
       }
-      etranslucency = ::user::TranslucencyPresent;
+      etranslucency = ::user::translucency_present;
 
-//      etranslucency = ::user::TranslucencyNone;
+//      etranslucency = ::user::translucency_none;
 
       return true;
 

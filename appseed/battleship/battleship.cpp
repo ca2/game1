@@ -11,13 +11,13 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
    if (dwReason == DLL_PROCESS_ATTACH)
    {
-      ::OutputDebugStringW(L"::core:: tictactoe.dll :: initializing!\n");
+      ::output_debug_string(L"::core:: tictactoe.dll :: initializing!\n");
       
 
    }
    else if (dwReason == DLL_PROCESS_DETACH)
    {
-      ::OutputDebugStringW(L"::core:: tictactoe.dll :: terminating!\n");
+      ::output_debug_string(L"::core:: tictactoe.dll :: terminating!\n");
    }
    return 1;   // ok
 }

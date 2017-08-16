@@ -32,7 +32,7 @@ namespace arkanoid
 	   virtual void dump(dump_context & dumpcontext) const;
    
 
-      virtual bool get_translucency(::user::ETranslucency & etranslucency);
+      virtual bool get_translucency(::user::e_translucency & etranslucency);
 
       virtual bool get_window_minimum_size(::size & sizeMin);
 

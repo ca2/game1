@@ -58,10 +58,10 @@ namespace tictactoe
    }
 
 
-   bool main_frame::get_translucency(::user::ETranslucency & etranslucency)
+   bool main_frame::get_translucency(::user::e_translucency & etranslucency)
    {
 
-      etranslucency      = ::user::TranslucencyPresent;
+      etranslucency      = ::user::translucency_present;
 
       return true;
 
