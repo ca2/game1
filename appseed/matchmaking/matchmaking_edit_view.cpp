@@ -19,17 +19,17 @@ namespace matchmaking
    {
 
    }
-   void edit_view::install_message_handling(::message::dispatch * pdispatch)
+   void edit_view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::show < ::user::plain_edit >::install_message_handling(pdispatch);
+      ::user::show < ::user::plain_edit >::install_message_routing(pdispatch);
 
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&edit_view::_001OnCreate);
 
    }
 
 
-   void edit_view::_001OnCreate(signal_details * pobj)
+   void edit_view::_001OnCreate(::message::message * pobj)
    {
       SCAST_PTR(::message::create,pcreate,pobj);
 

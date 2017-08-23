@@ -21,7 +21,7 @@ namespace arkanoid
       
       void on_create_view(::user::view_creator_data * pcreatordata);
 
-      virtual void install_message_handling(::message::dispatch * pinterface);
+      virtual void install_message_routing(::message::sender * pinterface);
 
    #ifdef DEBUG
 	   virtual void assert_valid() const;

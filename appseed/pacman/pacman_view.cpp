@@ -44,10 +44,10 @@ namespace pacman
    }
 #endif
 
-   void view::install_message_handling(::message::dispatch * pdispatch)
+   void view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::impact::install_message_handling(pdispatch);
+      ::user::impact::install_message_routing(pdispatch);
 
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
       IGUI_WIN_MSG_LINK(WM_DESTROY,pdispatch,this,&view::_001OnDestroy);
@@ -59,7 +59,7 @@ namespace pacman
    }
 
 
-   void view::_001OnCreate(signal_details * pobj)
+   void view::_001OnCreate(::message::message * pobj)
    {
 
       SCAST_PTR(::message::create,pcreate,pobj);
@@ -75,7 +75,7 @@ namespace pacman
 
    }
 
-   void view::_001OnDestroy(signal_details * pobj)
+   void view::_001OnDestroy(::message::message * pobj)
    {
 
       pobj->previous();
@@ -84,7 +84,7 @@ namespace pacman
    }
 
 
-   void view::_001OnLButtonDown(signal_details * pobj)
+   void view::_001OnLButtonDown(::message::message * pobj)
    {
 
       //pobj->m_bRet = true;
@@ -92,7 +92,7 @@ namespace pacman
    }
 
 
-   void view::_001OnLButtonUp(signal_details * pobj)
+   void view::_001OnLButtonUp(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse,pmouse,pobj);
@@ -213,7 +213,7 @@ namespace pacman
 
    }
 
-   void view::_001OnKeyDown(signal_details * pobj)
+   void view::_001OnKeyDown(::message::message * pobj)
    {
 
       SCAST_PTR(::message::key,pkey,pobj);
@@ -244,7 +244,7 @@ namespace pacman
 
    }
 
-   void view::_001OnKeyUp(signal_details * pobj)
+   void view::_001OnKeyUp(::message::message * pobj)
    {
 
       SCAST_PTR(::message::key,pkey,pobj);

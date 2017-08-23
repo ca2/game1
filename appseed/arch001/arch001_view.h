@@ -63,7 +63,7 @@ namespace arch001
 	   virtual void dump(dump_context & dumpcontext) const;
    #endif
 
-      virtual void install_message_handling(::message::dispatch * pdispatch);
+      virtual void install_message_routing(::message::sender * psender);
 
       virtual void _001OnDraw(::draw2d::graphics * pgraphics);
 

@@ -82,7 +82,7 @@ namespace matchmaking
       virtual void dump(dump_context & dumpcontext) const;
 
 
-      virtual void install_message_handling(::message::dispatch * pdispatch);
+      virtual void install_message_routing(::message::sender * psender);
 
 
       virtual void _001OnPostProcess(::draw2d::dib * pdib);

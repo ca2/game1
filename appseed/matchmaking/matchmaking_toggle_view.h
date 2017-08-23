@@ -19,7 +19,7 @@ namespace matchmaking
       virtual ~toggle_view();
 
 
-      virtual void install_message_handling(::message::dispatch * pdispatch);
+      virtual void install_message_routing(::message::sender * psender);
 
 
       virtual void on_update(::user::impact * pSender,LPARAM lHint,object* phint);

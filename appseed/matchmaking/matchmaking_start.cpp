@@ -34,10 +34,10 @@ namespace matchmaking
       user::box::dump(dumpcontext);
    }
 
-   void start::install_message_handling(::message::dispatch * pdispatch)
+   void start::install_message_routing(::message::sender * psender)
    {
 
-      ::user::impact::install_message_handling(pdispatch);
+      ::user::impact::install_message_routing(pdispatch);
 
       IGUI_WIN_MSG_LINK(WM_USER + 1984 + 77 + 2, pdispatch, this, &start::_001OnLayout);
       IGUI_WIN_MSG_LINK(WM_CREATE, pdispatch, this, &start::_001OnCreate);
@@ -62,7 +62,7 @@ namespace matchmaking
    }
 
 
-   void start::_001OnCreate(signal_details * pobj)
+   void start::_001OnCreate(::message::message * pobj)
    {
 
       SCAST_PTR(::message::create, pcreate, pobj);
@@ -77,13 +77,13 @@ namespace matchmaking
 
    }
 
-   void start::_001OnDestroy(signal_details * pobj)
+   void start::_001OnDestroy(::message::message * pobj)
    {
 
 
    }
 
-   void start::_001OnMouseMove(signal_details * pobj)
+   void start::_001OnMouseMove(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse, pmouse, pobj);
@@ -118,7 +118,7 @@ namespace matchmaking
    }
 
 
-   void start::_001OnLButtonDown(signal_details * pobj)
+   void start::_001OnLButtonDown(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse, pmouse, pobj);
@@ -127,7 +127,7 @@ namespace matchmaking
 
    }
 
-   void start::_001OnLButtonUp(signal_details * pobj)
+   void start::_001OnLButtonUp(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse, pmouse, pobj);
@@ -149,7 +149,7 @@ namespace matchmaking
 
    }
 
-   void start::_001OnLayout(signal_details * pobj)
+   void start::_001OnLayout(::message::message * pobj)
    {
 
       synch_lock sl(m_pmutex);

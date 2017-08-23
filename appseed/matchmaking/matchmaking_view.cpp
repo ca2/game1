@@ -90,10 +90,10 @@ namespace matchmaking
       user::box::dump(dumpcontext);
    }
 
-   void view::install_message_handling(::message::dispatch * pdispatch)
+   void view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::impact::install_message_handling(pdispatch);
+      ::user::impact::install_message_routing(pdispatch);
 
       IGUI_WIN_MSG_LINK(WM_USER + 1984 + 77 + 2,pdispatch,this,&view::_001OnLayout);
       IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
@@ -104,7 +104,7 @@ namespace matchmaking
    }
 
 
-   void view::_001OnCreate(signal_details * pobj)
+   void view::_001OnCreate(::message::message * pobj)
    {
 
       SCAST_PTR(::message::create,pcreate,pobj);
@@ -198,7 +198,7 @@ namespace matchmaking
 
    }
 
-   void view::_001OnDestroy(signal_details * pobj)
+   void view::_001OnDestroy(::message::message * pobj)
    {
 
       m_pevRenderEnd = new manual_reset_event(get_app());
@@ -211,7 +211,7 @@ namespace matchmaking
 
    }
 
-   void view::_001OnLButtonDown(signal_details * pobj)
+   void view::_001OnLButtonDown(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse, pmouse, pobj);
@@ -220,7 +220,7 @@ namespace matchmaking
 
    }
 
-   void view::_001OnLButtonUp(signal_details * pobj)
+   void view::_001OnLButtonUp(::message::message * pobj)
    {
 
       SCAST_PTR(::message::mouse, pmouse, pobj);
@@ -247,7 +247,7 @@ namespace matchmaking
 
    }
 
-   void view::_001OnLayout(signal_details * pobj)
+   void view::_001OnLayout(::message::message * pobj)
    {
 
       synch_lock sl(m_pmutex);
