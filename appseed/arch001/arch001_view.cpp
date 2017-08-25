@@ -71,16 +71,16 @@ namespace arch001
    void view::install_message_routing(::message::sender * psender)
    {
 
-      //::backview::Interface::install_message_routing(pdispatch);
+      //::backview::Interface::install_message_routing(psender);
 
-      ::user::impact::install_message_routing(pdispatch);
+      ::user::impact::install_message_routing(psender);
 
-      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
-      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&view::_001OnLButtonDown);
-      IGUI_WIN_MSG_LINK(WM_LBUTTONUP,pdispatch,this,&view::_001OnLButtonUp);
-      IGUI_WIN_MSG_LINK(WM_MOUSEMOVE,pdispatch,this,&view::_001OnMouseMove);
-      IGUI_WIN_MSG_LINK(WM_KEYDOWN, pdispatch, this, &view::_001OnKeyDown);
-      IGUI_WIN_MSG_LINK(WM_KEYUP, pdispatch, this, &view::_001OnKeyUp);
+      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
+      IGUI_MSG_LINK(WM_LBUTTONDOWN,psender,this,&view::_001OnLButtonDown);
+      IGUI_MSG_LINK(WM_LBUTTONUP,psender,this,&view::_001OnLButtonUp);
+      IGUI_MSG_LINK(WM_MOUSEMOVE,psender,this,&view::_001OnMouseMove);
+      IGUI_MSG_LINK(WM_KEYDOWN, psender, this, &view::_001OnKeyDown);
+      IGUI_MSG_LINK(WM_KEYUP, psender, this, &view::_001OnKeyUp);
 
    }
 

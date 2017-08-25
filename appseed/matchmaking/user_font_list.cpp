@@ -41,11 +41,11 @@ namespace user
    void font_list::install_message_routing(::message::sender * psender)
    {
 
-      ::user::box::install_message_routing(pdispatch);
+      ::user::box::install_message_routing(psender);
 
-      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&font_list::_001OnCreate);
-      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN,pdispatch,this,&font_list::_001OnLButtonDown);
-      IGUI_WIN_MSG_LINK(WM_MOUSEMOVE,pdispatch,this,&font_list::_001OnMouseMove);
+      IGUI_MSG_LINK(WM_CREATE,psender,this,&font_list::_001OnCreate);
+      IGUI_MSG_LINK(WM_LBUTTONDOWN,psender,this,&font_list::_001OnLButtonDown);
+      IGUI_MSG_LINK(WM_MOUSEMOVE,psender,this,&font_list::_001OnMouseMove);
 
    }
 

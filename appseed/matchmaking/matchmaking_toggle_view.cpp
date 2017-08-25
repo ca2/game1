@@ -23,8 +23,8 @@ namespace matchmaking
    void toggle_view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::impact::install_message_routing(pdispatch);
-      ::user::button::install_message_routing(pdispatch);
+      ::user::impact::install_message_routing(psender);
+      ::user::button::install_message_routing(psender);
 
    }
 

@@ -22,9 +22,9 @@ namespace matchmaking
    void edit_view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::show < ::user::plain_edit >::install_message_routing(pdispatch);
+      ::user::show < ::user::plain_edit >::install_message_routing(psender);
 
-      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&edit_view::_001OnCreate);
+      IGUI_MSG_LINK(WM_CREATE,psender,this,&edit_view::_001OnCreate);
 
    }
 

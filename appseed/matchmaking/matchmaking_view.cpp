@@ -93,13 +93,13 @@ namespace matchmaking
    void view::install_message_routing(::message::sender * psender)
    {
 
-      ::user::impact::install_message_routing(pdispatch);
+      ::user::impact::install_message_routing(psender);
 
-      IGUI_WIN_MSG_LINK(WM_USER + 1984 + 77 + 2,pdispatch,this,&view::_001OnLayout);
-      IGUI_WIN_MSG_LINK(WM_CREATE,pdispatch,this,&view::_001OnCreate);
-      IGUI_WIN_MSG_LINK(WM_DESTROY, pdispatch, this, &view::_001OnDestroy);
-      IGUI_WIN_MSG_LINK(WM_LBUTTONDOWN, pdispatch, this, &view::_001OnLButtonDown);
-      IGUI_WIN_MSG_LINK(WM_LBUTTONUP, pdispatch, this, &view::_001OnLButtonUp);
+      IGUI_MSG_LINK(WM_USER + 1984 + 77 + 2,psender,this,&view::_001OnLayout);
+      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
+      IGUI_MSG_LINK(WM_DESTROY, psender, this, &view::_001OnDestroy);
+      IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &view::_001OnLButtonDown);
+      IGUI_MSG_LINK(WM_LBUTTONUP, psender, this, &view::_001OnLButtonUp);
 
    }
 

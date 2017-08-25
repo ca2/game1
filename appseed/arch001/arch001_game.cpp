@@ -17,8 +17,8 @@ namespace arch001
 
    //void game::install_message_routing(::message::sender * psender)
    //{
-   //   IGUI_WIN_MSG_LINK(WM_KEYDOWN, pdispatch, this, &game::_001OnKeyDown);
-   //   IGUI_WIN_MSG_LINK(WM_KEYUP, pdispatch, this, &game::_001OnKeyUp);
+   //   IGUI_MSG_LINK(WM_KEYDOWN, psender, this, &game::_001OnKeyDown);
+   //   IGUI_MSG_LINK(WM_KEYUP, psender, this, &game::_001OnKeyUp);
 
    //}
 
