@@ -35,11 +35,11 @@ namespace  pacman
    {
       m_player.score = 0;
       m_player.lives = 3;
-      for(int levelnum = 1; levelnum <= 255 && get_run_thread(); levelnum++)
+      for(int levelnum = 1; levelnum <= 255 && thread_get_run(); levelnum++)
       {
          loadlevel();
          // while there are still dots on the screen,
-         while(m_player.left != 0 && get_run_thread())
+         while(m_player.left != 0 && thread_get_run())
          {
             {
 //               synch_lock sl(&m_mutex);
