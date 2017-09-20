@@ -104,13 +104,13 @@
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/base/include;$(SolutionDir)../../../app/base/appseed;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../../app/axis;$(SolutionDir)../../../nodeapp/thirdparty/appseed;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">CUBE;_AQUA_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Async</ExceptionHandling>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">ProgramDatabase</DebugInformationFormat>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</CompileAsManaged>
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</RuntimeTypeInfo>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">NotUsing</PrecompiledHeader>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</CompileAsManaged>
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</CompileAsWinRT>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">Async</ExceptionHandling>
@@ -123,7 +123,7 @@
       <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</OpenMPSupport>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">CUBE;_AQUA_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='basis|x64'">CUBE;_AQUA_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|x64'">-Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='basis|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
       <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Async</ExceptionHandling>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">NotUsing</PrecompiledHeader>
