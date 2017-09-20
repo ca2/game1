@@ -225,7 +225,7 @@ namespace pacman
 
    void player::dead()
    {
-      //Sleep(284);
+      //Sleep(300);
       m_ppacman->play_sound("wait:death");
       m_ppacman->hideall();
       if(dynamic_cast <console *> (m_p) != NULL)
@@ -235,7 +235,7 @@ namespace pacman
          {
             icon = ICONS_DEAD2[i];
             show();
-            Sleep(384);
+            Sleep(400);
          }
 
       }

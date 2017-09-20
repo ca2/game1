@@ -671,7 +671,7 @@ namespace matchmaking
 //
 //                  }
 //
-//                  m_pviewMain->post_message(WM_USER + 1984 + 77 + 2);
+//                  m_pviewMain->post_message(WM_VIEW_UPDATE);
 //
 //               }
 //
@@ -698,7 +698,7 @@ namespace matchmaking
 //
 //                  }
 //
-//                  m_pviewSwitcher->post_message(WM_USER + 1984 + 77 + 2);
+//                  m_pviewSwitcher->post_message(WM_VIEW_UPDATE);
 //
 //               }
 //

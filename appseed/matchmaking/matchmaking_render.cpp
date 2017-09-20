@@ -181,7 +181,7 @@ namespace matchmaking
 
             }
 
-            Sleep(84);
+            Sleep(100);
 
          }
          catch(...)

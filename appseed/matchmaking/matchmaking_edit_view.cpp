@@ -78,7 +78,7 @@ namespace matchmaking
 
          }
 
-         pview->post_message(WM_USER + 1984 + 77 + 2);
+         pview->post_message(WM_VIEW_UPDATE);
 
       }
 

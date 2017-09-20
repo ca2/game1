@@ -55,7 +55,7 @@ namespace matchmaking
 
       m_prender->m_pmutexText = &m_mutexText;
 
-      m_dwAnime = 1984;
+      m_dwAnime = 2000;
 
       m_dwFastAnime = 584;
 
@@ -95,7 +95,7 @@ namespace matchmaking
 
       ::user::impact::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_USER + 1984 + 77 + 2,psender,this,&view::_001OnLayout);
+      IGUI_MSG_LINK(WM_VIEW_UPDATE,psender,this,&view::_001OnLayout);
       IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
       IGUI_MSG_LINK(WM_DESTROY, psender, this, &view::_001OnDestroy);
       IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &view::_001OnLButtonDown);
@@ -1059,7 +1059,7 @@ namespace matchmaking
                }
                else
                {
-                  Sleep(884);
+                  Sleep(900);
                }
 
                if(m_strImage != strImage)

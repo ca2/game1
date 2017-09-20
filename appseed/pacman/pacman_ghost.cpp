@@ -296,7 +296,7 @@ namespace pacman
       modeold = mode;
       mode = 'd';
       m_ppacman->play_sound("wait:eatghost");
-      Sleep(184);
+      Sleep(200);
    }
 
    void ghost::show()

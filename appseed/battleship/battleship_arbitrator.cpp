@@ -169,7 +169,7 @@ namespace tictactoe
 
       m_evReady.SetEvent();
 
-      Sleep(84);
+      Sleep(100);
 
    }
 
