@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 
@@ -671,7 +671,7 @@ namespace matchmaking
 //
 //                  }
 //
-//                  m_pviewMain->post_message(WM_VIEW_UPDATE);
+//                  m_pviewMain->post_message(message_view_update);
 //
 //               }
 //
@@ -698,7 +698,7 @@ namespace matchmaking
 //
 //                  }
 //
-//                  m_pviewSwitcher->post_message(WM_VIEW_UPDATE);
+//                  m_pviewSwitcher->post_message(message_view_update);
 //
 //               }
 //

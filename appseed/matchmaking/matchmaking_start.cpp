@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 
@@ -39,7 +39,7 @@ namespace matchmaking
 
       ::user::impact::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_VIEW_UPDATE, psender, this, &start::_001OnLayout);
+      IGUI_MSG_LINK(message_view_update, psender, this, &start::_001OnLayout);
       IGUI_MSG_LINK(WM_CREATE, psender, this, &start::_001OnCreate);
       IGUI_MSG_LINK(WM_DESTROY, psender, this, &start::_001OnDestroy);
       IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &start::_001OnLButtonDown);

@@ -522,7 +522,7 @@ namespace tictactoe
 
       //               dib->realize(pgraphics);
 
-      //               draw_freetype_bitmap(dib.m_p, 0,0,&face->glyph->bitmap,0,0, 184, 77, 77, 184);
+      //               draw_freetype_bitmap(dib.m_p, 0,0,&face->glyph->bitmap,0,0, 190, 80, 77, 184);
 
       //               pgraphics->SetStretchBltMode(HALFTONE);
 
@@ -573,7 +573,7 @@ namespace tictactoe
 
       //               dib->realize(pgraphics);
 
-      //               draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0, 184, 84, 184, 77);
+      //               draw_freetype_bitmap(dib.m_p,0,0,&face->glyph->bitmap,0,0, 184, 84, 190, 80);
 
       //               pgraphics->SetStretchBltMode(HALFTONE);
 

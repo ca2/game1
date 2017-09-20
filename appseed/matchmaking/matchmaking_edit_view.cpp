@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace matchmaking
@@ -78,7 +78,7 @@ namespace matchmaking
 
          }
 
-         pview->post_message(WM_VIEW_UPDATE);
+         pview->post_message(message_view_update);
 
       }
 

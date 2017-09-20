@@ -95,7 +95,7 @@ namespace matchmaking
 
       ::user::impact::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_VIEW_UPDATE,psender,this,&view::_001OnLayout);
+      IGUI_MSG_LINK(message_view_update,psender,this,&view::_001OnLayout);
       IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
       IGUI_MSG_LINK(WM_DESTROY, psender, this, &view::_001OnDestroy);
       IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &view::_001OnLButtonDown);
@@ -869,7 +869,7 @@ namespace matchmaking
 
       ::draw2d::pen_sp pen(allocer());
 
-      pen->create_solid(1.0,ARGB(255,84,84,77));
+      pen->create_solid(1.0,ARGB(255,90, 90, 80));
 
       ::draw2d::pen_sp penW(allocer());
 
