@@ -59,7 +59,7 @@ namespace pacman
       if(!::hellomultiverse::application::initialize_application())
          return false;
 
-      m_dataid +=".local://";
+      m_dataid +="&data_source=local&";
 
 	   ::user::single_document_template* pDocTemplate;
 	   pDocTemplate = new ::user::single_document_template(

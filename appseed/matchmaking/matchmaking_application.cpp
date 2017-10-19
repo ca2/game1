@@ -105,7 +105,7 @@ namespace matchmaking
 
       }
 
-      m_dataid.m_id = m_dataid.m_id + ".local://";
+      set_local_data_key_modifier();
 
       ::user::single_document_template* pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(

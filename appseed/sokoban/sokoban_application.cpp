@@ -32,7 +32,7 @@ namespace sokoban
       if(!::estamira::application::initialize_application())
          return false;
 
-      m_dataid.m_id = m_dataid.m_id + ".local://";
+      set_local_data_key_modifier();
 
 	   ::user::single_document_template* pDocTemplate;
 	   pDocTemplate = new ::user::single_document_template(

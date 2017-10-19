@@ -125,7 +125,7 @@ namespace coincube
       m_psound = new ::multimedia::sound_track(get_app());
       m_psound->audio_plugin_initialize();
 
-      m_dataid += ".local://";
+      set_local_data_key_modifier();
 
       initialize_data_client(Application.simpledb().get_data_server());
       if(!m_bGame)
