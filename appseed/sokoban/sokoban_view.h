@@ -48,10 +48,10 @@ namespace sokoban
       view(::aura::application * papp);
 	   virtual ~view();
 
-   #ifdef DEBUG
+
 	   virtual void assert_valid() const;
 	   virtual void dump(dump_context & dumpcontext) const;
-   #endif
+
 
 
 

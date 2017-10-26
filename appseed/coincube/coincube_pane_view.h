@@ -23,10 +23,10 @@ namespace coincube
 
       virtual void install_message_routing(::message::sender * pinterface);
 
-   #ifdef DEBUG
+
 	   virtual void assert_valid() const;
 	   virtual void dump(dump_context & dumpcontext) const;
-   #endif
+
 
 	   DECL_GEN_SIGNAL(_001OnCreate);
 
