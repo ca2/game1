@@ -186,9 +186,6 @@
     <ProjectReference Include="..\..\..\app\appseed\draw2d_direct2d\w_draw2d_direct2d.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
-      <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\app\axis\image_jpeg\w_axis_image_jpeg.vcxproj">
       <Project>{b4517713-2000-419d-a87f-4338c9dde3fa}</Project>
     </ProjectReference>

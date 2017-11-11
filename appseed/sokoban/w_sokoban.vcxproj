@@ -60,9 +60,6 @@
     <ProjectReference Include="..\..\..\app\aura\charguess\w_auracharguess.vcxproj">
       <Project>{bc6a52b4-c049-439c-88ff-5a262d968c8f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
-      <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">

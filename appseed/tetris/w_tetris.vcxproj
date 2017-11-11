@@ -57,9 +57,6 @@
     <ProjectReference Include="..\..\..\app\appseed\core\w_core.vcxproj">
       <Project>{b000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
-      <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">

@@ -208,9 +208,6 @@
     <ProjectReference Include="..\..\..\app\axis\crypto\w_axiscrypto.vcxproj">
       <Project>{39807406-816f-4c0d-a632-4bb8ab13887b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\axis\freeimage\w_axisfreeimage.vcxproj">
-      <Project>{8785c06d-f7a7-485a-a258-027761e4a291}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\app\axis\idn\w_axisidn.vcxproj">
       <Project>{b8ac3ef0-11c5-4e12-a944-5f7efed6e0c4}</Project>
     </ProjectReference>
