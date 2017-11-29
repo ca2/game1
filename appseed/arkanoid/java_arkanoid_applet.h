@@ -625,9 +625,9 @@ class _ConfigForm extends Dialog
             int width = Integer.parseInt(fieldWidth.getText());
             int height = Integer.parseInt(fieldHeight.getText());
             int cellSize = Integer.parseInt(fieldCellSize.getText());
-            if((width < 4) || (width > 33)) throw new NumberFormatException();
-            if((height < 7) || (height > 33)) throw new NumberFormatException();
-            if((cellSize < 4) || (cellSize > 33)) throw new NumberFormatException();
+            if((width < 4) || (width > 33)) _throw(NumberFormatException());
+            if((height < 7) || (height > 33)) _throw(NumberFormatException());
+            if((cellSize < 4) || (cellSize > 33)) _throw(NumberFormatException());
             parent.arkanoid.init(width,height,cellSize);
             parent.arkanoid.resize(parent.arkanoid.preferredSize());
             parent.pack();

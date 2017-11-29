@@ -200,7 +200,7 @@ namespace pacman
 
       if(result.signaled() && result.signaled_index() == 0)
       {
-         throw new ::pacman::restart();
+         _throw(::pacman::restart());
       }
    }
 
