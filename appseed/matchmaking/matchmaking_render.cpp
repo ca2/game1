@@ -403,7 +403,7 @@ namespace matchmaking
 
             //          memset(m_dib->m_pcolorref, 128, m_dib->m_iScan * 100);
 
-            System.visual().imaging().spread(m_dib->get_graphics(), point(-m_dMaxRadius, -m_dMaxRadius), m_dib->get_size(), m_dib->get_graphics(), null_point(), m_dMaxRadius * 2);
+            Application.imaging().spread(m_dib->get_graphics(), point(-m_dMaxRadius, -m_dMaxRadius), m_dib->get_size(), m_dib->get_graphics(), null_point(), m_dMaxRadius * 2);
 
             m_dib.blur();
 
@@ -472,7 +472,7 @@ namespace matchmaking
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      System.visual().imaging().bitmap_blend(pgraphics,null_point(),rectClient.size(),m_dibTemplate->get_graphics(),null_point(),84 + 49 + (255 - 84 - 49) * r);
+      Application.imaging().bitmap_blend(pgraphics,null_point(),rectClient.size(),m_dibTemplate->get_graphics(),null_point(),84 + 49 + (255 - 84 - 49) * r);
 
       //pgraphics->from(rectClient.top_left(),m_dibTemplate, null_point(), rectClient>si);
 

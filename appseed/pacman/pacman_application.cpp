@@ -34,7 +34,7 @@ namespace pacman
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
 #ifdef WINDOWS
@@ -53,10 +53,10 @@ namespace pacman
       System.factory().creatable_small < ::pacman::frame >();
       System.factory().creatable_small < ::pacman::view >();
 
-      if(!::multimedia::application::initialize_application())
+      if(!::multimedia::application::init_instance())
          return false;
 
-      if(!::hellomultiverse::application::initialize_application())
+      if(!::hellomultiverse::application::init_instance())
          return false;
 
       m_dataid +="&data_source=local&";

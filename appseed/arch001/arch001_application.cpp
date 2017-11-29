@@ -20,7 +20,7 @@ namespace arch001
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::arch001::pane_view >();
@@ -29,7 +29,7 @@ namespace arch001
       System.factory().creatable_small < ::arch001::main_frame >();
       System.factory().creatable_small < ::arch001::view >();
 
-      if(!::multimedia::application::initialize_application())
+      if(!::multimedia::application::init_instance())
          return false;
 
       set_local_data_key_modifier();

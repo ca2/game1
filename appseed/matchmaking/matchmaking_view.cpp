@@ -664,9 +664,9 @@ namespace matchmaking
 
          //pgraphics->FillSolidRect(rectClient,0);
 
-         System.visual().imaging().bitmap_blend(pgraphics,null_point(),pdib->get_size(),pdib->get_graphics(),null_point(),uchAlpha);
+         Application.imaging().bitmap_blend(pgraphics,null_point(),pdib->get_size(),pdib->get_graphics(),null_point(),uchAlpha);
 
-         System.visual().imaging().bitmap_blend(pgraphics,null_point(),pdibFast->get_size(),pdibFast->get_graphics(),null_point(),255 - uchAlpha);
+         Application.imaging().bitmap_blend(pgraphics,null_point(),pdibFast->get_size(),pdibFast->get_graphics(),null_point(),255 - uchAlpha);
 
       }
       else
@@ -677,7 +677,7 @@ namespace matchmaking
 
       }
 
-      //System.visual().imaging().bitmap_blend(pgraphics,null_point(),pdibFast->get_size(),pdibFast->get_graphics(),null_point(),255);
+      //Application.imaging().bitmap_blend(pgraphics,null_point(),pdibFast->get_size(),pdibFast->get_graphics(),null_point(),255);
 
 
       //pgraphics->FillSolidRect(100,100,100,100,ARGB(128,0,128,0));

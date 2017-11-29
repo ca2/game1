@@ -56,7 +56,7 @@ namespace pacman
          m_ppacman->play_sound("chomp");
          if(m_ppacman->m_evRestart.wait(millis(0)).signaled())
          {
-            throw restart();
+            throw new restart();
          }
 
       }

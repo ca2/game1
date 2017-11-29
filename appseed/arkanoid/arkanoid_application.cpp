@@ -26,7 +26,7 @@ namespace arkanoid
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::arkanoid::pane_view >();
@@ -34,7 +34,7 @@ namespace arkanoid
       System.factory().creatable_small < ::arkanoid::frame >();
       System.factory().creatable_small < ::arkanoid::view >();
 
-      if(!::hellomultiverse::application::initialize_application())
+      if(!::hellomultiverse::application::init_instance())
          return false;
 
 	   ::user::single_document_template* pDocTemplate;

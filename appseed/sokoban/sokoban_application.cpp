@@ -21,7 +21,7 @@ namespace sokoban
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::sokoban::pane_view >();
@@ -29,7 +29,7 @@ namespace sokoban
       System.factory().creatable_small < ::sokoban::frame >();
       System.factory().creatable_small < ::sokoban::view >();
 
-      if(!::estamira::application::initialize_application())
+      if(!::estamira::application::init_instance())
          return false;
 
       set_local_data_key_modifier();

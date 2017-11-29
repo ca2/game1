@@ -211,7 +211,7 @@ namespace tictactoe
          }
          else
          {
-            System.visual().imaging().bitmap_blend(pgraphicsParam,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
+            Application.imaging().bitmap_blend(pgraphicsParam,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
                MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
          }
       }
@@ -394,13 +394,13 @@ namespace tictactoe
          pgraphics->BitBlt(rectClient, m_dib->get_graphics());
 
       }
-//      System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-  //    System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-    //  System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+//      Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+  //    Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+    //  Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
       /*for(int32_t i = 0; i < iBlur + 1; i++)
       {
       if((i % 2) == 1)
-      System.visual().imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+      Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
       }
       */
 

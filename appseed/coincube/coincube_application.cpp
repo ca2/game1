@@ -20,7 +20,7 @@ namespace coincube
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::coincube::pane_view >();
@@ -29,7 +29,7 @@ namespace coincube
       System.factory().creatable_small < ::coincube::main_frame >();
       System.factory().creatable_small < ::coincube::view >();
 
-      if(!::multimedia::application::initialize_application())
+      if(!::multimedia::application::init_instance())
          return false;
 
       set_local_data_key_modifier();

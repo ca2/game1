@@ -63,7 +63,7 @@ namespace matchmaking
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::matchmaking::document >();
@@ -87,7 +87,7 @@ namespace matchmaking
       System.factory().creatable_small < ::matchmaking::toggle_view >();
       System.factory().creatable_small < ::matchmaking::start >();
 
-      if(!::core::application::initialize_application())
+      if(!::core::application::init_instance())
          return false;
 
 //      if(handler()->m_varTopicQuery.has_property("install"))

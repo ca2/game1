@@ -149,13 +149,13 @@ class _Frame extends Frame
 
 
 
-      Menu subMenu = new Menu(parent.lang.comunic(9));//9-Tamanho da Célula
+      Menu subMenu = new Menu(parent.lang.comunic(9));//9-Tamanho da Cï¿½lula
       menu.add(subMenu);
 
       smallerCell = new MenuItem(parent.lang.comunic(10)); //10-Menor
       subMenu.add(smallerCell);
 
-      standardCell = new MenuItem(parent.lang.comunic(11)); //11-Padrão
+      standardCell = new MenuItem(parent.lang.comunic(11)); //11-Padrï¿½o
       subMenu.add(standardCell);
 
       biggerCell = new MenuItem(parent.lang.comunic(12)); //12-Maior
@@ -167,7 +167,7 @@ class _Frame extends Frame
       subMenu = new Menu(parent.lang.comunic(13));//13-Tipo
       menu.add(subMenu);
 
-      standard = new MenuItem(parent.lang.comunic(14)); //14-Padrão
+      standard = new MenuItem(parent.lang.comunic(14)); //14-Padrï¿½o
       subMenu.add(standard);
 
       smaller = new MenuItem(parent.lang.comunic(15)); //15-Menor
@@ -189,7 +189,7 @@ class _Frame extends Frame
       menu = new Menu(parent.lang.comunic(7)); //7-Editar
       menubar.add(menu);
 
-      config = new MenuItem(parent.lang.comunic(8));//8-Preferências
+      config = new MenuItem(parent.lang.comunic(8));//8-Preferï¿½ncias
       menu.add(config);
 
 
@@ -235,7 +235,7 @@ class _Frame extends Frame
       p.add(score);
 
       constraints.gridwidth = GridBagConstraints.RELATIVE;
-      lb = new Label(parent.lang.comunic(21)); //21-Nível
+      lb = new Label(parent.lang.comunic(21)); //21-Nï¿½vel
       grid.setConstraints(lb,constraints);
       p.add(lb);
 
@@ -546,7 +546,7 @@ class _ConfigForm extends Dialog
       super(parent,false);
       this.parent = parent;
 
-      setTitle(parent.parent.lang.comunic(22)); //22-Configuração do Tetris
+      setTitle(parent.parent.lang.comunic(22)); //22-Configuraï¿½ï¿½o do Tetris
       GridBagLayout grid = new GridBagLayout();
       GridBagConstraints constraints = new GridBagConstraints();
       Label lb;
@@ -563,7 +563,7 @@ class _ConfigForm extends Dialog
       constraints.weightx = 1.0;
       constraints.weighty = 1.0;
 
-      lb = new Label(parent.parent.lang.comunic(23)); //23-Células Horizontais
+      lb = new Label(parent.parent.lang.comunic(23)); //23-Cï¿½lulas Horizontais
       grid.setConstraints(lb,constraints);
       p.add(lb);
 
@@ -573,7 +573,7 @@ class _ConfigForm extends Dialog
       p.add(fieldWidth);
 
       constraints.gridwidth = GridBagConstraints.RELATIVE;
-      lb = new Label(parent.parent.lang.comunic(24)); //24-Células Verticais
+      lb = new Label(parent.parent.lang.comunic(24)); //24-Cï¿½lulas Verticais
       grid.setConstraints(lb,constraints);
       p.add(lb);
 
@@ -583,7 +583,7 @@ class _ConfigForm extends Dialog
       p.add(fieldHeight);
 
       constraints.gridwidth = GridBagConstraints.RELATIVE;
-      lb = new Label(parent.parent.lang.comunic(25)); //25 -Tamanho da Céula
+      lb = new Label(parent.parent.lang.comunic(25)); //25 -Tamanho da Cï¿½ula
       grid.setConstraints(lb,constraints);
       p.add(lb);
 
@@ -635,7 +635,7 @@ class _ConfigForm extends Dialog
          }
          catch(NumberFormatException e)
          {
-            System.out.println("Valor inválido (Invalid Value).");
+            System.out.println("Valor invï¿½lido (Invalid Value).");
          }
       }
       if(evt.target == buttonCancel)

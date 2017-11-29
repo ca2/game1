@@ -20,7 +20,7 @@ namespace tictactoe
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::tictactoe::pane_view >();
@@ -29,7 +29,7 @@ namespace tictactoe
       System.factory().creatable_small < ::tictactoe::main_frame >();
       System.factory().creatable_small < ::tictactoe::view >();
 
-      if(!::core::application::initialize_application())
+      if(!::core::application::init_instance())
          return false;
 
       set_local_data_key_modifier();

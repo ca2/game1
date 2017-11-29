@@ -19,7 +19,7 @@ namespace arch001
       virtual ~application();
 
 
-      virtual bool initialize_application();
+      virtual bool init_instance();
       virtual int32_t  exit_application() override;
 
       virtual void on_request(::create * pcreate);

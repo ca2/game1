@@ -26,7 +26,7 @@ namespace tetris
    }
 
 
-   bool application::initialize_application()
+   bool application::init_instance()
    {
 
       System.factory().creatable_small < ::tetris::pane_view >();
@@ -34,7 +34,7 @@ namespace tetris
       System.factory().creatable_small < ::tetris::frame >();
       System.factory().creatable_small < ::tetris::view >();
 
-      if(!::hellomultiverse::application::initialize_application())
+      if(!::hellomultiverse::application::init_instance())
          return false;
 
 
