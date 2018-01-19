@@ -1,14 +1,15 @@
-#pragma once
+﻿#pragma once
 
 
 namespace pacman
 {
 
-   class restart
+   class restart :
+      virtual public ::exception::exception
    {
    public:
 
-      restart(){}
+      restart() {}
 
    };
 
@@ -33,14 +34,14 @@ namespace pacman
       application();
       virtual ~application();
 
-      
+
       void start();
       ::console::window * create_console(int iIndex);
       void change_console(int iIndex);
 
 
-      virtual bool init_instance();
-      virtual int32_t  exit_application() override;
+      virtual bool init_instance() override;
+      virtual void term_instance() override;
 
       virtual void on_request(::create * pcreate);
 

@@ -1,13 +1,13 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace  pacman
 {
 
-   //int main()
-   int pacman::run()
+
+   void pacman::run()
    {
-      start:
+start:
       try
       {
          srand(time(0));
@@ -18,12 +18,13 @@ namespace  pacman
          m_evRestart.ResetEvent();
          mainloop();
       }
-      catch(const ::pacman::restart & )
+      catch(::pacman::restart *p )
       {
+         esp671 esp(p);
          goto start;
       }
       delete m_p;
-      return 0;
+
    }
 
    void pacman::restart()

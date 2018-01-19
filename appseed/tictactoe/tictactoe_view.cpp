@@ -200,19 +200,19 @@ namespace tictactoe
       pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
       if(m_dibBk.is_set() && m_dibBk->area() > 0)
       {
-        // pgraphics->FillSolidRect(rectClient,ARGB(0,0,0,0));
+         // pgraphics->FillSolidRect(rectClient,ARGB(0,0,0,0));
          if(m_bBkAlpha == 255)
          {
             pgraphicsParam->BitBlt(
-               0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
-               MIN(rectClient.height(),m_dibBk->m_size.cy),
-               m_dibBk->get_graphics());
+            0,0,MIN(rectClient.width(),m_dibBk->m_size.cx),
+            MIN(rectClient.height(),m_dibBk->m_size.cy),
+            m_dibBk->get_graphics());
 
          }
          else
          {
             Application.imaging().bitmap_blend(pgraphicsParam,null_point(),size(MIN(rectClient.width(),m_dibBk->m_size.cx),
-               MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
+                                               MIN(rectClient.height(),m_dibBk->m_size.cy)),m_dibBk->get_graphics(),null_point(),m_bBkAlpha);
          }
       }
       else
@@ -347,7 +347,7 @@ namespace tictactoe
 
             //////         m_dib.blur();
 
-                  //   m_dib.blur();
+            //   m_dib.blur();
 
             for (int32_t i = 0; i < iBlur; i++)
             {
@@ -395,8 +395,8 @@ namespace tictactoe
 
       }
 //      Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-  //    Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
-    //  Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+      //    Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
+      //  Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());
       /*for(int32_t i = 0; i < iBlur + 1; i++)
       {
       if((i % 2) == 1)
@@ -766,23 +766,23 @@ namespace tictactoe
       ::draw2d::path_sp path(allocer());
 
       path->begin_figure(false,::draw2d::fill_mode_winding);
-      path->add_move(rect.left + width(rect) / 3,rect.top);
-      path->add_line(rect.left + width(rect) / 3,rect.bottom);
+      path->add_move(rect.left + ::width(rect) / 3,rect.top);
+      path->add_line(rect.left + ::width(rect) / 3,rect.bottom);
       path->end_figure(false);
 
       path->begin_figure(false,::draw2d::fill_mode_winding);
-      path->add_move(rect.left + width(rect) * 2 / 3,rect.top);
-      path->add_line(rect.left + width(rect) * 2 / 3,rect.bottom);
+      path->add_move(rect.left + ::width(rect) * 2 / 3,rect.top);
+      path->add_line(rect.left + ::width(rect) * 2 / 3,rect.bottom);
       path->end_figure(false);
 
       path->begin_figure(false,::draw2d::fill_mode_winding);
-      path->add_move(rect.left,rect.top + height(rect) / 3);
-      path->add_line(rect.right,rect.top + height(rect) / 3);
+      path->add_move(rect.left,rect.top + ::height(rect) / 3);
+      path->add_line(rect.right,rect.top + ::height(rect) / 3);
       path->end_figure(false);
 
       path->begin_figure(false,::draw2d::fill_mode_winding);
-      path->add_move(rect.left,rect.top + height(rect) * 2 / 3);
-      path->add_line(rect.right,rect.top + height(rect) * 2 / 3);
+      path->add_move(rect.left,rect.top + ::height(rect) * 2 / 3);
+      path->add_line(rect.right,rect.top + ::height(rect) * 2 / 3);
       path->end_figure(false);
 
       pgraphics->draw_path(path);

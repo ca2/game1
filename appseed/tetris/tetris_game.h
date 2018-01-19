@@ -1,4 +1,4 @@
-#pragma once 
+﻿#pragma once
 
 
 namespace tetris
@@ -21,7 +21,7 @@ namespace tetris
 
          Thread(::aura::application * papp);
 
-         virtual int32_t run();
+         virtual void run() override;
 
       };
 
@@ -55,13 +55,13 @@ namespace tetris
 
 
       game(::aura::application * papp, int widthInCells_,
-         int heightInCells_,
-         int cellSizeInPixels_,
-         ::tetris::view * pview);
+           int heightInCells_,
+           int cellSizeInPixels_,
+           ::tetris::view * pview);
 
       void init(int widthInCells_,
-         int heightInCells_,
-         int cellSizeInPixels_);
+                int heightInCells_,
+                int cellSizeInPixels_);
 
       void initPaint();
 
@@ -73,7 +73,7 @@ namespace tetris
 
       void run();
 
-
+      virtual void on_key_down(::user::e_key ekey) override;
 
       virtual bool start(::user::interaction * pui);
 
@@ -130,7 +130,7 @@ namespace tetris
 
 
       virtual void _001OnDraw(::draw2d::graphics * pgraphics);
-      
+
 
 
 

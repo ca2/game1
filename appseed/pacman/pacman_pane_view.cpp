@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace pacman
@@ -7,7 +7,7 @@ namespace pacman
    pane_view::pane_view(::aura::application * papp) :
       ::object(papp),
       ::user::tab(papp),
-      
+
       ::user::tab_view(papp),
       ::userex::pane_tab_view(papp),
       place_holder_container(papp)
@@ -24,12 +24,12 @@ namespace pacman
 #ifdef DEBUG
    void pane_view::assert_valid() const
    {
-	   ::user::impact::assert_valid();
+      ::user::impact::assert_valid();
    }
 
    void pane_view::dump(dump_context & dumpcontext) const
    {
-	   ::user::impact::dump(dumpcontext);
+      ::user::impact::dump(dumpcontext);
    }
 #endif //DEBUG
 
@@ -38,7 +38,7 @@ namespace pacman
    {
       ::userex::pane_tab_view::install_message_routing(pinterface);
 
-	   IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
+      IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
 
    }
 
@@ -48,7 +48,6 @@ namespace pacman
       if(pobj->previous())
          return;
 
-      set_tab("Hello", ::pacman::PaneViewHelloMultiverse);
       set_tab("Pac-Man!!",::pacman::PaneViewPacMan);
       set_tab("Open", "file_manager");
       set_tab("Help",::pacman::PaneViewHelp);
@@ -64,17 +63,10 @@ namespace pacman
    {
       switch(pcreatordata->m_id)
       {
-      case PaneViewHelloMultiverse:
-         {
-         Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
-
-
-      }
-         break;
       case PaneViewPacMan:
       {
+
          Application.m_ptemplatePacManView->open_document_file(NULL,true,pcreatordata->m_pholder);
-         pcreatordata->m_eflag.unsignalize(::user::view_creator_data::flag_hide_all_others_on_show);
 
       }
       break;

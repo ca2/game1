@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace tictactoe
@@ -8,7 +8,8 @@ namespace tictactoe
    application::application()
    {
 
-      m_strAppName            = "tictactoe";
+      m_strAppId              = "game/tictactoe";
+      m_strAppName            = "game/tictactoe";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -34,21 +35,21 @@ namespace tictactoe
 
       set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::tictactoe::document > (),
-		   System.type_info < ::tictactoe::main_frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tictactoe::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::tictactoe::document > (),
+      System.type_info < ::tictactoe::main_frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::tictactoe::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::tictactoe::document > (),
-		   System.type_info < ::tictactoe::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tictactoe::view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::tictactoe::document > (),
+      System.type_info < ::tictactoe::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::tictactoe::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
 
@@ -57,10 +58,10 @@ namespace tictactoe
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -89,7 +90,7 @@ extern "C"
 ::aura::library * game_tictactoe_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::tictactoe::application >(papp, "game");
+   return new ::aura::single_application_library < ::tictactoe::application >(papp, "game/tictactoe");
 
 }
 

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 
@@ -13,8 +13,6 @@ namespace arkanoid
    {
 
       m_pview = NULL;
-
-      m_dataid = "::core::arkanoid::frame";
 
       WfiEnableFullScreen();
 
@@ -32,7 +30,7 @@ namespace arkanoid
    void frame::assert_valid() const
    {
 
-	   simple_frame_window::assert_valid();
+      simple_frame_window::assert_valid();
 
    }
 
@@ -40,7 +38,7 @@ namespace arkanoid
    void frame::dump(dump_context & dumpcontext) const
    {
 
-	   simple_frame_window::dump(dumpcontext);
+      simple_frame_window::dump(dumpcontext);
 
    }
 
@@ -55,10 +53,10 @@ namespace arkanoid
       //pschema->m_typeinfoControlBoxButton = System.type_info < MetaButton > ();
       return pschema;
 
-/*      frame::FrameSchemaHardCoded005 * pschema = new frame::FrameSchemaHardCoded005(get_app());
-      pschema->m_typeinfoControlBoxButton = System.type_info < MetaButton > ();
-      pschema->SetStyle(frame::FrameSchemaHardCoded005::StyleTranslucidWarmGray);
-      return pschema;*/
+      /*      frame::FrameSchemaHardCoded005 * pschema = new frame::FrameSchemaHardCoded005(get_app());
+            pschema->m_typeinfoControlBoxButton = System.type_info < MetaButton > ();
+            pschema->SetStyle(frame::FrameSchemaHardCoded005::StyleTranslucidWarmGray);
+            return pschema;*/
    }
 
 

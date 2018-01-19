@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include <math.h>
@@ -45,11 +45,11 @@ namespace pacman
 
       pacman(::console::window * p);
 
-      
+
 
       void restart();
       // Main
-      int run();
+      void run() override;
       void mainloop();
 
       // Objects Manipulation
@@ -75,8 +75,8 @@ namespace pacman
 
       char get_char();
 
-      void assert_valid() const{}
-      void dump(dump_context &) const{}
+      void assert_valid() const {}
+      void dump(dump_context &) const {}
       void play_sound(const char *);
    };
 

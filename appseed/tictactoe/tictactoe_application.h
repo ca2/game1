@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 namespace tictactoe
@@ -9,8 +9,8 @@ namespace tictactoe
       public ::estamira::application
    {
    public:
-      
-      
+
+
       sp(::user::single_document_template)  m_ptemplateHelloMultiverseMain;
       sp(::user::single_document_template)  m_ptemplateHelloMultiverseView;
 
@@ -19,8 +19,8 @@ namespace tictactoe
       virtual ~application();
 
 
-      virtual bool init_instance();
-      virtual int32_t  exit_application() override;
+      virtual bool init_instance() override;
+      virtual void term_instance() override;
 
       virtual void on_request(::create * pcreate);
 

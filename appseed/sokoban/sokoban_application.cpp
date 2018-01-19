@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace sokoban
@@ -8,7 +8,8 @@ namespace sokoban
    application::application()
    {
 
-      m_strAppName            = "sokoban";
+      m_strAppId              = "game/sokoban";
+      m_strAppName            = "game/sokoban";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -34,21 +35,21 @@ namespace sokoban
 
       set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::sokoban::document > (),
-		   System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::sokoban::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::sokoban::document > (),
+      System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::sokoban::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateSokobanMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::sokoban::document > (),
-		   System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::sokoban::view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::sokoban::document > (),
+      System.type_info < ::sokoban::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::sokoban::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateSokobanView = pDocTemplate;
 
@@ -57,10 +58,10 @@ namespace sokoban
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -89,7 +90,7 @@ extern "C"
 ::aura::library * game_sokoban_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::sokoban::application >(papp, "game");
+   return new ::aura::single_application_library < ::sokoban::application >(papp, "game/sokoban");
 
 }
 

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 namespace tictactoe
@@ -48,10 +48,10 @@ namespace tictactoe
 
 
       view(::aura::application * papp);
-	   virtual ~view();
+      virtual ~view();
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
 
 
       void get_board_rect(LPRECT lprect);
@@ -90,6 +90,8 @@ namespace tictactoe
       virtual void draw_board(::draw2d::graphics * pgraphics,const RECT & lpcrect, int iPenWidth);
 
       virtual void new_game();
+
+
 
    };
 

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace arkanoid
@@ -8,16 +8,12 @@ namespace arkanoid
    application::application()
    {
 
-      m_strAppName            = "arkanoid";
+      m_strAppId              = "game/arkanoid";
+      m_strAppName            = "game/arkanoid";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
 
-      m_etype                 = type_normal;
-
-      m_strHelloMultiverse             = "Hello Tetris!!";
-
-      //m_bMultiverseChat = false;
    }
 
 
@@ -34,36 +30,37 @@ namespace arkanoid
       System.factory().creatable_small < ::arkanoid::frame >();
       System.factory().creatable_small < ::arkanoid::view >();
 
-      if(!::hellomultiverse::application::init_instance())
+      if(!::estamira::application::init_instance())
          return false;
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::arkanoid::document > (),
-		   System.type_info < ::arkanoid::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::arkanoid::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::arkanoid::document > (),
+      System.type_info < ::arkanoid::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::arkanoid::pane_view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateTetrisMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::arkanoid::document > (),
-		   System.type_info < ::arkanoid::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::arkanoid::view > ());
+      m_ptemplateArkanoidMain = pDocTemplate;
+
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::arkanoid::document > (),
+      System.type_info < ::arkanoid::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::arkanoid::view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateTetrisView = pDocTemplate;
+      m_ptemplateArkanoidView = pDocTemplate;
 
       return true;
 
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -71,12 +68,12 @@ namespace arkanoid
    void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateTetrisMain->request_create(pcreate);
+      m_ptemplateArkanoidMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
 
-         m_ptemplateTetrisView->request_create(pcreate);
+         m_ptemplateArkanoidView->request_create(pcreate);
 
       }
 
@@ -92,7 +89,7 @@ extern "C"
 ::aura::library * game_arkanoid_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::arkanoid::application >(papp, "game");
+   return new ::aura::single_application_library < ::arkanoid::application >(papp, "game/arkanoid");
 
 }
 

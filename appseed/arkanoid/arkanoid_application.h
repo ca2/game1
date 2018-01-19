@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 namespace arkanoid
@@ -9,18 +9,18 @@ namespace arkanoid
       virtual public ::estamira::application
    {
    public:
-      
-      
-      sp(::user::single_document_template)  m_ptemplateTetrisMain;
-      sp(::user::single_document_template)  m_ptemplateTetrisView;
+
+
+      sp(::user::single_document_template)  m_ptemplateArkanoidMain;
+      sp(::user::single_document_template)  m_ptemplateArkanoidView;
 
 
       application();
       virtual ~application();
 
 
-      virtual bool init_instance();
-      virtual int32_t  exit_application() override;
+      virtual bool init_instance() override;
+      virtual void term_instance() override;
 
       virtual void on_request(::create * pcreate);
 

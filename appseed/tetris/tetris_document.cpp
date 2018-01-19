@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace tetris
@@ -8,6 +8,7 @@ namespace tetris
    document::document(::aura::application * papp) :
       ::object(papp),
       ::data::data_container_base(papp),
+      ::user::controller(papp),
       ::user::document(papp)
    {
 
@@ -23,14 +24,14 @@ namespace tetris
    void document::assert_valid() const
    {
 
-	   ::user::document::assert_valid();
+      ::user::document::assert_valid();
 
    }
 
    void document::dump(dump_context & dumpcontext) const
    {
 
-	   ::user::document::dump(dumpcontext);
+      ::user::document::dump(dumpcontext);
 
    }
 

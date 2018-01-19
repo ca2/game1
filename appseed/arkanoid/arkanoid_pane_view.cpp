@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace arkanoid
@@ -7,7 +7,7 @@ namespace arkanoid
    pane_view::pane_view(::aura::application * papp) :
       ::object(papp),
       ::user::tab(papp),
-      
+
       ::user::tab_view(papp),
       ::userex::pane_tab_view(papp),
       place_holder_container(papp)
@@ -24,12 +24,12 @@ namespace arkanoid
 #ifdef DEBUG
    void pane_view::assert_valid() const
    {
-	   ::user::impact::assert_valid();
+      ::user::impact::assert_valid();
    }
 
    void pane_view::dump(dump_context & dumpcontext) const
    {
-	   ::user::impact::dump(dumpcontext);
+      ::user::impact::dump(dumpcontext);
    }
 #endif //DEBUG
 
@@ -38,7 +38,7 @@ namespace arkanoid
    {
       ::userex::pane_tab_view::install_message_routing(pinterface);
 
-	   IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
+      IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
 
    }
 
@@ -48,12 +48,11 @@ namespace arkanoid
       if(pobj->previous())
          return;
 
-      set_tab("Hello", ::arkanoid::PaneViewHelloMultiverse);
-      set_tab("Tetris!!",::arkanoid::PaneViewTetris);
+      set_tab("Arkanoid!!",::arkanoid::PaneViewArkanoid);
       set_tab("Open", "file_manager");
       set_tab("Help",::arkanoid::PaneViewHelp);
 
-      set_cur_tab_by_id(::arkanoid::PaneViewTetris);
+      set_cur_tab_by_id(::arkanoid::PaneViewArkanoid);
 
    }
 
@@ -64,17 +63,10 @@ namespace arkanoid
    {
       switch(pcreatordata->m_id)
       {
-      case PaneViewHelloMultiverse:
-         {
-         Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
-
-
-      }
-         break;
-      case PaneViewTetris:
+      case PaneViewArkanoid:
       {
-         Application.m_ptemplateTetrisView->open_document_file(NULL,true,pcreatordata->m_pholder);
-         pcreatordata->m_eflag.unsignalize(::user::view_creator_data::flag_hide_all_others_on_show);
+         Application.m_ptemplateArkanoidView->open_document_file(NULL,true,pcreatordata->m_pholder);
+
 
       }
       break;

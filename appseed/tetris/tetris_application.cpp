@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace tetris
@@ -8,16 +8,12 @@ namespace tetris
    application::application()
    {
 
-      m_strAppName            = "tetris";
+      m_strAppId              = "game/tetris";
+      m_strAppName            = "game/tetris";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
 
-      m_etype                 = type_normal;
-
-      m_strHelloMultiverse             = "Hello Tetris!!";
-
-      //m_bMultiverseChat = false;
    }
 
 
@@ -34,27 +30,30 @@ namespace tetris
       System.factory().creatable_small < ::tetris::frame >();
       System.factory().creatable_small < ::tetris::view >();
 
-      if(!::hellomultiverse::application::init_instance())
+      if (!::estamira::application::init_instance())
+      {
+
          return false;
 
+      }
 
       set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::tetris::document > (),
-		   System.type_info < ::tetris::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tetris::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::tetris::document > (),
+      System.type_info < ::tetris::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::tetris::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateTetrisMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::tetris::document > (),
-		   System.type_info < ::tetris::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::tetris::view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::tetris::document > (),
+      System.type_info < ::tetris::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::tetris::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateTetrisView = pDocTemplate;
 
@@ -63,10 +62,10 @@ namespace tetris
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -95,7 +94,7 @@ extern "C"
 ::aura::library * game_tetris_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::tetris::application >(papp, "game");
+   return new ::aura::single_application_library < ::tetris::application >(papp, "game/tetris");
 
 }
 

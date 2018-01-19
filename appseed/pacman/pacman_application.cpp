@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 //#include "ft2build.h"
 //#include FT_FREETYPE_H
@@ -13,18 +13,11 @@ namespace pacman
 //      m_ptoggle               = NULL;
       m_ppacman               = NULL;
 
-      m_strAppName            = "pacman";
+      m_strAppId              = "game/pacman";
+      m_strAppName            = "game/pacman";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
       m_iConsole = 0;
-
-      m_etype                 = type_normal;
-
-      m_strHelloMultiverse             = "Hello PacMan!!";
-
-      //m_bMultiverseChat = false;
-
-//      m_ptoggle = NULL;
 
    }
 
@@ -56,26 +49,26 @@ namespace pacman
       if(!::multimedia::application::init_instance())
          return false;
 
-      if(!::hellomultiverse::application::init_instance())
+      if(!::estamira::application::init_instance())
          return false;
 
-      m_dataid +="&data_source=local&";
+      set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::pacman::document > (),
-		   System.type_info < ::pacman::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::pacman::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::pacman::document > (),
+      System.type_info < ::pacman::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::pacman::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplatePacManMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::pacman::document > (),
-		   System.type_info < ::pacman::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::user::split_view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::pacman::document > (),
+      System.type_info < ::pacman::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::user::split_view > ());
       add_document_template(pDocTemplate);
       m_ptemplatePacManView = pDocTemplate;
 
@@ -84,10 +77,10 @@ namespace pacman
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::estamira::application::term_instance();
 
    }
 
@@ -128,7 +121,7 @@ namespace pacman
          psplit->initialize_split_layout();
 
          //m_ptoggle = psplit->create_view < ::hellomultiverse::toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
-         psplit->create_view < ::hellomultiverse::toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
+         psplit->create_view < ::userex::top_toggle_view >(NULL,::null_rect(),psplit->get_pane_holder(0),"toggle_view");
 
          m_pview = psplit->create_view < view >(NULL,::null_rect(),psplit->get_pane_holder(1),"pacman_view3");
 
@@ -260,7 +253,7 @@ extern "C"
 ::aura::library * game_pacman_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::pacman::application >(papp, "game");
+   return new ::aura::single_application_library < ::pacman::application >(papp, "game/pacman");
 
 }
 

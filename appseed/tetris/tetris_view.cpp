@@ -73,7 +73,9 @@ namespace tetris
    void view::_001OnLButtonDown(::message::message * pobj)
    {
 
-      //pobj->m_bRet = true;
+      SetFocus();
+
+      pobj->m_bRet = true;
 
    }
 
@@ -91,6 +93,8 @@ namespace tetris
       int j = -1;
 
 
+      pobj->m_bRet = true;
+
    }
 
 
@@ -106,7 +110,7 @@ namespace tetris
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      
+
 
       ::rect rectClient;
 
@@ -114,7 +118,12 @@ namespace tetris
 
       //pgraphics->FillSolidRect(rectClient, ARGB(255,84,84,84));
 
-      
+      if (rectClient.is_empty())
+      {
+
+         return;
+
+      }
 
 
       if( m_ppreview == NULL)
@@ -216,7 +225,7 @@ namespace tetris
 
          //path->end_figure(true);
 
-         
+
 
          m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_blend);
          //m_dib->get_graphics()->FillSolidRect(rect1,ARGB(255,23,23,23));
@@ -233,7 +242,7 @@ namespace tetris
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      
+
 
       pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
 
@@ -268,16 +277,16 @@ namespace tetris
    {
 
       m_ppreview = new _TetrisPreview(this);
-      
+
       int iCellSize = 24;
-      
+
       if(Application.handler()->m_varTopicQuery.has_property("cell_size"))
       {
-         
+
          iCellSize = Application.handler()->m_varTopicQuery["cell_size"];
-         
+
          iCellSize = MIN(1024, MAX(2, iCellSize));
-         
+
       }
 
       Application.m_pgame = new game(get_app(), 10,20,iCellSize,this);
@@ -307,34 +316,34 @@ namespace tetris
    {
 
       SCAST_PTR(::message::key,pkey,pobj);
-      
-      auto ekey =  pkey->m_ekey;
-      
-      ::fork(get_app(), [=]()
-      {
 
-      if(ekey == ::user::key_down)
-      {
-         Game.drop();
-      }
-      else if(ekey == ::user::key_left)
-      {
-         Game.moveLeft(0);
-      }
-      else if(ekey == ::user::key_right)
-      {
-         Game.moveRight(0);
-      }
-      else if(ekey == ::user::key_z)
-      {
-         Game.rotate(false);
-      }
-      else if(ekey == ::user::key_x)
-      {
-         Game.rotate(true);
-      }
-         
-      });
+      auto ekey =  pkey->m_ekey;
+
+      //::fork(get_app(), [=]()
+      //{
+
+      //   if(ekey == ::user::key_down)
+      //   {
+      //      Game.drop();
+      //   }
+      //   else if(ekey == ::user::key_left)
+      //   {
+      //      Game.moveLeft(0);
+      //   }
+      //   else if(ekey == ::user::key_right)
+      //   {
+      //      Game.moveRight(0);
+      //   }
+      //   else if(ekey == ::user::key_z)
+      //   {
+      //      Game.rotate(false);
+      //   }
+      //   else if(ekey == ::user::key_x)
+      //   {
+      //      Game.rotate(true);
+      //   }
+
+      //});
 
       pkey->m_bRet = true;
 
@@ -343,7 +352,7 @@ namespace tetris
    bool view::keyboard_focus_is_focusable()
    {
 
-      return is_window_enabled() && IsWindowVisible();
+      return IsWindowVisible();
 
    }
 
