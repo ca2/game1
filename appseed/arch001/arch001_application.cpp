@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace arch001
@@ -8,7 +8,8 @@ namespace arch001
    application::application()
    {
 
-      m_strAppName            = "arch001";
+      m_strAppId              = "game/arch001";
+      m_strAppName            = "game/arch001";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -34,21 +35,21 @@ namespace arch001
 
       set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::arch001::document > (),
-		   System.type_info < ::arch001::main_frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::arch001::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::arch001::document > (),
+      System.type_info < ::arch001::main_frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::arch001::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::arch001::document > (),
-		   System.type_info < ::arch001::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::arch001::view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::arch001::document > (),
+      System.type_info < ::arch001::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::arch001::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
 
@@ -57,10 +58,10 @@ namespace arch001
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -89,7 +90,7 @@ extern "C"
 ::aura::library * game_arch001_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::arch001::application >(papp, "game");
+   return new ::aura::single_application_library < ::arch001::application >(papp, "game/arch001");
 
 }
 

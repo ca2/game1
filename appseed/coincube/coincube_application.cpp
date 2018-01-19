@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace coincube
@@ -8,7 +8,8 @@ namespace coincube
    application::application()
    {
 
-      m_strAppName            = "coincube";
+      m_strAppId              = "game/coincube";
+      m_strAppName            = "game/coincube";
       m_strBaseSupportId      = "ca2_flag";
       m_bLicense              = false;
 
@@ -34,21 +35,21 @@ namespace coincube
 
       set_local_data_key_modifier();
 
-	   ::user::single_document_template* pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-		   System.type_info < ::coincube::document > (),
-		   System.type_info < ::coincube::main_frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::coincube::pane_view > ());
+      ::user::single_document_template* pDocTemplate;
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::coincube::document > (),
+      System.type_info < ::coincube::main_frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::coincube::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
-	   pDocTemplate = new ::user::single_document_template(
-         this,
-		   "frame",
-         System.type_info < ::coincube::document > (),
-		   System.type_info < ::coincube::frame > (),       // top level SDI frame::user::interaction_impl
-		   System.type_info < ::coincube::view > ());
+      pDocTemplate = new ::user::single_document_template(
+      this,
+      "frame",
+      System.type_info < ::coincube::document > (),
+      System.type_info < ::coincube::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::coincube::view > ());
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
 
@@ -57,10 +58,10 @@ namespace coincube
    }
 
 
-   int32_t application::exit_application()
+   void application::term_instance()
    {
 
-      return ::core::application::exit_application();
+      ::core::application::term_instance();
 
    }
 
@@ -89,7 +90,7 @@ extern "C"
 ::aura::library * game_coincube_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::coincube::application >(papp, "game");
+   return new ::aura::single_application_library < ::coincube::application >(papp, "game/coincube");
 
 }
 
