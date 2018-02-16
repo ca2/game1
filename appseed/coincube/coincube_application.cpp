@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace coincube
@@ -61,7 +61,7 @@ namespace coincube
    void application::term_instance()
    {
 
-      ::core::application::term_instance();
+      ::estamira::application::term_instance();
 
    }
 
