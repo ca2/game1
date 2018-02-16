@@ -75,12 +75,6 @@
     <ClInclude Include="arkanoid_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="java_arkanoid_applet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="java_arkanoid_language.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="game_arkanoid.def">

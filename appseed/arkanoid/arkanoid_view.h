@@ -5,25 +5,24 @@
 namespace arkanoid
 {
 
-   
+
    class document;
 
 
-   class CLASS_DECL_APP_CORE_ARKANOID view :
+   class CLASS_DECL_GAME_ARKANOID view :
       public ::user::impact
    {
    public:
 
 
-//      _TetrisPreview *        m_ppreview;
-      _Arkanoid *               m_parkanoid;
+      arkanoid *              m_parkanoid;
 
       ::visual::fastblur      m_dib;
       bool                    m_bDibLayout;
       int                     m_xDib;
-      
-      
-      
+
+
+
       ::draw2d::font_sp       m_font;
 
 
@@ -38,11 +37,11 @@ namespace arkanoid
 
 
       view(::aura::application * papp);
-	   virtual ~view();
+      virtual ~view();
 
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
 
 
 
@@ -54,11 +53,11 @@ namespace arkanoid
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 
       ::user::document * get_document();
-      
+
       void render();
 
       void start();
-      
+
 
       virtual void on_layout();
 
@@ -74,7 +73,7 @@ namespace arkanoid
 
    };
 
-   
+
 } // namespace arkanoid
 
 

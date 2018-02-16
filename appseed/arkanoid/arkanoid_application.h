@@ -1,11 +1,11 @@
-﻿#pragma once
+#pragma once
 
 
 namespace arkanoid
 {
 
 
-   class CLASS_DECL_APP_CORE_ARKANOID application :
+   class CLASS_DECL_GAME_ARKANOID application :
       virtual public ::estamira::application
    {
    public:

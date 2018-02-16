@@ -24,696 +24,359 @@
 namespace arkanoid
 {
 
+   arkanoid::arkanoid(::aura::application * papp) :
+      ::object(papp),
+      m_ball(papp),
+      m_dibBrick(allocer())
+   {
 
-//   _Tetris::Thread::Thread(::aura::application * papp):
-//      ::object(papp),
-//      thread(papp)
-//   {
-//   }
-//
-//
-//   int32_t _Tetris::Thread::run()
-//   {
-//
-//      m_parkanoid->run();
-//
-//      return 0;
-//
-//
-//   }
-//
-//
-//
-//   _Tetris::_Tetris(int widthInCells_,
-//         int heightInCells_,
-//         int cellSizeInPixels_,
-//         ::arkanoid::view * pview) :
-//         ::object(pview->get_app()),
-//         m_pparent(pview),
-//         m_dib(allocer())
-//      {
-//         //cells = null;
-//         //offCells = null;
-//
-//         //colors = new Color[9];
-//
-//         //colors[0] = Color.black;
-//         //colors[1] = Color.yellow;
-//         //colors[2] = Color.cyan;
-//         //colors[3] = Color.blue;
-//         //colors[4] = Color.green;
-//         //colors[5] = Color.lightGray;
-//         //colors[6] = Color.magenta;
-//         //colors[7] = Color.orange;
-//         //colors[8] = Color.white;
-//
-//         //setBackground(colors[0]);
-//
-//         init(widthInCells_,heightInCells_,cellSizeInPixels_);
-//
-//         atGame = true;
-//         canMove = true;
-//         atPause = false;
-//         isDropping = false;
-//         isMoving = false;
-//
-//      }
-//
-//   void _Tetris::init(int widthInCells_,
-//      int heightInCells_,
-//      int cellSizeInPixels_)
-//   {
-//      atGame = false;
-//      canMove = false;
-//
-//      widthInCells = widthInCells_;
-//      heightInCells = heightInCells_;
-//      cellSizeInPixels = cellSizeInPixels_;
-//
-//      widthInPixels = widthInCells * cellSizeInPixels + 1;
-//      heightInPixels = heightInCells * cellSizeInPixels + 1;
-//      score = 0;
-//      level = 0;
-//      thisLevelFlashes = 0;
-//      atGame = false;
-//      delay = 500;
-//
-//      cells.set_size(heightInCells);
-//      offCells.set_size(heightInCells);
-//
-//      for(index i = 0; i < heightInCells; i++)
-//      {
-//         cells[i].set_size(widthInCells);
-//         offCells[i].set_size(widthInCells);
-//      }
-//
-//
-//
-//      }
-//
-//   void _Tetris::initPaint()
-//      {
-//
-//         if(m_dib->area() <= 0)
-//         {
-//            int i;
-//            int j;
-//
-//            m_dib->create(widthInPixels,heightInPixels);
-//
-//            if(m_dib->area() <= 0)
-//            {
-//               TRACE("imagem nula\n");
-//            }
-//            else
-//            {
-//               TRACE("recriando imagem\n");
-//            }
-//
-//
-//            m_dib->get_graphics()->FillSolidRect(0,0,widthInPixels,heightInPixels,colors[0]);
-//
-//            ::draw2d::pen_sp pen(allocer());
-//
-//            pen->create_solid(1.0,ARGB(255,128,128,128));
-//
-//            m_dib->get_graphics()->SelectObject(pen);
-//
-//            for(i = 0; i <= widthInCells; i++)
-//            {
-//               m_dib->get_graphics()->DrawLine(i * cellSizeInPixels,0,i * cellSizeInPixels,heightInPixels - 1);
-//            }
-//
-//            for(i = 0; i <= heightInCells; i++)
-//            {
-//               m_dib->get_graphics()->DrawLine(0,i * cellSizeInPixels,widthInPixels - 1,i * cellSizeInPixels);
-//            }
-//            for(i = 0; i < heightInCells; i++)
-//               for(j = 0; j < widthInCells; j++)
-//               {
-//                  offCells[i][j] = cells[i][j];
-//                  m_dib->get_graphics()->FillSolidRect((j * cellSizeInPixels) + 2,(i * cellSizeInPixels) + 2,
-//                     cellSizeInPixels - 3,cellSizeInPixels - 3,colors[cells[i][j]]);
-//               }
-//            atGame = true;
-//            canMove = true;
-//         }
-//
-//      }
-//
-//
-//
-//   void _Tetris::Score(int type,int arg)
-//      {
-//
-//
-//         double actual;
-//
-//         switch(type)
-//         {
-//         case ROWTYPE:
-//            score += SCOREPERROW / TOTALFLASHES;
-//            actual = SCOREPERROW / TOTALFLASHES;
-//            while(arg > 0)
-//            {
-//               actual = actual * ADDPERROW;
-//               arg--;
-//            }
-//            score += actual;
-//            thisLevelFlashes++;
-//            break;
-//         case DROPUNITTYPE:
-//            score += DROPADDUNIT;
-//            break;
-//         }
-//
-//
-//         arg = level;
-//         actual = ROWSPERLEVEL * TOTALFLASHES;
-//         while(arg > 0)
-//         {
-//            actual += actual * ADDROWSPERLEVEL;
-//            arg--;
-//         }
-//
-//         if(thisLevelFlashes > actual)
-//         {
-//            thisLevelFlashes = 0;
-//            level++;
-//            delay *= DELAYPERLEVEL;
-//         }
-//
-//
-//         m_pparent->m_strScore =  ::str::from((long)score);
-//         m_pparent->m_strLevel = ::str::from(level);
-//
-//
-//      }
-//
-//   ::size _Tetris::preferredSize()
-//      {
-//         return ::size(widthInPixels,heightInPixels);
-//      }
-//
-//
-//   void _Tetris::run()
-//   {
-//      int i;
-//      aux++;
-//      while(atGame && ::get_thread_run())
-//      {
-//            Sleep(delay + 1);
-//
-//         if(!atPause && atGame && !isMoving && !isDropping)
-//         {
-//            moveDown();
-//         }
-//
-//      }
-//
-//   }
-//
-//
-//      void _Tetris::start()
-//      {
-//         int coordX,coordY;
-//
-//         score = 0;
-//         level = 0;
-//         thisLevelFlashes = 0;
-//         atGame = false;
-//         delay = 500;
-//
-//         if(m_pthread != NULL)
-//         {
-//            Sleep(delay);
-//         }
-//
-//         //try { Thread.sleep(delay); }
-//         //catch(InterruptedException e){}
-//
-//         if(atPause) atPause = false;
-//
-//
-//         if(m_pthread != NULL)
-//         {
-//            // thread.stop();
-//            m_pthread = NULL;
-//         }
-//
-//         //if(image != null)
-//         //{
-//           // image = null;
-//         //}
-//
-//         //if(imageGraph != null)
-//         //{
-//           // imageGraph.dispose();
-//            //imageGraph = null;
-//         //}
-//
-//
-//         for(coordX = 0; coordX < widthInCells; coordX++)
-//            for(coordY = 0; coordY < heightInCells; coordY++)
-//               drawCell(coordX,coordY,0);
-//         isMoving = false;
-//         startBlock();
-//
-//         m_pthread = new Thread(get_app());
-//         m_pthread->m_parkanoid = this;
-//         atGame = true;
-//         m_pthread->begin();
-//      }
-//
-//
-//      void _Tetris::startBlock()
-//      {
-//         curX = widthInCells / 2;
-//         curY = -2;
-//         m_pparent->m_ppreview->pickTypeAndRotation(&curType, &curRotation);
-////         parent.preview.redraw();
-//
-////         System.gc();
-//
-//         if(!canMoveDown())
-//         {
-//            atGame = false;
-//         }
-//         else
-//         {
-//            drawBlock(DRAW);
-//            canMove = true;
-//            refresh = true;
-//         }
-//      }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//      void _Tetris::moveDown()
-//      {
-//         if(isMoving) return;
-//         isMoving = true;
-//         drawBlock(UNDRAW);
-//         if(canMoveDown())
-//         {
-//            curY++;
-//            drawBlock(DRAW);
-//            paint();
-//         }
-//         else
-//         {
-//            canMove = false;
-//            drawBlock(DRAW);
-//            paint();
-//            killRows();
-//            if(delay < 0) delay = 1;
-//            startBlock();
-//         }
-//         isMoving = false;
-//      }
-//
-//      void _Tetris::moveLeft()
-//      {
-//         if(isMoving) return;
-//         isMoving = true;
-//         if(atPause) atPause = false;
-//
-//         //thread.resume();
-//         {
-//            drawBlock(UNDRAW);
-//            if(canMoveLeft())
-//            {
-//               curX--;
-//               drawBlock(DRAW);
-//
-//            }
-//            else
-//            {
-//               drawBlock(DRAW);
-//            }
-//         }
-//         paint();
-//         isMoving = false;
-//      }
-//
-//
-//
-//      void _Tetris::moveRight()
-//      {
-//         if(isMoving) return;
-//         isMoving = true;
-//         if(atPause) atPause = false;
-//
-//         //         thread.resume();
-//         {
-//            drawBlock(UNDRAW);
-//            if(canMoveRight())
-//            {
-//               curX++;
-//               drawBlock(DRAW);
-//            }
-//            else
-//            {
-//               drawBlock(DRAW);
-//            }
-//         }
-//         paint();
-//         isMoving = false;
-//      }
-//
-//
-//      void _Tetris::rotate(bool ClockWising)
-//      {
-//         if(isMoving) return;
-//         isMoving = true;
-//         if(atPause) atPause = false;
-//
-////         thread.resume();
-//         {
-//            drawBlock(UNDRAW);
-//            if(canRotate(ClockWising))
-//            {
-//               if(ClockWising)
-//               {
-//                  curRotation++;
-//                  if(curRotation > 3) curRotation = 0;
-//               }
-//               else
-//               {
-//                  curRotation--;
-//                  if(curRotation < 0) curRotation = 3;
-//               }
-//
-//               drawBlock(DRAW);
-//            }
-//            else
-//            {
-//               drawBlock(DRAW);
-//            }
-//         }
-//         paint();
-//         isMoving = false;
-//      }
-//
-//      void _Tetris::drop()
-//      {
-//         if(isMoving || isDropping) return;
-//         //atGame = false;
-//         isDropping = true;
-//         isMoving = true;
-//
-/////         thread.stop();
-//
-//         drawBlock(UNDRAW);
-//         while(canMoveDown())
-//         {
-//            curY++;
-//            Score(DROPUNITTYPE,0);
-//            drawBlock(DRAW);
-//            paint();
-//            drawBlock(UNDRAW);
-//         }
-//         drawBlock(DRAW);
-//         paint();
-//         killRows();
-//         startBlock();
-//         isMoving = false;
-//         isDropping = false;
-//         //thread = new Thread(get_app());
-//         //atGame = true;
-//         //thread.start();
-//      }
-//
-//
-//      void _Tetris::killRows()
-//      {
-//         int coordY,coordX;
-//         int auxY,auxX;
-//         int x,y;
-//         bool filled;
-//         killed = 0;
-//
-//
-//         for(coordY = (heightInCells - 1); coordY >= 0; coordY--)
-//         {
-//            for(filled = true,coordX = 0;coordX < widthInCells; coordX++)
-//            {
-//               if(cells[coordY][coordX] == 0)
-//               {
-//                  filled = false;
-//                  break;
-//               }
-//            }
-//
-//            if(filled)
-//            {
-//
-//               Toggle = true;
-//               flashLineOnly(coordY,15,delay);
-//
-//               killed++;
-//
-//               for(y = coordY; y > 0; y--)
-//                  for(x = 0; x < widthInCells; x++)
-//                  {
-//                     auxX = x;
-//                     auxY = y;
-//                     cells[y][x] = cells[y - 1][x];
-//                  }
-//               for(x = 0,y = 0; x < widthInCells; x++)
-//               {
-//                  auxX = x;
-//                  auxY = y;
-//                  cells[y][x] = 0;
-//               }
-//               coordY++;
-////               myPaint();
-//               paint();
-//            }
-//         }
-//      }
-//
-//
-//      void _Tetris::flashLineOnly(int y,int times,float delay)
-//      {
-//         ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
-//
-//         if(times == 0) return;
-//         int coordX,coordY;
-//         int x = widthInCells - 1;
-//
-//         coordY = y;
-//
-//
-//         while(x >= 0)
-//         {
-//            coordX = x;
-//            COLORREF cr;
-//            if(Toggle)
-//            {
-//               cr = colors[0];
-//            }
-//            else
-//            {
-//               cr = colors[cells[y][x]];
-//            }
-//
-//            imageGraph.FillSolidRect((coordX * cellSizeInPixels) + 2,(coordY * cellSizeInPixels) + 2,
-//               cellSizeInPixels - 3,cellSizeInPixels - 3, cr);
-//            x--;
-//         }
-//
-//         Score(ROWTYPE,killed);
-//         Toggle = !Toggle;
-//
-//
-//         //image.flush();
-//         //Graphics g = getGraphics();
-//         //while(!g.drawImage(image,0,0,this)) {};
-//         //g.finalize();
-//            Sleep(delay + 1);
-//         flashLineOnly(y,times - 1,(float)(delay * .7));
-//      }
-//
-//      bool _Tetris::canMoveDown()
-//      {
-//         bool ok;
-//
-//         ok = isValidPosition(curX,curY + 1,curType,curRotation);
-//
-//         return ok;
-//      }
-//
-//      bool _Tetris::canMoveLeft()
-//      {
-//         bool ok;
-//
-//         ok = isValidPosition(curX - 1,curY,curType,curRotation) && canMove;
-//
-//         return ok;
-//
-//      }
-//
-//      bool _Tetris::canMoveRight()
-//      {
-//         bool ok;
-//
-//         ok = isValidPosition(curX + 1,curY,curType,curRotation) && canMove;
-//
-//         return ok;
-//
-//      }
-//
-//      bool _Tetris::canRotate(bool ClockWise)
-//      {
-//         int testRotation;
-//         bool ok;
-//
-//         if(ClockWise)
-//         {
-//            testRotation = curRotation + 1;
-//            if(testRotation > 3) testRotation = 0;
-//         }
-//         else
-//         {
-//            testRotation = curRotation - 1;
-//            if(testRotation < 0) testRotation = 3;
-//         }
-//
-//
-//         ok = isValidPosition(curX,curY,curType,testRotation) && canMove;
-//
-//         return ok;
-//
-//      }
-//
-//
-//
-//      bool _Tetris::isValidPosition(int testX,int testY,int testType,int testRotation)
-//      {
-//         int shiftX,shiftY;
-//         string strShift = blocks[testType][testRotation];
-//         int i = 0;
-//
-//         if((testX < 0) ||
-//            (testX >= widthInCells) ||
-//            (testY >= heightInCells)) return false;
-//
-//         while(true)
-//         {
-//            if(!isOutOfLimits(testX,testY))
-//               if(cells[testY][testX] != 0) return false;
-//            if(i >= strShift.length()) return true;
-//            shiftX = shiftsPositions[strShift[i] - '0'][0];
-//            shiftY = shiftsPositions[strShift[i] - '0'][1];
-//            testX += shiftX;
-//            testY += shiftY;
-//            if((testX < 0) ||
-//               (testX >= widthInCells) ||
-//               (testY >= heightInCells)) return false;
-//            i++;
-//         }
-//      }
-//
-//      bool _Tetris::isOutOfLimits(int testX,int testY)
-//      {
-//         if((testX < 0) || (testX >= widthInCells) ||
-//            (testY < 0) || (testY >= heightInCells))
-//            return true;
-//         else
-//            return false;
-//      }
-//
-//
-//
-//      void _Tetris::drawBlock(int mode)
-//      {
-//         int testX,testY,shiftX,shiftY;
-//         string strShift = blocks[curType][curRotation];
-//         int i = 0;
-//
-//         testX = curX;
-//         testY = curY;
-//
-//         while(true)
-//         {
-//            if(mode == DRAW)
-//            {
-//               drawCell(testX,testY,curType + 1);
-//            }
-//            else
-//            {
-//               drawCell(testX,testY,0);
-//            }
-//            if(i >= strShift.length()) return;
-//            shiftX = shiftsPositions[strShift[i] - '0'][0];
-//            shiftY = shiftsPositions[strShift[i] - '0'][1];
-//            testX += shiftX;
-//            testY += shiftY;
-//            i++;
-//         }
-//      }
-//
-//      void _Tetris::drawCell(int x,int y,int color)
-//      {
-//         if(!isOutOfLimits(x,y))
-//         {
-//            cells[y][x] = color;
-//         }
-//      }
-//
-//      //void _Tetris::myPaint()
-//      //{
-//      //   Graphics g = getGraphics();
-//      //   paint(g);
-//      //   g.finalize();
-//
-//      //}
-//
-//
-//
-//
-//      void _Tetris::paint()
-//      {
-//         ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
-//         initPaint();
-//
-//         if(atGame || (!atGame && isDropping))
-//         {
-//            int i;
-//            int j;
-//
-//            for(i = 0; i < heightInCells; i++)
-//               for(j = 0; j < widthInCells; j++)
-//               {
-//                  if((offCells[i][j] != cells[i][j]) || (killed > 0))
-//                  {
-//                     offCells[i][j] = cells[i][j];
-//                     //imageGraph.setColor();
-//                     imageGraph.FillSolidRect((j * cellSizeInPixels) + 2,(i * cellSizeInPixels) + 2,
-//                        cellSizeInPixels - 3,cellSizeInPixels - 3,colors[cells[i][j]]);
-//                  }
-//               }
-//         }
-//
-//         killed = 0;
-//
-//         //image.flush();
-//
-//         //while(!g.drawImage(image,0,0,this)) {};
-//
-//      }
-//
-//
-//
-//
-//
+      int wBrick = 60;
+      int hBrick = 20;
+
+      if(m_dibBrick->create(wBrick, hBrick))
+      {
+         ::rect r(0, 0, wBrick, wBrick);
+         ::count c = 4;
+         m_dibBrick->get_graphics()->FillSolidRect(r, ARGB(255, 128, 140, 160));
+         for (index i = 0; i < c; i++)
+         {
+            int a = ((i + 1) * 123) / c;
+            m_dibBrick->get_graphics()->Draw3dRect(r, ARGB(a, 200, 200, 255), ARGB(a, 0, 0, 155));
+            r.deflate(1, 1);
+         }
+
+      }
+
+      windowWidth = 800;
+      windowHeight = 600;
+
+      m_psound = canew(::multimedia::sound_track(get_app()));
+      m_psound->audio_plugin_initialize();
+
+      for (int i = 0; i < 64; i++)
+      {
+         m_psound->sound_plugin("bounce", true);
+         m_psound->sound_plugin("destroy", true);
+         m_psound->sound_plugin("paddle", true);
+      }
+
+      reset();
+
+
+   }
+
+
+   void arkanoid::testCollision(Paddle& mPaddle, Ball& mBall)
+   {
+
+      if (!mPaddle.intersects(mBall))
+      {
+
+         return;
+
+      }
+
+      mBall.m_v.y = -mBall.ballVelocity;
+
+      if (mBall.m_rect.center().x < mPaddle.m_rect.center().x)
+      {
+
+         mBall.m_v.x = -mBall.ballVelocity;
+
+      }
+      else
+      {
+
+         mBall.m_v.x = mBall.ballVelocity;
+
+      }
+
+      m_psound->queue("wait:paddle");
+
+   }
+
+
+
+
+   arkanoid::Ball::Ball(::aura::application * papp) :
+      //m_brush(papp->allocer())
+      m_dibBall0(papp->allocer()),
+      m_dibBall(papp->allocer())
+   {
+      
+      if (m_dibBall0.load_from_matter("yellow_ball.png"))
+      {
+
+         if (m_dibBall->create(ballRadius, ballRadius))
+         {
+
+
+            m_dibBall->get_graphics()->StretchBlt(rect(0, 0, ballRadius, ballRadius), m_dibBall0->get_graphics(), rect(null_point(), m_dibBall0->m_size));
+
+         }
+
+      }
+
+      m_v.x = ballVelocity;
+      m_v.y = ballVelocity;
+   }
+
+   void arkanoid::Ball::init(float mX, float mY)
+   {
+
+      m_rect.left = mX - ballRadius;
+      m_rect.top = mY - ballRadius;
+      m_rect.right = mX + ballRadius;
+      m_rect.bottom = mY + ballRadius;
+      //m_brush->create_solid(ARGB(255,255,0,0));
+
+
+   }
+
+   void arkanoid::Ball::update(float dt, arkanoid * parkanoid)
+   {
+
+      bool bHit = false;
+      if (m_rect.left < 0)
+      {
+         m_v.x = ballVelocity;
+         bHit = true;
+      }
+      else if (m_rect.right > parkanoid->windowWidth)
+      {
+         m_v.x = -ballVelocity;
+         bHit = true;
+      }
+
+      if (m_rect.top < 0)
+      {
+         m_v.y = ballVelocity;
+         bHit = true;
+      }
+      else if (m_rect.bottom > parkanoid->windowHeight)
+      {
+         m_v.y = -ballVelocity;
+         bHit = true;
+      }
+
+      if (bHit)
+      {
+         parkanoid->m_psound->queue("wait:bounce");
+      }
+      else
+      {
+         output_debug_string(".");
+      }
+      m_rect.offset(m_v.x * dt, m_v.y * dt);
+
+   }
+
+
+   void arkanoid::Ball::draw(::draw2d::graphics * pgraphics)
+   {
+
+      pgraphics->StretchBlt(m_rect.left, m_rect.top, m_rect.width(), m_rect.height(), m_dibBall->get_graphics(), 0, 0, m_dibBall->m_size.cx, m_dibBall->m_size.cy, SRCCOPY);
+
+   }
+
+   void arkanoid::Element::draw(::draw2d::graphics * pgraphics)
+   {
+
+      pgraphics->FillSolidRect(m_rect, m_cr);
+
+   }
+
+
+
+   arkanoid::Paddle::Paddle()
+   {
+
+      paddleWidth = 120.f;
+      paddleHeight = 20.f;
+      paddleVelocity = 23.f;
+      m_cr = ARGB(255, 255, 0, 0);
+      iLeft = 0;
+
+   }
+
+
+   void arkanoid::Paddle::init(float mX, float mY)
+   {
+
+      m_rect.left = mX;
+      m_rect.top = mY;
+      m_rect.right = mX + paddleWidth;
+      m_rect.bottom = mY + paddleHeight;
+   }
+
+   void arkanoid::Paddle::update(float dt, arkanoid * parkanoid)
+   {
+
+      m_rect.offset(m_v.x * dt, m_v.y * dt);
+      if (iLeft> 0 && m_rect.left > 0)
+         m_v.x = -paddleVelocity;
+      else if (iLeft< 0 && m_rect.right && parkanoid->windowWidth)
+         m_v.x = paddleVelocity;
+      else
+         m_v.x = 0;
+
+   }
+
+   void arkanoid::Paddle::key_left_up(arkanoid * parkanoid)
+   {
+
+      iLeft = 1;
+   }
+
+   void arkanoid::Paddle::key_right_up(arkanoid * parkanoid)
+   {
+      iLeft = -1;
+
+   }
+
+   void arkanoid::Paddle::key_down(arkanoid * parkanoid)
+   {
+
+      iLeft = 0;
+
+   }
+
+
+
+   arkanoid::Brick::Brick()
+   {
+
+      destroyed = false;
+
+      blockWidth = 60.f;
+      blockHeight= 20.f ;
+
+   }
+
+   arkanoid::Brick::Brick(float mX, float mY, float w, float h)
+   {
+      blockWidth = 60.f;
+      blockHeight = 20.f;
+      destroyed = false;
+      blockWidth = w;
+      blockHeight = h;
+      m_rect.left = mX;
+      m_rect.top = mY;
+      m_rect.right = mX + blockWidth;
+      m_rect.bottom = mY + blockHeight;
+      m_cr = ARGB(255, 128, 128, 200);
+   }
+
+
+   void arkanoid::Brick::draw(::draw2d::graphics * pgraphics, arkanoid * parkanoid)
+   {
+
+
+      pgraphics->BitBlt(m_rect, parkanoid->m_dibBrick->get_graphics());
+
+   }
+
+   void arkanoid::testCollision(Brick& mBrick, Ball& mBall)
+   {
+
+      if (!mBrick.intersects(mBall))
+         return;
+
+      mBrick.destroyed = true;
+
+
+
+      float overlapLeft = mBall.m_rect.right - mBrick.m_rect.left;
+      float overlapRight = mBrick.m_rect.right - mBall.m_rect.left;
+      float overlapTop = mBall.m_rect.bottom - mBrick.m_rect.top;
+      float overlapBottom = mBrick.m_rect.bottom - mBall.m_rect.top;
+
+      bool ballFromLeft(fabs(overlapLeft) < fabs(overlapRight));
+      bool ballFromTop(fabs(overlapTop) < fabs(overlapBottom));
+
+      float minOverlapX{ ballFromLeft ? overlapLeft : overlapRight };
+      float minOverlapY{ ballFromTop ? overlapTop : overlapBottom };
+
+      if (fabs(minOverlapX) < fabs(minOverlapY))
+         mBall.m_v.x = ballFromLeft ? -mBall.ballVelocity : mBall.ballVelocity;
+      else
+         mBall.m_v.y = ballFromTop ? -mBall.ballVelocity : mBall.ballVelocity;
+   }
+
+   void arkanoid::reset()
+   {
+
+      m_ball.init(windowWidth / 2, windowHeight / 2);
+
+      m_paddle.init(windowWidth / 2, windowHeight - 50);
+
+      for (int x = 0; x < countBlocksX; x++)
+      {
+
+         for (int y = 0; y < countBlocksY; y++)
+         {
+
+            m_bricks.fadd((x + 1) * (blockWidth + 3) + 22, (y + 2) * (blockHeight + 3), blockWidth, blockHeight);
+
+         }
+
+      }
+
+   }
+
+
+   void arkanoid::draw(::draw2d::graphics * pgraphics)
+   {
+
+      double dt = 60.0 / 60.0;
+
+      m_ball.update(dt, this);
+      
+      m_paddle.update(dt, this);
+      
+      testCollision(m_paddle, m_ball);
+      
+      ::count cTotalDestroyed = 0;
+      
+      for (auto & brick : m_bricks)
+      {
+       
+         testCollision(brick, m_ball);
+
+      }
+
+      cTotalDestroyed += m_bricks.pred_remove([](const Brick& mBrick) { return mBrick.destroyed; });
+
+      int iSound = MIN(cTotalDestroyed, 3);
+
+      fork([this, iSound]()
+      {
+
+         for (int i = 0; i < iSound; i++)
+         {
+
+            m_psound->queue("wait:destroy");
+
+            Sleep(20);
+
+         }
+
+      });
+
+
+      m_ball.draw(pgraphics);
+
+      m_paddle.draw(pgraphics);
+      
+      m_bricks.each([this, &pgraphics](Brick& mBrick)
+      { 
+         
+         return mBrick.draw(pgraphics, this); 
+      
+      });
+
+
+   }
 
 
 

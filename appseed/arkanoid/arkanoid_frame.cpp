@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include <math.h>
 
 
@@ -80,6 +80,13 @@ namespace arkanoid
 
    }
 
+
+   bool frame::has_pending_graphical_update()
+   {
+
+      return true;
+
+   }
 
 
 } // namespace arkanoid

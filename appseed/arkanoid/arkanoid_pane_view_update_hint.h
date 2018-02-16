@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace arkanoid
@@ -13,7 +13,7 @@ namespace arkanoid
    };
 
 
-   class CLASS_DECL_APP_CORE_ARKANOID pane_view_update_hint :
+   class CLASS_DECL_GAME_ARKANOID pane_view_update_hint :
       public object
    {
    public:

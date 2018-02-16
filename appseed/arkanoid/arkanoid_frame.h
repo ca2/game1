@@ -10,7 +10,7 @@ namespace arkanoid
    class view;
 
 
-   class CLASS_DECL_APP_CORE_ARKANOID frame :
+   class CLASS_DECL_GAME_ARKANOID frame :
       virtual public ::estamira::main_frame
    {
    public:
@@ -26,15 +26,18 @@ namespace arkanoid
 
 
       sp(::user::wndfrm::frame::frame) create_frame_schema();
-	   
-   
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
-   
+
+
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
+
 
       virtual bool get_translucency(::user::e_translucency & etranslucency);
 
       virtual bool get_window_minimum_size(::size & sizeMin);
+
+      virtual bool has_pending_graphical_update();
+
 
    };
 

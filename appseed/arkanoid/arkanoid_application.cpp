@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace arkanoid
@@ -32,6 +32,8 @@ namespace arkanoid
 
       if(!::estamira::application::init_instance())
          return false;
+
+      set_local_data_key_modifier();
 
       ::user::single_document_template* pDocTemplate;
       pDocTemplate = new ::user::single_document_template(

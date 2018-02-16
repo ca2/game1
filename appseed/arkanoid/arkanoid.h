@@ -2,13 +2,12 @@
 
 
 #include "estamira/estamira.h"
-#include "core/user/html/html/html.h"
 
 
-#ifdef _APP_CORE_ARKANOID_LIBRARY
-    #define CLASS_DECL_APP_CORE_ARKANOID  CLASS_DECL_EXPORT
+#ifdef _GAME_ARKANOID_LIBRARY
+#define CLASS_DECL_GAME_ARKANOID  CLASS_DECL_EXPORT
 #else
-    #define CLASS_DECL_APP_CORE_ARKANOID  CLASS_DECL_IMPORT
+#define CLASS_DECL_GAME_ARKANOID  CLASS_DECL_IMPORT
 #endif
 
 
