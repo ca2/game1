@@ -4,10 +4,10 @@
 namespace tictactoe
 {
 
+
    pane_view::pane_view(::aura::application * papp) :
       ::object(papp),
       ::user::tab(papp),
-      
       ::user::tab_view(papp),
       ::userex::pane_tab_view(papp),
       place_holder_container(papp)
@@ -48,10 +48,10 @@ namespace tictactoe
       if(pobj->previous())
          return;
 
-      set_tab("tictactoe", ::tictactoe::PaneViewHelloMultiverse);
+      set_tab("tictactoe", ::tictactoe::PaneViewTicTacToe);
       set_tab("Open", "file_manager");
 
-      set_cur_tab_by_id(::tictactoe::PaneViewHelloMultiverse);
+      set_cur_tab_by_id(::tictactoe::PaneViewTicTacToe);
 
    }
 
@@ -62,9 +62,9 @@ namespace tictactoe
    {
       switch(pcreatordata->m_id)
       {
-      case PaneViewHelloMultiverse:
+      case PaneViewTicTacToe:
          {
-            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
+            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateTicTacToeView->open_document_file(NULL, true, pcreatordata->m_pholder));
             if(pdoc != NULL)
             {
                sp(::user::impact) pview = pdoc->get_view(0);

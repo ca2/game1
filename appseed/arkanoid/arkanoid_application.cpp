@@ -28,6 +28,7 @@ namespace arkanoid
       System.factory().creatable_small < ::arkanoid::pane_view >();
       System.factory().creatable_small < ::arkanoid::document >();
       System.factory().creatable_small < ::arkanoid::frame >();
+      System.factory().creatable_small < ::arkanoid::main_frame >();
       System.factory().creatable_small < ::arkanoid::view >();
 
       if(!::estamira::application::init_instance())
@@ -40,7 +41,7 @@ namespace arkanoid
       this,
       "frame",
       System.type_info < ::arkanoid::document > (),
-      System.type_info < ::arkanoid::frame > (),       // top level SDI frame::user::interaction_impl
+      System.type_info < ::arkanoid::main_frame > (),       // top level SDI frame::user::interaction_impl
       System.type_info < ::arkanoid::pane_view > ());
       add_document_template(pDocTemplate);
       m_ptemplateArkanoidMain = pDocTemplate;
@@ -62,7 +63,7 @@ namespace arkanoid
    void application::term_instance()
    {
 
-      ::core::application::term_instance();
+      ::estamira::application::term_instance();
 
    }
 

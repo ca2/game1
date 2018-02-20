@@ -30,7 +30,7 @@ namespace tictactoe
       ::visual::dib_sp        m_dibWork;
 
       ::draw2d::font_sp       m_font;
-      string                  m_strHelloMultiverse;
+      string                  m_strTicTacToe;
       int32_t                 m_iErrorAiFont;
       void *                  m_faceAi; // FT_Face m_faceAi;
 

@@ -720,6 +720,7 @@
     <ClCompile Include="arkanoid_document.cpp" />
     <ClCompile Include="arkanoid_frame.cpp" />
     <ClCompile Include="arkanoid_interface.cpp" />
+    <ClCompile Include="arkanoid_main_frame.cpp" />
     <ClCompile Include="arkanoid_pane_view.cpp" />
     <ClCompile Include="arkanoid_pane_view_update_hint.cpp" />
     <ClCompile Include="arkanoid_view.cpp" />
@@ -739,6 +740,7 @@
     <ClInclude Include="arkanoid_document.h" />
     <ClInclude Include="arkanoid_frame.h" />
     <ClInclude Include="arkanoid_interface.h" />
+    <ClInclude Include="arkanoid_main_frame.h" />
     <ClInclude Include="arkanoid_pane_view.h" />
     <ClInclude Include="arkanoid_pane_view_update_hint.h" />
     <ClInclude Include="arkanoid_preview.h" />

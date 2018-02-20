@@ -33,4 +33,6 @@ namespace arkanoid
 #include "arkanoid_pane_view_update_hint.h"
 #include "arkanoid_pane_view.h"
 
+#include "arkanoid_main_frame.h"
+
 #include "arkanoid_application.h"

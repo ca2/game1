@@ -28,7 +28,7 @@ namespace tictactoe
 
       m_bComputerPlay = false;
 
-      m_strHelloMultiverse = "Hello Multiverse!!";
+      m_strTicTacToe = "Hello Multiverse!!";
 
       connect_command("new_game",&view::_001OnNewGame);
 
@@ -288,7 +288,7 @@ namespace tictactoe
 
       board * pboard = &m_board;
 
-      ::size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
+      ::size size = m_dib->get_graphics()->GetTextExtent(m_strTicTacToe);
 
       if (1)
       {
@@ -495,7 +495,7 @@ namespace tictactoe
 
       //pgraphics->SelectObject(brushText);
 
-      //pgraphics->text_out((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strHelloMultiverse);
+      //pgraphics->text_out((rectClient.width() - size.cx) / 2, (rectClient.height() - size.cy) / 2,  m_strTicTacToe);
 
       //pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
@@ -709,7 +709,7 @@ namespace tictactoe
 
          m_dib->get_graphics()->set_font(m_font);
 
-         class size size = m_dib->get_graphics()->GetTextExtent(m_strHelloMultiverse);
+         class size size = m_dib->get_graphics()->GetTextExtent(m_strTicTacToe);
 
          double ratey = fHeight * 0.84 / size.cy;
 

@@ -7,7 +7,7 @@ namespace tictactoe
    enum EPaneView
    {
       PaneViewNone,
-      PaneViewHelloMultiverse,
+      PaneViewTicTacToe,
       PaneViewFileManager,
    };
 

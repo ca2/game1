@@ -20,6 +20,8 @@ namespace arkanoid
 
       m_xDib   = -1;
 
+      connect_command("new_game", &view::_001OnNewGame);
+
 
    }
 
@@ -222,6 +224,15 @@ namespace arkanoid
    {
 
       return is_window_enabled() && IsWindowVisible();
+
+   }
+
+   void view::_001OnNewGame(::message::message * pobj)
+   {
+
+      pobj->m_bRet = true;
+
+      m_parkanoid->reset();
 
    }
 

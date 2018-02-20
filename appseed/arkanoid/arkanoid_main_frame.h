@@ -5,24 +5,14 @@ namespace arkanoid
 {
 
 
-   class pane_view;
-
-   class view;
-
-
-   class CLASS_DECL_GAME_ARKANOID frame :
+   class CLASS_DECL_GAME_ARKANOID main_frame :
       virtual public ::estamira::main_frame
    {
    public:
 
 
-      view * m_pview;
-
-      ::size            m_sizeView;
-
-
-      frame(::aura::application * papp);
-      virtual ~frame();
+      main_frame(::aura::application * papp);
+      virtual ~main_frame();
 
 
       sp(::user::wndfrm::frame::frame) create_frame_schema();
@@ -34,11 +24,8 @@ namespace arkanoid
 
       virtual bool get_translucency(::user::e_translucency & etranslucency);
 
-      virtual bool get_window_minimum_size(::size & sizeMin);
 
-      virtual bool has_pending_graphical_update();
-
-      virtual bool on_create_bars() override;
+      virtual bool on_create_bars();
 
 
    };

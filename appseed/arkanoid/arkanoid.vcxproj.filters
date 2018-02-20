@@ -40,6 +40,9 @@
     <ClCompile Include="arkanoid_pane_view_update_hint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="arkanoid_main_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -73,6 +76,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arkanoid_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arkanoid_main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

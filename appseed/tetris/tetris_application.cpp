@@ -65,7 +65,7 @@ namespace tetris
    void application::term_instance()
    {
 
-      ::core::application::term_instance();
+      ::estamira::application::term_instance();
 
    }
 

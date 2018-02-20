@@ -66,7 +66,7 @@ namespace arkanoid
       DECL_GEN_SIGNAL(_001OnLButtonUp);
       DECL_GEN_SIGNAL(_001OnKeyDown);
       DECL_GEN_SIGNAL(_001OnKeyUp);
-
+      DECL_GEN_SIGNAL(_001OnNewGame);
 
       virtual bool keyboard_focus_is_focusable();
 

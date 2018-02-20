@@ -11,8 +11,8 @@ namespace tictactoe
    public:
 
 
-      sp(::user::single_document_template)  m_ptemplateHelloMultiverseMain;
-      sp(::user::single_document_template)  m_ptemplateHelloMultiverseView;
+      sp(::user::single_document_template)  m_ptemplateTicTacToeMain;
+      sp(::user::single_document_template)  m_ptemplateTicTacToeView;
 
 
       application();

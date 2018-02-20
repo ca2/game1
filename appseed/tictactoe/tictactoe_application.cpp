@@ -43,7 +43,7 @@ namespace tictactoe
       System.type_info < ::tictactoe::main_frame > (),       // top level SDI frame::user::interaction_impl
       System.type_info < ::tictactoe::pane_view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateHelloMultiverseMain = pDocTemplate;
+      m_ptemplateTicTacToeMain = pDocTemplate;
       pDocTemplate = new ::user::single_document_template(
       this,
       "frame",
@@ -51,7 +51,7 @@ namespace tictactoe
       System.type_info < ::tictactoe::frame > (),       // top level SDI frame::user::interaction_impl
       System.type_info < ::tictactoe::view > ());
       add_document_template(pDocTemplate);
-      m_ptemplateHelloMultiverseView = pDocTemplate;
+      m_ptemplateTicTacToeView = pDocTemplate;
 
       return true;
 
@@ -69,12 +69,12 @@ namespace tictactoe
    void application::on_request(::create * pcreate)
    {
 
-      m_ptemplateHelloMultiverseMain->request_create(pcreate);
+      m_ptemplateTicTacToeMain->request_create(pcreate);
 
       if(!pcreate->m_spCommandLine->m_varFile.is_empty())
       {
 
-         m_ptemplateHelloMultiverseView->request_create(pcreate);
+         m_ptemplateTicTacToeView->request_create(pcreate);
 
       }
 
