@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace tictactoe
@@ -21,24 +21,24 @@ namespace tictactoe
    }
 
 
-#ifdef DEBUG
+
    void pane_view::assert_valid() const
    {
-	   ::user::impact::assert_valid();
+      ::user::impact::assert_valid();
    }
 
    void pane_view::dump(dump_context & dumpcontext) const
    {
-	   ::user::impact::dump(dumpcontext);
+      ::user::impact::dump(dumpcontext);
    }
-#endif //DEBUG
+
 
 
    void pane_view::install_message_routing(::message::sender * pinterface)
    {
       ::userex::pane_tab_view::install_message_routing(pinterface);
 
-	   IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
+      IGUI_MSG_LINK(WM_CREATE, pinterface, this, &pane_view::_001OnCreate);
 
    }
 
@@ -63,25 +63,25 @@ namespace tictactoe
       switch(pcreatordata->m_id)
       {
       case PaneViewTicTacToe:
+      {
+         sp(::tictactoe::document) pdoc =  (Application.m_ptemplateTicTacToeView->open_document_file(NULL, true, pcreatordata->m_pholder));
+         if(pdoc != NULL)
          {
-            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateTicTacToeView->open_document_file(NULL, true, pcreatordata->m_pholder));
-            if(pdoc != NULL)
+            sp(::user::impact) pview = pdoc->get_view(0);
+            pview->on_update(NULL, 0, NULL);
+            if(pview != NULL)
             {
-               sp(::user::impact) pview = pdoc->get_view(0);
-               pview->on_update(NULL, 0, NULL);
-               if(pview != NULL)
+               sp(::tictactoe::frame) pframe = (pview->GetParentFrame());
+               if(pframe != NULL)
                {
-                  sp(::tictactoe::frame) pframe = (pview->GetParentFrame());
-                  if(pframe != NULL)
-                  {
-                     pcreatordata->m_pdoc = pdoc;
-                     pcreatordata->m_pwnd = pframe;
-                     pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
-                  }
+                  pcreatordata->m_pdoc = pdoc;
+                  pcreatordata->m_pwnd = pframe;
+                  pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
                }
             }
          }
-         break;
+      }
+      break;
       default:
          break;
       }

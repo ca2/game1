@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 namespace pacman
@@ -16,7 +16,7 @@ namespace pacman
 
       m_bNonStopOnEof =true;
 
-      
+
       if (!initialize_wave_player(::multimedia::audio::purpose_playground))
       {
 
@@ -34,11 +34,11 @@ namespace pacman
 
       get_wave_player()->DecoderOpen(c);
 
-      c.Play(0, 0, false);
+      c.Play(0.0, false);
 
       get_wave_player()->ExecuteCommand(c);
 
-      
+
 
 
    }
@@ -46,21 +46,21 @@ namespace pacman
    sound_track::~sound_track()
    {
    }
-   
+
    string sound_track::sound_path(const char * psz)
    {
-   
+
       string strFileName = string("pacman_") + psz + string(".wav");
-   
+
       string strFilePath = Application.dir().matter(strFileName);
-   
+
       return strFilePath;
-   
+
    }
 
    ::file::file_sp sound_track::sound_file(const char * psz)
    {
-      
+
       ::file::file_sp & file = m_mapFile[psz];
 
       if(!file.is_set())
@@ -81,7 +81,7 @@ namespace pacman
 
       if(pplugin == NULL)
       {
-         
+
          if(m_pdecoderplugin == NULL)
             return NULL;
 
@@ -111,22 +111,34 @@ namespace pacman
          presampler->audio_plugin_initialize();
 
       }
-      
+
 
       return pplugin;
 
    }
 
    void sound_track::queue(const char * psz)
+   {
+
+      synch_lock sl(m_pmutex);
+
+      m_eventEnd.ResetEvent();
+
+      string str(psz);
+
+      if(str.is_empty())
       {
 
-         synch_lock sl(m_pmutex);
-   
-         m_eventEnd.ResetEvent();
+         m_str = "";
 
-         string str(psz);
-         
-         if(str.is_empty())
+         return;
+
+      }
+
+      if (m_str == "intermission")
+      {
+
+         if (str == "end:intermission")
          {
 
             m_str = "";
@@ -134,100 +146,88 @@ namespace pacman
             return;
 
          }
-
-         if (m_str == "intermission")
-         {
-
-            if (str == "end:intermission")
-            {
-               
-               m_str = "";
-
-               return;
-
-            }
-            else if (str == "chomp")
-            {
-
-               return;
-
-            }
-
-         }
-
-         bool bWait = ::str::begins_ci(str,"wait:");
-
-         ::multimedia::audio_plugin::plugin * pplugin = sound_plugin(str);
-
-         if (pplugin == NULL)
+         else if (str == "chomp")
          {
 
             return;
 
          }
 
-         if(m_pluginptra.get_count() > 0 && !m_pluginptra[0]->audio_plugin_eof() && m_straMode.contains(str))
-         {
-
-            if(::str::begins_ci(m_str,"wait:"))
-            {
-
-               return;
-
-            }
-
-         }
-
-
-         if(m_str == str)
-         {
-
-            return;
-
-         }
-         else
-         {
-
-            m_str = str;
-
-            pplugin->m_bKick = true;
-
-         }
-         
-
-         m_bEof = false;
-
-         init_child(pplugin);
-
-         if(bWait)
-         {
-            
-            pplugin->audio_plugin_seek_begin();
-
-            pplugin->m_bLoop = false;
-            
-         }
-         else
-         {
-            
-            pplugin->m_bLoop = true;
-
-            //if(m_straMode.contains(m_str))
-            //{
-
-            //   pdecoder->m_bKick = false;
-
-            //}
-
-         }
-
-         ::output_debug_string(str + "\n");
-
-         m_pluginptra.add(pplugin);
-
-
-   
       }
+
+      bool bWait = ::str::begins_ci(str,"wait:");
+
+      ::multimedia::audio_plugin::plugin * pplugin = sound_plugin(str);
+
+      if (pplugin == NULL)
+      {
+
+         return;
+
+      }
+
+      if(m_pluginptra.get_count() > 0 && !m_pluginptra[0]->audio_plugin_eof() && m_straMode.contains(str))
+      {
+
+         if(::str::begins_ci(m_str,"wait:"))
+         {
+
+            return;
+
+         }
+
+      }
+
+
+      if(m_str == str)
+      {
+
+         return;
+
+      }
+      else
+      {
+
+         m_str = str;
+
+         pplugin->m_bKick = true;
+
+      }
+
+
+      m_bEof = false;
+
+      init_child(pplugin);
+
+      if(bWait)
+      {
+
+         pplugin->audio_plugin_seek_begin();
+
+         pplugin->m_bLoop = false;
+
+      }
+      else
+      {
+
+         pplugin->m_bLoop = true;
+
+         //if(m_straMode.contains(m_str))
+         //{
+
+         //   pdecoder->m_bKick = false;
+
+         //}
+
+      }
+
+      ::output_debug_string(str + "\n");
+
+      m_pluginptra.add(pplugin);
+
+
+
+   }
 
    void sound_track::audio_plugin_on_event(e_event eevent)
    {
@@ -244,7 +244,7 @@ namespace pacman
       if(eevent == ::multimedia::audio::wave_player::EventPlaybackEnd)
       {
 
-         
+
 
       }
 

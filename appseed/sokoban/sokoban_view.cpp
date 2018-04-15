@@ -29,8 +29,6 @@ namespace sokoban
    }
 
 
-#ifdef DEBUG
-
    void view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -40,7 +38,7 @@ namespace sokoban
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {
@@ -157,7 +155,7 @@ namespace sokoban
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      
+
 
       point ptViewport = pgraphics->GetViewportOrg();
 

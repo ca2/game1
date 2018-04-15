@@ -63,7 +63,6 @@ namespace tictactoe
    }
 
 
-#ifdef DEBUG
 
    void view::assert_valid() const
    {
@@ -74,7 +73,7 @@ namespace tictactoe
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {

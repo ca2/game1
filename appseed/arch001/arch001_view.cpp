@@ -55,8 +55,6 @@ namespace arch001
    }
 
 
-#ifdef DEBUG
-
    void view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -66,7 +64,7 @@ namespace arch001
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {
@@ -130,7 +128,7 @@ namespace arch001
       pobj->m_bRet = true;
 
    }
-   
+
 
    void view::_001OnKeyUp(::message::message * pobj)
    {

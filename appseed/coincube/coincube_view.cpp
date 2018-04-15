@@ -27,36 +27,36 @@ namespace coincube
 
       m_iCount = 0;
       m_iPhase = 0;
-      
+
       int iCount = 0;
       if(!m_dibCoin.load_from_file("matter://coin.png"))
       {
-         
+
          iCount++;
-         
+
       }
 
       if(!m_dibMony.load_from_file("matter://mony.png"))
       {
-         
+
          iCount++;
-         
+
       }
-      
+
       if(!m_dibMon2.load_from_file("matter://mon2.png"))
       {
-         
+
          iCount++;
-         
+
       }
 
       if(iCount > 0)
       {
-      
+
          Application.simple_message_box(NULL, "Could not load "+::str::from(iCount)+" image(s).");
-         
+
       }
-      
+
       m_bGame = false;
 
       m_pot.m_pview =this;
@@ -89,8 +89,6 @@ namespace coincube
    }
 
 
-#ifdef DEBUG
-
    void view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -100,7 +98,7 @@ namespace coincube
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {
@@ -211,9 +209,9 @@ namespace coincube
 
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
-      
+
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
-      
+
 
 
       rect rectClient;
@@ -376,7 +374,7 @@ namespace coincube
    {
 
       rect rectClient;
-      
+
       GetClientRect(rectClient);
 
       m_pot.m_iSize = 24;

@@ -28,8 +28,6 @@ namespace tetris
    }
 
 
-#ifdef DEBUG
-
    void view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -39,7 +37,7 @@ namespace tetris
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {

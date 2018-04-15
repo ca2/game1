@@ -21,7 +21,6 @@ namespace tetris
    }
 
 
-#ifdef DEBUG
    void pane_view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -31,7 +30,6 @@ namespace tetris
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif //DEBUG
 
 
    void pane_view::install_message_routing(::message::sender * pinterface)

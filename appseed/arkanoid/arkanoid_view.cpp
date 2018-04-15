@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 
@@ -32,8 +32,6 @@ namespace arkanoid
    }
 
 
-#ifdef DEBUG
-
    void view::assert_valid() const
    {
       ::user::impact::assert_valid();
@@ -43,7 +41,7 @@ namespace arkanoid
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {
@@ -185,7 +183,7 @@ namespace arkanoid
       //else
       if(pkey->m_ekey == ::user::key_left)
       {
-         
+
          m_parkanoid->m_paddle.key_left_up(m_parkanoid);
 
       }

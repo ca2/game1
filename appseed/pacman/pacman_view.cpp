@@ -31,7 +31,6 @@ namespace pacman
    }
 
 
-#ifdef DEBUG
 
    void view::assert_valid() const
    {
@@ -42,7 +41,7 @@ namespace pacman
    {
       ::user::impact::dump(dumpcontext);
    }
-#endif
+
 
    void view::install_message_routing(::message::sender * psender)
    {
@@ -186,23 +185,23 @@ namespace pacman
 
       //m_pconsolewindow = new ::windows::console_window(get_app(),size(24,24));
 
-/*      m_pconsolewindow = create_console();
+      /*      m_pconsolewindow = create_console();
 
-      m_pconsolewindow->set_app(get_app());
+            m_pconsolewindow->set_app(get_app());
 
-      //Application.m_ppacman->::console::window_composite::m_p = m_pconsolewindow;
-      //Application.m_ppacman->m_player.::console::window_composite::m_p = m_pconsolewindow;
-      //for(auto ghost : Application.m_ppacman->ghosts)
-      //{
-      //   ghost->::console::window_composite::m_p = m_pconsolewindow;
-      //}
+            //Application.m_ppacman->::console::window_composite::m_p = m_pconsolewindow;
+            //Application.m_ppacman->m_player.::console::window_composite::m_p = m_pconsolewindow;
+            //for(auto ghost : Application.m_ppacman->ghosts)
+            //{
+            //   ghost->::console::window_composite::m_p = m_pconsolewindow;
+            //}
 
-      if(Application.m_ppacman->m_pthreadimpl.is_null())
-      {
-         Application.m_ppacman->begin();
-      }
+            if(Application.m_ppacman->m_pthreadimpl.is_null())
+            {
+               Application.m_ppacman->begin();
+            }
 
-      */
+            */
    }
 
 
