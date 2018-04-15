@@ -7,3 +7,5 @@
 *.depend
 *.VC.db
 Thumbs.db
+*.expand_fileset
+*.expand_fileset.spa
