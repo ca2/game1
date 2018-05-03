@@ -86,71 +86,71 @@ namespace matchmaking
       }
       break;
       case PaneViewMenu:
-         {
-            m_pdocMenu = Application.create_child_form(this,pcreatordata->m_pholder);
+      {
+         m_pdocMenu = Application.create_child_form(this,pcreatordata->m_pholder);
 
-            m_pdocMenu->open_document("matter://login.html");
+         m_pdocMenu->open_document("matter://login.html");
 
-            sp(::user::impact) pview = m_pdocMenu->get_view();
+         sp(::user::impact) pview = m_pdocMenu->get_view();
 
-            m_prollfps = dynamic_cast < ::calculator::plain_edit_view * > (pview->get_child_by_id("roll_fps"));
+         m_prollfps = dynamic_cast < ::calculator::plain_edit_view * > (pview->get_child_by_id("roll_fps"));
 //         m_prollspf = pview->get_child_by_id("roll_spf");
-            //try
-            //{
-            //   pform->get_child_by_id("clockverse_auto")->_001SetCheck(Application.should_auto_launch_clockverse_on_hover(),::action::source_initialize);
-            //}
-            //catch(...)
-            //{
-            //}
+         //try
+         //{
+         //   pform->get_child_by_id("clockverse_auto")->_001SetCheck(Application.should_auto_launch_clockverse_on_hover(),::action::source_initialize);
+         //}
+         //catch(...)
+         //{
+         //}
 
-            //try
-            //{
-            //   pform->get_child_by_id("flag")->_001SetCheck(Application.should_bind_flag_country_ca2_domain_image_on_hover(),::action::source_initialize);
-            //}
-            //catch(...)
-            //{
-            //}
+         //try
+         //{
+         //   pform->get_child_by_id("flag")->_001SetCheck(Application.should_bind_flag_country_ca2_domain_image_on_hover(),::action::source_initialize);
+         //}
+         //catch(...)
+         //{
+         //}
 
-            //try
-            //{
-            //   pform->get_child_by_id("flag_auto")->_001SetCheck(Application.should_auto_launch_flag_on_hover(),::action::source_initialize);
-            //}
-            //catch(...)
-            //{
-            //}
+         //try
+         //{
+         //   pform->get_child_by_id("flag_auto")->_001SetCheck(Application.should_auto_launch_flag_on_hover(),::action::source_initialize);
+         //}
+         //catch(...)
+         //{
+         //}
 
 
 
-         }
-         break;
+      }
+      break;
       case PaneViewHelloMultiverse:
-         {
-            sp(::user::document) pdoc =  Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
+      {
+         sp(::user::document) pdoc =  Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
 
-            pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
+         pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
 
-         }
+      }
 
-         break;
+      break;
 
       case PaneViewHelloMultiverseSwitcher:
-         {
+      {
 
-            Application.m_ptemplateHelloMultiverseSwitcher->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateHelloMultiverseSwitcher->open_document_file(NULL,true,pcreatordata->m_pholder);
 
 
 
-         }
+      }
 
-         break;
+      break;
       case PaneViewFontSel:
-         {
-            Application.m_ptemplateHelloMultiverseFontSel->open_document_file(NULL,true,pcreatordata->m_pholder);
+      {
+         Application.m_ptemplateHelloMultiverseFontSel->open_document_file(NULL,true,pcreatordata->m_pholder);
 
 
-         }
+      }
 
-         break;
+      break;
 
 
 
@@ -161,7 +161,7 @@ namespace matchmaking
    }
 
 
-   bool pane_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
+   bool pane_view::BaseOnControlEvent(::user::control_event * pevent)
    {
 
       if(m_pdocMenu != NULL && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0))

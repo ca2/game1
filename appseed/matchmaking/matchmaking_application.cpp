@@ -109,37 +109,37 @@ namespace matchmaking
 
       ::user::single_document_template* pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(
-                              this,
-                              "main",
-                              System.type_info < document >(),
-                              System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
-                              System.type_info < pane_view > ()));
+                           this,
+                           "main",
+                           System.type_info < document >(),
+                           System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
+                           System.type_info < pane_view > ()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseMain = pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(
-                              this,
-                              "main",
-                              System.type_info < document > (),
-                              System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
-                              System.type_info < matchmaking::main > ()));
+                           this,
+                           "main",
+                           System.type_info < document > (),
+                           System.type_info < frame > (),       // top level SDI frame::user::interaction_impl
+                           System.type_info < matchmaking::main > ()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseView = pDocTemplate;
       pDocTemplate = canew(::user::single_document_template(
-                              this,
-                              "main",
-                              System.type_info < document >(),
-                              System.type_info < frame >(),       // top level SDI frame::user::interaction_impl
-                              System.type_info < switcher_view >()));
+                           this,
+                           "main",
+                           System.type_info < document >(),
+                           System.type_info < frame >(),       // top level SDI frame::user::interaction_impl
+                           System.type_info < switcher_view >()));
       add_document_template(pDocTemplate);
       m_ptemplateHelloMultiverseSwitcher = pDocTemplate;
 
 
       m_ptemplateHelloMultiverseFontSel = canew(::user::single_document_template(
-                                             this,
-                                             "main",
-                                             System.type_info < ::user::document >(),
-                                             System.type_info < ::simple_frame_window >(),       // top level SDI frame::user::interaction_impl
-                                             System.type_info < font_view >()));
+                                          this,
+                                          "main",
+                                          System.type_info < ::user::document >(),
+                                          System.type_info < ::simple_frame_window >(),       // top level SDI frame::user::interaction_impl
+                                          System.type_info < font_view >()));
 
       add_document_template(m_ptemplateHelloMultiverseFontSel);
 
@@ -761,7 +761,7 @@ namespace matchmaking
 //
 //   }
 //
-//   bool application::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
+//   bool application::BaseOnControlEvent(::user::control_event * pevent)
 //   {
 //
 //      if(m_pdocMenu != NULL && pview == m_pdocMenu->get_view(0))
@@ -967,7 +967,7 @@ namespace matchmaking
 
    string application::get_steam_user_name()
    {
-      
+
       if (m_strSteamUserName.is_empty())
       {
 
@@ -1003,7 +1003,7 @@ namespace matchmaking
       m_bLoginSteam = true;
       ::fork(this, [=]()
       {
-         
+
          string str = Application.http().api_get("/steam/get_user_name_and_id");
 
          stringa stra;

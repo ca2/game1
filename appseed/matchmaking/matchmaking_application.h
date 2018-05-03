@@ -79,7 +79,7 @@ namespace matchmaking
 
       //virtual bool BaseOnControlEvent(::user::control_event * pevent) override;
 
-      //virtual bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent) override;
+      //virtual bool BaseOnControlEvent(::user::control_event * pevent) override;
 
       //virtual void on_create_view(::user::view_creator_data * pcreatordata) override;
 
