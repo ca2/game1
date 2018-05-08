@@ -1,0 +1,8 @@
+; game_particle.def
+
+LIBRARY  "game_particle"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_particle_get_new_library
+
