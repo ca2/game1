@@ -37,11 +37,11 @@ namespace particle
       {
          ::rect r(0, 0, wBrick, wBrick);
          ::count c = 4;
-         m_dibBrick->get_graphics()->FillSolidRect(r, ARGB(255, 128, 140, 160));
+         m_dibBrick->get_graphics()->fill_solid_rect(r, ARGB(255, 128, 140, 160));
          for (index i = 0; i < c; i++)
          {
             int a = ((i + 1) * 123) / c;
-            m_dibBrick->get_graphics()->Draw3dRect(r, ARGB(a, 200, 200, 255), ARGB(a, 0, 0, 155));
+            m_dibBrick->get_graphics()->draw3d_rect(r, ARGB(a, 200, 200, 255), ARGB(a, 0, 0, 155));
             r.deflate(1, 1);
          }
 
@@ -182,7 +182,7 @@ namespace particle
    void particle::Element::draw(::draw2d::graphics * pgraphics)
    {
 
-      pgraphics->FillSolidRect(m_rect, m_cr);
+      pgraphics->fill_solid_rect(m_rect, m_cr);
 
    }
 
@@ -272,7 +272,7 @@ namespace particle
    {
 
 
-      pgraphics->BitBlt(m_rect, pparticle->m_dibBrick->get_graphics());
+      pgraphics->draw(m_rect, pparticle->m_dibBrick->get_graphics());
 
    }
 
@@ -286,7 +286,7 @@ namespace particle
 
       int iCount = System.math().RandRange(20, 40);
 
-      sp(effect::effect) peffect = canew(effect::fountain(get_app(), mBall.m_rect.center().x, mBall.m_rect.center().y));
+      sp(effect::effect) peffect = canew(effect::random_color_range_fountain(get_app(), mBall.m_rect.center().x, mBall.m_rect.center().y));
       peffect->initialize(200, iCount);
       peffect->initializeRenderer();
       m_effecta.add(peffect);

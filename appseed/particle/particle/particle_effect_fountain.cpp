@@ -32,10 +32,7 @@ namespace particle
             particleEmitter->addGenerator(m_posGenerator);
 
             m_colGenerator = canew(generator::color::basic(get_app()));
-            m_colGenerator->m_minStartCol = vec4{ 1.0, 0.0, 0.1, 1.0 };
-            m_colGenerator->m_maxStartCol = vec4{ 1.0, 1.0, 0.4, 1.0 };
-            m_colGenerator->m_minEndCol = vec4{ 1.0, 0.0, 0.1, 0.0 };
-            m_colGenerator->m_maxEndCol = vec4{ 1.0, 1.0, 0.4, 0.0 };
+            initialize_color_generator(m_colGenerator);
             particleEmitter->addGenerator(m_colGenerator);
 
             auto velGenerator = canew(generator::velocity::basic(get_app()));
@@ -62,6 +59,16 @@ namespace particle
 
          m_floorUpdater = canew(updaters::FloorUpdater(get_app()));
          m_psystem->addUpdater(m_floorUpdater);
+
+         return true;
+      }
+
+      bool fountain::initialize_color_generator(generator::color::basic * pcolorbasic)
+      {
+         pcolorbasic->m_minStartCol = vec4{ 1.0, 0.0, 0.1, 1.0 };
+         pcolorbasic->m_maxStartCol = vec4{ 1.0, 1.0, 0.4, 1.0 };
+         pcolorbasic->m_minEndCol = vec4{ 1.0, 0.0, 0.1, 0.0 };
+         pcolorbasic->m_maxEndCol = vec4{ 1.0, 1.0, 0.4, 0.0 };
 
          return true;
       }
@@ -123,6 +130,46 @@ namespace particle
          m_prenderer->render(pgraphics, cx, cy, m_psystem);
       }
 
+
+      bool random_color_range_fountain::initialize_color_generator(generator::color::basic * pcolorbasic)
+      {
+
+         int iColorScheme = System.math().RandRange(0, color_count-1);
+
+         switch (iColorScheme)
+         {
+         case color_red_yellow:
+            pcolorbasic->m_minStartCol = vec4{ 1.0, 0.0, 0.1, 1.0 };
+            pcolorbasic->m_maxStartCol = vec4{ 1.0, 1.0, 0.4, 1.0 };
+            pcolorbasic->m_minEndCol = vec4{ 1.0, 0.0, 0.1, 0.0 };
+            pcolorbasic->m_maxEndCol = vec4{ 1.0, 1.0, 0.4, 0.0 };
+            break;
+         case color_blue_cyan:
+            pcolorbasic->m_minStartCol = vec4{ 0.1, 0.2, 1.0, 1.0 };
+            pcolorbasic->m_maxStartCol = vec4{ 0.4, 1.0, 1.0, 1.0 };
+            pcolorbasic->m_minEndCol = vec4{ 0.1, 0.2, 1.0, 0.0 };
+            pcolorbasic->m_maxEndCol = vec4{ 0.4, 1.0, 1.0, 0.0 };
+            break;
+         case color_green_yellow:
+            pcolorbasic->m_minStartCol = vec4{ 0.1, 0.8, 0.1, 1.0 };
+            pcolorbasic->m_maxStartCol = vec4{ 1.0, 1.0, 0.4, 1.0 };
+            pcolorbasic->m_minEndCol = vec4{ 0.1, 0.8, 0.1, 0.0 };
+            pcolorbasic->m_maxEndCol = vec4{ 1.0, 1.0, 0.4, 0.0 };
+            break;
+         case color_blue_magenta:
+            pcolorbasic->m_minStartCol = vec4{ 0.1, 0.2, 1.0, 1.0 };
+            pcolorbasic->m_maxStartCol = vec4{ 1.0, 0.1, 1.0, 1.0 };
+            pcolorbasic->m_minEndCol = vec4{ 0.1, 0.2, 1.0, 0.0 };
+            pcolorbasic->m_maxEndCol = vec4{ 1.0, 0.1, 1.0, 0.0 };
+            break;
+         default:
+            fountain::initialize_color_generator(pcolorbasic);
+            break;
+
+         }
+
+         return true;
+      }
 
    } // namespace effect
 

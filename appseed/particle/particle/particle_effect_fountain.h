@@ -24,6 +24,9 @@ namespace particle
          fountain(::aura::application * papp, int cx, int cy) : ::object(papp), effect(papp), m_cx(cx), m_cy(cy) { }
          ~fountain() { }
 
+         virtual bool initialize_color_generator(generator::color::basic * pcolorbasic);
+
+
          bool initialize(size_t numParticles, size_t lifeCount) override;
          bool initializeRenderer() override;
          void reset() override { m_psystem->reset(); }
@@ -38,6 +41,25 @@ namespace particle
 
          int numAllParticles() override { return m_psystem->numAllParticles(); }
          int numActiveParticles() override { return m_psystem->numActiveParticles(); }
+      };
+
+      class random_color_range_fountain : public fountain
+      {
+      public:
+
+         enum e_color
+         {
+            color_red_yellow,
+            color_blue_cyan,
+            color_green_yellow,
+            color_blue_magenta,
+            color_count
+         };
+
+         random_color_range_fountain(::aura::application * papp, int cx, int cy) : ::object(papp), fountain(papp, cx, cy) { }
+
+         virtual bool initialize_color_generator(generator::color::basic * pcolorbasic);
+
       };
 
 
