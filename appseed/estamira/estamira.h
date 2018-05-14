@@ -39,6 +39,8 @@ namespace estamira
 
 #define _ESTAMIRA_DEBUG 1
 
+#include "particle/particle.h"
+
 #include "estamira_tileset.h"
 
 #include "estamira_character.h"

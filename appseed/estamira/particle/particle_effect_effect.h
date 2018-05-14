@@ -9,7 +9,7 @@ namespace particle
    {
 
 
-      class effect : virtual public ::object
+      class CLASS_DECL_ESTAMIRA effect : virtual public ::object
       {
       public:
          static const size_t DEFAULT_PARTICLE_NUM_FLAG = 0;	// for initialize method
@@ -36,7 +36,7 @@ namespace particle
 
       };
 
-      class factory :
+      class CLASS_DECL_ESTAMIRA factory :
          virtual public ::object
       {
       public:

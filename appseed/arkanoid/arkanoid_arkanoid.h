@@ -29,7 +29,7 @@ namespace arkanoid
          COLORREF m_cr;
 
          void draw(::draw2d::graphics * pgraphics);
-         
+
          inline bool intersects(const Element & e)
          {
             return m_rect.intersects(e.m_rect);
@@ -48,7 +48,7 @@ namespace arkanoid
          float	ballVelocity{16.f};
 
          Ball(::aura::application * papp);
-         
+
          void init(float mX, float mY);
          void update(float dt, arkanoid * parkanoid);
          void draw(::draw2d::graphics * pgraphics);
@@ -99,9 +99,10 @@ namespace arkanoid
 
       };
 
-      Ball                 m_ball;
-      Paddle               m_paddle;
-      array < Brick >      m_bricks;
+      Ball                             m_ball;
+      Paddle                           m_paddle;
+      array < Brick >                  m_bricks;
+      particle::effect::array          m_effecta;
 
 
       arkanoid(::aura::application * papp);

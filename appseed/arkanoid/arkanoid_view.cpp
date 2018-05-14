@@ -113,7 +113,7 @@ namespace arkanoid
 
       GetClientRect(rectClient);
 
-      pgraphics->FillSolidRect(rectClient, ARGB(0,0,0,0));
+      pgraphics->fill_solid_rect(rectClient, ARGB(0,0,0,0));
 
       if (m_parkanoid == NULL)
       {

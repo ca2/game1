@@ -15,15 +15,17 @@ namespace coincube
       m_dib(allocer()),
       m_dibColor(allocer()),
       m_dibWork(allocer()),
-      m_font(allocer()),
       m_mutexDraw(papp),
       m_mutexWork(papp),
       m_mutexSwap(papp),
-      m_pot(papp),
+      m_pot(this),
       m_dibCoin(allocer()),
       m_dibMony(allocer()),
-      m_dibMon2(allocer())
+      m_dibMon2(allocer()),
+      m_effecta(papp)
    {
+
+      m_dGrow = 1.15;
 
       m_iCount = 0;
       m_iPhase = 0;
@@ -60,7 +62,6 @@ namespace coincube
       m_bGame = false;
 
       m_pot.m_pview =this;
-      m_strHelloMultiverse = "Hello Multiverse!!";
 
       connect_command("new_game",&view::_001OnNewGame);
 
@@ -120,34 +121,34 @@ namespace coincube
 
       SCAST_PTR(::message::create,pcreate,pobj);
 
+      pcreate->previous();
+
       m_psound = new ::multimedia::sound_track(get_app());
+
       m_psound->audio_plugin_initialize();
 
-      set_local_data_key_modifier();
-
-      initialize_data_client(Application.simpledb().get_data_server());
-      if(!m_bGame)
-      {
-         m_bGame = true;
-         new_game();
-
-      }
-
+      new_game();
 
       data_get("credit",m_pot.m_iCredit);
       data_get("count",m_iCount);
       data_get("phase",m_iPhase);
 
 
-
       for(index i = 0; i < m_iCount; i++)
       {
-         m_pot.m_iSize = m_pot.m_iSize * 1.25;
+
+         m_pot.m_iSize = m_pot.m_iSize * m_dGrow;
+
       }
+
       pcreate->previous();
 
-      if(pcreate->m_bRet)
+      if (pcreate->m_bRet)
+      {
+
          return;
+
+      }
 
       GetMain()->Enable(true);
 
@@ -240,7 +241,7 @@ namespace coincube
 
          }
 
-         pgraphics->BitBlt(point(x,y),m_dibMon2->m_size,m_dibMon2->get_graphics());
+         pgraphics->draw(point(x,y),m_dibMon2->m_size,m_dibMon2->get_graphics());
 
          x+=m_dibMon2->m_size.cx;
 
@@ -266,7 +267,7 @@ namespace coincube
 
          }
 
-         pgraphics->BitBlt(point(x,y),m_dibMony->m_size,m_dibMony->get_graphics());
+         pgraphics->draw(point(x,y),m_dibMony->m_size,m_dibMony->get_graphics());
 
          x+=m_dibMony->m_size.cx;
 
@@ -277,7 +278,7 @@ namespace coincube
 
       r.top = r.bottom - m_pot.m_iSize * 6;
 
-      pgraphics->FillSolidRect(r,ARGB(84,255,255,255));
+      pgraphics->fill_solid_rect(r,ARGB(84,255,255,255));
 
       m_pot.m_pt.x = m_pot.m_pt.x + (m_ptFinal.x - m_pot.m_pt.x)  * 0.1;
 
@@ -288,6 +289,7 @@ namespace coincube
          pc->on_draw(pgraphics);
       }
 
+      m_effecta.draw(pgraphics, rectClient.width(), rectClient.height());
 
    }
 
@@ -332,6 +334,7 @@ namespace coincube
 
    }
 
+
    void view::credit()
    {
 
@@ -339,7 +342,7 @@ namespace coincube
 
       m_pot.m_iCredit++;
 
-      if(m_pot.m_iCredit >= m_pot.m_iSize * 2 - 7)
+      if(m_pot.m_iCredit >= m_pot.m_iSize)
       {
 
          m_iCount++;
@@ -347,7 +350,33 @@ namespace coincube
          if(m_iCount > 7)
          {
             m_iCount = 0;
+
+            int x = m_dibMon2->m_size.cx / 2;
+            int y = m_dibMon2->m_size.cy / 2;
+            for (int i = 0; i < m_iPhase; i++)
+            {
+
+               x += m_dibMon2->m_size.cx;
+
+            }
             m_iPhase++;
+            sp(particle::effect::effect) peffect = canew(particle::effect::gold_color_fountain(get_app(), x, y));
+            peffect->initialize(200, 160);
+            peffect->initializeRenderer();
+            m_effecta.add(peffect);
+            for (int i = 0; i < 8; i++)
+            {
+               int y = m_dibMony->m_size.cy / 2;
+               x += m_dibMony->m_size.cx;
+               sp(particle::effect::effect) peffect = canew(particle::effect::gold_color_fountain(get_app(), x, y));
+               peffect->initialize(200, 80);
+               peffect->initializeRenderer();
+               m_effecta.add(peffect);
+
+            }
+
+            m_psound->queue("wait:velo2");
+
          }
          else
          {
@@ -357,15 +386,33 @@ namespace coincube
             m_pot.m_dwLastGrow = ::get_tick_count();
 
             m_psound->queue("wait:velo");
+            int x = m_dibMon2->m_size.cx / 2;
+            int y = m_dibMon2->m_size.cy / 2;
+            for (int i = 0; i < m_iPhase; i++)
+            {
+
+               x += m_dibMon2->m_size.cx;
+
+            }
+            for (int i = 0; i < m_iCount-1; i++)
+            {
+               y = m_dibMony->m_size.cy / 2;
+               x += m_dibMony->m_size.cx;
+
+            }
+            sp(particle::effect::effect) peffect = canew(particle::effect::gold_color_fountain(get_app(), x, y));
+            peffect->initialize(200, 80);
+            peffect->initializeRenderer();
+            m_effecta.add(peffect);
 
          }
 
 
       }
+
       data_set("credit",m_pot.m_iCredit);
       data_set("count",m_iCount);
       data_set("phase",m_iPhase);
-
 
    }
 
@@ -377,7 +424,7 @@ namespace coincube
 
       GetClientRect(rectClient);
 
-      m_pot.m_iSize = 24;
+      m_pot.m_iSize = 16;
 
       m_pot.m_pt.x = (rectClient.right + rectClient.left) / 2;
 
@@ -398,8 +445,6 @@ namespace coincube
          pc->reinvent_merit();
 
       }
-
-
 
    }
 

@@ -19,6 +19,14 @@ namespace coincube
    void coin::reinvent_merit()
    {
 
+      int iCount = System.math().RandRange(20, 40);
+
+      sp(particle::effect::effect) peffect = canew(particle::effect::random_color_range_fountain(get_app(), m_pt.x, m_pt.y));
+      peffect->initialize(200, iCount);
+      peffect->initializeRenderer();
+      m_pview->m_effecta.add(peffect);
+
+
       int iMaxPhase = 125;
       m_iSpin =System.math().RandRange(40,iMaxPhase);
       m_iPhase = System.math().RandRange(0,m_pview->m_dibCoin->m_size.cx / m_pview->m_dibCoin->m_size.cy - 1 * iMaxPhase);
@@ -49,8 +57,8 @@ namespace coincube
       size s(m_pview->m_dibCoin->m_size.cy,m_pview->m_dibCoin->m_size.cy);
 
       point pt2((((::get_tick_count() + m_iPhase) * m_iSpin / 1000) % (m_pview->m_dibCoin->m_size.cx / m_pview->m_dibCoin->m_size.cy)) *m_pview->m_dibCoin->m_size.cy,0);
-      
-      pgraphics->BitBlt(pt,s,m_pview->m_dibCoin->get_graphics(),pt2,SRCCOPY);
+
+      pgraphics->draw(pt,s,m_pview->m_dibCoin->get_graphics(),pt2,SRCCOPY);
       defer_check_credit();
       m_pt.x += m_v.x;
       m_pt.y += m_v.y;
@@ -82,12 +90,12 @@ namespace coincube
       int cs = m_pview->m_dibCoin->m_size.cy;
 
       if(m_pt.y >= m_pview->m_pot.m_pt.y - m_pview->m_pot.m_iSize - m_pview->m_pot.m_iSize / 2
-         && m_pt.y <= m_pview->m_pot.m_pt.y + m_pview->m_pot.m_iSize + m_pview->m_pot.m_iSize / 2)
+            && m_pt.y <= m_pview->m_pot.m_pt.y + m_pview->m_pot.m_iSize + m_pview->m_pot.m_iSize / 2)
       {
 
-         if(m_pt.x >= m_pview->m_pot.m_pt.x - m_pview->m_pot.m_iSize 
-         && m_pt.x <= m_pview->m_pot.m_pt.x + m_pview->m_pot.m_iSize
-         && m_pt.y >= m_pview->m_pot.m_pt.y + m_pview->m_pot.m_iSize - m_pview->m_pot.m_iSize / 4 - m_pview->m_pot.m_iCredit)
+         if(m_pt.x >= m_pview->m_pot.m_pt.x - m_pview->m_pot.m_iSize
+               && m_pt.x <= m_pview->m_pot.m_pt.x + m_pview->m_pot.m_iSize
+               && m_pt.y >= m_pview->m_pot.m_pt.y + m_pview->m_pot.m_iSize - m_pview->m_pot.m_iSize / 4 - m_pview->m_pot.m_iCredit)
          {
 
             m_pview->credit();

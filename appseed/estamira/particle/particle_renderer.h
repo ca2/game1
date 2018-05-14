@@ -8,7 +8,7 @@ namespace particle
    class system;
 
 
-   class renderer :
+   class CLASS_DECL_ESTAMIRA renderer :
       virtual public ::object
    {
    public:
@@ -22,7 +22,7 @@ namespace particle
    };
 
 
-   class renderer_factory :
+   class CLASS_DECL_ESTAMIRA renderer_factory :
       virtual public ::object
    {
    public:

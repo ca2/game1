@@ -9,7 +9,7 @@ namespace particle
    {
 
 
-      class attractor : public effect
+      class CLASS_DECL_ESTAMIRA attractor : public effect
       {
       public:
 

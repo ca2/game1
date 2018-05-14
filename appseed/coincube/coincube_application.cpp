@@ -30,10 +30,10 @@ namespace coincube
       System.factory().creatable_small < ::coincube::main_frame >();
       System.factory().creatable_small < ::coincube::view >();
 
-      if(!::multimedia::application::init_instance())
-         return false;
-
       set_local_data_key_modifier();
+
+      if(!::estamira::application::init_instance())
+         return false;
 
       ::user::single_document_template* pDocTemplate;
       pDocTemplate = new ::user::single_document_template(

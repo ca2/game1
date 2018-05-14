@@ -4,13 +4,18 @@
 namespace coincube
 {
 
-   cube::cube(::aura::application * papp):
-      object(papp)
+
+   cube::cube(view * pview):
+      object(pview->get_app()),
+      m_pview(pview)
    {
+
       m_bGrow = false;
       m_iRefSize = -1;
       m_iCredit = 0;
+
    }
+
 
    cube::~cube()
    {
@@ -42,16 +47,16 @@ namespace coincube
       pgraphics->SelectObject(pen);
 
 
-      pgraphics->MoveTo(m_pt.x - m_iSize,m_pt.y - m_iSize);
-      pgraphics->LineTo(m_pt.x - m_iSize,m_pt.y + m_iSize);
-      pgraphics->LineTo(m_pt.x + m_iSize,m_pt.y + m_iSize);
-      pgraphics->LineTo(m_pt.x + m_iSize,m_pt.y - m_iSize);
+      pgraphics->move_to(m_pt.x - m_iSize,m_pt.y - m_iSize);
+      pgraphics->line_to(m_pt.x - m_iSize,m_pt.y + m_iSize);
+      pgraphics->line_to(m_pt.x + m_iSize,m_pt.y + m_iSize);
+      pgraphics->line_to(m_pt.x + m_iSize,m_pt.y - m_iSize);
 
-      rect rCred(m_pt.x - m_iSize, m_pt.y + m_iSize - m_iCredit, m_pt.x+m_iSize, m_pt.y+m_iSize);
+      rect rCred(m_pt.x - m_iSize, m_pt.y + m_iSize - m_iCredit * 2, m_pt.x+m_iSize, m_pt.y+m_iSize);
 
 
 
-      pgraphics->FillSolidRect(rCred,ARGB(255,250,240,10));
+      pgraphics->fill_solid_rect(rCred,ARGB(255,250,240,10));
 
       r.deflate(m_iSize *2, m_iSize * 2);
 
@@ -64,7 +69,7 @@ namespace coincube
 
          if(m_iRefSize < 0)
          {
-          
+
             m_iRefSize = m_iSize;
 
          }
@@ -76,9 +81,9 @@ namespace coincube
 
          double dRate = (::get_tick_count() - m_dwLastGrow) / (dSlow * 2);
 
-         int iS = m_iRefSize * 1.25;
+         int iFinalSize = m_iRefSize * m_pview->m_dGrow;
 
-         m_iSize = m_iRefSize + (iS - m_iRefSize) * dRate;
+         m_iSize = m_iRefSize + (iFinalSize - m_iRefSize) * dRate;
 
          m_pview->on_layout();
 
@@ -87,9 +92,9 @@ namespace coincube
          {
 
             double dRate = (::get_tick_count() - m_dwLastGrow) / dSlow;
-            
+
             int iSize = m_iSize * 2 * dRate;
-            
+
             ::draw2d::brush_sp b2(allocer());
 
             b2->CreateRadialGradientBrush(pointd(m_pt.x,m_pt.y),sized(m_iSize * 8 + iSize,m_iSize * 8 + iSize),ARGB((byte)((255 - 220) * (1.0 - dRate) + 220),255,255,255),ARGB(84,255,255,255));
@@ -127,8 +132,10 @@ namespace coincube
 
             m_bGrow = false;
 
-            m_iSize = iS;
+            m_iSize = iFinalSize;
+
             m_iRefSize = -1;
+
          }
 
       }
@@ -138,5 +145,5 @@ namespace coincube
 
    }
 
-   
+
 } // namespace coincube

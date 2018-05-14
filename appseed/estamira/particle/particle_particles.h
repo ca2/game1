@@ -5,7 +5,7 @@ namespace particle
 {
 
 
-   class data
+   class CLASS_DECL_ESTAMIRA data
    {
    public:
 
@@ -44,11 +44,11 @@ namespace particle
    };
 
 
-   namespace generator
+   namespace  generator
    {
 
 
-      class generator :
+      class CLASS_DECL_ESTAMIRA generator :
          virtual public ::object
       {
       public:
@@ -66,7 +66,7 @@ namespace particle
 
    } // namespace generator
 
-   class emitter :
+   class CLASS_DECL_ESTAMIRA emitter :
       virtual public object
    {
    public:
@@ -87,7 +87,7 @@ namespace particle
 
    };
 
-   class updater :
+   class CLASS_DECL_ESTAMIRA updater :
       virtual public object
    {
    public:
@@ -97,7 +97,7 @@ namespace particle
       virtual void update(double dt, data *p) = 0;
    };
 
-   class system :
+   class CLASS_DECL_ESTAMIRA system :
       virtual public object
    {
    public:

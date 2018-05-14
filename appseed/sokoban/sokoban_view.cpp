@@ -173,7 +173,7 @@ namespace sokoban
 
       GetClientRect(rectClient);
 
-      pgraphics->FillSolidRect(rectClient, ARGB(0,255,255,255));
+      pgraphics->fill_solid_rect(rectClient, ARGB(0,255,255,255));
 
       int yOffset = 0;
       int yNextOffset;
@@ -193,7 +193,7 @@ namespace sokoban
             {
                if(iLevel != m_asset.m_iLevel)
                {
-                  pgraphics->FillSolidRect(0 - m_iSideBarWidth,yOffset * m_asset.m_iSize,rectClient.width() + m_iSideBarWidth,get_document()->m_levela[iLevel]->m_stra.get_count()* m_asset.m_iSize,ARGB(84,177,255,184));
+                  pgraphics->fill_solid_rect_dim(0 - m_iSideBarWidth,yOffset * m_asset.m_iSize,rectClient.width() + m_iSideBarWidth,get_document()->m_levela[iLevel]->m_stra.get_count()* m_asset.m_iSize,ARGB(84,177,255,184));
                }
             }
 

@@ -15,55 +15,45 @@ namespace coincube
    {
    public:
 
-      ::visual::dib_sp           m_dibCoin;
-      ::visual::dib_sp           m_dibMony;
-      ::visual::dib_sp           m_dibMon2;
+      ::visual::dib_sp                    m_dibCoin;
+      ::visual::dib_sp                    m_dibMony;
+      ::visual::dib_sp                    m_dibMon2;
+      double                              m_dGrow;
 
-      spa(coin)               m_money;
+      spa(coin)                           m_money;
 
-      sp(::multimedia::sound_track)      m_psound;
-      bool                    m_bGame;
-      int                     m_iCount;
-      int                     m_iPhase;
+      sp(::multimedia::sound_track)       m_psound;
+      bool                                m_bGame;
+      int                                 m_iCount;
+      int                                 m_iPhase;
 
-      string                  m_strServer;
-      mutex                   m_mutexWork;
-      mutex                   m_mutexDraw;
-      mutex                   m_mutexSwap;
+      string                              m_strServer;
+      mutex                               m_mutexWork;
+      mutex                               m_mutexDraw;
+      mutex                               m_mutexSwap;
 
-      ::draw2d::dib_sp        m_dibBk;
-      ::draw2d::dib_sp        m_dib1;
-      ::draw2d::dib_sp        m_dib2;
-      bool                    m_bDib1;
+      ::draw2d::dib_sp                    m_dibBk;
+      ::draw2d::dib_sp                    m_dib1;
+      ::draw2d::dib_sp                    m_dib2;
+      bool                                m_bDib1;
 
-      ::visual::fastblur      m_dib;
-      ::draw2d::dib_sp        m_dibColor;
-      ::visual::dib_sp        m_dibWork;
-
-      ::draw2d::font_sp       m_font;
-      string                  m_strHelloMultiverse;
-      int32_t                 m_iErrorAiFont;
-      void *                  m_faceAi; // FT_Face m_faceAi;
-
-
-      ::rect                  m_rectSpace;
-      ::rect                  m_rectCheckSpace;
-
-      byte                    m_bBkAlpha;
-
-
-      cube                    m_pot;
-
-
-      point                   m_ptFinal;
+      ::visual::fastblur                  m_dib;
+      ::draw2d::dib_sp                    m_dibColor;
+      ::visual::dib_sp                    m_dibWork;
+      ::rect                              m_rectSpace;
+      ::rect                              m_rectCheckSpace;
+      byte                                m_bBkAlpha;
+      cube                                m_pot;
+      point                               m_ptFinal;
+      ::particle::effect::array           m_effecta;
 
 
       view(::aura::application * papp);
-	   virtual ~view();
+      virtual ~view();
 
 
-	   virtual void assert_valid() const;
-	   virtual void dump(dump_context & dumpcontext) const;
+      virtual void assert_valid() const;
+      virtual void dump(dump_context & dumpcontext) const;
 
 
 

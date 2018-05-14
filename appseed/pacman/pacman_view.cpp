@@ -125,7 +125,7 @@ namespace pacman
 
       GetClientRect(rectClient);
 
-      pgraphicsParam->FillSolidRect(rectClient, ARGB(184,0,0,0));
+      pgraphicsParam->fill_solid_rect(rectClient, ARGB(184,0,0,0));
 
       //pgraphics->set_text_color(ARGB(255,255,255,255));
 
@@ -159,7 +159,7 @@ namespace pacman
 
       rectPacman.Align(align_center,rectClient);
 
-      pgraphicsParam->BitBlt(rectPacman,pdib->m_dib->get_graphics());
+      pgraphicsParam->draw(rectPacman,pdib->m_dib->get_graphics());
 
    }
 

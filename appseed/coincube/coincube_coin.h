@@ -9,12 +9,12 @@ namespace coincube
    {
    public:
 
-      
-      pointd          m_pt; // center
-      double         m_dAngle; // school x-y
-      int            m_iPhase;
-      int            m_iSpin;
-      view *m_pview;
+
+      pointd            m_pt;
+      double            m_dAngle;
+      int               m_iPhase;
+      int               m_iSpin;
+      view *            m_pview;
 
 
 

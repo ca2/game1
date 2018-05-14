@@ -765,8 +765,8 @@
     <ProjectReference Include="..\..\..\app\appseed\core\core.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\appseed\estamira\estamira.vcxproj">
-      <Project>{a33b9d31-3bfe-496c-a4f5-dc3086d5b27f}</Project>
+    <ProjectReference Include="..\estamira\estamira.vcxproj">
+      <Project>{2a6e9644-e659-4f8b-b8a4-db77461dc071}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

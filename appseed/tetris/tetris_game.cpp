@@ -865,19 +865,19 @@ namespace tetris
                {
                   //offCells[i][j] = cells[i][j];
                   //imageGraph.setColor();
-                  imageGraph.FillSolidRect((j * cellSizeInPixels), (i * cellSizeInPixels),
-                                           cellSizeInPixels, cellSizeInPixels, ARGB(255, 128, 128, 128));
-                  imageGraph.FillSolidRect((j * cellSizeInPixels) + 1, (i * cellSizeInPixels) + 1,
-                                           cellSizeInPixels - 1, cellSizeInPixels - 1, ARGB(255, 0, 0, 0));
+                  imageGraph.fill_solid_rect_dim((j * cellSizeInPixels), (i * cellSizeInPixels),
+                                                 cellSizeInPixels, cellSizeInPixels, ARGB(255, 128, 128, 128));
+                  imageGraph.fill_solid_rect_dim((j * cellSizeInPixels) + 1, (i * cellSizeInPixels) + 1,
+                                                 cellSizeInPixels - 1, cellSizeInPixels - 1, ARGB(255, 0, 0, 0));
                   if (cellsOverride[i][j] >= 0)
                   {
-                     imageGraph.FillSolidRect((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
-                                              cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cellsOverride[i][j]]);
+                     imageGraph.fill_solid_rect_dim((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
+                                                    cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cellsOverride[i][j]]);
                   }
                   else
                   {
-                     imageGraph.FillSolidRect((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
-                                              cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cells[i][j]]);
+                     imageGraph.fill_solid_rect_dim((j * cellSizeInPixels) + 2, (i * cellSizeInPixels) + 2,
+                                                    cellSizeInPixels - 3, cellSizeInPixels - 3, colors[cells[i][j]]);
                   }
                }
             }

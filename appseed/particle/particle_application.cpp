@@ -25,32 +25,29 @@ namespace particle
    bool application::init_instance()
    {
 
-      int iDefaultParticleCount = 100;
-      int iDefaultParticleLifeCount = 100;
+      //int iDefaultParticleCount = 100;
+      //int iDefaultParticleLifeCount = 100;
 
-      m_prendererfactory = canew(class renderer_factory(this));
-      m_peffectfactory = canew(effect::factory(this));
+      //sp(effect::effect) peffect;
 
-      sp(effect::effect) peffect;
+      //peffect = m_peffectfactory->create("tunnel");
+      //peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
+      //peffect->initializeRenderer();
+      //m_effecta.add(peffect);
 
-      peffect = m_peffectfactory->create("tunnel");
-      peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
-      peffect->initializeRenderer();
-      m_effecta.add(peffect);
+      //peffect = m_peffectfactory->create("attractors");
+      //peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
+      //peffect->initializeRenderer();
+      //m_effecta.add(peffect);
 
-      peffect = m_peffectfactory->create("attractors");
-      peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
-      peffect->initializeRenderer();
-      m_effecta.add(peffect);
+      //peffect = m_peffectfactory->create("fountain");
+      //peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
+      //peffect->initializeRenderer();
+      //m_effecta.add(peffect);
 
-      peffect = m_peffectfactory->create("fountain");
-      peffect->initialize(iDefaultParticleCount, iDefaultParticleLifeCount);
-      peffect->initializeRenderer();
-      m_effecta.add(peffect);
+      //m_iCurrentEffect = 2;
 
-      m_iCurrentEffect = 2;
-
-      m_peffect = m_effecta[m_iCurrentEffect];
+      //m_peffect = m_effecta[m_iCurrentEffect];
 
 
       System.factory().creatable_small < ::particle::pane_view >();
@@ -113,13 +110,6 @@ namespace particle
 
    }
 
-
-   renderer_factory & application::renderer_factory()
-   {
-
-      return *m_prendererfactory;
-
-   }
 
 } // namespace particle
 

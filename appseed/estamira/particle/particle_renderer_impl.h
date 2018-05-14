@@ -8,7 +8,7 @@ namespace particle
    class system;
 
 
-   class renderer_impl : public renderer
+   class CLASS_DECL_ESTAMIRA renderer_impl : public renderer
    {
    public:
 

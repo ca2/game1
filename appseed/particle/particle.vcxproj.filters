@@ -8,12 +8,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Source Files\particle">
-      <UniqueIdentifier>{a3548df6-f1f8-4750-8dfb-03262e239764}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\particle">
-      <UniqueIdentifier>{8b7fbd1a-7574-452e-b283-a4d5a12188f1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -48,33 +42,6 @@
     </ClCompile>
     <ClCompile Include="particle_main_frame.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_effect.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_particles.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_impl_renderer.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_renderer.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_updaters.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_effect_tunnel.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_effect_fountain.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_effect_attractor.cpp">
-      <Filter>Source Files\particle</Filter>
-    </ClCompile>
-    <ClCompile Include="particle\particle_generator.cpp">
-      <Filter>Source Files\particle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -113,42 +80,6 @@
     </ClInclude>
     <ClInclude Include="particle_main_frame.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_particles.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_renderer.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_updaters.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_effect_attractor.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_effect_effect.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_effect.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_effect_tunnel.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_effect_fountain.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\vec4.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_renderer_impl.h">
-      <Filter>Header Files\particle</Filter>
-    </ClInclude>
-    <ClInclude Include="particle\particle_generator.h">
-      <Filter>Header Files\particle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

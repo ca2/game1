@@ -9,7 +9,7 @@ namespace particle
    {
 
 
-      class EulerUpdater : public updater
+      class CLASS_DECL_ESTAMIRA EulerUpdater : public updater
       {
       public:
          vec4 m_globalAcceleration;
@@ -20,7 +20,7 @@ namespace particle
       };
 
       // collision with the floor :) todo: implement a collision model
-      class FloorUpdater : public updater
+      class CLASS_DECL_ESTAMIRA FloorUpdater : public updater
       {
       public:
          float m_floorY;
@@ -31,7 +31,7 @@ namespace particle
          virtual void update(double dt, data *p) override;
       };
 
-      class AttractorUpdater : public updater
+      class CLASS_DECL_ESTAMIRA AttractorUpdater : public updater
       {
       protected:
          array<vec4> m_attractors; // .w is force
@@ -44,14 +44,14 @@ namespace particle
          vec4 &get(size_t id) { return m_attractors[id]; }
       };
 
-      class BasicColorUpdater : public updater
+      class CLASS_DECL_ESTAMIRA BasicColorUpdater : public updater
       {
       public:
          BasicColorUpdater(::aura::application * papp) : ::object(papp), updater(papp) {}
          virtual void update(double dt, data *p) override;
       };
 
-      class PosColorUpdater : public updater
+      class CLASS_DECL_ESTAMIRA PosColorUpdater : public updater
       {
       public:
          vec4 m_minPos;
@@ -64,7 +64,7 @@ namespace particle
          virtual void update(double dt, data *p) override;
       };
 
-      class VelColorUpdater : public updater
+      class CLASS_DECL_ESTAMIRA VelColorUpdater : public updater
       {
       public:
          vec4 m_minVel;
@@ -75,7 +75,7 @@ namespace particle
          virtual void update(double dt, data *p) override;
       };
 
-      class BasicTimeUpdater : public updater
+      class CLASS_DECL_ESTAMIRA BasicTimeUpdater : public updater
       {
       public:
          BasicTimeUpdater(::aura::application * papp) : ::object(papp), updater(papp) {}

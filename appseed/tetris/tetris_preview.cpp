@@ -27,7 +27,7 @@ namespace tetris
       m_dib(allocer())
    {
 
-      
+
       //setBackground(colors[0]);
 
       //image = null;
@@ -88,16 +88,16 @@ namespace tetris
       // pickRotation
 
       //return retType;
-         int retRotation = curRotation;
-         curRotation = (int)System.math().RandRange(0,3);
+      int retRotation = curRotation;
+      curRotation = (int)System.math().RandRange(0,3);
 //         return retRotation;
 
-         if(protation != NULL)
-         {
-            *protation = retRotation;
-         }
+      if(protation != NULL)
+      {
+         *protation = retRotation;
+      }
 
-         redraw();
+      redraw();
 
    }
 
@@ -146,7 +146,7 @@ namespace tetris
       ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
       //imageGraph.setColor(colors[0]);
       m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
-      imageGraph.FillSolidRect(0,0,WIDTHINCELLS * CELLSIZEINPIXELS,HEIGHTINCELLS * CELLSIZEINPIXELS, colors[0]);
+      imageGraph.fill_solid_rect_dim(0,0,WIDTHINCELLS * CELLSIZEINPIXELS,HEIGHTINCELLS * CELLSIZEINPIXELS, colors[0]);
       drawBlock();
       //repaint();
    }
@@ -157,14 +157,14 @@ namespace tetris
    {
 
       ::draw2d::graphics & imageGraph = *m_dib->get_graphics();
-      imageGraph.FillSolidRect((x * CELLSIZEINPIXELS) + 1,(y * CELLSIZEINPIXELS) + 1, CELLSIZEINPIXELS - 2,CELLSIZEINPIXELS - 2, colors[color]);
+      imageGraph.fill_solid_rect_dim((x * CELLSIZEINPIXELS) + 1,(y * CELLSIZEINPIXELS) + 1, CELLSIZEINPIXELS - 2,CELLSIZEINPIXELS - 2, colors[color]);
    }
 
 
 
    //void _TetrisPreview::paint(int x, int y::draw2d::graphics * pgraphics)
    //{
-   //   pgraphics->BitBlt(0, 
+   //   pgraphics->BitBlt(0,
    //   while(!g.drawImage(image,0,0,this)) {};
    //}
 

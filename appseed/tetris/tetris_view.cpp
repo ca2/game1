@@ -147,8 +147,8 @@ namespace tetris
          m_dib.initialize(rectClient.size(),5);
          m_dib->Fill(0,0,0,0);
          m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
-         m_dib->get_graphics()->FillSolidRect(x,y,m_ppreview->m_dib->m_size.cx,m_ppreview->m_dib->m_size.cy,ARGB(255,23,23,23));
-         m_dib->get_graphics()->FillSolidRect(x,y + m_ppreview->m_dib->m_size.cy + 10,cxGame, cyGame,ARGB(255,23,23,23));
+         m_dib->get_graphics()->fill_solid_rect_dim(x,y,m_ppreview->m_dib->m_size.cx,m_ppreview->m_dib->m_size.cy,ARGB(255,23,23,23));
+         m_dib->get_graphics()->fill_solid_rect_dim(x,y + m_ppreview->m_dib->m_size.cy + 10,cxGame, cyGame,ARGB(255,23,23,23));
          int r = 3;
          int h = 18;
          ::rect rect1;

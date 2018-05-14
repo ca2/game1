@@ -216,8 +216,11 @@ namespace tictactoe
       }
       else
       {
-         pgraphicsParam->FillSolidRect(rectClient,ARGB(49,0x23,0x23,0x23));
+
+         pgraphicsParam->fill_solid_rect(rectClient,ARGB(49,0x23,0x23,0x23));
+
       }
+
       pgraphicsParam->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       pgraphicsParam->from(pdib->m_size,pdib->get_graphics(),SRCCOPY);
@@ -390,7 +393,7 @@ namespace tictactoe
 
          pgraphics->SetStretchBltMode(HALFTONE);
          pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
-         pgraphics->BitBlt(rectClient, m_dib->get_graphics());
+         pgraphics->draw(rectClient, m_dib->get_graphics());
 
       }
 //      Application.imaging().true_blend(pgraphics, null_point(), rectClient.size(), m_dib->get_graphics(), null_point());

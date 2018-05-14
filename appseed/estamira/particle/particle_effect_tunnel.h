@@ -9,7 +9,7 @@ namespace particle
    {
 
 
-      class tunnel : public effect
+      class CLASS_DECL_ESTAMIRA tunnel : public effect
       {
       private:
 

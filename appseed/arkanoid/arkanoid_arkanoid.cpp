@@ -24,10 +24,12 @@
 namespace arkanoid
 {
 
+
    arkanoid::arkanoid(::aura::application * papp) :
       ::object(papp),
       m_ball(papp),
-      m_dibBrick(allocer())
+      m_dibBrick(allocer()),
+      m_effecta(papp)
    {
 
       int wBrick = 60;
@@ -37,11 +39,11 @@ namespace arkanoid
       {
          ::rect r(0, 0, wBrick, wBrick);
          ::count c = 4;
-         m_dibBrick->get_graphics()->FillSolidRect(r, ARGB(255, 128, 140, 160));
+         m_dibBrick->get_graphics()->fill_solid_rect(r, ARGB(255, 128, 140, 160));
          for (index i = 0; i < c; i++)
          {
             int a = ((i + 1) * 123) / c;
-            m_dibBrick->get_graphics()->Draw3dRect(r, ARGB(a, 200, 200, 255), ARGB(a, 0, 0, 155));
+            m_dibBrick->get_graphics()->draw3d_rect(r, ARGB(a, 200, 200, 255), ARGB(a, 0, 0, 155));
             r.deflate(1, 1);
          }
 
@@ -103,7 +105,7 @@ namespace arkanoid
       m_dibBall0(papp->allocer()),
       m_dibBall(papp->allocer())
    {
-      
+
       if (m_dibBall0.load_from_matter("yellow_ball.png"))
       {
 
@@ -182,7 +184,7 @@ namespace arkanoid
    void arkanoid::Element::draw(::draw2d::graphics * pgraphics)
    {
 
-      pgraphics->FillSolidRect(m_rect, m_cr);
+      pgraphics->fill_solid_rect(m_rect, m_cr);
 
    }
 
@@ -272,7 +274,7 @@ namespace arkanoid
    {
 
 
-      pgraphics->BitBlt(m_rect, parkanoid->m_dibBrick->get_graphics());
+      pgraphics->draw(m_rect, parkanoid->m_dibBrick->get_graphics());
 
    }
 
@@ -284,7 +286,12 @@ namespace arkanoid
 
       mBrick.destroyed = true;
 
+      int iCount = System.math().RandRange(20, 40);
 
+      sp(particle::effect::effect) peffect = canew(particle::effect::random_color_range_fountain(get_app(), mBall.m_rect.center().x, mBall.m_rect.center().y));
+      peffect->initialize(200, iCount);
+      peffect->initializeRenderer();
+      m_effecta.add(peffect);
 
       float overlapLeft = mBall.m_rect.right - mBrick.m_rect.left;
       float overlapRight = mBrick.m_rect.right - mBall.m_rect.left;
@@ -331,16 +338,16 @@ namespace arkanoid
       double dt = 60.0 / 60.0;
 
       m_ball.update(dt, this);
-      
+
       m_paddle.update(dt, this);
-      
+
       testCollision(m_paddle, m_ball);
-      
+
       ::count cTotalDestroyed = 0;
-      
+
       for (auto & brick : m_bricks)
       {
-       
+
          testCollision(brick, m_ball);
 
       }
@@ -367,14 +374,15 @@ namespace arkanoid
       m_ball.draw(pgraphics);
 
       m_paddle.draw(pgraphics);
-      
+
       m_bricks.each([this, &pgraphics](Brick& mBrick)
-      { 
-         
-         return mBrick.draw(pgraphics, this); 
-      
+      {
+
+         return mBrick.draw(pgraphics, this);
+
       });
 
+      m_effecta.draw(pgraphics, windowWidth, windowHeight);
 
    }
 

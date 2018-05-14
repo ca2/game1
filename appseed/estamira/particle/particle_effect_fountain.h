@@ -9,7 +9,7 @@ namespace particle
    {
 
 
-      class fountain : public effect
+      class CLASS_DECL_ESTAMIRA fountain : public effect
       {
       public:
 
@@ -43,7 +43,7 @@ namespace particle
          int numActiveParticles() override { return m_psystem->numActiveParticles(); }
       };
 
-      class random_color_range_fountain : public fountain
+      class CLASS_DECL_ESTAMIRA random_color_range_fountain : public fountain
       {
       public:
 
@@ -62,6 +62,15 @@ namespace particle
 
       };
 
+      class CLASS_DECL_ESTAMIRA gold_color_fountain : public fountain
+      {
+      public:
+
+         gold_color_fountain(::aura::application * papp, int cx, int cy) : ::object(papp), fountain(papp, cx, cy) { }
+
+         virtual bool initialize_color_generator(generator::color::basic * pcolorbasic);
+
+      };
 
    } // namespace effect
 

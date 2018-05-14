@@ -171,6 +171,19 @@ namespace particle
          return true;
       }
 
+
+      bool gold_color_fountain::initialize_color_generator(generator::color::basic * pcolorbasic)
+      {
+         pcolorbasic->m_minStartCol = vec4{ 1.0, 1.0, 0.1, 1.0 };
+         pcolorbasic->m_maxStartCol = vec4{ 1.0, 1.0, 1.0, 1.0 };
+         pcolorbasic->m_minEndCol = vec4{ 1.0, 1.0, 0.1, 0.0 };
+         pcolorbasic->m_maxEndCol = vec4{ 1.0, 1.0, 1.0, 0.0 };
+
+         return true;
+      }
+
+
+
    } // namespace effect
 
 

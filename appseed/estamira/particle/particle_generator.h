@@ -13,7 +13,7 @@ namespace particle
       {
 
 
-         class box : public generator
+         class CLASS_DECL_ESTAMIRA box : public generator
          {
          public:
 
@@ -28,7 +28,7 @@ namespace particle
          };
 
 
-         class round : public generator
+         class CLASS_DECL_ESTAMIRA round : public generator
          {
          public:
 
@@ -58,7 +58,7 @@ namespace particle
       {
 
 
-         class basic : public generator
+         class CLASS_DECL_ESTAMIRA basic : public generator
          {
          public:
             vec4 m_minStartCol;
@@ -77,7 +77,7 @@ namespace particle
       namespace velocity
       {
 
-         class basic : public generator
+         class CLASS_DECL_ESTAMIRA basic : public generator
          {
          public:
             vec4 m_minStartVel;
@@ -88,7 +88,7 @@ namespace particle
             virtual void generate(double dt, data *p, size_t startId, size_t endId) override;
          };
 
-         class sphere : public generator
+         class CLASS_DECL_ESTAMIRA sphere : public generator
          {
          public:
             float m_minVel;
@@ -99,7 +99,7 @@ namespace particle
             virtual void generate(double dt, data *p, size_t startId, size_t endId) override;
          };
 
-         class from_pos : public generator
+         class CLASS_DECL_ESTAMIRA from_pos : public generator
          {
          public:
             vec4 m_offset;
@@ -124,7 +124,7 @@ namespace particle
       namespace time
       {
 
-         class basic : public generator
+         class CLASS_DECL_ESTAMIRA basic : public generator
          {
          public:
             float m_minTime;

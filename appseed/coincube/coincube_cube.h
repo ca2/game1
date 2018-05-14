@@ -10,16 +10,17 @@ namespace coincube
    public:
 
 
-      point          m_pt; // center
-      double         m_dAngle; // school x-y
+      point          m_pt;
+      double         m_dAngle;
       int            m_iSize;
       bool           m_bGrow;
       DWORD          m_dwLastGrow;
-      int            m_iRefSize;
-      view *m_pview;
+      view *         m_pview;
       int            m_iCredit;
+      int            m_iRefSize;
 
-      cube(::aura::application * papp);
+
+      cube(view * pview);
       virtual ~cube();
 
 

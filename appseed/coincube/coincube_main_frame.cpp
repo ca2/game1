@@ -11,8 +11,6 @@ namespace coincube
       ::estamira::main_frame(papp)
    {
 
-      //      m_dataid = "::core::coincube::main_frame";
-
       WfiEnableFullScreen();
 
       m_bWindowFrame = !Application.handler()->m_varTopicQuery.has_property("client_only");
