@@ -87,7 +87,7 @@ namespace user
          ev.m_eevent = ::user::event_after_change_cur_sel;
          ev.m_actioncontext = ::action::source_user;
 
-         BaseOnControlEvent(&ev);
+         on_control_event(&ev);
 
 
          data_set("sel",m_iSel);

@@ -161,7 +161,7 @@ namespace matchmaking
    }
 
 
-   bool pane_view::BaseOnControlEvent(::user::control_event * pevent)
+   void pane_view::on_control_event(::user::control_event * pevent)
    {
 
       if(m_pdocMenu != NULL && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0))

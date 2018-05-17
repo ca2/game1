@@ -27,7 +27,7 @@ namespace matchmaking
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 
-      virtual bool BaseOnControlEvent(::user::control_event * pevent);
+      virtual void on_control_event(::user::control_event * pevent);
 
 
    };

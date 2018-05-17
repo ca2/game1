@@ -45,7 +45,7 @@ namespace pacman
 
       virtual void on_request(::create * pcreate);
 
-      virtual bool BaseOnControlEvent(::user::control_event * pevent);
+      virtual void on_control_event(::user::control_event * pevent);
 
       virtual void on_create_split_view(::user::split_view * psplit);
 

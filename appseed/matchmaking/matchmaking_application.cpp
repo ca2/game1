@@ -589,7 +589,7 @@ namespace matchmaking
 //   }
 //
 //
-//   bool application::BaseOnControlEvent(::user::control_event * pevent)
+//   void application::on_control_event(::user::control_event * pevent)
 //   {
 //
 //      if(pevent->m_eevent == ::user::event_on_create_tab)
@@ -761,7 +761,7 @@ namespace matchmaking
 //
 //   }
 //
-//   bool application::BaseOnControlEvent(::user::control_event * pevent)
+//   void application::on_control_event(::user::control_event * pevent)
 //   {
 //
 //      if(m_pdocMenu != NULL && pview == m_pdocMenu->get_view(0))
