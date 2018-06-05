@@ -4,22 +4,21 @@
 namespace coincube
 {
 
+
    pane_view::pane_view(::aura::application * papp) :
       ::object(papp),
-      ::user::tab(papp),
-
       ::user::tab_view(papp),
       ::userex::pane_tab_view(papp),
       place_holder_container(papp)
    {
 
-
    }
+
 
    pane_view::~pane_view()
    {
-   }
 
+   }
 
 
    void pane_view::assert_valid() const

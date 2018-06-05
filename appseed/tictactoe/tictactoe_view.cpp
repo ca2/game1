@@ -30,8 +30,6 @@ namespace tictactoe
 
       m_strTicTacToe = "Hello Multiverse!!";
 
-      connect_command("new_game",&view::_001OnNewGame);
-
       m_parbitrator = new arbitrator(get_app());
 
       m_parbitrator->m_pboard = &m_board;
@@ -99,6 +97,10 @@ namespace tictactoe
 
       if(pcreate->m_bRet)
          return;
+
+      connect_command("new_game", &view::_001OnNewGame);
+
+
 
       __begin_thread(get_app(),&thread_proc_render,this,::multithreading::priority_normal,0,0,NULL);
 
@@ -652,7 +654,7 @@ namespace tictactoe
 
          m_dibBk.alloc(allocer());
 
-         m_dibBk->create(rectClient.size());
+         m_dibBk->create(rectClient.get_size());
 
          m_dibBk->Fill(0, 0, 0, 0);
 

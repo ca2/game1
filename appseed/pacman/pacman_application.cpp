@@ -144,18 +144,15 @@ namespace pacman
 
             Application.change_console(++Application.m_iConsole);
 
-            pevent->m_bProcessed = true;
             pevent->m_bRet = true;
 
 
-            return true;
+            return;
 
          }
 
 
       }
-
-      return false;
 
    }
 

@@ -144,7 +144,7 @@ namespace tetris
          int cyGame = Game.m_sizePage.cy;
 
          m_dib.alloc(allocer());
-         m_dib.initialize(rectClient.size(),5);
+         m_dib.initialize(rectClient.get_size(),5);
          m_dib->Fill(0,0,0,0);
          m_dib->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
          m_dib->get_graphics()->fill_solid_rect_dim(x,y,m_ppreview->m_dib->m_size.cx,m_ppreview->m_dib->m_size.cy,ARGB(255,23,23,23));
@@ -240,9 +240,7 @@ namespace tetris
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-
-
-      pgraphics->from(rectClient.size(),m_dib->get_graphics(),SRCCOPY);
+      pgraphics->from(rectClient.get_size(),m_dib->get_graphics(),SRCCOPY);
 
       pgraphics->set_text_color(ARGB(255,255,255,255));
       pgraphics->text_out(x + m_ppreview->m_dib->m_size.cx + 10,y,"Score:");
