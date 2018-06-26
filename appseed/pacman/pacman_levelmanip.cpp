@@ -40,25 +40,25 @@ namespace pacman
 
    void pacman::loadlevel()
    {
-//      synch_lock sl(&m_mutex);
+      //      synch_lock sl(&m_mutex);
       SetScreenColor(::console::BLACK);
       char curcharacter;
       SetTextColor(::console::WHITE);
-      _008SetCursorPos(-3,3);
+      _008SetCursorPos(-3, 3);
       cout << "1UP";
-      _008SetCursorPos(-3,9);
+      _008SetCursorPos(-3, 9);
       cout << "HIGH SCORE";
       m_player.scoreinc = 0;
       m_player.printscore();
-      _008SetCursorPos(0,0);
+      _008SetCursorPos(0, 0);
       m_player.left = 0;
-      for(int y = 0; y < LEVELHEIGHT; y++)
+      for (int y = 0; y < LEVELHEIGHT; y++)
       {
-         for(int x = 0; x < LEVELWIDTH; x++)
+         for (int x = 0; x < LEVELWIDTH; x++)
          {
             curcharacter = levelmap[y][x];
             SetTextColor(::console::DARKBLUE);
-            switch(curcharacter)
+            switch (curcharacter)
             {
             case 'X':
             {
@@ -154,39 +154,39 @@ namespace pacman
                curcharacter = '%';
             }
             }
-            if(curcharacter == '1')
+            if (curcharacter == '1')
                level[y][x] = char(201);
-            else if(curcharacter == '2')
+            else if (curcharacter == '2')
                level[y][x] = char(187);
-            else if(curcharacter == '3')
+            else if (curcharacter == '3')
                level[y][x] = char(200);
-            else if(curcharacter == '4')
+            else if (curcharacter == '4')
                level[y][x] = char(188);
-            else if(curcharacter == '5')
+            else if (curcharacter == '5')
                level[y][x] = char(205);
-            else if(curcharacter == '6')
+            else if (curcharacter == '6')
                level[y][x] = char(186);
-            else if(curcharacter == '!')
+            else if (curcharacter == '!')
                level[y][x] = char(218);
-            else if(curcharacter == '@')
+            else if (curcharacter == '@')
                level[y][x] = char(191);
-            else if(curcharacter == '#')
+            else if (curcharacter == '#')
                level[y][x] = char(192);
-            else if(curcharacter == '$')
+            else if (curcharacter == '$')
                level[y][x] = char(217);
-            else if(curcharacter == '%')
+            else if (curcharacter == '%')
                level[y][x] = char(196);
-            else if(curcharacter == '^')
+            else if (curcharacter == '^')
                level[y][x] = char(179);
-            else if(curcharacter == '~')
+            else if (curcharacter == '~')
                level[y][x] = char(209);
-            else if(curcharacter == '[')
+            else if (curcharacter == '[')
                level[y][x] = char(199);
-            else if(curcharacter == ']')
+            else if (curcharacter == ']')
                level[y][x] = char(182);
             cout << level[y][x];
          }
-         _008SetCursorPos(y + 1,0);
+         _008SetCursorPos(y + 1, 0);
       }
       play_sound("wait:beginning");
       initall();
@@ -194,13 +194,34 @@ namespace pacman
       m_player.printlives();
       Sleep(2000);
       printready();
-      multi_lock ml({&m_evRestart,&m_psound->m_eventEnd});
+      multi_lock ml({ &m_evRestart,&m_psound->m_eventEnd });
 
-      auto result = ml.lock(duration::infinite(),false);
 
-      if(result.signaled() && result.signaled_index() == 0)
+      while(true)
+      {
+
+      auto result = ml.lock(::millis(300), false);
+
+      if (!::get_thread_run())
+      {
+         break;
+      }
+      else if (result.timeout())
+      {
+
+      }
+      else if (result.signaled() && result.signaled_index() == 0)
       {
          _throw(::pacman::restart());
+         break;
+      }
+      else
+      {
+
+         break;
+
+      }
+
       }
    }
 
