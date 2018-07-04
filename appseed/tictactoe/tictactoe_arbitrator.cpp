@@ -82,8 +82,18 @@ namespace tictactoe
 
                pplayerCurrent->play();
 
-               sl.lock();
+               while (!sl.lock(millis(100)) && ::get_thread_run())
+               {
+                  Sleep(100);
+               }
 
+            }
+
+            if(!::get_thread_run())
+            { 
+            
+               return check_none;
+            
             }
 
             if(!m_bRun)
