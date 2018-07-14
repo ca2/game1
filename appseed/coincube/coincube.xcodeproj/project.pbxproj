@@ -469,7 +469,7 @@
 		9AD432281F219CA900E3E8D4 /* ace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ace.xcodeproj; path = /macos/app/appseed/aura/../ace/ace.xcodeproj; sourceTree = "<absolute>"; };
 		9AD4322B1F219CA900E3E8D4 /* aurapcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aurapcre.xcodeproj; path = /macos/app/appseed/aura/../../../third/appseed/pcre/aurapcre.xcodeproj; sourceTree = "<absolute>"; };
 		9AD4322E1F219CA900E3E8D4 /* atomiconv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = atomiconv.xcodeproj; path = /macos/app/appseed/aura/../../../third/appseed/iconv/atomiconv.xcodeproj; sourceTree = "<absolute>"; };
-		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app-core/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
 		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

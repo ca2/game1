@@ -505,7 +505,7 @@
 		07108A671B4C85B300A28F80 /* axiszlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axiszlib.xcodeproj; path = ../../../app/axis/zlib/axiszlib.xcodeproj; sourceTree = "<group>"; };
 		07108AE41B4C967700A28F80 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../app/appseed/aura/aura.xcodeproj; sourceTree = "<group>"; };
 		0751C8551921A9DA0099706E /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
-		07703CAC1B6FF23C009026EA /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
+		07703CAC1B6FF23C009026EA /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
 		0776D1CF1921740100F890ED /* app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app.xcodeproj; path = ../../../nodeapp/appseed/app/app.xcodeproj; sourceTree = "<group>"; };
 		077A02081B4D5758001C85FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078C352F1921758500354453 /* ios_app_core_hellomultiverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_app_core_hellomultiverse.app; sourceTree = BUILT_PRODUCTS_DIR; };

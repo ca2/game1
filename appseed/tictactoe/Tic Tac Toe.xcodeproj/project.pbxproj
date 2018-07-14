@@ -544,7 +544,7 @@
 		07D1B0AA1B6FBEA3004E8E35 /* axis_image_jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_jpeg.xcodeproj; path = ../../../app/axis/image_jpeg/axis_image_jpeg.xcodeproj; sourceTree = "<group>"; };
 		9A7443681D4D85460056CCC6 /* pcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pcre.xcodeproj; path = ../../../app/appseed/pcre/pcre.xcodeproj; sourceTree = "<group>"; };
 		9AD484DD1D5A97F400354801 /* game_tictactoe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_tictactoe.xcodeproj; sourceTree = "<group>"; };
-		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app-core/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

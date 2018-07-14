@@ -405,7 +405,7 @@
 		9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
 		9AB09B9F1D5B3D0400B5F2A0 /* audio_core_audio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_core_audio.xcodeproj; path = ../../../nodeapp/appseed/audio_core_audio/audio_core_audio.xcodeproj; sourceTree = "<group>"; };
 		9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_decode_wave.xcodeproj; path = "../../../app-core/appseed/audio_decode_wave/audio_decode_wave.xcodeproj"; sourceTree = "<group>"; };
-		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app-core/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
 		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
