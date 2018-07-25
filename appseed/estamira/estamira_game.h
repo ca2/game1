@@ -73,6 +73,8 @@ namespace estamira
 
       virtual void ScreenToClient(LPPOINT lppoint);
 
+      virtual void mouse_down(point pt);
+
       virtual void on_move_tick();
 
       virtual bool canMoveUp(int iChar, bool bPlatformCall = false);

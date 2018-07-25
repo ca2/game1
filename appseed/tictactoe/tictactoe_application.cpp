@@ -33,7 +33,7 @@ namespace tictactoe
       if(!::core::application::init_instance())
          return false;
 
-      set_local_data_key_modifier();
+      set_local_data();
 
       ::user::single_document_template* pDocTemplate;
       pDocTemplate = new ::user::single_document_template(

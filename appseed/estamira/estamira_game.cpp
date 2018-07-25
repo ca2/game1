@@ -169,6 +169,12 @@ namespace estamira
    }
 
 
+   void game::mouse_down(point pt)
+   {
+
+
+   }
+
 
    void game::_001OnLButtonDown(::message::message * pobj)
    {
@@ -178,6 +184,8 @@ namespace estamira
       m_pui->SetFocus();
 
       ScreenToClient(pt);
+
+      mouse_down(pt);
 
       if (m_charactera.get_count() <= 0)
       {

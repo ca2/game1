@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5e6c5c9a-ea1e-4f09-bdd9-6748c5d42e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metrowin">
+      <UniqueIdentifier>{a1aa55d8-ebc7-44fe-b7b4-0ce2f12de92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{9e6d638e-1732-4671-961d-746e62f95301}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package10.appxmanifest">
+      <Filter>Metrowin</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="w10_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="winmetro_game_tictactoe_TemporaryKey.pfx">
+      <Filter>Metrowin</Filter>
+    </None>
+    <None Include="assets\tictactoe.cpt">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="winmetro_game_game_of_life_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\ca2-2C-connright.PNG">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\ca2-5c-270.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\ca2-5c-558.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse70.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse150.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse310.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse310-150.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse620-300.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\StoreLogo.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe30.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe50.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe70.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe150.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe310.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe310-150.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\tictactoe620-300.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\HelloMultiverse30.scale-100.png" />
+    <Image Include="Assets\SplashScreen.scale-100.png" />
+  </ItemGroup>
+</Project>

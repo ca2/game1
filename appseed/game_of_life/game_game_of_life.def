@@ -1,0 +1,8 @@
+; game_game_of_life.def
+
+LIBRARY  "game_game_of_life"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+game_game_of_life_get_new_library
+

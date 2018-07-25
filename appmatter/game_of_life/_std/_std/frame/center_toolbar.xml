@@ -1,0 +1,3 @@
+<toolbar>
+	<button id="new_game" image="matter://frame/new.png" />
+</toolbar>
