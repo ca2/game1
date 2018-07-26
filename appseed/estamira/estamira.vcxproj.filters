@@ -77,6 +77,9 @@
     <ClInclude Include="particle\particle_effect_array.h">
       <Filter>Header Files\particle</Filter>
     </ClInclude>
+    <ClInclude Include="estamira_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -129,6 +132,9 @@
     </ClCompile>
     <ClCompile Include="particle\particle_effect_array.cpp">
       <Filter>Source Files\particle</Filter>
+    </ClCompile>
+    <ClCompile Include="estamira_view.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

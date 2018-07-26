@@ -546,6 +546,7 @@
     <ClInclude Include="estamira_game.h" />
     <ClInclude Include="estamira_main_frame.h" />
     <ClInclude Include="estamira_tileset.h" />
+    <ClInclude Include="estamira_view.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="particle\particle.h" />
     <ClInclude Include="particle\particle_effect.h" />
@@ -567,6 +568,7 @@
     <ClCompile Include="estamira_character.cpp" />
     <ClCompile Include="estamira_game.cpp" />
     <ClCompile Include="estamira_main_frame.cpp" />
+    <ClCompile Include="estamira_view.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">Create</PrecompiledHeader>

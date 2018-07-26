@@ -24,6 +24,7 @@ namespace game_of_life
    bool application::init_instance()
    {
 
+      System.factory().creatable_small < ::game_of_life::game >(System.type_info < ::estamira::game>());
       System.factory().creatable_small < ::game_of_life::pane_view >();
       System.factory().creatable_small < ::game_of_life::document >();
       System.factory().creatable_small < ::game_of_life::frame >();

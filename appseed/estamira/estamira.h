@@ -49,6 +49,8 @@ namespace estamira
 
 #include "estamira_main_frame.h"
 
+#include "estamira_view.h"
+
 
 
 

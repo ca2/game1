@@ -246,10 +246,11 @@ namespace game_of_life
       void initialize(int amount);
 
       virtual void mouse_down(point pt) override;
+      virtual void on_key_down(::user::e_key ekey) override;
 
       point point_to_cell(point pt);
       cell * get_cell(unsigned int x, unsigned int y);
-      void clear();
+      virtual void on_new_game() override;
       void update();
       virtual bool start(::user::interaction * pui);
 

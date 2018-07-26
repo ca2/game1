@@ -1,14 +1,15 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include <math.h>
 
 
-namespace game_of_life
+
+
+namespace estamira
 {
 
 
    view::view(::aura::application * papp) :
       ::object(papp),
-      ::estamira::view(papp),
       m_dib1(allocer()),
       m_dib2(allocer()),
       m_dib(allocer()),
@@ -19,21 +20,22 @@ namespace game_of_life
       m_mutexWork(papp),
       m_mutexSwap(papp)
    {
-
       m_iCount = 0;
-
       m_iPhase = 0;
+
 
       m_bGame = false;
 
       m_strHelloMultiverse = "Hello Multiverse!!";
 
+
+
       string str = THIS_FRIENDLY_NAME();
 
-      if(Application.handler()->m_varTopicQuery.has_property("bk_alpha") && Application.handler()->m_varTopicQuery["bk_alpha"].has_property(str))
+      if (Application.handler()->m_varTopicQuery.has_property("bk_alpha") && Application.handler()->m_varTopicQuery["bk_alpha"].has_property(str))
       {
 
-         m_bBkAlpha= MAX(0,MIN(255,((int)(Application.handler()->m_varTopicQuery["bk_alpha"][str].get_double() * 255.0))));
+         m_bBkAlpha = MAX(0, MIN(255, ((int)(Application.handler()->m_varTopicQuery["bk_alpha"][str].get_double() * 255.0))));
 
       }
       else
@@ -42,6 +44,7 @@ namespace game_of_life
          m_bBkAlpha = 255;
 
       }
+
 
    }
 
@@ -54,29 +57,26 @@ namespace game_of_life
 
    void view::assert_valid() const
    {
-
       ::user::impact::assert_valid();
-
    }
-
 
    void view::dump(dump_context & dumpcontext) const
    {
-
       ::user::impact::dump(dumpcontext);
-
    }
 
 
    void view::install_message_routing(::message::sender * psender)
    {
 
-      ::estamira::view::install_message_routing(psender);
+      //::backview::Interface::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
-      IGUI_MSG_LINK(WM_LBUTTONDOWN,psender,this,&view::_001OnLButtonDown);
-      IGUI_MSG_LINK(WM_LBUTTONUP,psender,this,&view::_001OnLButtonUp);
-      IGUI_MSG_LINK(WM_MOUSEMOVE,psender,this,&view::_001OnMouseMove);
+      ::user::impact::install_message_routing(psender);
+
+      IGUI_MSG_LINK(WM_CREATE, psender, this, &view::_001OnCreate);
+      IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &view::_001OnLButtonDown);
+      IGUI_MSG_LINK(WM_LBUTTONUP, psender, this, &view::_001OnLButtonUp);
+      IGUI_MSG_LINK(WM_MOUSEMOVE, psender, this, &view::_001OnMouseMove);
       IGUI_MSG_LINK(WM_KEYDOWN, psender, this, &view::_001OnKeyDown);
       IGUI_MSG_LINK(WM_KEYUP, psender, this, &view::_001OnKeyUp);
 
@@ -86,14 +86,30 @@ namespace game_of_life
    void view::_001OnCreate(::message::message * pobj)
    {
 
-      SCAST_PTR(::message::create,pcreate,pobj);
+      SCAST_PTR(::message::create, pcreate, pobj);
 
       pcreate->previous();
 
       if (pcreate->m_bRet)
          return;
 
-      GetMain()->Enable(true);
+      Application.m_pgame.alloc(allocer());
+
+      Game.start(this);
+
+
+      m_psound = new ::multimedia::sound_track(get_app());
+      m_psound->audio_plugin_initialize();
+
+      set_local_data();
+
+      initialize_data_client(Application.simpledb().get_data_server());
+      if (!m_bGame)
+      {
+         m_bGame = true;
+         //         new_game();
+
+      }
 
    }
 
@@ -133,11 +149,15 @@ namespace game_of_life
    void view::_001OnLButtonUp(::message::message * pobj)
    {
 
-      SCAST_PTR(::message::mouse,pmouse,pobj);
+      SCAST_PTR(::message::mouse, pmouse, pobj);
 
       point pt(pmouse->m_pt);
 
       ScreenToClient(&pt);
+
+      int i = -1;
+      int j = -1;
+
 
    }
 
@@ -145,7 +165,7 @@ namespace game_of_life
    void view::_001OnMouseMove(::message::message * pobj)
    {
 
-      SCAST_PTR(::message::mouse,pmouse,pobj);
+      SCAST_PTR(::message::mouse, pmouse, pobj);
 
       point pt(pmouse->m_pt);
 
@@ -155,18 +175,14 @@ namespace game_of_life
 
       GetClientRect(rectClient);
 
-
-
    }
 
 
    void view::on_update(::user::impact * pSender, LPARAM lHint, object* phint)
    {
-
       UNREFERENCED_PARAMETER(pSender);
       UNREFERENCED_PARAMETER(lHint);
       UNREFERENCED_PARAMETER(phint);
-
    }
 
 
@@ -174,12 +190,7 @@ namespace game_of_life
    void view::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
-      if (Application.m_pgame != NULL)
-      {
-
-         Application.m_pgame->_001OnDraw(pgraphics);
-
-      }
+      Application.m_pgame->_001OnDraw(pgraphics);
 
    }
 
@@ -202,7 +213,7 @@ namespace game_of_life
       rect rectClient;
       GetClientRect(rectClient);
 
-      if(rectClient.area() <= 0)
+      if (rectClient.area() <= 0)
          return;
 
       Game.on_layout();
@@ -220,7 +231,9 @@ namespace game_of_life
       return true;
 
    }
-} // namespace game_of_life
+
+
+} // namespace estamira
 
 
 

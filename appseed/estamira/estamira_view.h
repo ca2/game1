@@ -1,18 +1,15 @@
 #pragma once
 
 
-
-
-namespace game_of_life
+namespace estamira
 {
 
 
    class document;
 
 
-   class CLASS_DECL_GAME_GAME_OF_LIFE view :
-      virtual public ::estamira::view,
-      virtual public ::backview::user::impact
+   class CLASS_DECL_ESTAMIRA view :
+      virtual public ::user::impact
    {
    public:
 
@@ -82,7 +79,7 @@ namespace game_of_life
    };
 
 
-} // namespace game_of_life
+} // namespace estamira
 
 
 

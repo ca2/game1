@@ -97,13 +97,30 @@ namespace game_of_life
    void game::_001OnDraw(::draw2d::graphics * pgraphics)
    {
 
+      pgraphics->fill_solid_rect_dim(0, 0, WINDOWSIZE+1, WINDOWSIZE+1, ARGB(255, 255, 255, 255));
+
+      ::draw2d::pen_sp pen(allocer());
+
+      pen->create_solid(1.0, ARGB(250, 180, 180, 180));
+      pgraphics->SelectObject(pen);
+      for (int i = 0; i <= m_iAmount; i++)
+      {
+         pgraphics->move_to(0, i * m_iSize);
+         pgraphics->line_to(WINDOWSIZE, i * m_iSize);
+      }
+      for (int j = 0; j <= m_iAmount; j++)
+      {
+         pgraphics->move_to(j * m_iSize, 0);
+         pgraphics->line_to(j * m_iSize, WINDOWSIZE);
+      }
+
       for (int i = 0; i < m_iAmount; i++)
       {
-
          for (int j = 0; j < m_iAmount; j++)
          {
-
-            pgraphics->fill_solid_rect(m_field[i][j].m_rect, m_field[i][j].m_cr);
+            rect r = m_field[i][j].m_rect;
+            r.deflate(1, 1, 0, 0);
+            pgraphics->fill_solid_rect(r, m_field[i][j].m_cr);
 
          }
 
@@ -142,7 +159,7 @@ namespace game_of_life
          }
       }
 
-      clear();
+      on_new_game();
 
    }
 
@@ -270,9 +287,9 @@ namespace game_of_life
 
 
 
-   void game::clear()
+   void game::on_new_game()
    {
-
+      m_bOnPause = true;
       //cell.setFillColor(sf::Color(255, 255, 255));
       //if (size>1) cell.setOutlineThickness(-0.5);
       //cell.setOutlineColor(sf::Color(0, 0, 0));
@@ -281,7 +298,7 @@ namespace game_of_life
          for (int j = 0; j < m_iAmount; j++)
          {
 
-            m_field[i][j].m_rect = ::rect_dim(i * m_iSize, j * m_iSize, m_iSize, m_iSize);
+            m_field[i][j].m_rect = ::rect_dim(i * m_iCellSize, j * m_iCellSize, m_iCellSize, m_iCellSize);
 
             m_field[i][j].m_cr = ARGB(255, 255, 255, 255);
 
@@ -424,21 +441,32 @@ namespace game_of_life
    point game::point_to_cell(point pt)
    {
 
-      return point(pt.x/ m_iSize, pt.y/m_iSize);
+      return point(pt.x/ m_iCellSize, pt.y/m_iCellSize);
 
    }
+
+
+   void game::on_key_down(::user::e_key ekey)
+   {
+
+      m_bOnPause = !m_bOnPause;
+
+   }
+
 
    void game::mouse_down(point pt)
    {
 
-      point ptCell = point_to_cell(pt);
+      if (m_bOnPause)
+      {
 
-      push_cell(ptCell.x, ptCell.y);
+         point ptCell = point_to_cell(pt);
 
+         push_cell(ptCell.x, ptCell.y);
 
+      }
 
    }
-
 
 
 } // namespace game_of_life

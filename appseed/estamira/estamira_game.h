@@ -7,7 +7,7 @@ namespace estamira
 
    class CLASS_DECL_ESTAMIRA game :
       virtual public ::aura::drawable,
-      virtual public ::message::receiver,
+      virtual public command_target,
       virtual public timer_callback
    {
    public:
@@ -55,9 +55,13 @@ namespace estamira
       DECL_GEN_SIGNAL(_001OnLButtonDown);
       DECL_GEN_SIGNAL(_001OnLButtonUp);
       DECL_GEN_SIGNAL(_001OnMouseMove);
+      DECL_GEN_SIGNAL(_001OnNewGame);
 
       virtual void on_key_down(::user::e_key ekey);
       virtual void moveLeft(index iChar);
+
+
+      virtual void on_new_game();
 
       virtual void moveRight(index iChar);
 

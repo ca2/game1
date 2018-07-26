@@ -4,6 +4,7 @@
 namespace estamira
 {
 
+
    game::game(::aura::application * papp) :
       object(papp),
       m_dibPage(allocer()),
@@ -18,7 +19,7 @@ namespace estamira
       m_ptOffset = null_point();
 
       defer_create_mutex();
-      m_iMult = 4;
+      m_iMult = 1;
       m_iCurChar = -1;
 
       m_timer.m_pcallback = this;
@@ -31,13 +32,16 @@ namespace estamira
 
    }
 
+
    void game::install_message_routing(::message::sender * psender)
    {
+
       IGUI_MSG_LINK(WM_KEYDOWN, psender, this, &game::_001OnKeyDown);
       IGUI_MSG_LINK(WM_KEYUP, psender, this, &game::_001OnKeyUp);
       IGUI_MSG_LINK(WM_LBUTTONDOWN, psender, this, &game::_001OnLButtonDown);
       IGUI_MSG_LINK(WM_LBUTTONUP, psender, this, &game::_001OnLButtonUp);
       IGUI_MSG_LINK(WM_MOUSEMOVE, psender, this, &game::_001OnMouseMove);
+
 
    }
 
@@ -45,7 +49,14 @@ namespace estamira
    bool game::start(::user::interaction * pui)
    {
 
-      m_pui = pui;
+      if (pui != m_pui)
+      {
+
+         m_pui = pui;
+
+         m_pui->connect_command("new_game", this, &game::_001OnNewGame);
+
+      }
 
       install_message_routing(pui->m_pimpl);
 
@@ -462,6 +473,13 @@ namespace estamira
       if (!bPlatformCall)
       {
 
+         if (iChar >= m_charactera.get_count())
+         {
+
+            return false;
+
+         }
+
          return m_charactera[iChar]->get_rect(lprect);
 
       }
@@ -471,6 +489,22 @@ namespace estamira
          return false;
 
       }
+
+   }
+
+   void game::_001OnNewGame(::message::message * pobj)
+   {
+
+      pobj->m_bRet = true;
+      on_new_game();
+
+   }
+
+
+   void game::on_new_game()
+   {
+
+      start(m_pui);
 
    }
 

@@ -847,7 +847,7 @@ namespace tetris
 
       ::draw2d::graphics & imageGraph = *pgraphics;
 
-      int iSaveDC = pgraphics->SaveDC();
+      ::draw2d::savedc savedc(pgraphics);
 
       pgraphics->OffsetViewportOrg(m_ptOffset.x, m_ptOffset.y);
 
@@ -886,7 +886,7 @@ namespace tetris
       killed = 0;
 
 
-      pgraphics->RestoreDC(iSaveDC);
+//      pgraphics->RestoreDC(iSaveDC);
 
       //image.flush();
 
