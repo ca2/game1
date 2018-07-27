@@ -125,7 +125,7 @@ namespace matchmaking
       break;
       case PaneViewHelloMultiverse:
       {
-         sp(::user::document) pdoc =  Application.m_ptemplateHelloMultiverseView->open_document_file(NULL,true,pcreatordata->m_pholder);
+         sp(::user::document) pdoc =  Application.m_ptemplateHelloMultiverseView->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
          pcreatordata->m_eflag.signalize(::user::view_creator_data::flag_hide_all_others_on_show);
 
@@ -136,7 +136,7 @@ namespace matchmaking
       case PaneViewHelloMultiverseSwitcher:
       {
 
-         Application.m_ptemplateHelloMultiverseSwitcher->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateHelloMultiverseSwitcher->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
 
 
@@ -145,7 +145,7 @@ namespace matchmaking
       break;
       case PaneViewFontSel:
       {
-         Application.m_ptemplateHelloMultiverseFontSel->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateHelloMultiverseFontSel->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
 
       }

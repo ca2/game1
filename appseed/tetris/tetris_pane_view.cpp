@@ -65,7 +65,7 @@ namespace tetris
       case PaneViewTetris:
       {
 
-         Application.m_ptemplateTetrisView->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateTetrisView->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
       }
       break;

@@ -64,7 +64,7 @@ namespace tictactoe
       {
       case PaneViewHelloMultiverse:
          {
-            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
+            sp(::tictactoe::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(get_app(), NULL, true, pcreatordata->m_pholder));
             if(pdoc != NULL)
             {
                sp(::user::impact) pview = pdoc->get_view(0);

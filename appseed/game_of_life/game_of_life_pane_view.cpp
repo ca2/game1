@@ -65,7 +65,7 @@ namespace game_of_life
       {
       case PaneViewHelloMultiverse:
       {
-         sp(::game_of_life::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(NULL, true, pcreatordata->m_pholder));
+         sp(::game_of_life::document) pdoc =  (Application.m_ptemplateHelloMultiverseView->open_document_file(get_app(), NULL, true, pcreatordata->m_pholder));
          if(pdoc != NULL)
          {
             sp(::user::impact) pview = pdoc->get_view(0);

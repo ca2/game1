@@ -65,7 +65,7 @@ namespace pacman
       case PaneViewPacMan:
       {
 
-         Application.m_ptemplatePacManView->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplatePacManView->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
       }
       break;

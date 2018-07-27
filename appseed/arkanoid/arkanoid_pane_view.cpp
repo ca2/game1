@@ -62,7 +62,7 @@ namespace arkanoid
       {
       case PaneViewArkanoid:
       {
-         Application.m_ptemplateArkanoidView->open_document_file(NULL,true,pcreatordata->m_pholder);
+         Application.m_ptemplateArkanoidView->open_document_file(get_app(), NULL,true,pcreatordata->m_pholder);
 
 
       }
