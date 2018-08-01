@@ -34,7 +34,7 @@ namespace arch001
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::arch001::application > ())
+#define App(papp) (*papp->cast < ::arch001::application > ())
 #undef Gam
 #define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::arch001::game >())
 

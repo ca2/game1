@@ -21,7 +21,7 @@ namespace arkanoid
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::arkanoid::application > ())
+#define App(papp) (*papp->cast < ::arkanoid::application > ())
 
 #include "arkanoid_interface.h"
 #include "arkanoid_arkanoid.h"

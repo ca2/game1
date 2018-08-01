@@ -75,7 +75,7 @@ namespace tetris
 
       virtual void on_key_down(::user::e_key ekey) override;
 
-      virtual bool start(::user::interaction * pui);
+      virtual bool start(::user::impact * pview);
 
 
       void startBlock();

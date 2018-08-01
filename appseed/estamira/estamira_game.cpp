@@ -46,24 +46,24 @@ namespace estamira
    }
 
 
-   bool game::start(::user::interaction * pui)
+   bool game::start(::user::impact * pview)
    {
 
-      if (pui != m_pui)
+      if (pview != m_pview)
       {
 
-         m_pui = pui;
+         m_pview = pview;
 
-         m_pui->connect_command("new_game", this, &game::_001OnNewGame);
+         m_pview->connect_command("new_game", this, &game::_001OnNewGame);
 
       }
 
-      install_message_routing(pui->m_pimpl);
+      install_message_routing(m_pview->m_pimpl);
 
       m_timer.start(23, true);
 
 
-      m_pui->keyboard_set_focus();
+      m_pview->keyboard_set_focus();
 
       return true;
 
@@ -74,7 +74,7 @@ namespace estamira
 
       rect rectClient;
 
-      m_pui->GetClientRect(rectClient);
+      m_pview->GetClientRect(rectClient);
 
       if (rectClient.area() <= 0)
          return;
@@ -136,7 +136,7 @@ namespace estamira
 
       rect rectClient;
 
-      m_pui->GetClientRect(rectClient);
+      m_pview->GetClientRect(rectClient);
 
       if (rectClient.area() <= 0)
          return;
@@ -192,7 +192,7 @@ namespace estamira
       SCAST_PTR(::message::mouse, pmouse, pobj);
       point pt = pmouse->m_pt;
 
-      m_pui->SetFocus();
+      m_pview->SetFocus();
 
       ScreenToClient(pt);
 
@@ -209,7 +209,7 @@ namespace estamira
       if (m_iCurChar >= 0)
       {
          on_move_tick();
-         m_pui->SetCapture();
+         m_pview->SetCapture();
       }
 
       pmouse->m_bRet = true;
@@ -220,7 +220,7 @@ namespace estamira
    {
       SCAST_PTR(::message::mouse, pmouse, pobj);
       m_iCurChar = -1;
-      m_pui->ReleaseCapture();
+      m_pview->ReleaseCapture();
       if (m_iCurChar >= 0 && m_iCurChar < m_charactera.get_count())
       {
 
@@ -285,11 +285,11 @@ namespace estamira
       lppoint->x -= m_ptOffset.x;
       lppoint->y -= m_ptOffset.y;
 
-      m_pui->ScreenToClient(lppoint);
+      m_pview->ScreenToClient(lppoint);
 
       rect rectClient;
 
-      m_pui->GetClientRect(rectClient);
+      m_pview->GetClientRect(rectClient);
 
       if (rectClient.area() <= 0)
          return;
@@ -504,7 +504,7 @@ namespace estamira
    void game::on_new_game()
    {
 
-      start(m_pui);
+      start(m_pview);
 
    }
 

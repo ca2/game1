@@ -21,7 +21,7 @@ namespace tetris
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::tetris::application > ())
+#define App(papp) (*papp->cast < ::tetris::application > ())
 #undef Gam
 #define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::tetris::game >())
 

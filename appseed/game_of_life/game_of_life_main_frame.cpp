@@ -12,7 +12,6 @@ namespace game_of_life
    {
 
       set_pro_devian();
-      //      m_dataid = "::core::game_of_life::main_frame";
 
       WfiEnableFullScreen();
 

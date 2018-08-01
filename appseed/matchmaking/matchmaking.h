@@ -43,7 +43,7 @@ namespace matchmaking
 
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::matchmaking::application > ())
+#define App(papp) (*papp->cast < ::matchmaking::application > ())
 
 
 #include "user_font_list.h"

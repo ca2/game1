@@ -338,10 +338,10 @@ namespace tetris
    }
 
 
-   bool game::start(::user::interaction * pui)
+   bool game::start(::user::impact * pview)
    {
 
-      if (!estamira::game::start(pui))
+      if (!estamira::game::start(pview))
          return false;
 
       int coordX, coordY;

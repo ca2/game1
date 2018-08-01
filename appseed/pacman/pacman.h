@@ -25,7 +25,7 @@ namespace pacman
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::pacman::application > ())
+#define App(papp) (*papp->cast < ::pacman::application > ())
 
 
 #include "pacman_console.h"

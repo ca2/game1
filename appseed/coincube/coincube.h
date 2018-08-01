@@ -34,7 +34,7 @@ namespace coincube
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::coincube::application > ())
+#define App(papp) (*papp->cast < ::coincube::application > ())
 
 
 #include "coincube_coin.h"

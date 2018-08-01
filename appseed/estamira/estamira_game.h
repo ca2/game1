@@ -8,12 +8,13 @@ namespace estamira
    class CLASS_DECL_ESTAMIRA game :
       virtual public ::aura::drawable,
       virtual public command_target,
-      virtual public timer_callback
+      virtual public timer_callback,
+      virtual public serialize
    {
    public:
 
 
-      ::user::interaction *         m_pui;
+      ::user::impact *              m_pview;
       int                           m_iMult;
 
       spa(character)                m_charactera;
@@ -47,7 +48,7 @@ namespace estamira
 
       virtual void _001OnDraw(::draw2d::graphics * pgraphics);
 
-      virtual bool start(::user::interaction * pui);
+      virtual bool start(::user::impact * pview);
       virtual void on_layout();
 
       DECL_GEN_SIGNAL(_001OnKeyDown);

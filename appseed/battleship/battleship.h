@@ -47,7 +47,7 @@ namespace tictactoe
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::tictactoe::application > ())
+#define App(papp) (*papp->cast < ::tictactoe::application > ())
 
 
 #include "tictactoe_board.h"

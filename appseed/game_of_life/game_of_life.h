@@ -34,7 +34,7 @@ namespace game_of_life
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::game_of_life::application > ())
+#define App(papp) (*papp->cast < ::game_of_life::application > ())
 #undef Gam
 #define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::game_of_life::game >())
 

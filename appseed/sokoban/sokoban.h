@@ -21,7 +21,7 @@ namespace sokoban
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::sokoban::application > ())
+#define App(papp) (*papp->cast < ::sokoban::application > ())
 
 #include "sokoban_interface.h"
 #include "game/sokoban_block.h"

@@ -155,8 +155,6 @@ namespace game_of_life
 
       GetClientRect(rectClient);
 
-
-
    }
 
 
@@ -176,6 +174,8 @@ namespace game_of_life
 
       if (Application.m_pgame != NULL)
       {
+
+         synch_lock sl(Application.m_pgame->m_pmutex);
 
          Application.m_pgame->_001OnDraw(pgraphics);
 
@@ -210,16 +210,14 @@ namespace game_of_life
    }
 
 
-
-
-
-
    bool view::keyboard_focus_is_focusable()
    {
 
       return true;
 
    }
+
+
 } // namespace game_of_life
 
 

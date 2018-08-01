@@ -31,7 +31,7 @@ namespace estamira
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::estamira::application > ())
+#define App(papp) (*papp->cast < ::estamira::application > ())
 #undef Gam
 #define Gam(pbaseapp) (*App(pbaseapp).m_pgame.cast < ::estamira::game >())
 #undef Game

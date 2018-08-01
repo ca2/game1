@@ -40,6 +40,9 @@
     <ClCompile Include="game_of_life_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="aaa_want_to_remove_game_of_life_game1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -67,6 +70,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game_of_life_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game_of_life_game1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game_of_life_game.h">

@@ -21,7 +21,7 @@ namespace particle
 } // namespace flag
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::particle::application > ())
+#define App(papp) (*papp->cast < ::particle::application > ())
 
 #include "particle/particle.h"
 

@@ -12,7 +12,7 @@ namespace estamira
       m_iIndex = iIndex;
 
       m_dwUpTime = 1000;
-      
+
       m_ekeyLeft = ::user::key_left;
       m_ekeyUp = ::user::key_up;
       m_ekeyRight = ::user::key_right;
@@ -40,7 +40,7 @@ namespace estamira
 
       m_pgame = pgame;
 
-      install_message_routing(pgame->m_pui->m_pimpl);
+      install_message_routing(pgame->m_pview->m_pimpl);
 
       m_pt.x = 0;
       m_pt.y = 0;
@@ -101,7 +101,7 @@ namespace estamira
 
    void character::_001OnKeyDown(::message::message * pobj)
    {
-      
+
       SCAST_PTR(::message::key, pkey, pobj);
 
       if (pkey->m_ekey == m_ekeyUp)
@@ -158,9 +158,9 @@ namespace estamira
 
    void character::_001OnKeyUp(::message::message * pobj)
    {
-      
+
       SCAST_PTR(::message::key, pkey, pobj);
-    
+
       if (pkey->m_ekey == m_ekeyLeft)
       {
 
@@ -178,7 +178,7 @@ namespace estamira
             m_bRight = false;
 
          }
-            
+
       }
       else if (pkey->m_ekey == m_ekeyRight)
       {
@@ -285,7 +285,7 @@ namespace estamira
       SCAST_PTR(::message::mouse, pmouse, pobj);
       point pt = pmouse->m_pt;
    }
-    
+
    void character::on_key_move_tick()
    {
 
@@ -333,7 +333,7 @@ namespace estamira
 
       if (bEnd)
       {
-         
+
          moveX(0);
 
          return;
@@ -366,7 +366,7 @@ namespace estamira
          moveX(0);
 
       }
-      
+
    }
 
    bool character::get_rect(LPRECT lprect)
@@ -376,12 +376,12 @@ namespace estamira
       lprect->top = m_ptNow.y;
       lprect->left = m_ptNow.x + m_ts.m_il.m_size.cx;
       lprect->top = m_ptNow.y + m_ts.m_il.m_size.cy;
-      
+
       return true;
 
    }
 
-   
+
 
    int character::hit_test(point pt)
    {
