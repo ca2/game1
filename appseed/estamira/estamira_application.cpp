@@ -38,6 +38,8 @@ namespace estamira
    void application::term_instance()
    {
 
+      m_pgame.release();
+
       ::multimedia::application::term_instance();
 
    }

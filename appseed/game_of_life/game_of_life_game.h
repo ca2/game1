@@ -34,26 +34,15 @@ namespace game_of_life
 {
 
 
-   class RectangleShape
-   {
-   public:
-
-
-      rect           m_rect;
-      char           m_chColor;
-
-
-   };
-
-   class cell :
-      virtual public simple_object//is meant to be a part of two-dimensional array, looks like i'm retarded
+   class cell//is meant to be a part of two-dimensional array, looks like i'm retarded
    {
    public:
       char m_iAliveNeighbours = 0;
       char m_chState = 0;
-      RectangleShape * m_rect;
+      short x;
+      short y;
       int m_iStep = 0;
-      int x, y;
+
 
       void updateStep(int iStep) { this->m_iStep = iStep; };
       int getStep() { return this->m_iStep; }
@@ -62,10 +51,7 @@ namespace game_of_life
       void addNeighbour();
       void resetNeighbours();
       char getNeighbours();
-      void setRect(RectangleShape* rect);
-      RectangleShape* getRect();
 
-      virtual void io(stream & stream) override;
 
    };
 
@@ -75,8 +61,7 @@ namespace game_of_life
    public:
       int m_iGameMaxSize;
       array<cell*> m_aliveCells;
-      RectangleShape** m_field;
-      cell** m_cells;
+      array<cell> m_cells;
       int m_iAmount;
       int m_iCellSize;
       int m_iStep = 0;
@@ -104,7 +89,8 @@ namespace game_of_life
       void update();
       virtual void _001OnDraw(::draw2d::graphics * pgraphics) override;
       void push_cell(unsigned int x, unsigned int y);
-      cell * get_cell(unsigned int x, unsigned int y) { return &this->m_cells[x][y]; };
+      cell * get_cell(unsigned int x, unsigned int y) { return &this->m_cells[x+ y *m_iGameMaxSize]; };
+      rect get_rect(unsigned int x, unsigned int y) { return rect_dim(x * m_iCellSize, y * m_iCellSize, m_iCellSize, m_iCellSize); };
 
       virtual void io(stream & stream) override;
 

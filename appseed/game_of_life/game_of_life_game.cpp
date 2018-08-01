@@ -32,21 +32,11 @@ namespace game_of_life
 {
 
 
-   void cell::io(stream & stream)
-   {
-
-      stream(m_iAliveNeighbours);
-      stream(m_chState);
-      stream(m_rect->m_chColor);
-      stream(m_iStep);
-
-   }
-
    void cell::setState(char st)
    {
       m_chState = st;
-      int color = 255 * (1 - st);
-      if (m_rect) m_rect->m_chColor= color;
+      //int color = 255 * (1 - st);
+      //      m_chColor = color;
    }
    char cell::isAlive()
    {
@@ -65,14 +55,6 @@ namespace game_of_life
       return m_iAliveNeighbours;
    }
 
-   void cell::setRect(RectangleShape* rect)
-   {
-      m_rect = rect;
-   }
-   RectangleShape* cell::getRect()
-   {
-      return m_rect;
-   }
 
    game::game(::aura::application * papp) :
       object(papp),
@@ -83,28 +65,11 @@ namespace game_of_life
 
 
 
-      m_field = new RectangleShape*[m_iGameMaxSize];
+      m_cells.set_size(m_iGameMaxSize * m_iGameMaxSize);
 
-      m_cells = new cell*[m_iGameMaxSize];
+      set_amount(m_iGameMaxSize, false);
 
-      for (int i = 0; i < m_iGameMaxSize; i++)
-      {
-
-         m_field[i] = new RectangleShape[m_iGameMaxSize];
-
-         m_cells[i] = new cell[m_iGameMaxSize];
-
-         for (int j = 0; j < m_iGameMaxSize; j++)
-         {
-
-            m_cells[i][j].setRect(&m_field[i][j]);
-
-            m_cells[i][j].x = i;
-
-            m_cells[i][j].y = j;
-
-         }
-      }
+      clear();
 
       set_amount(150, false);
 
@@ -145,8 +110,6 @@ namespace game_of_life
 
       }
 
-
-
    }
 
 
@@ -183,144 +146,28 @@ namespace game_of_life
       ::multithreading::post_quit(m_pthread);
 
 
-      for (int i = 0; i < m_iAmount; i++)
-      {
-
-         if (m_field)
-         {
-
-            delete[] m_field[i];
-
-         }
-
-         if (m_cells)
-         {
-
-            delete[] m_cells[i];
-
-         }
-
-      }
-
-      if (m_field)
-      {
-
-         delete[] m_field;
-
-      }
-
-      if (m_cells)
-      {
-
-         delete[] m_cells;
-
-      }
-
-      m_field = NULL;
-
-      m_cells = NULL;
 
    }
 
    void game::io(stream & stream)
    {
 
-      stream(m_iGameMaxSize);
+      //stream(m_iGameMaxSize);
       stream(m_iAmount);
+      stream(m_iStep);
 
       try
       {
          if (is_storing())
          {
-            for (int i = 0; i < m_iGameMaxSize; i++)
-            {
-
-
-               for (int j = 0; j < m_iGameMaxSize; j++)
-               {
-
-                  //               stream(m_cells[i][j]);
-
-                  stream.m_spfile->write(&m_cells[i][j].m_iAliveNeighbours,1);
-                  stream.m_spfile->write(&m_cells[i][j].m_chState, 1);
-                  stream.m_spfile->write(&m_cells[i][j].m_rect->m_chColor, 1);
-                  stream.m_spfile->write(&m_cells[i][j].m_iStep, 4);
-
-
-               }
-            }
+            stream.write(m_cells.get_data(), sizeof(cell) *m_cells.size());
          }
          else
          {
-            for (int i = 0; i < m_iGameMaxSize; i++)
-            {
-
-
-               for (int j = 0; j < m_iGameMaxSize; j++)
-               {
-
-                  //               stream(m_cells[i][j]);
-
-                  stream.m_spfile->read(&m_cells[i][j].m_iAliveNeighbours, 1);
-                  stream.m_spfile->read(&m_cells[i][j].m_chState, 1);
-                  stream.m_spfile->read(&m_cells[i][j].m_rect->m_chColor, 1);
-                  stream.m_spfile->read(&m_cells[i][j].m_iStep, 4);
-
-
-               }
-            }
-
+            stream.read(m_cells.get_data(), sizeof(cell) *m_cells.size());
 
          }
 
-         ::count c;
-
-         if (is_storing())
-         {
-
-            c = m_aliveCells.get_count();
-
-            stream(c);
-
-            for (index i = 0; i < c; i++)
-            {
-
-               index x = m_aliveCells[i]->x;
-
-               index y = m_aliveCells[i]->y;
-
-               stream(x);
-
-               stream(y);
-
-            }
-
-         }
-         else
-         {
-            stream(c);
-
-            for (index i = 0; i < c; i++)
-            {
-
-               index x;
-
-               index y;
-
-               stream(x);
-
-               stream(y);
-
-               if (!stream.fail())
-               {
-
-                  m_aliveCells.add(&m_cells[x][y]);
-
-               }
-
-            }
-
-         }
 
       }
       catch (...)
@@ -335,37 +182,73 @@ namespace game_of_life
 
       }
 
+      for(index i = 0; i < m_iAmount; i++)
+      {
+         for (index j = 0; j < m_iAmount; j++)
+         {
+
+            if(get_cell(i, j)->isAlive())
+            {
+               m_aliveCells.add(get_cell(i, j));
+            }
+
+         }
+      }
+
    }
+
+
 
 
    void game::update()
    {
       synch_lock sl(m_pmutex);
-      std::vector<cell*> uncheckedCells = m_aliveCells;
-      std::vector<cell*> dyingCells;
+      array<cell*> uncheckedCells = m_aliveCells;
+      array<cell*> dyingCells;
       m_iStep++;
       m_aliveCells.clear();
       while (!uncheckedCells.empty())
       {
+
          cell* cell = uncheckedCells.last();
+
          uncheckedCells.pop_back();
+
          if (cell->isAlive())
          {
+
             cell->resetNeighbours();
+
             for (int i = -1; i <= 1; i++)
             {
+
                for (int j = -1; j <= 1; j++)
                {
+
                   if ((i != 0 || j != 0) && i + cell->x >= 0 && j + cell->y >= 0 && i + cell->x<m_iAmount && j + cell->y<m_iAmount)
                   {
-                     ::game_of_life::cell* curCell = &this->m_cells[cell->x + i][cell->y + j];
-                     if (curCell->isAlive()) cell->addNeighbour();
-                     else if (curCell->getStep() != m_iStep)uncheckedCells.push_back(curCell);
-                  };
+
+                     ::game_of_life::cell* curCell = get_cell(cell->x + i, cell->y + j);
+
+                     if (curCell->isAlive())
+                     {
+                        cell->addNeighbour();
+                     }
+                     else if (curCell->getStep() != m_iStep)
+                     {
+                        uncheckedCells.push_back(curCell);
+                     }
+                  }
                }
             }
-            if (cell->getNeighbours()<2 || cell->getNeighbours()>3) dyingCells.push_back(cell);
-            else m_aliveCells.push_back(cell);
+            if (cell->getNeighbours() < 2 || cell->getNeighbours() > 3)
+            {
+               dyingCells.push_back(cell);
+            }
+            else
+            {
+               m_aliveCells.push_back(cell);
+            }
             cell->updateStep(m_iStep);
             cell->resetNeighbours();
          }
@@ -376,7 +259,13 @@ namespace game_of_life
             {
                for (int j = -1; j <= 1; j++)
                {
-                  if ((i != 0 || j != 0) && i + cell->x >= 0 && j + cell->y >= 0 && i + cell->x<m_iAmount && j + cell->y<m_iAmount) if (this->m_cells[cell->x + i][cell->y + j].isAlive()) cell->addNeighbour();
+                  if ((i != 0 || j != 0) && i + cell->x >= 0 && j + cell->y >= 0 && i + cell->x < m_iAmount && j + cell->y < m_iAmount)
+                  {
+                     if (get_cell(cell->x + i, cell->y + j)->isAlive())
+                     {
+                        cell->addNeighbour();
+                     }
+                  }
                }
 
             }
@@ -397,66 +286,6 @@ namespace game_of_life
          n->setState(0);
       }
    }
-//int main(void)
-//{
-//   sf::ContextSettings settings;
-//   settings.antialiasingLevel = 0;
-//   sf::RenderWindow window(sf::VideoMode(m_iWindowSize, m_iWindowSize), "Life", sf::Style::Titlebar | sf::Style::Close, settings);
-//   window.setKeyRepeatEnabled(false);
-//   sf::Event event;
-//   int amount = 60;
-//   window.clear(sf::Color::Blue);
-//   int size = m_iWindowSize / amount;
-//   game curGame(amount);
-//   int drawnAlready = 0;
-//   bool onPause = true;
-//   sf::Clock clock;
-//   while (window.isOpen())
-//   {
-//      while (window.pollEvent(event))
-//      {
-//         if (event.type == sf::Event::Closed)
-//            window.close();
-//         if (event.type == sf::Event::MouseButtonPressed && onPause)
-//         {
-//            int x, y;
-//            x = (int)event.mouseButton.x / size;
-//            y = (int)event.mouseButton.y / size;
-//            curGame.push_cell(x, y);
-//         }
-//         if (event.type == sf::Event::KeyPressed)
-//         {
-//            if (event.key.code == sf::Keyboard::Space) onPause = !onPause;
-//            if (event.key.code == sf::Keyboard::Backspace)
-//            {
-//               onPause = 1;
-//               curGame.Clear();
-//            };
-//
-//         }
-//
-//      };
-//      if (clock.getElapsedTime()>sf::milliseconds(20))
-//      {
-//         if (drawnAlready)
-//         {
-//            if (!onPause)  curGame.Update();
-//         }
-//         else
-//         {
-//            drawnAlready = 1;
-//            curGame.Clear();
-//         }
-//         window.clear();
-//         curGame.Draw(&window);
-//
-//         clock.restart();
-//      }
-//      window.display();
-//
-//   };
-//   return 0;
-//}
 
    void game::_001OnDraw(::draw2d::graphics * pgraphics)
    {
@@ -482,9 +311,9 @@ namespace game_of_life
       {
          for (int j = 0; j < m_iAmount; j++)
          {
-            rect r = m_field[i][j].m_rect;
+            rect r = get_rect(i,j);
             r.deflate(1, 1, 0, 0);
-            char chColor = m_field[i][j].m_chColor;
+            char chColor = 255 * (1 - get_cell(i, j)->m_chState);
             pgraphics->fill_solid_rect(r, ARGB(255, chColor, chColor, chColor));
 
          }
@@ -496,10 +325,10 @@ namespace game_of_life
 
    void game::push_cell(unsigned int x, unsigned int y)
    {
-      if (!m_cells[x][y].isAlive())
+      if (!get_cell(x, y)->isAlive())
       {
-         m_aliveCells.add(&m_cells[x][y]);
-         m_cells[x][y].setState(1);
+         m_aliveCells.add(get_cell(x, y));
+         get_cell(x, y)->setState(1);
       }
       else
       {
@@ -509,7 +338,7 @@ namespace game_of_life
             if (m_aliveCells[i]->x == x && m_aliveCells[i]->y == y)
                m_aliveCells.erase(it);
          };
-         m_cells[x][y].setState(0);
+         get_cell(x, y)->setState(0);
       }
    }
 
@@ -548,76 +377,6 @@ namespace game_of_life
       });
 
 
-      //      return 0;
-
-      //remove_all_characters();
-
-      //add_new_character("male");
-
-      //auto * p = add_new_character("male");
-
-      //p->m_ekeyLeft = ::user::key_z;
-      //p->m_ekeyRight = ::user::key_x;
-      //p->m_ekeyUp = ::user::key_s;
-
-      //   sf::ContextSettings settings;
-      //   settings.antialiasingLevel = 0;
-      //   sf::RenderWindow window(sf::VideoMode(m_iWindowSize, m_iWindowSize), "Life", sf::Style::Titlebar | sf::Style::Close, settings);
-      //   window.setKeyRepeatEnabled(false);
-      //   sf::Event event;
-      //   int amount = 150;
-      //   window.clear(sf::Color::Blue);
-      //   int size = m_iWindowSize / amount;
-      //   Game curGame(amount);
-      //   sf::Time FPS;
-      //   int drawnAlready = 0;
-      //   bool m_bOnPause = true;
-      //   sf::Clock clock;
-      //   while (window.isOpen())
-      //   {
-      //      while (window.pollEvent(event))
-      //      {
-      //         if (event.type == sf::Event::Closed)
-      //            window.close();
-      //         if (event.type == sf::Event::MouseButtonPressed && m_bOnPause)
-      //         {
-      //            int x, y;
-      //            x = (int)event.mouseButton.x / size;
-      //            y = (int)event.mouseButton.y / size;
-      //            curGame.push_cell(x, y);
-      //         }
-      //         if (event.type == sf::Event::KeyPressed)
-      //         {
-      //            if (event.key.code == sf::Keyboard::Space) m_bOnPause = !m_bOnPause;
-      //            //   if (event.key.code==sf::Keyboard::Backspace)
-      //            //   {
-      //            //      m_bOnPause=1;
-      //            //       curGame.Clear();
-      //            //   };
-
-      //         }
-
-      //      };
-      //      FPS = clock.getElapsedTime();
-
-      //      if (FPS>sf::milliseconds(16))
-      //      {
-      //         if (drawnAlready)
-      //         {
-      //            if (!m_bOnPause&&FPS != sf::milliseconds(0))std::cout << 1 / FPS.asSeconds() << std::endl;
-      //            if (!m_bOnPause)  curGame.Update();
-      //         }
-      //         else
-      //         {
-      //            drawnAlready = 1;
-      //            curGame.Clear();
-      //         }
-      //         window.clear();
-      //         curGame.Draw(&window);
-
-      //         clock.restart();
-      //      }
-      //      window.display();
 
 
       return true;
@@ -633,20 +392,19 @@ namespace game_of_life
          for (int j = 0; j < m_iAmount; j++)
          {
 
-            m_field[i][j].m_rect = ::rect_dim(i * m_iCellSize, j * m_iCellSize, m_iCellSize, m_iCellSize);
+            get_cell(i, j)->m_iStep = 0;
 
-            m_field[i][j].m_chColor = 255;
+            get_cell(i, j)->setState(0);
 
-            m_cells[i][j].m_iStep = 0;
+            get_cell(i, j)->x = i;
 
-            m_cells[i][j].setState(0);
-
-
+            get_cell(i, j)->y = j;
 
          }
 
       }
    }
+
 
    void game::on_new_game()
    {
@@ -657,131 +415,6 @@ namespace game_of_life
    }
 
 
-   //void game::update()
-   //{
-
-   //   auto uncheckedCells = m_cellptraAlive;
-
-   //   array < cell * > dyingCells;
-
-   //   m_iStep++;
-
-   //   m_cellptraAlive.remove_all();
-
-   //   while (!uncheckedCells.empty())
-   //   {
-
-   //      cell * pcell = uncheckedCells.pop();
-
-   //      if (pcell->is_alive())
-   //      {
-
-   //         pcell->resetNeighbours();
-
-   //         for (int i = -1; i <= 1; i++)
-   //         {
-
-   //            for (int j = -1; j <= 1; j++)
-   //            {
-
-   //               if ((i != 0 || j != 0) && i + pcell->x >= 0 && j + pcell->y >= 0 && i + pcell->x<m_iAmount && j + pcell->y<m_iAmount)
-   //               {
-
-   //                  cell * pcellCur = &m_cells[pcell->x + i][pcell->y + j];
-
-   //                  if (pcellCur->is_alive())
-   //                  {
-
-   //                     pcell->add_neighbour();
-
-   //                  }
-   //                  else if (pcellCur->get_step() != this->m_iStep)
-   //                  {
-
-   //                     uncheckedCells.add(pcellCur);
-
-   //                  }
-
-   //               }
-
-   //            }
-
-   //         }
-
-   //         if (pcell->getNeighbours() < 2 || pcell->getNeighbours() > 3)
-   //         {
-
-   //            dyingCells.add(pcell);
-
-   //         }
-   //         else
-   //         {
-
-   //            m_cellptraAlive.add(pcell);
-
-   //         }
-
-   //         pcell->update_step(m_iStep);
-
-   //         pcell->resetNeighbours();
-
-   //      }
-   //      else
-   //      {
-
-   //         pcell->resetNeighbours();
-
-   //         for (int i = -1; i <= 1; i++)
-   //         {
-
-   //            for (int j = -1; j <= 1; j++)
-   //            {
-
-   //               if ((i != 0 || j != 0) && i + pcell->x >= 0 && j + pcell->y >= 0 && i + pcell->x < m_iAmount && j + pcell->y < m_iAmount)
-   //               {
-
-   //                  if (m_cells[pcell->x + i][pcell->y + j].is_alive())
-   //                  {
-
-   //                     pcell->add_neighbour();
-
-   //                  }
-
-   //               }
-   //            }
-
-   //         }
-
-   //         if (pcell->getNeighbours()>2)
-   //         {
-
-   //            this->m_cellptraAlive.push_back(pcell);
-
-   //         }
-
-   //         pcell->update_step(m_iStep);
-
-   //         pcell->resetNeighbours();
-
-   //      }
-
-   //   }
-
-   //   for (auto & cell : m_cellptraAlive)
-   //   {
-
-   //      cell->set_state(1);
-
-   //   }
-
-   //   for (auto & cell : dyingCells)
-   //   {
-
-   //      cell->set_state(0);
-
-   //   }
-
-   //}
 
 
    point game::point_to_cell(point pt)
@@ -807,7 +440,24 @@ namespace game_of_life
       if (ekey == ::user::key_space)
       {
 
+         synch_lock sl(m_pmutex);
+
          m_bOnPause = !m_bOnPause;
+
+         if (!m_bOnPause)
+         {
+            for (int i = 0; i < m_iAmount; i++)
+            {
+               for (int j = 0; j < m_iAmount; j++)
+               {
+
+                  get_cell(i, j)->m_iStep = 0;
+
+               }
+
+            }
+            m_iStep = 0;
+         }
 
       }
       else if (ekey == ::user::key_delete)
