@@ -30,7 +30,7 @@ namespace coincube
       System.factory().creatable_small < ::coincube::main_frame >();
       System.factory().creatable_small < ::coincube::view >();
 
-      set_local_data_key_modifier();
+      set_local_data();
 
       if(!::estamira::application::init_instance())
          return false;
