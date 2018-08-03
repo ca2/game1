@@ -17,7 +17,7 @@ namespace arch001
 
       /// virtual void _001OnDraw(::draw2d::graphics * pgraphics);
 
-      virtual bool start(::user::interaction * pui);
+      virtual bool start(::user::impact * pview);
       //DECL_GEN_SIGNAL(_001OnKeyDown);
       //DECL_GEN_SIGNAL(_001OnKeyUp);
       //virtual void update_movex();
