@@ -16,7 +16,6 @@
 		9A342C031D5B6DA900D00D4A /* game_of_life_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BF01D5B6DA900D00D4A /* game_of_life_document.h */; };
 		9A342C041D5B6DA900D00D4A /* game_of_life_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF11D5B6DA900D00D4A /* game_of_life_frame.cpp */; };
 		9A342C051D5B6DA900D00D4A /* game_of_life_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BF21D5B6DA900D00D4A /* game_of_life_frame.h */; };
-		9A342C061D5B6DA900D00D4A /* game_of_life_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF31D5B6DA900D00D4A /* game_of_life_game.cpp */; };
 		9A342C071D5B6DA900D00D4A /* game_of_life_game.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BF41D5B6DA900D00D4A /* game_of_life_game.h */; };
 		9A342C081D5B6DA900D00D4A /* game_of_life_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF51D5B6DA900D00D4A /* game_of_life_main_frame.cpp */; };
 		9A342C091D5B6DA900D00D4A /* game_of_life_main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BF61D5B6DA900D00D4A /* game_of_life_main_frame.h */; };
@@ -28,6 +27,7 @@
 		9A342C0F1D5B6DA900D00D4A /* game_of_life_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BFC1D5B6DA900D00D4A /* game_of_life_view.h */; };
 		9A342C111D5B6DA900D00D4A /* game_of_life.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BFF1D5B6DA900D00D4A /* game_of_life.h */; };
 		9A342C621D5B6F5900D00D4A /* libestamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342C611D5B6F5900D00D4A /* libestamira.dylib */; };
+		9A47F2E6212B7BDC003498F7 /* game_of_life_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF31D5B6DA900D00D4A /* game_of_life_game.cpp */; };
 		9AB09D001D5B4A0500B5F2A0 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */; };
 		9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */; };
 		9AB09D031D5B4A2300B5F2A0 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D021D5B4A2300B5F2A0 /* libaura.dylib */; };
@@ -43,7 +43,6 @@
 		9AF2A8891D5C013400E6D5ED /* game_of_life_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BED1D5B6DA900D00D4A /* game_of_life_application.cpp */; };
 		9AF2A88A1D5C013400E6D5ED /* game_of_life_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BEF1D5B6DA900D00D4A /* game_of_life_document.cpp */; };
 		9AF2A88B1D5C013400E6D5ED /* game_of_life_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF11D5B6DA900D00D4A /* game_of_life_frame.cpp */; };
-		9AF2A88C1D5C013400E6D5ED /* game_of_life_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF31D5B6DA900D00D4A /* game_of_life_game.cpp */; };
 		9AF2A88D1D5C013400E6D5ED /* game_of_life_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF51D5B6DA900D00D4A /* game_of_life_main_frame.cpp */; };
 		9AF2A88E1D5C013400E6D5ED /* game_of_life_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF71D5B6DA900D00D4A /* game_of_life_pane_view_update_hint.cpp */; };
 		9AF2A88F1D5C013400E6D5ED /* game_of_life_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A342BF91D5B6DA900D00D4A /* game_of_life_pane_view.cpp */; };
@@ -76,6 +75,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
 			remoteInfo = estamira_iosTests;
+		};
+		9A47F2A6212B7063003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47EFF9212B653E003498F7 /* estamira.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
+			remoteInfo = estamira;
 		};
 		9AB09CF81D5B49EF00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -149,6 +155,7 @@
 		9A342BFF1D5B6DA900D00D4A /* game_of_life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_of_life.h; sourceTree = "<group>"; };
 		9A342C611D5B6F5900D00D4A /* libestamira.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libestamira.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-osx-bqoljdwkcininccxchpkzyoewsjx/Build/Products/Debug/libestamira.dylib"; sourceTree = "<group>"; };
 		9A47EFF9212B653E003498F7 /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
+		9A47F2E4212B7671003498F7 /* aaa_want_to_remove_game_of_life_game1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_want_to_remove_game_of_life_game1.cpp; sourceTree = "<group>"; };
 		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
@@ -219,6 +226,7 @@
 		07A9A8231B5CA6E800B63035 /* game_of_life */ = {
 			isa = PBXGroup;
 			children = (
+				9A47F2E4212B7671003498F7 /* aaa_want_to_remove_game_of_life_game1.cpp */,
 				9A342BED1D5B6DA900D00D4A /* game_of_life_application.cpp */,
 				9A342BEE1D5B6DA900D00D4A /* game_of_life_application.h */,
 				9A342BEF1D5B6DA900D00D4A /* game_of_life_document.cpp */,
@@ -402,6 +410,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A47F2A7212B7063003498F7 /* PBXTargetDependency */,
 				9AB09CFF1D5B49FD00B5F2A0 /* PBXTargetDependency */,
 			);
 			name = game_game_of_life;
@@ -516,7 +525,6 @@
 				9AF2A8891D5C013400E6D5ED /* game_of_life_application.cpp in Sources */,
 				9AF2A88A1D5C013400E6D5ED /* game_of_life_document.cpp in Sources */,
 				9AF2A88B1D5C013400E6D5ED /* game_of_life_frame.cpp in Sources */,
-				9AF2A88C1D5C013400E6D5ED /* game_of_life_game.cpp in Sources */,
 				9AF2A88D1D5C013400E6D5ED /* game_of_life_main_frame.cpp in Sources */,
 				9AF2A88E1D5C013400E6D5ED /* game_of_life_pane_view_update_hint.cpp in Sources */,
 				9AF2A88F1D5C013400E6D5ED /* game_of_life_pane_view.cpp in Sources */,
@@ -540,7 +548,7 @@
 				9A342C081D5B6DA900D00D4A /* game_of_life_main_frame.cpp in Sources */,
 				07A9A8881B5CA6E800B63035 /* framework.cpp in Sources */,
 				9A342C021D5B6DA900D00D4A /* game_of_life_document.cpp in Sources */,
-				9A342C061D5B6DA900D00D4A /* game_of_life_game.cpp in Sources */,
+				9A47F2E6212B7BDC003498F7 /* game_of_life_game.cpp in Sources */,
 				9A342C0C1D5B6DA900D00D4A /* game_of_life_pane_view.cpp in Sources */,
 				9A342C0E1D5B6DA900D00D4A /* game_of_life_view.cpp in Sources */,
 				9A342C001D5B6DA900D00D4A /* game_of_life_application.cpp in Sources */,
@@ -552,6 +560,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A47F2A7212B7063003498F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = estamira;
+			targetProxy = 9A47F2A6212B7063003498F7 /* PBXContainerItemProxy */;
+		};
 		9AB09CFF1D5B49FD00B5F2A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = multimedia;

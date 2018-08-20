@@ -11,8 +11,7 @@ namespace game_of_life
 
 
    class CLASS_DECL_GAME_GAME_OF_LIFE view :
-      virtual public ::estamira::view,
-      virtual public ::backview::user::impact
+      virtual public ::estamira::view
    {
    public:
 

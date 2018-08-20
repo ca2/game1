@@ -28,15 +28,89 @@ Adapted to ca2 framework: camilo@ca2.email, camilocc@gmail.com
 #include "framework.h"
 
 
+
+
 namespace game_of_life
 {
 
 
+   COLORREF get_color(e_state estate)
+   {
+      
+      switch(estate)
+      {
+         case state_hatching:
+            return ARGB(255, 170, 20, 170);
+         case state_surviving:
+            return ARGB(255, 0, 0, 0);
+         case state_dying:
+            return ARGB(255, 30, 172, 30);
+         case state_dying2:
+            return ARGB(255, 90, 202, 90);
+         case state_dying3:
+            return ARGB(255, 150, 232, 150);
+         case state_dying4:
+            return ARGB(255, 210, 252, 210);
+         case state_dead:
+            return ARGB(255, 255, 255, 255);
+      }
+      
+   }
+
    void cell::setState(char st)
    {
+
+      e_state estate = state_dead;
+      
+      if (this->m_iStep!=0)
+      {
+         
+         if (!this->m_chState)
+         {
+            
+            if (st)
+            {
+               
+               estate = state_hatching;
+               
+            }
+            
+         }
+         else
+         {
+            
+            if (st)
+            {
+            
+               estate = state_surviving;
+               
+            }
+            else
+            {
+            
+               estate = state_dying;
+               
+            }
+            
+         }
+         
+      }
+      else
+      {
+         
+         if (st)
+         {
+      
+            estate = state_surviving;
+               
+         }
+         
+      }
+      
+      m_estate = estate;
+      
       m_chState = st;
-      //int color = 255 * (1 - st);
-      //      m_chColor = color;
+      
    }
    char cell::isAlive()
    {
@@ -202,9 +276,30 @@ namespace game_of_life
 
    void game::update()
    {
+      
+      if(m_iDying > 0)
+      {
+         
+         e_state estate = (e_state) (state_dying + m_iDying);
+         
+         for(auto cell :m_dyingCells)
+         {
+         
+            cell->m_estate = estate;
+            
+         }
+
+         m_iDying++;
+         if(m_iDying > 4)
+         {
+            m_iDying = 0;
+         }
+         return;
+      }
+      
       synch_lock sl(m_pmutex);
       array<cell*> uncheckedCells = m_aliveCells;
-      array<cell*> dyingCells;
+      m_dyingCells.clear();
       m_iStep++;
       m_aliveCells.clear();
       while (!uncheckedCells.empty())
@@ -243,7 +338,7 @@ namespace game_of_life
             }
             if (cell->getNeighbours() < 2 || cell->getNeighbours() > 3)
             {
-               dyingCells.push_back(cell);
+               m_dyingCells.push_back(cell);
             }
             else
             {
@@ -281,10 +376,12 @@ namespace game_of_life
       {
          n->setState(1);
       }
-      for (auto & n : dyingCells)
+      for (auto & n : m_dyingCells)
       {
          n->setState(0);
       }
+      m_iDying = 1;
+
    }
 
    void game::_001OnDraw(::draw2d::graphics * pgraphics)
@@ -294,6 +391,8 @@ namespace game_of_life
 
       ::draw2d::pen_sp pen(allocer());
 
+      if(m_bOnPause)
+      {
       pen->create_solid(1.0, ARGB(250, 180, 180, 180));
       pgraphics->SelectObject(pen);
       for (int i = 0; i <= m_iAmount; i++)
@@ -306,6 +405,7 @@ namespace game_of_life
          pgraphics->move_to(j * m_iCellSize, 0);
          pgraphics->line_to(j * m_iCellSize, m_iWindowSize);
       }
+      }
 
       for (int i = 0; i < m_iAmount; i++)
       {
@@ -313,9 +413,16 @@ namespace game_of_life
          {
             rect r = get_rect(i,j);
             r.deflate(1, 1, 0, 0);
-            char chColor = 255 * (1 - get_cell(i, j)->m_chState);
-            pgraphics->fill_solid_rect(r, ARGB(255, chColor, chColor, chColor));
+            if(m_bProper)
+            {
+               char chColor = 255 * (1 - get_cell(i, j)->m_chState);
+               pgraphics->fill_solid_rect(r, ARGB(255, chColor, chColor, chColor));
+            }
+            else
+            {
+               pgraphics->fill_solid_rect(r, get_color(get_cell(i, j)->m_estate));
 
+            }
          }
 
       }
@@ -371,7 +478,7 @@ namespace game_of_life
             //drawnAlready = 1;
             //curGame.Clear();
             //}
-            Sleep(300);
+            Sleep(50);
          }
 
       });
@@ -395,6 +502,8 @@ namespace game_of_life
             get_cell(i, j)->m_iStep = 0;
 
             get_cell(i, j)->setState(0);
+            
+            get_cell(i, j)->m_estate = state_dead;
 
             get_cell(i, j)->x = i;
 

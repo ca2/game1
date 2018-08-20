@@ -17,32 +17,33 @@
 //  Copyright (c) 2013 Camilo Sasuke Tsumanuma. All rights reserved.
 //
 
-#include "core/core/core.h"
-#include "aura/aura/os/macos/macos.h"
+#include "aura/aura/app/aura.inl"
+//#include "core/core/core.h"
+//#include "aura/aura/os/macos/macos.h"
 
 
-int main(int argc, char *argv[])
-{
-   
-   if(!defer_core_init())
-      return -1;
-
-
-   int iResult = base_main_command_line(": app=game/game_of_life", argc, argv);
-   
-   try
-   {
-      
-      defer_core_term();
-      
-   }
-   catch(...)
-   {
-      
-   }
-   
-   return iResult;
-   
-}
-
+//int main(int argc, char *argv[])
+//{
+//
+//   if(!defer_core_init())
+//      return -1;
+//
+//
+//   int iResult = base_main_command_line(": app=game/game_of_life", argc, argv);
+//
+//   try
+//   {
+//
+//      defer_core_term();
+//
+//   }
+//   catch(...)
+//   {
+//
+//   }
+//
+//   return iResult;
+//
+//}
+//
 

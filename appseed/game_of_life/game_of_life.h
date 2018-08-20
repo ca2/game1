@@ -3,7 +3,6 @@
 
 #include "estamira/estamira.h"
 #include "core/user/userex/userex.h"
-#include "app-core/appseed/gcom/gcom/gcom.h"
 
 
 #ifdef _GAME_GAME_OF_LIFE_LIBRARY

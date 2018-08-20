@@ -20,6 +20,7 @@
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
 		07EF5CCB1B72C2C200863D39 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A243F1B6E772400BF6C7D /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A342C5F1D5B6EC100D00D4A /* libgame_game_of_life.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A342BE41D5B6D1600D00D4A /* libgame_game_of_life.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A47F2E1212B7251003498F7 /* libaudio_core_audio.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A47F2DC212B723F003498F7 /* libaudio_core_audio.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB09BBA1D5B3FB900B5F2A0 /* libmultimedia.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB09BBC1D5B400A00B5F2A0 /* libaudio_decode_wave.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AB09BAC1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD484FA1D5A9BBC00354801 /* libwndfrm_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -223,6 +224,27 @@
 			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
 			remoteInfo = estamira_iosTests;
 		};
+		9A47F2DB212B723F003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteInfo = audio_core_audio;
+		};
+		9A47F2DD212B723F003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AF4C48F1F83DD7500197385;
+			remoteInfo = ios_audio_core_audio;
+		};
+		9A47F2DF212B7246003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteInfo = audio_core_audio;
+		};
 		9AB09B951D5B3C8B00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */;
@@ -344,6 +366,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				9A47F2E1212B7251003498F7 /* libaudio_core_audio.dylib in CopyFiles */,
 				9A342C5F1D5B6EC100D00D4A /* libgame_game_of_life.dylib in CopyFiles */,
 				9AB09BBC1D5B400A00B5F2A0 /* libaudio_decode_wave.dylib in CopyFiles */,
 				9AB09BBA1D5B3FB900B5F2A0 /* libmultimedia.dylib in CopyFiles */,
@@ -376,6 +399,7 @@
 		07C6AA261CA4F3A700B4E555 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = macos/main.cpp; sourceTree = SOURCE_ROOT; };
 		9A342BDB1D5B6D1600D00D4A /* game_game_of_life.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_game_of_life.xcodeproj; sourceTree = "<group>"; };
 		9A47F01A212B6562003498F7 /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
+		9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_core_audio.xcodeproj; path = ../../../app/appseed/audio_core_audio/audio_core_audio.xcodeproj; sourceTree = "<group>"; };
 		9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
 		9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_decode_wave.xcodeproj; path = "../../../app-core/appseed/audio_decode_wave/audio_decode_wave.xcodeproj"; sourceTree = "<group>"; };
 		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
@@ -406,6 +430,7 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
+				9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */,
 				9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */,
 				076A24081B6E772400BF6C7D /* aura.xcodeproj */,
 				076A240B1B6E772400BF6C7D /* axis.xcodeproj */,
@@ -533,6 +558,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A47F2D6212B723E003498F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A47F2DC212B723F003498F7 /* libaudio_core_audio.dylib */,
+				9A47F2DE212B723F003498F7 /* libios_audio_core_audio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9AB09B901D5B3C8A00B5F2A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +622,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A47F2E0212B7246003498F7 /* PBXTargetDependency */,
 				9A342C5C1D5B6EAF00D00D4A /* PBXTargetDependency */,
 				9AB09BB41D5B3D7000B5F2A0 /* PBXTargetDependency */,
 				9AB09B9E1D5B3CEE00B5F2A0 /* PBXTargetDependency */,
@@ -653,6 +688,10 @@
 			productRefGroup = 070B8EEB1B6E53F900D26137 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 9A47F2D6212B723E003498F7 /* Products */;
+					ProjectRef = 9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */;
+				},
 				{
 					ProductGroup = 9AB09BA61D5B3D6500B5F2A0 /* Products */;
 					ProjectRef = 9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */;
@@ -855,6 +894,20 @@
 			remoteRef = 9A47F024212B6562003498F7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9A47F2DC212B723F003498F7 /* libaudio_core_audio.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libaudio_core_audio.dylib;
+			remoteRef = 9A47F2DB212B723F003498F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A47F2DE212B723F003498F7 /* libios_audio_core_audio.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_audio_core_audio.a;
+			remoteRef = 9A47F2DD212B723F003498F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -1015,6 +1068,11 @@
 			name = game_game_of_life;
 			targetProxy = 9A342C5B1D5B6EAF00D00D4A /* PBXContainerItemProxy */;
 		};
+		9A47F2E0212B7246003498F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = audio_core_audio;
+			targetProxy = 9A47F2DF212B7246003498F7 /* PBXContainerItemProxy */;
+		};
 		9AB09B9E1D5B3CEE00B5F2A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = multimedia;
@@ -1158,7 +1216,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game-game_of_life";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game.game-of-life";
 				PRODUCT_NAME = "Game of Life";
 			};
 			name = Debug;
@@ -1171,7 +1229,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game-game_of_life";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.game.game-of-life";
 				PRODUCT_NAME = "Game of Life";
 			};
 			name = Release;

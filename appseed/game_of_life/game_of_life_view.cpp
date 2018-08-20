@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include <math.h>
 
 
@@ -92,8 +92,6 @@ namespace game_of_life
 
       if (pcreate->m_bRet)
          return;
-
-      GetMain()->Enable(true);
 
    }
 

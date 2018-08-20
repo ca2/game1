@@ -17,7 +17,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "game_of_life.app"
+            BuildableName = "Game of Life.app"
             BlueprintName = "Game of Life"
             ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>
@@ -40,7 +40,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "game_of_life.app"
+            BuildableName = "Game of Life.app"
             BlueprintName = "Game of Life"
             ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>
@@ -58,7 +58,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "game_of_life.app"
+            BuildableName = "Game of Life.app"
             BlueprintName = "Game of Life"
             ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>

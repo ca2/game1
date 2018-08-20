@@ -37,10 +37,6 @@ namespace game_of_life
       ::estamira::game(papp)
    {
 
-      m_field = NULL;
-
-      m_cells = NULL;
-
       m_bOnPause = true;
 
    }
@@ -62,52 +58,17 @@ namespace game_of_life
       ::multithreading::post_quit(m_pthread);
 
 
-      for (int i = 0; i < m_iAmount; i++)
-      {
 
-         if (m_field)
-         {
-
-            delete[] m_field[i];
-
-         }
-
-         if (m_cells)
-         {
-
-            delete[] m_cells[i];
-
-         }
-
-      }
-
-      if (m_field)
-      {
-
-         delete[] m_field;
-
-      }
-
-      if (m_cells)
-      {
-
-         delete[] m_cells;
-
-      }
-
-      m_field = NULL;
-
-      m_cells = NULL;
 
    }
 
 
    void game::push_cell(unsigned int x, unsigned int y)
    {
-      if (!m_cells[x][y].is_alive())
+      if (!get_cell(x, y)->is_alive())
       {
-         m_cellptraAlive.push_back(&m_cells[x][y]);
-         m_cells[x][y].set_state(1);
+         m_cellptraAlive.push_back(get_cell(x, y));
+         get_cell(x, y)->set_state(1);
       }
       else
       {
@@ -123,15 +84,15 @@ namespace game_of_life
                it++;
             }
          };
-         m_cells[x][y].set_state(0);
+         get_cell(x, y)->set_state(0);
       }
    }
 
 
-   cell * game::get_cell(unsigned int x, unsigned int y)
-   {
-      return &m_cells[x][y];
-   }
+//   cell * game::get_cell(unsigned int x, unsigned int y)
+  // {
+    //  return &get_cell(x, y)->;
+  // }
 
 
 

@@ -29,16 +29,28 @@
 
 
 
-
 namespace game_of_life
 {
 
+   enum e_state : char
+   {
+      
+      state_hatching,
+      state_surviving,
+      state_dying,
+      state_dying2,
+      state_dying3,
+      state_dying4,
+      state_dead,
+
+   };
 
    class cell//is meant to be a part of two-dimensional array, looks like i'm retarded
    {
    public:
       char m_iAliveNeighbours = 0;
       char m_chState = 0;
+      e_state m_estate = state_dead;
       short x;
       short y;
       int m_iStep = 0;
@@ -59,8 +71,13 @@ namespace game_of_life
       virtual public ::estamira::game
    {
    public:
+      
+      bool     m_bProper;
+      
+      int      m_iDying;
       int m_iGameMaxSize;
       array<cell*> m_aliveCells;
+      array<cell*> m_dyingCells;
       array<cell> m_cells;
       int m_iAmount;
       int m_iCellSize;
