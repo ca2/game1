@@ -22,7 +22,7 @@
 		9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430701D5B9EA200D00D4A /* libios_axis.dylib */; };
 		9A3430761D5B9EA200D00D4A /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430711D5B9EA200D00D4A /* libios_base.dylib */; };
 		9A3430771D5B9EA200D00D4A /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430721D5B9EA200D00D4A /* libios_core.dylib */; };
-		9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */; };
+		9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */; };
 		9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
 		9AD485D41D5A9D7A00354801 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485871D5A9D7700354801 /* framework.h */; };
 		9AD485D81D5A9D7A00354801 /* tetris_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859C1D5A9D7700354801 /* tetris_application.cpp */; };
@@ -177,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				9A34309A1D5BA0ED00D00D4A /* libapp_core_hellomultiverse.a in Frameworks */,
 				9A3430731D5B9EA200D00D4A /* libios_ace.dylib in Frameworks */,
 				9A3430741D5B9EA200D00D4A /* libios_aura.dylib in Frameworks */,
 				9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */,
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */,
-				9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */,
+				9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */,
 				9AD486151D5AA02200354801 /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -407,7 +407,7 @@
 		9AEB759B16F78DF10085103B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					9AE24E981904CFFD001AEFFB = {
@@ -448,10 +448,10 @@
 			remoteRef = 9AD486101D5AA02200354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.dylib */ = {
+		9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libapp_core_hellomultiverse.dylib;
+			path = libapp_core_hellomultiverse.a;
 			remoteRef = 9AD486121D5AA02200354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -649,14 +649,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -709,14 +717,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

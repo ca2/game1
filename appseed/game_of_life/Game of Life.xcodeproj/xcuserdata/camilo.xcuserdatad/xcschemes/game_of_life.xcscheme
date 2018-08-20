@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -18,8 +18,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
             BuildableName = "game_of_life.app"
-            BlueprintName = "game_of_life"
-            ReferencedContainer = "container:game_of_life.xcodeproj">
+            BlueprintName = "Game of Life"
+            ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -41,8 +41,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
             BuildableName = "game_of_life.app"
-            BlueprintName = "game_of_life"
-            ReferencedContainer = "container:game_of_life.xcodeproj">
+            BlueprintName = "Game of Life"
+            ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -59,8 +59,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
             BuildableName = "game_of_life.app"
-            BlueprintName = "game_of_life"
-            ReferencedContainer = "container:game_of_life.xcodeproj">
+            BlueprintName = "Game of Life"
+            ReferencedContainer = "container:Game of Life.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

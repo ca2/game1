@@ -29,12 +29,11 @@
 		9A342C111D5B6DA900D00D4A /* game_of_life.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A342BFF1D5B6DA900D00D4A /* game_of_life.h */; };
 		9A342C621D5B6F5900D00D4A /* libestamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A342C611D5B6F5900D00D4A /* libestamira.dylib */; };
 		9AB09D001D5B4A0500B5F2A0 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */; };
-		9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */; };
+		9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */; };
 		9AB09D031D5B4A2300B5F2A0 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D021D5B4A2300B5F2A0 /* libaura.dylib */; };
 		9AB09D051D5B4A2800B5F2A0 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D041D5B4A2800B5F2A0 /* libaxis.dylib */; };
 		9AB09D071D5B4A2F00B5F2A0 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */; };
 		9AB09D091D5B4A3500B5F2A0 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D081D5B4A3500B5F2A0 /* libcore.dylib */; };
-		9AB09D1B1D5B4BC900B5F2A0 /* libgcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D141D5B4BB700B5F2A0 /* libgcom.dylib */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
@@ -54,10 +53,30 @@
 		9AF2A8AE1D5C018200E6D5ED /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8A91D5C018200E6D5ED /* libios_base.dylib */; };
 		9AF2A8AF1D5C018200E6D5ED /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8AA1D5C018200E6D5ED /* libios_core.dylib */; };
 		9AF2A8B01D5C018200E6D5ED /* libios_estamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A8AB1D5C018200E6D5ED /* libios_estamira.dylib */; };
-		9AF2AA2F1D5C04D600E6D5ED /* libios_gcom.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D161D5B4BB700B5F2A0 /* libios_gcom.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A47F000212B653E003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47EFF9212B653E003498F7 /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = estamira;
+		};
+		9A47F002212B653E003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47EFF9212B653E003498F7 /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_estamira;
+		};
+		9A47F004212B653E003498F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A47EFF9212B653E003498F7 /* estamira.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = estamira_iosTests;
+		};
 		9AB09CF81D5B49EF00B5F2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AB09CF21D5B49EF00B5F2A0 /* multimedia.xcodeproj */;
@@ -86,34 +105,6 @@
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
 			remoteInfo = multimedia;
 		};
-		9AB09D131D5B4BB700B5F2A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = gcom;
-		};
-		9AB09D151D5B4BB700B5F2A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_gcom;
-		};
-		9AB09D171D5B4BB700B5F2A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = gcom_iosTests;
-		};
-		9AB09D191D5B4BC300B5F2A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = gcom;
-		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
@@ -121,54 +112,12 @@
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = app_core_hellomultiverse_ios;
 		};
-		9AF2A8C21D5C025400E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
-			remoteInfo = ios_gcom;
-		};
 		9AF2A8C41D5C025400E6D5ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AB09CF21D5B49EF00B5F2A0 /* multimedia.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 07B6578D190F3CAF002DAADE;
 			remoteInfo = ios_multimedia;
-		};
-		9AF2A8CC1D5C025900E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
-			remoteInfo = estamira;
-		};
-		9AF2A8CE1D5C025900E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
-			remoteInfo = ios_estamira;
-		};
-		9AF2A8D01D5C025900E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
-			remoteInfo = estamira_iosTests;
-		};
-		9AF2A8D21D5C025F00E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
-			remoteInfo = ios_estamira;
-		};
-		9AF2A8D61D5C026900E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
-			remoteInfo = estamira;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -199,6 +148,7 @@
 		9A342BFC1D5B6DA900D00D4A /* game_of_life_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_of_life_view.h; sourceTree = "<group>"; };
 		9A342BFF1D5B6DA900D00D4A /* game_of_life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_of_life.h; sourceTree = "<group>"; };
 		9A342C611D5B6F5900D00D4A /* libestamira.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libestamira.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-osx-bqoljdwkcininccxchpkzyoewsjx/Build/Products/Debug/libestamira.dylib"; sourceTree = "<group>"; };
+		9A47EFF9212B653E003498F7 /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
 		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
@@ -209,7 +159,6 @@
 		9AB09D041D5B4A2800B5F2A0 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = ../../../app/appseed/axis/build/Debug/libaxis.dylib; sourceTree = "<group>"; };
 		9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = ../../../app/appseed/base/build/Debug/libbase.dylib; sourceTree = "<group>"; };
 		9AB09D081D5B4A3500B5F2A0 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = ../../../app/appseed/core/build/Debug/libcore.dylib; sourceTree = "<group>"; };
-		9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libgame_game_of_life.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_game_of_life.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* game_game_of_life_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_game_of_life_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,7 +173,6 @@
 		9AF2A8A91D5C018200E6D5ED /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-ios-fvkesstseiuvxaailshqhsemyyrk/Build/Products/Debug-iphonesimulator/libios_base.dylib"; sourceTree = "<group>"; };
 		9AF2A8AA1D5C018200E6D5ED /* libios_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_core.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-ios-fvkesstseiuvxaailshqhsemyyrk/Build/Products/Debug-iphonesimulator/libios_core.dylib"; sourceTree = "<group>"; };
 		9AF2A8AB1D5C018200E6D5ED /* libios_estamira.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_estamira.dylib; path = "../../../app/appseed/estamira/build/Debug-iphoneos/libios_estamira.dylib"; sourceTree = "<group>"; };
-		9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../../../app/appseed/estamira/estamira.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,13 +180,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF2AA2F1D5C04D600E6D5ED /* libios_gcom.dylib in Frameworks */,
 				9AF2A8AC1D5C018200E6D5ED /* libios_aura.dylib in Frameworks */,
 				9AF2A8AD1D5C018200E6D5ED /* libios_axis.dylib in Frameworks */,
 				9AF2A8AE1D5C018200E6D5ED /* libios_base.dylib in Frameworks */,
 				9AF2A8AF1D5C018200E6D5ED /* libios_core.dylib in Frameworks */,
 				9AF2A8B01D5C018200E6D5ED /* libios_estamira.dylib in Frameworks */,
-				9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.dylib in Frameworks */,
+				9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A342C621D5B6F5900D00D4A /* libestamira.dylib in Frameworks */,
-				9AB09D1B1D5B4BC900B5F2A0 /* libgcom.dylib in Frameworks */,
 				9AB09D091D5B4A3500B5F2A0 /* libcore.dylib in Frameworks */,
 				9AB09D071D5B4A2F00B5F2A0 /* libbase.dylib in Frameworks */,
 				9AB09D051D5B4A2800B5F2A0 /* libaxis.dylib in Frameworks */,
@@ -296,22 +242,22 @@
 			name = game_of_life;
 			sourceTree = "<group>";
 		};
-		9AB09CF31D5B49EF00B5F2A0 /* Products */ = {
+		9A47EFFA212B653E003498F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */,
-				9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */,
-				9AB09CFD1D5B49EF00B5F2A0 /* multlimedia_iosTests.xctest */,
+				9A47F001212B653E003498F7 /* libestamira.dylib */,
+				9A47F003212B653E003498F7 /* libios_estamira.dylib */,
+				9A47F005212B653E003498F7 /* estamira_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AB09D0E1D5B4BB700B5F2A0 /* Products */ = {
+		9AB09CF31D5B49EF00B5F2A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AB09D141D5B4BB700B5F2A0 /* libgcom.dylib */,
-				9AB09D161D5B4BB700B5F2A0 /* libios_gcom.dylib */,
-				9AB09D181D5B4BB700B5F2A0 /* gcom_iosTests.xctest */,
+				9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */,
+				9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */,
+				9AB09CFD1D5B49EF00B5F2A0 /* multlimedia_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,8 +314,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */,
-				9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */,
+				9A47EFF9212B653E003498F7 /* estamira.xcodeproj */,
 				9AB09CF21D5B49EF00B5F2A0 /* multimedia.xcodeproj */,
 				07A9A8231B5CA6E800B63035 /* game_of_life */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
@@ -384,16 +329,6 @@
 				9AEB75A316F78DF10085103B /* libgame_game_of_life.dylib */,
 				9AE24E8A1904CFFD001AEFFB /* libgame_game_of_life.dylib */,
 				9AE24E991904CFFD001AEFFB /* game_game_of_life_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9AF2A8C71D5C025900E6D5ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AF2A8CD1D5C025900E6D5ED /* libestamira.dylib */,
-				9AF2A8CF1D5C025900E6D5ED /* libios_estamira.dylib */,
-				9AF2A8D11D5C025900E6D5ED /* estamira_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,8 +366,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AF2A8D31D5C025F00E6D5ED /* PBXTargetDependency */,
-				9AF2A8C31D5C025400E6D5ED /* PBXTargetDependency */,
 				9AF2A8C51D5C025400E6D5ED /* PBXTargetDependency */,
 			);
 			name = ios_game_game_of_life;
@@ -469,8 +402,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AF2A8D71D5C026900E6D5ED /* PBXTargetDependency */,
-				9AB09D1A1D5B4BC300B5F2A0 /* PBXTargetDependency */,
 				9AB09CFF1D5B49FD00B5F2A0 /* PBXTargetDependency */,
 			);
 			name = game_game_of_life;
@@ -484,7 +415,7 @@
 		9AEB759B16F78DF10085103B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					9AE24E981904CFFD001AEFFB = {
@@ -504,12 +435,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9AF2A8C71D5C025900E6D5ED /* Products */;
-					ProjectRef = 9AF2A8C61D5C025900E6D5ED /* estamira.xcodeproj */;
-				},
-				{
-					ProductGroup = 9AB09D0E1D5B4BB700B5F2A0 /* Products */;
-					ProjectRef = 9AB09D0D1D5B4BB700B5F2A0 /* gcom.xcodeproj */;
+					ProductGroup = 9A47EFFA212B653E003498F7 /* Products */;
+					ProjectRef = 9A47EFF9212B653E003498F7 /* estamira.xcodeproj */;
 				},
 				{
 					ProductGroup = 9AB09CF31D5B49EF00B5F2A0 /* Products */;
@@ -526,6 +453,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A47F001212B653E003498F7 /* libestamira.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libestamira.dylib;
+			remoteRef = 9A47F000212B653E003498F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A47F003212B653E003498F7 /* libios_estamira.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_estamira.dylib;
+			remoteRef = 9A47F002212B653E003498F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A47F005212B653E003498F7 /* estamira_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = estamira_iosTests.xctest;
+			remoteRef = 9A47F004212B653E003498F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -533,10 +481,10 @@
 			remoteRef = 9AB09CF81D5B49EF00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */ = {
+		9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_multimedia.dylib;
+			path = libios_multimedia.a;
 			remoteRef = 9AB09CFA1D5B49EF00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -545,48 +493,6 @@
 			fileType = wrapper.cfbundle;
 			path = multlimedia_iosTests.xctest;
 			remoteRef = 9AB09CFC1D5B49EF00B5F2A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AB09D141D5B4BB700B5F2A0 /* libgcom.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libgcom.dylib;
-			remoteRef = 9AB09D131D5B4BB700B5F2A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AB09D161D5B4BB700B5F2A0 /* libios_gcom.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libios_gcom.dylib;
-			remoteRef = 9AB09D151D5B4BB700B5F2A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AB09D181D5B4BB700B5F2A0 /* gcom_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = gcom_iosTests.xctest;
-			remoteRef = 9AB09D171D5B4BB700B5F2A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AF2A8CD1D5C025900E6D5ED /* libestamira.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libestamira.dylib;
-			remoteRef = 9AF2A8CC1D5C025900E6D5ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AF2A8CF1D5C025900E6D5ED /* libios_estamira.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libios_estamira.dylib;
-			remoteRef = 9AF2A8CE1D5C025900E6D5ED /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AF2A8D11D5C025900E6D5ED /* estamira_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = estamira_iosTests.xctest;
-			remoteRef = 9AF2A8D01D5C025900E6D5ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -651,35 +557,15 @@
 			name = multimedia;
 			targetProxy = 9AB09CFE1D5B49FD00B5F2A0 /* PBXContainerItemProxy */;
 		};
-		9AB09D1A1D5B4BC300B5F2A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = gcom;
-			targetProxy = 9AB09D191D5B4BC300B5F2A0 /* PBXContainerItemProxy */;
-		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE24E891904CFFD001AEFFB /* ios_game_game_of_life */;
 			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
 		};
-		9AF2A8C31D5C025400E6D5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_gcom;
-			targetProxy = 9AF2A8C21D5C025400E6D5ED /* PBXContainerItemProxy */;
-		};
 		9AF2A8C51D5C025400E6D5ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ios_multimedia;
 			targetProxy = 9AF2A8C41D5C025400E6D5ED /* PBXContainerItemProxy */;
-		};
-		9AF2A8D31D5C025F00E6D5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_estamira;
-			targetProxy = 9AF2A8D21D5C025F00E6D5ED /* PBXContainerItemProxy */;
-		};
-		9AF2A8D71D5C026900E6D5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = estamira;
-			targetProxy = 9AF2A8D61D5C026900E6D5ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -794,14 +680,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -857,14 +751,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

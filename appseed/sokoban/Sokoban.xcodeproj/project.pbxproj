@@ -28,10 +28,9 @@
 		07AF89331B72565500150CC2 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 076A24841B6E772400BF6C7D /* libbase.dylib */; };
 		07C6AA1B1CA4F16B00B4E555 /* app.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA181CA4F16B00B4E555 /* app.mm */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
-		07C6AA1D1CA4F16B00B4E555 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA1A1CA4F16B00B4E555 /* Info.plist */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
 		07EF5CCB1B72C2C200863D39 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A243F1B6E772400BF6C7D /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A4421761D5B1C0100199308 /* libgame_tetris.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44216F1D5B1B9300199308 /* libgame_tetris.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A4421761D5B1C0100199308 /* libgame_sokoban.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A44216F1D5B1B9300199308 /* libgame_sokoban.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD484FA1D5A9BBC00354801 /* libwndfrm_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD486371D5AA0B600354801 /* libapp_core_hellomultiverse.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD486221D5AA08D00354801 /* libapp_core_hellomultiverse.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD486381D5AA0C300354801 /* libgcom.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD4862E1D5AA09A00354801 /* libgcom.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -602,7 +601,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				9A4421761D5B1C0100199308 /* libgame_tetris.dylib in CopyFiles */,
+				9A4421761D5B1C0100199308 /* libgame_sokoban.dylib in CopyFiles */,
 				9AD486641D5AA17000354801 /* libaxispng.dylib in CopyFiles */,
 				9AD486631D5AA16800354801 /* libaxisjpeg.dylib in CopyFiles */,
 				9AD486381D5AA0C300354801 /* libgcom.dylib in CopyFiles */,
@@ -657,7 +656,7 @@
 		07D1B0AA1B6FBEA3004E8E35 /* axis_image_jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axis_image_jpeg.xcodeproj; path = ../../../app/axis/image_jpeg/axis_image_jpeg.xcodeproj; sourceTree = "<group>"; };
 		9A4421681D5B1B9300199308 /* game_sokoban.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = game_sokoban.xcodeproj; sourceTree = "<group>"; };
 		9A7443681D4D85460056CCC6 /* pcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pcre.xcodeproj; path = ../../../app/appseed/pcre/pcre.xcodeproj; sourceTree = "<group>"; };
-		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
 		9AD4861B1D5AA08C00354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
 		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 		9AD486471D5AA14A00354801 /* axisjpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = axisjpeg.xcodeproj; path = ../../../app/axis/jpeg/axisjpeg.xcodeproj; sourceTree = "<group>"; };
@@ -807,7 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				076A243F1B6E772400BF6C7D /* libaura.dylib */,
-				076A24411B6E772400BF6C7D /* libios_aura.dylib */,
+				076A24411B6E772400BF6C7D /* libios_aura.a */,
 				076A24431B6E772400BF6C7D /* aura_iosTests.xctest */,
 			);
 			name = Products;
@@ -817,7 +816,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24481B6E772400BF6C7D /* libaxis.dylib */,
-				076A244A1B6E772400BF6C7D /* libios_axis.dylib */,
+				076A244A1B6E772400BF6C7D /* libios_axis.a */,
 				076A244C1B6E772400BF6C7D /* axis_iosTests.xctest */,
 			);
 			name = Products;
@@ -855,7 +854,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24841B6E772400BF6C7D /* libbase.dylib */,
-				076A24861B6E772400BF6C7D /* libios_base.dylib */,
+				076A24861B6E772400BF6C7D /* libios_base.a */,
 				076A24881B6E772400BF6C7D /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -865,7 +864,7 @@
 			isa = PBXGroup;
 			children = (
 				076A248D1B6E772400BF6C7D /* libcore.dylib */,
-				076A248F1B6E772400BF6C7D /* libios_core.dylib */,
+				076A248F1B6E772400BF6C7D /* libios_core.a */,
 				076A24911B6E772400BF6C7D /* core_iosTests.xctest */,
 			);
 			name = Products;
@@ -875,7 +874,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24961B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */,
-				076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */,
+				076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.a */,
 				076A249A1B6E772400BF6C7D /* draw2d_quartz2d_iosTests.xctest */,
 			);
 			name = Products;
@@ -913,9 +912,9 @@
 		9A4421691D5B1B9300199308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A44216F1D5B1B9300199308 /* libgame_tetris.dylib */,
-				9A4421711D5B1B9300199308 /* libios_game_tetris..dylib */,
-				9A4421731D5B1B9300199308 /* app_core_hellomultiverse_iosTests.xctest */,
+				9A44216F1D5B1B9300199308 /* libgame_sokoban.dylib */,
+				9A4421711D5B1B9300199308 /* libgame_sokoban.dylib */,
+				9A4421731D5B1B9300199308 /* game_sokoban_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -933,7 +932,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */,
-				9AD484F51D5A9B9F00354801 /* libwndfrm_core.dylib */,
+				9AD484F51D5A9B9F00354801 /* libios_wndfrm_core.a */,
 				9AD484F71D5A9B9F00354801 /* wndfrm_core_iosTests.xctest */,
 			);
 			name = Products;
@@ -943,7 +942,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD486221D5AA08D00354801 /* libapp_core_hellomultiverse.dylib */,
-				9AD486241D5AA08D00354801 /* libapp_core_hellomultiverse.dylib */,
+				9AD486241D5AA08D00354801 /* libapp_core_hellomultiverse.a */,
 				9AD486261D5AA08D00354801 /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -953,7 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD4862E1D5AA09A00354801 /* libgcom.dylib */,
-				9AD486301D5AA09A00354801 /* libios_gcom.dylib */,
+				9AD486301D5AA09A00354801 /* libios_gcom.a */,
 				9AD486321D5AA09A00354801 /* gcom_iosTests.xctest */,
 			);
 			name = Products;
@@ -1041,7 +1040,7 @@
 		070B8EE21B6E53F900D26137 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -1252,10 +1251,10 @@
 			remoteRef = 076A243E1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24411B6E772400BF6C7D /* libios_aura.dylib */ = {
+		076A24411B6E772400BF6C7D /* libios_aura.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_aura.dylib;
+			path = libios_aura.a;
 			remoteRef = 076A24401B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1273,10 +1272,10 @@
 			remoteRef = 076A24471B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A244A1B6E772400BF6C7D /* libios_axis.dylib */ = {
+		076A244A1B6E772400BF6C7D /* libios_axis.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_axis.dylib;
+			path = libios_axis.a;
 			remoteRef = 076A24491B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1343,10 +1342,10 @@
 			remoteRef = 076A24831B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24861B6E772400BF6C7D /* libios_base.dylib */ = {
+		076A24861B6E772400BF6C7D /* libios_base.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_base.dylib;
+			path = libios_base.a;
 			remoteRef = 076A24851B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1364,10 +1363,10 @@
 			remoteRef = 076A248C1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A248F1B6E772400BF6C7D /* libios_core.dylib */ = {
+		076A248F1B6E772400BF6C7D /* libios_core.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_core.dylib;
+			path = libios_core.a;
 			remoteRef = 076A248E1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1385,10 +1384,11 @@
 			remoteRef = 076A24951B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */ = {
+		076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libdraw2d_quartz2d.dylib;
+			name = libdraw2d_quartz2d.a;
+			path = libios_draw2d_quartz2d.a;
 			remoteRef = 076A24971B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1455,24 +1455,24 @@
 			remoteRef = 07D1B0B41B6FBEA3004E8E35 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A44216F1D5B1B9300199308 /* libgame_tetris.dylib */ = {
+		9A44216F1D5B1B9300199308 /* libgame_sokoban.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libgame_tetris.dylib;
+			path = libgame_sokoban.dylib;
 			remoteRef = 9A44216E1D5B1B9300199308 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A4421711D5B1B9300199308 /* libios_game_tetris..dylib */ = {
+		9A4421711D5B1B9300199308 /* libgame_sokoban.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_game_tetris..dylib;
+			path = libgame_sokoban.dylib;
 			remoteRef = 9A4421701D5B1B9300199308 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A4421731D5B1B9300199308 /* app_core_hellomultiverse_iosTests.xctest */ = {
+		9A4421731D5B1B9300199308 /* game_sokoban_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
+			path = game_sokoban_iosTests.xctest;
 			remoteRef = 9A4421721D5B1B9300199308 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1497,10 +1497,10 @@
 			remoteRef = 9AD484F21D5A9B9F00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD484F51D5A9B9F00354801 /* libwndfrm_core.dylib */ = {
+		9AD484F51D5A9B9F00354801 /* libios_wndfrm_core.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libwndfrm_core.dylib;
+			path = libios_wndfrm_core.a;
 			remoteRef = 9AD484F41D5A9B9F00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1518,10 +1518,10 @@
 			remoteRef = 9AD486211D5AA08D00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486241D5AA08D00354801 /* libapp_core_hellomultiverse.dylib */ = {
+		9AD486241D5AA08D00354801 /* libapp_core_hellomultiverse.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libapp_core_hellomultiverse.dylib;
+			path = libapp_core_hellomultiverse.a;
 			remoteRef = 9AD486231D5AA08D00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1539,10 +1539,10 @@
 			remoteRef = 9AD4862D1D5AA09A00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486301D5AA09A00354801 /* libios_gcom.dylib */ = {
+		9AD486301D5AA09A00354801 /* libios_gcom.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_gcom.dylib;
+			path = libios_gcom.a;
 			remoteRef = 9AD4862F1D5AA09A00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1602,7 +1602,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C6AA1D1CA4F16B00B4E555 /* Info.plist in Resources */,
 				07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1738,13 +1737,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1788,13 +1797,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
