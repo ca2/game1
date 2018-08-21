@@ -116,6 +116,10 @@ namespace game_of_life
    {
       return m_chState;
    }
+   bool cell::isDying()
+   {
+      return m_estate >= state_dying && m_estate <= state_dying4;
+   }
    void cell::addNeighbour()
    {
       m_iAliveNeighbours++;
@@ -248,6 +252,9 @@ namespace game_of_life
       {
 
       }
+      
+      stream(m_bProper);
+      stream(m_iDying);
 
       if (!stream.is_storing())
       {
@@ -269,6 +276,19 @@ namespace game_of_life
          }
       }
 
+      for(index i = 0; i < m_iAmount; i++)
+      {
+         for (index j = 0; j < m_iAmount; j++)
+         {
+            
+            if(get_cell(i, j)->isDying())
+            {
+               m_dyingCells.add(get_cell(i, j));
+            }
+            
+         }
+      }
+
    }
 
 
@@ -277,7 +297,7 @@ namespace game_of_life
    void game::update()
    {
       
-      if(m_iDying > 0)
+      if(!m_bProper && m_iDying > 0)
       {
          
          e_state estate = (e_state) (state_dying + m_iDying);
@@ -478,7 +498,15 @@ namespace game_of_life
             //drawnAlready = 1;
             //curGame.Clear();
             //}
-            Sleep(50);
+            
+            if(m_bProper)
+            {
+               Sleep(300);
+            }
+            else
+            {
+               Sleep(50);
+            }
          }
 
       });
@@ -546,7 +574,14 @@ namespace game_of_life
    void game::on_key_down(::user::e_key ekey)
    {
 
-      if (ekey == ::user::key_space)
+      if (ekey == ::user::key_p)
+      {
+         
+         // toggle proper mode
+         m_bProper = !m_bProper;
+         
+      }
+      else if (ekey == ::user::key_space)
       {
 
          synch_lock sl(m_pmutex);

@@ -60,6 +60,7 @@ namespace game_of_life
       int getStep() { return this->m_iStep; }
       void setState(char st);
       char isAlive();
+      bool isDying();
       void addNeighbour();
       void resetNeighbours();
       char getNeighbours();
