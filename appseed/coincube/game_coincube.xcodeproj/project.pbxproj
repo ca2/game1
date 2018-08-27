@@ -30,7 +30,7 @@
 		9AB09CEF1D5B49AA00B5F2A0 /* coincube_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09CDA1D5B49AA00B5F2A0 /* coincube_view.h */; };
 		9AB09CF11D5B49AA00B5F2A0 /* coincube.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB09CDD1D5B49AA00B5F2A0 /* coincube.h */; };
 		9AB09D001D5B4A0500B5F2A0 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */; };
-		9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */; };
+		9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */; };
 		9AB09D031D5B4A2300B5F2A0 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D021D5B4A2300B5F2A0 /* libaura.dylib */; };
 		9AB09D051D5B4A2800B5F2A0 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D041D5B4A2800B5F2A0 /* libaxis.dylib */; };
 		9AB09D071D5B4A2F00B5F2A0 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB09D061D5B4A2F00B5F2A0 /* libbase.dylib */; };
@@ -209,7 +209,7 @@
 				9AF2A7E21D5BFC9000E6D5ED /* libios_axis.dylib in Frameworks */,
 				9AF2A7E31D5BFC9000E6D5ED /* libios_base.dylib in Frameworks */,
 				9AF2A7E41D5BFC9000E6D5ED /* libios_core.dylib in Frameworks */,
-				9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.dylib in Frameworks */,
+				9AB09D011D5B4A1600B5F2A0 /* libios_multimedia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB09CF91D5B49EF00B5F2A0 /* libmultimedia.dylib */,
-				9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */,
+				9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */,
 				9AB09CFD1D5B49EF00B5F2A0 /* multlimedia_iosTests.xctest */,
 			);
 			name = Products;
@@ -293,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD4321C1F219C5000E3E8D4 /* libgcom.dylib */,
-				9AD4321E1F219C5000E3E8D4 /* libios_gcom.dylib */,
+				9AD4321E1F219C5000E3E8D4 /* libios_gcom.a */,
 				9AD432201F219C5000E3E8D4 /* gcom_iosTests.xctest */,
 			);
 			name = Products;
@@ -452,7 +452,7 @@
 		9AEB759B16F78DF10085103B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					9AE24E981904CFFD001AEFFB = {
@@ -501,10 +501,10 @@
 			remoteRef = 9AB09CF81D5B49EF00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.dylib */ = {
+		9AB09CFB1D5B49EF00B5F2A0 /* libios_multimedia.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_multimedia.dylib;
+			path = libios_multimedia.a;
 			remoteRef = 9AB09CFA1D5B49EF00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -543,10 +543,10 @@
 			remoteRef = 9AD4321B1F219C5000E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD4321E1F219C5000E3E8D4 /* libios_gcom.dylib */ = {
+		9AD4321E1F219C5000E3E8D4 /* libios_gcom.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_gcom.dylib;
+			path = libios_gcom.a;
 			remoteRef = 9AD4321D1F219C5000E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -744,14 +744,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -807,14 +815,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

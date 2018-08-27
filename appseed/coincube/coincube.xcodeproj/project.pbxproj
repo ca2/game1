@@ -469,7 +469,7 @@
 		9AD432281F219CA900E3E8D4 /* ace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ace.xcodeproj; path = /macos/app/appseed/aura/../ace/ace.xcodeproj; sourceTree = "<absolute>"; };
 		9AD4322B1F219CA900E3E8D4 /* aurapcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aurapcre.xcodeproj; path = /macos/app/appseed/aura/../../../third/appseed/pcre/aurapcre.xcodeproj; sourceTree = "<absolute>"; };
 		9AD4322E1F219CA900E3E8D4 /* atomiconv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = atomiconv.xcodeproj; path = /macos/app/appseed/aura/../../../third/appseed/iconv/atomiconv.xcodeproj; sourceTree = "<absolute>"; };
-		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = "../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj"; sourceTree = "<group>"; };
+		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
 		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -563,7 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				076A243F1B6E772400BF6C7D /* libaura.dylib */,
-				076A24411B6E772400BF6C7D /* libios_aura.dylib */,
+				076A24411B6E772400BF6C7D /* libios_aura.a */,
 				076A24431B6E772400BF6C7D /* aura_iosTests.xctest */,
 			);
 			name = Products;
@@ -573,7 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24481B6E772400BF6C7D /* libaxis.dylib */,
-				076A244A1B6E772400BF6C7D /* libios_axis.dylib */,
+				076A244A1B6E772400BF6C7D /* libios_axis.a */,
 				076A244C1B6E772400BF6C7D /* axis_iosTests.xctest */,
 			);
 			name = Products;
@@ -583,7 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24841B6E772400BF6C7D /* libbase.dylib */,
-				076A24861B6E772400BF6C7D /* libios_base.dylib */,
+				076A24861B6E772400BF6C7D /* libios_base.a */,
 				076A24881B6E772400BF6C7D /* base_iosTests.xctest */,
 			);
 			name = Products;
@@ -593,7 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				076A248D1B6E772400BF6C7D /* libcore.dylib */,
-				076A248F1B6E772400BF6C7D /* libios_core.dylib */,
+				076A248F1B6E772400BF6C7D /* libios_core.a */,
 				076A24911B6E772400BF6C7D /* core_iosTests.xctest */,
 			);
 			name = Products;
@@ -603,7 +603,7 @@
 			isa = PBXGroup;
 			children = (
 				076A24961B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */,
-				076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */,
+				076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.a */,
 				076A249A1B6E772400BF6C7D /* draw2d_quartz2d_iosTests.xctest */,
 			);
 			name = Products;
@@ -613,7 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB09B961D5B3C8B00B5F2A0 /* libmultimedia.dylib */,
-				9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.dylib */,
+				9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.a */,
 				9AB09B9A1D5B3C8B00B5F2A0 /* multlimedia_iosTests.xctest */,
 			);
 			name = Products;
@@ -631,7 +631,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB09BAC1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */,
-				9AB09BAE1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */,
+				9AB09BAE1D5B3D6500B5F2A0 /* libios_audio_decode_wave.a */,
 				9AB09BB01D5B3D6500B5F2A0 /* audio_decode_libmpg123_iosTests.xctest */,
 			);
 			name = Products;
@@ -651,7 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD4324A1F219CA900E3E8D4 /* libaxiscrypto.dylib */,
-				9AD4324C1F219CA900E3E8D4 /* libios_axiscrypto.dylib */,
+				9AD4324C1F219CA900E3E8D4 /* libios_axiscrypto.a */,
 				9AD4324E1F219CA900E3E8D4 /* axiscrypto_iosTests.xctest */,
 			);
 			name = Products;
@@ -661,7 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD432531F219CA900E3E8D4 /* libaxisopenssl.dylib */,
-				9AD432551F219CA900E3E8D4 /* libios_axisopenssl.dylib */,
+				9AD432551F219CA900E3E8D4 /* libios_axisopenssl.a */,
 				9AD432571F219CA900E3E8D4 /* axisopenssl_iosTests.xctest */,
 			);
 			name = Products;
@@ -671,7 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD432351F219CA900E3E8D4 /* libace.dylib */,
-				9AD432371F219CA900E3E8D4 /* libios_ace.dylib */,
+				9AD432371F219CA900E3E8D4 /* libios_ace.a */,
 				9AD432391F219CA900E3E8D4 /* ace_iosTests.xctest */,
 			);
 			name = Products;
@@ -681,7 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD432431F219CA900E3E8D4 /* libaurapcre.dylib */,
-				9AD432451F219CA900E3E8D4 /* libios_aurapcre.dylib */,
+				9AD432451F219CA900E3E8D4 /* libios_aurapcre.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -690,7 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD4323D1F219CA900E3E8D4 /* libatomiconv.dylib */,
-				9AD4323F1F219CA900E3E8D4 /* libios_atomiconv.dylib */,
+				9AD4323F1F219CA900E3E8D4 /* libios_atomiconv.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -699,7 +699,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */,
-				9AD484F51D5A9B9F00354801 /* libwndfrm_core.dylib */,
+				9AD484F51D5A9B9F00354801 /* libios_wndfrm_core.a */,
 				9AD484F71D5A9B9F00354801 /* wndfrm_core_iosTests.xctest */,
 			);
 			name = Products;
@@ -709,7 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD4862E1D5AA09A00354801 /* libgcom.dylib */,
-				9AD486301D5AA09A00354801 /* libios_gcom.dylib */,
+				9AD486301D5AA09A00354801 /* libios_gcom.a */,
 				9AD486321D5AA09A00354801 /* gcom_iosTests.xctest */,
 			);
 			name = Products;
@@ -771,7 +771,7 @@
 		070B8EE21B6E53F900D26137 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -877,10 +877,10 @@
 			remoteRef = 076A243E1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24411B6E772400BF6C7D /* libios_aura.dylib */ = {
+		076A24411B6E772400BF6C7D /* libios_aura.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_aura.dylib;
+			path = libios_aura.a;
 			remoteRef = 076A24401B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -898,10 +898,10 @@
 			remoteRef = 076A24471B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A244A1B6E772400BF6C7D /* libios_axis.dylib */ = {
+		076A244A1B6E772400BF6C7D /* libios_axis.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_axis.dylib;
+			path = libios_axis.a;
 			remoteRef = 076A24491B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -919,10 +919,10 @@
 			remoteRef = 076A24831B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24861B6E772400BF6C7D /* libios_base.dylib */ = {
+		076A24861B6E772400BF6C7D /* libios_base.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_base.dylib;
+			path = libios_base.a;
 			remoteRef = 076A24851B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -940,10 +940,10 @@
 			remoteRef = 076A248C1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A248F1B6E772400BF6C7D /* libios_core.dylib */ = {
+		076A248F1B6E772400BF6C7D /* libios_core.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_core.dylib;
+			path = libios_core.a;
 			remoteRef = 076A248E1B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -961,10 +961,11 @@
 			remoteRef = 076A24951B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */ = {
+		076A24981B6E772400BF6C7D /* libdraw2d_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libdraw2d_quartz2d.dylib;
+			name = libdraw2d_quartz2d.a;
+			path = libios_draw2d_quartz2d.a;
 			remoteRef = 076A24971B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -982,10 +983,10 @@
 			remoteRef = 9AB09B951D5B3C8B00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.dylib */ = {
+		9AB09B981D5B3C8B00B5F2A0 /* libios_multimedia.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_multimedia.dylib;
+			path = libios_multimedia.a;
 			remoteRef = 9AB09B971D5B3C8B00B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1010,10 +1011,10 @@
 			remoteRef = 9AB09BAB1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AB09BAE1D5B3D6500B5F2A0 /* libaudio_decode_wave.dylib */ = {
+		9AB09BAE1D5B3D6500B5F2A0 /* libios_audio_decode_wave.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libaudio_decode_wave.dylib;
+			path = libios_audio_decode_wave.a;
 			remoteRef = 9AB09BAD1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1052,10 +1053,10 @@
 			remoteRef = 9AD432341F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD432371F219CA900E3E8D4 /* libios_ace.dylib */ = {
+		9AD432371F219CA900E3E8D4 /* libios_ace.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_ace.dylib;
+			path = libios_ace.a;
 			remoteRef = 9AD432361F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1073,10 +1074,10 @@
 			remoteRef = 9AD4323C1F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD4323F1F219CA900E3E8D4 /* libios_atomiconv.dylib */ = {
+		9AD4323F1F219CA900E3E8D4 /* libios_atomiconv.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_atomiconv.dylib;
+			path = libios_atomiconv.a;
 			remoteRef = 9AD4323E1F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1087,24 +1088,24 @@
 			remoteRef = 9AD432421F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD432451F219CA900E3E8D4 /* libios_aurapcre.dylib */ = {
+		9AD432451F219CA900E3E8D4 /* libios_aurapcre.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_aurapcre.dylib;
+			path = libios_aurapcre.a;
 			remoteRef = 9AD432441F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9AD4324A1F219CA900E3E8D4 /* libaxiscrypto.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
+			fileType = "compiled.mach-o.dylib";
 			path = libaxiscrypto.dylib;
 			remoteRef = 9AD432491F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD4324C1F219CA900E3E8D4 /* libios_axiscrypto.dylib */ = {
+		9AD4324C1F219CA900E3E8D4 /* libios_axiscrypto.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_axiscrypto.dylib;
+			path = libios_axiscrypto.a;
 			remoteRef = 9AD4324B1F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1117,15 +1118,15 @@
 		};
 		9AD432531F219CA900E3E8D4 /* libaxisopenssl.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
+			fileType = "compiled.mach-o.dylib";
 			path = libaxisopenssl.dylib;
 			remoteRef = 9AD432521F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD432551F219CA900E3E8D4 /* libios_axisopenssl.dylib */ = {
+		9AD432551F219CA900E3E8D4 /* libios_axisopenssl.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_axisopenssl.dylib;
+			path = libios_axisopenssl.a;
 			remoteRef = 9AD432541F219CA900E3E8D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1143,10 +1144,10 @@
 			remoteRef = 9AD484F21D5A9B9F00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD484F51D5A9B9F00354801 /* libwndfrm_core.dylib */ = {
+		9AD484F51D5A9B9F00354801 /* libios_wndfrm_core.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libwndfrm_core.dylib;
+			path = libios_wndfrm_core.a;
 			remoteRef = 9AD484F41D5A9B9F00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1164,10 +1165,10 @@
 			remoteRef = 9AD4862D1D5AA09A00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486301D5AA09A00354801 /* libios_gcom.dylib */ = {
+		9AD486301D5AA09A00354801 /* libios_gcom.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_gcom.dylib;
+			path = libios_gcom.a;
 			remoteRef = 9AD4862F1D5AA09A00354801 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1290,14 +1291,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1342,14 +1351,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
