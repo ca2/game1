@@ -11,7 +11,7 @@ namespace game_of_life
       ::estamira::main_frame(papp)
    {
 
-      set_pro_devian();
+
 
       WfiEnableFullScreen();
 
