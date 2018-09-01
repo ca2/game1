@@ -88,6 +88,10 @@ namespace arch001
 
       SCAST_PTR(::message::create,pcreate,pobj);
 
+      pcreate->previous();
+
+
+
       Application.m_pgame = new game(get_app());
 
       Game.start(this);
@@ -111,8 +115,6 @@ namespace arch001
       data_get("phase",m_iPhase);
 
 
-
-      pcreate->previous();
 
       if(pcreate->m_bRet)
          return;

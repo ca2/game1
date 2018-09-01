@@ -36,81 +36,81 @@ namespace game_of_life
 
    COLORREF get_color(e_state estate)
    {
-      
+
       switch(estate)
       {
-         case state_hatching:
-            return ARGB(255, 170, 20, 170);
-         case state_surviving:
-            return ARGB(255, 0, 0, 0);
-         case state_dying:
-            return ARGB(255, 30, 172, 30);
-         case state_dying2:
-            return ARGB(255, 90, 202, 90);
-         case state_dying3:
-            return ARGB(255, 150, 232, 150);
-         case state_dying4:
-            return ARGB(255, 210, 252, 210);
-         case state_dead:
-            return ARGB(255, 255, 255, 255);
+      case state_hatching:
+         return ARGB(255, 170, 20, 170);
+      case state_surviving:
+         return ARGB(255, 0, 0, 0);
+      case state_dying:
+         return ARGB(255, 30, 172, 30);
+      case state_dying2:
+         return ARGB(255, 90, 202, 90);
+      case state_dying3:
+         return ARGB(255, 150, 232, 150);
+      case state_dying4:
+         return ARGB(255, 210, 252, 210);
+      case state_dead:
+         return ARGB(255, 255, 255, 255);
       }
-      
+
    }
 
    void cell::setState(char st)
    {
 
       e_state estate = state_dead;
-      
+
       if (this->m_iStep!=0)
       {
-         
+
          if (!this->m_chState)
          {
-            
+
             if (st)
             {
-               
+
                estate = state_hatching;
-               
+
             }
-            
+
          }
          else
          {
-            
+
             if (st)
             {
-            
+
                estate = state_surviving;
-               
+
             }
             else
             {
-            
+
                estate = state_dying;
-               
+
             }
-            
+
          }
-         
+
       }
       else
       {
-         
+
          if (st)
          {
-      
+
             estate = state_surviving;
-               
+
          }
-         
+
       }
-      
+
       m_estate = estate;
-      
+
       m_chState = st;
-      
+
    }
    char cell::isAlive()
    {
@@ -252,7 +252,7 @@ namespace game_of_life
       {
 
       }
-      
+
       stream(m_bProper);
       stream(m_iDying);
 
@@ -280,12 +280,12 @@ namespace game_of_life
       {
          for (index j = 0; j < m_iAmount; j++)
          {
-            
+
             if(get_cell(i, j)->isDying())
             {
                m_dyingCells.add(get_cell(i, j));
             }
-            
+
          }
       }
 
@@ -296,17 +296,17 @@ namespace game_of_life
 
    void game::update()
    {
-      
+
       if(!m_bProper && m_iDying > 0)
       {
-         
-         e_state estate = (e_state) (state_dying + m_iDying);
-         
+
+         e_state estate = (e_state) ((int) state_dying + m_iDying);
+
          for(auto cell :m_dyingCells)
          {
-         
+
             cell->m_estate = estate;
-            
+
          }
 
          m_iDying++;
@@ -316,7 +316,7 @@ namespace game_of_life
          }
          return;
       }
-      
+
       synch_lock sl(m_pmutex);
       array<cell*> uncheckedCells = m_aliveCells;
       m_dyingCells.clear();
@@ -413,18 +413,18 @@ namespace game_of_life
 
       if(m_bOnPause)
       {
-      pen->create_solid(1.0, ARGB(250, 180, 180, 180));
-      pgraphics->SelectObject(pen);
-      for (int i = 0; i <= m_iAmount; i++)
-      {
-         pgraphics->move_to(0, i * m_iCellSize);
-         pgraphics->line_to(m_iWindowSize, i * m_iCellSize);
-      }
-      for (int j = 0; j <= m_iAmount; j++)
-      {
-         pgraphics->move_to(j * m_iCellSize, 0);
-         pgraphics->line_to(j * m_iCellSize, m_iWindowSize);
-      }
+         pen->create_solid(1.0, ARGB(250, 180, 180, 180));
+         pgraphics->SelectObject(pen);
+         for (int i = 0; i <= m_iAmount; i++)
+         {
+            pgraphics->move_to(0, i * m_iCellSize);
+            pgraphics->line_to(m_iWindowSize, i * m_iCellSize);
+         }
+         for (int j = 0; j <= m_iAmount; j++)
+         {
+            pgraphics->move_to(j * m_iCellSize, 0);
+            pgraphics->line_to(j * m_iCellSize, m_iWindowSize);
+         }
       }
 
       for (int i = 0; i < m_iAmount; i++)
@@ -480,7 +480,7 @@ namespace game_of_life
 
       }
 
-      on_new_game();
+      //on_new_game();
 
 
       m_pthread = fork([&]()
@@ -498,7 +498,7 @@ namespace game_of_life
             //drawnAlready = 1;
             //curGame.Clear();
             //}
-            
+
             if(m_bProper)
             {
                Sleep(300);
@@ -524,13 +524,14 @@ namespace game_of_life
 
       for (int i = 0; i < m_iAmount; i++)
       {
+
          for (int j = 0; j < m_iAmount; j++)
          {
 
             get_cell(i, j)->m_iStep = 0;
 
             get_cell(i, j)->setState(0);
-            
+
             get_cell(i, j)->m_estate = state_dead;
 
             get_cell(i, j)->x = i;
@@ -540,6 +541,7 @@ namespace game_of_life
          }
 
       }
+
    }
 
 
@@ -548,6 +550,7 @@ namespace game_of_life
 
       m_bOnPause = true;
 
+      clear();
 
    }
 
@@ -576,10 +579,10 @@ namespace game_of_life
 
       if (ekey == ::user::key_p)
       {
-         
+
          // toggle proper mode
          m_bProper = !m_bProper;
-         
+
       }
       else if (ekey == ::user::key_space)
       {
