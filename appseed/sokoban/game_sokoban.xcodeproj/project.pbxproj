@@ -29,13 +29,14 @@
 		9A4421831D5B1DBD00199308 /* sokoban_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A44217C1D5B1DBD00199308 /* sokoban_level.cpp */; };
 		9A4421841D5B1DBD00199308 /* sokoban_level.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A44217D1D5B1DBD00199308 /* sokoban_level.h */; };
 		9A4421851D5B1DBD00199308 /* sokoban_level_old.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A44217E1D5B1DBD00199308 /* sokoban_level_old.h */; };
+		9A77FA77213EDE7700B3A133 /* libestamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FA70213EDE5100B3A133 /* libestamira.dylib */; };
+		9A77FA79213EDEB400B3A133 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FA78213EDEB400B3A133 /* libmultimedia.dylib */; };
 		9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
 		9AD485D41D5A9D7A00354801 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485871D5A9D7700354801 /* framework.h */; };
 		9AD486051D5A9FF600354801 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486041D5A9FF600354801 /* libaura.dylib */; };
 		9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486061D5A9FFC00354801 /* libaxis.dylib */; };
 		9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486081D5AA00100354801 /* libbase.dylib */; };
 		9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486181D5AA03700354801 /* libcore.dylib */; };
-		9AD4861A1D5AA03D00354801 /* libapp_core_hellomultiverse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */; };
 		9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
@@ -58,37 +59,36 @@
 		9AF2A35C1D5BAE0300E6D5ED /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A3581D5BAE0300E6D5ED /* libios_axis.dylib */; };
 		9AF2A35D1D5BAE0300E6D5ED /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A3591D5BAE0300E6D5ED /* libios_base.dylib */; };
 		9AF2A35E1D5BAE0300E6D5ED /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF2A35A1D5BAE0300E6D5ED /* libios_core.dylib */; };
-		9AF2A3611D5BAE2400E6D5ED /* libapp_core_hellomultiverse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9AD486101D5AA02200354801 /* PBXContainerItemProxy */ = {
+		9A77FA6F213EDE5100B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = app_core_hellomultiverse;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = estamira;
 		};
-		9AD486121D5AA02200354801 /* PBXContainerItemProxy */ = {
+		9A77FA71213EDE5100B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_app_core_hellomultiverse;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_estamira;
 		};
-		9AD486141D5AA02200354801 /* PBXContainerItemProxy */ = {
+		9A77FA73213EDE5100B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = estamira_iosTests;
 		};
-		9AD486161D5AA03000354801 /* PBXContainerItemProxy */ = {
+		9A77FA75213EDE6E00B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = app_core_hellomultiverse;
+			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
+			remoteInfo = estamira;
 		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,13 +96,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = app_core_hellomultiverse_ios;
-		};
-		9AF2A35F1D5BAE1100E6D5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
-			remoteInfo = ios_app_core_hellomultiverse;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -147,6 +140,8 @@
 		9A44217C1D5B1DBD00199308 /* sokoban_level.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sokoban_level.cpp; sourceTree = "<group>"; };
 		9A44217D1D5B1DBD00199308 /* sokoban_level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sokoban_level.h; sourceTree = "<group>"; };
 		9A44217E1D5B1DBD00199308 /* sokoban_level_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sokoban_level_old.h; sourceTree = "<group>"; };
+		9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
+		9A77FA78213EDEB400B3A133 /* libmultimedia.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libmultimedia.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
@@ -162,7 +157,6 @@
 		9AD486041D5A9FF600354801 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
 		9AD486061D5A9FFC00354801 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaxis.dylib"; sourceTree = "<group>"; };
 		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
-		9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_core_hellomultiverse.xcodeproj; path = "../../../app-core/appseed/hellomultiverse/app_core_hellomultiverse.xcodeproj"; sourceTree = "<group>"; };
 		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libgame_sokoban.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_sokoban.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,7 +178,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF2A3611D5BAE2400E6D5ED /* libapp_core_hellomultiverse.a in Frameworks */,
 				9AF2A35B1D5BAE0300E6D5ED /* libios_aura.dylib in Frameworks */,
 				9AF2A35C1D5BAE0300E6D5ED /* libios_axis.dylib in Frameworks */,
 				9AF2A35D1D5BAE0300E6D5ED /* libios_base.dylib in Frameworks */,
@@ -208,7 +201,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD4861A1D5AA03D00354801 /* libapp_core_hellomultiverse.dylib in Frameworks */,
+				9A77FA79213EDEB400B3A133 /* libmultimedia.dylib in Frameworks */,
+				9A77FA77213EDE7700B3A133 /* libestamira.dylib in Frameworks */,
 				9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */,
 				9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */,
 				9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */,
@@ -231,6 +225,16 @@
 				9A44217E1D5B1DBD00199308 /* sokoban_level_old.h */,
 			);
 			path = game;
+			sourceTree = "<group>";
+		};
+		9A77FA6A213EDE5100B3A133 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A77FA70213EDE5100B3A133 /* libestamira.dylib */,
+				9A77FA72213EDE5100B3A133 /* libios_estamira.dylib */,
+				9A77FA74213EDE5100B3A133 /* estamira_iosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9AD4855F1D5A9D7700354801 /* sokoban */ = {
@@ -258,19 +262,10 @@
 			name = sokoban;
 			sourceTree = "<group>";
 		};
-		9AD4860B1D5AA02200354801 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */,
-				9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */,
-				9AD486151D5AA02200354801 /* app_core_hellomultiverse_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A77FA78213EDEB400B3A133 /* libmultimedia.dylib */,
 				9AF2A3571D5BAE0300E6D5ED /* libios_aura.dylib */,
 				9AF2A3581D5BAE0300E6D5ED /* libios_axis.dylib */,
 				9AF2A3591D5BAE0300E6D5ED /* libios_base.dylib */,
@@ -318,7 +313,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */,
+				9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */,
 				9AD4855F1D5A9D7700354801 /* sokoban */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
@@ -378,7 +373,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AF2A3601D5BAE1100E6D5ED /* PBXTargetDependency */,
 			);
 			name = ios_game_sokoban;
 			productName = app_core_hellomultiverse_ios;
@@ -414,7 +408,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AD486171D5AA03000354801 /* PBXTargetDependency */,
+				9A77FA76213EDE6E00B3A133 /* PBXTargetDependency */,
 			);
 			name = game_sokoban;
 			productName = app_core_hellomultiverse;
@@ -447,8 +441,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9AD4860B1D5AA02200354801 /* Products */;
-					ProjectRef = 9AD4860A1D5AA02200354801 /* app_core_hellomultiverse.xcodeproj */;
+					ProductGroup = 9A77FA6A213EDE5100B3A133 /* Products */;
+					ProjectRef = 9A77FA69213EDE5100B3A133 /* estamira.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -461,25 +455,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9AD486111D5AA02200354801 /* libapp_core_hellomultiverse.dylib */ = {
+		9A77FA70213EDE5100B3A133 /* libestamira.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libapp_core_hellomultiverse.dylib;
-			remoteRef = 9AD486101D5AA02200354801 /* PBXContainerItemProxy */;
+			path = libestamira.dylib;
+			remoteRef = 9A77FA6F213EDE5100B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486131D5AA02200354801 /* libapp_core_hellomultiverse.a */ = {
+		9A77FA72213EDE5100B3A133 /* libios_estamira.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libapp_core_hellomultiverse.a;
-			remoteRef = 9AD486121D5AA02200354801 /* PBXContainerItemProxy */;
+			path = libios_estamira.dylib;
+			remoteRef = 9A77FA71213EDE5100B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AD486151D5AA02200354801 /* app_core_hellomultiverse_iosTests.xctest */ = {
+		9A77FA74213EDE5100B3A133 /* estamira_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
-			remoteRef = 9AD486141D5AA02200354801 /* PBXContainerItemProxy */;
+			path = estamira_iosTests.xctest;
+			remoteRef = 9A77FA73213EDE5100B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -543,20 +537,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9AD486171D5AA03000354801 /* PBXTargetDependency */ = {
+		9A77FA76213EDE6E00B3A133 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = app_core_hellomultiverse;
-			targetProxy = 9AD486161D5AA03000354801 /* PBXContainerItemProxy */;
+			name = estamira;
+			targetProxy = 9A77FA75213EDE6E00B3A133 /* PBXContainerItemProxy */;
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE24E891904CFFD001AEFFB /* ios_game_sokoban */;
 			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
-		};
-		9AF2A3601D5BAE1100E6D5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_app_core_hellomultiverse;
-			targetProxy = 9AF2A35F1D5BAE1100E6D5ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -669,7 +658,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
@@ -737,7 +726,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;

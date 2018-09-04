@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 #include <math.h>
@@ -75,8 +75,8 @@ namespace pacman
 
       char get_char();
 
-      void assert_valid() const {}
-      void dump(dump_context &) const {}
+      void assert_valid() const override {}
+      void dump(dump_context &) const override {}
       void play_sound(const char *);
    };
 

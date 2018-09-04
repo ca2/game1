@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace  pacman
@@ -10,7 +10,7 @@ namespace  pacman
 start:
       try
       {
-         srand(time(0));
+         srand((unsigned int) time(0));
          //      SetConsoleTitle("PAC++MAN");
          SetWindowSize(LEVELHEIGHT + 4,LEVELWIDTH);
          SetCursorVisibility(false);

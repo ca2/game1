@@ -30,6 +30,29 @@
 		9A57509E16AAB9A1000CC4EF /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A574D2B16AAB99E000CC4EF /* framework.cpp */; };
 		9A57509F16AAB9A1000CC4EF /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A574D2C16AAB99E000CC4EF /* framework.h */; };
 		9A8CCAE617EA060200F87A02 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8CCAE317EA060200F87A02 /* libbase.dylib */; };
+		9AC2D28F213ECFAB006F66DF /* particle_effect_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D278213ECFAB006F66DF /* particle_effect_array.h */; };
+		9AC2D290213ECFAB006F66DF /* particle_particles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D279213ECFAB006F66DF /* particle_particles.cpp */; };
+		9AC2D291213ECFAB006F66DF /* particle_effect.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D27A213ECFAB006F66DF /* particle_effect.h */; };
+		9AC2D292213ECFAB006F66DF /* particle_effect_tunnel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D27B213ECFAB006F66DF /* particle_effect_tunnel.h */; };
+		9AC2D293213ECFAB006F66DF /* particle_effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D27C213ECFAB006F66DF /* particle_effect.cpp */; };
+		9AC2D294213ECFAB006F66DF /* particle_effect_fountain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D27D213ECFAB006F66DF /* particle_effect_fountain.h */; };
+		9AC2D295213ECFAB006F66DF /* particle_renderer_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D27E213ECFAB006F66DF /* particle_renderer_impl.h */; };
+		9AC2D296213ECFAB006F66DF /* particle_updaters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D27F213ECFAB006F66DF /* particle_updaters.cpp */; };
+		9AC2D297213ECFAB006F66DF /* particle_renderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D280213ECFAB006F66DF /* particle_renderer.h */; };
+		9AC2D298213ECFAB006F66DF /* particle_effect_attractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D281213ECFAB006F66DF /* particle_effect_attractor.cpp */; };
+		9AC2D299213ECFAB006F66DF /* vec4.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D282213ECFAB006F66DF /* vec4.h */; };
+		9AC2D29A213ECFAB006F66DF /* particle_effect_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D283213ECFAB006F66DF /* particle_effect_array.cpp */; };
+		9AC2D29B213ECFAB006F66DF /* particle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D284213ECFAB006F66DF /* particle.h */; };
+		9AC2D29C213ECFAB006F66DF /* particle_effect_effect.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D285213ECFAB006F66DF /* particle_effect_effect.h */; };
+		9AC2D29D213ECFAB006F66DF /* particle_effect_fountain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D286213ECFAB006F66DF /* particle_effect_fountain.cpp */; };
+		9AC2D29E213ECFAB006F66DF /* particle_effect_tunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D287213ECFAB006F66DF /* particle_effect_tunnel.cpp */; };
+		9AC2D29F213ECFAB006F66DF /* particle_impl_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D288213ECFAB006F66DF /* particle_impl_renderer.cpp */; };
+		9AC2D2A0213ECFAB006F66DF /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D289213ECFAB006F66DF /* particle_generator.cpp */; };
+		9AC2D2A1213ECFAB006F66DF /* particle_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D28A213ECFAB006F66DF /* particle_renderer.cpp */; };
+		9AC2D2A2213ECFAB006F66DF /* particle_updaters.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D28B213ECFAB006F66DF /* particle_updaters.h */; };
+		9AC2D2A3213ECFAB006F66DF /* particle_generator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D28C213ECFAB006F66DF /* particle_generator.h */; };
+		9AC2D2A4213ECFAB006F66DF /* particle_effect_attractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D28D213ECFAB006F66DF /* particle_effect_attractor.h */; };
+		9AC2D2A5213ECFAB006F66DF /* particle_particles.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC2D28E213ECFAB006F66DF /* particle_particles.h */; };
 		9AD4320F1F219B9400E3E8D4 /* estamira_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4320B1F219B9400E3E8D4 /* estamira_application.cpp */; };
 		9AD432101F219B9400E3E8D4 /* estamira_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD4320C1F219B9400E3E8D4 /* estamira_application.h */; };
 		9AD432111F219B9400E3E8D4 /* estamira_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4320D1F219B9400E3E8D4 /* estamira_main_frame.cpp */; };
@@ -122,6 +145,29 @@
 		9A574D2C16AAB99E000CC4EF /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 		9A8CCAE317EA060200F87A02 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
 		9AC2D118213EC645006F66DF /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
+		9AC2D278213ECFAB006F66DF /* particle_effect_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect_array.h; sourceTree = "<group>"; };
+		9AC2D279213ECFAB006F66DF /* particle_particles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_particles.cpp; sourceTree = "<group>"; };
+		9AC2D27A213ECFAB006F66DF /* particle_effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect.h; sourceTree = "<group>"; };
+		9AC2D27B213ECFAB006F66DF /* particle_effect_tunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect_tunnel.h; sourceTree = "<group>"; };
+		9AC2D27C213ECFAB006F66DF /* particle_effect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_effect.cpp; sourceTree = "<group>"; };
+		9AC2D27D213ECFAB006F66DF /* particle_effect_fountain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect_fountain.h; sourceTree = "<group>"; };
+		9AC2D27E213ECFAB006F66DF /* particle_renderer_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_renderer_impl.h; sourceTree = "<group>"; };
+		9AC2D27F213ECFAB006F66DF /* particle_updaters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_updaters.cpp; sourceTree = "<group>"; };
+		9AC2D280213ECFAB006F66DF /* particle_renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_renderer.h; sourceTree = "<group>"; };
+		9AC2D281213ECFAB006F66DF /* particle_effect_attractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_effect_attractor.cpp; sourceTree = "<group>"; };
+		9AC2D282213ECFAB006F66DF /* vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec4.h; sourceTree = "<group>"; };
+		9AC2D283213ECFAB006F66DF /* particle_effect_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_effect_array.cpp; sourceTree = "<group>"; };
+		9AC2D284213ECFAB006F66DF /* particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
+		9AC2D285213ECFAB006F66DF /* particle_effect_effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect_effect.h; sourceTree = "<group>"; };
+		9AC2D286213ECFAB006F66DF /* particle_effect_fountain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_effect_fountain.cpp; sourceTree = "<group>"; };
+		9AC2D287213ECFAB006F66DF /* particle_effect_tunnel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_effect_tunnel.cpp; sourceTree = "<group>"; };
+		9AC2D288213ECFAB006F66DF /* particle_impl_renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_impl_renderer.cpp; sourceTree = "<group>"; };
+		9AC2D289213ECFAB006F66DF /* particle_generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_generator.cpp; sourceTree = "<group>"; };
+		9AC2D28A213ECFAB006F66DF /* particle_renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle_renderer.cpp; sourceTree = "<group>"; };
+		9AC2D28B213ECFAB006F66DF /* particle_updaters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_updaters.h; sourceTree = "<group>"; };
+		9AC2D28C213ECFAB006F66DF /* particle_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_generator.h; sourceTree = "<group>"; };
+		9AC2D28D213ECFAB006F66DF /* particle_effect_attractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_effect_attractor.h; sourceTree = "<group>"; };
+		9AC2D28E213ECFAB006F66DF /* particle_particles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle_particles.h; sourceTree = "<group>"; };
 		9AD4320B1F219B9400E3E8D4 /* estamira_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira_application.cpp; sourceTree = "<group>"; };
 		9AD4320C1F219B9400E3E8D4 /* estamira_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = estamira_application.h; sourceTree = "<group>"; };
 		9AD4320D1F219B9400E3E8D4 /* estamira_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira_main_frame.cpp; sourceTree = "<group>"; };
@@ -245,9 +291,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9AC2D277213ECFAB006F66DF /* particle */ = {
+			isa = PBXGroup;
+			children = (
+				9AC2D278213ECFAB006F66DF /* particle_effect_array.h */,
+				9AC2D279213ECFAB006F66DF /* particle_particles.cpp */,
+				9AC2D27A213ECFAB006F66DF /* particle_effect.h */,
+				9AC2D27B213ECFAB006F66DF /* particle_effect_tunnel.h */,
+				9AC2D27C213ECFAB006F66DF /* particle_effect.cpp */,
+				9AC2D27D213ECFAB006F66DF /* particle_effect_fountain.h */,
+				9AC2D27E213ECFAB006F66DF /* particle_renderer_impl.h */,
+				9AC2D27F213ECFAB006F66DF /* particle_updaters.cpp */,
+				9AC2D280213ECFAB006F66DF /* particle_renderer.h */,
+				9AC2D281213ECFAB006F66DF /* particle_effect_attractor.cpp */,
+				9AC2D282213ECFAB006F66DF /* vec4.h */,
+				9AC2D283213ECFAB006F66DF /* particle_effect_array.cpp */,
+				9AC2D284213ECFAB006F66DF /* particle.h */,
+				9AC2D285213ECFAB006F66DF /* particle_effect_effect.h */,
+				9AC2D286213ECFAB006F66DF /* particle_effect_fountain.cpp */,
+				9AC2D287213ECFAB006F66DF /* particle_effect_tunnel.cpp */,
+				9AC2D288213ECFAB006F66DF /* particle_impl_renderer.cpp */,
+				9AC2D289213ECFAB006F66DF /* particle_generator.cpp */,
+				9AC2D28A213ECFAB006F66DF /* particle_renderer.cpp */,
+				9AC2D28B213ECFAB006F66DF /* particle_updaters.h */,
+				9AC2D28C213ECFAB006F66DF /* particle_generator.h */,
+				9AC2D28D213ECFAB006F66DF /* particle_effect_attractor.h */,
+				9AC2D28E213ECFAB006F66DF /* particle_particles.h */,
+			);
+			path = particle;
+			sourceTree = "<group>";
+		};
 		9ACABEAC17BD04FF004C3F85 /* estamira */ = {
 			isa = PBXGroup;
 			children = (
+				9AC2D277213ECFAB006F66DF /* particle */,
 				9A47F2BB212B714A003498F7 /* estamira_view.cpp */,
 				9A47F2BA212B714A003498F7 /* estamira_view.h */,
 				9AD4320B1F219B9400E3E8D4 /* estamira_application.cpp */,
@@ -275,14 +352,27 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC2D2A5213ECFAB006F66DF /* particle_particles.h in Headers */,
+				9AC2D299213ECFAB006F66DF /* vec4.h in Headers */,
 				9A342C471D5B6DFB00D00D4A /* estamira_tileset.h in Headers */,
+				9AC2D2A2213ECFAB006F66DF /* particle_updaters.h in Headers */,
 				9A342C441D5B6DFB00D00D4A /* estamira_game.h in Headers */,
+				9AC2D28F213ECFAB006F66DF /* particle_effect_array.h in Headers */,
+				9AC2D29B213ECFAB006F66DF /* particle.h in Headers */,
 				9AD432121F219B9400E3E8D4 /* estamira_main_frame.h in Headers */,
 				9A342C421D5B6DFB00D00D4A /* estamira_character.h in Headers */,
+				9AC2D2A3213ECFAB006F66DF /* particle_generator.h in Headers */,
+				9AC2D292213ECFAB006F66DF /* particle_effect_tunnel.h in Headers */,
 				9A342C401D5B6DFB00D00D4A /* estamira.h in Headers */,
 				9A47F2BC212B714B003498F7 /* estamira_view.h in Headers */,
 				9A57509F16AAB9A1000CC4EF /* framework.h in Headers */,
 				9AD432101F219B9400E3E8D4 /* estamira_application.h in Headers */,
+				9AC2D291213ECFAB006F66DF /* particle_effect.h in Headers */,
+				9AC2D295213ECFAB006F66DF /* particle_renderer_impl.h in Headers */,
+				9AC2D2A4213ECFAB006F66DF /* particle_effect_attractor.h in Headers */,
+				9AC2D294213ECFAB006F66DF /* particle_effect_fountain.h in Headers */,
+				9AC2D29C213ECFAB006F66DF /* particle_effect_effect.h in Headers */,
+				9AC2D297213ECFAB006F66DF /* particle_renderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,14 +531,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC2D293213ECFAB006F66DF /* particle_effect.cpp in Sources */,
 				9AD4320F1F219B9400E3E8D4 /* estamira_application.cpp in Sources */,
 				9A342C461D5B6DFB00D00D4A /* estamira_tileset.cpp in Sources */,
 				9A47F2BD212B714B003498F7 /* estamira_view.cpp in Sources */,
+				9AC2D2A0213ECFAB006F66DF /* particle_generator.cpp in Sources */,
+				9AC2D296213ECFAB006F66DF /* particle_updaters.cpp in Sources */,
+				9AC2D2A1213ECFAB006F66DF /* particle_renderer.cpp in Sources */,
+				9AC2D298213ECFAB006F66DF /* particle_effect_attractor.cpp in Sources */,
+				9AC2D29F213ECFAB006F66DF /* particle_impl_renderer.cpp in Sources */,
 				9AD432111F219B9400E3E8D4 /* estamira_main_frame.cpp in Sources */,
 				9A342C481D5B6DFB00D00D4A /* estamira.cpp in Sources */,
+				9AC2D29E213ECFAB006F66DF /* particle_effect_tunnel.cpp in Sources */,
+				9AC2D29D213ECFAB006F66DF /* particle_effect_fountain.cpp in Sources */,
 				9A342C411D5B6DFB00D00D4A /* estamira_character.cpp in Sources */,
 				9A342C431D5B6DFB00D00D4A /* estamira_game.cpp in Sources */,
+				9AC2D29A213ECFAB006F66DF /* particle_effect_array.cpp in Sources */,
 				9A57509E16AAB9A1000CC4EF /* framework.cpp in Sources */,
+				9AC2D290213ECFAB006F66DF /* particle_particles.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

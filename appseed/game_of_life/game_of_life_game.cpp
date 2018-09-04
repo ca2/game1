@@ -456,6 +456,7 @@ namespace game_of_life
       {
          m_aliveCells.add(get_cell(x, y));
          get_cell(x, y)->setState(1);
+         get_cell(x, y)->m_estate = state_surviving;
       }
       else
       {
@@ -466,6 +467,7 @@ namespace game_of_life
                m_aliveCells.erase(it);
          };
          get_cell(x, y)->setState(0);
+         get_cell(x, y)->m_estate = state_dead;
       }
    }
 

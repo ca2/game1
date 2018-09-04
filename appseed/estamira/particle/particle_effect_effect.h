@@ -31,8 +31,8 @@ namespace particle
          virtual void gpuUpdate(double dt) = 0;
          virtual void render(::draw2d::graphics * pgraphics, float cx, float cy) = 0;
 
-         virtual int numAllParticles() = 0;
-         virtual int numActiveParticles() = 0;
+         virtual ::count numAllParticles() = 0;
+         virtual ::count numActiveParticles() = 0;
 
       };
 

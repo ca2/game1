@@ -39,8 +39,9 @@ namespace particle
          void gpuUpdate(double dt) override;
          void render(::draw2d::graphics * pgraphics, float cx, float cy) override;
 
-         int numAllParticles() override { return m_psystem->numAllParticles(); }
-         int numActiveParticles() override { return m_psystem->numActiveParticles(); }
+         ::count numAllParticles() override { return m_psystem->numAllParticles(); }
+         ::count numActiveParticles() override { return m_psystem->numActiveParticles(); }
+         
       };
 
       class CLASS_DECL_ESTAMIRA random_color_range_fountain : public fountain

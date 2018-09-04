@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include <math.h>
 
 
@@ -99,10 +99,6 @@ namespace pacman
       point pt(pmouse->m_pt);
 
       ScreenToClient(&pt);
-
-      int i = -1;
-      int j = -1;
-
 
    }
 

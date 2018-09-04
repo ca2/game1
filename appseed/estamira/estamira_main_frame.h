@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace estamira
@@ -15,20 +15,19 @@ namespace estamira
       virtual ~main_frame();
 
 
-      virtual void install_message_routing(::message::sender * psender);
+      virtual void install_message_routing(::message::sender * psender) override;
 
 
-      sp(::user::wndfrm::frame::frame) create_frame_schema();
+      sp(::user::wndfrm::frame::frame) create_frame_schema() override;
 
 
-      virtual void assert_valid() const;
-      virtual void dump(dump_context & dumpcontext) const;
-
+      virtual void assert_valid() const override;
+      virtual void dump(dump_context & dumpcontext) const override;
 
       virtual bool get_translucency(::user::e_translucency & etranslucency);
 
 
-      virtual bool on_create_bars();
+      virtual bool on_create_bars() override;
 
       virtual bool has_pending_graphical_update() override;
 

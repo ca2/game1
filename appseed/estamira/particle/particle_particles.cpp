@@ -153,9 +153,12 @@ namespace particle
       m_particles.m_countActive = 0;
    }
 
-   size_t system::computeMemoryUsage(const system &p)
+   
+   memory_size_t system::computeMemoryUsage(const system &p)
    {
+      
       return 2 * data::computeMemoryUsage(p.m_particles);
+      
    }
 
 

@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace sokoban
@@ -41,6 +41,8 @@ namespace sokoban
 
    bool document::on_new_document()
    {
+      
+      synch_lock sl(m_pmutex);
 
       ::file::listing listing(get_app());
 

@@ -106,7 +106,7 @@ namespace particle
       data m_particles;
       data m_particlesActive;
 
-      size_t m_count;
+      ::count m_count;
 
       spa(emitter) m_emittera;
       spa(updater) m_updatera;
@@ -121,15 +121,15 @@ namespace particle
       virtual void update(double dt);
       virtual void reset();
 
-      virtual size_t numAllParticles() const { return m_particles.m_count; }
-      virtual size_t numActiveParticles() const { return m_particles.m_countActive; }
+      virtual ::count numAllParticles() const { return m_particles.m_count; }
+      virtual ::count numActiveParticles() const { return m_particles.m_countActive; }
 
       void addEmitter(emitter * em) { m_emittera.add(em); }
       void addUpdater(updater * up) { m_updatera.add(up); }
 
       data *finalData() { return &m_particles; }
 
-      static size_t computeMemoryUsage(const system &p);
+      static memory_size_t computeMemoryUsage(const system &p);
 
 
    };

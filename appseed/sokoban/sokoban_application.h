@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace sokoban
@@ -22,7 +22,7 @@ namespace sokoban
       virtual bool init_instance() override;
       virtual void term_instance() override;
 
-      virtual void on_request(::create * pcreate);
+      virtual void on_request(::create * pcreate) override;
 
 
    };

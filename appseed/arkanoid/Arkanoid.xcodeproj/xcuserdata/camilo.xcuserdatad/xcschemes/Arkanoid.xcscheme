@@ -17,9 +17,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "Sokoban.app"
-            BlueprintName = "Sokoban"
-            ReferencedContainer = "container:Sokoban.xcodeproj">
+            BuildableName = "Arkanoid.app"
+            BlueprintName = "Arkanoid"
+            ReferencedContainer = "container:Arkanoid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -40,9 +40,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "Sokoban.app"
-            BlueprintName = "Sokoban"
-            ReferencedContainer = "container:Sokoban.xcodeproj">
+            BuildableName = "Arkanoid.app"
+            BlueprintName = "Arkanoid"
+            ReferencedContainer = "container:Arkanoid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

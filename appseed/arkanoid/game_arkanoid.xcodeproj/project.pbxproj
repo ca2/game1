@@ -7,80 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A34305F1D5B9E7F00D00D4A /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
-		9A3430601D5B9E7F00D00D4A /* tetris_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859C1D5A9D7700354801 /* tetris_application.cpp */; };
-		9A3430611D5B9E7F00D00D4A /* tetris_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859E1D5A9D7700354801 /* tetris_document.cpp */; };
-		9A3430621D5B9E7F00D00D4A /* tetris_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A01D5A9D7800354801 /* tetris_frame.cpp */; };
-		9A3430631D5B9E7F00D00D4A /* tetris_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A21D5A9D7800354801 /* tetris_interface.cpp */; };
-		9A3430641D5B9E7F00D00D4A /* tetris_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A41D5A9D7800354801 /* tetris_pane_view.cpp */; };
-		9A3430651D5B9E7F00D00D4A /* tetris_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A61D5A9D7800354801 /* tetris_pane_view_update_hint.cpp */; };
-		9A3430661D5B9E7F00D00D4A /* tetris_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A81D5A9D7800354801 /* tetris_preview.cpp */; };
-		9A3430681D5B9E7F00D00D4A /* tetris_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485AC1D5A9D7800354801 /* tetris_view.cpp */; };
-		9A3430731D5B9EA200D00D4A /* libios_ace.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */; };
-		9A3430741D5B9EA200D00D4A /* libios_aura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */; };
-		9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430701D5B9EA200D00D4A /* libios_axis.dylib */; };
-		9A3430761D5B9EA200D00D4A /* libios_base.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430711D5B9EA200D00D4A /* libios_base.dylib */; };
-		9A3430771D5B9EA200D00D4A /* libios_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3430721D5B9EA200D00D4A /* libios_core.dylib */; };
-		9AC2D1C7213ECD97006F66DF /* libestamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC2D1C0213ECD83006F66DF /* libestamira.dylib */; };
-		9AC2D1C9213ECD9E006F66DF /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC2D1C8213ECD9E006F66DF /* libmultimedia.dylib */; };
-		9AC2D1CD213ECDDF006F66DF /* tetris_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D1CB213ECDBE006F66DF /* tetris_game.cpp */; };
-		9AC2D1CE213ECDDF006F66DF /* tetris_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2D1CB213ECDBE006F66DF /* tetris_game.cpp */; };
-		9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485861D5A9D7700354801 /* framework.cpp */; };
-		9AD485D41D5A9D7A00354801 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485871D5A9D7700354801 /* framework.h */; };
-		9AD485D81D5A9D7A00354801 /* tetris_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859C1D5A9D7700354801 /* tetris_application.cpp */; };
-		9AD485D91D5A9D7A00354801 /* tetris_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD4859D1D5A9D7700354801 /* tetris_application.h */; };
-		9AD485DA1D5A9D7A00354801 /* tetris_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4859E1D5A9D7700354801 /* tetris_document.cpp */; };
-		9AD485DB1D5A9D7A00354801 /* tetris_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD4859F1D5A9D7700354801 /* tetris_document.h */; };
-		9AD485DC1D5A9D7A00354801 /* tetris_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A01D5A9D7800354801 /* tetris_frame.cpp */; };
-		9AD485DD1D5A9D7A00354801 /* tetris_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485A11D5A9D7800354801 /* tetris_frame.h */; };
-		9AD485DE1D5A9D7A00354801 /* tetris_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A21D5A9D7800354801 /* tetris_interface.cpp */; };
-		9AD485DF1D5A9D7A00354801 /* tetris_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485A31D5A9D7800354801 /* tetris_interface.h */; };
-		9AD485E01D5A9D7A00354801 /* tetris_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A41D5A9D7800354801 /* tetris_pane_view.cpp */; };
-		9AD485E11D5A9D7A00354801 /* tetris_pane_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485A51D5A9D7800354801 /* tetris_pane_view.h */; };
-		9AD485E21D5A9D7A00354801 /* tetris_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A61D5A9D7800354801 /* tetris_pane_view_update_hint.cpp */; };
-		9AD485E31D5A9D7A00354801 /* tetris_pane_view_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485A71D5A9D7800354801 /* tetris_pane_view_update_hint.h */; };
-		9AD485E41D5A9D7A00354801 /* tetris_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485A81D5A9D7800354801 /* tetris_preview.cpp */; };
-		9AD485E51D5A9D7A00354801 /* tetris_preview.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485A91D5A9D7800354801 /* tetris_preview.h */; };
-		9AD485E81D5A9D7A00354801 /* tetris_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD485AC1D5A9D7800354801 /* tetris_view.cpp */; };
-		9AD485E91D5A9D7A00354801 /* tetris_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD485AD1D5A9D7800354801 /* tetris_view.h */; };
-		9AD486051D5A9FF600354801 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486041D5A9FF600354801 /* libaura.dylib */; };
-		9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486061D5A9FFC00354801 /* libaxis.dylib */; };
-		9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486081D5AA00100354801 /* libbase.dylib */; };
-		9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD486181D5AA03700354801 /* libcore.dylib */; };
+		9A77FB65213EE8A800B3A133 /* arkanoid_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB00213EE8A500B3A133 /* arkanoid_main_frame.cpp */; };
+		9A77FB66213EE8A800B3A133 /* arkanoid_main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB00213EE8A500B3A133 /* arkanoid_main_frame.cpp */; };
+		9A77FB69213EE8A800B3A133 /* arkanoid_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB0A213EE8A500B3A133 /* arkanoid_interface.cpp */; };
+		9A77FB6A213EE8A800B3A133 /* arkanoid_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB0A213EE8A500B3A133 /* arkanoid_interface.cpp */; };
+		9A77FB6E213EE8A800B3A133 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB13213EE8A500B3A133 /* framework.cpp */; };
+		9A77FB6F213EE8A800B3A133 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB13213EE8A500B3A133 /* framework.cpp */; };
+		9A77FB70213EE8A800B3A133 /* arkanoid_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB15213EE8A600B3A133 /* arkanoid_pane_view.cpp */; };
+		9A77FB71213EE8A800B3A133 /* arkanoid_pane_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB15213EE8A600B3A133 /* arkanoid_pane_view.cpp */; };
+		9A77FB73213EE8A800B3A133 /* arkanoid_pane_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB18213EE8A600B3A133 /* arkanoid_pane_view.h */; };
+		9A77FB74213EE8A800B3A133 /* arkanoid_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB1A213EE8A600B3A133 /* arkanoid_interface.h */; };
+		9A77FB77213EE8A800B3A133 /* arkanoid_arkanoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB2A213EE8A600B3A133 /* arkanoid_arkanoid.cpp */; };
+		9A77FB78213EE8A800B3A133 /* arkanoid_arkanoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB2A213EE8A600B3A133 /* arkanoid_arkanoid.cpp */; };
+		9A77FB79213EE8A800B3A133 /* arkanoid_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB31213EE8A600B3A133 /* arkanoid_document.h */; };
+		9A77FB7A213EE8A800B3A133 /* arkanoid_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB32213EE8A600B3A133 /* arkanoid_frame.h */; };
+		9A77FB7B213EE8A800B3A133 /* arkanoid_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB34213EE8A600B3A133 /* arkanoid_view.cpp */; };
+		9A77FB7C213EE8A800B3A133 /* arkanoid_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB34213EE8A600B3A133 /* arkanoid_view.cpp */; };
+		9A77FB7D213EE8A800B3A133 /* arkanoid_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB37213EE8A700B3A133 /* arkanoid_pane_view_update_hint.cpp */; };
+		9A77FB7E213EE8A800B3A133 /* arkanoid_pane_view_update_hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB37213EE8A700B3A133 /* arkanoid_pane_view_update_hint.cpp */; };
+		9A77FB81213EE8A800B3A133 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB3A213EE8A700B3A133 /* framework.h */; };
+		9A77FB82213EE8A800B3A133 /* arkanoid_arkanoid.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB3B213EE8A700B3A133 /* arkanoid_arkanoid.h */; };
+		9A77FB83213EE8A800B3A133 /* arkanoid_main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB3C213EE8A700B3A133 /* arkanoid_main_frame.h */; };
+		9A77FB84213EE8A800B3A133 /* arkanoid_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB3D213EE8A700B3A133 /* arkanoid_application.cpp */; };
+		9A77FB85213EE8A800B3A133 /* arkanoid_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB3D213EE8A700B3A133 /* arkanoid_application.cpp */; };
+		9A77FB86213EE8A800B3A133 /* arkanoid_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB4C213EE8A700B3A133 /* arkanoid_document.cpp */; };
+		9A77FB87213EE8A800B3A133 /* arkanoid_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB4C213EE8A700B3A133 /* arkanoid_document.cpp */; };
+		9A77FB8A213EE8A800B3A133 /* arkanoid.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB4E213EE8A700B3A133 /* arkanoid.h */; };
+		9A77FB8B213EE8A800B3A133 /* arkanoid_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB4F213EE8A700B3A133 /* arkanoid_view.h */; };
+		9A77FB8C213EE8A800B3A133 /* arkanoid_pane_view_update_hint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB51213EE8A700B3A133 /* arkanoid_pane_view_update_hint.h */; };
+		9A77FB8D213EE8A800B3A133 /* arkanoid_application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A77FB52213EE8A700B3A133 /* arkanoid_application.h */; };
+		9A77FB8E213EE8A800B3A133 /* arkanoid_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB53213EE8A700B3A133 /* arkanoid_frame.cpp */; };
+		9A77FB8F213EE8A800B3A133 /* arkanoid_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FB53213EE8A700B3A133 /* arkanoid_frame.cpp */; };
+		9A77FC1B213EEBDC00B3A133 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FC1A213EEBDC00B3A133 /* libaura.dylib */; };
+		9A77FC1D213EEBE100B3A133 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FC1C213EEBE100B3A133 /* libaxis.dylib */; };
+		9A77FC1F213EEBE800B3A133 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FC1E213EEBE800B3A133 /* libbase.dylib */; };
+		9A77FC23213EEBF300B3A133 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FC22213EEBF300B3A133 /* libcore.dylib */; };
+		9A77FC25213EEBF900B3A133 /* libmultimedia.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FC24213EEBF900B3A133 /* libmultimedia.dylib */; };
+		9A77FC26213EEBFF00B3A133 /* libestamira.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A77FAF0213EE88800B3A133 /* libestamira.dylib */; };
 		9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9A1904CFFD001AEFFB /* XCTest.framework */; };
 		9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8C1904CFFD001AEFFB /* Foundation.framework */; };
 		9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E9D1904CFFD001AEFFB /* UIKit.framework */; };
-		9AE24EA11904CFFD001AEFFB /* libgame_tetris.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */; };
+		9AE24EA11904CFFD001AEFFB /* libgame_arkanoid..dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libgame_arkanoid..dylib */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AE24EA91904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9AC2D1BF213ECD83006F66DF /* PBXContainerItemProxy */ = {
+		9A77FAEF213EE88800B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */;
+			containerPortal = 9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
 			remoteInfo = estamira;
 		};
-		9AC2D1C1213ECD83006F66DF /* PBXContainerItemProxy */ = {
+		9A77FAF1213EE88800B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */;
+			containerPortal = 9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
 			remoteInfo = ios_estamira;
 		};
-		9AC2D1C3213ECD83006F66DF /* PBXContainerItemProxy */ = {
+		9A77FAF3213EE88800B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */;
+			containerPortal = 9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
 			remoteInfo = estamira_iosTests;
 		};
-		9AC2D1C5213ECD8F006F66DF /* PBXContainerItemProxy */ = {
+		9A77FC20213EEBED00B3A133 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */;
+			containerPortal = 9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
 			remoteInfo = estamira;
@@ -113,11 +110,33 @@
 		07B65529190F301F002DAADE /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../app/thirdparty/appseed/freetype/build/Debug-iphoneos/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		07B6552A190F301F002DAADE /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../app/thirdparty/appseed/mysql/build/Debug-iphoneos/libbasemysql.dylib"; sourceTree = "<group>"; };
 		07B6552B190F301F002DAADE /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore.dylib"; sourceTree = "<group>"; };
-		9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_ace.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_ace.dylib"; sourceTree = "<group>"; };
-		9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_aura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/arcade-ios-biflflzsuoocrodvdsvmkqeosgky/Build/Products/Debug-iphonesimulator/libios_aura.dylib"; sourceTree = "<group>"; };
-		9A3430701D5B9EA200D00D4A /* libios_axis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_axis.dylib; path = "../../../app/appseed/axis/build/Debug-iphoneos/libios_axis.dylib"; sourceTree = "<group>"; };
-		9A3430711D5B9EA200D00D4A /* libios_base.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_base.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libios_base.dylib"; sourceTree = "<group>"; };
-		9A3430721D5B9EA200D00D4A /* libios_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libios_core.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libios_core.dylib"; sourceTree = "<group>"; };
+		9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
+		9A77FB00213EE8A500B3A133 /* arkanoid_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_main_frame.cpp; sourceTree = "<group>"; };
+		9A77FB0A213EE8A500B3A133 /* arkanoid_interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_interface.cpp; sourceTree = "<group>"; };
+		9A77FB13213EE8A500B3A133 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		9A77FB15213EE8A600B3A133 /* arkanoid_pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_pane_view.cpp; sourceTree = "<group>"; };
+		9A77FB18213EE8A600B3A133 /* arkanoid_pane_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_pane_view.h; sourceTree = "<group>"; };
+		9A77FB1A213EE8A600B3A133 /* arkanoid_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_interface.h; sourceTree = "<group>"; };
+		9A77FB2A213EE8A600B3A133 /* arkanoid_arkanoid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_arkanoid.cpp; sourceTree = "<group>"; };
+		9A77FB31213EE8A600B3A133 /* arkanoid_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_document.h; sourceTree = "<group>"; };
+		9A77FB32213EE8A600B3A133 /* arkanoid_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_frame.h; sourceTree = "<group>"; };
+		9A77FB34213EE8A600B3A133 /* arkanoid_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_view.cpp; sourceTree = "<group>"; };
+		9A77FB37213EE8A700B3A133 /* arkanoid_pane_view_update_hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_pane_view_update_hint.cpp; sourceTree = "<group>"; };
+		9A77FB3A213EE8A700B3A133 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9A77FB3B213EE8A700B3A133 /* arkanoid_arkanoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_arkanoid.h; sourceTree = "<group>"; };
+		9A77FB3C213EE8A700B3A133 /* arkanoid_main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_main_frame.h; sourceTree = "<group>"; };
+		9A77FB3D213EE8A700B3A133 /* arkanoid_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_application.cpp; sourceTree = "<group>"; };
+		9A77FB4C213EE8A700B3A133 /* arkanoid_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_document.cpp; sourceTree = "<group>"; };
+		9A77FB4E213EE8A700B3A133 /* arkanoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid.h; sourceTree = "<group>"; };
+		9A77FB4F213EE8A700B3A133 /* arkanoid_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_view.h; sourceTree = "<group>"; };
+		9A77FB51213EE8A700B3A133 /* arkanoid_pane_view_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_pane_view_update_hint.h; sourceTree = "<group>"; };
+		9A77FB52213EE8A700B3A133 /* arkanoid_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arkanoid_application.h; sourceTree = "<group>"; };
+		9A77FB53213EE8A700B3A133 /* arkanoid_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arkanoid_frame.cpp; sourceTree = "<group>"; };
+		9A77FC1A213EEBDC00B3A133 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A77FC1C213EEBE100B3A133 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A77FC1E213EEBE800B3A133 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A77FC22213EEBF300B3A133 /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A77FC24213EEBF900B3A133 /* libmultimedia.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libmultimedia.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA6A29C190710C6000A1F4A /* libbase_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase_ios.dylib; path = "../../../app/appseed/base/build/Debug-iphoneos/libbase_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A29E190710E0000A1F4A /* libcore_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore_ios.dylib; path = "../../../app/appseed/core/build/Debug-iphoneos/libcore_ios.dylib"; sourceTree = "<group>"; };
 		9AA6A2A0190710F3000A1F4A /* libbasefreeimage_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreeimage_ios.dylib; path = "../../../app/thirdparty/appseed/freeimage/build/Debug-iphoneos/libbasefreeimage_ios.dylib"; sourceTree = "<group>"; };
@@ -128,33 +147,7 @@
 		9AAE862917E99A9900F0512E /* libbasefreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasefreetype.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasefreetype.dylib"; sourceTree = "<group>"; };
 		9AAE862A17E99A9900F0512E /* libbasemysql.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbasemysql.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbasemysql.dylib"; sourceTree = "<group>"; };
 		9AAE862E17E99A9A00F0512E /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = estamira.xcodeproj; path = ../estamira/estamira.xcodeproj; sourceTree = "<group>"; };
-		9AC2D1C8213ECD9E006F66DF /* libmultimedia.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libmultimedia.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AC2D1CA213ECDBD006F66DF /* tetris_game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_game.h; sourceTree = "<group>"; };
-		9AC2D1CB213ECDBE006F66DF /* tetris_game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_game.cpp; sourceTree = "<group>"; };
-		9AD485861D5A9D7700354801 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		9AD485871D5A9D7700354801 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9AD4859C1D5A9D7700354801 /* tetris_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_application.cpp; sourceTree = "<group>"; };
-		9AD4859D1D5A9D7700354801 /* tetris_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_application.h; sourceTree = "<group>"; };
-		9AD4859E1D5A9D7700354801 /* tetris_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_document.cpp; sourceTree = "<group>"; };
-		9AD4859F1D5A9D7700354801 /* tetris_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_document.h; sourceTree = "<group>"; };
-		9AD485A01D5A9D7800354801 /* tetris_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_frame.cpp; sourceTree = "<group>"; };
-		9AD485A11D5A9D7800354801 /* tetris_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_frame.h; sourceTree = "<group>"; };
-		9AD485A21D5A9D7800354801 /* tetris_interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_interface.cpp; sourceTree = "<group>"; };
-		9AD485A31D5A9D7800354801 /* tetris_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_interface.h; sourceTree = "<group>"; };
-		9AD485A41D5A9D7800354801 /* tetris_pane_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_pane_view.cpp; sourceTree = "<group>"; };
-		9AD485A51D5A9D7800354801 /* tetris_pane_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_pane_view.h; sourceTree = "<group>"; };
-		9AD485A61D5A9D7800354801 /* tetris_pane_view_update_hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_pane_view_update_hint.cpp; sourceTree = "<group>"; };
-		9AD485A71D5A9D7800354801 /* tetris_pane_view_update_hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_pane_view_update_hint.h; sourceTree = "<group>"; };
-		9AD485A81D5A9D7800354801 /* tetris_preview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_preview.cpp; sourceTree = "<group>"; };
-		9AD485A91D5A9D7800354801 /* tetris_preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_preview.h; sourceTree = "<group>"; };
-		9AD485AC1D5A9D7800354801 /* tetris_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tetris_view.cpp; sourceTree = "<group>"; };
-		9AD485AD1D5A9D7800354801 /* tetris_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tetris_view.h; sourceTree = "<group>"; };
-		9AD486041D5A9FF600354801 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
-		9AD486061D5A9FFC00354801 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libaxis.dylib"; sourceTree = "<group>"; };
-		9AD486081D5AA00100354801 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
-		9AD486181D5AA03700354801 /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/game-osx-bptwppztvkwexydcqbxexbftmdod/Build/Products/Debug/libcore.dylib"; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_tetris.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libgame_arkanoid..dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgame_arkanoid..dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8C1904CFFD001AEFFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E9A1904CFFD001AEFFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -162,7 +155,7 @@
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
-		9AEB75A316F78DF10085103B /* libgame_tetris.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgame_tetris.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEB75A316F78DF10085103B /* libgame_arkanoid.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgame_arkanoid.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A3430731D5B9EA200D00D4A /* libios_ace.dylib in Frameworks */,
-				9A3430741D5B9EA200D00D4A /* libios_aura.dylib in Frameworks */,
-				9A3430751D5B9EA200D00D4A /* libios_axis.dylib in Frameworks */,
-				9A3430761D5B9EA200D00D4A /* libios_base.dylib in Frameworks */,
-				9A3430771D5B9EA200D00D4A /* libios_core.dylib in Frameworks */,
 				9AE24E8D1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,7 +174,7 @@
 				9AE24E9B1904CFFD001AEFFB /* XCTest.framework in Frameworks */,
 				9AE24E9E1904CFFD001AEFFB /* UIKit.framework in Frameworks */,
 				9AE24E9C1904CFFD001AEFFB /* Foundation.framework in Frameworks */,
-				9AE24EA11904CFFD001AEFFB /* libgame_tetris.dylib in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libgame_arkanoid..dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,68 +182,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AC2D1C9213ECD9E006F66DF /* libmultimedia.dylib in Frameworks */,
-				9AC2D1C7213ECD97006F66DF /* libestamira.dylib in Frameworks */,
-				9AD486191D5AA03700354801 /* libcore.dylib in Frameworks */,
-				9AD486091D5AA00100354801 /* libbase.dylib in Frameworks */,
-				9AD486071D5A9FFC00354801 /* libaxis.dylib in Frameworks */,
-				9AD486051D5A9FF600354801 /* libaura.dylib in Frameworks */,
+				9A77FC26213EEBFF00B3A133 /* libestamira.dylib in Frameworks */,
+				9A77FC25213EEBF900B3A133 /* libmultimedia.dylib in Frameworks */,
+				9A77FC23213EEBF300B3A133 /* libcore.dylib in Frameworks */,
+				9A77FC1F213EEBE800B3A133 /* libbase.dylib in Frameworks */,
+				9A77FC1D213EEBE100B3A133 /* libaxis.dylib in Frameworks */,
+				9A77FC1B213EEBDC00B3A133 /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9AC2D1BA213ECD82006F66DF /* Products */ = {
+		9A77FAEA213EE88800B3A133 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AC2D1C0213ECD83006F66DF /* libestamira.dylib */,
-				9AC2D1C2213ECD83006F66DF /* libios_estamira.dylib */,
-				9AC2D1C4213ECD83006F66DF /* estamira_iosTests.xctest */,
+				9A77FAF0213EE88800B3A133 /* libestamira.dylib */,
+				9A77FAF2213EE88800B3A133 /* libios_estamira.dylib */,
+				9A77FAF4213EE88800B3A133 /* estamira_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AD4855F1D5A9D7700354801 /* tetris */ = {
+		9A77FAF6213EE8A500B3A133 /* arkanoid */ = {
 			isa = PBXGroup;
 			children = (
-				9AD485861D5A9D7700354801 /* framework.cpp */,
-				9AD485871D5A9D7700354801 /* framework.h */,
-				9AD4859C1D5A9D7700354801 /* tetris_application.cpp */,
-				9AD4859D1D5A9D7700354801 /* tetris_application.h */,
-				9AD4859E1D5A9D7700354801 /* tetris_document.cpp */,
-				9AD4859F1D5A9D7700354801 /* tetris_document.h */,
-				9AD485A01D5A9D7800354801 /* tetris_frame.cpp */,
-				9AD485A11D5A9D7800354801 /* tetris_frame.h */,
-				9AC2D1CB213ECDBE006F66DF /* tetris_game.cpp */,
-				9AC2D1CA213ECDBD006F66DF /* tetris_game.h */,
-				9AD485A21D5A9D7800354801 /* tetris_interface.cpp */,
-				9AD485A31D5A9D7800354801 /* tetris_interface.h */,
-				9AD485A41D5A9D7800354801 /* tetris_pane_view.cpp */,
-				9AD485A51D5A9D7800354801 /* tetris_pane_view.h */,
-				9AD485A61D5A9D7800354801 /* tetris_pane_view_update_hint.cpp */,
-				9AD485A71D5A9D7800354801 /* tetris_pane_view_update_hint.h */,
-				9AD485A81D5A9D7800354801 /* tetris_preview.cpp */,
-				9AD485A91D5A9D7800354801 /* tetris_preview.h */,
-				9AD485AC1D5A9D7800354801 /* tetris_view.cpp */,
-				9AD485AD1D5A9D7800354801 /* tetris_view.h */,
+				9A77FB00213EE8A500B3A133 /* arkanoid_main_frame.cpp */,
+				9A77FB0A213EE8A500B3A133 /* arkanoid_interface.cpp */,
+				9A77FB13213EE8A500B3A133 /* framework.cpp */,
+				9A77FB15213EE8A600B3A133 /* arkanoid_pane_view.cpp */,
+				9A77FB18213EE8A600B3A133 /* arkanoid_pane_view.h */,
+				9A77FB1A213EE8A600B3A133 /* arkanoid_interface.h */,
+				9A77FB2A213EE8A600B3A133 /* arkanoid_arkanoid.cpp */,
+				9A77FB31213EE8A600B3A133 /* arkanoid_document.h */,
+				9A77FB32213EE8A600B3A133 /* arkanoid_frame.h */,
+				9A77FB34213EE8A600B3A133 /* arkanoid_view.cpp */,
+				9A77FB37213EE8A700B3A133 /* arkanoid_pane_view_update_hint.cpp */,
+				9A77FB3A213EE8A700B3A133 /* framework.h */,
+				9A77FB3B213EE8A700B3A133 /* arkanoid_arkanoid.h */,
+				9A77FB3C213EE8A700B3A133 /* arkanoid_main_frame.h */,
+				9A77FB3D213EE8A700B3A133 /* arkanoid_application.cpp */,
+				9A77FB4C213EE8A700B3A133 /* arkanoid_document.cpp */,
+				9A77FB4E213EE8A700B3A133 /* arkanoid.h */,
+				9A77FB4F213EE8A700B3A133 /* arkanoid_view.h */,
+				9A77FB51213EE8A700B3A133 /* arkanoid_pane_view_update_hint.h */,
+				9A77FB52213EE8A700B3A133 /* arkanoid_application.h */,
+				9A77FB53213EE8A700B3A133 /* arkanoid_frame.cpp */,
 			);
-			name = tetris;
+			name = arkanoid;
 			sourceTree = "<group>";
 		};
 		9AE24E8B1904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AC2D1C8213ECD9E006F66DF /* libmultimedia.dylib */,
-				9A34306E1D5B9EA200D00D4A /* libios_ace.dylib */,
-				9A34306F1D5B9EA200D00D4A /* libios_aura.dylib */,
-				9A3430701D5B9EA200D00D4A /* libios_axis.dylib */,
-				9A3430711D5B9EA200D00D4A /* libios_base.dylib */,
-				9A3430721D5B9EA200D00D4A /* libios_core.dylib */,
-				9AD486181D5AA03700354801 /* libcore.dylib */,
-				9AD486081D5AA00100354801 /* libbase.dylib */,
-				9AD486061D5A9FFC00354801 /* libaxis.dylib */,
-				9AD486041D5A9FF600354801 /* libaura.dylib */,
+				9A77FC24213EEBF900B3A133 /* libmultimedia.dylib */,
+				9A77FC22213EEBF300B3A133 /* libcore.dylib */,
+				9A77FC1E213EEBE800B3A133 /* libbase.dylib */,
+				9A77FC1C213EEBE100B3A133 /* libaxis.dylib */,
+				9A77FC1A213EEBDC00B3A133 /* libaura.dylib */,
 				078AEF6219158B190091C065 /* libbase.dylib */,
 				07B65527190F301F002DAADE /* libbase.dylib */,
 				07B65528190F301F002DAADE /* libbasefreeimage.dylib */,
@@ -295,8 +279,8 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */,
-				9AD4855F1D5A9D7700354801 /* tetris */,
+				9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */,
+				9A77FAF6213EE8A500B3A133 /* arkanoid */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AE24E8B1904CFFD001AEFFB /* Frameworks */,
 				9AEB75A416F78DF10085103B /* Products */,
@@ -311,8 +295,8 @@
 		9AEB75A416F78DF10085103B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AEB75A316F78DF10085103B /* libgame_tetris.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */,
+				9AEB75A316F78DF10085103B /* libgame_arkanoid.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libgame_arkanoid..dylib */,
 				9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -325,24 +309,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD485DB1D5A9D7A00354801 /* tetris_document.h in Headers */,
-				9AD485E51D5A9D7A00354801 /* tetris_preview.h in Headers */,
-				9AD485D91D5A9D7A00354801 /* tetris_application.h in Headers */,
-				9AD485E91D5A9D7A00354801 /* tetris_view.h in Headers */,
-				9AD485DF1D5A9D7A00354801 /* tetris_interface.h in Headers */,
-				9AD485D41D5A9D7A00354801 /* framework.h in Headers */,
-				9AD485E11D5A9D7A00354801 /* tetris_pane_view.h in Headers */,
-				9AD485E31D5A9D7A00354801 /* tetris_pane_view_update_hint.h in Headers */,
-				9AD485DD1D5A9D7A00354801 /* tetris_frame.h in Headers */,
+				9A77FB7A213EE8A800B3A133 /* arkanoid_frame.h in Headers */,
+				9A77FB73213EE8A800B3A133 /* arkanoid_pane_view.h in Headers */,
+				9A77FB8C213EE8A800B3A133 /* arkanoid_pane_view_update_hint.h in Headers */,
+				9A77FB74213EE8A800B3A133 /* arkanoid_interface.h in Headers */,
+				9A77FB83213EE8A800B3A133 /* arkanoid_main_frame.h in Headers */,
+				9A77FB79213EE8A800B3A133 /* arkanoid_document.h in Headers */,
+				9A77FB82213EE8A800B3A133 /* arkanoid_arkanoid.h in Headers */,
+				9A77FB81213EE8A800B3A133 /* framework.h in Headers */,
+				9A77FB8D213EE8A800B3A133 /* arkanoid_application.h in Headers */,
+				9A77FB8A213EE8A800B3A133 /* arkanoid.h in Headers */,
+				9A77FB8B213EE8A800B3A133 /* arkanoid_view.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9AE24E891904CFFD001AEFFB /* ios_game_tetris */ = {
+		9AE24E891904CFFD001AEFFB /* ios_game_arkanoid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_tetris" */;
+			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_arkanoid" */;
 			buildPhases = (
 				9AE24E861904CFFD001AEFFB /* Sources */,
 				9AE24E871904CFFD001AEFFB /* Frameworks */,
@@ -352,9 +338,9 @@
 			);
 			dependencies = (
 			);
-			name = ios_game_tetris;
+			name = ios_game_arkanoid;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_tetris.dylib */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libgame_arkanoid..dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
@@ -375,9 +361,9 @@
 			productReference = 9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9AEB75A216F78DF10085103B /* game_tetris */ = {
+		9AEB75A216F78DF10085103B /* game_arkanoid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_tetris" */;
+			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_arkanoid" */;
 			buildPhases = (
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
@@ -386,11 +372,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AC2D1C6213ECD8F006F66DF /* PBXTargetDependency */,
+				9A77FC21213EEBED00B3A133 /* PBXTargetDependency */,
 			);
-			name = game_tetris;
+			name = game_arkanoid;
 			productName = app_core_hellomultiverse;
-			productReference = 9AEB75A316F78DF10085103B /* libgame_tetris.dylib */;
+			productReference = 9AEB75A316F78DF10085103B /* libgame_arkanoid.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -407,7 +393,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_tetris" */;
+			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_arkanoid" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -419,39 +405,39 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9AC2D1BA213ECD82006F66DF /* Products */;
-					ProjectRef = 9AC2D1B9213ECD82006F66DF /* estamira.xcodeproj */;
+					ProductGroup = 9A77FAEA213EE88800B3A133 /* Products */;
+					ProjectRef = 9A77FAE9213EE88800B3A133 /* estamira.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				9AEB75A216F78DF10085103B /* game_tetris */,
-				9AE24E891904CFFD001AEFFB /* ios_game_tetris */,
+				9AEB75A216F78DF10085103B /* game_arkanoid */,
+				9AE24E891904CFFD001AEFFB /* ios_game_arkanoid */,
 				9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9AC2D1C0213ECD83006F66DF /* libestamira.dylib */ = {
+		9A77FAF0213EE88800B3A133 /* libestamira.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libestamira.dylib;
-			remoteRef = 9AC2D1BF213ECD83006F66DF /* PBXContainerItemProxy */;
+			remoteRef = 9A77FAEF213EE88800B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AC2D1C2213ECD83006F66DF /* libios_estamira.dylib */ = {
+		9A77FAF2213EE88800B3A133 /* libios_estamira.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libios_estamira.dylib;
-			remoteRef = 9AC2D1C1213ECD83006F66DF /* PBXContainerItemProxy */;
+			remoteRef = 9A77FAF1213EE88800B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AC2D1C4213ECD83006F66DF /* estamira_iosTests.xctest */ = {
+		9A77FAF4213EE88800B3A133 /* estamira_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = estamira_iosTests.xctest;
-			remoteRef = 9AC2D1C3213ECD83006F66DF /* PBXContainerItemProxy */;
+			remoteRef = 9A77FAF3213EE88800B3A133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -472,16 +458,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A34305F1D5B9E7F00D00D4A /* framework.cpp in Sources */,
-				9A3430601D5B9E7F00D00D4A /* tetris_application.cpp in Sources */,
-				9A3430611D5B9E7F00D00D4A /* tetris_document.cpp in Sources */,
-				9A3430621D5B9E7F00D00D4A /* tetris_frame.cpp in Sources */,
-				9AC2D1CE213ECDDF006F66DF /* tetris_game.cpp in Sources */,
-				9A3430631D5B9E7F00D00D4A /* tetris_interface.cpp in Sources */,
-				9A3430641D5B9E7F00D00D4A /* tetris_pane_view.cpp in Sources */,
-				9A3430651D5B9E7F00D00D4A /* tetris_pane_view_update_hint.cpp in Sources */,
-				9A3430661D5B9E7F00D00D4A /* tetris_preview.cpp in Sources */,
-				9A3430681D5B9E7F00D00D4A /* tetris_view.cpp in Sources */,
+				9A77FB6A213EE8A800B3A133 /* arkanoid_interface.cpp in Sources */,
+				9A77FB87213EE8A800B3A133 /* arkanoid_document.cpp in Sources */,
+				9A77FB7E213EE8A800B3A133 /* arkanoid_pane_view_update_hint.cpp in Sources */,
+				9A77FB66213EE8A800B3A133 /* arkanoid_main_frame.cpp in Sources */,
+				9A77FB85213EE8A800B3A133 /* arkanoid_application.cpp in Sources */,
+				9A77FB7C213EE8A800B3A133 /* arkanoid_view.cpp in Sources */,
+				9A77FB6F213EE8A800B3A133 /* framework.cpp in Sources */,
+				9A77FB71213EE8A800B3A133 /* arkanoid_pane_view.cpp in Sources */,
+				9A77FB8F213EE8A800B3A133 /* arkanoid_frame.cpp in Sources */,
+				9A77FB78213EE8A800B3A133 /* arkanoid_arkanoid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,30 +483,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD485DE1D5A9D7A00354801 /* tetris_interface.cpp in Sources */,
-				9AD485DC1D5A9D7A00354801 /* tetris_frame.cpp in Sources */,
-				9AD485D31D5A9D7A00354801 /* framework.cpp in Sources */,
-				9AD485E01D5A9D7A00354801 /* tetris_pane_view.cpp in Sources */,
-				9AC2D1CD213ECDDF006F66DF /* tetris_game.cpp in Sources */,
-				9AD485D81D5A9D7A00354801 /* tetris_application.cpp in Sources */,
-				9AD485E41D5A9D7A00354801 /* tetris_preview.cpp in Sources */,
-				9AD485E81D5A9D7A00354801 /* tetris_view.cpp in Sources */,
-				9AD485DA1D5A9D7A00354801 /* tetris_document.cpp in Sources */,
-				9AD485E21D5A9D7A00354801 /* tetris_pane_view_update_hint.cpp in Sources */,
+				9A77FB69213EE8A800B3A133 /* arkanoid_interface.cpp in Sources */,
+				9A77FB86213EE8A800B3A133 /* arkanoid_document.cpp in Sources */,
+				9A77FB7D213EE8A800B3A133 /* arkanoid_pane_view_update_hint.cpp in Sources */,
+				9A77FB65213EE8A800B3A133 /* arkanoid_main_frame.cpp in Sources */,
+				9A77FB84213EE8A800B3A133 /* arkanoid_application.cpp in Sources */,
+				9A77FB7B213EE8A800B3A133 /* arkanoid_view.cpp in Sources */,
+				9A77FB6E213EE8A800B3A133 /* framework.cpp in Sources */,
+				9A77FB70213EE8A800B3A133 /* arkanoid_pane_view.cpp in Sources */,
+				9A77FB8E213EE8A800B3A133 /* arkanoid_frame.cpp in Sources */,
+				9A77FB77213EE8A800B3A133 /* arkanoid_arkanoid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9AC2D1C6213ECD8F006F66DF /* PBXTargetDependency */ = {
+		9A77FC21213EEBED00B3A133 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = estamira;
-			targetProxy = 9AC2D1C5213ECD8F006F66DF /* PBXContainerItemProxy */;
+			targetProxy = 9A77FC20213EEBED00B3A133 /* PBXContainerItemProxy */;
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AE24E891904CFFD001AEFFB /* ios_game_tetris */;
+			target = 9AE24E891904CFFD001AEFFB /* ios_game_arkanoid */;
 			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -541,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
+				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -552,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/app_core_hellomultiverse_ios.dst;
+				EXECUTABLE_EXTENSION = .dylib;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = mh_dylib;
 				SDKROOT = iphoneos;
@@ -658,7 +646,6 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -690,7 +677,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../../../app/base $(WorkspaceDir)/../../../app/axis $(WorkspaceDir)/../../../app/aura $(WorkspaceDir)/../../../app/atom";
 				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
 			};
 			name = Debug;
@@ -726,7 +713,6 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_EXTENSION = dylib;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -750,7 +736,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../.. $(WorkspaceDir)/../../thirdparty/include $(WorkspaceDir)/../../../app/thirdparty/include $(WorkspaceDir)/../../appseed $(WorkspaceDir)/../../../app/thirdparty/appseed $(WorkspaceDir)/../../../app/appseed/axis";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/../../../include $(WorkspaceDir)/../../../app/include . .. $(WorkspaceDir)/../../.. $(WorkspaceDir)/../.. $(WorkspaceDir)/../../../app $(WorkspaceDir)/../../../app/appseed $(WorkspaceDir)/../../../app/appseed/core $(WorkspaceDir)/../../../app/appseed/base $(WorkspaceDir)/../../../app/appseed/axis $(WorkspaceDir)/../../../app/appseed/aura $(WorkspaceDir)/../../../app/base $(WorkspaceDir)/../../../app/axis $(WorkspaceDir)/../../../app/aura $(WorkspaceDir)/../../../app/atom";
 				VALIDATE_PRODUCT = YES;
 				WorkspaceDir = "$(SRCROOT)/../../../nodeapp/seed/metaseed";
 			};
@@ -771,7 +757,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_tetris" */ = {
+		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_game_arkanoid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AE24EAA1904CFFD001AEFFB /* Debug */,
@@ -789,7 +775,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_tetris" */ = {
+		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "game_arkanoid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AEB75A516F78DF10085103B /* Debug */,
@@ -798,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_tetris" */ = {
+		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "game_arkanoid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AEB75A816F78DF10085103B /* Debug */,
