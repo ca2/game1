@@ -53,33 +53,33 @@
 			remoteGlobalIDString = 07B65763190F3CA2002DAADE;
 			remoteInfo = math_ios;
 		};
-		9A47F2B2212B70CB003498F7 /* PBXContainerItemProxy */ = {
+		9AC2D120213EC645006F66DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A47F2AC212B70CB003498F7 /* core.xcodeproj */;
+			containerPortal = 9AC2D118213EC645006F66DF /* multimedia.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9A19A1A519C6F50B0018DF7D;
-			remoteInfo = core;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = multimedia;
 		};
-		9A47F2B4212B70CB003498F7 /* PBXContainerItemProxy */ = {
+		9AC2D122213EC645006F66DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A47F2AC212B70CB003498F7 /* core.xcodeproj */;
+			containerPortal = 9AC2D118213EC645006F66DF /* multimedia.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24DDC1904CF6E001AEFFB;
-			remoteInfo = ios_core;
+			remoteGlobalIDString = 07B6578E190F3CAF002DAADE;
+			remoteInfo = ios_multimedia;
 		};
-		9A47F2B6212B70CB003498F7 /* PBXContainerItemProxy */ = {
+		9AC2D124213EC645006F66DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A47F2AC212B70CB003498F7 /* core.xcodeproj */;
+			containerPortal = 9AC2D118213EC645006F66DF /* multimedia.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AE24DEB1904CF6E001AEFFB;
-			remoteInfo = core_iosTests;
+			remoteGlobalIDString = 07B6579D190F3CAF002DAADE;
+			remoteInfo = multlimedia_iosTests;
 		};
-		9A47F2B8212B70DE003498F7 /* PBXContainerItemProxy */ = {
+		9AC2D126213EC65D006F66DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A47F2AC212B70CB003498F7 /* core.xcodeproj */;
+			containerPortal = 9AC2D118213EC645006F66DF /* multimedia.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A19A1A419C6F50B0018DF7D;
-			remoteInfo = core;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = multimedia;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -115,13 +115,13 @@
 		9A342C3D1D5B6DFB00D00D4A /* estamira.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira.cpp; sourceTree = "<group>"; };
 		9A342C4B1D5B6E3300D00D4A /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-osx-bqoljdwkcininccxchpkzyoewsjx/Build/Products/Debug/libaura.dylib"; sourceTree = "<group>"; };
 		9A342C4D1D5B6E3900D00D4A /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaxis.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/core_games-osx-bqoljdwkcininccxchpkzyoewsjx/Build/Products/Debug/libaxis.dylib"; sourceTree = "<group>"; };
-		9A47F2AC212B70CB003498F7 /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../../app/appseed/core/core.xcodeproj; sourceTree = "<group>"; };
 		9A47F2BA212B714A003498F7 /* estamira_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = estamira_view.h; sourceTree = "<group>"; };
 		9A47F2BB212B714A003498F7 /* estamira_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira_view.cpp; sourceTree = "<group>"; };
 		9A574B9816AAB906000CC4EF /* libestamira.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libestamira.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A574D2B16AAB99E000CC4EF /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9A574D2C16AAB99E000CC4EF /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 		9A8CCAE317EA060200F87A02 /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbase.dylib; path = "../../../../Users/camilo/Library/Developer/Xcode/DerivedData/all-dlckdugtwkhfjkdbgurajmehstei/Build/Products/Debug/libbase.dylib"; sourceTree = "<group>"; };
+		9AC2D118213EC645006F66DF /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
 		9AD4320B1F219B9400E3E8D4 /* estamira_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira_application.cpp; sourceTree = "<group>"; };
 		9AD4320C1F219B9400E3E8D4 /* estamira_application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = estamira_application.h; sourceTree = "<group>"; };
 		9AD4320D1F219B9400E3E8D4 /* estamira_main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = estamira_main_frame.cpp; sourceTree = "<group>"; };
@@ -212,20 +212,10 @@
 			path = estamira;
 			sourceTree = "<group>";
 		};
-		9A47F2AD212B70CB003498F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A47F2B3212B70CB003498F7 /* libcore.dylib */,
-				9A47F2B5212B70CB003498F7 /* libios_core.a */,
-				9A47F2B7212B70CB003498F7 /* core_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9A574B8D16AAB906000CC4EF = {
 			isa = PBXGroup;
 			children = (
-				9A47F2AC212B70CB003498F7 /* core.xcodeproj */,
+				9AC2D118213EC645006F66DF /* multimedia.xcodeproj */,
 				9ACABEAC17BD04FF004C3F85 /* estamira */,
 				07B6577C190F3CA2002DAADE /* math_iosTests */,
 				07B65765190F3CA2002DAADE /* Frameworks */,
@@ -241,6 +231,16 @@
 				9A574B9816AAB906000CC4EF /* libestamira.dylib */,
 				07B65764190F3CA2002DAADE /* libios_estamira.dylib */,
 				07B65773190F3CA2002DAADE /* estamira_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC2D119213EC645006F66DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC2D121213EC645006F66DF /* libmultimedia.dylib */,
+				9AC2D123213EC645006F66DF /* libios_multimedia.a */,
+				9AC2D125213EC645006F66DF /* multlimedia_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9A47F2B9212B70DE003498F7 /* PBXTargetDependency */,
+				9AC2D127213EC65D006F66DF /* PBXTargetDependency */,
 			);
 			name = estamira;
 			productName = ca2;
@@ -368,8 +368,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A47F2AD212B70CB003498F7 /* Products */;
-					ProjectRef = 9A47F2AC212B70CB003498F7 /* core.xcodeproj */;
+					ProductGroup = 9AC2D119213EC645006F66DF /* Products */;
+					ProjectRef = 9AC2D118213EC645006F66DF /* multimedia.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -382,25 +382,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A47F2B3212B70CB003498F7 /* libcore.dylib */ = {
+		9AC2D121213EC645006F66DF /* libmultimedia.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libcore.dylib;
-			remoteRef = 9A47F2B2212B70CB003498F7 /* PBXContainerItemProxy */;
+			path = libmultimedia.dylib;
+			remoteRef = 9AC2D120213EC645006F66DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A47F2B5212B70CB003498F7 /* libios_core.a */ = {
+		9AC2D123213EC645006F66DF /* libios_multimedia.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_core.a;
-			remoteRef = 9A47F2B4212B70CB003498F7 /* PBXContainerItemProxy */;
+			path = libios_multimedia.a;
+			remoteRef = 9AC2D122213EC645006F66DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A47F2B7212B70CB003498F7 /* core_iosTests.xctest */ = {
+		9AC2D125213EC645006F66DF /* multlimedia_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = core_iosTests.xctest;
-			remoteRef = 9A47F2B6212B70CB003498F7 /* PBXContainerItemProxy */;
+			path = multlimedia_iosTests.xctest;
+			remoteRef = 9AC2D124213EC645006F66DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -460,10 +460,10 @@
 			target = 07B65763190F3CA2002DAADE /* ios_estamira */;
 			targetProxy = 07B65779190F3CA2002DAADE /* PBXContainerItemProxy */;
 		};
-		9A47F2B9212B70DE003498F7 /* PBXTargetDependency */ = {
+		9AC2D127213EC65D006F66DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = core;
-			targetProxy = 9A47F2B8212B70DE003498F7 /* PBXContainerItemProxy */;
+			name = multimedia;
+			targetProxy = 9AC2D126213EC65D006F66DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

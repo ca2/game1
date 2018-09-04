@@ -301,6 +301,34 @@
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
 			remoteInfo = audio_decode_wave;
 		};
+		9AC2D0B4213EC2FD006F66DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A574B9816AAB906000CC4EF;
+			remoteInfo = ace;
+		};
+		9AC2D0B6213EC2FD006F66DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65764190F3CA2002DAADE;
+			remoteInfo = ios_ace;
+		};
+		9AC2D0B8213EC2FD006F66DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
+			remoteInfo = ace_iosTests;
+		};
+		9AC2D0D2213EC30D006F66DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A574B9716AAB906000CC4EF;
+			remoteInfo = ace;
+		};
 		9AD484F21D5A9B9F00354801 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */;
@@ -402,6 +430,7 @@
 		9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_core_audio.xcodeproj; path = ../../../app/appseed/audio_core_audio/audio_core_audio.xcodeproj; sourceTree = "<group>"; };
 		9AB09B8F1D5B3C8A00B5F2A0 /* multimedia.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = multimedia.xcodeproj; path = "../../../app-core/appseed/multimedia/multimedia.xcodeproj"; sourceTree = "<group>"; };
 		9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = audio_decode_wave.xcodeproj; path = "../../../app-core/appseed/audio_decode_wave/audio_decode_wave.xcodeproj"; sourceTree = "<group>"; };
+		9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ace.xcodeproj; path = ../../../app/appseed/ace/ace.xcodeproj; sourceTree = "<group>"; };
 		9AD484EC1D5A9B9F00354801 /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../../../app/appseed/wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
 		9AD486271D5AA09A00354801 /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = "../../../app-core/appseed/gcom/gcom.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +459,7 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
+				9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */,
 				9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */,
 				9AB09BA51D5B3D6500B5F2A0 /* audio_decode_wave.xcodeproj */,
 				076A24081B6E772400BF6C7D /* aura.xcodeproj */,
@@ -587,6 +617,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9AC2D0AF213EC2FD006F66DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC2D0B5213EC2FD006F66DF /* libace.dylib */,
+				9AC2D0B7213EC2FD006F66DF /* libios_ace.a */,
+				9AC2D0B9213EC2FD006F66DF /* ace_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9AD484ED1D5A9B9F00354801 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,6 +662,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AC2D0D3213EC30D006F66DF /* PBXTargetDependency */,
 				9A47F2E0212B7246003498F7 /* PBXTargetDependency */,
 				9A342C5C1D5B6EAF00D00D4A /* PBXTargetDependency */,
 				9AB09BB41D5B3D7000B5F2A0 /* PBXTargetDependency */,
@@ -688,6 +729,10 @@
 			productRefGroup = 070B8EEB1B6E53F900D26137 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 9AC2D0AF213EC2FD006F66DF /* Products */;
+					ProjectRef = 9AC2D0AE213EC2FD006F66DF /* ace.xcodeproj */;
+				},
 				{
 					ProductGroup = 9A47F2D6212B723E003498F7 /* Products */;
 					ProjectRef = 9A47F2D5212B723E003498F7 /* audio_core_audio.xcodeproj */;
@@ -950,6 +995,27 @@
 			remoteRef = 9AB09BAF1D5B3D6500B5F2A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9AC2D0B5213EC2FD006F66DF /* libace.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libace.dylib;
+			remoteRef = 9AC2D0B4213EC2FD006F66DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC2D0B7213EC2FD006F66DF /* libios_ace.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_ace.a;
+			remoteRef = 9AC2D0B6213EC2FD006F66DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC2D0B9213EC2FD006F66DF /* ace_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ace_iosTests.xctest;
+			remoteRef = 9AC2D0B8213EC2FD006F66DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9AD484F31D5A9B9F00354801 /* libwndfrm_core.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -1082,6 +1148,11 @@
 			isa = PBXTargetDependency;
 			name = audio_decode_wave;
 			targetProxy = 9AB09BB31D5B3D7000B5F2A0 /* PBXContainerItemProxy */;
+		};
+		9AC2D0D3213EC30D006F66DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ace;
+			targetProxy = 9AC2D0D2213EC30D006F66DF /* PBXContainerItemProxy */;
 		};
 		9AD484F91D5A9BAF00354801 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
