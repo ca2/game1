@@ -28,15 +28,27 @@ namespace pacman
 
       m_pdecoderplugin = get_wave_player()->m_decoderset.LoadPlugin("audio_decode_wave");
 
-      ::multimedia::audio::wave_player_command c;
+	  {
 
-      c.OpenDecoder(this);
+		  ::multimedia::audio::wave_player_command_sp c(allocer());
 
-      get_wave_player()->DecoderOpen(c);
+		  c->OpenDecoder(this);
 
-      c.Play(0.0, false);
+		  get_wave_player()->post_command(c);
 
-      get_wave_player()->ExecuteCommand(c);
+
+	  }
+
+	  {
+
+		  ::multimedia::audio::wave_player_command_sp c(allocer());
+
+		  c->Play(0.0, false);
+
+		  get_wave_player()->post_command(c);
+
+
+	  }
 
 
 
